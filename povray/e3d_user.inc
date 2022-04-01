@@ -5,6 +5,7 @@
 /********************************************************************************************************************************************
  * BNC Buchse liegend isoliert weiss
  *******************************************************************************************************************************************/
+
 #macro AMP_227161()
   union{
         union { // Korpus
@@ -180,13 +181,15 @@
   translate <-7.25,0,-7>
   }
 
-// end: AMP_227161
 #end
 
 
+
+
 /********************************************************************************************************************************************
- * 19mm poti liegend
+ * 19mm poti
  *******************************************************************************************************************************************/
+
 #macro SP19L(value)
 union{
 #local VishayBlue=color red 0.0 green 0.4453 blue 0.73;
@@ -212,7 +215,6 @@ union{
     }
     scale x*19/18  translate <-2,0,0>
 }
-// end: SP19L
 #end
 
 
@@ -223,7 +225,7 @@ union{
 union{
     
     //Body
-    box{<0,0,0><LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2>}            //GrundkÃ¶rper braun
+    box{<0,0,0><LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2>}            //Grundkörper braun
     
     //Marking
     text{ttf besch_font value 0.1,0 scale L/8 rotate<90,0,0> translate<-LT/4,H+(L-LT)/2+0.01,0> pigment{DarkWood*0.7}}
@@ -328,11 +330,12 @@ union {
 
 }
 
-// end: // SMD Trimmer Murata TZB4
 #end
 
+
+
 /*************************************************************************************************************************************
- * TO-263-7 - standard konforme Gehauseform nach Datenblatt.                                                                                                                                    
+ * TO-263-7                                                                                                                                    
  ************************************************************************************************************************************/
 #macro IC_TO_263_7(value,logo)
    object{IC_SMD_GRND(10.41,   //LK      = Laenge des Kunststoff(Seite der Pins)
@@ -349,7 +352,7 @@ union {
                0.1,     //di_pcb  = Abstand des Kunststoff zur Platine
                0,       //kor_w   = Korrekturwinkel
                0,       //pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
-               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45Â° statt 10Â° verwendet (SO)
+               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45° statt 10° verwendet (SO)
                1.5,     //pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
                2.0,     //besch_s = Scalefaktor der Beschriftung
                0,       //besch_w = Wenn != 0 wird Beschriftung gedreht
@@ -358,18 +361,18 @@ union {
 #end
 
 /********************************************************************************************************************************************
- * DC-Power-Connector 5.5mm/2.1mm, SMD, Switchcraft RASM722PX
+ * DC-Power-Connector, SMD
  *******************************************************************************************************************************************/
 #macro CON_PWR_RASM722PX()
   union {
      union {
         difference {
-            box { <-9/2,0,-3> <9/2,11.0,14.5-3>  translate<0,0,0>}   // aussenmasse
-            cylinder { <0,6.5,-4> <0,6.5,14.5-3+1> 6.3/2 }           // innere bohrung.
+            box { <-9/2,0,-3> <9/2,11.0,14.5-3>  translate<0,0,0>} // aussenmasse
+            cylinder { <0,6.5,-4> <0,6.5,14.5-3+1> 6.3/2 }         // innere bohrung.
             box { <-5,6.5,-3+4.5> <5,6.5+3.15,20>  translate<0,0,0>} // ausschnitt um Zylinder.
             box { <-5,-1,14.5-3-2> <5,12.0,14.5-3+1>  translate<0,0,0>}      
             }
-        cylinder { <0,6.5,-2> <0,6.5,14.5-4> 8/2 }         // außenhuelle fuer stecker
+        cylinder { <0,6.5,-2> <0,6.5,14.5-4> 8/2 }         // au�enhuelle fuer stecker
         box { <-8/2,0,14.5-3-2> <8/2,6.5,14.5-4>  translate<0,0,0>}
         box { <-8/2,0,14.5-3-2> <-4/2,3.0,14.5-3>  translate<0,0,0>}
         box { < 4/2,0,14.5-3-2> < 8/2,3.0,14.5-3>  translate<0,0,0>}
@@ -381,11 +384,47 @@ union {
      sphere   { <0,6.5,-1.5>, 2.1/2  texture { Silver_Metal } }                  // innerer kontakt
      cylinder { <0,6.5,-1.5> <0,6.5,11.5> 2.1/2 texture { Silver_Metal } }       // innerer kontakt
      cylinder { <0,6.5,10.5> <0,6.5,11.0> 4/2 texture { Silver_Metal } }         // innerer kontakt
-     box      { <-3.2/2,6.5,10.5> < 3.2/2,0.0,11.0> texture { Silver_Metal } }   // innerer kontakt
+     box      { <-3.2/2,6.5,10.5> < 3.2/2,0.0,11.0> texture { Silver_Metal } }       // innerer kontakt
 
      // anschluesse     
      box      { <-15.2/2,0.0,3.76-4.6/2> < 15.2/2,0.5,3.76+4.6/2> texture { Silver_Metal } }             // masse kontakt
      box      { <0.76-1.7/2,0.0,12.90-2.4/2-0.5> <0.76+1.7/2,0.5,12.90+2.4/2> texture { Silver_Metal } } // innerer kontakt
      }
-   // end: CON_PWR_RASM722PX
+
+
+
+#end
+
+
+/********************************************************************************************************************************************
+ * LEMO_EPA.00.250.NTN_L
+ *******************************************************************************************************************************************/
+#macro LEMO_EPA_00_250_NTN_L()
+  union {
+     //cylinder{<-5,0, 0> <5,0,0> 0.1 pigment{Black} }  cylinder{< 0,0,-5> <0,0,5> 0.1 pigment{Black} }
+      intersection {
+        box{<-3.5,0,-3.5> <3.5,7,3.5>}
+        sphere{<0,2.2,0> 6}
+        }
+
+     difference {
+       Round_Cylinder(<0,3.5,3.5>, <0,3.5,14>, 6.8/2, 0.20, 0)
+       cylinder{<0,3.5,4  > <0,3.5,15> 5/2   }
+       }
+
+     difference {
+       object { Round_Cylinder(<0,3.5,3.5>, <0,3.5,13>, 2/2, 0.20, 0) pigment{White} }
+       cylinder{<0,3.5,4  > <0,3.5,15> 0.7/2   }
+       }
+
+     cylinder{< 0,0,0> <0,-3+0.7/2,0> 0.7/2 }  sphere{<0,-3+0.7/2,0> 0.7/2}
+     cylinder{<+5.08/2,0,+5.08/2> <+5.08/2,-3+0.7/2,+5.08/2> 0.7/2 }  sphere{<+5.08/2,-3+0.7/2,+5.08/2> 0.7/2}
+     cylinder{<+5.08/2,0,-5.08/2> <+5.08/2,-3+0.7/2,-5.08/2> 0.7/2 }  sphere{<+5.08/2,-3+0.7/2,-5.08/2> 0.7/2}
+     cylinder{<-5.08/2,0,+5.08/2> <-5.08/2,-3+0.7/2,+5.08/2> 0.7/2 }  sphere{<-5.08/2,-3+0.7/2,+5.08/2> 0.7/2}
+     cylinder{<-5.08/2,0,-5.08/2> <-5.08/2,-3+0.7/2,-5.08/2> 0.7/2 }  sphere{<-5.08/2,-3+0.7/2,-5.08/2> 0.7/2}
+     texture{e3d_tex_silver}  rotate <0,180,0>
+     }
+
+
+// end: LEMO_EPA_00_250_NTN_L
 #end
