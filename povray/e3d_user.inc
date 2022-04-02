@@ -493,4 +493,29 @@ union {
 #end
 
 
-
+/********************************************************************************************************************************************
+ * SOT-223(5) package.
+ *******************************************************************************************************************************************/
+#macro IC_SMD_SOT223_5(value,logo)
+   object{IC_SMD_GRND(
+                6.5,    //LK      = Laenge des Kunststoff(Seite der Pins)
+                3.56,   //BK      = Breite des Kunststoff(Seite ohne Pins)                
+                1.675,  //HK      = Hoehe des Kunststoff
+                6.96,   //B       = Laenge der Seite ohne Pins ueber alles
+                4,      //pin_u   = Pins auf der "unteren" Seite
+                1,      //pin_o   = Pins auf der "oberen" Seite
+               1.5,     //ptch_u  = Pitch der Pins auf der "unteren" Seite
+               1.9,     //ptch_o  = Pitch der Pins auf der "oberen" Seite
+               0.74,    //pinb_u  = Breite der Pins auf der "unteren" Seite
+               3.0,     //pinb_o  = Breite der Pins auf der  "oberen" Seite
+               0.3,     //pin_s   = Staerke des Pinmaterials
+               0.05,    //di_pcb  = Abstand des Kunststoff zur Platine
+               0,       //kor_w   = Korrekturwinkel
+               0,       //pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
+               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45° statt 10° verwendet (SO)
+               1.5,     //pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
+               0.75,     //besch_s = Scalefaktor der Beschriftung
+               0,       //besch_w = Wenn != 0 wird Beschriftung gedreht
+               logo     //logo  = Name of the logo
+               ) translate <0,0,1> }
+#end
