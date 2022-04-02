@@ -517,5 +517,5 @@ union {
                0.75,     //besch_s = Scalefaktor der Beschriftung
                0,       //besch_w = Wenn != 0 wird Beschriftung gedreht
                logo     //logo  = Name of the logo
-               ) translate <0,0,1> }
+               ) }
 #end
