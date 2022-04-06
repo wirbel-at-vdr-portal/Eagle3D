@@ -10,18 +10,18 @@ union{
         #local inner = 1;
         box{<-L/2,+0,-W/2><+L/2,H,+W/2> pigment{Gray20}}
     #else     // Metalic
-        #if(L>33) 
-            #local inner = 2.5; 
+        #if(L>33)
+            #local inner = 2.5;
         #else
-            #local inner = 1.5; 
+            #local inner = 1.5;
         #end
         difference{
             superellipsoid { <0.1, 0.1> scale <L/2, H/2+2,W/2> translate <0, H/2-2, 0> texture{Silver1}}
-            box{<-L/2,0,-W/2><+L/2,-H,+W/2>}            
+            box{<-L/2,0,-W/2><+L/2,-H,+W/2>}
         }
     #end
-     
-    #if(Lb=0)  // WHITE 
+
+    #if(Lb=0)  // WHITE
         #local col=White;
         box{<-L/2+inner,H,-W/2+inner><+L/2-inner,H+0.01,+W/2-inner> pigment{SpicyPink}} // Label
         text {ttf global_fontfile_arial "TRACO" 0.05, 0 pigment{col} scale 5 rotate<90,0,0> translate<-9,H+0.05,3.5>}  // Marking
@@ -50,7 +50,7 @@ union{
         text {ttf global_fontfile_arial "R" 0.05, 0 pigment{col} scale 1 rotate<90,0,0> translate<+9.1-2.5,H+0.05,6.9-2>}  // Marking
         disc {<9.45-2.5, H+0.05, 7.28-2> y,0.7,0.65 pigment{col}}
     #end
-    #if(Lb=3)  // 5W 
+    #if(Lb=3)  // 5W
         #local col=Black;
         box{<-L/2+inner,H,-W/2+inner><+L/2-inner,H+0.01,+W/2-inner> pigment{SpicyPink}} // Label
         text {ttf global_fontfile_arial "TRACO" 0.05, 0 pigment{col} scale 9 rotate<90,0,0> translate<-16,H+0.05,13>}  // Marking
@@ -383,12 +383,12 @@ union {
      intersection {
         object { Round_Box(<-29/2, 10.2 - Rounding, -19/2>, <+29/2, 10.2 + 0.1 + Rounding, +19/2> Rounding, 0) }
         box {              <-30/2, 10.1           ,     0>  <+30/2, 10.28                , +20/2> }
-        pigment { BlackColor } 
+        pigment { BlackColor }
         }
      intersection {
         object { Round_Box(<-29/2, 10.2 - Rounding, -19/2>, <+29/2, 10.2 + 0.1 + Rounding, +19/2> Rounding, 0) }
         box {              <-30/2, 10.1           , -20/2>  <+30/2, 10.3                 , 0> }
-        pigment { RedColor } 
+        pigment { RedColor }
         }
      union {
         box { <-1.30/2      , 10.1,-3.2/2> <+1.30/2      , 10.3,+3.2/2> }
@@ -409,18 +409,17 @@ union {
            #local XOFFS = -6.5*2.56;
            #local YOFFS = -3 * 2.54;
            #if ((PIN=9) & (has_pin9=0))
-              // TEN_SINGLE: skip pin9              
+              // TEN_SINGLE: skip pin9
            #else
               object { cylinder{ <0,0,0> <0,-3,> 0.25 translate<XOFFS + PIN*2.54,0,YOFFS> texture{e3d_tex_silver}} }
            #end
         #else
-           #local XOFFS = +18.5*2.54; 
+           #local XOFFS = +18.5*2.54;
            #local YOFFS = +3 * 2.54;
            object { cylinder{ <0,0,0> <0,-3,> 0.25 translate<XOFFS - PIN*2.54,0,YOFFS> texture{e3d_tex_silver}} }
         #end
      #end
   #end
-  
 }
 // end: TEN6_xxxx_GRND(sd,value)
 #end

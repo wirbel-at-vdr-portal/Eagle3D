@@ -9,7 +9,7 @@ union {
   object { CON_BL_1X12()  rotate<0,90,0> translate<+7.62,0,+6*2.54>}
   object { CON_BL_1X12()  rotate<0,90,0> translate<+7.62,0,-6*2.54>}
   object { CON_BL_1X12()  rotate<0,90,0> translate<-7.62,0,+6*2.54>}
-  object { CON_BL_1X12()  rotate<0,90,0> translate<-7.62,0,-6*2.54>}  
+  object { CON_BL_1X12()  rotate<0,90,0> translate<-7.62,0,-6*2.54>}
   object { CON_PH_1X24() rotate<0,90,180> translate<+7.62,10.0,0>}
   object { CON_PH_1X24() rotate<0,90,180> translate<-7.62,10.0,0>}
 
@@ -23,7 +23,7 @@ union {
         #local global_solder = on;
         #local Shape = 101;
         #local XPos  = 12.5*2.54;
-        #local YPos  = -7.62;        
+        #local YPos  = -7.62;
 
         #if(PinNumber=1)
            #local Shape = 100;
@@ -45,7 +45,7 @@ union {
         }
 
 
-     // two switch buttons. 
+     // two switch buttons.
      object { SWITCH_ALPS_SKHH_V_GRND(4,1.3, color rgb <10/255, 51/255, 61/255>) rotate<0,0,0> translate<0,0.0,29.8>}
      object { SWITCH_ALPS_SKHH_V_GRND(4,1.3, color rgb <10/255, 51/255, 61/255>) rotate<0,0,0> translate<0,0.0,21.7>}
      union {
@@ -53,20 +53,20 @@ union {
         text {ttf global_fontfile_arial "BTN1" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<6,0.05,27>}
         texture{col_slk}
         }
-   
+
     // pinheader unbestueckt.
     union {
        #local global_pcb_real_hole = 0;
-       #local DeltaX = 2.5;    
+       #local DeltaX = 2.5;
        object{TOOLS_PCB_VIA(1.308000,0.800000,1,16,  0,0) rotate<0,-90,0> translate<-DeltaX/2-2*DeltaX,0,34.00>}
        object{TOOLS_PCB_VIA(1.308000,0.800000,1,16,  1,0) rotate<0,-90,0> translate<-DeltaX/2-1*DeltaX,0,34.50>}
        object{TOOLS_PCB_VIA(1.308000,0.800000,1,16,  1,0) rotate<0,-90,0> translate<-DeltaX/2-0*DeltaX,0,34.00>}
        object{TOOLS_PCB_VIA(1.308000,0.800000,1,16,  1,0) rotate<0,-90,0> translate<+DeltaX/2+0*DeltaX,0,34.50>}
        object{TOOLS_PCB_VIA(1.308000,0.800000,1,16,  1,0) rotate<0,-90,0> translate<+DeltaX/2+1*DeltaX,0,34.00>}
        object{TOOLS_PCB_VIA(1.308000,0.800000,1,16,  1,0) rotate<0,-90,0> translate<+DeltaX/2+2*DeltaX,0,34.50>}
-       union{   
+       union{
           box{<-7.5,0.036,35.5-0.0762><7.5,0,35.5+0.076200> rotate<0,0,0> translate<0,00> }
-          box{<-7.5,0.036,33.0-0.0762><7.5,0,33.0+0.076200> rotate<0,0,0> translate<0,00> }       
+          box{<-7.5,0.036,33.0-0.0762><7.5,0,33.0+0.076200> rotate<0,0,0> translate<0,00> }
           box{<-7.5-0.0762,0.036,35.5+0.076200><-7.5+0.0762,0,33.0-0.076200> rotate<0,0,0> translate<0,00> }
           box{< 7.5-0.0762,0.036,35.5+0.076200>< 7.5+0.0762,0,33.0-0.076200> rotate<0,0,0> translate<0,00> }
           text {ttf global_fontfile_arial "1"  0.2, 0 scale 1.5 rotate<90,180,0> translate<-8.0,0.05,35>}
@@ -85,7 +85,7 @@ union {
        object {DIODE_SMD_LED_CHIP_0805(LED_Color,0.800000,0.000000,) rotate<0,90,0> translate<+4.0,0, 15> }
        object {DIODE_SMD_LED_CHIP_0805(LED_Color,0.800000,0.000000,) rotate<0,90,0> translate<-5.5,0,-30> }
        object {DIODE_SMD_LED_CHIP_0805(LED_Color,0.800000,0.000000,) rotate<0,90,0> translate<+5.5,0,-30> }
-       union{   
+       union{
           text {ttf global_fontfile_arial "LD3"   0.2, 0 scale 1.5 rotate<90,-90,0> translate<-2.0,0.05,14>}
           text {ttf global_fontfile_arial "LD2"   0.2, 0 scale 1.5 rotate<90,-90,0> translate<+0.5,0.05,14>}
           text {ttf global_fontfile_arial "LD1"   0.2, 0 scale 1.5 rotate<90,-90,0> translate<+3.0,0.05,14>}
@@ -98,7 +98,7 @@ union {
 
       union {
          object { IC_SMD_MLF_64_050MM("MEGA16U2") scale 0.6 rotate<0,-90,0> translate<0,0,-21>}
-         union{   
+         union{
             text {ttf global_fontfile_arial "IC3" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<-3,0.05,-19>}
             texture{col_slk}
             }
@@ -125,7 +125,7 @@ union {
                 )
          #end
          object { CMODS6_FPGA_XILINX("XC6SLX4") rotate<0,-90,0> translate<0,0,2.5>}
-         union{   
+         union {
             text {ttf global_fontfile_arial "IC5" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<4,0.05,-5>}
             texture{col_slk}
             }
