@@ -5,6 +5,7 @@ Hi,
 Do you still remember that famous idea of rendering PCB 3D images using Cadsoft EAGLE, an ulp script file and povray as raytracer?
 It was, and still is, an eye catcher.
 
+![alt text](examples/example1.png)
 
 Well, years have been passed by..
 
