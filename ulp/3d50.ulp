@@ -20,11 +20,11 @@
         "<p>"
         "See developer.berlios.de/projects/eagle3d/"
         "<p>"
-           "Use only for Eagle v4.10 and later"
+           "Use only for Eagle v5.0 and later"
         "<p>"
         "<author>Author: Matthias Weißer matthias@matwei.de</author>"
 
-   #include "3dfunc41.ulp"
+   #include "3dfunc.ulp"
    #include "eagle2svg.ulp"
 
 //Number of config options
