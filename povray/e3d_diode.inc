@@ -67,9 +67,9 @@ union{
           <8.255000,26.035000>,<9.398000,25.400000>,<8.128000,24.765000>,
           <3.175000,24.765000>,<2.032000,25.400000>,<3.302000,26.035000>
         }
-	union{
-		cylinder{<10.287000,0,19.685000><10.287000,0.036000,19.685000>0.762000 translate<0,0.000000,0>} // Segment DP
-	}
+   union{
+      cylinder{<10.287000,0,19.685000><10.287000,0.036000,19.685000>0.762000 translate<0,0.000000,0>} // Segment DP
+   }
         translate tra
         scale sca
 }
@@ -84,7 +84,7 @@ union{
 // Individual DIODE TYPE DEFINITIONS:
 
 //   JEDEC DIODE AXIAL PACKAGE TYPES: //Maximums: Body: (Length, Width)
-//						  Wire: (Length, Width)
+//                  Wire: (Length, Width)
 //                 BODY        WIRES
 //             LENGTH WIDTH LENGTH WIDTH
 
@@ -499,52 +499,52 @@ DIODE_DIS_LASER_PDLD_PIGTAIL_GRND()
 ********************************************************************************************************************************************/
 #macro DIODE_DIS_LED_3MM_GRND(col,tra,height)
 union{
-	merge{
-		cylinder{<0,0.75,0><0,3,0>1.5}
-		difference{
-			cylinder{<0,0,0><0,0.75,0>1.7}
-			box{<1.501,-0.1,-3><3,2,3>}
-		}
-		sphere{<0,3,0>1.5}
-	}
-	
-	#if(pin_short=off)
-		box{<-0.2,1.5,-0.2><0.2,-30.4,0.2> texture{col_silver}translate<-1.27,0,0>}
-	#else
-		box{<-0.2,1.5,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<-1.27,0,0>}
-	#end
-	
-	difference{
-		box{<-0.2,1.5,-0.2><2,2.5,0.2>texture{col_silver}translate<-1.27,0,0>}
-		box{<0,0,-0.201><2,1,0.201>texture{col_silver} rotate<0,0,15> translate<0,0.5,0>}
-		lathe{
-			linear_spline 3,
-			<0, 0>, <1.2, 1> <0,1> texture{col_silver} translate<0,1.7,0>}
-		}
-		lathe{
-			linear_spline 4,
-			<0, 0>, <1, 1>, <1.2,1>,<0.2,0>
-			texture{col_silver} translate<0,1.7,0>
-		}
-		
-		box{<-0.4,0,-0.4><0.4,0.3,0.4>pigment{col} finish{ ambient (1 * global_ambient_mul)} translate<0,2.2,0>}
-		
-		difference{
-		#if(pin_short=off)
-			box{<-0.2,1.1,-0.2><0.2,-25.4,0.2> texture{col_silver}translate<1.27,0,0>}
-		#else
-			box{<-0.2,1.1,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<1.27,0,0>}
-		#end
-		cylinder{<-0.2,1.1,-0.201><-0.2,1.1,0.201>0.2 translate<1.24,0,0>}
-	}
-	
-	box{<0,1,-0.2><0.2,2.6,0.2>translate<1.27,0,0> texture{col_silver}}
-	
-	pigment{col filter tra}
-	interior { ior 1.5 }
-	translate<0,0.2,0>
-	 	
-	translate<0,height,0>
+   merge{
+      cylinder{<0,0.75,0><0,3,0>1.5}
+      difference{
+         cylinder{<0,0,0><0,0.75,0>1.7}
+         box{<1.501,-0.1,-3><3,2,3>}
+      }
+      sphere{<0,3,0>1.5}
+   }
+   
+   #if(pin_short=off)
+      box{<-0.2,1.5,-0.2><0.2,-30.4,0.2> texture{col_silver}translate<-1.27,0,0>}
+   #else
+      box{<-0.2,1.5,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<-1.27,0,0>}
+   #end
+   
+   difference{
+      box{<-0.2,1.5,-0.2><2,2.5,0.2>texture{col_silver}translate<-1.27,0,0>}
+      box{<0,0,-0.201><2,1,0.201>texture{col_silver} rotate<0,0,15> translate<0,0.5,0>}
+      lathe{
+         linear_spline 3,
+         <0, 0>, <1.2, 1> <0,1> texture{col_silver} translate<0,1.7,0>}
+      }
+      lathe{
+         linear_spline 4,
+         <0, 0>, <1, 1>, <1.2,1>,<0.2,0>
+         texture{col_silver} translate<0,1.7,0>
+      }
+      
+      box{<-0.4,0,-0.4><0.4,0.3,0.4>pigment{col} finish{ ambient (1 * global_ambient_mul)} translate<0,2.2,0>}
+      
+      difference{
+      #if(pin_short=off)
+         box{<-0.2,1.1,-0.2><0.2,-25.4,0.2> texture{col_silver}translate<1.27,0,0>}
+      #else
+         box{<-0.2,1.1,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<1.27,0,0>}
+      #end
+      cylinder{<-0.2,1.1,-0.201><-0.2,1.1,0.201>0.2 translate<1.24,0,0>}
+   }
+   
+   box{<0,1,-0.2><0.2,2.6,0.2>translate<1.27,0,0> texture{col_silver}}
+   
+   pigment{col filter tra}
+   interior { ior 1.5 }
+   translate<0,0.2,0>
+      
+   translate<0,height,0>
 }
 #end
 #macro DIODE_DIS_LED_3MM(col,tra,height)
@@ -557,49 +557,49 @@ DIODE_DIS_LED_3MM_GRND(col,tra,height)
 ********************************************************************************************************************************************/
 #macro DIODE_DIS_LED_5MM_GRND(col,tra,height)
 union{
-	merge{
-		cylinder{<0,0.75,0><0,6,0>2.5}
-		difference{
-			cylinder{<0,0,0><0,0.75,0>2.8}
-			box{<2.501,-0.1,-3><3,2,3>}
-		}
-		sphere{<0,6,0>2.5}
-	}
-	#if(pin_short=off)
-		box{<-0.2,2,-0.2><0.2,-30.4,0.2> texture{col_silver}translate<-1.27,0,0>}
-	#else
-		box{<-0.2,2,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<-1.27,0,0>}
-	#end
-	difference{
-		box{<-0.2,2,-0.2><2,3,0.2>texture{col_silver}translate<-1.27,0,0>}
-		box{<0,0,-0.201><2,1,0.201>texture{col_silver} rotate<0,0,15> translate<0,1,0>}
-		lathe{
-			linear_spline 3,
-			<0, 0>, <1.2, 1> <0,1> 
-			texture{col_silver} translate<0,2.2,0>
-		}
-	}
-	lathe{
-		linear_spline 4,
-		<0, 0>, <1, 1>, <1.2,1>,<0.2,0>
-		texture{col_silver} translate<0,2.2,0>
-	}
-	box{<-0.4,0,-0.4><0.4,0.3,0.4>pigment{col} finish{ ambient (1 * global_ambient_mul)} translate<0,2.7,0>}
-	difference{
-		#if(pin_short=off)
-			box{<-0.2,1.8,-0.2><0.2,-25.4,0.2> texture{col_silver}translate<1.27,0,0>}
-		#else
-			box{<-0.2,1.8,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<1.27,0,0>}
-		#end
-		cylinder{<-0.2,1.8,-0.201><-0.2,1.8,0.201>0.2 translate<1.24,0,0>}
-	}
-	box{<0,1,-0.2><0.2,3.3,0.2>translate<1.27,0,0> texture{col_silver}}
-	
-	pigment{col filter tra}
-	interior { ior 1.5 }
-	translate<0,0.2,0>
-	 
-	translate<0,height,0>
+   merge{
+      cylinder{<0,0.75,0><0,6,0>2.5}
+      difference{
+         cylinder{<0,0,0><0,0.75,0>2.8}
+         box{<2.501,-0.1,-3><3,2,3>}
+      }
+      sphere{<0,6,0>2.5}
+   }
+   #if(pin_short=off)
+      box{<-0.2,2,-0.2><0.2,-30.4,0.2> texture{col_silver}translate<-1.27,0,0>}
+   #else
+      box{<-0.2,2,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<-1.27,0,0>}
+   #end
+   difference{
+      box{<-0.2,2,-0.2><2,3,0.2>texture{col_silver}translate<-1.27,0,0>}
+      box{<0,0,-0.201><2,1,0.201>texture{col_silver} rotate<0,0,15> translate<0,1,0>}
+      lathe{
+         linear_spline 3,
+         <0, 0>, <1.2, 1> <0,1> 
+         texture{col_silver} translate<0,2.2,0>
+      }
+   }
+   lathe{
+      linear_spline 4,
+      <0, 0>, <1, 1>, <1.2,1>,<0.2,0>
+      texture{col_silver} translate<0,2.2,0>
+   }
+   box{<-0.4,0,-0.4><0.4,0.3,0.4>pigment{col} finish{ ambient (1 * global_ambient_mul)} translate<0,2.7,0>}
+   difference{
+      #if(pin_short=off)
+         box{<-0.2,1.8,-0.2><0.2,-25.4,0.2> texture{col_silver}translate<1.27,0,0>}
+      #else
+         box{<-0.2,1.8,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<1.27,0,0>}
+      #end
+      cylinder{<-0.2,1.8,-0.201><-0.2,1.8,0.201>0.2 translate<1.24,0,0>}
+   }
+   box{<0,1,-0.2><0.2,3.3,0.2>translate<1.27,0,0> texture{col_silver}}
+   
+   pigment{col filter tra}
+   interior { ior 1.5 }
+   translate<0,0.2,0>
+    
+   translate<0,height,0>
 }
 #end
 #macro DIODE_DIS_LED_5MM(col,tra,height)
@@ -711,9 +711,9 @@ union{
           <8.255000,26.035000>,<9.398000,25.400000>,<8.128000,24.765000>,
           <3.175000,24.765000>,<2.032000,25.400000>,<3.302000,26.035000>     
         }
-	union{
-		cylinder{<10.287000,0,19.685000><10.287000,0.036000,19.685000>0.762000 translate<0,0.000000,0>} // Segment DP
-	}
+   union{
+      cylinder{<10.287000,0,19.685000><10.287000,0.036000,19.685000>0.762000 translate<0,0.000000,0>} // Segment DP
+   }
        translate<-10.9869,0,-25.4092>
         scale<0.1,1,0.1>
 }
@@ -953,15 +953,15 @@ DIODE_DIS_LED_7SEG_VQE_GRND(value, col, tra, height)
 // 
 // By BuFran <BuFran@hi-web.cz>
 //
-// col				: The color of led
-// tra				: Transparence of LED
-// height			: The LED is lifted up 
-// w / h   			: Width / height of LED
+// col            : The color of led
+// tra            : Transparence of LED
+// height         : The LED is lifted up 
+// w / h          : Width / height of LED
 ********************************************************************************************************************************************/
 #macro DIODE_DIS_LED_RECT_GRND(col,tra,height,w,h)
 union{
-		box{<0,0,0><h,7,w> pigment { col filter tra}
-			translate <-h/2,height-7,-w/2>
+      box{<0,0,0><h,7,w> pigment { col filter tra}
+         translate <-h/2,height-7,-w/2>
         }
         
         #if(pin_short=off)
@@ -1013,50 +1013,50 @@ DIODE_DIS_LED_RECT_GRND(col,tra,height,2.5,2.5)
 #macro DIODE_DIS_ROW_2MM_GRND(a,col,tra,height)
 #macro DRLED_2MM(col,tra,height)
 union{
-	merge{
-		//Body
-		difference{
-			cylinder{<0,0,0><0,1.6,0>2.1 translate<-0.4,0,0>} 
-			box{<-2.6,-0.1,-2.6><1.3,1.7,2.6>}}
-			box{<-1.6,0,-1.27><1.3,1.6,1.27>} 
-			cylinder{<0,0.75,0><0,2,0>1}
-			sphere{<0,2,0>1}
-		}
-		//Anode
-		#if(pin_short=off)
-			box{<-0.2,0.5,-0.2><0.2,-30.4,0.2> texture{col_silver}translate<-1.27,0,0>}
-		#else
-			box{<-0.2,0.5,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<-1.27,0,0>}
-		#end
-		difference{
-			box{<-0.2,0.5,-0.2><2,1.5,0.2>texture{col_silver}translate<-1.27,0,0>}
-			box{<0,-1.0,-0.201><2,0,0.201>texture{col_silver} rotate<0,0,15> translate<0,0.5,0>}
-			lathe{
-				linear_spline 3,
-				<0, 0>, <1.2, 1> <0,1> 
-				texture{col_silver} translate<0,0.6,0>
-			}
-		}
-		//Kathode
-		difference{
-			#if(pin_short=off)
-				box{<-0.2,0.5,-0.2><0.2,-25.4,0.2> texture{col_silver}translate<1.27,0,0>}
-			#else
-				box{<-0.2,0.5,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<1.27,0,0>}
-			#end
-			cylinder{<-0.2,0.5,-0.201><-0.2,0.5,0.201>0.2 texture{col_silver} translate<1.24,0,0>
-		}
-	}
-	box{<0,0.1,-0.2><0.2,1.4,0.2>translate<1.27,0,0> texture{col_silver}}
-	box{<0.7,1.2,-0.2><1.27,1.4,0.2>translate<0,0,0> texture{col_silver}}
-	//Cristal
-	box{<-0.3,0,-0.3><0.3,0.3,0.3>pigment{col} finish{ ambient (1 * global_ambient_mul)} translate<0,1,0>}
-	
-	//Reflector
-	//lathe{linear_spline 4,<0, 0>, <0.6,0.6>, <0.8,0.6>,<0.2,0> texture{col_silver}translate<0,0.6,0>}
-	pigment{col filter tra}
-	translate<0,0.1,0>
-	translate<0,0.1+height,0>
+   merge{
+      //Body
+      difference{
+         cylinder{<0,0,0><0,1.6,0>2.1 translate<-0.4,0,0>} 
+         box{<-2.6,-0.1,-2.6><1.3,1.7,2.6>}}
+         box{<-1.6,0,-1.27><1.3,1.6,1.27>} 
+         cylinder{<0,0.75,0><0,2,0>1}
+         sphere{<0,2,0>1}
+      }
+      //Anode
+      #if(pin_short=off)
+         box{<-0.2,0.5,-0.2><0.2,-30.4,0.2> texture{col_silver}translate<-1.27,0,0>}
+      #else
+         box{<-0.2,0.5,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<-1.27,0,0>}
+      #end
+      difference{
+         box{<-0.2,0.5,-0.2><2,1.5,0.2>texture{col_silver}translate<-1.27,0,0>}
+         box{<0,-1.0,-0.201><2,0,0.201>texture{col_silver} rotate<0,0,15> translate<0,0.5,0>}
+         lathe{
+            linear_spline 3,
+            <0, 0>, <1.2, 1> <0,1> 
+            texture{col_silver} translate<0,0.6,0>
+         }
+      }
+      //Kathode
+      difference{
+         #if(pin_short=off)
+            box{<-0.2,0.5,-0.2><0.2,-25.4,0.2> texture{col_silver}translate<1.27,0,0>}
+         #else
+            box{<-0.2,0.5,-0.2><0.2,-1*(pcb_height+pin_length+height)-0.2,0.2> texture{col_silver}translate<1.27,0,0>}
+         #end
+         cylinder{<-0.2,0.5,-0.201><-0.2,0.5,0.201>0.2 texture{col_silver} translate<1.24,0,0>
+      }
+   }
+   box{<0,0.1,-0.2><0.2,1.4,0.2>translate<1.27,0,0> texture{col_silver}}
+   box{<0.7,1.2,-0.2><1.27,1.4,0.2>translate<0,0,0> texture{col_silver}}
+   //Cristal
+   box{<-0.3,0,-0.3><0.3,0.3,0.3>pigment{col} finish{ ambient (1 * global_ambient_mul)} translate<0,1,0>}
+   
+   //Reflector
+   //lathe{linear_spline 4,<0, 0>, <0.6,0.6>, <0.8,0.6>,<0.2,0> texture{col_silver}translate<0,0.6,0>}
+   pigment{col filter tra}
+   translate<0,0.1,0>
+   translate<0,0.1+height,0>
 }
 #end
 
@@ -1270,21 +1270,21 @@ union{
                         box{ <-0.35, 0.01, 0.25> < 0.35, 0.61, 0.75> }
                                 texture{
                                 pigment{col filter tra}
-	                }
-	        }
-	        box{ <-1.0, 0, -0.25> < 1.0, 0.62, 0.25>}
+                   }
+           }
+           box{ <-1.0, 0, -0.25> < 1.0, 0.62, 0.25>}
                 texture{ pigment{col filter tra}}
         }
-	
-	difference{
-        	union{
-	                box{ <-1.05, 0.015,-0.27> <-0.75, 0.605, 0.27> }
-	                box{ < 1.05, 0.015,-0.27> < 0.75, 0.605, 0.27> }
-	        }
-	        box{ <-1.03, 0.0, -0.25> < 1.03, 0.62, 0.25>}
-	        texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}
-	}
-	box{ <-1.03, 0.01, -0.25> < 1.03, 0.61, 0.25> texture{ pigment{ White }}}
+   
+   difference{
+         union{
+                   box{ <-1.05, 0.015,-0.27> <-0.75, 0.605, 0.27> }
+                   box{ < 1.05, 0.015,-0.27> < 0.75, 0.605, 0.27> }
+           }
+           box{ <-1.03, 0.0, -0.25> < 1.03, 0.62, 0.25>}
+           texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}
+   }
+   box{ <-1.03, 0.01, -0.25> < 1.03, 0.61, 0.25> texture{ pigment{ White }}}
  
         box{<-0.65, 0.02,-0.251> < 0, 0.60,-0.25> texture{ pigment{ color rgb< 0, 0.5, 0> }}}
 }
@@ -1642,27 +1642,27 @@ DIODE_REC_RB1A_GRND(value)
 #macro DIODE_SMD_DO214_GRND(L,B,H,LG,BP,DP)
 #macro SD_DO214_PIN(H,LP,BP,DP,R)
 union{
-	difference{
-		cylinder{<0,-BP/2,0><0,BP/2,0> R+DP/2}
-		cylinder{<0,-BP,0><0,BP,0> R-DP/2}
-		box{<-R-DP,-BP,-R-DP><0,BP,R+DP>}
-		box{<-R-DP,-BP,-R-DP><R+DP,BP,0>}
-		rotate<0,0,90> 
-		translate<0,H-R,-R> 
-	}
-	difference{
-		cylinder{<0,-BP/2,0><0,BP/2,0> R+DP/2}
-		cylinder{<0,-BP,0><0,BP,0> R-DP/2}
-		box{<-R-DP,-BP,-R-DP><0,BP,R+DP>}
-		box{<-R-DP,-BP,-R-DP><R+DP,BP,0>}
-		rotate<0,0,90> 
-		rotate<90,0,0> 
-		translate<0,R+DP/2,-R> 
-	}
-	box{<-BP/2,R+DP/2,-DP/2><BP/2,H-R,DP/2>}
-	box{<-BP/2,0,-LP><BP/2,DP,-R>}
-	box{<-BP/2,H-DP/2,-LP><BP/2,H+DP/2,-R>}
-	texture{col_silver}
+   difference{
+      cylinder{<0,-BP/2,0><0,BP/2,0> R+DP/2}
+      cylinder{<0,-BP,0><0,BP,0> R-DP/2}
+      box{<-R-DP,-BP,-R-DP><0,BP,R+DP>}
+      box{<-R-DP,-BP,-R-DP><R+DP,BP,0>}
+      rotate<0,0,90> 
+      translate<0,H-R,-R> 
+   }
+   difference{
+      cylinder{<0,-BP/2,0><0,BP/2,0> R+DP/2}
+      cylinder{<0,-BP,0><0,BP,0> R-DP/2}
+      box{<-R-DP,-BP,-R-DP><0,BP,R+DP>}
+      box{<-R-DP,-BP,-R-DP><R+DP,BP,0>}
+      rotate<0,0,90> 
+      rotate<90,0,0> 
+      translate<0,R+DP/2,-R> 
+   }
+   box{<-BP/2,R+DP/2,-DP/2><BP/2,H-R,DP/2>}
+   box{<-BP/2,0,-LP><BP/2,DP,-R>}
+   box{<-BP/2,H-DP/2,-LP><BP/2,H+DP/2,-R>}
+   texture{col_silver}
 }
 #end
 union{
@@ -1753,106 +1753,106 @@ DIODE_SMD_LED_CHIP_GRND(<0.75,0.6,0.6>,col,tra)
 #macro DIODE_SMD_LED_PLCC2_GRND(typeOfCase)
 union{
 
-	//default to PLCC2
-	#local L = 3.7;
-	#local W = 3.0;
-	#local H = 2.0;
-	#local LT = 3.3;
-	#local WT = 2.6;
-	#local HT = 1.6;
-	#local P = 2;
-	
-	#if(strcmp(typeOfCase,"PLCC2")=0.0)
+   //default to PLCC2
+   #local L = 3.7;
+   #local W = 3.0;
+   #local H = 2.0;
+   #local LT = 3.3;
+   #local WT = 2.6;
+   #local HT = 1.6;
+   #local P = 2;
+   
+   #if(strcmp(typeOfCase,"PLCC2")=0.0)
 
-		#local L = 3.7;
-		#local W = 3.0;
-		#local H = 2.0;
-		#local LT = 3.3;
-		#local WT = 2.6;
-		#local HT = 1.6;
-		#local P = 2;
-		
-	#end
+      #local L = 3.7;
+      #local W = 3.0;
+      #local H = 2.0;
+      #local LT = 3.3;
+      #local WT = 2.6;
+      #local HT = 1.6;
+      #local P = 2;
+      
+   #end
 
-	#if(strcmp(typeOfCase,"MiniTopled")=0.0)
+   #if(strcmp(typeOfCase,"MiniTopled")=0.0)
 
-		#local L = 2.3;
-		#local W = 1.5;
-		#local H = 1.4;
-		#local LT = 2.1;
-		#local WT = 1.3;
-		#local HT = 1.2;
-		#local P = 2;
-		
-	#end
-		
-	difference{
-		
-		object{Round_Box(<0,0,0>, <LT,H,W>, 0.1, no) translate<-LT/2,(L-LT)/2,-W/2>}
-		cylinder{<0,H+(L-LT)/2-0.4,0> <0,H+(L-LT)/2+0.1,0>W/3.5}
-		cone{ <0,H+(L-LT)/2-0.4,0> W/2.9 <0,H+(L-LT)/2+0.1,0>W/2.2}
-	        pigment{White}
-	}
-	
-	box{<-0.2,H+(L-LT)/2-0.4,-0.2><0.2,H+(L-LT)/2-0.3,0.2> pigment{Gray80}}
-	
-	//rechter Anschluss
-	difference{
-		box{<0,0,0><-P,HT,WT>}
-		box{<0,(L-LT)/2,-0.002><-P-0.002,HT-(L-LT)/2,WT+0.002> translate<-(L-LT)/2,0,0>}
-		cylinder{<0,HT,-0.002><0,HT,WT+0.002>(L-LT)/2}
-		cylinder{<0,0,-0.002><0,0,WT+0.002>(L-LT)/2}
-		texture{col_silver} 
-		translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
-	}
-	//rechter Anschlus
-	difference{
-		cylinder{<-(L-LT)/2,HT-(L-LT)/2,><-(L-LT)/2,HT-(L-LT)/2,WT>(L-LT)/2}
-		cylinder{<-3*(L-LT)/4,HT-3*(L-LT)/4,-0.04><-3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
-		box{<-(L-LT)/2,HT-3*(L-LT)/4,-0.04><-(L-LT),HT-5,WT+0.002>}
-		box{<-3*(L-LT)/4,HT-(L-LT)/2,-0.04><-(L-LT),HT-5,WT+0.002>}
-		texture{col_silver}
-		translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
-	}
-	//rechter Anschlus
-	difference{
-		cylinder{<-(L-LT)/2,(L-LT)/2,0><-(L-LT)/2,(L-LT)/2,WT>(L-LT)/2}
-		cylinder{<-3*(L-LT)/4,3*(L-LT)/4,-0.04><-3*(L-LT)/4,3*(L-LT)/4,WT+0.002>(L-LT)/4}
-		box{<(-L-LT)/2,3*(L-LT)/4,-0.04><-(L-LT),5,WT+0.002>}
-		box{<0,0,-0.04><(L-LT)/2,(L-LT)/2,WT+0.002> translate<-(L-LT),0.75*(L-LT),0>}
-		box{<(L-LT)/2,(L-LT)/2,-0.04><(L-LT),L-LT,WT+0.002> translate<-1.75*(L-LT),0,0>}
-		texture{col_silver}
-		translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
-	}
-	//linker (positiver) Anschlus
-	difference{
-		box{<0,0,0><P,HT,WT>}
-		box{<(L-LT)/2,(L-LT)/2,-0.002><P+0.002,HT-(L-LT)/2,WT+0.002>}
-		cylinder{<0,HT,-0.002><0,HT,WT+0.002>(L-LT)/2}
-		cylinder{<0,0,-0.002><0,0,WT+0.002>(L-LT)/2}
-		box{<-0.002,HT/2,0><P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35>}
-		texture{col_silver}
-		translate<-L/2-0.02,0,-WT/2>
-	}
-	//linker (positiver) Anschlus
-	difference{
-		cylinder{<(L-LT)/2,HT-(L-LT)/2,-0.002><(L-LT)/2,HT-(L-LT)/2,WT+0.002>(L-LT)/2}
-		cylinder{<3*(L-LT)/4,HT-3*(L-LT)/4,-0.04><3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
-		box{<(L-LT)/2,HT-3*(L-LT)/4,-0.04><L-LT,HT-5,WT+0.002>}
-		box{<3*(L-LT)/4,HT-(L-LT)/2,-0.04><L-LT,HT-5,WT+0.002>}
-		box{<-0.002,HT/2,0><P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35>}
-		texture{col_silver}
-		translate<-L/2-0.02,0,-WT/2>
-	}
-	//linker (positiver) Anschlus
-	difference{
-		cylinder{<(L-LT)/2,(L-LT)/2,-0.002><(L-LT)/2,(L-LT)/2,WT+0.002>(L-LT)/2}
-		cylinder{<3*(L-LT)/4,3*(L-LT)/4,-0.04><3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
-		box{<(L-LT)/2,3*(L-LT)/4,-0.04><L-LT,5,WT+0.002>}
-		box{<3*(L-LT)/4,(L-LT)/2,-0.04><L-LT,L-LT,WT+0.002>}
-		texture{col_silver} 
-		translate<-L/2-0.02,0,-WT/2>
-	}
+      #local L = 2.3;
+      #local W = 1.5;
+      #local H = 1.4;
+      #local LT = 2.1;
+      #local WT = 1.3;
+      #local HT = 1.2;
+      #local P = 2;
+      
+   #end
+      
+   difference{
+      
+      object{Round_Box(<0,0,0>, <LT,H,W>, 0.1, no) translate<-LT/2,(L-LT)/2,-W/2>}
+      cylinder{<0,H+(L-LT)/2-0.4,0> <0,H+(L-LT)/2+0.1,0>W/3.5}
+      cone{ <0,H+(L-LT)/2-0.4,0> W/2.9 <0,H+(L-LT)/2+0.1,0>W/2.2}
+           pigment{White}
+   }
+   
+   box{<-0.2,H+(L-LT)/2-0.4,-0.2><0.2,H+(L-LT)/2-0.3,0.2> pigment{Gray80}}
+   
+   //rechter Anschluss
+   difference{
+      box{<0,0,0><-P,HT,WT>}
+      box{<0,(L-LT)/2,-0.002><-P-0.002,HT-(L-LT)/2,WT+0.002> translate<-(L-LT)/2,0,0>}
+      cylinder{<0,HT,-0.002><0,HT,WT+0.002>(L-LT)/2}
+      cylinder{<0,0,-0.002><0,0,WT+0.002>(L-LT)/2}
+      texture{col_silver} 
+      translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
+   }
+   //rechter Anschlus
+   difference{
+      cylinder{<-(L-LT)/2,HT-(L-LT)/2,><-(L-LT)/2,HT-(L-LT)/2,WT>(L-LT)/2}
+      cylinder{<-3*(L-LT)/4,HT-3*(L-LT)/4,-0.04><-3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
+      box{<-(L-LT)/2,HT-3*(L-LT)/4,-0.04><-(L-LT),HT-5,WT+0.002>}
+      box{<-3*(L-LT)/4,HT-(L-LT)/2,-0.04><-(L-LT),HT-5,WT+0.002>}
+      texture{col_silver}
+      translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
+   }
+   //rechter Anschlus
+   difference{
+      cylinder{<-(L-LT)/2,(L-LT)/2,0><-(L-LT)/2,(L-LT)/2,WT>(L-LT)/2}
+      cylinder{<-3*(L-LT)/4,3*(L-LT)/4,-0.04><-3*(L-LT)/4,3*(L-LT)/4,WT+0.002>(L-LT)/4}
+      box{<(-L-LT)/2,3*(L-LT)/4,-0.04><-(L-LT),5,WT+0.002>}
+      box{<0,0,-0.04><(L-LT)/2,(L-LT)/2,WT+0.002> translate<-(L-LT),0.75*(L-LT),0>}
+      box{<(L-LT)/2,(L-LT)/2,-0.04><(L-LT),L-LT,WT+0.002> translate<-1.75*(L-LT),0,0>}
+      texture{col_silver}
+      translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
+   }
+   //linker (positiver) Anschlus
+   difference{
+      box{<0,0,0><P,HT,WT>}
+      box{<(L-LT)/2,(L-LT)/2,-0.002><P+0.002,HT-(L-LT)/2,WT+0.002>}
+      cylinder{<0,HT,-0.002><0,HT,WT+0.002>(L-LT)/2}
+      cylinder{<0,0,-0.002><0,0,WT+0.002>(L-LT)/2}
+      box{<-0.002,HT/2,0><P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35>}
+      texture{col_silver}
+      translate<-L/2-0.02,0,-WT/2>
+   }
+   //linker (positiver) Anschlus
+   difference{
+      cylinder{<(L-LT)/2,HT-(L-LT)/2,-0.002><(L-LT)/2,HT-(L-LT)/2,WT+0.002>(L-LT)/2}
+      cylinder{<3*(L-LT)/4,HT-3*(L-LT)/4,-0.04><3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
+      box{<(L-LT)/2,HT-3*(L-LT)/4,-0.04><L-LT,HT-5,WT+0.002>}
+      box{<3*(L-LT)/4,HT-(L-LT)/2,-0.04><L-LT,HT-5,WT+0.002>}
+      box{<-0.002,HT/2,0><P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35>}
+      texture{col_silver}
+      translate<-L/2-0.02,0,-WT/2>
+   }
+   //linker (positiver) Anschlus
+   difference{
+      cylinder{<(L-LT)/2,(L-LT)/2,-0.002><(L-LT)/2,(L-LT)/2,WT+0.002>(L-LT)/2}
+      cylinder{<3*(L-LT)/4,3*(L-LT)/4,-0.04><3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
+      box{<(L-LT)/2,3*(L-LT)/4,-0.04><L-LT,5,WT+0.002>}
+      box{<3*(L-LT)/4,(L-LT)/2,-0.04><L-LT,L-LT,WT+0.002>}
+      texture{col_silver} 
+      translate<-L/2-0.02,0,-WT/2>
+   }
 }
 #end   
 #macro DIODE_SMD_LED_PLCC2()
@@ -1935,25 +1935,25 @@ DIODE_SMD_MINIMELF_GRND(value, <0.52,0.7,0.7>)
 ********************************************************************************************************************************************/
 #macro DIODE_SMD_SOD123_GRND(L,B,H,LG,BP,DP)
 union{
-	difference{
-		box{<-L/2,0.2,-B/2><L/2,H,B/2>}
-		box{<0,0,-B><H,H,B> rotate<0,0,10> translate<L/2,H/2+DP/2,0>}
-		box{<0,0,-B><-H,H,B> rotate<0,0,-10> translate<-L/2,H/2+DP/2,0>}
-		box{<0,0,-B><H,-H,B> rotate<0,0,-10> translate<L/2,H/2-DP/2,0>}
-		box{<0,0,-B><-H,-H,B> rotate<0,0,10> translate<-L/2,H/2-DP/2,0>}
-		box{<-L,0,0><L,H,H> rotate<-10,0,0> translate<0,H/2+DP/2,B/2>}
-		box{<-L,0,0><L,H,-H> rotate<10,0,0> translate<0,H/2+DP/2,-B/2>}
-		box{<-L,0,0><L,-H,H> rotate<10,0,0> translate<0,H/2-DP/2,B/2>}
-		box{<-L,0,0><L,-H,-H> rotate<-10,0,0> translate<0,H/2-DP/2,-B/2>}
-		box{<0,0,-B><1.2,1.5*DP,B> translate<-L/2,0,0>}
-		box{<0,0,-B><-1.2,1.5*DP,B> translate<L/2,0,0>}}
+   difference{
+      box{<-L/2,0.2,-B/2><L/2,H,B/2>}
+      box{<0,0,-B><H,H,B> rotate<0,0,10> translate<L/2,H/2+DP/2,0>}
+      box{<0,0,-B><-H,H,B> rotate<0,0,-10> translate<-L/2,H/2+DP/2,0>}
+      box{<0,0,-B><H,-H,B> rotate<0,0,-10> translate<L/2,H/2-DP/2,0>}
+      box{<0,0,-B><-H,-H,B> rotate<0,0,10> translate<-L/2,H/2-DP/2,0>}
+      box{<-L,0,0><L,H,H> rotate<-10,0,0> translate<0,H/2+DP/2,B/2>}
+      box{<-L,0,0><L,H,-H> rotate<10,0,0> translate<0,H/2+DP/2,-B/2>}
+      box{<-L,0,0><L,-H,H> rotate<10,0,0> translate<0,H/2-DP/2,B/2>}
+      box{<-L,0,0><L,-H,-H> rotate<-10,0,0> translate<0,H/2-DP/2,-B/2>}
+      box{<0,0,-B><1.2,1.5*DP,B> translate<-L/2,0,0>}
+      box{<0,0,-B><-1.2,1.5*DP,B> translate<L/2,0,0>}}
 
-	box{<-L/2+L/10,H,-B/2+B/10><-L/2+L/10+L/10,H+0.01,B/2-B/10> pigment{White}}
+   box{<-L/2+L/10,H,-B/2+B/10><-L/2+L/10+L/10,H+0.01,B/2-B/10> pigment{White}}
 
-	box{<-1, 0, -BP/2><1, DP, BP/2> translate<-(LG/2-1), 0, 0> texture{col_silver}}
-	box{<-1, 0, -BP/2><1, DP, BP/2> translate< (LG/2-1), 0, 0> texture{col_silver}}
+   box{<-1, 0, -BP/2><1, DP, BP/2> translate<-(LG/2-1), 0, 0> texture{col_silver}}
+   box{<-1, 0, -BP/2><1, DP, BP/2> translate< (LG/2-1), 0, 0> texture{col_silver}}
 
-	pigment{Gray20}}
+   pigment{Gray20}}
 #end
 
 #macro DIODE_SMD_SOD123_1()
@@ -2018,46 +2018,46 @@ DIODE_SMD_SOD87_GRND(value)
 #macro DIODE_SOD64_GRND(value, L, BD, BL)
 union{
 
-	//Beschriftung
-	intersection{                                                                                                      
-		sphere{<0,0,0> BD/2+0.01 scale<BL/BD,1,1>  pigment{Gray30}}                                                               
-		union{                                                                                                           
-			text {ttf besch_font value 3, 0  translate<-BL/2+1.2,-0.4,-BD/2-0.5> rotate<90,0,0>} 
-			pigment{Gray30}
-		}  
-   		translate<0, 2.5, 0>                                                                                                         
-	}  
+   //Beschriftung
+   intersection{                                                                                                      
+      sphere{<0,0,0> BD/2+0.01 scale<BL/BD,1,1>  pigment{Gray30}}                                                               
+      union{                                                                                                           
+         text {ttf besch_font value 3, 0  translate<-BL/2+1.2,-0.4,-BD/2-0.5> rotate<90,0,0>} 
+         pigment{Gray30}
+      }  
+         translate<0, 2.5, 0>                                                                                                         
+   }  
                   
         //ring
-	intersection{                                                                                                      
-		sphere{<0,0,0> BD/2+0.01 scale<BL/BD,1,1>  pigment{Gray30}}                                                               
-		cylinder{<-BL/2+0.5, 0, 0><-BL/2+1, 0, 0> BD/2+0.05 pigment{Black} }
-   		translate<0, 2.5, 0> 
+   intersection{                                                                                                      
+      sphere{<0,0,0> BD/2+0.01 scale<BL/BD,1,1>  pigment{Gray30}}                                                               
+      cylinder{<-BL/2+0.5, 0, 0><-BL/2+1, 0, 0> BD/2+0.05 pigment{Black} }
+         translate<0, 2.5, 0> 
         }
                           
         // koerper          
-	union{
-		cylinder{<-BL/2, 0, 0>< BL/2, 0, 0> 0.5 texture{col_silver} }  
-		sphere{<0,0,0> BD/2 scale<BL/BD,1,1> pigment{LightBlue} finish { phong 0.5 }}
-		translate<0, 2.5, 0>
-	}
+   union{
+      cylinder{<-BL/2, 0, 0>< BL/2, 0, 0> 0.5 texture{col_silver} }  
+      sphere{<0,0,0> BD/2 scale<BL/BD,1,1> pigment{LightBlue} finish { phong 0.5 }}
+      translate<0, 2.5, 0>
+   }
 
-	// anschluesse
-	union{
-	        // pin unterteil
-		#if  (pin_short=off)
-			cylinder{<-L/2,0,0><-L/2,-12,0>0.3 }
-			cylinder{< L/2,0,0>< L/2,-12,0>0.3 }
-		#else
-			cylinder{<-L/2,0,0><-L/2,-1*(pin_length+pcb_height),0>0.3 }
-			cylinder{< L/2,0,0>< L/2,-1*(pin_length+pcb_height),0>0.3 }
-		#end
-	        //pin oberteil                 
-	        #declare bends1=array[3] {<0, 2, 0>,  <90, 0.5, 0>,  <0,4,0> }  
-	        object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,0,0> translate<-L/2,0,0>}               
-	        object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,180,0> translate< L/2,0,0>}               
-		texture{col_silver}
-	}
+   // anschluesse
+   union{
+           // pin unterteil
+      #if  (pin_short=off)
+         cylinder{<-L/2,0,0><-L/2,-12,0>0.3 }
+         cylinder{< L/2,0,0>< L/2,-12,0>0.3 }
+      #else
+         cylinder{<-L/2,0,0><-L/2,-1*(pin_length+pcb_height),0>0.3 }
+         cylinder{< L/2,0,0>< L/2,-1*(pin_length+pcb_height),0>0.3 }
+      #end
+           //pin oberteil                 
+           #declare bends1=array[3] {<0, 2, 0>,  <90, 0.5, 0>,  <0,4,0> }  
+           object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,0,0> translate<-L/2,0,0>}               
+           object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,180,0> translate< L/2,0,0>}               
+      texture{col_silver}
+   }
 }
 #end
 
@@ -2093,53 +2093,53 @@ DIODE_SOD64_GRND(value, 20.32, 2.5, 13.5)
 ********************************************************************************************************************************************/
 #macro DIODE_SOD81_GRND(value)
 union{
-	union{
+   union{
 
-		//Glaskoerper
-		union{
-			cylinder{<-1.9, 0, 0>< 1.9, 0, 0> 1.05-0.25 }
-			cylinder{<-1.65,0, 0>< 1.65,0, 0> 1.05 }
-			torus{0.8, 0.25 rotate<0,0,90> translate<-1.65, 0, 0>}
-			torus{0.8, 0.25 rotate<0,0,90> translate< 1.65, 0, 0>}
-			cone{<0,0,0>0.7 <-1,0,0> 0 translate<-1.8,0,0>}
-			cone{<0,0,0>0.7 < 1,0,0> 0 translate< 1.8,0,0>}
-			pigment{Col_Glass_General}
-		}
-		cylinder{<-1.5,0,0><-1.1,0,0> 1.06 pigment{Black} }    //Markierung
+      //Glaskoerper
+      union{
+         cylinder{<-1.9, 0, 0>< 1.9, 0, 0> 1.05-0.25 }
+         cylinder{<-1.65,0, 0>< 1.65,0, 0> 1.05 }
+         torus{0.8, 0.25 rotate<0,0,90> translate<-1.65, 0, 0>}
+         torus{0.8, 0.25 rotate<0,0,90> translate< 1.65, 0, 0>}
+         cone{<0,0,0>0.7 <-1,0,0> 0 translate<-1.8,0,0>}
+         cone{<0,0,0>0.7 < 1,0,0> 0 translate< 1.8,0,0>}
+         pigment{Col_Glass_General}
+      }
+      cylinder{<-1.5,0,0><-1.1,0,0> 1.06 pigment{Black} }    //Markierung
 
-		//Beschriftung
-		intersection{                                                                                                      
-			cylinder{<1.8,0,0><-1.6,0,0>1.06 pigment{Col_Glass_General}}                                                               
-			union{                                                                                                           
-				text {ttf besch_font value 0.5, 0 scale<0.6,0.6,0.6> translate<-0.8,-0.4,-1.0> rotate<0,0,0> pigment{Black}}  
-				text {ttf besch_font value 0.5, 0 scale<0.6,0.6,0.6> translate<-0.8,-0.4,-1.0> rotate<90,0,0> pigment{Black}} 
-				text {ttf besch_font value 0.5, 0 scale<0.6,0.6,0.6> translate<-0.8,-0.4,-1.0> rotate<180,0,0> pigment{Black}}
-			}                                                                                                              
-		}  
+      //Beschriftung
+      intersection{                                                                                                      
+         cylinder{<1.8,0,0><-1.6,0,0>1.06 pigment{Col_Glass_General}}                                                               
+         union{                                                                                                           
+            text {ttf besch_font value 0.5, 0 scale<0.6,0.6,0.6> translate<-0.8,-0.4,-1.0> rotate<0,0,0> pigment{Black}}  
+            text {ttf besch_font value 0.5, 0 scale<0.6,0.6,0.6> translate<-0.8,-0.4,-1.0> rotate<90,0,0> pigment{Black}} 
+            text {ttf besch_font value 0.5, 0 scale<0.6,0.6,0.6> translate<-0.8,-0.4,-1.0> rotate<180,0,0> pigment{Black}}
+         }                                                                                                              
+      }  
 
-		// innenleben
-		cylinder{<-1.55, 0, 0>< -0.2, 0, 0> 0.9 pigment{color Red} } 
-		cylinder{< 1.55, 0, 0><  0.2, 0, 0> 0.9 pigment{color Red} }
-		cylinder{< 0.2,  0, 0>< -0.2, 0, 0> 0.1 texture{col_silver} }
-		translate<0, 1.5, 0>
-	}
+      // innenleben
+      cylinder{<-1.55, 0, 0>< -0.2, 0, 0> 0.9 pigment{color Red} } 
+      cylinder{< 1.55, 0, 0><  0.2, 0, 0> 0.9 pigment{color Red} }
+      cylinder{< 0.2,  0, 0>< -0.2, 0, 0> 0.1 texture{col_silver} }
+      translate<0, 1.5, 0>
+   }
 
-	// anschluesse
-	union{
-	        // pin unterteil
-		#if  (pin_short=off)
-			cylinder{<-5.08,0,0><-5.08,-12,0>0.3 }
-			cylinder{< 5.08,0,0>< 5.08,-12,0>0.3 }
-		#else
-			cylinder{<-5.08,0,0><-5.08,-1*(pin_length+pcb_height),0>0.3 }
-			cylinder{< 5.08,0,0>< 5.08,-1*(pin_length+pcb_height),0>0.3 }
-		#end
-	        //pin oberteil                 
-	        #declare bends1=array[3] {<0, 1, 0>,  <90, 0.5, 0>,  <0,3,0> }  
-	        object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,0,0> translate<-5.08,0,0>}               
-	        object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,180,0> translate< 5.08,0,0>}               
-		texture{col_silver}
-	}
+   // anschluesse
+   union{
+           // pin unterteil
+      #if  (pin_short=off)
+         cylinder{<-5.08,0,0><-5.08,-12,0>0.3 }
+         cylinder{< 5.08,0,0>< 5.08,-12,0>0.3 }
+      #else
+         cylinder{<-5.08,0,0><-5.08,-1*(pin_length+pcb_height),0>0.3 }
+         cylinder{< 5.08,0,0>< 5.08,-1*(pin_length+pcb_height),0>0.3 }
+      #end
+           //pin oberteil                 
+           #declare bends1=array[3] {<0, 1, 0>,  <90, 0.5, 0>,  <0,3,0> }  
+           object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,0,0> translate<-5.08,0,0>}               
+           object { TOOLS_BENTPIPE( 0.3, <0,0,0>, y, bends1 ) rotate<0,180,0> translate< 5.08,0,0>}               
+      texture{col_silver}
+   }
 }
 #end
 
@@ -2157,9 +2157,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -2169,28 +2169,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}

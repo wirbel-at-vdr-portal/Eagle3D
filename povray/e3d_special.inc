@@ -26,9 +26,9 @@
 #declare __special_inc = true;
 
 #ifndef(inc_testmode)
-	#declare inc_testmode=true;
-	#include "e3d_tools.inc"
-	#undef inc_testmode
+   #declare inc_testmode=true;
+   #include "e3d_tools.inc"
+   #undef inc_testmode
 #end
 
 #include "DCDC/traco.inc"      // 06.04.2022, move TRACO to DCDC/traco.inc
@@ -48,24 +48,24 @@
 ********************************************************************************************************************************************/
 #macro SPC_BUZZER_GRND(val_size,dis,dia,hig,hole,dia_b)
 union{
-	union{
-		cylinder{<0,0,0><0,hig,0>dia pigment{Gray20}}                                                           //Buzzer Koerper
-		cylinder{<0,hig-1,0><0,hig+0.1,0>hole pigment{Black}}                                                   //Oeffnung oben
-       	}
-	union{                                                                                                          //Plus Symbol
-        	torus{(dia-hole)/3.5,0.15}
-	        box{<-(dia-hole)/3.5,-0.15,-0.15><(dia-hole)/3.5,0.15,0.15>}
-	        box{<-0.1,-0.15,-(dia-hole)/3.5><0.15,0.15,(dia-hole)/3.5>}
-	        translate<(dia+hole)/2,hig,0>
-		pigment{Gray20} 
-	}
-	#if(pin_short=off)
-		cylinder{<0,0,0><0,-14.5,0>dia_b texture{col_silver} translate<dis/2,0,0>}                              //Beinchen rechts
-		cylinder{<0,0,0><0,-17.5,0>dia_b texture{col_silver} translate<-dis/2,0,0>}                     	//Beinchen links
-	#else
-		cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b texture{col_silver} translate<dis/2,0,0>}	//Beinchen rechts
-		cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b texture{col_silver} translate<-dis/2,0,0>}	//Beinchen links
-	#end
+   union{
+      cylinder{<0,0,0><0,hig,0>dia pigment{Gray20}}                                                           //Buzzer Koerper
+      cylinder{<0,hig-1,0><0,hig+0.1,0>hole pigment{Black}}                                                   //Oeffnung oben
+         }
+   union{                                                                                                          //Plus Symbol
+         torus{(dia-hole)/3.5,0.15}
+           box{<-(dia-hole)/3.5,-0.15,-0.15><(dia-hole)/3.5,0.15,0.15>}
+           box{<-0.1,-0.15,-(dia-hole)/3.5><0.15,0.15,(dia-hole)/3.5>}
+           translate<(dia+hole)/2,hig,0>
+      pigment{Gray20} 
+   }
+   #if(pin_short=off)
+      cylinder{<0,0,0><0,-14.5,0>dia_b texture{col_silver} translate<dis/2,0,0>}                              //Beinchen rechts
+      cylinder{<0,0,0><0,-17.5,0>dia_b texture{col_silver} translate<-dis/2,0,0>}                        //Beinchen links
+   #else
+      cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b texture{col_silver} translate<dis/2,0,0>}   //Beinchen rechts
+      cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b texture{col_silver} translate<-dis/2,0,0>}  //Beinchen links
+   #end
 }
 #end
 
@@ -86,22 +86,22 @@ SPC_BUZZER_GRND(1,7.62,12/2,9.5,2.5/2,1/2)
 #local SPC_CRES_TEXT_PIGMENT = pigment { White*0.5 } ;
 
 union{
-	//Grundkoerper
-	union{
+   //Grundkoerper
+   union{
         Round_Box_Union(<-2.5,0.03,-1.6>,<2.5,0.9, 1.6>, 0.05 ) pigment{White*0.1}
         }
-	
-	//Anschlusspads
-	box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate<-2.05,0, 1.1>}
-	box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate<-2.05,0,-1.1>}
-	box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate< 2.05,0, 1.1>}
-	box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate< 2.05,0,-1.1>}
+   
+   //Anschlusspads
+   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate<-2.05,0, 1.1>}
+   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate<-2.05,0,-1.1>}
+   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate< 2.05,0, 1.1>}
+   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate< 2.05,0,-1.1>}
 
         Round_Box_Union(<-2.5,0.85,-1.6>, <2.5,1.0, 1.6>, 0.05 )
         Round_Box_Union(<-2.5+0.5,0.5,-1.6+0.5>,<2.5-0.5,1.1, 1.6-0.5>, 0.05 )
         text {ttf besch_font value 0.02, 0 pigment{SPC_CRES_TEXT_PIGMENT} rotate<90,0,0> scale 1.0 translate<-1.5, 1.11,-0.1>}
 
-        texture {SPC_CRES_METAL_TEXTURE}	
+        texture {SPC_CRES_METAL_TEXTURE}  
 }
 #end
 
@@ -115,18 +115,18 @@ SPC_CRES_ABRACON_ABM3B_GRND(value)
 ********************************************************************************************************************************************/
 #macro SPC_CRES_MURATA_CSTCE_G_A_GRND(value)
 union{
-	//Grundkörper
-	box{<-1.6,0,-0.65><1.6,0.4,0.65> pigment{White}}
-	//Anschlußflächen
-	box{<-0.25,0,-0.6501><0.25,0.3,0.6501> texture{col_gold}}
-	box{<-0.25,0,-0.6501><0.25,0.41,0.6501> texture{col_gold} translate<-1.2,0,0>}
-	box{<-0.25,0,-0.6501><0.25,0.41,0.6501> texture{col_gold} translate<1.2,0,0>}
-	
-	difference{
-		Round_Box_Union(<-1.5,0.1,-0.55>,<1.5,0.7,0.55>, 0.1)
-  		text {ttf besch_font value 0.02, 0 rotate<90,0,0> scale 0.5 translate<-1,0.701,-0.1>}
-		texture{col_silver}
-	}
+   //Grundkörper
+   box{<-1.6,0,-0.65><1.6,0.4,0.65> pigment{White}}
+   //Anschlußflächen
+   box{<-0.25,0,-0.6501><0.25,0.3,0.6501> texture{col_gold}}
+   box{<-0.25,0,-0.6501><0.25,0.41,0.6501> texture{col_gold} translate<-1.2,0,0>}
+   box{<-0.25,0,-0.6501><0.25,0.41,0.6501> texture{col_gold} translate<1.2,0,0>}
+   
+   difference{
+      Round_Box_Union(<-1.5,0.1,-0.55>,<1.5,0.7,0.55>, 0.1)
+      text {ttf besch_font value 0.02, 0 rotate<90,0,0> scale 0.5 translate<-1,0.701,-0.1>}
+      texture{col_silver}
+   }
 }
 #end
 
@@ -147,20 +147,20 @@ SPC_CRES_MURATA_CSTCE_G_A_GRND(value)
 #local SPC_CRYSTAL_PLASTIC_TEXTURE = texture { pigment{White*0.2}} ;
 
 union{
-	//Grundkoerper
-	difference
-	        {
+   //Grundkoerper
+   difference
+           {
                 box{<-3.45,0.03,-0.7> <3.45,1.3,0.7>}
                 box{<-3.45,0.03,-0.9> <3.45,1.3,0.9> rotate<0,0,45> translate<-4.2,0,0>}
                 texture{SPC_CRYSTAL_PLASTIC_TEXTURE}
                 }    
         text {ttf besch_font value 0.2, 0 pigment { Gray60 } rotate<90,0,0> scale 1.0 translate<-2.3, 1.31,-0.3>}
-	
-	//Anschlusspads
-	box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate<-3.28,0, 0.50>}
-	box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate<-3.28,0,-0.50>}
-	box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate< 3.28,0, 0.50>}
-	box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate< 3.28,0,-0.50>}
+   
+   //Anschlusspads
+   box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate<-3.28,0, 0.50>}
+   box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate<-3.28,0,-0.50>}
+   box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate< 3.28,0, 0.50>}
+   box{<-0.3,0,-0.21><0.3,0.4,0.21> texture{col_silver} translate< 3.28,0,-0.50>}
 
 }
 #end
@@ -178,33 +178,33 @@ SPC_CRYSTAL_ABRACON_ABS13_GRND(value)
 #macro SPC_CRYSTAL_SMD_MM505_PIN(H,B,T,S,H2,R,rx,ry,rz,tx,ty,tz)
         difference{
                 union{
-	                box{ < 0, 0 ,-T/2> < B-S, S,T/2>}
+                   box{ < 0, 0 ,-T/2> < B-S, S,T/2>}
 
-        	        difference{
-		                cylinder{ < B-S-0.01, S+0.01, -T/2> <B-S-0.01, S+0.01 ,T/2> S+0.01 }
-		                box { < B-2*S-0.1, S+0.01, -T/2-0.1> < B-S-0.01, S*2+0.1, T/2+0.1> }
-	                }
+                 difference{
+                      cylinder{ < B-S-0.01, S+0.01, -T/2> <B-S-0.01, S+0.01 ,T/2> S+0.01 }
+                      box { < B-2*S-0.1, S+0.01, -T/2-0.1> < B-S-0.01, S*2+0.1, T/2+0.1> }
+                   }
 
-                	box{ < B-S, S, -T/2> < B, H-S, T/2> }
-	                difference{
-		                cylinder{ < B-S-0.01, H-S-0.01, -T/2> <B-S-0.01, H-S-0.01 ,T/2> S+0.01 }
-		                box { < B-2*S-0.1, H-S-0.01, -T/2-0.1> < B-S-0.01, H-S*2-0.1, T/2+0.1> }
-	                }
+                  box{ < B-S, S, -T/2> < B, H-S, T/2> }
+                   difference{
+                      cylinder{ < B-S-0.01, H-S-0.01, -T/2> <B-S-0.01, H-S-0.01 ,T/2> S+0.01 }
+                      box { < B-2*S-0.1, H-S-0.01, -T/2-0.1> < B-S-0.01, H-S*2-0.1, T/2+0.1> }
+                   }
 
-	                box{ < 0, H-S, -T/2> < B-S, H, T/2> }
-	                translate <-B, 0, 0>
+                   box{ < 0, H-S, -T/2> < B-S, H, T/2> }
+                   translate <-B, 0, 0>
                 }
 
                 prism{ -0.1, B+0.1, 5, 
                         <-T/2-0.1, H+0.1>, < 0, H+0.1>, < 0, H2+T/4>, <-T/2-0.1, H2-T/4>, <-T/2-0.1, H+0.1>
-	                rotate<-90, 90, 0>
+                   rotate<-90, 90, 0>
                         #if (R=1)
                                 scale < 1, 1,-1>
                         #end
                 }
-	        texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)} }
-	        rotate< rx, ry, rz> 
-	        translate<tx,ty,tz>  
+           texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)} }
+           rotate< rx, ry, rz> 
+           translate<tx,ty,tz>  
         }
         #end
 
@@ -218,17 +218,17 @@ union{
                 prism{-2.6, 2.6, 8, 
                         <-6.15, 0.3>, < 6.15, 0.3>, < 6.35, 2.0>, < 6.05, 4.7>, 
                         <-4.35, 4.7>, <-6.35, 2.6>, <-6.35, 2.0>, <-6.15, 0.3>
-	                rotate<-90, 0, 0>
+                   rotate<-90, 0, 0>
                 } 
                 prism{-7.5, 7.5, 9, 
                         <-3.0, 0>, < 3.0, 0>, < 3.0, 2.01>, < 2.54, 2.01>, < 2.44, 0.4>, 
                         <-2.44, 0.4>, <-2.54, 2.01>, <-3.0, 2.01>, <-3.0, 0>
-	                rotate<-90, 90, 0>
+                   rotate<-90, 90, 0>
                 }
                 prism{-7.5, 7.5, 9, 
                         <-3.0, 5.0>, < 3.0, 5.0>, < 3.0, 2.0>, < 2.54, 2.0>, < 2.34, 4.6>, 
                         <-2.34, 4.6>, <-2.54, 2.0>, <-3.0, 2.0>, <-3.0, 5.0>
-	                rotate<-90, 90, 0>
+                   rotate<-90, 90, 0>
                 }
                 texture{pigment { Gray20 }}
         } 
@@ -840,10 +840,10 @@ SPC_HEATSINK_RAWA400_GRND (9,3.2,2)
 //Designed by Stefan Seegel <dahamm(replace with at)@gmx.net>
 //17/10/06
 //
-//h:		height of heatsink
-//typ:		0 = mounting clip, 1 = solder pins, 2 = solder pins and insulation washer, 3 = M3 threaded bolts, brass
-//gap:	leave out gap on bottom if heatsink
-//d:		make drills
+//h:     height of heatsink
+//typ:      0 = mounting clip, 1 = solder pins, 2 = solder pins and insulation washer, 3 = M3 threaded bolts, brass
+//gap:   leave out gap on bottom if heatsink
+//d:     make drills
 ********************************************************************************************************************************************/
 #macro SPC_HEATSINK_SK104_GRND(h, typ, gap)
 
@@ -864,194 +864,194 @@ union{
 #local s4 = 1.0;
 #local hc = 6.4;
 
-	difference{
-		cylinder{<0,-hc/2,0><0,hc/2,0> brm}
-		cylinder{<0,-hc,0><0,hc,0> brm-d}
-		
-		box{<0, -hc, -brm>,<-brm, hc, brm> rotate<0,0,0>}
-		box{<0, -hc, -brm>,<brm, hc, brm> rotate<0,bw1,0>}
-	}
-	
-	
-	#local dx=sin(bw1/180*pi)*rmm;
-	#local dy=cos(bw1/180*pi)*rmm;
-	
-	box{<-d/2, -hc/2, 0>,<d/2, hc/2, -s1> rotate<0,-90+bw1,0> translate<dx,0,dy>}
-	
-	#local dx=dx+s1*cos(bw1/180*pi);
-	#local dy=dy-s1*sin(bw1/180*pi);
-	
-	union
-	{
-		difference{
-			cylinder{<0,-hc/2,0><0,hc/2,0> br}
-			cylinder{<0,-hc,0><0,hc,0> br-d}
-			box{<0, -hc, -br>,<-br, hc, br> rotate<0,bw1,0>}
-			#local bwx = bw1-bw2;
-			box{<0, -hc, -br>,<br, hc, br> rotate<0,bwx,0>}
-		}
-			
-	
-		box{<-d/2, -hc/2, 0>,<d/2, hc/2, s2> rotate<0,bwx+90,0> translate<-sin(bwx/180*pi)*rm,0,-cos(bwx/180*pi)*rm>}
-		
-		
-		#local dx=dx+sin(bw1/180*pi)*rm;
-		#local dy=dy+cos(bw1/180*pi)*rm;
-		translate<dx,0,dy>
-	}
-	
-	#local dx = dx-rm*sin(bwx/180*pi) + s2*cos(bwx/180*pi);
-	#local dy = dy-rm*cos(bwx/180*pi) - s2*sin(bwx/180*pi);
-	
-	//box{<-d/2, 0, 0>,<d/2, 6.5, s2> rotate<0,bw1-bw2+90,0> translate<dx,0,dy> texture{col_silver}}
-	
-	
-	union
-	{
-		difference{
-			cylinder{<0,-hc/2,0><0,hc/2,0> br}
-			cylinder{<0,-hc,0><0,hc,0> br-d}
-			box{<0, -hc, -br>,<-br, hc, br> rotate<0,bwx,0>}
-			#local bwx = bwx-bw3;
-			box{<0, -hc, -br>,<br, hc, br> rotate<0,bwx,0>}
-		}
-		
-		box{<-d/2, -hc/2, 0>,<d/2, hc/2, s3> rotate<0,bwx+90,0> translate<-sin(bwx/180*pi)*rm,0,-cos(bwx/180*pi)*rm>}
-		
-		#local dx = dx - rm*cos(bw1/180*pi);
-		#local dy = dy + rm*sin(bw1/180*pi);
-		translate<dx,0,dy>
-	}
-	
-	#local dx = dx -rm*sin(bwx/180*pi) + s3*cos(bwx/180*pi);
-	#local dy = dy -rm*cos(bwx/180*pi) - s3*sin(bwx/180*pi);
-	
-	union
-	{
-		difference{
-			cylinder{<0,-hc/2,0><0,hc/2,0> br}
-			cylinder{<0,-hc><0,hc,0> br-d}
-			box{<0, -hc, -br>,<-br, hc, br> rotate<0,bwx,0>}
-			#local bwx = bwx+bw4;
-			box{<0, -hc, -br>,<br, hc, br> rotate<0,bwx,0>}
-		}
-		
-		box{<-d/2, -hc/2, 0>,<d/2, hc/2, s4> rotate<0,bwx+90,0> translate<sin(bwx/180*pi)*rm,0,cos(bwx/180*pi)*rm>}
-		
-		
-		#local dx = dx - rm*sin((bwx-bw4)/180*pi);
-		#local dy = dy - rm*cos((bwx-bw4)/180*pi);
-		translate<dx,0,dy>
-		
-	}
-	
-	texture{col_gold}
-	
+   difference{
+      cylinder{<0,-hc/2,0><0,hc/2,0> brm}
+      cylinder{<0,-hc,0><0,hc,0> brm-d}
+      
+      box{<0, -hc, -brm>,<-brm, hc, brm> rotate<0,0,0>}
+      box{<0, -hc, -brm>,<brm, hc, brm> rotate<0,bw1,0>}
+   }
+   
+   
+   #local dx=sin(bw1/180*pi)*rmm;
+   #local dy=cos(bw1/180*pi)*rmm;
+   
+   box{<-d/2, -hc/2, 0>,<d/2, hc/2, -s1> rotate<0,-90+bw1,0> translate<dx,0,dy>}
+   
+   #local dx=dx+s1*cos(bw1/180*pi);
+   #local dy=dy-s1*sin(bw1/180*pi);
+   
+   union
+   {
+      difference{
+         cylinder{<0,-hc/2,0><0,hc/2,0> br}
+         cylinder{<0,-hc,0><0,hc,0> br-d}
+         box{<0, -hc, -br>,<-br, hc, br> rotate<0,bw1,0>}
+         #local bwx = bw1-bw2;
+         box{<0, -hc, -br>,<br, hc, br> rotate<0,bwx,0>}
+      }
+         
+   
+      box{<-d/2, -hc/2, 0>,<d/2, hc/2, s2> rotate<0,bwx+90,0> translate<-sin(bwx/180*pi)*rm,0,-cos(bwx/180*pi)*rm>}
+      
+      
+      #local dx=dx+sin(bw1/180*pi)*rm;
+      #local dy=dy+cos(bw1/180*pi)*rm;
+      translate<dx,0,dy>
+   }
+   
+   #local dx = dx-rm*sin(bwx/180*pi) + s2*cos(bwx/180*pi);
+   #local dy = dy-rm*cos(bwx/180*pi) - s2*sin(bwx/180*pi);
+   
+   //box{<-d/2, 0, 0>,<d/2, 6.5, s2> rotate<0,bw1-bw2+90,0> translate<dx,0,dy> texture{col_silver}}
+   
+   
+   union
+   {
+      difference{
+         cylinder{<0,-hc/2,0><0,hc/2,0> br}
+         cylinder{<0,-hc,0><0,hc,0> br-d}
+         box{<0, -hc, -br>,<-br, hc, br> rotate<0,bwx,0>}
+         #local bwx = bwx-bw3;
+         box{<0, -hc, -br>,<br, hc, br> rotate<0,bwx,0>}
+      }
+      
+      box{<-d/2, -hc/2, 0>,<d/2, hc/2, s3> rotate<0,bwx+90,0> translate<-sin(bwx/180*pi)*rm,0,-cos(bwx/180*pi)*rm>}
+      
+      #local dx = dx - rm*cos(bw1/180*pi);
+      #local dy = dy + rm*sin(bw1/180*pi);
+      translate<dx,0,dy>
+   }
+   
+   #local dx = dx -rm*sin(bwx/180*pi) + s3*cos(bwx/180*pi);
+   #local dy = dy -rm*cos(bwx/180*pi) - s3*sin(bwx/180*pi);
+   
+   union
+   {
+      difference{
+         cylinder{<0,-hc/2,0><0,hc/2,0> br}
+         cylinder{<0,-hc><0,hc,0> br-d}
+         box{<0, -hc, -br>,<-br, hc, br> rotate<0,bwx,0>}
+         #local bwx = bwx+bw4;
+         box{<0, -hc, -br>,<br, hc, br> rotate<0,bwx,0>}
+      }
+      
+      box{<-d/2, -hc/2, 0>,<d/2, hc/2, s4> rotate<0,bwx+90,0> translate<sin(bwx/180*pi)*rm,0,cos(bwx/180*pi)*rm>}
+      
+      
+      #local dx = dx - rm*sin((bwx-bw4)/180*pi);
+      #local dy = dy - rm*cos((bwx-bw4)/180*pi);
+      translate<dx,0,dy>
+      
+   }
+   
+   texture{col_gold}
+   
 }
 #end
 
 #macro SPC_HEATSINK_SK104_QUARTER(h)
 union
 {
-	prism
-	{
-		0, h, 15,
-		<-7.5,0.75>, 
-		<-8,5.7>,<-9.2,5.6>,
-		<-9.6,2.1>,
-		<-12.5,6>,<-13.3,5.2>,
-		<-12.3,3.4>,
-		<-16.8,6>,<-17.6,5.1>,
-		<-14.7,2.9>,
-		<-17.0,3.6>,<-17.6,2.7>,
-		<-12.7,0>,<0,0>,<0,0.75>
-	}
-	
-	cylinder{<-8.6,0,5.65>,<-8.6,h,5.65> 0.6}
-	cylinder{<-12.9,0,5.6>,<-12.9,h,5.6> 0.56}
-	cylinder{<-17.2,0,5.55>,<-17.2,h,5.55> 0.6}
-	cylinder{<-17.3,0,3.15>,<-17.3,h,3.15> 0.54}
-	
+   prism
+   {
+      0, h, 15,
+      <-7.5,0.75>, 
+      <-8,5.7>,<-9.2,5.6>,
+      <-9.6,2.1>,
+      <-12.5,6>,<-13.3,5.2>,
+      <-12.3,3.4>,
+      <-16.8,6>,<-17.6,5.1>,
+      <-14.7,2.9>,
+      <-17.0,3.6>,<-17.6,2.7>,
+      <-12.7,0>,<0,0>,<0,0.75>
+   }
+   
+   cylinder{<-8.6,0,5.65>,<-8.6,h,5.65> 0.6}
+   cylinder{<-12.9,0,5.6>,<-12.9,h,5.6> 0.56}
+   cylinder{<-17.2,0,5.55>,<-17.2,h,5.55> 0.6}
+   cylinder{<-17.3,0,3.15>,<-17.3,h,3.15> 0.54}
+   
 }
 #end
 
 union
 {
-	difference
-	{
-		union
-		{	                       
-			object{SPC_HEATSINK_SK104_QUARTER(h)}
-			object{SPC_HEATSINK_SK104_QUARTER(h) rotate<0,180,0>}
-			object{SPC_HEATSINK_SK104_QUARTER(h) rotate<180,0,0> translate<0,h,0>}
-			object{SPC_HEATSINK_SK104_QUARTER(h) rotate<180,180,0> translate<0,h,0>}
-		}
-		
-		cylinder{<-12.7,-1,0>,<-12.7,h+1,0> 1.15}
-		cylinder{<12.7,0,0>,<12.7,h+1,0> 1.15}
-		
-		#if (typ != 0)
-		
-			cylinder{<0,13.5,-1>,<0,13.5,1> 1.6}
-			cylinder{<0,18.3,-1>,<0,18.3,1> 1.6}
-			cylinder{<0,25.4,-1>,<0,25.4,1> 1.6}
-		#end
-		
-		
-		#if (gap=on)
-			box{<-5.4,-1,-1>,<5.4,6.5,1>}
-		#end
-		
-		pigment{Gray30}
-	}
-	
-	#if (typ=3) //SK104 xx STSB (M3 threaded bolts, brass)
-	
-		cylinder{<-12.7,0,0>,<-12.7,-1.5,0> 3.5 texture{col_gold}}
-		cylinder{<12.7,0,0>,<12.7,-1.5,0> 3.5 texture{col_gold}}
-		object{TOOLS_SCREW(3,13.5,-1,Brass) translate<-12.7,7,0> texture{col_gold}}
-		object{TOOLS_SCREW(3,13.5,-1,Brass) translate<12.7,7,0> texture{col_gold}}
-		
-		
-		object{TOOLS_WASHER(3,1,Silver) translate<12.7,-pcb_height-2.3> }
-		object{TOOLS_NUT(3,0,Silver) translate<12.7,-pcb_height-4.3,0> }
-		
-		object{TOOLS_WASHER(3,1,Silver) translate<-12.7,-pcb_height-2.3,0> }
-		object{TOOLS_NUT(3,0,Silver) translate<-12.7,-pcb_height-4.3,0> }
-		
-		
-		translate<0,1.5,0>
-	#end
-	
-	#if (typ=2) //SK104 xx STIS (solder pins and insulation washer)
-		//insulating washers
-		cylinder{<-12.7,0,0>,<-12.7,-3,0> 3 pigment{White}}
-		cylinder{<12.7,0,0>,<12.7,-3,0> 3 pigment{White}}
+   difference
+   {
+      union
+      {                         
+         object{SPC_HEATSINK_SK104_QUARTER(h)}
+         object{SPC_HEATSINK_SK104_QUARTER(h) rotate<0,180,0>}
+         object{SPC_HEATSINK_SK104_QUARTER(h) rotate<180,0,0> translate<0,h,0>}
+         object{SPC_HEATSINK_SK104_QUARTER(h) rotate<180,180,0> translate<0,h,0>}
+      }
+      
+      cylinder{<-12.7,-1,0>,<-12.7,h+1,0> 1.15}
+      cylinder{<12.7,0,0>,<12.7,h+1,0> 1.15}
+      
+      #if (typ != 0)
+      
+         cylinder{<0,13.5,-1>,<0,13.5,1> 1.6}
+         cylinder{<0,18.3,-1>,<0,18.3,1> 1.6}
+         cylinder{<0,25.4,-1>,<0,25.4,1> 1.6}
+      #end
+      
+      
+      #if (gap=on)
+         box{<-5.4,-1,-1>,<5.4,6.5,1>}
+      #end
+      
+      pigment{Gray30}
+   }
+   
+   #if (typ=3) //SK104 xx STSB (M3 threaded bolts, brass)
+   
+      cylinder{<-12.7,0,0>,<-12.7,-1.5,0> 3.5 texture{col_gold}}
+      cylinder{<12.7,0,0>,<12.7,-1.5,0> 3.5 texture{col_gold}}
+      object{TOOLS_SCREW(3,13.5,-1,Brass) translate<-12.7,7,0> texture{col_gold}}
+      object{TOOLS_SCREW(3,13.5,-1,Brass) translate<12.7,7,0> texture{col_gold}}
+      
+      
+      object{TOOLS_WASHER(3,1,Silver) translate<12.7,-pcb_height-2.3> }
+      object{TOOLS_NUT(3,0,Silver) translate<12.7,-pcb_height-4.3,0> }
+      
+      object{TOOLS_WASHER(3,1,Silver) translate<-12.7,-pcb_height-2.3,0> }
+      object{TOOLS_NUT(3,0,Silver) translate<-12.7,-pcb_height-4.3,0> }
+      
+      
+      translate<0,1.5,0>
+   #end
+   
+   #if (typ=2) //SK104 xx STIS (solder pins and insulation washer)
+      //insulating washers
+      cylinder{<-12.7,0,0>,<-12.7,-3,0> 3 pigment{White}}
+      cylinder{<12.7,0,0>,<12.7,-3,0> 3 pigment{White}}
 
-		//solder pins		
-		cylinder{<-12.7,7,0>,<-12.7,-6,0> 1.15 texture{col_gold}} 
-		cylinder{<12.7,7,0>,<12.7,-6,0> 1.15 texture{col_gold}}
-		
-		translate<0,3,0>
-		
-	#end
-	
-	#if (typ=1 | typ=0) //SK104 xx STS (solder pins)
-		//solder pins
-		cylinder{<-12.7,7,0>,<-12.7,-4.5,0> 1.15 texture{col_gold}}
-		cylinder{<12.7,7,0>,<12.7,-4.5,0> 1.15 texture{col_gold}}
-	#end
-	
-	#if (typ=0) //Mounting clip
-		union
-		{
-			object{SPC_HEATSINK_SK104_MOUNTINGCLIP_HALF() rotate<0,180,0>} 
-			object{SPC_HEATSINK_SK104_MOUNTINGCLIP_HALF() rotate<0,180,180>}
-			translate<0,9,12>
-		}
-	#end
-	
-	
+      //solder pins     
+      cylinder{<-12.7,7,0>,<-12.7,-6,0> 1.15 texture{col_gold}} 
+      cylinder{<12.7,7,0>,<12.7,-6,0> 1.15 texture{col_gold}}
+      
+      translate<0,3,0>
+      
+   #end
+   
+   #if (typ=1 | typ=0) //SK104 xx STS (solder pins)
+      //solder pins
+      cylinder{<-12.7,7,0>,<-12.7,-4.5,0> 1.15 texture{col_gold}}
+      cylinder{<12.7,7,0>,<12.7,-4.5,0> 1.15 texture{col_gold}}
+   #end
+   
+   #if (typ=0) //Mounting clip
+      union
+      {
+         object{SPC_HEATSINK_SK104_MOUNTINGCLIP_HALF() rotate<0,180,0>} 
+         object{SPC_HEATSINK_SK104_MOUNTINGCLIP_HALF() rotate<0,180,180>}
+         translate<0,9,12>
+      }
+   #end
+   
+   
 }
 
 #end
@@ -1907,32 +1907,32 @@ union{
 
 //eine einzelne Windung
 #macro L_TOROIDAL_WINDUNG()
-	torus { radmin+dd/2, dd/2 texture {T_Gold_1A }}
+   torus { radmin+dd/2, dd/2 texture {T_Gold_1A }}
 #end
 
 //Windungen um den Kern
 #macro L_TOROIDAL_SPULE()
-	union {
-		#local i=1;
-	        #local ss = 0;
-	        #local ss=int((radmaj-radmin-dd/2)*2*3.14/dd-0.5); //Anzahl der Windungen um den Kern zu fuellen
-		#while(i<ss)
-			union{
-				difference{
-					union{
-				object{L_TOROIDAL_WINDUNG() translate <-delta/2, 0, 0>}
-				object{L_TOROIDAL_WINDUNG() translate < delta/2, 0, 0>}
-					}
-					box{<-delta/2, -dd, radmin+dd><delta/2, dd, -radmin-dd>}
-				}
-				cylinder{<-delta/2, 0, radmin+dd/2>< delta/2, 0, radmin+dd/2> dd/2 texture {T_Gold_1A }}
-				cylinder{<-delta/2, 0,-radmin-dd/2>< delta/2, 0,-radmin-dd/2> dd/2 texture {T_Gold_1A }}
-				translate <0, 0, radmaj>
-				rotate <90+i*360/ss, 0, 0>
-				}
-			#local i=i+1;
-		#end
-	}
+   union {
+      #local i=1;
+           #local ss = 0;
+           #local ss=int((radmaj-radmin-dd/2)*2*3.14/dd-0.5); //Anzahl der Windungen um den Kern zu fuellen
+      #while(i<ss)
+         union{
+            difference{
+               union{
+            object{L_TOROIDAL_WINDUNG() translate <-delta/2, 0, 0>}
+            object{L_TOROIDAL_WINDUNG() translate < delta/2, 0, 0>}
+               }
+               box{<-delta/2, -dd, radmin+dd><delta/2, dd, -radmin-dd>}
+            }
+            cylinder{<-delta/2, 0, radmin+dd/2>< delta/2, 0, radmin+dd/2> dd/2 texture {T_Gold_1A }}
+            cylinder{<-delta/2, 0,-radmin-dd/2>< delta/2, 0,-radmin-dd/2> dd/2 texture {T_Gold_1A }}
+            translate <0, 0, radmaj>
+            rotate <90+i*360/ss, 0, 0>
+            }
+         #local i=i+1;
+      #end
+   }
 #end
 
 //Anschluesse fuer stehende Spule
@@ -1961,26 +1961,26 @@ union{
 
 //Makro fuer stehende Spule
 #macro L_TOROIDAL_SFT(a,b,d,dd)
-	#local radmin = d/10;
-	#local radmaj = d/2-radmin;
-	#local delta  = b- 2*radmin;
-	union {
-		object {L_TOROIDAL_KERN(b,d) rotate<0,0,90> translate<0,radmaj+radmin+dd,0>}
-	 	object {L_TOROIDAL_SPULE()                  translate<0,radmaj+radmin+dd,0>}
-		object {L_TOROIDAL_CONTV()   translate<a/2, -3, 0> texture {T_Gold_1A }}
-	}
+   #local radmin = d/10;
+   #local radmaj = d/2-radmin;
+   #local delta  = b- 2*radmin;
+   union {
+      object {L_TOROIDAL_KERN(b,d) rotate<0,0,90> translate<0,radmaj+radmin+dd,0>}
+      object {L_TOROIDAL_SPULE()                  translate<0,radmaj+radmin+dd,0>}
+      object {L_TOROIDAL_CONTV()   translate<a/2, -3, 0> texture {T_Gold_1A }}
+   }
 #end
 
 //Makro fuer liegende Spule
 #macro L_TOROIDAL_ED(a,b,d,dd,e)
-	#local radmin = d/10;
-	#local radmaj = d/2-radmin;
-	#local delta  = b- 2*radmin;
-	union {
-		object {L_TOROIDAL_KERN(b,d) rotate<0,0, 0>  translate<0,b/2+dd,0>}
-	 	object {L_TOROIDAL_SPULE()   rotate<0,0,-90>  translate<0,b/2+dd,0>}
-		object {L_TOROIDAL_CONTH()   translate<-e, -3, 0> texture {T_Gold_1A }}
-	}
+   #local radmin = d/10;
+   #local radmaj = d/2-radmin;
+   #local delta  = b- 2*radmin;
+   union {
+      object {L_TOROIDAL_KERN(b,d) rotate<0,0, 0>  translate<0,b/2+dd,0>}
+      object {L_TOROIDAL_SPULE()   rotate<0,0,-90>  translate<0,b/2+dd,0>}
+      object {L_TOROIDAL_CONTH()   translate<-e, -3, 0> texture {T_Gold_1A }}
+   }
 #end
 
 #if(o=0)
@@ -2334,38 +2334,38 @@ SPC_L_WE_PDM_GRND(value)
 #local ri = A / 2 - 1; //Kernradius
 #local rx = A / 10;
 
-	union
-	{
-		difference
-		{
-			union
-			{
-				cylinder{<A/2 - r, s, A/2 - r><A/2 - r, s + B, A/2 - r> r}
-				cylinder{<-A/2 + r, s, A/2 - r><-A/2 + r, s + B, A/2 - r> r}
-				cylinder{<A/2 - r, s, -A/2 + r><A/2 - r, s + B, -A/2 + r> r}
-				cylinder{<-A/2 + r, s, -A/2 + r><-A/2 + r, s + B, -A/2 + r> r}
-				box{<A/2, s, A/2 - r><-A/2, s + B, -A/2 + r>}
-				box{<A/2 - r, s, A/2><-A/2 + r, s + B, -A/2>}
-			}
+   union
+   {
+      difference
+      {
+         union
+         {
+            cylinder{<A/2 - r, s, A/2 - r><A/2 - r, s + B, A/2 - r> r}
+            cylinder{<-A/2 + r, s, A/2 - r><-A/2 + r, s + B, A/2 - r> r}
+            cylinder{<A/2 - r, s, -A/2 + r><A/2 - r, s + B, -A/2 + r> r}
+            cylinder{<-A/2 + r, s, -A/2 + r><-A/2 + r, s + B, -A/2 + r> r}
+            box{<A/2, s, A/2 - r><-A/2, s + B, -A/2 + r>}
+            box{<A/2 - r, s, A/2><-A/2 + r, s + B, -A/2>}
+         }
 
-			cylinder{<0.707 * ri, 0, 0.7 * ri><0.7 * ri, s + B + 1, 0.7 * ri> rx}
-			cylinder{<-0.707 * ri, 0, 0.7 * ri><-0.7 * ri, s + B + 1, 0.7 * ri> rx}
-			cylinder{<0.707 * ri, 0, -0.7 * ri><0.7 * ri, s + B + 1, -0.7 * ri> rx}
-			cylinder{<-0.707 * ri, 0, -0.7 * ri><-0.7 * ri, s + B + 1, -0.7 * ri> rx}
-		}
+         cylinder{<0.707 * ri, 0, 0.7 * ri><0.7 * ri, s + B + 1, 0.7 * ri> rx}
+         cylinder{<-0.707 * ri, 0, 0.7 * ri><-0.7 * ri, s + B + 1, 0.7 * ri> rx}
+         cylinder{<0.707 * ri, 0, -0.7 * ri><0.7 * ri, s + B + 1, -0.7 * ri> rx}
+         cylinder{<-0.707 * ri, 0, -0.7 * ri><-0.7 * ri, s + B + 1, -0.7 * ri> rx}
+      }
 
-		torus{ri - 0.5, 0.5 translate<0, s + B, 0>}
-		cylinder{<0, s + B, 0><0, s + B + 0.5, 0> ri - 0.5}
+      torus{ri - 0.5, 0.5 translate<0, s + B, 0>}
+      cylinder{<0, s + B, 0><0, s + B + 0.5, 0> ri - 0.5}
 
-		box{<-D/2, 0, A/2><D/2, s, A/2 - C/2> texture{col_silver}}
-		box{<-D/2, 0, -A/2><D/2, s, -A/2 + C/2> texture{col_silver}}
+      box{<-D/2, 0, A/2><D/2, s, A/2 - C/2> texture{col_silver}}
+      box{<-D/2, 0, -A/2><D/2, s, -A/2 + C/2> texture{col_silver}}
 
-		text {ttf besch_font value 1, 0 pigment{Gray80} scale 2  rotate<90,0,0> translate<-2,s + B + 0.8, 0>}
+      text {ttf besch_font value 1, 0 pigment{Gray80} scale 2  rotate<90,0,0> translate<-2,s + B + 0.8, 0>}
 
 
-		pigment{Gray20}
-		rotate<0, 90, 0>
-	}
+      pigment{Gray20}
+      rotate<0, 90, 0>
+   }
 
 
 #end
@@ -3321,57 +3321,57 @@ SPC_XTAL_CLOCK_025MM_GRND(value)
 ********************************************************************************************************************************************/
 #macro SPC_XTAL_L_GRND(value, buegel, pin3, smd, shift, pinshift)
 union{
-	#local height = 13.575;
-	union{
-		// bodenplatte
-		cylinder{<-3.35,0,0><-3.35,0.7,0>2.25}
-		cylinder{< 3.35,0,0>< 3.35,0.7,0>2.25}
-		box{<-3.35,0,-2.25><3.35,0.7,2.25>}
-		union{
-			cylinder{<-2.45,-0.1,0><-2.45,0.1,0>1} 
-			cylinder{< 2.45,-0.1,0>< 2.45,0.1,0>1} 
-			pigment{Gray30}
-		}
+   #local height = 13.575;
+   union{
+      // bodenplatte
+      cylinder{<-3.35,0,0><-3.35,0.7,0>2.25}
+      cylinder{< 3.35,0,0>< 3.35,0.7,0>2.25}
+      box{<-3.35,0,-2.25><3.35,0.7,2.25>}
+      union{
+         cylinder{<-2.45,-0.1,0><-2.45,0.1,0>1} 
+         cylinder{< 2.45,-0.1,0>< 2.45,0.1,0>1} 
+         pigment{Gray30}
+      }
 
-		// koerper
-		cylinder{<-3.35,0.7,0><-3.35,height,0>2}
-		cylinder{< 3.35,0  ,0>< 3.35,height,0>2}
-		box{<-3.35,0,-2><3.35,height,2>}
+      // koerper
+      cylinder{<-3.35,0.7,0><-3.35,height,0>2}
+      cylinder{< 3.35,0  ,0>< 3.35,height,0>2}
+      box{<-3.35,0,-2><3.35,height,2>}
 
-		//kappe
-		torus{1.6,0.4 translate<-3.35,height,0>}
-		torus{1.6,0.4 translate< 3.35,height,0>}
-		cylinder{<-3.35,0,0><3.35,0,0>0.4 translate<0,height,-1.6>}
-		cylinder{<-3.35,0,0><3.35,0,0>0.4 translate<0,height, 1.6>}
-		cylinder{<-3.35,height,0><-3.35,height+0.4,0>1.6}
-		cylinder{< 3.35,height,0>< 3.35,height+0.4,0>1.6}
-		box{<-3.35,height,-1.6><3.35,height+0.4,1.6>}
-	
-		// beschriftung auf der seite
-		text {ttf besch_font value 0.1, 0 pigment{White*0.5} scale 1.5 translate<-3,height/3,-2.01>}
-	
-		rotate<90,0,0>
-		translate<0, 2.25, shift>
-	}	
+      //kappe
+      torus{1.6,0.4 translate<-3.35,height,0>}
+      torus{1.6,0.4 translate< 3.35,height,0>}
+      cylinder{<-3.35,0,0><3.35,0,0>0.4 translate<0,height,-1.6>}
+      cylinder{<-3.35,0,0><3.35,0,0>0.4 translate<0,height, 1.6>}
+      cylinder{<-3.35,height,0><-3.35,height+0.4,0>1.6}
+      cylinder{< 3.35,height,0>< 3.35,height+0.4,0>1.6}
+      box{<-3.35,height,-1.6><3.35,height+0.4,1.6>}
+   
+      // beschriftung auf der seite
+      text {ttf besch_font value 0.1, 0 pigment{White*0.5} scale 1.5 translate<-3,height/3,-2.01>}
+   
+      rotate<90,0,0>
+      translate<0, 2.25, shift>
+   }  
 
-	#if (smd=0)        
-	        // pin unterteil
-		#if  (pin_short=off)
-			cylinder{<-2.45,0,0><-2.45,-12,0>0.2 translate<0, 0, pinshift> }
-			cylinder{< 2.45,0,0>< 2.45,-12,0>0.2 translate<0, 0, pinshift> }
-		#else
-			cylinder{<-2.45,0,0><-2.45,-1*(pin_length+pcb_height),0>0.2 translate<0, 0, pinshift> }
-			cylinder{< 2.45,0,0>< 2.45,-1*(pin_length+pcb_height),0>0.2 translate<0, 0, pinshift> }
-		#end
+   #if (smd=0)        
+           // pin unterteil
+      #if  (pin_short=off)
+         cylinder{<-2.45,0,0><-2.45,-12,0>0.2 translate<0, 0, pinshift> }
+         cylinder{< 2.45,0,0>< 2.45,-12,0>0.2 translate<0, 0, pinshift> }
+      #else
+         cylinder{<-2.45,0,0><-2.45,-1*(pin_length+pcb_height),0>0.2 translate<0, 0, pinshift> }
+         cylinder{< 2.45,0,0>< 2.45,-1*(pin_length+pcb_height),0>0.2 translate<0, 0, pinshift> }
+      #end
                 //pin oberteil                 
                 #declare bends1=array[3] {<0, 0.8, 0>,  <90, 1.5, 0>,  <0,2,0> }  
                 object { TOOLS_BENTPIPE( 0.2, <0,0,0>, y, bends1 ) rotate<0,-90,0> translate<-2.45,0,pinshift>}               
                 object { TOOLS_BENTPIPE( 0.2, <0,0,0>, y, bends1 ) rotate<0,-90,0> translate< 2.45,0,pinshift>}               
                                  
-		#if (pin3=1)
-			cylinder{<0, 3, height+shift+0.575> <0, -1*(pin_length+pcb_height), height+shift+0.575> 0.2}
-		#end  
-	#else
+      #if (pin3=1)
+         cylinder{<0, 3, height+shift+0.575> <0, -1*(pin_length+pcb_height), height+shift+0.575> 0.2}
+      #end  
+   #else
                 //pin 1 und 2                 
                 #declare bends2=array[5] {<0,0.8,0>, <-90,0.5,0>, <0, 1, 0>,  <90, 0.5, 0>,  <0,2,0> }  
                 object { TOOLS_BENTPIPE( 0.2, <0, 0, 0>, x, bends2 ) rotate<0,-90,0> translate<-2.45,0.2,pinshift>}               
@@ -3379,19 +3379,19 @@ union{
                 //pin 3 
                 #declare bends3=array[3] {<0, 3, 0>,  <90, 0.5, 0>,  <0,1,0> }  
                 object { TOOLS_BENTPIPE( 0.2, <0,0,0>, y, bends3 ) rotate<0,-90,0> rotate<0,0,180> translate<0,3.7,height+shift+0.575>}    
-		
-	#end
+      
+   #end
 
 
-	#if (buegel=1)
-		//#declare bends=array[5] {<0, 5.5, 0>,  <90, 2.5, 0>,  <0,6.4,0>,  <90,2.5,0>,  <0, 5.5, 0> }
-		#declare bends=array[5] {<0, 5.5, 0>,  <90, 2, 0>,  <0,7.4,0>,  <90,2,0>,  <0, 5.5, 0> }
-		// <angle, radius, 0> or <0, distance, 0> for straight pipe
-		// negative angles bend left, positive bend right.
-		object { TOOLS_BENTPIPE( 0.25, <-2.25*2.54, -3, 1.5*2.54>, y, bends ) }
-	#end
+   #if (buegel=1)
+      //#declare bends=array[5] {<0, 5.5, 0>,  <90, 2.5, 0>,  <0,6.4,0>,  <90,2.5,0>,  <0, 5.5, 0> }
+      #declare bends=array[5] {<0, 5.5, 0>,  <90, 2, 0>,  <0,7.4,0>,  <90,2,0>,  <0, 5.5, 0> }
+      // <angle, radius, 0> or <0, distance, 0> for straight pipe
+      // negative angles bend left, positive bend right.
+      object { TOOLS_BENTPIPE( 0.25, <-2.25*2.54, -3, 1.5*2.54>, y, bends ) }
+   #end
 
-	texture{col_silver}
+   texture{col_silver}
 }
 #end
 
@@ -3421,11 +3421,11 @@ SPC_XTAL_L_GRND(value, 0, 0, 0, -6.2, -7.62)
 
 #macro SPC_XTAL_OSZ_CFPT_GRND_CAPSMDCHIP(color_sub,L,W,T,K)
 union{
-	superellipsoid{<0.25-(L+W)/150, 0.25-(L+W)/150> pigment{color_sub} scale<L/2,W/2,T/2> }     //Grundkoerper braun
-	superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <(L-K)/2,0,0> texture{col_silver}}      //rechter Anschluss
-	superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <-(L-K)/2,0,0> texture{col_silver}}      //linker Anschluss
-	rotate<90,0,0>
-	translate<0,T/2,0>
+   superellipsoid{<0.25-(L+W)/150, 0.25-(L+W)/150> pigment{color_sub} scale<L/2,W/2,T/2> }     //Grundkoerper braun
+   superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <(L-K)/2,0,0> texture{col_silver}}      //rechter Anschluss
+   superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <-(L-K)/2,0,0> texture{col_silver}}      //linker Anschluss
+   rotate<90,0,0>
+   translate<0,T/2,0>
 }
 #end
  
@@ -3584,37 +3584,37 @@ SPC_XTAL_OSZ_DIP8_GRND(value)
 ********************************************************************************************************************************************/
 #macro SPC_XTAL_OSZ_PDIP_GRND(p,value)
 #macro OSZ_SYMBOL(Symbol_Color, Background_Color)
-	// Create the "classic Oscillator symbol" at origin on X-Z Plane
-	//    Basic symbol is (2.4mm wide x 1.2mm tall) - use "scale" on macro call to fit other size XTAL bodies
-	
-	#local T=0.15; // Symbol line thickness
-	 union{          
-	    box{ <(-0.1-T),0,(-0.6-T)><(0.1+T),0,(0.6+T)> } 
-	    box{ <-0.1,0.01,-0.6><0.1,0.01,0.6>  pigment { Symbol_Color } } // set inside of box to IC body color to create a square "O"
-	    box{ <(-0.5-T),0,-0.6-T><-0.5,0.01,0.6+T>   }
-	    box{ <-0.5,0,-T/2><-1.2,0,T/2>   }
-	    box{ <0.5+T,0,-0.6-T><0.5,0,0.6+T>   }
-	    box{ <0.5,0,-T/2><1.2,0,T/2>  }
-	      texture{ pigment { Background_Color }  }
-	      }
+   // Create the "classic Oscillator symbol" at origin on X-Z Plane
+   //    Basic symbol is (2.4mm wide x 1.2mm tall) - use "scale" on macro call to fit other size XTAL bodies
+   
+   #local T=0.15; // Symbol line thickness
+    union{          
+       box{ <(-0.1-T),0,(-0.6-T)><(0.1+T),0,(0.6+T)> } 
+       box{ <-0.1,0.01,-0.6><0.1,0.01,0.6>  pigment { Symbol_Color } } // set inside of box to IC body color to create a square "O"
+       box{ <(-0.5-T),0,-0.6-T><-0.5,0.01,0.6+T>   }
+       box{ <-0.5,0,-T/2><-1.2,0,T/2>   }
+       box{ <0.5+T,0,-0.6-T><0.5,0,0.6+T>   }
+       box{ <0.5,0,-T/2><1.2,0,T/2>  }
+         texture{ pigment { Background_Color }  }
+         }
 #end
 
 #if(p=8)
-	union{
-	  object{ IC_DIS_DIP8A4(value,"") } // use "IC.inc" macro to create PLASTIC DIP8 with 4 corner pins and "IC Name"
-	
-	  // Add the "Crystal Oscillator Symbol" to IC created by macro with Name already on it.
-	    #local V=(3.2+0.01+0.25);   // vertical translation distance to final IC surface created in DIP08A4 macro
-	    object{ OSZ_SYMBOL(Gray30,Gray60) scale<1.5,1,1> translate<0,V,2> }   // Plot & scale the symbol, and move up into DIP surface position 
-	  }
+   union{
+     object{ IC_DIS_DIP8A4(value,"") } // use "IC.inc" macro to create PLASTIC DIP8 with 4 corner pins and "IC Name"
+   
+     // Add the "Crystal Oscillator Symbol" to IC created by macro with Name already on it.
+       #local V=(3.2+0.01+0.25);   // vertical translation distance to final IC surface created in DIP08A4 macro
+       object{ OSZ_SYMBOL(Gray30,Gray60) scale<1.5,1,1> translate<0,V,2> }   // Plot & scale the symbol, and move up into DIP surface position 
+     }
 #else
-	union{
-	  object{ IC_DIS_DIP14A4(value,"") } // use "IC.inc" macro to create PLASTIC DIP14 with 4 corner pins and "IC Name"
-	
-	  // Add the "Crystal Oscillator Symbol" to IC created by macro with Name already on it.
-	    #local V=(3.2+0.01+0.25);   // vertical translation distance to final IC surface created in DIP14A4 macro
-	    object{ OSZ_SYMBOL(Gray30,Gray60) scale<1.5,1,1> translate<0,V,2> }   // Plot & scale the symbol, and elevate into DIP surface position 
-	  }
+   union{
+     object{ IC_DIS_DIP14A4(value,"") } // use "IC.inc" macro to create PLASTIC DIP14 with 4 corner pins and "IC Name"
+   
+     // Add the "Crystal Oscillator Symbol" to IC created by macro with Name already on it.
+       #local V=(3.2+0.01+0.25);   // vertical translation distance to final IC surface created in DIP14A4 macro
+       object{ OSZ_SYMBOL(Gray30,Gray60) scale<1.5,1,1> translate<0,V,2> }   // Plot & scale the symbol, and elevate into DIP surface position 
+     }
 #end
 
 #end
@@ -3636,9 +3636,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -3648,28 +3648,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}

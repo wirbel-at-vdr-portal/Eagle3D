@@ -87,30 +87,30 @@ union{
 // //////////
 #macro ARK_PIN()
 union{
-	cylinder{<0,-3,0><0,1.1,0>0.4 texture{col_silver}}
-	cone{<0,-3,0>0.4<0,-3.5,0>0.1 texture{col_silver}}
-	difference{
-		box{<-2.54,0,-4><2.54,10,4>}
-		box{<-2.04,1,-4.01><2.04,6,3>}
-		box{<-0.75,-0.1,-4.01><0.75,1.1,1>}
-		box{<-2.6,5,0><2.6,0,-3> rotate<30,0,0> translate<0,7,-4>}
-		box{<-2.6,5,0><2.6,0,3> rotate<-30,0,0> translate<0,7,4>}
-		cylinder{<0,5.9,0><0,10.1,0>1.4}
-		cone{<0,9,0>1.4<0,10.1,0>1.8}
-	}
-	superellipsoid{<1,0.1> rotate<90,0,0> scale<1,2.3,1> texture{col_silver} translate<0,7,0>}
-	difference{
-		superellipsoid{<1,0.1> rotate<90,0,0> scale<1.3,0.5,1.3> texture{col_silver} translate<0,9.5,0>}
-		box{<0.25,0,-2><-0.25,1,2>rotate<0,rand(global_seed)*180,0> translate<0,9.8,0>}
-	}
-	difference{
-		box{<-2,1.1,-2.5><2,5.9,2.5>}
-		cylinder{<0,3.5,-2.6><0,3.5,2.6>1.4}
-		cylinder{<0,3.5,0><0,6,0>1.4}
-		texture{col_silver}
-	}
-	pigment{Gray60}
-	translate<0,0.2,0>
+   cylinder{<0,-3,0><0,1.1,0>0.4 texture{col_silver}}
+   cone{<0,-3,0>0.4<0,-3.5,0>0.1 texture{col_silver}}
+   difference{
+      box{<-2.54,0,-4><2.54,10,4>}
+      box{<-2.04,1,-4.01><2.04,6,3>}
+      box{<-0.75,-0.1,-4.01><0.75,1.1,1>}
+      box{<-2.6,5,0><2.6,0,-3> rotate<30,0,0> translate<0,7,-4>}
+      box{<-2.6,5,0><2.6,0,3> rotate<-30,0,0> translate<0,7,4>}
+      cylinder{<0,5.9,0><0,10.1,0>1.4}
+      cone{<0,9,0>1.4<0,10.1,0>1.8}
+   }
+   superellipsoid{<1,0.1> rotate<90,0,0> scale<1,2.3,1> texture{col_silver} translate<0,7,0>}
+   difference{
+      superellipsoid{<1,0.1> rotate<90,0,0> scale<1.3,0.5,1.3> texture{col_silver} translate<0,9.5,0>}
+      box{<0.25,0,-2><-0.25,1,2>rotate<0,rand(global_seed)*180,0> translate<0,9.8,0>}
+   }
+   difference{
+      box{<-2,1.1,-2.5><2,5.9,2.5>}
+      cylinder{<0,3.5,-2.6><0,3.5,2.6>1.4}
+      cylinder{<0,3.5,0><0,6,0>1.4}
+      texture{col_silver}
+   }
+   pigment{Gray60}
+   translate<0,0.2,0>
 }
 #end
 
@@ -141,34 +141,34 @@ pigment{MediumBlue} translate<1.27,0,0>}}
 union{
 
 difference{
-	box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
-	box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
-	box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
-	box{<-0.5,0,0><0.5,0.5,0.5> rotate<30,0,0> translate<0,-3,0.05>}
-	box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
-	texture{col_gold}
+   box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
+   box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
+   box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
+   box{<-0.5,0,0><0.5,0.5,0.5> rotate<30,0,0> translate<0,-3,0.05>}
+   box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
+   texture{col_gold}
 }
 difference{
-	difference{
-		box{<-1.27,0,-1.27><1.27,3,1.27>}
-		box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
-		box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
-		box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate<-1.95,0, 1.95> }
-		box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate< 1.95,0, 1.95> }
-	}
-	cylinder{<0,1,0><0,3.1,0>1.0}
-}
-
-difference{
-	cylinder{<0,2.5,0><0,3.03,0>1.0}
-	cylinder{<0,1.9,0><0,3.2,0>0.9}
-	texture{col_silver}
+   difference{
+      box{<-1.27,0,-1.27><1.27,3,1.27>}
+      box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
+      box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
+      box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate<-1.95,0, 1.95> }
+      box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate< 1.95,0, 1.95> }
+   }
+   cylinder{<0,1,0><0,3.1,0>1.0}
 }
 
 difference{
-	cylinder{<0,0.5,0><0,2.55,0>0.9}
-	cylinder{<0,0.4,0><0,2.6,0>0.7}
-	texture{col_gold}
+   cylinder{<0,2.5,0><0,3.03,0>1.0}
+   cylinder{<0,1.9,0><0,3.2,0>0.9}
+   texture{col_silver}
+}
+
+difference{
+   cylinder{<0,0.5,0><0,2.55,0>0.9}
+   cylinder{<0,0.4,0><0,2.6,0>0.7}
+   texture{col_gold}
 }
 pigment{Gray30}}
 #end
@@ -184,33 +184,33 @@ pigment{Gray30}}
 // //////////
 #macro CON_PHOENIX_381_PHGH()
 union{
-	difference{
-		box{<-1,0,-1.905><8,7,1.905> }
-		cylinder{<-1.1,5,0><0.6,5,0>0.65 }
-		box{<-1.1,6,-1.4><-0.8,6.5,1.4> }
-		box{<-1.1,-0.1,-1.4><-0.8,4,1.4> }
-		box{<-1.1,-0.1,-0.5><-0.2,3,0.5> }
-		box{<-1.1,-0.1,-1.4><1.2,1.3,1.4> }
-		box{<-1.1,-0.1,-1.4><2.4,0.3,1.4> }
-		box{<2,0.6,-1.7><8.1,5.5,1.7> }
-		box{<2,5.4,-0.6><8.1,6,0.6> }
-		box{<2,5.9,-1.5><8.1,6.7,1.5> }
-		pigment{ForestGreen}
-	}
-	//Rundung unten
-	difference{
-		cylinder{<2,-1.0,0><8,-1.0,0>2.0 }
-		box{<1.9,-3.1,-2.1><8.1,0.1,2.1> }
-		pigment{ForestGreen}
-	}
-	//Oben auf
-	cylinder{<5,7,-1.905><5,7,1.905>0.2 pigment{ForestGreen}}
-	//Links
-	box{<6,2,-1.9><8,3.3,-2.1> pigment{ForestGreen}}
-	box{<7.5,0.5,-1.9><8,6.5,-2.1> pigment{ForestGreen}}
-	//Rechts
-	box{<6,2,1.9><8,3.3,2.1> pigment{ForestGreen}}
-	box{<7.5,0.5,1.9><8,6.5,2.1> pigment{ForestGreen}}
+   difference{
+      box{<-1,0,-1.905><8,7,1.905> }
+      cylinder{<-1.1,5,0><0.6,5,0>0.65 }
+      box{<-1.1,6,-1.4><-0.8,6.5,1.4> }
+      box{<-1.1,-0.1,-1.4><-0.8,4,1.4> }
+      box{<-1.1,-0.1,-0.5><-0.2,3,0.5> }
+      box{<-1.1,-0.1,-1.4><1.2,1.3,1.4> }
+      box{<-1.1,-0.1,-1.4><2.4,0.3,1.4> }
+      box{<2,0.6,-1.7><8.1,5.5,1.7> }
+      box{<2,5.4,-0.6><8.1,6,0.6> }
+      box{<2,5.9,-1.5><8.1,6.7,1.5> }
+      pigment{ForestGreen}
+   }
+   //Rundung unten
+   difference{
+      cylinder{<2,-1.0,0><8,-1.0,0>2.0 }
+      box{<1.9,-3.1,-2.1><8.1,0.1,2.1> }
+      pigment{ForestGreen}
+   }
+   //Oben auf
+   cylinder{<5,7,-1.905><5,7,1.905>0.2 pigment{ForestGreen}}
+   //Links
+   box{<6,2,-1.9><8,3.3,-2.1> pigment{ForestGreen}}
+   box{<7.5,0.5,-1.9><8,6.5,-2.1> pigment{ForestGreen}}
+   //Rechts
+   box{<6,2,1.9><8,3.3,2.1> pigment{ForestGreen}}
+   box{<7.5,0.5,1.9><8,6.5,2.1> pigment{ForestGreen}}
 }
 #end
 
@@ -261,41 +261,41 @@ union{
 // //////////
 #macro CON_PHOENIX_381_PHGSRW(typ)
 union{
-	difference{
-	union{
-		box{<-1.5,0,-1.9><1.5,-6.6,2.2>}
-		box{<-0.4,-6.5,-1.9><0.4,-4,-3.2> }
-	}
-	cylinder{<0,0.1,3.7><0,-6.7,3.7>2.0}
-	cylinder{<0,0.1,0><0,-6.7,0>0.5}
-	cylinder{<0,-6.0,0><0,-6.7,0>0.9}
-	#if (typ = 1) //MVCR
-	   rotate <0,180,0>
-	#end
-	}
-	difference{
-		union{
-			box{<-1.905,0,3.7><1.905,11.6,-4.6>}
-			cylinder{<-1.905,7.3,4.9><1.905,7.3,4.9>0.3 }
-			box{<-1.905,0,3.7><1.905,7.3,5.2>}
-			box{<-1.905,7.3,3.7><1.905,7.6,4.9>}
-			box{<-1.905,0,-4.6><1.905,2.45,-5.2>}
-		}
-		box{<-1.95,0,-2.2><1.95,2.0,2.2> rotate <70,0,0> translate <0,9.7,2.9>}
-		box{<-0.9,2.7,5.3><0.9,5.5,-4>}
-		box{<-1.5,2.5,5.3><1.5,6.6,4>}
-	}
-	difference{
-		union{
-			cylinder{<-1.905,12.2,2.7><1.905,12.2,2.7>0.3 }
-			cylinder{<-1.905,12.2,-1.65><1.905,12.2,-1.65>0.3 }
-			box{<-1.905,11.9,2.7><1.905,12.5,-1.65>}
-			cylinder{<-1.905,11.9,-4.9><1.905,11.9,-4.9>0.3 }
-			box{<-1.905,11.6,2.1><1.905,12.2,-4.9>}
-		}
-		cylinder{<0,10.6,0><0,12.6,0>1.4}
-	}
-	pigment{ForestGreen}
+   difference{
+   union{
+      box{<-1.5,0,-1.9><1.5,-6.6,2.2>}
+      box{<-0.4,-6.5,-1.9><0.4,-4,-3.2> }
+   }
+   cylinder{<0,0.1,3.7><0,-6.7,3.7>2.0}
+   cylinder{<0,0.1,0><0,-6.7,0>0.5}
+   cylinder{<0,-6.0,0><0,-6.7,0>0.9}
+   #if (typ = 1) //MVCR
+      rotate <0,180,0>
+   #end
+   }
+   difference{
+      union{
+         box{<-1.905,0,3.7><1.905,11.6,-4.6>}
+         cylinder{<-1.905,7.3,4.9><1.905,7.3,4.9>0.3 }
+         box{<-1.905,0,3.7><1.905,7.3,5.2>}
+         box{<-1.905,7.3,3.7><1.905,7.6,4.9>}
+         box{<-1.905,0,-4.6><1.905,2.45,-5.2>}
+      }
+      box{<-1.95,0,-2.2><1.95,2.0,2.2> rotate <70,0,0> translate <0,9.7,2.9>}
+      box{<-0.9,2.7,5.3><0.9,5.5,-4>}
+      box{<-1.5,2.5,5.3><1.5,6.6,4>}
+   }
+   difference{
+      union{
+         cylinder{<-1.905,12.2,2.7><1.905,12.2,2.7>0.3 }
+         cylinder{<-1.905,12.2,-1.65><1.905,12.2,-1.65>0.3 }
+         box{<-1.905,11.9,2.7><1.905,12.5,-1.65>}
+         cylinder{<-1.905,11.9,-4.9><1.905,11.9,-4.9>0.3 }
+         box{<-1.905,11.6,2.1><1.905,12.2,-4.9>}
+      }
+      cylinder{<0,10.6,0><0,12.6,0>1.4}
+   }
+   pigment{ForestGreen}
 }
 #end
 
@@ -309,14 +309,14 @@ union{
 // Nummer
 #macro CON_PHOENIX_381_PHNR(n)
 union{
-	box{<-1.905,0,-1.75><1.905,0.1,1.75> pigment{White}}
-	box{<-1.89,0,-1.75><-1.905,0.25,1.75> pigment{Gray20}}
-	box{<1.905,0,-1.75><1.89,0.25,1.75> pigment{Gray20}}
-	#if (n < 10)
-		text {ttf besch_font str(n,0,0) 0.2,0  scale<3.5,3.5,3.5> pigment{Gray20} rotate<90,180,0> translate<0.8,0.2,1.2> }
-	#else
-		text {ttf besch_font str(n,0,0) 0.2,0  scale<3.0,3.5,3.5> pigment{Gray20} rotate<90,180,0> translate<1.5,0.2,1.2> }
-	#end
+   box{<-1.905,0,-1.75><1.905,0.1,1.75> pigment{White}}
+   box{<-1.89,0,-1.75><-1.905,0.25,1.75> pigment{Gray20}}
+   box{<1.905,0,-1.75><1.89,0.25,1.75> pigment{Gray20}}
+   #if (n < 10)
+      text {ttf besch_font str(n,0,0) 0.2,0  scale<3.5,3.5,3.5> pigment{Gray20} rotate<90,180,0> translate<0.8,0.2,1.2> }
+   #else
+      text {ttf besch_font str(n,0,0) 0.2,0  scale<3.0,3.5,3.5> pigment{Gray20} rotate<90,180,0> translate<1.5,0.2,1.2> }
+   #end
 }
 #end
 
@@ -330,18 +330,18 @@ union{
 // //////////
 #macro CON_PHOENIX_381_PHPIN()
 difference{
-	box{<-0.35,-3.5,-0.35><0.35,7.5,0.35>}
-	// anspitzen oben
-	box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,30> translate<0.4,7,0>}
-	box{<0,0,-0.7><-0.7,0.7,0.7> rotate<0,0,-30> translate<-0.4,7,0>}
-	box{<-0.7,0,0><0.7,0.7,0.7> rotate<-30,0,0> translate<0,7,0.4>}
-	box{<-0.7,0,0><0.7,0.7,-0.7> rotate<30,0,0> translate<0,7,-0.4>}
-	// anspitzen unten
-	box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,-30> translate<0.1,-3.5,0>}
-	box{<0,0,-0.7><-0.7,0.7,0.7> rotate<0,0,30> translate<-0.1,-3.5,0>}
-	box{<-0.7,0,0><0.7,0.7,0.7> rotate<30,0,0> translate<0,-3.5,0.1>}
-	box{<-0.7,0,0><0.7,0.7,-0.7> rotate<-30,0,0> translate<0,-3.5,-0.1>}
-	texture{col_silver}
+   box{<-0.35,-3.5,-0.35><0.35,7.5,0.35>}
+   // anspitzen oben
+   box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,30> translate<0.4,7,0>}
+   box{<0,0,-0.7><-0.7,0.7,0.7> rotate<0,0,-30> translate<-0.4,7,0>}
+   box{<-0.7,0,0><0.7,0.7,0.7> rotate<-30,0,0> translate<0,7,0.4>}
+   box{<-0.7,0,0><0.7,0.7,-0.7> rotate<30,0,0> translate<0,7,-0.4>}
+   // anspitzen unten
+   box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,-30> translate<0.1,-3.5,0>}
+   box{<0,0,-0.7><-0.7,0.7,0.7> rotate<0,0,30> translate<-0.1,-3.5,0>}
+   box{<-0.7,0,0><0.7,0.7,0.7> rotate<30,0,0> translate<0,-3.5,0.1>}
+   box{<-0.7,0,0><0.7,0.7,-0.7> rotate<-30,0,0> translate<0,-3.5,-0.1>}
+   texture{col_silver}
 }
 #end
 
@@ -355,19 +355,19 @@ difference{
 // //////////
 #macro CON_PHOENIX_381_PHPINW()
 difference{
-	//#macro RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
-	object {TOOLS_RECT_BOGEN(0.1,90,0.7,0.7,6,7)}
-	//laenge1 anspitzen
-	box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,30> translate<0.4,7,0>}
-	box{<0,0,-0.7><-0.7,0.7,0.7> rotate<0,0,-30> translate<-0.4,7,0>}
-	box{<-0.7,0,0><0.7,0.7,0.7> rotate<-30,0,0> translate<0,7,0.4>}
-	box{<-0.7,0,0><0.7,0.7,-0.7> rotate<30,0,0> translate<0,7,-0.4>}
-	//laenge2 anspitzen
-	box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,-30> translate<6,0.4,0>}
-	box{<0,0,-0.7><0.7,-0.7,0.7> rotate<0,0,30> translate<6,-0.4,0>}
-	box{<0,-0.7,0><0.7,0.7,0.7> rotate<0,30,0> translate<6,0,0.4>}
-	box{<0,-0.7,0><0.7,0.7,-0.7> rotate<0,-30,0> translate<6,0,-0.4>}
-	texture{col_silver} rotate<0,0,-90> translate<0,3.0,0>
+   //#macro RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
+   object {TOOLS_RECT_BOGEN(0.1,90,0.7,0.7,6,7)}
+   //laenge1 anspitzen
+   box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,30> translate<0.4,7,0>}
+   box{<0,0,-0.7><-0.7,0.7,0.7> rotate<0,0,-30> translate<-0.4,7,0>}
+   box{<-0.7,0,0><0.7,0.7,0.7> rotate<-30,0,0> translate<0,7,0.4>}
+   box{<-0.7,0,0><0.7,0.7,-0.7> rotate<30,0,0> translate<0,7,-0.4>}
+   //laenge2 anspitzen
+   box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,-30> translate<6,0.4,0>}
+   box{<0,0,-0.7><0.7,-0.7,0.7> rotate<0,0,30> translate<6,-0.4,0>}
+   box{<0,-0.7,0><0.7,0.7,0.7> rotate<0,30,0> translate<6,0,0.4>}
+   box{<0,-0.7,0><0.7,0.7,-0.7> rotate<0,-30,0> translate<6,0,-0.4>}
+   texture{col_silver} rotate<0,0,-90> translate<0,3.0,0>
 }
 #end
 
@@ -381,9 +381,9 @@ difference{
 // //////////
 #macro CON_PHOENIX_381_SCREWHEAD()
 difference{
-	superellipsoid{<1,0.1> rotate<90,0,0> scale<1.4,0.5,1.4> translate<0,0,0>}
-	box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> translate<0,0,0>}
-	texture{col_silver}
+   superellipsoid{<1,0.1> rotate<90,0,0> scale<1.4,0.5,1.4> translate<0,0,0>}
+   box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> translate<0,0,0>}
+   texture{col_silver}
 }
 #end
 
@@ -415,34 +415,34 @@ translate <-Pins*1.27,0,0> texture {col_Molex}}
 union{
 
 difference{
-	box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
-	box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
-	box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
-	box{<-0.5,0,0><0.5,0.5,0.5> rotate<30,0,0> translate<0,-3,0.05>}
-	box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
-	texture{col_gold}
+   box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
+   box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
+   box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
+   box{<-0.5,0,0><0.5,0.5,0.5> rotate<30,0,0> translate<0,-3,0.05>}
+   box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
+   texture{col_gold}
 }
 difference{
-	difference{
-		box{<-1.27,0,-1.27><1.27,8,1.27>}
-		box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
-		box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
-		box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0, 1.95> }
-		box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0, 1.95> }
-	}
-	cylinder{<0,1,0><0,8.1,0>1.0}
-}
-
-difference{
-	cylinder{<0,7.5,0><0,8.03,0>1.0}
-	cylinder{<0,6.9,0><0,8.2,0>0.9}
-	texture{col_silver}
+   difference{
+      box{<-1.27,0,-1.27><1.27,8,1.27>}
+      box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
+      box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
+      box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0, 1.95> }
+      box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0, 1.95> }
+   }
+   cylinder{<0,1,0><0,8.1,0>1.0}
 }
 
 difference{
-	cylinder{<0,0.5,0><0,7.55,0>0.9}
-	cylinder{<0,0.4,0><0,7.6,0>0.7}
-	texture{col_gold}
+   cylinder{<0,7.5,0><0,8.03,0>1.0}
+   cylinder{<0,6.9,0><0,8.2,0>0.9}
+   texture{col_silver}
+}
+
+difference{
+   cylinder{<0,0.5,0><0,7.55,0>0.9}
+   cylinder{<0,0.4,0><0,7.6,0>0.7}
+   texture{col_gold}
 }
 
 pigment{Gray30}
@@ -1021,46 +1021,46 @@ CON_AMP_HE14_1S_GRND(10)
 union{
 
 // Einlötstift
-	cylinder{<0,-3.0,0><0,1.0,0>0.45 texture{col_silver}}
-	cone{<0,-3.0,0>0.45<0,-3.4,0>0.1 texture{col_silver}}
+   cylinder{<0,-3.0,0><0,1.0,0>0.45 texture{col_silver}}
+   cone{<0,-3.0,0>0.45<0,-3.4,0>0.1 texture{col_silver}}
 
 // Plastikkörper
-	difference{
-		box{<-1.75,0,-3.7><1.75,8.2,2.8>}               // Hauptbox
-		box{<-1.4 ,0.6,-4><1.4 ,5.1,2.2>}               // Loch für Drahteinführung
-		box{<-0.75,-0.1,-4.01><0.75,1.1,1>}             // Schlitz in der unteren Mitte
-		box{<-1.5 ,-0.1,-1.5><1.5,0.7,1.5> rotate<0,45,0> translate<0,0,-4.8>}         // Schlitz etwas abrunden
+   difference{
+      box{<-1.75,0,-3.7><1.75,8.2,2.8>}               // Hauptbox
+      box{<-1.4 ,0.6,-4><1.4 ,5.1,2.2>}               // Loch für Drahteinführung
+      box{<-0.75,-0.1,-4.01><0.75,1.1,1>}             // Schlitz in der unteren Mitte
+      box{<-1.5 ,-0.1,-1.5><1.5,0.7,1.5> rotate<0,45,0> translate<0,0,-4.8>}         // Schlitz etwas abrunden
                 box{<-2.6,5,0><2.6,0,-3> rotate<30,0,0> translate<0,4.6,-4>}      // Klemme vorne oben abschrägen
-		cylinder{<0,5.2,0><0,10,0>1.5}                  // Senkrechte Löcher für die Schraube - oben etwas weiter
-		cylinder{<0,2.2,0><0,5.2,0>1.1}                 //                                    - unten kleiner
+      cylinder{<0,5.2,0><0,10,0>1.5}                  // Senkrechte Löcher für die Schraube - oben etwas weiter
+      cylinder{<0,2.2,0><0,5.2,0>1.1}                 //                                    - unten kleiner
 
-	}
+   }
 
 // Abgeschrägten Innenteil hinzufügen (siehe Datenblatt)
-	box{<-1.4 , 4.6,-1.9><1.4,5.1,2.8>}
+   box{<-1.4 , 4.6,-1.9><1.4,5.1,2.8>}
         difference{
-        	box{<-1.4 , -0.25,-0.25><1.4,0.25,0.25>}
-          	box{<-1.5 , -0.35,-0.35><1.5,0.35,0.35>rotate<45,0,0> translate<0,-0.25,-0.25>}
+         box{<-1.4 , -0.25,-0.25><1.4,0.25,0.25>}
+            box{<-1.5 , -0.35,-0.35><1.5,0.35,0.35>rotate<45,0,0> translate<0,-0.25,-0.25>}
                 translate<0,4.85,-2.15>
         }
 
 // Schraube
-	superellipsoid{<1,0.1> rotate<90,0,0> scale<0.9,2.0,1> texture{col_silver} translate<0,5.0,0>}
-	difference{
-		superellipsoid{<1,0.1> rotate<90,0,0> scale<1.3,0.5,1.3> texture{col_silver} translate<0,7.3,0>}
-		box{<0.25,0,-2><-0.25,1,2>rotate<0,rand(global_seed)*180,0> translate<0,7.6,0>}
-	}
+   superellipsoid{<1,0.1> rotate<90,0,0> scale<0.9,2.0,1> texture{col_silver} translate<0,5.0,0>}
+   difference{
+      superellipsoid{<1,0.1> rotate<90,0,0> scale<1.3,0.5,1.3> texture{col_silver} translate<0,7.3,0>}
+      box{<0.25,0,-2><-0.25,1,2>rotate<0,rand(global_seed)*180,0> translate<0,7.6,0>}
+   }
 
 // metallenes Innenleben
-	difference{
-		box{<-1.35,0.65,-1.9><1.35,4.4,2.5>}   // Hauptkörper
-		cylinder{<0,2.2,-2.0><0,2.2,2.6>1.1}    // Loch
-		cylinder{<0,2.2,0><0,5.2,0>1.1}
-		texture{col_silver}
-	}
+   difference{
+      box{<-1.35,0.65,-1.9><1.35,4.4,2.5>}   // Hauptkörper
+      cylinder{<0,2.2,-2.0><0,2.2,2.6>1.1}    // Loch
+      cylinder{<0,2.2,0><0,5.2,0>1.1}
+      texture{col_silver}
+   }
 
 // Drahtschutz
-	box{<-0.95,4.45,-2.0><0.95,4.5,2.5>texture{col_silver}}    // oberer Teil
+   box{<-0.95,4.45,-2.0><0.95,4.5,2.5>texture{col_silver}}    // oberer Teil
         difference{                                                // oberer Bogen
                 cylinder {<-0.95,-0.1 ,0>,< 0.95,-0.1 ,0>,0.1 }
                 cylinder {<-1.0 ,-0.1 ,0>,< 1.0 ,-0.1 ,0>,0.05}
@@ -1070,7 +1070,7 @@ union{
                 rotate<0,0,0>
                 translate<0,4.5,-2.0 >
         }
-	box{<-0.95,2.2,-2.1><0.95,4.4,-2.05>texture{col_silver}}   // vorderer Teil
+   box{<-0.95,2.2,-2.1><0.95,4.4,-2.05>texture{col_silver}}   // vorderer Teil
         difference{                                                // unterer Bogen
                 cylinder {<-0.95,-0.1 ,0>,< 0.95,-0.1 ,0>,0.1 }
                 cylinder {<-1.0 ,-0.1 ,0>,< 1.0 ,-0.1 ,0>,0.05}
@@ -1080,30 +1080,30 @@ union{
                 rotate<0,0,180>
                 translate<0,2.1,-2.0 >
         }
-	box{<-0.95,2.1,-2.0><0.95,2.15,2>texture{col_silver}}    // unterer Teil
+   box{<-0.95,2.1,-2.0><0.95,2.15,2>texture{col_silver}}    // unterer Teil
 
 
 
-	pigment{Gray30}
+   pigment{Gray30}
 }
 #end
 
 union{
-	#local i = 0;
-	#while(i<j)
-		object{ARK_PIN_350MM() translate<i*3.5,0,0>}
-		#local i=i+1;
-	#end
+   #local i = 0;
+   #while(i<j)
+      object{ARK_PIN_350MM() translate<i*3.5,0,0>}
+      #local i=i+1;
+   #end
 
-	union{
-		#local i = 0;
-		#while(i<j)
-			text {ttf besch_font str(j-i,0,0) 0.2,0  scale<2,2,2> rotate<30,0,0> translate<-i*3.5-1.27,6.1,-3> translate<0,0.3,0.1> pigment{Black}}
-			#local i=i+1;
-		#end
-		translate<(i-1)*3.5,0,0>
-	}
-	translate<-j*1.75+1.75,0,0>
+   union{
+      #local i = 0;
+      #while(i<j)
+         text {ttf besch_font str(j-i,0,0) 0.2,0  scale<2,2,2> rotate<30,0,0> translate<-i*3.5-1.27,6.1,-3> translate<0,0.3,0.1> pigment{Black}}
+         #local i=i+1;
+      #end
+      translate<(i-1)*3.5,0,0>
+   }
+   translate<-j*1.75+1.75,0,0>
 }
 #end
 
@@ -1147,21 +1147,21 @@ CON_ARK_350MM_GRND(12)
 ********************************************************************************************************************************************/
 #macro CON_ARK_5MM_GRND(j)
 union{
-	#local i = 0;
-	#while(i<j)
-		object{ARK_PIN() translate<i*5.08,0,0>}
-		#local i=i+1;
-	#end
+   #local i = 0;
+   #while(i<j)
+      object{ARK_PIN() translate<i*5.08,0,0>}
+      #local i=i+1;
+   #end
 
-	union{
-		#local i = 0;
-		#while(i<j)
-			text {ttf besch_font str(j-i,0,0) 0.2,0  scale<3,3,3> rotate<30,0,0> translate<-i*5.08-1.27,7.21,-4> translate<0,0.3,0.1> pigment{Black}}
-			#local i=i+1;
-		#end
-		translate<(i-1)*5.08,0,0>
-	}
-	translate<-j*2.54+2.54,0,0>
+   union{
+      #local i = 0;
+      #while(i<j)
+         text {ttf besch_font str(j-i,0,0) 0.2,0  scale<3,3,3> rotate<30,0,0> translate<-i*5.08-1.27,7.21,-4> translate<0,0.3,0.1> pigment{Black}}
+         #local i=i+1;
+      #end
+      translate<(i-1)*5.08,0,0>
+   }
+   translate<-j*2.54+2.54,0,0>
 }
 #end
 #macro CON_ARK_5MM_2()
@@ -1215,89 +1215,89 @@ CON_ARK_5MM_GRND(12)
 #local ii = a*2.54;
 union{
 union{
-	//PIN Loetseite 4mm, etwas angespitzt
-	difference{
-		box{<0,0,0><0.4,4.1+ii,0.4> texture{col_silver} translate<-0.2,0,-0.2>}
-		box{<0,0,-0.5><0.5,0.5,0.5> texture{col_silver} rotate<0,0,-30> translate<0.1,0,0>}
-		box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_silver} rotate<0,0,30> translate<-0.1,0,0>}
-		box{<-0.5,0,0><0.5,0.5,0.5> texture{col_silver} rotate<30,0,0> translate<0,0,0.1>}
-		box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_silver} rotate<-30,0,0> translate<0,0,-0.1>}
-		translate<0,-3.22,0>
-	}
-	//PIN vom Bogen zum Plastik
-	#if(ii>0)
-		box{<0,0,0><0.4,5,0.4> texture{col_silver} translate<-0.2,0,-0.2> rotate<0,0,-90> translate<0.4,3.81,0> }
-	#end
+   //PIN Loetseite 4mm, etwas angespitzt
+   difference{
+      box{<0,0,0><0.4,4.1+ii,0.4> texture{col_silver} translate<-0.2,0,-0.2>}
+      box{<0,0,-0.5><0.5,0.5,0.5> texture{col_silver} rotate<0,0,-30> translate<0.1,0,0>}
+      box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_silver} rotate<0,0,30> translate<-0.1,0,0>}
+      box{<-0.5,0,0><0.5,0.5,0.5> texture{col_silver} rotate<30,0,0> translate<0,0,0.1>}
+      box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_silver} rotate<-30,0,0> translate<0,0,-0.1>}
+      translate<0,-3.22,0>
+   }
+   //PIN vom Bogen zum Plastik
+   #if(ii>0)
+      box{<0,0,0><0.4,5,0.4> texture{col_silver} translate<-0.2,0,-0.2> rotate<0,0,-90> translate<0.4,3.81,0> }
+   #end
 
-	//PIN Bogen 
-	//innenkurve
-	difference{
-		box{<0,0,0><0.4,0.4,0.4> texture{col_silver} translate<0,0.0,0.0>}
-		cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_silver} translate<0,0.0,0.0>}
-		rotate<0,-90,0> translate<0.5,0.77+ii,-0.2>
-		translate<-0.1,0.1,0> 
-	}
-	//aussenkurve
-	difference{
-		cylinder{<0,0,0><0.4,0,0>0.6 texture{col_silver} translate<0,0,0> }
-		box{<0,0,0><2,2.2,-2> texture{col_silver} translate<-0.1,0,-0.1>}
-		box{<0,0,0><2,2.2,-2> texture{col_silver} translate<-0.1,-1.8,0.4>}
-		rotate<0,-90,0> translate<0.5,0.77+ii,-0.2>
-		translate<-0.1,0.1,0> 
-	} 
-	rotate<0,-90,0>
+   //PIN Bogen 
+   //innenkurve
+   difference{
+      box{<0,0,0><0.4,0.4,0.4> texture{col_silver} translate<0,0.0,0.0>}
+      cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_silver} translate<0,0.0,0.0>}
+      rotate<0,-90,0> translate<0.5,0.77+ii,-0.2>
+      translate<-0.1,0.1,0> 
+   }
+   //aussenkurve
+   difference{
+      cylinder{<0,0,0><0.4,0,0>0.6 texture{col_silver} translate<0,0,0> }
+      box{<0,0,0><2,2.2,-2> texture{col_silver} translate<-0.1,0,-0.1>}
+      box{<0,0,0><2,2.2,-2> texture{col_silver} translate<-0.1,-1.8,0.4>}
+      rotate<0,-90,0> translate<0.5,0.77+ii,-0.2>
+      translate<-0.1,0.1,0> 
+   } 
+   rotate<0,-90,0>
 }
 union{
-	//schwarzes plastik mit loch 8mm lang   
-	// wird vertikal gebaut                        
-	difference{
-		difference{
-			box{<-1.27,0,-1.27><1.27,8,1.27>}
-			box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
-			box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
-			box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0, 1.95> }
-			box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0, 1.95> }
-		}
-		cylinder{<0,1,0><0,8.1,0>1.0}
-	}
-	//rundes buchsenloch versilbert
-	difference{
-		cylinder{<0,7.5,0><0,8.03,0>1.0}
-		cylinder{<0,6.9,0><0,8.2,0>0.9}	
-		texture{col_silver}
-	}
-	//vergoldeter Kontakt im siblernen Buchsenloch
-	difference{
-		cylinder{<0,0.5,0><0,7.55,0>0.9}
-		cylinder{<0,0.4,0><0,7.6,0>0.7}	
-		texture{col_gold}
-	}
-	pigment{Gray30}
-	rotate<90,0,0>		//in die horizontale drehen
-	translate<0,1.27,0>	//auf die platine legen
+   //schwarzes plastik mit loch 8mm lang   
+   // wird vertikal gebaut                        
+   difference{
+      difference{
+         box{<-1.27,0,-1.27><1.27,8,1.27>}
+         box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
+         box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
+         box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0, 1.95> }
+         box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0, 1.95> }
+      }
+      cylinder{<0,1,0><0,8.1,0>1.0}
+   }
+   //rundes buchsenloch versilbert
+   difference{
+      cylinder{<0,7.5,0><0,8.03,0>1.0}
+      cylinder{<0,6.9,0><0,8.2,0>0.9}  
+      texture{col_silver}
+   }
+   //vergoldeter Kontakt im siblernen Buchsenloch
+   difference{
+      cylinder{<0,0.5,0><0,7.55,0>0.9}
+      cylinder{<0,0.4,0><0,7.6,0>0.7}  
+      texture{col_gold}
+   }
+   pigment{Gray30}
+   rotate<90,0,0>    //in die horizontale drehen
+   translate<0,1.27,0>  //auf die platine legen
 
-	#if(ii>0)
-		translate<0,2.54,2.54>	//in 2. ebene und um 1 Raster noch von schieben
-	#end
+   #if(ii>0)
+      translate<0,2.54,2.54>  //in 2. ebene und um 1 Raster noch von schieben
+   #end
 }
 }
 #end
 
 union{
-	#local i=0;
-	#while(i<pin)
-		object{CON_BLW_PIN(0) translate<i*2.54,0,0>}
-		#local i=i+1;
-	#end
-	#if(row=2)
-		#local i=0;
-		#while(i<pin)
-			object{CON_BLW_PIN(1) translate<i*2.54,0,-2.54>}
-			#local i=i+1;
-		#end
-		translate<0,0,1.27>
-	#end
-	translate<pin*-1.27+1.27,0,0>}
+   #local i=0;
+   #while(i<pin)
+      object{CON_BLW_PIN(0) translate<i*2.54,0,0>}
+      #local i=i+1;
+   #end
+   #if(row=2)
+      #local i=0;
+      #while(i<pin)
+         object{CON_BLW_PIN(1) translate<i*2.54,0,-2.54>}
+         #local i=i+1;
+      #end
+      translate<0,0,1.27>
+   #end
+   translate<pin*-1.27+1.27,0,0>}
 #end
 
 
@@ -1600,21 +1600,21 @@ union{
 #end
 
 union{
-	#local i=0;
-	#while(i<pin)
-		object{CON_BL_PRECISION_PIN() translate<i*2.54,0,0>}
-		#local i=i+1;
-	#end
-	
-	#if(row=2)
-		#local i=0;
-		#while(i<pin)
-			object{CON_BL_PRECISION_PIN() translate<i*2.54,0,-2.54>}
-		#local i=i+1;
-		#end
-		translate<0,0,1.27>
-	#end
-	translate<pin*-1.27+1.27,0,0>}
+   #local i=0;
+   #while(i<pin)
+      object{CON_BL_PRECISION_PIN() translate<i*2.54,0,0>}
+      #local i=i+1;
+   #end
+   
+   #if(row=2)
+      #local i=0;
+      #while(i<pin)
+         object{CON_BL_PRECISION_PIN() translate<i*2.54,0,-2.54>}
+      #local i=i+1;
+      #end
+      translate<0,0,1.27>
+   #end
+   translate<pin*-1.27+1.27,0,0>}
 #end
 
 #macro CON_BL_PRECISION_1X1()
@@ -1921,7 +1921,7 @@ CON_BNC_W_GRND()
 //modifiziert und erweitert von Duane Clark <dclark(replace with at)akamail.com>
 ********************************************************************************************************************************************/
 #macro CON_CENTRONICS_GRND(pin, female)
-  #local centcolor = color red 0.24 green 0.41 blue 0.81;	//blauer farbton fuer plastikkoerper  
+  #local centcolor = color red 0.24 green 0.41 blue 0.81;   //blauer farbton fuer plastikkoerper  
                  
   #local j  = pin/2;      // number of pins in bottom row
   #local hs = 2.159;      // horizontal pin spacing
@@ -1940,15 +1940,15 @@ CON_BNC_W_GRND()
   #local ds = do+6.3;     // do + dshell size - ps - (radius*2)     12.5 + ps+12.3 -ps -6
   union
   {
-    cylinder{<do,     vc+3, 0> <do,     vc+3, -9> 3 }	//oben  links
-    cylinder{<ds+ps,  vc+3, 0> <ds+ps,  vc+3, -9> 3 }	//oben  rechts
-    cylinder{<do+1,   vc-3, 0> <do+1,   vc-3, -9> 3 }	//unten links
-    cylinder{<ds+ps-1,vc-3, 0> <ds+ps-1,vc-3, -9> 3 }	//unten rechts
+    cylinder{<do,     vc+3, 0> <do,     vc+3, -9> 3 } //oben  links
+    cylinder{<ds+ps,  vc+3, 0> <ds+ps,  vc+3, -9> 3 } //oben  rechts
+    cylinder{<do+1,   vc-3, 0> <do+1,   vc-3, -9> 3 } //unten links
+    cylinder{<ds+ps-1,vc-3, 0> <ds+ps-1,vc-3, -9> 3 } //unten rechts
 
-    box{<do,  vc-0.1  ,  0> <ds+ps,  vc+6, -9>}									// oben
-    box{<do+1,vc  ,  0> <ds+ps-1,vc-6, -9>}									// unten
-    box{<-2,   vc+3, 0> <3.5,    vc-3, -9> rotate<0,0,-9.62> translate<ds+ps-2.20,0,0> }	// links
-    box{<-2,   vc+3, 0> <3.5,    vc-3, -9> rotate<0,0, 9.62> translate<do+0.65,   0,0> }	// rechts
+    box{<do,  vc-0.1  ,  0> <ds+ps,  vc+6, -9>}                         // oben
+    box{<do+1,vc  ,  0> <ds+ps-1,vc-6, -9>}                          // unten
+    box{<-2,   vc+3, 0> <3.5,    vc-3, -9> rotate<0,0,-9.62> translate<ds+ps-2.20,0,0> }  // links
+    box{<-2,   vc+3, 0> <3.5,    vc-3, -9> rotate<0,0, 9.62> translate<do+0.65,   0,0> }  // rechts
   }
 #end 
                                         
@@ -1999,18 +1999,18 @@ union
 
         #if (female)
         // gefuellt mit blauer plastik
-	        difference{
-		        DSHELL(ps, vc)               
-		        box{<po-2.5, vc-vs/2, -2> <po+ps+2.5, vc+vs/2, -9.2>pigment{centcolor} }   //mit einem 5 mm breitem schacht in der Mitte, 5mm breiter als pinspacing     
-		        // loecher ueber/unter den Pins 
+           difference{
+              DSHELL(ps, vc)               
+              box{<po-2.5, vc-vs/2, -2> <po+ps+2.5, vc+vs/2, -9.2>pigment{centcolor} }   //mit einem 5 mm breitem schacht in der Mitte, 5mm breiter als pinspacing     
+              // loecher ueber/unter den Pins 
                         #local i = 0;
                         #while(i<j)   
                                 box{<po+hs*i-0.5, vc+vs/2+0.5, -2><po+hs*i+0.5, vc+vs/2+1.5, -9.2>}
                                 box{<po+hs*i-0.5, vc-vs/2-0.5, -2><po+hs*i+0.5, vc-vs/2-1.5, -9.2>}
                                 #local i = i+1;
-                        #end   		        		        
+                        #end                            
                         pigment{centcolor} 
-	        }
+           }
                 // buchsenpins
                 #local i = 0;
                 #while(i<j)
@@ -2189,38 +2189,38 @@ CON_CF_AND_CARD_GRND(value)
 ********************************************************************************************************************************************/
 #macro CON_COAX_B35N61_GRND()
 union {
-	cylinder { <0,0,0>, <0,-4.9,0>, 0.48 texture{col_gold}} // Centre contact
-	cylinder { <-3.13, 0, -3.13>, <-3.13, -4.5, -3.13>, 0.58 texture{col_silver}}
-	cylinder { <-3.13, 0, 3.13>, <-3.13, -4.5, 3.13>, 0.58 texture{col_silver}}
-	cylinder { <3.13, 0, -3.13>, <3.13, -4.5, -3.13>, 0.58 texture{col_silver}}
-	cylinder { <3.13, 0, 3.13>, <3.13, -4.5, 3.13>, 0.58 texture{col_silver}}
+   cylinder { <0,0,0>, <0,-4.9,0>, 0.48 texture{col_gold}} // Centre contact
+   cylinder { <-3.13, 0, -3.13>, <-3.13, -4.5, -3.13>, 0.58 texture{col_silver}}
+   cylinder { <-3.13, 0, 3.13>, <-3.13, -4.5, 3.13>, 0.58 texture{col_silver}}
+   cylinder { <3.13, 0, -3.13>, <3.13, -4.5, -3.13>, 0.58 texture{col_silver}}
+   cylinder { <3.13, 0, 3.13>, <3.13, -4.5, 3.13>, 0.58 texture{col_silver}}
 
-	cylinder { <0,0,0>, <0,2,0>, 5.5 texture{col_silver}}
+   cylinder { <0,0,0>, <0,2,0>, 5.5 texture{col_silver}}
 
-	// This is the main body of the socket
-  	difference {
-		difference {
-			merge {
-				cylinder { <0,0,0>, <0,13.7,0>, 4.8 }
-				cylinder { <5.5, 13.7-3.3-1,0>, <-5.5, 13.7-3.30-1,0>, 1.0 }
-			}
-			cylinder { <0,5.3,0>, <0,14.0,0>, 4.2 }
-		}
-		cone { <0,13.8,0> 4.9 <0,10,0>, 2.4 }
-		texture{col_silver}
-	}
+   // This is the main body of the socket
+   difference {
+      difference {
+         merge {
+            cylinder { <0,0,0>, <0,13.7,0>, 4.8 }
+            cylinder { <5.5, 13.7-3.3-1,0>, <-5.5, 13.7-3.30-1,0>, 1.0 }
+         }
+         cylinder { <0,5.3,0>, <0,14.0,0>, 4.2 }
+      }
+      cone { <0,13.8,0> 4.9 <0,10,0>, 2.4 }
+      texture{col_silver}
+   }
 
-	difference {
-		cylinder { <0,1,0>, <0,13.7-3.3,0>, 1.5}
-		cylinder { <0,1,0>, <0,13.7,0>, 1.0}
-		texture{pigment{ rgb <1,1,1> }}
-	}
+   difference {
+      cylinder { <0,1,0>, <0,13.7-3.3,0>, 1.5}
+      cylinder { <0,1,0>, <0,13.7,0>, 1.0}
+      texture{pigment{ rgb <1,1,1> }}
+   }
 
-	difference {
-		cylinder { <0,1,0>, <0,13.7-3.3,0>, 1.0}
-		cylinder { <0,1,0>, <0,13.7,0>, 0.6}
-		texture{col_gold}
-	}
+   difference {
+      cylinder { <0,1,0>, <0,13.7-3.3,0>, 1.0}
+      cylinder { <0,1,0>, <0,13.7,0>, 0.6}
+      texture{col_gold}
+   }
 }
 #end
 #macro CON_COAX_B35N61()
@@ -2374,464 +2374,464 @@ CON_DC_JACK_HEBO_13_GRND()
 #macro CON_DIN_MA_XX_GRND(MA_Typ, MA_Subtyp)
 
 #macro CON_DIN_MA_Inlet_Kontaktfeder(Oesenlaenge, Verschraenkungsart, VSchraenkungwinkel)
-	// Oesenlaenge:        Laenge der Kontaktoese oder des Kontaktpins,
-	//                     bei Buchsen mit direktem Drahtanschluss
-	// Verschraenkungsart: Art der "Verriegelung" der Kontaktfeder in
-	//                     der Buchse. Ende gedreht oder abgewinkelt
-	// VSchraenkungwinkel: Drehwinkel der Verschraenkung für beide
-	//                     Arten
+   // Oesenlaenge:        Laenge der Kontaktoese oder des Kontaktpins,
+   //                     bei Buchsen mit direktem Drahtanschluss
+   // Verschraenkungsart: Art der "Verriegelung" der Kontaktfeder in
+   //                     der Buchse. Ende gedreht oder abgewinkelt
+   // VSchraenkungwinkel: Drehwinkel der Verschraenkung für beide
+   //                     Arten
 
 union{
 
-	#local Federdicke=0.5;
-		// Hauptteil der Kontaktfeder
-	union{
-		difference{
-				// Basis: box
-			box { <1.7,Federdicke/2,0>, <-1.7,-Federdicke/2,8.4> }
-				// Ausschnitt: box 45 Grad gedreht, Einführung für Stift vom Stecker
- 			box { <1,Federdicke/2+0.01,1>, <-1,-(Federdicke/2+0.01),-1> rotate<0,45,0>}
-				// Ausschnitt: Freihaltung Innenbereich, Abrundung
-			cylinder { <0,Federdicke/2+0.01,2.5> <0,-(Federdicke/2+0.01),2.5> 0.75 }
-				// Ausschnitt: Freihaltung für Stift vom Stecker, Innenbereich
-			box { <0.75,Federdicke/2+0.01,2.5>, <-0.75,-(Federdicke/2+0.01),7>}
-				// Ausschnitt: Freihaltung Innenbereich, Abrundung
-			cylinder { <0,Federdicke/2+0.01,7> <0,-(Federdicke/2+0.01),7> 0.75 }
-				// Ausschnitt: Freihaltung für Stift vom Stecker im Kontaktbereich
-			box { <0.5,Federdicke/2+0.01,0>, <-0.5,-(Federdicke/2+0.01),2.5>}
-			}
-			// Ergänzung: box, Führung der Kontaktfeder im Durchsteckbereich
-		box { <1.15,Federdicke/2,8.0>, <-1.15,-Federdicke/2,10.5> }
-			// Ergänzung: box, Stummel des Oesenanschlusses im Durchsteckbereich
-		box { <0.35,Federdicke/2,8.0>, <-0.35,-Federdicke/2,11.85> }
-		}
+   #local Federdicke=0.5;
+      // Hauptteil der Kontaktfeder
+   union{
+      difference{
+            // Basis: box
+         box { <1.7,Federdicke/2,0>, <-1.7,-Federdicke/2,8.4> }
+            // Ausschnitt: box 45 Grad gedreht, Einführung für Stift vom Stecker
+         box { <1,Federdicke/2+0.01,1>, <-1,-(Federdicke/2+0.01),-1> rotate<0,45,0>}
+            // Ausschnitt: Freihaltung Innenbereich, Abrundung
+         cylinder { <0,Federdicke/2+0.01,2.5> <0,-(Federdicke/2+0.01),2.5> 0.75 }
+            // Ausschnitt: Freihaltung für Stift vom Stecker, Innenbereich
+         box { <0.75,Federdicke/2+0.01,2.5>, <-0.75,-(Federdicke/2+0.01),7>}
+            // Ausschnitt: Freihaltung Innenbereich, Abrundung
+         cylinder { <0,Federdicke/2+0.01,7> <0,-(Federdicke/2+0.01),7> 0.75 }
+            // Ausschnitt: Freihaltung für Stift vom Stecker im Kontaktbereich
+         box { <0.5,Federdicke/2+0.01,0>, <-0.5,-(Federdicke/2+0.01),2.5>}
+         }
+         // Ergänzung: box, Führung der Kontaktfeder im Durchsteckbereich
+      box { <1.15,Federdicke/2,8.0>, <-1.15,-Federdicke/2,10.5> }
+         // Ergänzung: box, Stummel des Oesenanschlusses im Durchsteckbereich
+      box { <0.35,Federdicke/2,8.0>, <-0.35,-Federdicke/2,11.85> }
+      }
 
-		// Endstück der Kontaktfeder
+      // Endstück der Kontaktfeder
 
-	difference{
-		union{
-				// Ergänzung: box, Weiterführung des Stummels (ohne Überschneidung!)
-			box { <0.35,Federdicke/2,0>, <-0.35,-Federdicke/2,1.15> }
-				// Ergänzung: box, Körper der Öse, variable Länge
-			box { <1.15,Federdicke/2,1.15>, <-1.15,-Federdicke/2,2.15+Oesenlaenge> }
-				// Ergänzung: cylinder, Abschluss der Öse, variable Position
-			cylinder { <0,Federdicke/2,2.15+Oesenlaenge> <0,-Federdicke/2,2.15+Oesenlaenge> 1.15 }
-			}
-				// Ausschnitt: Freihaltung Innenbereich Öse, Abrundung
-		cylinder { <0,Federdicke/2+0.01,2.15> <0,-(Federdicke/2+0.01),2.15> 0.5 }
-				// Ausschnitt: Freihaltung für Ösenanschluss, Innenbereich
-		box { <0.5,Federdicke/2+0.01,2.15>, <-0.5,-(Federdicke/2+0.01),2.15+Oesenlaenge>}
-				// Ausschnitt: Freihaltung Innenbereich Öse, Abrundung
-		cylinder { <0,Federdicke/2+0.01,2.15+Oesenlaenge> <0,-(Federdicke/2+0.01),2.15+Oesenlaenge> 0.5 }
+   difference{
+      union{
+            // Ergänzung: box, Weiterführung des Stummels (ohne Überschneidung!)
+         box { <0.35,Federdicke/2,0>, <-0.35,-Federdicke/2,1.15> }
+            // Ergänzung: box, Körper der Öse, variable Länge
+         box { <1.15,Federdicke/2,1.15>, <-1.15,-Federdicke/2,2.15+Oesenlaenge> }
+            // Ergänzung: cylinder, Abschluss der Öse, variable Position
+         cylinder { <0,Federdicke/2,2.15+Oesenlaenge> <0,-Federdicke/2,2.15+Oesenlaenge> 1.15 }
+         }
+            // Ausschnitt: Freihaltung Innenbereich Öse, Abrundung
+      cylinder { <0,Federdicke/2+0.01,2.15> <0,-(Federdicke/2+0.01),2.15> 0.5 }
+            // Ausschnitt: Freihaltung für Ösenanschluss, Innenbereich
+      box { <0.5,Federdicke/2+0.01,2.15>, <-0.5,-(Federdicke/2+0.01),2.15+Oesenlaenge>}
+            // Ausschnitt: Freihaltung Innenbereich Öse, Abrundung
+      cylinder { <0,Federdicke/2+0.01,2.15+Oesenlaenge> <0,-(Federdicke/2+0.01),2.15+Oesenlaenge> 0.5 }
 
 
-		#switch(Verschraenkungsart)                                                         
-			#case(0)	// Verdrehung (Schraube)
-				translate<0,0, 11.85>
-				rotate <0,0,VSchraenkungwinkel>
-			#break
-			#case(4)	// sowohl Abwinkelung als auch zusätzlich zweifache Verdrehung
-				rotate <-VSchraenkungwinkel,0,0>
-				rotate <0,0,2*VSchraenkungwinkel>
-				translate<0,0, 11.85>
-			#break
-			#case(3)	// sowohl Abwinkelung als auch zusätzlich Verdrehung (invers)
-				rotate <-VSchraenkungwinkel,0,0>
-				rotate <0,0,-VSchraenkungwinkel>
-				translate<0,0, 11.85>
-			#break
-			#case(2)	// sowohl Abwinkelung als auch zusätzlich Verdrehung
-				rotate <-VSchraenkungwinkel,0,0>
-				rotate <0,0,VSchraenkungwinkel>
-				translate<0,0, 11.85>
-			#break
-			#case(1)	// Abwinkelung
-				rotate <-VSchraenkungwinkel,0,0>
-				// translate<0,0, 11.85>
-			// #break	// fall through and execute the  #else  following
-			#else
-				translate<0,0, 11.85>
-		#end
-		}
+      #switch(Verschraenkungsart)                                                         
+         #case(0) // Verdrehung (Schraube)
+            translate<0,0, 11.85>
+            rotate <0,0,VSchraenkungwinkel>
+         #break
+         #case(4) // sowohl Abwinkelung als auch zusätzlich zweifache Verdrehung
+            rotate <-VSchraenkungwinkel,0,0>
+            rotate <0,0,2*VSchraenkungwinkel>
+            translate<0,0, 11.85>
+         #break
+         #case(3) // sowohl Abwinkelung als auch zusätzlich Verdrehung (invers)
+            rotate <-VSchraenkungwinkel,0,0>
+            rotate <0,0,-VSchraenkungwinkel>
+            translate<0,0, 11.85>
+         #break
+         #case(2) // sowohl Abwinkelung als auch zusätzlich Verdrehung
+            rotate <-VSchraenkungwinkel,0,0>
+            rotate <0,0,VSchraenkungwinkel>
+            translate<0,0, 11.85>
+         #break
+         #case(1) // Abwinkelung
+            rotate <-VSchraenkungwinkel,0,0>
+            // translate<0,0, 11.85>
+         // #break   // fall through and execute the  #else  following
+         #else
+            translate<0,0, 11.85>
+      #end
+      }
 
-	#switch(Verschraenkungsart)                                                         
-		#range(1, 4)	// Abwinkelung (nicht perfekt bei cases 2 und 3)
-				// bei Abwinkelung noch zusätzlich Abrundung und Auffüllen des "Biegeloches"
-			cylinder { <0.35,0,11.85> <-0.35,0,11.85> Federdicke/2 }
-		#break
-	#end
+   #switch(Verschraenkungsart)                                                         
+      #range(1, 4)   // Abwinkelung (nicht perfekt bei cases 2 und 3)
+            // bei Abwinkelung noch zusätzlich Abrundung und Auffüllen des "Biegeloches"
+         cylinder { <0.35,0,11.85> <-0.35,0,11.85> Federdicke/2 }
+      #break
+   #end
 
-	translate <0,0,1.0>
-	#ifdef(CON_DIN_MA_Debug_Viewmode)
-		pigment{Yellow}
-	#else
-		texture {col_silver}
-	#end
-	}
+   translate <0,0,1.0>
+   #ifdef(CON_DIN_MA_Debug_Viewmode)
+      pigment{Yellow}
+   #else
+      texture {col_silver}
+   #end
+   }
 #end
 
 #macro CON_DIN_MA_Inlet_Basebody(Einsatzart)
-		// Einsatzart: Ausprägung des "Wulstes" am Ende zwecks Befestigung
-		//             in einem Metallbecher oder zwei Metallhalbschalen
-		//             einer Kupplung
+      // Einsatzart: Ausprägung des "Wulstes" am Ende zwecks Befestigung
+      //             in einem Metallbecher oder zwei Metallhalbschalen
+      //             einer Kupplung
 #local Gesamtlaenge=13;
 difference{
-	union{
-		cylinder { <0,0,0>  <0,0,Gesamtlaenge> 5.85 }
+   union{
+      cylinder { <0,0,0>  <0,0,Gesamtlaenge> 5.85 }
 
-		#switch(Einsatzart)
-			#case(0)	// Scheibenwulst für Metallbechermontage
-				cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-2> 7 }
-					// Stützwulst in Durchführung von Metallbecher
-				cylinder { <0,0,Gesamtlaenge-2.001>  <0,0,Gesamtlaenge> 6.15 }
-			#break
-			#case(1)	// unterteilter Wulst für Metallhalbschalenmontage
-						// in Kupplungen (wie auch Steckern)
-					// "dünner" Stützwulst
-				cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
+      #switch(Einsatzart)
+         #case(0) // Scheibenwulst für Metallbechermontage
+            cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-2> 7 }
+               // Stützwulst in Durchführung von Metallbecher
+            cylinder { <0,0,Gesamtlaenge-2.001>  <0,0,Gesamtlaenge> 6.15 }
+         #break
+         #case(1) // unterteilter Wulst für Metallhalbschalenmontage
+                  // in Kupplungen (wie auch Steckern)
+               // "dünner" Stützwulst
+            cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
 
-				difference{
-						// "dickerer" Haltewulst
-					cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-1> 6.55 }
+            difference{
+                  // "dickerer" Haltewulst
+               cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-1> 6.55 }
 
-						// "gerade" Begrenzug des Wulstes für abnehmbare Metallabschirmung
-					box      { < 5.5, 2.5,Gesamtlaenge-3.001>, <    7,-4,Gesamtlaenge-0.999>}
-					box      { <-5.5, 2.5,Gesamtlaenge-3.001>, <   -7,-4,Gesamtlaenge-0.999>}
+                  // "gerade" Begrenzug des Wulstes für abnehmbare Metallabschirmung
+               box      { < 5.5, 2.5,Gesamtlaenge-3.001>, <    7,-4,Gesamtlaenge-0.999>}
+               box      { <-5.5, 2.5,Gesamtlaenge-3.001>, <   -7,-4,Gesamtlaenge-0.999>}
 
-						// "abgeschrägte" Begrenzug des Wulstes für die nicht abnehmbare
-						// Metallabschirmung mit der aufgenieteten Massekontaktzunge
-					box      { <0.75,   0,Gesamtlaenge-3.001>, <-0.75,-3,Gesamtlaenge-0.999>
-						translate< -6.25,0,0>
-						rotate   < 0,0,-30>
-						}
-					box      { <0.75,   0,Gesamtlaenge-3.001>, <-0.75,-3,Gesamtlaenge-0.999>
-						translate<  6.25,0,0>
-						rotate   < 0,0, 30>
-						}
-					}
-			#break
-			#else		// keine Veränderung
-					// Dummy: dünner Stützwulst für Metallhalbschalenmontage
-				cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
-		#end
-		}
+                  // "abgeschrägte" Begrenzug des Wulstes für die nicht abnehmbare
+                  // Metallabschirmung mit der aufgenieteten Massekontaktzunge
+               box      { <0.75,   0,Gesamtlaenge-3.001>, <-0.75,-3,Gesamtlaenge-0.999>
+                  translate< -6.25,0,0>
+                  rotate   < 0,0,-30>
+                  }
+               box      { <0.75,   0,Gesamtlaenge-3.001>, <-0.75,-3,Gesamtlaenge-0.999>
+                  translate<  6.25,0,0>
+                  rotate   < 0,0, 30>
+                  }
+               }
+         #break
+         #else    // keine Veränderung
+               // Dummy: dünner Stützwulst für Metallhalbschalenmontage
+            cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
+      #end
+      }
 
-	#switch(Einsatzart)
-		#case(0)
-				// Ausschnitt für Massefederkontakt (etwas kürzer)
-			box { <1.3,3.4,-0.01>, <-1.3,7.001,Gesamtlaenge-1.998> }
-					// Breiterer Ausschnitt für Befestigung des
-					// Massefederkontaktes am Metallbecher
-			box { <2.1,3.45,Gesamtlaenge-1.999>, <-2.1,6.201,Gesamtlaenge+0.01> }
-		#break
-		#else
-				// Ausschnitt für Massefederkontakt
-			box { <1.3,3.4,-0.01>, <-1.3,7.001,Gesamtlaenge+0.01> }
-	#end
+   #switch(Einsatzart)
+      #case(0)
+            // Ausschnitt für Massefederkontakt (etwas kürzer)
+         box { <1.3,3.4,-0.01>, <-1.3,7.001,Gesamtlaenge-1.998> }
+               // Breiterer Ausschnitt für Befestigung des
+               // Massefederkontaktes am Metallbecher
+         box { <2.1,3.45,Gesamtlaenge-1.999>, <-2.1,6.201,Gesamtlaenge+0.01> }
+      #break
+      #else
+            // Ausschnitt für Massefederkontakt
+         box { <1.3,3.4,-0.01>, <-1.3,7.001,Gesamtlaenge+0.01> }
+   #end
 
-	#ifdef(CON_DIN_MA_Debug_Viewmode)
-		texture {col_Kerko}
-	#else
-		texture {pigment{Gray15} finish{F_MetalB  ambient (0.1 * global_ambient_mul)}}
-	#end
-	}
+   #ifdef(CON_DIN_MA_Debug_Viewmode)
+      texture {col_Kerko}
+   #else
+      texture {pigment{Gray15} finish{F_MetalB  ambient (0.1 * global_ambient_mul)}}
+   #end
+   }
 #end
 
 #macro CON_DIN_MA_Inlet_Millbody()
 #local Gesamtlaenge=13;
 #local Stanzlochbreite=3.9;
 union{
-		// Basisbox bis 3mm vor Grund
-	box { <Stanzlochbreite/2,0.4,-0.001>, <-Stanzlochbreite/2,-0.4,Gesamtlaenge-3> }
-		// Röhre für Pin vom Stecker
-	cylinder { <  0,  0,-0.001>  <   0,   0,Gesamtlaenge-3> 0.8 }
-		// Durchbruch für Pinanschluss
-	box { <1.25,0.4,Gesamtlaenge-3.001>, <-1.25,-0.4,Gesamtlaenge+0.001> }
+      // Basisbox bis 3mm vor Grund
+   box { <Stanzlochbreite/2,0.4,-0.001>, <-Stanzlochbreite/2,-0.4,Gesamtlaenge-3> }
+      // Röhre für Pin vom Stecker
+   cylinder { <  0,  0,-0.001>  <   0,   0,Gesamtlaenge-3> 0.8 }
+      // Durchbruch für Pinanschluss
+   box { <1.25,0.4,Gesamtlaenge-3.001>, <-1.25,-0.4,Gesamtlaenge+0.001> }
 
-	#ifdef(CON_DIN_MA_Debug_Viewmode)
-		texture {col_Kerko}
-	#else
-		texture {pigment{Gray15} finish{F_MetalB  ambient (0.1 * global_ambient_mul)}}
-	#end
-	}
+   #ifdef(CON_DIN_MA_Debug_Viewmode)
+      texture {col_Kerko}
+   #else
+      texture {pigment{Gray15} finish{F_MetalB  ambient (0.1 * global_ambient_mul)}}
+   #end
+   }
 #end
 
 #macro TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(Major Minor, Dicke, Quadrant)
-	// Parametrisierung ähnlich zu der eines Torus
-	// Major:    Radius des Ringes zur gedachten Mittellinie des zu
-	//           einem Viertel aufgeschnittenen Ringtoruses
-	// Minor:    Radius zur Außenkante des zu einem Viertel
-	//           aufgeschnittenen Torusringes
-	// Dicke:    Die Blechdicke bestimmt abhängig vom Minor-Außenradius
-	//           in der Folge den Innenradius des zu einem Viertel
-	//           aufgeschnittenen Torusringes. Dicke sollte im Bereich
-	//           0<=Dicke<=Minor  liegen.
-	//           Ist  Dicke<0  oder  Dicke>2*Minor, dann wird kein
-	//           Torus dargestellt, weil die Schnittmenge leer wird.
-	// Quadrant: Wahl des Viertels des Torusringes (1, 2, 3, 4)
+   // Parametrisierung ähnlich zu der eines Torus
+   // Major:    Radius des Ringes zur gedachten Mittellinie des zu
+   //           einem Viertel aufgeschnittenen Ringtoruses
+   // Minor:    Radius zur Außenkante des zu einem Viertel
+   //           aufgeschnittenen Torusringes
+   // Dicke:    Die Blechdicke bestimmt abhängig vom Minor-Außenradius
+   //           in der Folge den Innenradius des zu einem Viertel
+   //           aufgeschnittenen Torusringes. Dicke sollte im Bereich
+   //           0<=Dicke<=Minor  liegen.
+   //           Ist  Dicke<0  oder  Dicke>2*Minor, dann wird kein
+   //           Torus dargestellt, weil die Schnittmenge leer wird.
+   // Quadrant: Wahl des Viertels des Torusringes (1, 2, 3, 4)
 
 #local SelectioningCylinder1 = cylinder { <0,0,0>   <0,Minor+0.001,0> Major+Minor+0.001 }
 #local SelectioningCylinder2 = cylinder { <0,Minor+0.001,0>  <0,-(Minor+0.001),0> Major }
 #if(Quadrant=3)
-	object{
+   object{
 #else
-	intersection{
+   intersection{
 #end
-		difference{
-			torus{Major, Minor}
-			torus{Major, Minor-Dicke}
+      difference{
+         torus{Major, Minor}
+         torus{Major, Minor-Dicke}
 
-			#if(Quadrant=4 | Quadrant=3)
-				SelectioningCylinder1
-			#end
-			#if(Quadrant=2 | Quadrant=3)
-				SelectioningCylinder2
-			#end
-			}
+         #if(Quadrant=4 | Quadrant=3)
+            SelectioningCylinder1
+         #end
+         #if(Quadrant=2 | Quadrant=3)
+            SelectioningCylinder2
+         #end
+         }
 
-		#if(Quadrant=1 | Quadrant=2)
-			SelectioningCylinder1
-		#end
-		#if(Quadrant=1 | Quadrant=4)
-			SelectioningCylinder2
-		#end
-		}
+      #if(Quadrant=1 | Quadrant=2)
+         SelectioningCylinder1
+      #end
+      #if(Quadrant=1 | Quadrant=4)
+         SelectioningCylinder2
+      #end
+      }
 #end
 
 #macro CON_DIN_MA_Outlet_BecherBase()
 #local Gesamtlaenge=13;
 union{
-		// Hauptteil des Metallbechers, aufgebaut aus
-		// ausgeschnittenen Ringtori und Zylinderringen
-	difference{
-		union{
-			cylinder { <0,1,0>  <0,Gesamtlaenge-2,0> 7.4 }
-			cylinder { <0,Gesamtlaenge-1.4,0>  <0,Gesamtlaenge-1,0> 6.4 }
-			}
-		cylinder { <0, 0.999,0>  <0,Gesamtlaenge-1.999,0> 7.0 }
-		cylinder { <0,Gesamtlaenge-1.4001,0>  <0,Gesamtlaenge-0.999,0> 6.2 }
-		}
+      // Hauptteil des Metallbechers, aufgebaut aus
+      // ausgeschnittenen Ringtori und Zylinderringen
+   difference{
+      union{
+         cylinder { <0,1,0>  <0,Gesamtlaenge-2,0> 7.4 }
+         cylinder { <0,Gesamtlaenge-1.4,0>  <0,Gesamtlaenge-1,0> 6.4 }
+         }
+      cylinder { <0, 0.999,0>  <0,Gesamtlaenge-1.999,0> 7.0 }
+      cylinder { <0,Gesamtlaenge-1.4001,0>  <0,Gesamtlaenge-0.999,0> 6.2 }
+      }
 
-	object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.0, 1.0, 0.4, 4) translate<0,1,0> }
-	object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(6.4, 1.0, 0.4, 2) translate<0,Gesamtlaenge-2,0> }
+   object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.0, 1.0, 0.4, 4) translate<0,1,0> }
+   object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(6.4, 1.0, 0.4, 2) translate<0,Gesamtlaenge-2,0> }
 
-		// Winkelstück zur Befestigung der Massekontakzunge
-	union{
-			// Viertelrohr als Biegeradius des Winkelstückes
-		intersection{
-			cylinder { <2,0.5,-0.5>  <-2,0.5,-0.5> 0.5 }
-			cylinder { <2.001,0.5,-0.5>  <-2.001,0.5,-0.5> 0.1 inverse}
-			box{<2.001,-0.001,-0.001>, <-2.001,0.5,-0.5>}
-			}
+      // Winkelstück zur Befestigung der Massekontakzunge
+   union{
+         // Viertelrohr als Biegeradius des Winkelstückes
+      intersection{
+         cylinder { <2,0.5,-0.5>  <-2,0.5,-0.5> 0.5 }
+         cylinder { <2.001,0.5,-0.5>  <-2.001,0.5,-0.5> 0.1 inverse}
+         box{<2.001,-0.001,-0.001>, <-2.001,0.5,-0.5>}
+         }
 
-			// Anschluss an den Metallbecher inklusive radialer Begrenzung
-		intersection{
-			box{<2,0,-0.5>, <-2,0.4,-2.5> }
-			cylinder { <0,-0.001,0>  <0,0.401,0> 6.201 translate<0,0,4.0> }
-			}
+         // Anschluss an den Metallbecher inklusive radialer Begrenzung
+      intersection{
+         box{<2,0,-0.5>, <-2,0.4,-2.5> }
+         cylinder { <0,-0.001,0>  <0,0.401,0> 6.201 translate<0,0,4.0> }
+         }
 
-			// Kombination der Konstruktion von abgewinkeltem Anschlussstück
-			// und der Massekontaktzunge in einer difference/union-Sektion,
-			// was ein paar Anweisungen spart, die ganze Beschreibung
-			// allerdings etwas unübersichtlich macht.
-		difference{
-			union{
-					// Haltezunge für Niet
-				box{<2,3.5,-0.4>, <-2,0.5,0>}
+         // Kombination der Konstruktion von abgewinkeltem Anschlussstück
+         // und der Massekontaktzunge in einer difference/union-Sektion,
+         // was ein paar Anweisungen spart, die ganze Beschreibung
+         // allerdings etwas unübersichtlich macht.
+      difference{
+         union{
+               // Haltezunge für Niet
+            box{<2,3.5,-0.4>, <-2,0.5,0>}
 
-					// Kontaktzunge für Massekontaktierung als Cubic-Spline
-				prism {
-					linear_sweep cubic_spline
-					-1.15, 1.15, 14, // the number of points making up the shape ...
-					<2.45-Gesamtlaenge,-4.0>, < 2.45-Gesamtlaenge,0.5>,
-					
-					<5.4-Gesamtlaenge,-1.65>,
+               // Kontaktzunge für Massekontaktierung als Cubic-Spline
+            prism {
+               linear_sweep cubic_spline
+               -1.15, 1.15, 14, // the number of points making up the shape ...
+               <2.45-Gesamtlaenge,-4.0>, < 2.45-Gesamtlaenge,0.5>,
+               
+               <5.4-Gesamtlaenge,-1.65>,
 
-					<11.4-Gesamtlaenge,-0.02>, <12.4-Gesamtlaenge,0.2>, <13.4-Gesamtlaenge,0.2>, <16.4-Gesamtlaenge,0.175>,
-					<16.4-Gesamtlaenge, 0.025>, <13.4-Gesamtlaenge,0.0>, <12.4-Gesamtlaenge,0.0>, <11.4-Gesamtlaenge,-0.22>,
+               <11.4-Gesamtlaenge,-0.02>, <12.4-Gesamtlaenge,0.2>, <13.4-Gesamtlaenge,0.2>, <16.4-Gesamtlaenge,0.175>,
+               <16.4-Gesamtlaenge, 0.025>, <13.4-Gesamtlaenge,0.0>, <12.4-Gesamtlaenge,0.0>, <11.4-Gesamtlaenge,-0.22>,
 
-					<5.4-Gesamtlaenge,-1.85>,
-					
-					< 2.45-Gesamtlaenge,0.5>, <6.95-Gesamtlaenge,0.5>
-					rotate<0,0,90>
-					}
-					// Ergänzung des Cubic-Spline am hinteren Ende
-				box  { <-1.15,13.30-(Gesamtlaenge),0.2>, <1.15,19.65-Gesamtlaenge,0> }
-				cylinder { <0,19.65-(Gesamtlaenge),0.2>     <0,19.65-Gesamtlaenge,0> 1.15 }
-	#ifdef(CON_DIN_MA_Debug_Viewmode)
-		pigment{White}
-	#end		
-				}
+               <5.4-Gesamtlaenge,-1.85>,
+               
+               < 2.45-Gesamtlaenge,0.5>, <6.95-Gesamtlaenge,0.5>
+               rotate<0,0,90>
+               }
+               // Ergänzung des Cubic-Spline am hinteren Ende
+            box  { <-1.15,13.30-(Gesamtlaenge),0.2>, <1.15,19.65-Gesamtlaenge,0> }
+            cylinder { <0,19.65-(Gesamtlaenge),0.2>     <0,19.65-Gesamtlaenge,0> 1.15 }
+   #ifdef(CON_DIN_MA_Debug_Viewmode)
+      pigment{White}
+   #end     
+            }
 
-				// Abschrägen der Haltezunge
-			box{< 2.05,-0.501,0.001>, < 3.0,3.075,-0.401> rotate <0,0, 15> }
-			box{<-2.05,-0.501,0.001>, <-3.0,3.075,-0.401> rotate <0,0,-15> }
+            // Abschrägen der Haltezunge
+         box{< 2.05,-0.501,0.001>, < 3.0,3.075,-0.401> rotate <0,0, 15> }
+         box{<-2.05,-0.501,0.001>, <-3.0,3.075,-0.401> rotate <0,0,-15> }
 
-				// Ausschneiden des Langloches in der Massekontaktzunge			
-			box   { <-0.5,18.15-Gesamtlaenge,0.201>, <0.5,19.65-Gesamtlaenge,-0.001> }
-			cylinder { <0,19.65-Gesamtlaenge,0.201>  <0,  19.65-Gesamtlaenge,-0.001> 0.5 }
-			cylinder { <0,18.15-Gesamtlaenge,0.201>  <0,  18.15-Gesamtlaenge,-0.001> 0.5 }
-	#ifdef(CON_DIN_MA_Debug_Viewmode)
-		pigment{Red}
-	#end		
-			}
+            // Ausschneiden des Langloches in der Massekontaktzunge        
+         box   { <-0.5,18.15-Gesamtlaenge,0.201>, <0.5,19.65-Gesamtlaenge,-0.001> }
+         cylinder { <0,19.65-Gesamtlaenge,0.201>  <0,  19.65-Gesamtlaenge,-0.001> 0.5 }
+         cylinder { <0,18.15-Gesamtlaenge,0.201>  <0,  18.15-Gesamtlaenge,-0.001> 0.5 }
+   #ifdef(CON_DIN_MA_Debug_Viewmode)
+      pigment{Red}
+   #end     
+         }
 
-			// Messingniet zur Verbindung von Haltezunge und Massekontaktzunge
-		cylinder { <0,2,0.25>  <0,2,-0.45> 0.875 texture {T_Gold_5E}} 	// Messing!
+         // Messingniet zur Verbindung von Haltezunge und Massekontaktzunge
+      cylinder { <0,2,0.25>  <0,2,-0.45> 0.875 texture {T_Gold_5E}}  // Messing!
 
-		translate<0,Gesamtlaenge-1.4,-4.0>
-		}
-	}
+      translate<0,Gesamtlaenge-1.4,-4.0>
+      }
+   }
 #end
 
 #macro CON_DIN_MA_Outlet_FrontHlpr1(Winkel, Bauteil)
-	#local ZielLaenge = (2*(Winkel>=0)-1)*9.138 ;
-	#local ZielWinkel = Winkel+(2*(Winkel>=0)-1)*34.58078 ;
-	#switch(Bauteil)
-		#case(0)	// Boxen für "difference" der Viertel-Torusse, allerdings
-					// nur oberhalb Blechdicke, nicht (mehr) komplett
-			box {
-				<0, -0.001,  -5.0   >, <ZielLaenge,1.001,0.001>
-				#ifdef(CON_DIN_MA_Debug_Viewmode)
-					pigment{Green}
-				#end		
-		#break
+   #local ZielLaenge = (2*(Winkel>=0)-1)*9.138 ;
+   #local ZielWinkel = Winkel+(2*(Winkel>=0)-1)*34.58078 ;
+   #switch(Bauteil)
+      #case(0) // Boxen für "difference" der Viertel-Torusse, allerdings
+               // nur oberhalb Blechdicke, nicht (mehr) komplett
+         box {
+            <0, -0.001,  -5.0   >, <ZielLaenge,1.001,0.001>
+            #ifdef(CON_DIN_MA_Debug_Viewmode)
+               pigment{Green}
+            #end     
+      #break
 
-			// Teile zur Konstruktion der geraden Randbögen vom Tiefziehen
-			// intersection{ 1 object{2 inverse} 3 }
-		#case(1)	// Zylinder als Blechkante für Montageflügel
-			cylinder{
-				<0,1,-1>, <ZielLaenge,1,  -1  > 1.0
-				#ifdef(CON_DIN_MA_Debug_Viewmode)
-					pigment{Red}
-				#end		
-		#break
-		#case(2)	// Innenzylinder für "intersection" mit Modifizierer
-					// "inverse", Radius weniger Blechdicke (0.4)
-					//
-					// Realisierung der Überstände für "difference" (aka
-					// inverse intersection) hier nicht absolut (+/- 0.001),
-					// sondern relativ:  +/- FinLen * 0.001
-			cylinder{
-				<-ZielLaenge*0.001,1,-1>, <ZielLaenge*1.001,1,-1> 0.6
-				#ifdef(CON_DIN_MA_Debug_Viewmode)
-					pigment{Yellow}
-				#end		
-		#break
-		#case(3)	// Box für "intersection" zum Freischneiden des richtigen Viertels
-					// inklusive Überstände für Nicht-Schnittflächen
-			box {
-				<-0.001,0,  -1.001  >, <ZielLaenge+0.001,1.001,  0  >
-				#ifdef(CON_DIN_MA_Debug_Viewmode)
-					pigment{Pink}
-				#end		
-		#break
+         // Teile zur Konstruktion der geraden Randbögen vom Tiefziehen
+         // intersection{ 1 object{2 inverse} 3 }
+      #case(1) // Zylinder als Blechkante für Montageflügel
+         cylinder{
+            <0,1,-1>, <ZielLaenge,1,  -1  > 1.0
+            #ifdef(CON_DIN_MA_Debug_Viewmode)
+               pigment{Red}
+            #end     
+      #break
+      #case(2) // Innenzylinder für "intersection" mit Modifizierer
+               // "inverse", Radius weniger Blechdicke (0.4)
+               //
+               // Realisierung der Überstände für "difference" (aka
+               // inverse intersection) hier nicht absolut (+/- 0.001),
+               // sondern relativ:  +/- FinLen * 0.001
+         cylinder{
+            <-ZielLaenge*0.001,1,-1>, <ZielLaenge*1.001,1,-1> 0.6
+            #ifdef(CON_DIN_MA_Debug_Viewmode)
+               pigment{Yellow}
+            #end     
+      #break
+      #case(3) // Box für "intersection" zum Freischneiden des richtigen Viertels
+               // inklusive Überstände für Nicht-Schnittflächen
+         box {
+            <-0.001,0,  -1.001  >, <ZielLaenge+0.001,1.001,  0  >
+            #ifdef(CON_DIN_MA_Debug_Viewmode)
+               pigment{Pink}
+            #end     
+      #break
 
-		#else
-		// #case(4)	// Box zum Ausfüllen mit Blechdicke bis zur Biegekante
-			box {
-				<0,0,-7.5>, <ZielLaenge,0.4,-1>
-	#end
+      #else
+      // #case(4) // Box zum Ausfüllen mit Blechdicke bis zur Biegekante
+         box {
+            <0,0,-7.5>, <ZielLaenge,0.4,-1>
+   #end
 
-				translate <0,0,   9.5  >
-				rotate <0,ZielWinkel,0>
-				}
+            translate <0,0,   9.5  >
+            rotate <0,ZielWinkel,0>
+            }
 #end
 
 #macro CON_DIN_MA_Outlet_FrontHlpr2(Winkel)
 intersection{
-	CON_DIN_MA_Outlet_FrontHlpr1(Winkel, 1)
-	object{ CON_DIN_MA_Outlet_FrontHlpr1(Winkel, 2) inverse }
-	CON_DIN_MA_Outlet_FrontHlpr1(Winkel, 3)
-	}
+   CON_DIN_MA_Outlet_FrontHlpr1(Winkel, 1)
+   object{ CON_DIN_MA_Outlet_FrontHlpr1(Winkel, 2) inverse }
+   CON_DIN_MA_Outlet_FrontHlpr1(Winkel, 3)
+   }
 #end
 
 #macro CON_DIN_MA_Outlet_FrontFlansch()
-	// Dazu kommt die Frontplatte mit den beiden Flansch"ohren", welche
-	// wiederum die beiden Befestigungslöcher enthalten
+   // Dazu kommt die Frontplatte mit den beiden Flansch"ohren", welche
+   // wiederum die beiden Befestigungslöcher enthalten
 difference{
-	union{
-			// Der vorne überstehende Ring
-		cylinder { <0,0,0>  <0,0.4,0> 8.5 }
+   union{
+         // Der vorne überstehende Ring
+      cylinder { <0,0,0>  <0,0.4,0> 8.5 }
 
-			// Das Freischneiden der Ringtori an den Übergängen zu
-			// den geraden Randstücken kann "schlierenfrei" nur
-			// durch eine weitere explizite difference/union-
-			// Beschreibung durchgeführt werden
-		difference{
-			union{
-					// Der vorne überstehende Torus am Ring
-				object{TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.5, 1.0, 0.4, 3) translate<0,1,0> }
-			
-					// Die Flanschohren
-				object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(2.2, 1.0, 0.4, 3) translate< 11.1,1,0> }
-				object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(2.2, 1.0, 0.4, 3) translate<-11.1,1,0> }
-				}
+         // Das Freischneiden der Ringtori an den Übergängen zu
+         // den geraden Randstücken kann "schlierenfrei" nur
+         // durch eine weitere explizite difference/union-
+         // Beschreibung durchgeführt werden
+      difference{
+         union{
+               // Der vorne überstehende Torus am Ring
+            object{TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.5, 1.0, 0.4, 3) translate<0,1,0> }
+         
+               // Die Flanschohren
+            object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(2.2, 1.0, 0.4, 3) translate< 11.1,1,0> }
+            object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(2.2, 1.0, 0.4, 3) translate<-11.1,1,0> }
+            }
 
-				// Abschneiden der Tori an den Übergängen
-				// zu den geraden Kantenverbindern
-			CON_DIN_MA_Outlet_FrontHlpr1(   0, 0)
-			CON_DIN_MA_Outlet_FrontHlpr1( 180, 0)
-			CON_DIN_MA_Outlet_FrontHlpr1(-180, 0)
-			CON_DIN_MA_Outlet_FrontHlpr1(-360, 0)
-			#ifdef(CON_DIN_MA_Debug_Viewmode)
-				pigment{Magenta}
-			#end		
-			}
+            // Abschneiden der Tori an den Übergängen
+            // zu den geraden Kantenverbindern
+         CON_DIN_MA_Outlet_FrontHlpr1(   0, 0)
+         CON_DIN_MA_Outlet_FrontHlpr1( 180, 0)
+         CON_DIN_MA_Outlet_FrontHlpr1(-180, 0)
+         CON_DIN_MA_Outlet_FrontHlpr1(-360, 0)
+         #ifdef(CON_DIN_MA_Debug_Viewmode)
+            pigment{Magenta}
+         #end     
+         }
 
-			// Ausfüllung der Ohrentori
-		object{ cylinder { <0,0,0>  <0,0.4,0> 2.2 } translate< 11.1,0,0> }
-		object{ cylinder { <0,0,0>  <0,0.4,0> 2.2 } translate<-11.1,0,0> }
+         // Ausfüllung der Ohrentori
+      object{ cylinder { <0,0,0>  <0,0.4,0> 2.2 } translate< 11.1,0,0> }
+      object{ cylinder { <0,0,0>  <0,0.4,0> 2.2 } translate<-11.1,0,0> }
 
-			// Die gebogenen Ränder zu den Ohren hin
-		CON_DIN_MA_Outlet_FrontHlpr2(   0)
-		CON_DIN_MA_Outlet_FrontHlpr2( 180)
-		CON_DIN_MA_Outlet_FrontHlpr2(-180)
-		CON_DIN_MA_Outlet_FrontHlpr2(-360)
-		
-			// Verlängerung der gebogenen Ränder zu den Ohren mit Blech
-		CON_DIN_MA_Outlet_FrontHlpr1(   0, 4)
-		CON_DIN_MA_Outlet_FrontHlpr1( 180, 4)
-		CON_DIN_MA_Outlet_FrontHlpr1(-180, 4)
-		CON_DIN_MA_Outlet_FrontHlpr1(-360, 4)
-		#ifdef(CON_DIN_MA_Debug_Viewmode)
-			pigment{Cyan}
-		#end		
-		}
+         // Die gebogenen Ränder zu den Ohren hin
+      CON_DIN_MA_Outlet_FrontHlpr2(   0)
+      CON_DIN_MA_Outlet_FrontHlpr2( 180)
+      CON_DIN_MA_Outlet_FrontHlpr2(-180)
+      CON_DIN_MA_Outlet_FrontHlpr2(-360)
+      
+         // Verlängerung der gebogenen Ränder zu den Ohren mit Blech
+      CON_DIN_MA_Outlet_FrontHlpr1(   0, 4)
+      CON_DIN_MA_Outlet_FrontHlpr1( 180, 4)
+      CON_DIN_MA_Outlet_FrontHlpr1(-180, 4)
+      CON_DIN_MA_Outlet_FrontHlpr1(-360, 4)
+      #ifdef(CON_DIN_MA_Debug_Viewmode)
+         pigment{Cyan}
+      #end     
+      }
 
-		// Ausschneiden des großen Loches in der Mitte
-	cylinder { <0,-0.001,0>  <0,0.401,0> 8.0 }
+      // Ausschneiden des großen Loches in der Mitte
+   cylinder { <0,-0.001,0>  <0,0.401,0> 8.0 }
 
-		// Ausschneiden der beiden kleinen Befestigungsbohrlöcher in den Ohren
-	object{ cylinder { <0,-0.001,0>  <0,0.401,0> 1.6 } translate< 11.1,0,0> }
-	object{ cylinder { <0,-0.001,0>  <0,0.401,0> 1.6 } translate<-11.1,0,0> }
-	}
+      // Ausschneiden der beiden kleinen Befestigungsbohrlöcher in den Ohren
+   object{ cylinder { <0,-0.001,0>  <0,0.401,0> 1.6 } translate< 11.1,0,0> }
+   object{ cylinder { <0,-0.001,0>  <0,0.401,0> 1.6 } translate<-11.1,0,0> }
+   }
 #end
 
 #macro CON_DIN_MA_Outlet_Becher(Flansch)
-	// Flansch: on/off
+   // Flansch: on/off
 
 #if(Flansch=on)
-	union{
-			// Hauptbecher
-		CON_DIN_MA_Outlet_BecherBase()
-			// Frontflansch
-		CON_DIN_MA_Outlet_FrontFlansch()
+   union{
+         // Hauptbecher
+      CON_DIN_MA_Outlet_BecherBase()
+         // Frontflansch
+      CON_DIN_MA_Outlet_FrontFlansch()
 #else
-	object{
-		CON_DIN_MA_Outlet_BecherBase()
+   object{
+      CON_DIN_MA_Outlet_BecherBase()
 #end
-	
-			// Hier lediglich noch Positionierarbeiten
-		rotate<90,0,0>
-	
-		#ifdef(CON_DIN_MA_Debug_Viewmode)
-			// pigment{Green}
-			texture {col_gold}
-		#else
-			texture {col_silver}
-		#end
-		}
+   
+         // Hier lediglich noch Positionierarbeiten
+      rotate<90,0,0>
+   
+      #ifdef(CON_DIN_MA_Debug_Viewmode)
+         // pigment{Green}
+         texture {col_gold}
+      #else
+         texture {col_silver}
+      #end
+      }
 #end
 
 /*##########################################################################*/
@@ -2841,310 +2841,310 @@ difference{
 /*##########################################################################*/
 
 #macro CON_DIN_MA_InletAction(Typ, LochRotWinkel, LochPosWinkel)
-	// Typ:           Art der Bearbeitung, derzeit definiert sind:
-	//                0 - Fräsen bzw. Ausstanzen des kontaktfederloches
-	//                1 - Kontaktfedereinsatz, Anschluss gebogen, Öse lang
-	//                2 - Kontaktfedereinsatz, Anschluss gedreht, Öse lang
-	//                3 - Kontaktfedereinsatz, Anschluss gedreht, Öse kurz
-	//                4 - Kontaktfedereinsatz, Anschluss gebogen und
-	//                    gedreht, Öse lang
-	//                5 - Kontaktfedereinsatz, Anschluss gebogen und
-	//                    invers gedreht, Öse lang
-	//                6 - Kontaktfedereinsatz, Anschluss gebogen und
-	//                    zweifach gedreht (60° statt 30°), Öse lang
-	//
-	// LochRotWinkel: Rotation des Stanzloches um die eigene Achse
-	//                (dieser wird gegen "LochPosWinkel" kompensiert
-	// LochPosWinkel: Rotation des Loches auf einem Radius von 3.5
-	//                innerhalb des Buchseninlets
-	//
-	// Spezialfall: Wenn  LochPosWinkel=180  dann wird das Stanzloch
-	// Mitelloch    genau in der Mitte des Inlets positioniert. Da
-	//              das Loch ansonsten im Ausschnitt für den
-	//              Massekontakt zu liegen käme, ist das "Fehlen" des
-	//              180'er Winkels daher nicht tragisch.
-	//
+   // Typ:           Art der Bearbeitung, derzeit definiert sind:
+   //                0 - Fräsen bzw. Ausstanzen des kontaktfederloches
+   //                1 - Kontaktfedereinsatz, Anschluss gebogen, Öse lang
+   //                2 - Kontaktfedereinsatz, Anschluss gedreht, Öse lang
+   //                3 - Kontaktfedereinsatz, Anschluss gedreht, Öse kurz
+   //                4 - Kontaktfedereinsatz, Anschluss gebogen und
+   //                    gedreht, Öse lang
+   //                5 - Kontaktfedereinsatz, Anschluss gebogen und
+   //                    invers gedreht, Öse lang
+   //                6 - Kontaktfedereinsatz, Anschluss gebogen und
+   //                    zweifach gedreht (60° statt 30°), Öse lang
+   //
+   // LochRotWinkel: Rotation des Stanzloches um die eigene Achse
+   //                (dieser wird gegen "LochPosWinkel" kompensiert
+   // LochPosWinkel: Rotation des Loches auf einem Radius von 3.5
+   //                innerhalb des Buchseninlets
+   //
+   // Spezialfall: Wenn  LochPosWinkel=180  dann wird das Stanzloch
+   // Mitelloch    genau in der Mitte des Inlets positioniert. Da
+   //              das Loch ansonsten im Ausschnitt für den
+   //              Massekontakt zu liegen käme, ist das "Fehlen" des
+   //              180'er Winkels daher nicht tragisch.
+   //
 #local PositionRadius=3.5;
 object{
-	#switch(Typ)
-		#case(6)	// Anschluss gebogen und zweifach verdreht, Öse lang
-			CON_DIN_MA_Inlet_Kontaktfeder(3, 4, 30)
-		#break
-		#case(5)	// Anschluss gebogen und invers verdreht, Öse lang
-			CON_DIN_MA_Inlet_Kontaktfeder(3, 3, 30)
-		#break
-		#case(4)	// Anschluss gebogen und verdreht, Öse lang
-			CON_DIN_MA_Inlet_Kontaktfeder(3, 2, 30)
-		#break
-		#case(1)	// Anschluss gebogen, Öse lang
-			CON_DIN_MA_Inlet_Kontaktfeder(3, 1, 30)
-		#break
-		#case(2)	// Anschluss gedreht, Öse lang
-			CON_DIN_MA_Inlet_Kontaktfeder(3, 0,-30)
-		#break
-		#case(3)	// Anschluss gedreht, Öse kurz
-			CON_DIN_MA_Inlet_Kontaktfeder(1, 0,-30)
-		#break
-		#else		// wie #case(0), Fräsen bzw. Ausstanzen der Löcher
-			CON_DIN_MA_Inlet_Millbody()
-	#end
+   #switch(Typ)
+      #case(6) // Anschluss gebogen und zweifach verdreht, Öse lang
+         CON_DIN_MA_Inlet_Kontaktfeder(3, 4, 30)
+      #break
+      #case(5) // Anschluss gebogen und invers verdreht, Öse lang
+         CON_DIN_MA_Inlet_Kontaktfeder(3, 3, 30)
+      #break
+      #case(4) // Anschluss gebogen und verdreht, Öse lang
+         CON_DIN_MA_Inlet_Kontaktfeder(3, 2, 30)
+      #break
+      #case(1) // Anschluss gebogen, Öse lang
+         CON_DIN_MA_Inlet_Kontaktfeder(3, 1, 30)
+      #break
+      #case(2) // Anschluss gedreht, Öse lang
+         CON_DIN_MA_Inlet_Kontaktfeder(3, 0,-30)
+      #break
+      #case(3) // Anschluss gedreht, Öse kurz
+         CON_DIN_MA_Inlet_Kontaktfeder(1, 0,-30)
+      #break
+      #else    // wie #case(0), Fräsen bzw. Ausstanzen der Löcher
+         CON_DIN_MA_Inlet_Millbody()
+   #end
 
- 	rotate<0,0,90+LochRotWinkel-LochPosWinkel>
-	#if(LochPosWinkel!=180)
-	 	translate<0,-3.5,0>
-	 	rotate<0,0,LochPosWinkel>
-	#end
-	}
+   rotate<0,0,90+LochRotWinkel-LochPosWinkel>
+   #if(LochPosWinkel!=180)
+      translate<0,-3.5,0>
+      rotate<0,0,LochPosWinkel>
+   #end
+   }
 #end
 
 #macro CON_DIN_MA_InletPinComposition(MA_Typ, PinAction, MidPinAct)
-	// MA_Typ:    Selektion der Buchsenart, Anzahl der Pins,
-	//            Winkelstellung der Pins usw. über Typcodes.
-	//
-	//		Derzeit definitiert:
-	//			30 - Anordnung wie bei:				MAB_3_S
-	//			40 - Anordnung wie bei:				MAB_4
-	//			51 - Anordnung wie bei:				MAB_5_S
-	//			52 - Anordnung wie bei:				MAB_5
-	//			53 - Anordnung wie bei:	(kreuzförmig, nicht Hirschmann)
-	//			61 - Anordnung wie bei:				MAB_6
-	//			62 - Anordnung wie bei (exklusiv):	MAB_6_V
-	//			63 - Anordnung wie bei (exklusiv):	MAB_6_H
-	//			71 - Anordnung wie bei (exklusiv):	MAB_7_SH
-	//			72 - Anordnung wie bei:				MAB_7_S
-	//			81 - Anordnung wie bei:				MAB_8_S
-	//			82 - Anordnung wie bei:				MAB_8_SN
-	//
-	//			39 - Für rekursive Aufrufe benötigt
-	//			58 - Für rekursive Aufrufe benötigt
-	//			59 - Für rekursive Aufrufe benötigt
-	//
-	//		"Vererbungshierarchien":
-	//				30 <|-- 51 <|-- 81
-	//				59 <|-- 72 <|-- 82
-	//				39 <|-- 58 <|-- 61
-	//				ohne: 40, 52, 53, 62, 63, 71
-	//
-	// PinAction: Art der Bearbeitung, derzeit definiert sind:
-	//            0 - Fräsen bzw. Ausstanzen des Kontaktfederloches
-	//            1 - Kontaktfedereinsatz, Anschluss gebogen, Öse lang
-	//            2 - Kontaktfedereinsatz, Anschluss gedreht, Öse lang
-	//            3 - Kontaktfedereinsatz, Anschluss gedreht, Öse kurz
-	//
-	// MidPinAct: Gesondert definierbare Bearbeitungsart für das Mittelloch
-	//
-	// ACHTUNG: Der äußere aufrufende Kontext sollte diesem Makro eine
-	//          klammernde Struktur umstellen, wie z.B.:  union{}
-	//
+   // MA_Typ:    Selektion der Buchsenart, Anzahl der Pins,
+   //            Winkelstellung der Pins usw. über Typcodes.
+   //
+   //    Derzeit definitiert:
+   //       30 - Anordnung wie bei:          MAB_3_S
+   //       40 - Anordnung wie bei:          MAB_4
+   //       51 - Anordnung wie bei:          MAB_5_S
+   //       52 - Anordnung wie bei:          MAB_5
+   //       53 - Anordnung wie bei: (kreuzförmig, nicht Hirschmann)
+   //       61 - Anordnung wie bei:          MAB_6
+   //       62 - Anordnung wie bei (exklusiv):  MAB_6_V
+   //       63 - Anordnung wie bei (exklusiv):  MAB_6_H
+   //       71 - Anordnung wie bei (exklusiv):  MAB_7_SH
+   //       72 - Anordnung wie bei:          MAB_7_S
+   //       81 - Anordnung wie bei:          MAB_8_S
+   //       82 - Anordnung wie bei:          MAB_8_SN
+   //
+   //       39 - Für rekursive Aufrufe benötigt
+   //       58 - Für rekursive Aufrufe benötigt
+   //       59 - Für rekursive Aufrufe benötigt
+   //
+   //    "Vererbungshierarchien":
+   //          30 <|-- 51 <|-- 81
+   //          59 <|-- 72 <|-- 82
+   //          39 <|-- 58 <|-- 61
+   //          ohne: 40, 52, 53, 62, 63, 71
+   //
+   // PinAction: Art der Bearbeitung, derzeit definiert sind:
+   //            0 - Fräsen bzw. Ausstanzen des Kontaktfederloches
+   //            1 - Kontaktfedereinsatz, Anschluss gebogen, Öse lang
+   //            2 - Kontaktfedereinsatz, Anschluss gedreht, Öse lang
+   //            3 - Kontaktfedereinsatz, Anschluss gedreht, Öse kurz
+   //
+   // MidPinAct: Gesondert definierbare Bearbeitungsart für das Mittelloch
+   //
+   // ACHTUNG: Der äußere aufrufende Kontext sollte diesem Makro eine
+   //          klammernde Struktur umstellen, wie z.B.:  union{}
+   //
 
-	#switch(MA_Typ)
-		#case(81)
-				// Mittelloch ausstanzen, exzentrisch (0.9 mm) positioniert
-			object{CON_DIN_MA_InletAction(MidPinAct, 0,180) translate<0,0.9,0>}
-				// Die beiden speziell ausgerichteten Kontaktbohrungen unten
-			object{CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45,-135) translate<-1, 0.5, 0>}
-			object{CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135, 135) translate< 1, 0.5, 0>}
-			// fall through to next case, adding more pins
-		#case(51)
-				// 45° links
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45,-45)
-				// 45° rechts
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135, 45)
-		#case(30)
-				// 90° links
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45,-90)
-				// 90° rechts
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135, 90)
-				// center
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),   0,  0)
-		#break;
-		//############################################
+   #switch(MA_Typ)
+      #case(81)
+            // Mittelloch ausstanzen, exzentrisch (0.9 mm) positioniert
+         object{CON_DIN_MA_InletAction(MidPinAct, 0,180) translate<0,0.9,0>}
+            // Die beiden speziell ausgerichteten Kontaktbohrungen unten
+         object{CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45,-135) translate<-1, 0.5, 0>}
+         object{CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135, 135) translate< 1, 0.5, 0>}
+         // fall through to next case, adding more pins
+      #case(51)
+            // 45° links
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45,-45)
+            // 45° rechts
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135, 45)
+      #case(30)
+            // 90° links
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45,-90)
+            // 90° rechts
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135, 90)
+            // center
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),   0,  0)
+      #break;
+      //############################################
 
-		#case(82)
-				// Mittelloch ausstanzen, exzentrisch (0.7 mm) positioniert
-			object{CON_DIN_MA_InletAction(MidPinAct, 0,180) translate<0,0.7,0>}
+      #case(82)
+            // Mittelloch ausstanzen, exzentrisch (0.7 mm) positioniert
+         object{CON_DIN_MA_InletAction(MidPinAct, 0,180) translate<0,0.7,0>}
 
-		#case(72)
-				// Kontakte 6 und 7 unten ergänzen
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),-135,-135)
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), 135, 135)
+      #case(72)
+            // Kontakte 6 und 7 unten ergänzen
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),-135,-135)
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), 135, 135)
 
-		#case(59)
-				// virtuelle 5'er Buchse, da nicht nach Norm
-			#local Rotator=-90;
-			#while (Rotator<=90)
-				CON_DIN_MA_InletAction((PinAction!=1?PinAction:6), Rotator, Rotator)
-				#local Rotator=Rotator+45;
-			#end
-		#break;
-		//############################################
+      #case(59)
+            // virtuelle 5'er Buchse, da nicht nach Norm
+         #local Rotator=-90;
+         #while (Rotator<=90)
+            CON_DIN_MA_InletAction((PinAction!=1?PinAction:6), Rotator, Rotator)
+            #local Rotator=Rotator+45;
+         #end
+      #break;
+      //############################################
 
-		#case(61)
-				// Loch rechts unten ausstanzen und befüllen
-			CON_DIN_MA_InletAction(PinAction, 300,-120)
-		#case(58)
-				// Mittelloch ausstanzen (6'er Buchse)
-			CON_DIN_MA_InletAction(MidPinAct,  60, 180)
-				// Loch rechts unten ausstanzen und befüllen
-			CON_DIN_MA_InletAction(PinAction, 240, 120)
-		#case(39)
-				// 3 Löcher mit 60°-"Abständen" ausstanzen (für 6'er Buchse)
-			#local Rotator=-60;
-			#while (Rotator<=60)
-				CON_DIN_MA_InletAction(PinAction, Rotator+120, Rotator)
-				#local Rotator=Rotator+60;
-			#end
-		#break;
-		//############################################
+      #case(61)
+            // Loch rechts unten ausstanzen und befüllen
+         CON_DIN_MA_InletAction(PinAction, 300,-120)
+      #case(58)
+            // Mittelloch ausstanzen (6'er Buchse)
+         CON_DIN_MA_InletAction(MidPinAct,  60, 180)
+            // Loch rechts unten ausstanzen und befüllen
+         CON_DIN_MA_InletAction(PinAction, 240, 120)
+      #case(39)
+            // 3 Löcher mit 60°-"Abständen" ausstanzen (für 6'er Buchse)
+         #local Rotator=-60;
+         #while (Rotator<=60)
+            CON_DIN_MA_InletAction(PinAction, Rotator+120, Rotator)
+            #local Rotator=Rotator+60;
+         #end
+      #break;
+      //############################################
 
-		#case(40)
-				// Loch links unten ausstanzen und befüllen
-			CON_DIN_MA_InletAction(PinAction, -18,-108)
-				// Links oben
-			CON_DIN_MA_InletAction(PinAction,  72, -36)
-				// Rechts oben
-			CON_DIN_MA_InletAction(PinAction, 108,  36)
-				// Loch rechts unten ausstanzen und befüllen
-			CON_DIN_MA_InletAction(PinAction, 198, 108)
-		#break;
-		//############################################
+      #case(40)
+            // Loch links unten ausstanzen und befüllen
+         CON_DIN_MA_InletAction(PinAction, -18,-108)
+            // Links oben
+         CON_DIN_MA_InletAction(PinAction,  72, -36)
+            // Rechts oben
+         CON_DIN_MA_InletAction(PinAction, 108,  36)
+            // Loch rechts unten ausstanzen und befüllen
+         CON_DIN_MA_InletAction(PinAction, 198, 108)
+      #break;
+      //############################################
 
-		#case(52)
-				// rekursives "Holen" der 3'er Basis
-			CON_DIN_MA_InletPinComposition(39, (PinAction!=1?PinAction:5), MidPinAct)
-				// Loch rechts unten ausstanzen und befüllen
-				//   diese Ausrichtung (nach Spec!!!) kann so nicht
-				//   sein (Überschneidungen), müsste eigentlich einer
-				//   62'er ohne Mittelpin entsprechen, bzw. der Anw.:
-				//     CON_DIN_MA_InletAction(PinAction, 240, 120)
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:6), 120, 120)
-				// Loch links unten ausstanzen und befüllen
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),   0,-120)
-		#break;
-		//############################################
+      #case(52)
+            // rekursives "Holen" der 3'er Basis
+         CON_DIN_MA_InletPinComposition(39, (PinAction!=1?PinAction:5), MidPinAct)
+            // Loch rechts unten ausstanzen und befüllen
+            //   diese Ausrichtung (nach Spec!!!) kann so nicht
+            //   sein (Überschneidungen), müsste eigentlich einer
+            //   62'er ohne Mittelpin entsprechen, bzw. der Anw.:
+            //     CON_DIN_MA_InletAction(PinAction, 240, 120)
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:6), 120, 120)
+            // Loch links unten ausstanzen und befüllen
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),   0,-120)
+      #break;
+      //############################################
 
-		#case(53)
-				// Mittelloch ausstanzen (5'er Kreuz-Buchse)
-			CON_DIN_MA_InletAction(MidPinAct,  0, 180)
-				// 2 Löcher oben mit 90°-"Abstand" ausstanzen
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45, -45)
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135,  45)
-				// 2 Löcher unten mit 90°-"Abstand" ausstanzen
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:4),-82.5,-135)
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-97.5, 135)
-		#break;
-		//############################################
+      #case(53)
+            // Mittelloch ausstanzen (5'er Kreuz-Buchse)
+         CON_DIN_MA_InletAction(MidPinAct,  0, 180)
+            // 2 Löcher oben mit 90°-"Abstand" ausstanzen
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45, -45)
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135,  45)
+            // 2 Löcher unten mit 90°-"Abstand" ausstanzen
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:4),-82.5,-135)
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-97.5, 135)
+      #break;
+      //############################################
 
-		#case(62)
-				// rekursives "Holen" der 5'er Basis
-			CON_DIN_MA_InletPinComposition(58, PinAction, MidPinAct)
-				// Loch links unten ausstanzen und befüllen
-			CON_DIN_MA_InletAction(PinAction, 0,-120)
-		#break;
-		//############################################
+      #case(62)
+            // rekursives "Holen" der 5'er Basis
+         CON_DIN_MA_InletPinComposition(58, PinAction, MidPinAct)
+            // Loch links unten ausstanzen und befüllen
+         CON_DIN_MA_InletAction(PinAction, 0,-120)
+      #break;
+      //############################################
 
-		#case(63)
-				// Mittelloch ausstanzen (6'er Buchse)
-			CON_DIN_MA_InletAction(MidPinAct,  90, 180)
+      #case(63)
+            // Mittelloch ausstanzen (6'er Buchse)
+         CON_DIN_MA_InletAction(MidPinAct,  90, 180)
 
 
-				// 5 Löcher mit 60°-"Abständen" ausstanzen (für 6'er Buchse)
-			CON_DIN_MA_InletAction(PinAction,   0, -120)
-			CON_DIN_MA_InletAction(PinAction, 120,   60)
-			CON_DIN_MA_InletAction(PinAction, 180,  120)
+            // 5 Löcher mit 60°-"Abständen" ausstanzen (für 6'er Buchse)
+         CON_DIN_MA_InletAction(PinAction,   0, -120)
+         CON_DIN_MA_InletAction(PinAction, 120,   60)
+         CON_DIN_MA_InletAction(PinAction, 180,  120)
 
-				// bei Abwinkelung zusätzlich Verdrehung
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),   0,    0)
-				// bei Abwinkelung zusätzlich inverse Verdrehung
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),  60,  -60)
-		#break;
-		//############################################
+            // bei Abwinkelung zusätzlich Verdrehung
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),   0,    0)
+            // bei Abwinkelung zusätzlich inverse Verdrehung
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),  60,  -60)
+      #break;
+      //############################################
 
-		#case(71)
-				// rekursives "Holen" der 5'er Basis
-			CON_DIN_MA_InletPinComposition(59, PinAction, MidPinAct)
-				// Ergänzen der beiden Pins 6 und 7
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:4),-90,-135)
-			CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-90, 135)
-		#break;
-		//############################################
-	#end
+      #case(71)
+            // rekursives "Holen" der 5'er Basis
+         CON_DIN_MA_InletPinComposition(59, PinAction, MidPinAct)
+            // Ergänzen der beiden Pins 6 und 7
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:4),-90,-135)
+         CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-90, 135)
+      #break;
+      //############################################
+   #end
 #end
 
-	// MA_Typ:    Selektion der Buchsenart, Anzahl der Pins,
-	//            Winkelstellung der Pins usw. über Typcodes.
-	//            Die Typcodes sind derzeit noch nicht mit dem
-	//            DIN-Standard abgestimmt
-	//
-	// MA_Subtyp: Selektion der weiteren Ausprägung, derzeit definiert:
-	//            0 - Buchse im Metallbecher mit Flansch
-	//                 (es fehlt noch der Masseanschluss)
-	//            1 - Buchse im Metallbecher ohne Flansch
-	//                (nicht fertiggestellt, Ösen statt Pins)
-	//            2 - Kupplung (nicht fertiggestellt, Metallabschirmung
-	//                [Becher] und Ummantelung fehlen noch komplett)
+   // MA_Typ:    Selektion der Buchsenart, Anzahl der Pins,
+   //            Winkelstellung der Pins usw. über Typcodes.
+   //            Die Typcodes sind derzeit noch nicht mit dem
+   //            DIN-Standard abgestimmt
+   //
+   // MA_Subtyp: Selektion der weiteren Ausprägung, derzeit definiert:
+   //            0 - Buchse im Metallbecher mit Flansch
+   //                 (es fehlt noch der Masseanschluss)
+   //            1 - Buchse im Metallbecher ohne Flansch
+   //                (nicht fertiggestellt, Ösen statt Pins)
+   //            2 - Kupplung (nicht fertiggestellt, Metallabschirmung
+   //                [Becher] und Ummantelung fehlen noch komplett)
 
 union{
-	#local AllParts=3;
-	#switch(MA_Subtyp)
-		#case(1)
-			#if(AllParts>=3)
-				CON_DIN_MA_Outlet_Becher(off)
-				#end
+   #local AllParts=3;
+   #switch(MA_Subtyp)
+      #case(1)
+         #if(AllParts>=3)
+            CON_DIN_MA_Outlet_Becher(off)
+            #end
 
-			#local Wulst=0;		// Metallbechermontage
+         #local Wulst=0;      // Metallbechermontage
 
-				// die folgenden Definitionen verlangen eigentlich
-				// einen Pin. Leider ist anhand der Specs nicht
-				// ersichtlich, wie die Verankerung im Gehäuse
-				// stattfindet, noch wie groß der Offset des
-				// Anschlusspins vom Mittelpunkt ist.
-				// Daher zunächst Verwendung langer Ösen mit
-				// Verriegelung durch Verdrehen.
-			#local PinEnde=2;		// Öse lang, verdreht
-			#local MLPEnde=2;		// Öse lang, verdreht
-		#break
-		#case(2)
-			// Makro für Kupplungs-/Steckergehäuse fehlt (noch)
-			#if(AllParts>=3)
-				#end
+            // die folgenden Definitionen verlangen eigentlich
+            // einen Pin. Leider ist anhand der Specs nicht
+            // ersichtlich, wie die Verankerung im Gehäuse
+            // stattfindet, noch wie groß der Offset des
+            // Anschlusspins vom Mittelpunkt ist.
+            // Daher zunächst Verwendung langer Ösen mit
+            // Verriegelung durch Verdrehen.
+         #local PinEnde=2;    // Öse lang, verdreht
+         #local MLPEnde=2;    // Öse lang, verdreht
+      #break
+      #case(2)
+         // Makro für Kupplungs-/Steckergehäuse fehlt (noch)
+         #if(AllParts>=3)
+            #end
 
-			#local Wulst=1;		// Halbschalenmontage
-			#local PinEnde=3;		// Öse kurz, verdreht
-			#local MLPEnde=2;		// Öse lang, verdreht
-		#break
-		#else	// selbe wie case(0)
-			#if(AllParts>=3)
-				CON_DIN_MA_Outlet_Becher(on)
-				#end
+         #local Wulst=1;      // Halbschalenmontage
+         #local PinEnde=3;    // Öse kurz, verdreht
+         #local MLPEnde=2;    // Öse lang, verdreht
+      #break
+      #else // selbe wie case(0)
+         #if(AllParts>=3)
+            CON_DIN_MA_Outlet_Becher(on)
+            #end
 
-			#local Wulst=0;		// Metallbechermontage
-			#local PinEnde=1;		// Öse lang, abgebogen
-			#local MLPEnde=2;		// Öse lang, verdreht
-		#end
+         #local Wulst=0;      // Metallbechermontage
+         #local PinEnde=1;    // Öse lang, abgebogen
+         #local MLPEnde=2;    // Öse lang, verdreht
+      #end
 
-		// noch eine extra union, damit nur ein Objekt
-		// "translationiert" (verschoben) werden braucht
-	union{
-		#if(AllParts>=2)
-			difference{
-				CON_DIN_MA_Inlet_Basebody(Wulst)
-					// Ausfräsungen für die Kontaktfedern: 0,0
-				CON_DIN_MA_InletPinComposition(MA_Typ, 0, 0)
-				}
-			#end
+      // noch eine extra union, damit nur ein Objekt
+      // "translationiert" (verschoben) werden braucht
+   union{
+      #if(AllParts>=2)
+         difference{
+            CON_DIN_MA_Inlet_Basebody(Wulst)
+               // Ausfräsungen für die Kontaktfedern: 0,0
+            CON_DIN_MA_InletPinComposition(MA_Typ, 0, 0)
+            }
+         #end
 
-		#if(AllParts>=1)
-				// Einbringen der Kontaktfedern
-			CON_DIN_MA_InletPinComposition(MA_Typ, PinEnde, MLPEnde)
-			#end
+      #if(AllParts>=1)
+            // Einbringen der Kontaktfedern
+         CON_DIN_MA_InletPinComposition(MA_Typ, PinEnde, MLPEnde)
+         #end
 
-			// Gesamtlänge über alles ohne Pins laut Hirschmann-Spec: 13.6
-			// Body ist aber nur 13.0, wobei jenes Inlet aber etwas im
-			// Gehäuse (Becher) versenkt ist. Daher Positionierung desselben
-		translate<0,0,0.6>
-		}
-	}
+         // Gesamtlänge über alles ohne Pins laut Hirschmann-Spec: 13.6
+         // Body ist aber nur 13.0, wobei jenes Inlet aber etwas im
+         // Gehäuse (Becher) versenkt ist. Daher Positionierung desselben
+      translate<0,0,0.6>
+      }
+   }
 #end
 #macro CON_DIN_MAB_3S()
 CON_DIN_MA_XX_GRND(30, 0)
@@ -3171,19 +3171,19 @@ CON_DIN_MA_XX_GRND(81, 0)
 CON_DIN_MA_XX_GRND(82, 0)
 #end
 // (noch) keine richtigen Pinanschlüsse
-#macro CON_DIN_MAB_5SV()	
+#macro CON_DIN_MAB_5SV()   
 CON_DIN_MA_XX_GRND(51, 1)
 #end
 // (noch) keine richtigen Pinanschlüsse
-#macro CON_DIN_MAB_6V()		
+#macro CON_DIN_MAB_6V()    
 CON_DIN_MA_XX_GRND(62, 1)
 #end
 // (noch) keine richtigen Pinanschlüsse
-#macro CON_DIN_MAB_7SV()	
+#macro CON_DIN_MAB_7SV()   
 CON_DIN_MA_XX_GRND(72, 1)
 #end
 // (noch) keine richtigen Pinanschlüsse
-#macro CON_DIN_MAB_8SV()	
+#macro CON_DIN_MAB_8SV()   
 CON_DIN_MA_XX_GRND(81, 1)
 #end
 // (noch) keine richtigen Pinanschlüsse
@@ -3202,15 +3202,15 @@ CON_DIN_MA_XX_GRND(82, 1)
 // J.Bartels@arcor.de, www.mec-krefeld.de
 #macro PIN41617 (DO,DU,R,HO,HU,L,col)
 union{
-	intersection{ 
-		torus{ R, DO/2 rotate<0,0,90> translate<0,HO-R,-R> }
-		box{ <DO/2,HO-R,DO/2><-DO/2,HO+DO/2,-R> }
-	}
-	cylinder{<0,-HU,0><0,HO-R-0.1,0> DU/2}
-	cone{ <0,HO-R-0.1,0> DU/2 <0,HO-R,0> DO/2 }
-	cylinder{<0,HO,-L+1><0,HO,-R> DO/2}
-	cone{ <0, HO,-L+1>,DO/2,<0,HO,-L>,DO/2-0.3}
-	texture{col}
+   intersection{ 
+      torus{ R, DO/2 rotate<0,0,90> translate<0,HO-R,-R> }
+      box{ <DO/2,HO-R,DO/2><-DO/2,HO+DO/2,-R> }
+   }
+   cylinder{<0,-HU,0><0,HO-R-0.1,0> DU/2}
+   cone{ <0,HO-R-0.1,0> DU/2 <0,HO-R,0> DO/2 }
+   cylinder{<0,HO,-L+1><0,HO,-R> DO/2}
+   cone{ <0, HO,-L+1>,DO/2,<0,HO,-L>,DO/2-0.3}
+   texture{col}
 } 
 #end
 
@@ -3218,17 +3218,17 @@ union{
 // J.Bartels@arcor.de, www.mec-krefeld.de
 #macro PIN41617_ROW (Pins)
 union{
-	#local i=0;
-	#while(i<Pins) 
-		object{PIN41617 (1,0.8,1.2,1.6,3.3,13.9,col_gold) translate<i*2.5,0,-1.25>} 
-		#local i=i+2; 
-	#end
-	#local i=1;
-	#while(i<Pins) 
-		object{PIN41617 (1,0.8,1.2,1.6+3.8,3.3,13.9+2.5,col_gold) translate<i*2.5,0,1.25>} 
-		#local i=i+2; 
-	#end
-	translate<-(Pins/2)*2.5+1.25,0,4.5/2+2.5>
+   #local i=0;
+   #while(i<Pins) 
+      object{PIN41617 (1,0.8,1.2,1.6,3.3,13.9,col_gold) translate<i*2.5,0,-1.25>} 
+      #local i=i+2; 
+   #end
+   #local i=1;
+   #while(i<Pins) 
+      object{PIN41617 (1,0.8,1.2,1.6+3.8,3.3,13.9+2.5,col_gold) translate<i*2.5,0,1.25>} 
+      #local i=i+2; 
+   #end
+   translate<-(Pins/2)*2.5+1.25,0,4.5/2+2.5>
 }
 #end
 
@@ -3300,15 +3300,15 @@ union{
     difference{
         merge{
             //body
-        	box{<-6.35*n/2-.5,-3.8,0><6.35*n/2+.5,3.8,14>}
+         box{<-6.35*n/2-.5,-3.8,0><6.35*n/2+.5,3.8,14>}
 
-        	
-        	//lateral grips
-        	box{<-6.35*n/2,-1.5,6><-6.35*n/2-2.5,1.5,13.99>}
-        	box{<6.35*n/2,-1.5,6><6.35*n/2+2.5,1.5,13.99>}
-        	
+         
+         //lateral grips
+         box{<-6.35*n/2,-1.5,6><-6.35*n/2-2.5,1.5,13.99>}
+         box{<6.35*n/2,-1.5,6><6.35*n/2+2.5,1.5,13.99>}
+         
 
-        	//little blocs	
+         //little blocs 
             #local i=0; #while (i<n+1) box{<-(6.35*n/2)+(i*6.35)-.5,-3.8,0><-(6.35*n/2)+(i*6.35)+.5,-4.6,2> } #local i=i+1; #end
          }
          
@@ -3322,12 +3322,12 @@ union{
             #local i=n-1;
             box{<-(6.35/2*(n-1))+(i*6.35)+3,0,1><-(6.35/2*(n-1))+(i*6.35)-3,-3,15> }
                         
-        	//lateral grips
-        	box{<-6.35*n/2-1.5,-1.6,5><-6.35*n/2-3.5,1.6,7.5> }
-        	box{<+6.35*n/2+1.5,-1.6,5><+6.35*n/2+3.5,1.6,7.5> }
-        	
-        	box{<-2.5,-1.6,5><+2.5,1.6,20>  rotate -25*y translate +(6.35*n/2+9.8)*x}
-        	box{<-2.5,-1.6,5><+2.5,1.6,20>  rotate +25*y translate -(6.35*n/2+9.8)*x}
+         //lateral grips
+         box{<-6.35*n/2-1.5,-1.6,5><-6.35*n/2-3.5,1.6,7.5> }
+         box{<+6.35*n/2+1.5,-1.6,5><+6.35*n/2+3.5,1.6,7.5> }
+         
+         box{<-2.5,-1.6,5><+2.5,1.6,20>  rotate -25*y translate +(6.35*n/2+9.8)*x}
+         box{<-2.5,-1.6,5><+2.5,1.6,20>  rotate +25*y translate -(6.35*n/2+9.8)*x}
          }
         #if(c=1)
              texture{
@@ -3655,18 +3655,18 @@ union
             cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l> pin_diao/2}
             cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l+1> pin_diai/2}
 
-			cylinder{<po-hs,vc+vs/2+pin_diao/2,pin_l-1.5><po+ps+hs,vc+vs/2+pin_diao/2,pin_l-1.5> pin_diao/2}
+         cylinder{<po-hs,vc+vs/2+pin_diao/2,pin_l-1.5><po+ps+hs,vc+vs/2+pin_diao/2,pin_l-1.5> pin_diao/2}
             box{<po-hs,vc+vs/2, pin_l><po+ps+hs,vc+vs/2+pin_diao,pin_l+3> translate<0,0,-1.5>}
             texture{pin_col}
             }
 
                   difference{
 
-				cylinder{<po+hs*(i+0.5),vc-vs/2,0.5><po+hs*(i+0.5),vc-vs/2,pin_l> pin_diao/2}
+            cylinder{<po+hs*(i+0.5),vc-vs/2,0.5><po+hs*(i+0.5),vc-vs/2,pin_l> pin_diao/2}
 
-				cylinder{<po+hs*(i+0.5),vc-vs/2,0.5><po+hs*(i+0.5),vc-vs/2,pin_l+1> pin_diai/2}
+            cylinder{<po+hs*(i+0.5),vc-vs/2,0.5><po+hs*(i+0.5),vc-vs/2,pin_l+1> pin_diai/2}
 
-				cylinder{<po-hs,vc-vs/2-pin_diao/2,pin_l-1.5><po+ps+hs,vc-vs/2-pin_diao/2,pin_l-1.5> pin_diao/2}
+            cylinder{<po-hs,vc-vs/2-pin_diao/2,pin_l-1.5><po+ps+hs,vc-vs/2-pin_diao/2,pin_l-1.5> pin_diao/2}
 
                         box{<po-hs,vc-vs/2,pin_l><po+ps+hs,vc-vs/2-pin_diao,pin_l+3> translate<0,0,-1.5>}
 
@@ -3679,13 +3679,13 @@ union
 
                                    difference{
 
-					cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l> pin_diao/2}
+               cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l> pin_diao/2}
 
-					cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l+1> pin_diai/2}
+               cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l+1> pin_diai/2}
 
-					cylinder{<po-hs,vc+vs/2+pin_diao/2,pin_l-1.5><po+ps+hs,vc+vs/2+pin_diao/2,pin_l-1.5> pin_diao/2}
-					            box{<po-hs,vc+vs/2, pin_l><po+ps+hs,vc+vs/2+pin_diao,pin_l+3>translate<0,0,-1.5>}
-					                        texture{pin_col}
+               cylinder{<po-hs,vc+vs/2+pin_diao/2,pin_l-1.5><po+ps+hs,vc+vs/2+pin_diao/2,pin_l-1.5> pin_diao/2}
+                           box{<po-hs,vc+vs/2, pin_l><po+ps+hs,vc+vs/2+pin_diao,pin_l+3>translate<0,0,-1.5>}
+                                       texture{pin_col}
                                    }
             }
   #end
@@ -4344,23 +4344,23 @@ CON_LMI_L115_GRND(20)
 ********************************************************************************************************************************************/
 #macro CON_LSP_GRND(s)
 union {
-	difference{
-		box { <-0.8,0,-0.2>,<0.8,5,0.2> texture{col_silver} translate<0,0,0>}
-		box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,-3> translate<1.1,0,0>}
-		box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,3> translate<-1.1,0,0>}
-		translate<0,-5.0,0>
-	}
-	difference{
-		box { <-1.5,0,-0.2>,<1.5,3,0.2> texture{col_silver} translate<0,0,0>}
-		box { <-0.5,1.5,-0.3>,<0.5,3.1,0.3> texture{col_silver} translate<0,0,0>}
-		cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,1.5,0>}
-	}
-	difference{
-		cylinder{<0,0,-0.2><0,0,0.2>1.5 texture{col_silver} translate<0,3,0>}
-		cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,3,0>}
-		box { <-1.5,0,-0.3>,<1.5,3,0.3> texture{col_silver} translate<0,0,0>}
-	}
-	scale (s/13)
+   difference{
+      box { <-0.8,0,-0.2>,<0.8,5,0.2> texture{col_silver} translate<0,0,0>}
+      box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,-3> translate<1.1,0,0>}
+      box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,3> translate<-1.1,0,0>}
+      translate<0,-5.0,0>
+   }
+   difference{
+      box { <-1.5,0,-0.2>,<1.5,3,0.2> texture{col_silver} translate<0,0,0>}
+      box { <-0.5,1.5,-0.3>,<0.5,3.1,0.3> texture{col_silver} translate<0,0,0>}
+      cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,1.5,0>}
+   }
+   difference{
+      cylinder{<0,0,-0.2><0,0,0.2>1.5 texture{col_silver} translate<0,3,0>}
+      cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,3,0>}
+      box { <-1.5,0,-0.3>,<1.5,3,0.3> texture{col_silver} translate<0,0,0>}
+   }
+   scale (s/13)
 }
 #end
 #macro CON_LSP_10()
@@ -4953,95 +4953,95 @@ union
            
            
            
-	// Plastik
-	difference
-	{         
-	        union
-	        {             
-		        box{<-bb/2 , 0, -5>< bb/2 , bh , -8+bt> texture{tex_rj45_pastic}}  // hinterer Teil matter
-		        box{<-bb/2 , 0, -8>< bb/2 , bh , -5   > texture{tex_rj45_pastic1}} // vordere 3mm glaenzen mehr         
-		}
-		stecker2                                                                   // Ausspartungen fuer Stecker
-		box{<-bb/2-1 , -2, -8+bt+5>< bb/2+1 , bh+2 , -8+bt+1> rotate<-20,0,0> texture{tex_rj45_pastic}}  //hintere Abschaegung  
-		// Kanaele fuer Anschlussdraehte an der Oberseite der Buchse
-	        pin_channel	
-	        object{pin_channel  translate<+1.27     , 0, 0>}
-	        #if (pins>2)
-	        object { pin_channel  translate<+1.27-2.54, 0, 0>}
-	        object { pin_channel  translate< 2.54     , 0, 0>}                                                             
-	        #end
-	        #if (pins>4)
-	        object { pin_channel  translate<+1.27+2.54,0,0>}
-	        object { pin_channel  translate<-2.54,0,0>}
-	        #end                                                                                                   
-	        #if (pins=8)
-	        object { pin_channel  translate<+5.08,0,0>}
-	        object { pin_channel  translate<+1.27-5.08,0,0>}
+   // Plastik
+   difference
+   {         
+           union
+           {             
+              box{<-bb/2 , 0, -5>< bb/2 , bh , -8+bt> texture{tex_rj45_pastic}}  // hinterer Teil matter
+              box{<-bb/2 , 0, -8>< bb/2 , bh , -5   > texture{tex_rj45_pastic1}} // vordere 3mm glaenzen mehr         
+      }
+      stecker2                                                                   // Ausspartungen fuer Stecker
+      box{<-bb/2-1 , -2, -8+bt+5>< bb/2+1 , bh+2 , -8+bt+1> rotate<-20,0,0> texture{tex_rj45_pastic}}  //hintere Abschaegung  
+      // Kanaele fuer Anschlussdraehte an der Oberseite der Buchse
+           pin_channel  
+           object{pin_channel  translate<+1.27     , 0, 0>}
+           #if (pins>2)
+           object { pin_channel  translate<+1.27-2.54, 0, 0>}
+           object { pin_channel  translate< 2.54     , 0, 0>}                                                             
+           #end
+           #if (pins>4)
+           object { pin_channel  translate<+1.27+2.54,0,0>}
+           object { pin_channel  translate<-2.54,0,0>}
+           #end                                                                                                   
+           #if (pins=8)
+           object { pin_channel  translate<+5.08,0,0>}
+           object { pin_channel  translate<+1.27-5.08,0,0>}
                 #end
-		//texture{tex_rj45_pastic}
-	}       
-	    
-	//Panel-stops 
-	#if (schirm>1)  
-	          #local stop=1;
+      //texture{tex_rj45_pastic}
+   }       
+       
+   //Panel-stops 
+   #if (schirm>1)  
+             #local stop=1;
         #end
 
-	#if (stop=1)   
-	//seitliche plastik-laschen 1.4mm dick
-	box{<-bb/2-1 , 3, -6.4>< -bb/2 , bh-3 , -5>  texture{tex_rj45_pastic}}
-	box{< bb/2+1 , 3, -6.4><  bb/2 , bh-3 , -5>  texture{tex_rj45_pastic}}   
-	#end
-	
-	
+   #if (stop=1)   
+   //seitliche plastik-laschen 1.4mm dick
+   box{<-bb/2-1 , 3, -6.4>< -bb/2 , bh-3 , -5>  texture{tex_rj45_pastic}}
+   box{< bb/2+1 , 3, -6.4><  bb/2 , bh-3 , -5>  texture{tex_rj45_pastic}}   
+   #end
+   
+   
  
-	// Plastikfuesse zur Befestigung
-	difference
-	{
-		cylinder{< a/2, -3.5, 0>< a/2, 1, 0> 1.4}
-		box{<a/2-0.3,-4,-5><a/2+0.3,-0.5,5>}
-		texture{tex_rj45_pastic}
-	}
-	difference
-	{
-		cylinder{<-a/2, -3.5, 0><-a/2, 1, 0> 1.4}
-		box{<-a/2-0.3,-4,-5><-a/2+0.3,-0.5,5>}
-		texture{tex_rj45_pastic}
-	}
+   // Plastikfuesse zur Befestigung
+   difference
+   {
+      cylinder{< a/2, -3.5, 0>< a/2, 1, 0> 1.4}
+      box{<a/2-0.3,-4,-5><a/2+0.3,-0.5,5>}
+      texture{tex_rj45_pastic}
+   }
+   difference
+   {
+      cylinder{<-a/2, -3.5, 0><-a/2, 1, 0> 1.4}
+      box{<-a/2-0.3,-4,-5><-a/2+0.3,-0.5,5>}
+      texture{tex_rj45_pastic}
+   }
      
-	// Pins auf der Platine   
-	// hintere Pinreihe liegt 8.89 mm hinter den Befestigungsstiften
-	cylinder{<-0.635     , 1, 8.89     ><-0.635     , -3.5, 8.89     > 0.25 texture{col_gold}}   
-	cylinder{<+0.635     , 1, 8.89-2.54><+0.635     , -3.5, 8.89-2.54> 0.25 texture{col_gold}}	
-	#if (pins>2)	
-	cylinder{<-0.635+2.54, 1, 8.89     ><-0.635+2.54, -3.5, 8.89     > 0.25 texture{col_gold}}
-	cylinder{<+0.635-2.54, 1, 8.89-2.54><+0.635-2.54, -3.5, 8.89-2.54> 0.25 texture{col_gold}}  
-	#end
-	#if (pins>4)
-	cylinder{<+0.635+2.54, 1, 8.89-2.54><+0.635+2.54, -3.5, 8.89-2.54> 0.25 texture{col_gold}}
-	cylinder{<-0.635-2.54, 1, 8.89     ><-0.635-2.54, -3.5, 8.89     > 0.25 texture{col_gold}}
-	#end
-	#if (pins=8)
-	cylinder{<-0.635+5.08, 1, 8.89     ><-0.635+5.08, -3.5, 8.89     > 0.25 texture{col_gold}}
-	cylinder{<+0.635-5.08, 1, 8.89-2.54><+0.635-5.08, -3.5, 8.89-2.54> 0.25 texture{col_gold}}
-	#end
+   // Pins auf der Platine   
+   // hintere Pinreihe liegt 8.89 mm hinter den Befestigungsstiften
+   cylinder{<-0.635     , 1, 8.89     ><-0.635     , -3.5, 8.89     > 0.25 texture{col_gold}}   
+   cylinder{<+0.635     , 1, 8.89-2.54><+0.635     , -3.5, 8.89-2.54> 0.25 texture{col_gold}}   
+   #if (pins>2)   
+   cylinder{<-0.635+2.54, 1, 8.89     ><-0.635+2.54, -3.5, 8.89     > 0.25 texture{col_gold}}
+   cylinder{<+0.635-2.54, 1, 8.89-2.54><+0.635-2.54, -3.5, 8.89-2.54> 0.25 texture{col_gold}}  
+   #end
+   #if (pins>4)
+   cylinder{<+0.635+2.54, 1, 8.89-2.54><+0.635+2.54, -3.5, 8.89-2.54> 0.25 texture{col_gold}}
+   cylinder{<-0.635-2.54, 1, 8.89     ><-0.635-2.54, -3.5, 8.89     > 0.25 texture{col_gold}}
+   #end
+   #if (pins=8)
+   cylinder{<-0.635+5.08, 1, 8.89     ><-0.635+5.08, -3.5, 8.89     > 0.25 texture{col_gold}}
+   cylinder{<+0.635-5.08, 1, 8.89-2.54><+0.635-5.08, -3.5, 8.89-2.54> 0.25 texture{col_gold}}
+   #end
         
         //Pins innerhalb der Buchse
-	object { pin_intern }	
-	object { pin_intern  translate<+1.27     , 0, 0>}
-	#if (pins>2)
-	object { pin_intern  translate<+1.27-2.54, 0, 0>}
-	object { pin_intern  translate< 2.54     , 0, 0>}                                                             
-	#end
-	#if (pins>4)
-	object { pin_intern  translate<+1.27+2.54,0,0>}
-	object { pin_intern  translate<-2.54,0,0>}
-	#end                                                                                                   
-	#if (pins=8)
-	object { pin_intern  translate<+5.08,0,0>}
-	object { pin_intern  translate<+1.27-5.08,0,0>}
-	#end      
-	
-	translate<0, 0, -o>
+   object { pin_intern }   
+   object { pin_intern  translate<+1.27     , 0, 0>}
+   #if (pins>2)
+   object { pin_intern  translate<+1.27-2.54, 0, 0>}
+   object { pin_intern  translate< 2.54     , 0, 0>}                                                             
+   #end
+   #if (pins>4)
+   object { pin_intern  translate<+1.27+2.54,0,0>}
+   object { pin_intern  translate<-2.54,0,0>}
+   #end                                                                                                   
+   #if (pins=8)
+   object { pin_intern  translate<+5.08,0,0>}
+   object { pin_intern  translate<+1.27-5.08,0,0>}
+   #end      
+   
+   translate<0, 0, -o>
 }
 #end
 
@@ -5136,7 +5136,7 @@ CON_MODULAR_GRND(4, 8*1.27, 0, 2, 1)
 /********************************************************************************************************************************************
 //Molex 53047 ( 1.25 pitch, vertical feeding, through holes )
 //antoine.drouin@free.fr
-//n		Number of Pins
+//n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_53047_GRND(n)
 union{
@@ -5221,7 +5221,7 @@ CON_MOLEX_53047_GRND(15)
 /********************************************************************************************************************************************
 // Molex 53048 ( 1.25 pitch, horizontal feeding, through holes )
 //antoine.drouin@free.fr
-//n		Number of Pins
+//n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_53048_GRND(n)
 union{
@@ -5240,7 +5240,7 @@ union{
     #local j = 0;
     #while(j<n)
         box {<-0.3, h-0.6, -1.1><0.3, h+0.1, -0.7>  translate< -(n-1)*1.25/2+j*1.25, 0, 0> }
-	cylinder {<0, -0.1, -1.3> <0, h+0.1, -1.3> 0.3  translate< -(n-1)*1.25/2+j*1.25, 0, 0> }
+   cylinder {<0, -0.1, -1.3> <0, h+0.1, -1.3> 0.3  translate< -(n-1)*1.25/2+j*1.25, 0, 0> }
     #local j = j + 1;
     #end
         box {<-L/2+1.6, 0, 2.7><-L/2+2.9, 0.9, 1.1>}
@@ -5442,15 +5442,15 @@ CON_PCPWR514M_GRND()
 #macro CON_PH2SMD_2MM_GRND(Pins)
 union
 {
-	object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,0,0> translate<0,0.25,-2.75>}
-	object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,180,0> translate<0,0.25,2.75>}
-	difference
-	{
-		box{<-Pins, 0.6, -2><Pins,2.6, 2> pigment{Gray30} translate<0,0,0>}
-		//box{<0,-1.27,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
-		box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<45,0,0> translate<0,1.5,1.5>}
-		box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<-45,0,0> translate<0,1.5,-1.5>}
-	}
+   object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,0,0> translate<0,0.25,-2.75>}
+   object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,180,0> translate<0,0.25,2.75>}
+   difference
+   {
+      box{<-Pins, 0.6, -2><Pins,2.6, 2> pigment{Gray30} translate<0,0,0>}
+      //box{<0,-1.27,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
+      box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<45,0,0> translate<0,1.5,1.5>}
+      box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<-45,0,0> translate<0,1.5,-1.5>}
+   }
 }
 #end
 
@@ -5510,16 +5510,16 @@ CON_PH2SMD_2MM_GRND(16)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHGGHWS_GRND(j)
 union{
-	#local i = 0;
-	#while(i<j)
-		object {CON_PHOENIX_381_PHPINW() translate<0,0,i*3.81>}
-		object {CON_PHOENIX_381_PHGH() translate<0,0,i*3.81>}
-		object {CON_PHOENIX_381_PHGSG() translate<8,-2.9,i*3.81>}
-		object {CON_PHOENIX_381_SCREWHEAD()rotate<0,i*75,0> translate<12,7.2,i*3.81> texture{col_silver}}
-		object {CON_PHOENIX_381_PHNR(i+1) rotate <78,0,0> translate <0,5.9,16.0> translate<-i*3.81,0,0> rotate<0,90,0> }
-	#local i=i+1;
-	#end
-	translate<0,0,-j*1.905+1.905> rotate<0,90,0>
+   #local i = 0;
+   #while(i<j)
+      object {CON_PHOENIX_381_PHPINW() translate<0,0,i*3.81>}
+      object {CON_PHOENIX_381_PHGH() translate<0,0,i*3.81>}
+      object {CON_PHOENIX_381_PHGSG() translate<8,-2.9,i*3.81>}
+      object {CON_PHOENIX_381_SCREWHEAD()rotate<0,i*75,0> translate<12,7.2,i*3.81> texture{col_silver}}
+      object {CON_PHOENIX_381_PHNR(i+1) rotate <78,0,0> translate <0,5.9,16.0> translate<-i*3.81,0,0> rotate<0,90,0> }
+   #local i=i+1;
+   #end
+   translate<0,0,-j*1.905+1.905> rotate<0,90,0>
 }
 #end
 #macro CON_PHOENIX_381_MC_2G()
@@ -5568,13 +5568,13 @@ CON_PHOENIX_381_PHGGHWS_GRND(13)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHGGHW_GRND(j)
 union{
-	#local i = 0;
-	#while(i<j)
-		object {CON_PHOENIX_381_PHPINW() translate<0,0,i*3.81>}
-		object {CON_PHOENIX_381_PHGH() translate<0,0,i*3.81>}
-		#local i=i+1;
-	#end
-	translate<0,0,-j*1.905+1.905> rotate<0,90,0>
+   #local i = 0;
+   #while(i<j)
+      object {CON_PHOENIX_381_PHPINW() translate<0,0,i*3.81>}
+      object {CON_PHOENIX_381_PHGH() translate<0,0,i*3.81>}
+      #local i=i+1;
+   #end
+   translate<0,0,-j*1.905+1.905> rotate<0,90,0>
 }
 #end
 #macro CON_PHOENIX_381_MC_2()
@@ -5623,14 +5623,14 @@ CON_PHOENIX_381_PHGGHW_GRND(13)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHGGH_GRND(j)
 union{
-	#local i = 0;
-	#while(i<j)
-		object {CON_PHOENIX_381_PHPIN() translate<0,0,i*3.81>}
-		object {CON_PHOENIX_381_PHGH()rotate<0,0,90> translate<3,0,i*3.81>}
-		#local i=i+1;
-	#end
-	translate<0,1,-j*1.905+1.905>
-	rotate<0,90,0>
+   #local i = 0;
+   #while(i<j)
+      object {CON_PHOENIX_381_PHPIN() translate<0,0,i*3.81>}
+      object {CON_PHOENIX_381_PHGH()rotate<0,0,90> translate<3,0,i*3.81>}
+      #local i=i+1;
+   #end
+   translate<0,1,-j*1.905+1.905>
+   rotate<0,90,0>
 }
 #end
 #macro CON_PHOENIX_381_MCV_2()
@@ -5680,19 +5680,19 @@ CON_PHOENIX_381_PHGGH_GRND(13)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHMCVRW_GRND(j,k)
 union{
-	#local i = 0;
-	#while(i<j)
-		object {CON_PHOENIX_381_PHGSRW(k) translate<-i*3.81,0,0>}
-		object {CON_PHOENIX_381_SCREWHEAD()rotate<0,i*75,0> translate<-i*3.81,11.7,0> texture{col_silver}}
-		object {CON_PHOENIX_381_PHNR(i+1) rotate <70,0,0> translate <0,9.5,3.0> translate<-i*3.81,0,0> }
-		#local i=i+1;
-	#end
+   #local i = 0;
+   #while(i<j)
+      object {CON_PHOENIX_381_PHGSRW(k) translate<-i*3.81,0,0>}
+      object {CON_PHOENIX_381_SCREWHEAD()rotate<0,i*75,0> translate<-i*3.81,11.7,0> texture{col_silver}}
+      object {CON_PHOENIX_381_PHNR(i+1) rotate <70,0,0> translate <0,9.5,3.0> translate<-i*3.81,0,0> }
+      #local i=i+1;
+   #end
 
-	#if (k = 1) //MVCR
-		translate<j*1.905-1.905,9.0,0> rotate<0,0,0>}
-	#else
-		translate<j*1.905-1.905,9.0,0> rotate<0,180,0>}
-	#end
+   #if (k = 1) //MVCR
+      translate<j*1.905-1.905,9.0,0> rotate<0,0,0>}
+   #else
+      translate<j*1.905-1.905,9.0,0> rotate<0,180,0>}
+   #end
 #end
 
 //Phoenix Mini-Combicon 3.81mm Gegenstecker MCVW 1,5/xx-ST-381
@@ -5779,14 +5779,14 @@ CON_PHOENIX_381_PHMCVRW_GRND(13,1)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHWS_GRND(j)
 union{
-	#local i = 0;
-	#while(i<j)
-		object {CON_PHOENIX_381_PHGSG() translate<8,-2.9,i*3.81>}
-		object {CON_PHOENIX_381_SCREWHEAD()rotate<0,i*75,0> translate<12,7.2,i*3.81> texture{col_silver}}
-		object {CON_PHOENIX_381_PHNR(i+1) rotate <78,0,0> translate <0,5.9,16.0> translate<-i*3.81,0,0> rotate<0,90,0> }
-		#local i=i+1;
-	#end
-	translate<0,0,-j*1.905+1.905> rotate<0,90,0>
+   #local i = 0;
+   #while(i<j)
+      object {CON_PHOENIX_381_PHGSG() translate<8,-2.9,i*3.81>}
+      object {CON_PHOENIX_381_SCREWHEAD()rotate<0,i*75,0> translate<12,7.2,i*3.81> texture{col_silver}}
+      object {CON_PHOENIX_381_PHNR(i+1) rotate <78,0,0> translate <0,5.9,16.0> translate<-i*3.81,0,0> rotate<0,90,0> }
+      #local i=i+1;
+   #end
+   translate<0,0,-j*1.905+1.905> rotate<0,90,0>
 }
 #end
 #macro CON_PHOENIX_381_MC_2ST()
@@ -5839,9 +5839,9 @@ union{
         union{
             #local PAS = 5.08;
             //body
-        	box{<-PAS*n/2-a,-4.15,0><+PAS*n/2+a,4.15,12> }
-        	//up additional thickness
-        	box{<-PAS*n/2-a,+4.15,9><+PAS*n/2+a,4.15+0.5,12> }
+         box{<-PAS*n/2-a,-4.15,0><+PAS*n/2+a,4.15,12> }
+         //up additional thickness
+         box{<-PAS*n/2-a,+4.15,9><+PAS*n/2+a,4.15+0.5,12> }
          }
          
          union{
@@ -5864,8 +5864,8 @@ union{
              box{<-PAS*n/2-0.01,0,2.5><+PAS*n/2+0.01,3.25,12.1> }
                                      
             //bisel   
-        	box{<-PAS*n/2-a-0.1,+4.15,9><+PAS*n/2+a+0.1,4.15+0.7,12> rotate 20*x translate 4*y}
-        	
+         box{<-PAS*n/2-a-0.1,+4.15,9><+PAS*n/2+a+0.1,4.15+0.7,12> rotate 20*x translate 4*y}
+         
          }
          pigment{ForestGreen}
     }
@@ -7548,54 +7548,54 @@ CON_SMA_JV_GRND()
 
 /********************************************************************************************************************************************
 //AMP 147323
-//n		Number of Pins
+//n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_SMD_AMP_147323_GRND(n)
 union{
 
-	#local pin =
-	union{
-		object{TOOLS_RECT_BOGEN(0.5,90,0.64,0.64,2.5,1.5) rotate<0,90,0> translate<0,0.32,0>}
-		object{TOOLS_RECT_BOGEN(0.5,90,0.64,0.64,10,1.5) rotate<0,90,0> rotate<180,0,0> translate<0,3.32,0>}
-	
-	}
+   #local pin =
+   union{
+      object{TOOLS_RECT_BOGEN(0.5,90,0.64,0.64,2.5,1.5) rotate<0,90,0> translate<0,0.32,0>}
+      object{TOOLS_RECT_BOGEN(0.5,90,0.64,0.64,10,1.5) rotate<0,90,0> rotate<180,0,0> translate<0,3.32,0>}
+   
+   }
 
-	//Pins
-	union{
-		#local i = 0;
-		#while(i<n)
-			object{pin translate<-(n-1)*2.54/2+i*2.54,0,0>}
-			#local i = i + 1;
-		#end
-		
-		box{<(n+3)*2.54/2-0.4,0,7.3><(n+3)*2.54/2-3.5,0.3,3.7>}
-		box{<-(n+3)*2.54/2+0.4,0,7.3><-(n+3)*2.54/2+3.5,0.3,3.7>}
-		
-		texture{col_silver}
-	}
+   //Pins
+   union{
+      #local i = 0;
+      #while(i<n)
+         object{pin translate<-(n-1)*2.54/2+i*2.54,0,0>}
+         #local i = i + 1;
+      #end
+      
+      box{<(n+3)*2.54/2-0.4,0,7.3><(n+3)*2.54/2-3.5,0.3,3.7>}
+      box{<-(n+3)*2.54/2+0.4,0,7.3><-(n+3)*2.54/2+3.5,0.3,3.7>}
+      
+      texture{col_silver}
+   }
 
-	//Plastikkoerper
-	union{
-		difference{
-			union{
-				object{Round_Box_Union(<(n+3)*2.54/2-0.8,0.2,0>,<-(n+3)*2.54/2+0.8,5.3,13.6>,0.1)}
-				object{Round_Box_Union(<-1.27*2-0.5,5,10.6>,<1.27*2+0.5,6.9,13.6>,0.1)}
-				
-			}
-			object{Round_Box_Union(<(n+3)*2.54/2-2.8,1.2,4.6>,<-(n+3)*2.54/2+2.8,4.3,13.7>,0.1)}
-			box{<-1.27,4.2,4.6><1.27,5.4,13.7>}
-			box{<-1.27*2,4.2,10.6><1.27*2,6.2,13.7>}
-			
+   //Plastikkoerper
+   union{
+      difference{
+         union{
+            object{Round_Box_Union(<(n+3)*2.54/2-0.8,0.2,0>,<-(n+3)*2.54/2+0.8,5.3,13.6>,0.1)}
+            object{Round_Box_Union(<-1.27*2-0.5,5,10.6>,<1.27*2+0.5,6.9,13.6>,0.1)}
+            
+         }
+         object{Round_Box_Union(<(n+3)*2.54/2-2.8,1.2,4.6>,<-(n+3)*2.54/2+2.8,4.3,13.7>,0.1)}
+         box{<-1.27,4.2,4.6><1.27,5.4,13.7>}
+         box{<-1.27*2,4.2,10.6><1.27*2,6.2,13.7>}
+         
 
-			#local i = 0;
-			#while(i<n+2)
-				box{<-0.3,0,-0.1> <0.3,5.4,0.6> translate<-(n+1)*2.54/2+i*2.54,0,0>}
-				#local i = i + 1;
-			#end
-		}
+         #local i = 0;
+         #while(i<n+2)
+            box{<-0.3,0,-0.1> <0.3,5.4,0.6> translate<-(n+1)*2.54/2+i*2.54,0,0>}
+            #local i = i + 1;
+         #end
+      }
 
-		texture{pigment{Gray30}}
-	}
+      texture{pigment{Gray30}}
+   }
 }
 #end
 
@@ -7630,51 +7630,51 @@ CON_SMD_AMP_147323_GRND(10)
 
 /********************************************************************************************************************************************
 //Molex 53261
-//n		Number of Pins
+//n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_SMD_MOLEX_53261_GRND(n)
 union{
 
-	#local pin =
-	union{
-		box{<-0.18,-0.35,0><0.18,0.35,3.6> translate<0,1.375,0>}
-		box{<-0.18,0.8,0><0.18,1.375,-0.3> }
-		box{<-0.18,0.0,-0.3><0.18,1.375,-1.0> }
-	}
+   #local pin =
+   union{
+      box{<-0.18,-0.35,0><0.18,0.35,3.6> translate<0,1.375,0>}
+      box{<-0.18,0.8,0><0.18,1.375,-0.3> }
+      box{<-0.18,0.0,-0.3><0.18,1.375,-1.0> }
+   }
 
-	//Pins
-	union{
-		#local i = 0;
-		#while(i<n)
-			object{pin translate<-(n-1)*1.25/2+i*1.25,0,0>}
-			#local i = i + 1;
-		#end
-		
-		object{ TOOLS_RECT_BOGEN(0.5,90,0.25,2.2,1.2,1) rotate<0,180,0> translate<-(4.25+(n-2)*1.25)/2-0.2,0.125,2.1>  }
-		object{ TOOLS_RECT_BOGEN(0.5,90,0.25,2.2,1.2,1) rotate<0,0,0> translate<(4.25+(n-2)*1.25)/2+0.2,0.125,2.1>  }
-		texture{col_silver}
-	}
+   //Pins
+   union{
+      #local i = 0;
+      #while(i<n)
+         object{pin translate<-(n-1)*1.25/2+i*1.25,0,0>}
+         #local i = i + 1;
+      #end
+      
+      object{ TOOLS_RECT_BOGEN(0.5,90,0.25,2.2,1.2,1) rotate<0,180,0> translate<-(4.25+(n-2)*1.25)/2-0.2,0.125,2.1>  }
+      object{ TOOLS_RECT_BOGEN(0.5,90,0.25,2.2,1.2,1) rotate<0,0,0> translate<(4.25+(n-2)*1.25)/2+0.2,0.125,2.1>  }
+      texture{col_silver}
+   }
 
-	//Plastikkoerper
-	union{
-		difference{
-			box{<-(4.25+(n-2)*1.25)/2,0,0.01><(4.25+(n-2)*1.25)/2,3.4,4.2>}
-			box{<-(3.05+(n-2)*1.25)/2,0.6,0.8><(3.05+(n-2)*1.25)/2,3.0,4.3>}
-			box{<-(4.3+(n-2)*1.25)/2,2.99,3.2><(4.3+(n-2)*1.25)/2,3.41,4.3>}
-			box{<-(2.5+(n-2)*1.25)/2,2.99,2.8><(2.5+(n-2)*1.25)/2,3.41,4.3>}
+   //Plastikkoerper
+   union{
+      difference{
+         box{<-(4.25+(n-2)*1.25)/2,0,0.01><(4.25+(n-2)*1.25)/2,3.4,4.2>}
+         box{<-(3.05+(n-2)*1.25)/2,0.6,0.8><(3.05+(n-2)*1.25)/2,3.0,4.3>}
+         box{<-(4.3+(n-2)*1.25)/2,2.99,3.2><(4.3+(n-2)*1.25)/2,3.41,4.3>}
+         box{<-(2.5+(n-2)*1.25)/2,2.99,2.8><(2.5+(n-2)*1.25)/2,3.41,4.3>}
 
-			#local i = 0;
-			#while(i<n+2)
-				box{<-0.3,2.8,0> <0.3,3.41,0.6> translate<-(n+1)*1.25/2+i*1.25,0,0>}
-				#local i = i + 1;
-			#end
-		}
-		
-		box{<-(4.25+(n-2)*1.25)/2,0.25,0.9><-(4.25+(n-2)*1.25)/2-1.5,2,3.8>}
-		box{<(4.25+(n-2)*1.25)/2,0.25,0.9><(4.25+(n-2)*1.25)/2+1.5,2,3.8>}
+         #local i = 0;
+         #while(i<n+2)
+            box{<-0.3,2.8,0> <0.3,3.41,0.6> translate<-(n+1)*1.25/2+i*1.25,0,0>}
+            #local i = i + 1;
+         #end
+      }
+      
+      box{<-(4.25+(n-2)*1.25)/2,0.25,0.9><-(4.25+(n-2)*1.25)/2-1.5,2,3.8>}
+      box{<(4.25+(n-2)*1.25)/2,0.25,0.9><(4.25+(n-2)*1.25)/2+1.5,2,3.8>}
 
-		texture{pigment{Gray30}}
-	}
+      texture{pigment{Gray30}}
+   }
 
 }
 #end
@@ -7950,10 +7950,10 @@ union{
                 texture{col_gold}
         }   
         union{
-		box { <-3.8, 2, 2>,<-3.2, 2.4, a-7.41>} // Kontakt 1
-		box { <-1.3, 2, 2>,<-0.7, 2.4, a-6.41>} // Kontakt 2
-		box { < 0.7, 2, 2>,< 1.3, 2.4, a-6.41>} // Kontakt 3
-		box { < 3.2, 2, 2>,< 3.8, 2.4, a-7.41>} // Kontakt 4
+      box { <-3.8, 2, 2>,<-3.2, 2.4, a-7.41>} // Kontakt 1
+      box { <-1.3, 2, 2>,<-0.7, 2.4, a-6.41>} // Kontakt 2
+      box { < 0.7, 2, 2>,< 1.3, 2.4, a-6.41>} // Kontakt 3
+      box { < 3.2, 2, 2>,< 3.8, 2.4, a-7.41>} // Kontakt 4
 
                 box { <-3.8, -4, 2.25>,<-3.2, 2.4, 1.75>} // Kontakt 1 hinten
                 box { <-1.3, -4, 2.25>,<-0.7, 2.4, 1.75>} // Kontakt 2 hinten
@@ -8311,9 +8311,9 @@ CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 
 // a = Anzahl der Reihen
 ********************************************************************************************************************************************/
 #macro CON_WAGO_233_GRND(a,typ)
-#local wagocolor1 = color red 0.6 green 0.6 blue 0.6;	        //farbton fuer Plastikkoerper 2.5 mm grau
-#local wagocolor2 = color red 1 green 0.45 blue 0;	        //farbton fuer Plastikkoerper 2.54 mm orange
-#local handcolor = color red 0.9 green 0.9 blue 0.9;         	//farbton weissen Plastikhebel
+#local wagocolor1 = color red 0.6 green 0.6 blue 0.6;         //farbton fuer Plastikkoerper 2.5 mm grau
+#local wagocolor2 = color red 1 green 0.45 blue 0;         //farbton fuer Plastikkoerper 2.54 mm orange
+#local handcolor = color red 0.9 green 0.9 blue 0.9;           //farbton weissen Plastikhebel
 
 
 //ein weisser Klemmhebel
@@ -8394,20 +8394,20 @@ CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 
 object{
         difference{
                 union{
-		        #local i=0;
-		        #while(i<a)
-			        object{CLAMP_WAGO_233_SLICE(typ, raster) translate< -i*raster, 0, 0>}
+              #local i=0;
+              #while(i<a)
+                 object{CLAMP_WAGO_233_SLICE(typ, raster) translate< -i*raster, 0, 0>}
                                 #local i=i+1;
-		        #end
-		        object{CLAMP_WAGO_233_END(typ) translate< -i*raster, 0, 0> translate< raster/2, 0, 0>}
+              #end
+              object{CLAMP_WAGO_233_END(typ) translate< -i*raster, 0, 0> translate< raster/2, 0, 0>}
 
-	        }
-	        cylinder{<-1.28,2,-2>   <1.28, 2  , -2 >0.5 pigment{wagocolor}}
-	        cylinder{<-1.28,2, 6.5> <1.28, 2  , 6.5>0.3 pigment{wagocolor}}
-	        cylinder{<-1.28,7.5,-2> <1.28, 7.5, -2 >0.4 pigment{wagocolor}}
-	        cylinder{<-1.28,7.5,6.5><1.28, 7.5, 6.5>0.5 pigment{wagocolor}}
-	        cylinder{<-1.28,11,0.2> <1.28, 11 , 0.2>0.3 pigment{wagocolor}}
-	} translate< a/2*raster, 0, -raster>
+           }
+           cylinder{<-1.28,2,-2>   <1.28, 2  , -2 >0.5 pigment{wagocolor}}
+           cylinder{<-1.28,2, 6.5> <1.28, 2  , 6.5>0.3 pigment{wagocolor}}
+           cylinder{<-1.28,7.5,-2> <1.28, 7.5, -2 >0.4 pigment{wagocolor}}
+           cylinder{<-1.28,7.5,6.5><1.28, 7.5, 6.5>0.5 pigment{wagocolor}}
+           cylinder{<-1.28,11,0.2> <1.28, 11 , 0.2>0.3 pigment{wagocolor}}
+   } translate< a/2*raster, 0, -raster>
 }
 #end
 
@@ -8673,9 +8673,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -8685,28 +8685,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}

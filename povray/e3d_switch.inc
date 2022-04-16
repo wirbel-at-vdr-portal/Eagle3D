@@ -42,44 +42,44 @@
 ********************************************************************************************************************************************/
 #macro SWITCH_ALPS_SKHH_V_GRND(dia, height, c)
 union{
-	box{<-3,0,-3><3,2.9,3> pigment{Black}}
-	box{<-3,2.9,-3><3,3,3> pigment{Gray50}}
-		
-	object{
-		Round_Cylinder_Union(<0,3,0>, <0,3+height,0>, dia/2, (dia/2)/10)
-		texture
-		{
-			pigment{c}
-			finish{phong 0.4 reflection{0.2}  ambient (0.1 * global_ambient_mul)}
-		}
-	}
-	
-	
-	cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate<-2.5,0,-2.5>}
-	cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate <-2.5,0,2.5>}
-	cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate <2.5,0,-2.5>}
-	cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate <2.5,0,2.5>}
-	union{
-		box{<-0.2,-1,-0.4> <0.2,1,0.4>}
-		cylinder { <-0,1,-0.4> <0,1,0.4> 0.2}
-		translate <3,0,2.2>
-	}
-	union{
-		box { <-0.2,-1,-0.4> <0.2,1,0.4>}
-		cylinder { <-0,1,-0.4>  <0,1,0.4> 0.2}
-		translate <3,0,-2.2>
-	}
-	union {
-		box { <-0.2,-1,-0.4> <0.2,1,0.4>}
-		cylinder { <-0,1,-0.4>  <0,1,0.4> 0.2}
-		translate <-3,0,2.2>
-	}
-	union {
-		box { <-0.2,-1,-0.4> <0.2,1,0.4>}
-		cylinder { <-0,1,-0.4>  <0,1,0.4> 0.2}
-		translate <-3,0,-2.2>
-	}
-	texture{pigment{Gray70} finish{F_MetalA ambient (0.1 * global_ambient_mul)}}
+   box{<-3,0,-3><3,2.9,3> pigment{Black}}
+   box{<-3,2.9,-3><3,3,3> pigment{Gray50}}
+      
+   object{
+      Round_Cylinder_Union(<0,3,0>, <0,3+height,0>, dia/2, (dia/2)/10)
+      texture
+      {
+         pigment{c}
+         finish{phong 0.4 reflection{0.2}  ambient (0.1 * global_ambient_mul)}
+      }
+   }
+   
+   
+   cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate<-2.5,0,-2.5>}
+   cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate <-2.5,0,2.5>}
+   cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate <2.5,0,-2.5>}
+   cylinder { <0,3,0> <0,3.2,0> 0.4 pigment {Black} translate <2.5,0,2.5>}
+   union{
+      box{<-0.2,-1,-0.4> <0.2,1,0.4>}
+      cylinder { <-0,1,-0.4> <0,1,0.4> 0.2}
+      translate <3,0,2.2>
+   }
+   union{
+      box { <-0.2,-1,-0.4> <0.2,1,0.4>}
+      cylinder { <-0,1,-0.4>  <0,1,0.4> 0.2}
+      translate <3,0,-2.2>
+   }
+   union {
+      box { <-0.2,-1,-0.4> <0.2,1,0.4>}
+      cylinder { <-0,1,-0.4>  <0,1,0.4> 0.2}
+      translate <-3,0,2.2>
+   }
+   union {
+      box { <-0.2,-1,-0.4> <0.2,1,0.4>}
+      cylinder { <-0,1,-0.4>  <0,1,0.4> 0.2}
+      translate <-3,0,-2.2>
+   }
+   texture{pigment{Gray70} finish{F_MetalA ambient (0.1 * global_ambient_mul)}}
 }
 #end
 
@@ -210,21 +210,21 @@ SWITCH_DIP_GRND(12)
 //T = Tiefe des Pins
 //S = Materialstärke des Pins
 union{
-	box{<0,H,T/2><B/4,H-S,-T/2>}
-	difference{
-		cylinder{<B/4,H-S,-T/2><B/4,H-S,T/2>S}
-		box{<-1,H-S,-T/2-0.01><B/2,H-S-3,T/2+0.01>}}
-	box{<B/4,H-S,-T/2><B/4+S,S,T/2>}
-	difference{
-		cylinder{<B/4+S,S,-T/2><B/4+S,S,T/2>S}
-		box{<0,S,-T/2-0.01><B,S+3,T/2+0.01>}}
-	box{<B/4+S,0,-T/2><B,S,T/2>}
-	difference{
-		box{<B/4+S,S,-T/2><B/4+S+S/2,1.5*S,T/2>}
-		cylinder{<B/4+S+S/2,S+S/2,T/2+0.01><B/4+S+S/2,S+S/2,-T/2-0.01>,S/2}}
-	//box{<0,0,-T/2><B,H,T/2> pigment{White filter 0.9}}
-	rotate<0,90,0>
-	texture{col_silver}
+   box{<0,H,T/2><B/4,H-S,-T/2>}
+   difference{
+      cylinder{<B/4,H-S,-T/2><B/4,H-S,T/2>S}
+      box{<-1,H-S,-T/2-0.01><B/2,H-S-3,T/2+0.01>}}
+   box{<B/4,H-S,-T/2><B/4+S,S,T/2>}
+   difference{
+      cylinder{<B/4+S,S,-T/2><B/4+S,S,T/2>S}
+      box{<0,S,-T/2-0.01><B,S+3,T/2+0.01>}}
+   box{<B/4+S,0,-T/2><B,S,T/2>}
+   difference{
+      box{<B/4+S,S,-T/2><B/4+S+S/2,1.5*S,T/2>}
+      cylinder{<B/4+S+S/2,S+S/2,T/2+0.01><B/4+S+S/2,S+S/2,-T/2-0.01>,S/2}}
+   //box{<0,0,-T/2><B,H,T/2> pigment{White filter 0.9}}
+   rotate<0,90,0>
+   texture{col_silver}
 }
 #end
 /********************************************************************************************************************************************
@@ -233,26 +233,26 @@ union{
 #macro SWITCH_DIP_SM_PIN1()
 
 union{
-	intersection{
-		difference{
-			box{<0,0,0><1.8,0.9,0.45>}
-			cylinder{<0.9,0.9,-0.1><0.9,0.9,0.5>0.7}}
-		cylinder{<0.9,0.9,-0.1><0.9,0.9,0.5>0.9}}
-	box{<1.6,0.8,0><1.8,1.2,0.45>}
-	difference{
-		box{<1.6,1.2,-0.125><1.8,2.5,0.45+0.125>}
-		box{<-0.1,0,0><0.3,0.5,-0.5> rotate<-20,0,0> translate<1.55,1.2,0>}
-		box{<-0.1,0,0><0.3,0.5,0.5> rotate<20,0,0> translate<1.55,1.2,0.45>}}
-	difference{
-		cylinder{<1.5,2.5,-0.125><1.5,2.5,0.45+0.125>0.3}
-		box{<1.6,2.9,-1><1,2,1>}}
-	difference{
-		box{<1.6,2.5,-0.125><1.4,2.8,0.45+0.125>}
-		cylinder{<1.45,2.45,-1><1.45,2.45,1>0.15}}
-	texture{col_silver}
-	translate<-1.4,0,0>
-	rotate<0,90,0>
-	translate<-0.225,0,0>
+   intersection{
+      difference{
+         box{<0,0,0><1.8,0.9,0.45>}
+         cylinder{<0.9,0.9,-0.1><0.9,0.9,0.5>0.7}}
+      cylinder{<0.9,0.9,-0.1><0.9,0.9,0.5>0.9}}
+   box{<1.6,0.8,0><1.8,1.2,0.45>}
+   difference{
+      box{<1.6,1.2,-0.125><1.8,2.5,0.45+0.125>}
+      box{<-0.1,0,0><0.3,0.5,-0.5> rotate<-20,0,0> translate<1.55,1.2,0>}
+      box{<-0.1,0,0><0.3,0.5,0.5> rotate<20,0,0> translate<1.55,1.2,0.45>}}
+   difference{
+      cylinder{<1.5,2.5,-0.125><1.5,2.5,0.45+0.125>0.3}
+      box{<1.6,2.9,-1><1,2,1>}}
+   difference{
+      box{<1.6,2.5,-0.125><1.4,2.8,0.45+0.125>}
+      cylinder{<1.45,2.45,-1><1.45,2.45,1>0.15}}
+   texture{col_silver}
+   translate<-1.4,0,0>
+   rotate<0,90,0>
+   translate<-0.225,0,0>
 }
 #end
 /********************************************************************************************************************************************
@@ -260,31 +260,31 @@ union{
 ********************************************************************************************************************************************/
 #macro SWITCH_DIP_SM_PIN2()
 union{
-	//unterstes Ende durch das Loch der Platine
-	difference{
-		box{<0,0,0><0.455,3.4,0.3>}
-		box{<0,0,0><0.5,0.5,0.5> rotate<0,0,-20> translate<0.305,0,-0.1>}
-		box{<0,0,0><-0.5,0.5,0.5> rotate<0,0,20> translate<0.15,0,-0.1>}
-	}
-	box{<0,0,0><1.43,0.3,0.33> translate<-0.4875,5.3,0.5>}
-	difference{
-		box{<0,0,0><1.43,0.25,0.25> translate<-0.4875,5.05,0.3>}
-		cylinder{<0,0,0><2,0,0>0.25 translate<-0.6,5.05,0.55>}
-	}
-	// breiter senkrechter Streifen mit Verjuengung
-	difference{
-		box{<0,0,0><1.43,1.7,0.3> translate<-0.4875,3.4,0>}
-		box{<0,0,0><1,2.2,0.5> rotate<0,0,-20> translate<0.55,3.4,-0.1>}
-		box{<0,0,0><-1,2.2,0.5> rotate<0,0,20> translate<-0.095,3.40,-0.1>}
-	}
-	// obere Biegung des breiten Streifens
-	difference{
-		cylinder{<0,0,0><1.43,0,0>0.5 translate<-0.4875,5.1,0.5> }
-		box{<0,0,0><2,2.2,2> translate<-0.8,3.1,0.3>}
-		box{<0,0,0><2,2.2,2> translate<-0.7,4,0.5>}
-	}
-	texture{col_silver}
-	translate<-0.455/2,-3,-0.15>
+   //unterstes Ende durch das Loch der Platine
+   difference{
+      box{<0,0,0><0.455,3.4,0.3>}
+      box{<0,0,0><0.5,0.5,0.5> rotate<0,0,-20> translate<0.305,0,-0.1>}
+      box{<0,0,0><-0.5,0.5,0.5> rotate<0,0,20> translate<0.15,0,-0.1>}
+   }
+   box{<0,0,0><1.43,0.3,0.33> translate<-0.4875,5.3,0.5>}
+   difference{
+      box{<0,0,0><1.43,0.25,0.25> translate<-0.4875,5.05,0.3>}
+      cylinder{<0,0,0><2,0,0>0.25 translate<-0.6,5.05,0.55>}
+   }
+   // breiter senkrechter Streifen mit Verjuengung
+   difference{
+      box{<0,0,0><1.43,1.7,0.3> translate<-0.4875,3.4,0>}
+      box{<0,0,0><1,2.2,0.5> rotate<0,0,-20> translate<0.55,3.4,-0.1>}
+      box{<0,0,0><-1,2.2,0.5> rotate<0,0,20> translate<-0.095,3.40,-0.1>}
+   }
+   // obere Biegung des breiten Streifens
+   difference{
+      cylinder{<0,0,0><1.43,0,0>0.5 translate<-0.4875,5.1,0.5> }
+      box{<0,0,0><2,2.2,2> translate<-0.8,3.1,0.3>}
+      box{<0,0,0><2,2.2,2> translate<-0.7,4,0.5>}
+   }
+   texture{col_silver}
+   translate<-0.455/2,-3,-0.15>
 }
 #end
 /********************************************************************************************************************************************
@@ -292,15 +292,15 @@ union{
 ********************************************************************************************************************************************/
 #macro SWITCH_DIP_SM_PIN(pintyp)
 #if (pintyp=0)
-	SWITCH_DIP_SM_PIN0(2.5, 1.5, 0.75, 0.3)
+   SWITCH_DIP_SM_PIN0(2.5, 1.5, 0.75, 0.3)
 #end
 
 #if (pintyp=1)
-	SWITCH_DIP_SM_PIN1()
+   SWITCH_DIP_SM_PIN1()
 #end
 
 #if (pintyp=2)
-	SWITCH_DIP_SM_PIN2()
+   SWITCH_DIP_SM_PIN2()
 #end
 
 #end
@@ -310,87 +310,87 @@ union{
 ********************************************************************************************************************************************/
 #macro SWITCH_DIP_SM_HOUSING(seitenrand, tiefe)
 difference { 
-	box { <0,1,-tiefe> <2.54*(nrSwitches-1)+2*seitenrand, 4, tiefe> }
-	box { <0,3.7,-2> <.2,4.2,2> }
-	translate <-seitenrand,0,0> 
+   box { <0,1,-tiefe> <2.54*(nrSwitches-1)+2*seitenrand, 4, tiefe> }
+   box { <0,3.7,-2> <.2,4.2,2> }
+   translate <-seitenrand,0,0> 
 } 
 #end
 
 
 #local well  = union{
-	box { <-0.5, 3.9, -2>  <0.5, 4.1, 2>  }
-	box { <-0.5, 2,   -1> <0.5,  4.1, 1>  }
-	}
+   box { <-0.5, 3.9, -2>  <0.5, 4.1, 2>  }
+   box { <-0.5, 2,   -1> <0.5,  4.1, 1>  }
+   }
 
 
 
-	//Grundkoerper
-	#local seitenrand = 2.2;	//CTS
-	#local tiefe = 3.5;
-	#if (abmasse=1)
-		#local seitenrand = 1.5;
-		#local tiefe = 3.5;
-	#end
-	#if (abmasse=2)			// DIPxxYL
-		#local seitenrand = 2.5;
-//		#local tiefe = 4.4;
-	#end
-	#if (abmasse=3)			// DIPxxS
-		#local seitenrand = 1.5;
-		#local tiefe = 3.5;
-	#end
-	#if (abmasse=4)			// SD-xx	
-		#local seitenrand = 2.1;
-		#local tiefe = 3.5;
-	#end
-	union {
-	difference {
-		object { SWITCH_DIP_SM_HOUSING(seitenrand, tiefe) }
-		#local wellNr = 0;
-		#while (wellNr < nrSwitches)
-			object { well translate<wellNr*2.54,0,0> }
-			#local wellNr = wellNr + 1;
-		#end
-	pigment { color red 0.15 green 0.1 blue 0.1 } 
-	}
+   //Grundkoerper
+   #local seitenrand = 2.2;   //CTS
+   #local tiefe = 3.5;
+   #if (abmasse=1)
+      #local seitenrand = 1.5;
+      #local tiefe = 3.5;
+   #end
+   #if (abmasse=2)         // DIPxxYL
+      #local seitenrand = 2.5;
+//    #local tiefe = 4.4;
+   #end
+   #if (abmasse=3)         // DIPxxS
+      #local seitenrand = 1.5;
+      #local tiefe = 3.5;
+   #end
+   #if (abmasse=4)         // SD-xx 
+      #local seitenrand = 2.1;
+      #local tiefe = 3.5;
+   #end
+   union {
+   difference {
+      object { SWITCH_DIP_SM_HOUSING(seitenrand, tiefe) }
+      #local wellNr = 0;
+      #while (wellNr < nrSwitches)
+         object { well translate<wellNr*2.54,0,0> }
+         #local wellNr = wellNr + 1;
+      #end
+   pigment { color red 0.15 green 0.1 blue 0.1 } 
+   }
 
 
-	text {
-		ttf besch_font "ON" .01, 0
-		pigment { NewTan }
-		rotate<90,0,0>
-		translate<-0.5, 4.01, 2.5>}
+   text {
+      ttf besch_font "ON" .01, 0
+      pigment { NewTan }
+      rotate<90,0,0>
+      translate<-0.5, 4.01, 2.5>}
 
 
-	#local switchNr = 0;
-	#while (switchNr < nrSwitches)
-		#local xShift = switchNr*2.54;
-		//pins
-		object { SWITCH_DIP_SM_PIN(pintyp) rotate <0,180,0>  translate<xShift, 0, 3.81> }
-		object { SWITCH_DIP_SM_PIN(pintyp)                   translate<xShift, 0, -3.81> }
-		// schalter
-		box { <-0.6, 2, -2>  <0.6, 3, 2> texture {T_Gold_5E} translate<xShift,0,0>}
-		#local onOff = SRand(1);
-		#if (onOff < 0)
-			box { <-0.5, 3,-1> <0.5, 4.1, 0> pigment {Red} translate<xShift,0,0>}
-		#else
-			box { <-0.5, 3, 1> <0.5, 4.1, 0> pigment {Red} translate<xShift,0,0>}
-		#end
-		//beschriftung
-		text {
-			ttf besch_font str(switchNr+1,2,0) .01, 0
-			pigment { NewTan }
-			rotate<90,0,0>
-			translate<xShift-1, 4.01,-3>
-			#if (switchNr>8)
-				translate<0.5, 0, 0>
-			#end
-		}
-		#if (switchNr < (nrSwitches-1))
-			cylinder{<0,4,0><0,4.01,0> 0.25 translate<xShift+1.27, 0, -0.5> pigment { NewTan }}
-		#end
-		#local switchNr = switchNr + 1;
-	#end
+   #local switchNr = 0;
+   #while (switchNr < nrSwitches)
+      #local xShift = switchNr*2.54;
+      //pins
+      object { SWITCH_DIP_SM_PIN(pintyp) rotate <0,180,0>  translate<xShift, 0, 3.81> }
+      object { SWITCH_DIP_SM_PIN(pintyp)                   translate<xShift, 0, -3.81> }
+      // schalter
+      box { <-0.6, 2, -2>  <0.6, 3, 2> texture {T_Gold_5E} translate<xShift,0,0>}
+      #local onOff = SRand(1);
+      #if (onOff < 0)
+         box { <-0.5, 3,-1> <0.5, 4.1, 0> pigment {Red} translate<xShift,0,0>}
+      #else
+         box { <-0.5, 3, 1> <0.5, 4.1, 0> pigment {Red} translate<xShift,0,0>}
+      #end
+      //beschriftung
+      text {
+         ttf besch_font str(switchNr+1,2,0) .01, 0
+         pigment { NewTan }
+         rotate<90,0,0>
+         translate<xShift-1, 4.01,-3>
+         #if (switchNr>8)
+            translate<0.5, 0, 0>
+         #end
+      }
+      #if (switchNr < (nrSwitches-1))
+         cylinder{<0,4,0><0,4.01,0> 0.25 translate<xShift+1.27, 0, -0.5> pigment { NewTan }}
+      #end
+      #local switchNr = switchNr + 1;
+   #end
 
     translate<(-nrSwitches+1)*2.54/2,0,0>
 }
@@ -1451,32 +1451,32 @@ SWITCH_PUSH_BUTTON_6X6_GRND(White)
 #macro SWITCH_PUSH_BUTTON_LSH_BOX(size_x,size_z,height,r)
 union
 {
-	cylinder {<0,0,0><0,height,0> 0.2 translate<size_x/2-r,0,size_z/2-r>}
-	cylinder {<0,0,0><0,height,0> 0.2 translate<size_x/2-r,0,-(size_z/2-r)>}
-	cylinder {<0,0,0><0,height,0> 0.2 translate<-(size_x/2-r),0,size_z/2-r>}
-	cylinder {<0,0,0><0,height,0> 0.2 translate<-(size_x/2-r),0,-(size_z/2-r)>}
-	box {<-size_x/2,0,-size_z/2+r><size_x/2,height,size_z/2-r>}
-	box {<-size_x/2+r,0,-size_z/2><size_z/2-r,height,size_z/2>}
+   cylinder {<0,0,0><0,height,0> 0.2 translate<size_x/2-r,0,size_z/2-r>}
+   cylinder {<0,0,0><0,height,0> 0.2 translate<size_x/2-r,0,-(size_z/2-r)>}
+   cylinder {<0,0,0><0,height,0> 0.2 translate<-(size_x/2-r),0,size_z/2-r>}
+   cylinder {<0,0,0><0,height,0> 0.2 translate<-(size_x/2-r),0,-(size_z/2-r)>}
+   box {<-size_x/2,0,-size_z/2+r><size_x/2,height,size_z/2-r>}
+   box {<-size_x/2+r,0,-size_z/2><size_z/2-r,height,size_z/2>}
 }
 #end
 
 union
 {
-	object {SWITCH_PUSH_BUTTON_LSH_BOX(6,6,3,0.2)}
-	object {SWITCH_PUSH_BUTTON_LSH_BOX(6,6,0.6,0.2) translate<0,3,0> texture{col_silver}}
-	cylinder {<0,0,0><0,0.2,0>0.3 translate<-2,3.6,-2>}
-	cylinder {<0,0,0><0,0.2,0>0.3 translate<-2,3.6,2>}
-	cylinder {<0,0,0><0,0.2,0>0.3 translate<2,3.6,-2>}
-	cylinder {<0,0,0><0,0.2,0>0.3 translate<2,3.6,2>}
+   object {SWITCH_PUSH_BUTTON_LSH_BOX(6,6,3,0.2)}
+   object {SWITCH_PUSH_BUTTON_LSH_BOX(6,6,0.6,0.2) translate<0,3,0> texture{col_silver}}
+   cylinder {<0,0,0><0,0.2,0>0.3 translate<-2,3.6,-2>}
+   cylinder {<0,0,0><0,0.2,0>0.3 translate<-2,3.6,2>}
+   cylinder {<0,0,0><0,0.2,0>0.3 translate<2,3.6,-2>}
+   cylinder {<0,0,0><0,0.2,0>0.3 translate<2,3.6,2>}
 
-	cone {<0,3.6,0> 1.7 <0,height-0.2,0> dia_top/2 }
-	torus {dia_top/2-0.2, 0.2 translate<0,height-0.2,0>}
-	cylinder {<0, height-0.2,0><0, height,0>,dia_top/2-0.2}
-	object {IC_SMD_PIN(1.5,2.0,0.7,0.3) translate<3,0,2.25>}
-	object {IC_SMD_PIN(1.5,2.0,0.7,0.3) translate<3,0,-2.25>}
-	object {IC_SMD_PIN(1.5,2.0,0.7,0.3) rotate<0,180,0> translate<-3,0,-2.25>}
-	object {IC_SMD_PIN(1.5,2.0,0.7,0.3) rotate<0,180,0> translate<-3,0,2.25>}
-	pigment{Gray30}
+   cone {<0,3.6,0> 1.7 <0,height-0.2,0> dia_top/2 }
+   torus {dia_top/2-0.2, 0.2 translate<0,height-0.2,0>}
+   cylinder {<0, height-0.2,0><0, height,0>,dia_top/2-0.2}
+   object {IC_SMD_PIN(1.5,2.0,0.7,0.3) translate<3,0,2.25>}
+   object {IC_SMD_PIN(1.5,2.0,0.7,0.3) translate<3,0,-2.25>}
+   object {IC_SMD_PIN(1.5,2.0,0.7,0.3) rotate<0,180,0> translate<-3,0,-2.25>}
+   object {IC_SMD_PIN(1.5,2.0,0.7,0.3) rotate<0,180,0> translate<-3,0,2.25>}
+   pigment{Gray30}
 }
 #end
 
@@ -1517,48 +1517,48 @@ SWITCH_PUSH_BUTTON_LSH_GRND(12.5, 3.0)
                          box { <-.35,3.76,-.35> <.35,4,.35> rotate<0,45,0> translate<0,0,.75> }
                          pigment { MediumWood } }
   #local housing = difference { box { <-3.9,0,-3.9> <3.9,3.9,3.9> }
-				#if (V=0)
+            #if (V=0)
                                 box { <-3.91,-.01,3.65> <-3.65,3.91,3.91> }
-				#else
+            #else
                                 box { < 3.91,-.01,3.65> < 3.65,3.91,3.91> }
-				#end
+            #end
                                 pigment { SteelBlue } }
   #local notch = cylinder { <0,0,0> <0,3.91,0> .2 pigment { NewTan } }
 
 
 
 union {
-	difference {
-		object { housing }
-		object { dial }
-	}
-	difference {
-		object { dial }
-		object { arrow }
-	}
-	#if (V=0)
-		object { notch translate<-3.4,0,3.4> }
-	#else
-		object { notch translate< 3.4,0,3.4> }
-	#end
+   difference {
+      object { housing }
+      object { dial }
+   }
+   difference {
+      object { dial }
+      object { arrow }
+   }
+   #if (V=0)
+      object { notch translate<-3.4,0,3.4> }
+   #else
+      object { notch translate< 3.4,0,3.4> }
+   #end
 
-	// pins
-	#if (V=0)		
-		#local pinNr = 0;
-		#while (pinNr < 3)
-			object { pin translate<-3,0,(pinNr-1)*2>}
-			#if (pinNr != 1)
-				object { pin translate<3,0,(pinNr-1)*2>}
-			#end
-			#local pinNr = pinNr + 1;
-		#end
-	#else
-		object { pin translate<-3,0,3>}
-		object { pin translate<-1,0,3>}
-		object { pin translate< 1,0,3>}
-		object { pin translate< 3,0,3>}
-		object { pin translate<-1,0,-3>}
-	#end
+   // pins
+   #if (V=0)      
+      #local pinNr = 0;
+      #while (pinNr < 3)
+         object { pin translate<-3,0,(pinNr-1)*2>}
+         #if (pinNr != 1)
+            object { pin translate<3,0,(pinNr-1)*2>}
+         #end
+         #local pinNr = pinNr + 1;
+      #end
+   #else
+      object { pin translate<-3,0,3>}
+      object { pin translate<-1,0,3>}
+      object { pin translate< 1,0,3>}
+      object { pin translate< 3,0,3>}
+      object { pin translate<-1,0,-3>}
+   #end
 
 
     #local chars = "0123456789ABCDEF";
@@ -1601,101 +1601,101 @@ SWITCH_ROTARYDIP_GRND(16, 1)
 ********************************************************************************************************************************************/
 #macro SWITCH_ROTENC_PANASONIC_EVQVX_GRND(height)
 union{
-	//Anschlusspins
-	union{                                      
-		box{<-0.4,-3.5,-0.15><0.4,0,0.15>}
-		box{<-0.4,-3.5,-0.15><0.4,0,0.15> translate<-2.5,0,0>}
-		box{<-0.4,-3.5,-0.15><0.4,0,0.15> translate< 2.5,0,0>}
-		
-		box{<-0.6,0,-0.15><0.6,height-5,0.15>}
-		box{<-0.6,0,-0.15><0.6,height-5,0.15> translate<-2.5,0,0>}
-		box{<-0.6,0,-0.15><0.6,height-5,0.15> translate< 2.5,0,0>}
-		
-		box{<-0.7,height-4,-0.15><0.7,height-5,0.15>}
-		box{<-0.7,height-4,-0.15><0.7,height-5,0.15> translate<-2.5,0,0>}
-		box{<-0.7,height-4,-0.15><0.7,height-5,0.15> translate< 2.5,0,0>}
-		
-		//Vorderseite		
-		difference{
-			box{<-0.15,-3.5,-1.0><0.15,height-1,1.0> translate<-10/2,0,2>}
-			box{<-0.16,height-5,0.7><0.16,height,1.1> translate<-10/2,0,2>}
-		}
-		
-		difference{
-			box{<-0.15,-3.5,-1.0><0.15,height-1,1.0> translate< 10/2,0,2>}
-			box{<-0.16,height-5,0.7><0.16,height,1.1> translate< 10/2,0,2>}
-		}
-		
-		difference{
-			union{
-				box{<-3,0,2.5><3,height+2,2.8>}
-				difference{
-					cylinder{<0,height-2,2.5><0,height-2,2.8>10.0/2}
-					box{<-9.5,height+2,2.4><9.5,-5,2.9>}	
-				}
-			}
-			
-			box{<-2,0,2.4><0,6,2.9> translate<-2.3,-1,0> rotate<0,0,10>}
-			box{<0,0,2.4><2,6,2.9> translate<2.3,-1,0> rotate<0,0,-10>}
-			cylinder{<0,height,2.4><0,height,2.9>1.5}
-		}
-		
-		box{<-5.15,height-4,2.5><5.15,height-2,2.8>}
-				
-		box{<-2,height-1,2.5><-5.15,height+1,2.8>}
-		box{<2,height-1,2.5><5.15,height+1,2.8>}
-		
-		//Seitenteile
-		box{<-0.15,height-1,-1.0><0.15,height+1,0.1> translate< 10/2,0,2>}
-		box{<-0.15,height-1,-1.0><0.15,height+1,0.1> translate<-10/2,0,2>}
-		
-		box{<-0.15,height,-1.0><0.15,height+1,0.7> translate< 10/2,0,2>}
-		box{<-0.15,height,-1.0><0.15,height+1,0.7> translate<-10/2,0,2>}
-		
-		
-		box{<-0.15,2,2.0><0.15,4,6> translate< 10/2,0,0> }
-		box{<-0.15,2,2.0><0.15,4,6> translate<-10/2,0,0>}
-				
-		box{<-0.15,0,4.0><0.15,2,6> translate< 10/2,0,0>}
-		box{<-0.15,0,4.0><0.15,2,6> translate<-10/2,0,0>}
-		
-		box{<-0.15,height-2,1><0.15,height-4,-0.5> translate< 10/2,0,0> }
-		box{<-0.15,height-2,1><0.15,height-4,-0.5> translate<-10/2,0,0> }
-		                                                              								
-		//Rueckseite
-		box{<-5.15,height-2,-0.2><5.15,height-4,-0.5>}		
-		
-		difference{
-			union{
-				box{<-3,0,-0.2><3,height+2,-0.5>}
-				difference{
-					cylinder{<0,height-2,-0.1><0,height-2,-0.6>10.0/2}
-					box{<-9.5,height+2,0><9.5,-5,-0.7>}	
-				}
-			}
-						
-			cylinder{<0,height,0><0,height,-0.7>1.5}
-		}
-		
-		
-		//pigment{Red}
-		texture{col_silver}
-	}
-	                                   
-	difference{	                                   
-		union{
-			box{<-9.8/2,height-5,-0.2><9.8/2,height+2,2.5>}
-			difference{
-				cylinder{<0,height-2,-0.2><0,height-2,2.5>12.8/2}
-				box{<-9.5,height+2,-0.3><9.5,-5,2.6>}	
-			}
-		}	
-		cylinder{<0,height,-0.3><0,height,2.6>1.5}		
-	}
+   //Anschlusspins
+   union{                                      
+      box{<-0.4,-3.5,-0.15><0.4,0,0.15>}
+      box{<-0.4,-3.5,-0.15><0.4,0,0.15> translate<-2.5,0,0>}
+      box{<-0.4,-3.5,-0.15><0.4,0,0.15> translate< 2.5,0,0>}
+      
+      box{<-0.6,0,-0.15><0.6,height-5,0.15>}
+      box{<-0.6,0,-0.15><0.6,height-5,0.15> translate<-2.5,0,0>}
+      box{<-0.6,0,-0.15><0.6,height-5,0.15> translate< 2.5,0,0>}
+      
+      box{<-0.7,height-4,-0.15><0.7,height-5,0.15>}
+      box{<-0.7,height-4,-0.15><0.7,height-5,0.15> translate<-2.5,0,0>}
+      box{<-0.7,height-4,-0.15><0.7,height-5,0.15> translate< 2.5,0,0>}
+      
+      //Vorderseite     
+      difference{
+         box{<-0.15,-3.5,-1.0><0.15,height-1,1.0> translate<-10/2,0,2>}
+         box{<-0.16,height-5,0.7><0.16,height,1.1> translate<-10/2,0,2>}
+      }
+      
+      difference{
+         box{<-0.15,-3.5,-1.0><0.15,height-1,1.0> translate< 10/2,0,2>}
+         box{<-0.16,height-5,0.7><0.16,height,1.1> translate< 10/2,0,2>}
+      }
+      
+      difference{
+         union{
+            box{<-3,0,2.5><3,height+2,2.8>}
+            difference{
+               cylinder{<0,height-2,2.5><0,height-2,2.8>10.0/2}
+               box{<-9.5,height+2,2.4><9.5,-5,2.9>}   
+            }
+         }
+         
+         box{<-2,0,2.4><0,6,2.9> translate<-2.3,-1,0> rotate<0,0,10>}
+         box{<0,0,2.4><2,6,2.9> translate<2.3,-1,0> rotate<0,0,-10>}
+         cylinder{<0,height,2.4><0,height,2.9>1.5}
+      }
+      
+      box{<-5.15,height-4,2.5><5.15,height-2,2.8>}
+            
+      box{<-2,height-1,2.5><-5.15,height+1,2.8>}
+      box{<2,height-1,2.5><5.15,height+1,2.8>}
+      
+      //Seitenteile
+      box{<-0.15,height-1,-1.0><0.15,height+1,0.1> translate< 10/2,0,2>}
+      box{<-0.15,height-1,-1.0><0.15,height+1,0.1> translate<-10/2,0,2>}
+      
+      box{<-0.15,height,-1.0><0.15,height+1,0.7> translate< 10/2,0,2>}
+      box{<-0.15,height,-1.0><0.15,height+1,0.7> translate<-10/2,0,2>}
+      
+      
+      box{<-0.15,2,2.0><0.15,4,6> translate< 10/2,0,0> }
+      box{<-0.15,2,2.0><0.15,4,6> translate<-10/2,0,0>}
+            
+      box{<-0.15,0,4.0><0.15,2,6> translate< 10/2,0,0>}
+      box{<-0.15,0,4.0><0.15,2,6> translate<-10/2,0,0>}
+      
+      box{<-0.15,height-2,1><0.15,height-4,-0.5> translate< 10/2,0,0> }
+      box{<-0.15,height-2,1><0.15,height-4,-0.5> translate<-10/2,0,0> }
+                                                                                          
+      //Rueckseite
+      box{<-5.15,height-2,-0.2><5.15,height-4,-0.5>}     
+      
+      difference{
+         union{
+            box{<-3,0,-0.2><3,height+2,-0.5>}
+            difference{
+               cylinder{<0,height-2,-0.1><0,height-2,-0.6>10.0/2}
+               box{<-9.5,height+2,0><9.5,-5,-0.7>} 
+            }
+         }
+                  
+         cylinder{<0,height,0><0,height,-0.7>1.5}
+      }
+      
+      
+      //pigment{Red}
+      texture{col_silver}
+   }
+                                      
+   difference{                                    
+      union{
+         box{<-9.8/2,height-5,-0.2><9.8/2,height+2,2.5>}
+         difference{
+            cylinder{<0,height-2,-0.2><0,height-2,2.5>12.8/2}
+            box{<-9.5,height+2,-0.3><9.5,-5,2.6>}  
+         }
+      }  
+      cylinder{<0,height,-0.3><0,height,2.6>1.5}      
+   }
 
-	pigment{Gray30}
-	
-	//rotate<0,180-45,0>
+   pigment{Gray30}
+   
+   //rotate<0,180-45,0>
 
 }
 #end
@@ -1845,9 +1845,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -1857,28 +1857,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}

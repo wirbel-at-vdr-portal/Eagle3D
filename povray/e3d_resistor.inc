@@ -212,10 +212,10 @@ union {
 // //////////
 #macro RES_DIS_TRIM_PT10_PIN()
 difference{
-	box{<-0.5,0,-0.05><0.5,3.5,0.05> texture{col_silver}}
-	box{<-0.5+0.6,0,-0.1><0.5+0.6,4,0.1> rotate<0,0,-30> texture{col_silver}}
-	box{<-0.5-0.6,0,-0.1><0.5-0.6,4,0.1> rotate<0,0,+30> texture{col_silver}}
-	translate<0,-3.5,0>
+   box{<-0.5,0,-0.05><0.5,3.5,0.05> texture{col_silver}}
+   box{<-0.5+0.6,0,-0.1><0.5+0.6,4,0.1> rotate<0,0,-30> texture{col_silver}}
+   box{<-0.5-0.6,0,-0.1><0.5-0.6,4,0.1> rotate<0,0,+30> texture{col_silver}}
+   translate<0,-3.5,0>
 }
 #end
 /********************************************************************************************************************************************
@@ -454,7 +454,7 @@ union {
 //  I choose, an average seperation should be 1.5 mm for WATTS >= 1.0
 
         #if (WATTS >= 1.)
-        #local Seperation = 1.5 ; 	// Best compromise for all types.
+        #local Seperation = 1.5 ;   // Best compromise for all types.
         #else
         #local Seperation = 0.0 ;
         #end
@@ -537,7 +537,7 @@ rotate<0,180,0>
 
 // Position the component above the PCB
 
-        //#local Seperation = 1.5 ; 	// Best compromise for all types.
+        //#local Seperation = 1.5 ;    // Best compromise for all types.
 
         #if (Horizontal=no)
                 translate < -raster/2, (L+Stub+Seperation) ,0 >
@@ -709,15 +709,15 @@ RES_DIS_CERAMIC_RADIAL_GRND(value, 15.9, 35.0,  12.7, 7.62,  3.81,  1.02,  10)
 
 /********************************************************************************************************************************************
 //Diskreter Widerstand
-//l:	Länge
-//d:	Durchmesser
-//c1..4	Fraben der Ringe
-//r:	Raster
-//lw:	Länge der Anschlußdrähte
-//dw:	Durchmesser der Anschlußdrähte
-//op:	anheben des Widerstnad über der Platine
-//h:	"V"=vertikal, "H"=horizontal
-//w:	Leistung, wird benutzt um bei >=1W den Widerstand 1,5mm anzuheben
+//l:  Länge
+//d:  Durchmesser
+//c1..4  Fraben der Ringe
+//r:  Raster
+//lw: Länge der Anschlußdrähte
+//dw: Durchmesser der Anschlußdrähte
+//op: anheben des Widerstnad über der Platine
+//h:  "V"=vertikal, "H"=horizontal
+//w:  Leistung, wird benutzt um bei >=1W den Widerstand 1,5mm anzuheben
 ********************************************************************************************************************************************/
 #macro RES_DIS_GRND(l,d,c1,c2,c3,c4,r,lw,dw,op,h,w)
 union{
@@ -731,54 +731,54 @@ union{
 #local reshor = (strcmp(strupr(h),"H"));
 
 #if(global_res_colselect)
-	#local res_act_col = res_col[rand(global_seed)*4];
+   #local res_act_col = res_col[rand(global_seed)*4];
 #else
-	#local res_act_col = res_col[global_res_col];
+   #local res_act_col = res_col[global_res_col];
 #end
 
 #if (w>=1.)
-	#local seperation = 1.5 ; 	
+   #local seperation = 1.5 ;  
 #else
-	#local seperation = 0.0 ;
+   #local seperation = 0.0 ;
 #end
 
 //Widerstandskörper
 union{
-	#if(global_res_shape=1)
-		blob{
-			threshold 0.01
-			cylinder {<-2.5,0,0><2.5,0,0>,1.2,0.1}
-			cylinder {<-2.3,0,0><-2.29,0,0>,1.5,0.1}
-			cylinder {<2.3,0,0><2.29,0,0>,1.5,0.1}
-		}
-		torus{0.915,0.1 texture{c1} scale<1,3,1> rotate<90,90,0> translate<1,0,0>}
-		torus{0.915,0.1 texture{c2} scale<1,3,1> rotate<90,90,0> translate<0.4,0,0>}
-		torus{0.915,0.1 texture{c3} scale<1,3,1> rotate<90,90,0> translate<-0.2,0,0>}
-		torus{0.915,0.1 texture{c4} scale<1,3,1> rotate<90,90,0> translate<-1.0,0,0>}
-		scale<1.4,1.615,1.615>			//Scale to 5 unit long and 2 unit wide
-		scale<l/2/5,d/2/2,d/2/2>		//Scale back to given size
-	#else
-		superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <-2,0,0>} // Right endcap
-		superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <2,0,0>}  // Left endcap
-		cylinder {<-(2),0,0> <(2),0,0>,1*0.95} // MELF typically has 95% smaller body radius than end caps
-		cylinder{<(1.37           ),0,0>  <((1.37-           (1.5)/10) ),0,0>, 0.951 texture{c1}}   
-		cylinder{<(1.37- 2*(1.5)/6),0,0>  <((1.37- 2*(1.5)/6-(1.5)/10) ),0,0>, 0.951 texture{c2}}
-		cylinder{<(1.37- 4*(1.5)/6),0,0>  <((1.37- 4*(1.5)/6-(1.5)/10) ),0,0>, 0.951 texture{c3}}
-		cylinder{<(1.37- 8*(1.5)/6),0,0>  <((1.37- 8*(1.5)/6-(1.5)/10) ),0,0>, 0.951 texture{c4}}
-		scale<2.01,2,2>					//Scale to 5 unit long and 2 unit wide
-		scale<l/2/5,d/2/2,d/2/2>		//Scale back to given size
-	#end
-	texture {res_act_col}
-	#if(reshor)
-		rotate<0,0,90>
-	#end
+   #if(global_res_shape=1)
+      blob{
+         threshold 0.01
+         cylinder {<-2.5,0,0><2.5,0,0>,1.2,0.1}
+         cylinder {<-2.3,0,0><-2.29,0,0>,1.5,0.1}
+         cylinder {<2.3,0,0><2.29,0,0>,1.5,0.1}
+      }
+      torus{0.915,0.1 texture{c1} scale<1,3,1> rotate<90,90,0> translate<1,0,0>}
+      torus{0.915,0.1 texture{c2} scale<1,3,1> rotate<90,90,0> translate<0.4,0,0>}
+      torus{0.915,0.1 texture{c3} scale<1,3,1> rotate<90,90,0> translate<-0.2,0,0>}
+      torus{0.915,0.1 texture{c4} scale<1,3,1> rotate<90,90,0> translate<-1.0,0,0>}
+      scale<1.4,1.615,1.615>        //Scale to 5 unit long and 2 unit wide
+      scale<l/2/5,d/2/2,d/2/2>      //Scale back to given size
+   #else
+      superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <-2,0,0>} // Right endcap
+      superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <2,0,0>}  // Left endcap
+      cylinder {<-(2),0,0> <(2),0,0>,1*0.95} // MELF typically has 95% smaller body radius than end caps
+      cylinder{<(1.37           ),0,0>  <((1.37-           (1.5)/10) ),0,0>, 0.951 texture{c1}}   
+      cylinder{<(1.37- 2*(1.5)/6),0,0>  <((1.37- 2*(1.5)/6-(1.5)/10) ),0,0>, 0.951 texture{c2}}
+      cylinder{<(1.37- 4*(1.5)/6),0,0>  <((1.37- 4*(1.5)/6-(1.5)/10) ),0,0>, 0.951 texture{c3}}
+      cylinder{<(1.37- 8*(1.5)/6),0,0>  <((1.37- 8*(1.5)/6-(1.5)/10) ),0,0>, 0.951 texture{c4}}
+      scale<2.01,2,2>               //Scale to 5 unit long and 2 unit wide
+      scale<l/2/5,d/2/2,d/2/2>      //Scale back to given size
+   #end
+   texture {res_act_col}
+   #if(reshor)
+      rotate<0,0,90>
+   #end
 }
 #if(reshor)
-	object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,0,"V")}
-	translate<-r/2,l/2+0.1+op,0>
+   object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,0,"V")}
+   translate<-r/2,l/2+0.1+op,0>
 #else
-	object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,0,"H")}
-	translate<0,d/2+0.1+op,0>
+   object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,0,"H")}
+   translate<0,d/2+0.1+op,0>
 #end
 
 translate<0,seperation,0>
@@ -864,43 +864,43 @@ union{
     #if (op=0)
         #local space = 1.5 ; 
     #else
-    	#local space = 0.0 ;
-    #end	
+      #local space = 0.0 ;
+    #end 
 
     union{
-    	superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <-2,0,0>}
-    	superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <+2,0,0>} 
-    	cylinder {<-(2),0,0> <(2),0,0>,0.9}
+      superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <-2,0,0>}
+      superellipsoid {<1.0, 0.25>   scale <1,1,1/2> rotate <0,90,0> translate <+2,0,0>} 
+      cylinder {<-(2),0,0> <(2),0,0>,0.9}
         intersection{
-        	cylinder {<-2,0,0> <2,0,0>,0.9}
+         cylinder {<-2,0,0> <2,0,0>,0.9}
             text {ttf global_fontfile_arial value 2, 0  scale 1 rotate<-90,180,180> translate<-1,1.5,-0.4>}  // Marking      
             pigment{Black}
             translate 0.01*y
         }
-    	cone{<-2.5,0,0>, 0.8,<-3,0,0>,0}
-    	cone{<+2.5,0,0>, 0.8,<+3,0,0>,0}
-    	scale<2,2,2>					
-    	scale<l/2/5,d/2/2,d/2/2>		
+      cone{<-2.5,0,0>, 0.8,<-3,0,0>,0}
+      cone{<+2.5,0,0>, 0.8,<+3,0,0>,0}
+      scale<2,2,2>               
+      scale<l/2/5,d/2/2,d/2/2>      
         texture {
             pigment {PR0DarkBrown }
             finish { ambient 1  ambient (0.1 * global_ambient_mul)}
         }
     }
     
-   	object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,op+space,"H")}
-	#if (op>0) 
-	    difference{  
-	        union{
-        	    cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <-r/2,0,0> pigment {Gray95}}
-        	    cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <+r/2,0,0> pigment {Gray95}} 
-        	}
-        	union{
-        	    cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <-r/2,0,0> pigment {Gray95}}
-        	    cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <+r/2,0,0> pigment {Gray95}} 
-        	}
-	    }
-	#end
-	translate<0,d/2+0.1+op,0>
+      object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,op+space,"H")}
+   #if (op>0) 
+       difference{  
+           union{
+             cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <-r/2,0,0> pigment {Gray95}}
+             cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <+r/2,0,0> pigment {Gray95}} 
+         }
+         union{
+             cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <-r/2,0,0> pigment {Gray95}}
+             cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <+r/2,0,0> pigment {Gray95}} 
+         }
+       }
+   #end
+   translate<0,d/2+0.1+op,0>
 }
 translate<0,space,0>
 #end
@@ -1176,14 +1176,14 @@ union{
 #if (op=0)
     #local space = 1.5 ; //default space
 #else
-	#local space = 0.0 ;
-#end	
+   #local space = 0.0 ;
+#end  
 
 union{
-		superellipsoid {<1.0, 0.1>  scale <1,1,2> rotate <0,90,0> translate <0,0,0>} // body
+      superellipsoid {<1.0, 0.1>  scale <1,1,2> rotate <0,90,0> translate <0,0,0>} // body
         intersection{
-        	cylinder {<-2,0,0> <2,0,0>,1}
-        	union{
+         cylinder {<-2,0,0> <2,0,0>,1}
+         union{
                 #switch(l)    
                 #case(22.5)
                     text {ttf global_fontfile_arial "RB57" 20, 0  scale <0.6,0.7,0.7> scale 0.8 rotate<-90,180,180> translate<-0.6,2,-0.25> rotate<+18,0,0>}  // Marking 
@@ -1210,9 +1210,9 @@ union{
             pigment{White}
             translate 0.01*y
         }
-		
-		scale<2,2,2>
-		scale<l/2/4,d/2/2,d/2/2>		//Scale back to given size
+      
+      scale<2,2,2>
+      scale<l/2/4,d/2/2,d/2/2>      //Scale back to given size
         texture {
             pigment {RB_Green }
             finish {
@@ -1223,20 +1223,20 @@ union{
             }
         }
      }
-	object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,op+space,"H")}
-	#if (op>0)   
-	    difference{  
-	        union{
-        	    cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <-r/2,0,0> pigment {Gray95}}
-        	    cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <+r/2,0,0> pigment {Gray95}} 
-        	}
-        	union{
-        	    cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <-r/2,0,0> pigment {Gray95}}
-        	    cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <+r/2,0,0> pigment {Gray95}} 
-        	}
-	    }
-	#end
-	translate<0,d/2+0.1+op,0>
+   object{TOOLS_WIRE_LEADS(l,d,lw*2,dw,r,global_res_bend_radius,op+space,"H")}
+   #if (op>0)   
+       difference{  
+           union{
+             cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <-r/2,0,0> pigment {Gray95}}
+             cylinder {<0,-0.5,0> <0,-op-d/2,0> 1.3 translate <+r/2,0,0> pigment {Gray95}} 
+         }
+         union{
+             cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <-r/2,0,0> pigment {Gray95}}
+             cylinder {<0,0.5,0> <0,-op-d/2-1,0> 0.5 translate <+r/2,0,0> pigment {Gray95}} 
+         }
+       }
+   #end
+   translate<0,d/2+0.1+op,0>
 }
 translate<0,space,0>
 #end
@@ -1374,13 +1374,13 @@ RES_DIS_SIL_GRND(14)
             #end
             texture{Siov}
         }
-    	#if(pin_short=off)
+      #if(pin_short=off)
             cylinder{<+e/2,+b/2-h+d/2,-a/2><+e/2,+b/2-h-l,-a/2> d/2 texture{col_silver}}
             cylinder{<-e/2,+b/2-h+d/2,+a/2><-e/2,+b/2-h-l,+a/2> d/2 texture{col_silver}}
-    	#else
+      #else
             cylinder{<+e/2,+b/2-h+d/2,-a/2><+e/2,+b/2-h-1*(pcb_height+pin_length)-0.2,-a/2> d/2 texture{col_silver}}
             cylinder{<-e/2,+b/2-h+d/2,+a/2><-e/2,+b/2-h-1*(pcb_height+pin_length)-0.2,+a/2> d/2 texture{col_silver}}
-    	#end
+      #end
         
     translate<0,h-b/2,0>
     }
@@ -1640,11 +1640,11 @@ union{
     }     
 
     union{
-    	text {ttf global_fontfile_arial "T18" 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,-0.4>}
-    	text {ttf global_fontfile_arial value 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,+1.6>}
-    	text {ttf global_fontfile_arial "3" 0.1, 0 scale 2 rotate<90,180,0> translate<-5,6.45,-0.4>}
-    	text {ttf global_fontfile_arial "0302" 0.1, 0 scale 2 rotate<90,180,0> translate<-1.8,6.45,+1.6>}
-    	text {ttf global_fontfile_eagle3d "0" 0.1, 0 scale 2 rotate<90,180,0> translate<+2,6.45,-0>}
+      text {ttf global_fontfile_arial "T18" 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,-0.4>}
+      text {ttf global_fontfile_arial value 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,+1.6>}
+      text {ttf global_fontfile_arial "3" 0.1, 0 scale 2 rotate<90,180,0> translate<-5,6.45,-0.4>}
+      text {ttf global_fontfile_arial "0302" 0.1, 0 scale 2 rotate<90,180,0> translate<-1.8,6.45,+1.6>}
+      text {ttf global_fontfile_eagle3d "0" 0.1, 0 scale 2 rotate<90,180,0> translate<+2,6.45,-0>}
         pigment{Black}
     }
     rotate 180*y
@@ -1866,10 +1866,10 @@ union{
             box{<-0.3, 0, -0.75> <+0.3, 0.2, +0.75>}
             pigment{Silver}
         }  
-    	object {pin translate<-1.25,0,-1.8>}
-    	object {pin translate<+1.25,0,-1.8>}
-    	object {pin translate<0,0,+1.8>}
-	#end
+      object {pin translate<-1.25,0,-1.8>}
+      object {pin translate<+1.25,0,-1.8>}
+      object {pin translate<0,0,+1.8>}
+   #end
     #if(TrimType=1) //YJ
         #local pin =
         union{
@@ -1877,22 +1877,22 @@ union{
             box{<-0.3, 0, -0.15> <+0.3, 1, -0.3>}
             pigment{Silver}
         }  
-    	object {pin translate<-1.25,0,-1.6>}
-    	object {pin translate<+1.25,0,-1.6>}
-    	object {pin rotate 180*y translate<0,0,+1.6>}
-	#end
+      object {pin translate<-1.25,0,-1.6>}
+      object {pin translate<+1.25,0,-1.6>}
+      object {pin rotate 180*y translate<0,0,+1.6>}
+   #end
     #if(TrimType=2) //ZL
         #local pin =
         union{
             box{<-0.3, -0.75,0> <+0.3, +0.75,0.2>}
             pigment{Silver}
         }  
-    	object {pin translate<-1.25,0.05,-1.95>}
-    	object {pin translate<+1.25,0.05,-1.95>}
-    	object {pin translate<0,4.75,-1.95>}
-    	rotate <-90,180,0>
-    	translate<0,1.95,-Lg/2-0.1>
-	#end
+      object {pin translate<-1.25,0.05,-1.95>}
+      object {pin translate<+1.25,0.05,-1.95>}
+      object {pin translate<0,4.75,-1.95>}
+      rotate <-90,180,0>
+      translate<0,1.95,-Lg/2-0.1>
+   #end
     #if(TrimType=3) //ZJ
         #local pin =
         union{
@@ -1900,12 +1900,12 @@ union{
             box{<-0.3, 0, -0.15> <+0.3, 1, -0.3>}
             pigment{Silver}
         }  
-    	object {pin translate<-1.25,0,-1.6>}
-    	object {pin translate<+1.25,0,-1.6>}
-    	object {pin rotate 180*z translate<0,5,-1.6>}
-    	rotate <-90,180,0>
-    	translate<0,1.95,-Lg/2-0.1>
-	#end
+      object {pin translate<-1.25,0,-1.6>}
+      object {pin translate<+1.25,0,-1.6>}
+      object {pin rotate 180*z translate<0,5,-1.6>}
+      rotate <-90,180,0>
+      translate<0,1.95,-Lg/2-0.1>
+   #end
 }
 #end
 
@@ -1965,55 +1965,55 @@ RES_DIS_TRIM_W_GRND(7,6.6,4.83,NavyBlue,0,1.27)
 ********************************************************************************************************************************************/
 #macro RES_SMD_CHIP_ARRAY_GRND(b,l,h,blf,pitch,n,value)
 union{
-	
-	//White body
-	object{
-		Round_Box_Union(<0,0.05,0>, <l,h-0.05,b>, min(b,l,h)/6)
-		translate<-l/2,0,-b/2>
-		pigment{White}	
-	}
-	
-	//Black top
-	object{
-		Round_Box_Union(<0.01,h-0.1,0.01>, <l-0.01,h-0.03,b-0.01>, min(b,l,h)/10)
-		translate<-l/2,0,-b/2>
-		texture{
-			pigment{Gray10}	
-			finish{phong 0.2 reflection 0.1 ambient (0.1 * global_ambient_mul)}
-		}
-	}
-	
-	#local topText = text {ttf besch_font value 0.1, 0
-		pigment{White} rotate<90,0,0> scale<l/8,1,b/1.5>}
-		
-	object{topText Center_Trans(topText, x+z) translate<0,h+0.02,0>}
-	
-	//Pins
-	#local i = 0;
-	#local x_pos = -(n-1)/2*pitch;
-		
-	union{
-	
-	#while(i<n)
-		#if (i=0)
-		box{<-blf/2,0,b/2+0.3><blf/2,h,b/2-b/10> translate<x_pos-0.2,0,0>}
-		box{<-blf/2,0,-b/2-0.3><blf/2,h,-b/2+b/10> translate<x_pos-0.2,0,0>}		
-		#end
+   
+   //White body
+   object{
+      Round_Box_Union(<0,0.05,0>, <l,h-0.05,b>, min(b,l,h)/6)
+      translate<-l/2,0,-b/2>
+      pigment{White} 
+   }
+   
+   //Black top
+   object{
+      Round_Box_Union(<0.01,h-0.1,0.01>, <l-0.01,h-0.03,b-0.01>, min(b,l,h)/10)
+      translate<-l/2,0,-b/2>
+      texture{
+         pigment{Gray10}   
+         finish{phong 0.2 reflection 0.1 ambient (0.1 * global_ambient_mul)}
+      }
+   }
+   
+   #local topText = text {ttf besch_font value 0.1, 0
+      pigment{White} rotate<90,0,0> scale<l/8,1,b/1.5>}
+      
+   object{topText Center_Trans(topText, x+z) translate<0,h+0.02,0>}
+   
+   //Pins
+   #local i = 0;
+   #local x_pos = -(n-1)/2*pitch;
+      
+   union{
+   
+   #while(i<n)
+      #if (i=0)
+      box{<-blf/2,0,b/2+0.3><blf/2,h,b/2-b/10> translate<x_pos-0.2,0,0>}
+      box{<-blf/2,0,-b/2-0.3><blf/2,h,-b/2+b/10> translate<x_pos-0.2,0,0>}    
+      #end
 
-		#if (i=n-1)
-		box{<-blf/2,0,b/2+0.3><blf/2,h,b/2-b/10> translate<x_pos+0.2,0,0>}
-		box{<-blf/2,0,-b/2-0.3><blf/2,h,-b/2+b/10> translate<x_pos+0.2,0,0>}		
-		#end		
-		
-		box{<-blf/2,0,b/2+0.3><blf/2,h,b/2-b/10> translate<x_pos,0,0>}
-		box{<-blf/2,0,-b/2-0.3><blf/2,h,-b/2+b/10> translate<x_pos,0,0>}
-	        
-	        #local i = i+1;
-	        #local x_pos = x_pos + pitch;
-		
-	#end
-	texture{col_silver}
-	}	
+      #if (i=n-1)
+      box{<-blf/2,0,b/2+0.3><blf/2,h,b/2-b/10> translate<x_pos+0.2,0,0>}
+      box{<-blf/2,0,-b/2-0.3><blf/2,h,-b/2+b/10> translate<x_pos+0.2,0,0>}    
+      #end     
+      
+      box{<-blf/2,0,b/2+0.3><blf/2,h,b/2-b/10> translate<x_pos,0,0>}
+      box{<-blf/2,0,-b/2-0.3><blf/2,h,-b/2+b/10> translate<x_pos,0,0>}
+           
+           #local i = i+1;
+           #local x_pos = x_pos + pitch;
+      
+   #end
+   texture{col_silver}
+   }  
 }
 #end
 
@@ -2028,15 +2028,15 @@ RES_SMD_CHIP_ARRAY_GRND(1.60,3.20,0.8,0.4,0.8,4,value)
 ********************************************************************************************************************************************/
 #macro RES_SMD_CHIP_GRND(b,l,h,blf,value)
 union{
-	box{<0    ,0    ,0.01> <blf    ,h+0.05 ,b-0.01>}
-	box{<l    ,0    ,0.01> <l-blf  ,h+0.05 ,b-0.01>}
-	box{<0.05 ,0.05 ,0   > <l-0.05 ,h      ,b     > pigment{White}}
-	box{<blf  ,h    ,0   > <l-blf  ,h+0.07 ,b     > texture{pigment{Gray20} finish{phong 0.5  ambient (0.1 * global_ambient_mul)}}}
-	text {ttf besch_font value 0.1, 0
-		pigment{White} rotate<90,0,0> scale<l/3.5,1,b/1.5>
-		translate<l/3.8,h+0.08,b/3>}
-	texture{col_silver}
-	translate<-l/2,0,-b/2>
+   box{<0    ,0    ,0.01> <blf    ,h+0.05 ,b-0.01>}
+   box{<l    ,0    ,0.01> <l-blf  ,h+0.05 ,b-0.01>}
+   box{<0.05 ,0.05 ,0   > <l-0.05 ,h      ,b     > pigment{White}}
+   box{<blf  ,h    ,0   > <l-blf  ,h+0.07 ,b     > texture{pigment{Gray20} finish{phong 0.5  ambient (0.1 * global_ambient_mul)}}}
+   text {ttf besch_font value 0.1, 0
+      pigment{White} rotate<90,0,0> scale<l/3.5,1,b/1.5>
+      translate<l/3.8,h+0.08,b/3>}
+   texture{col_silver}
+   translate<-l/2,0,-b/2>
 }
 #end
 #macro RES_SMD_CHIP_2512(value)
@@ -2070,14 +2070,14 @@ RES_SMD_CHIP_GRND(0.50,1.00,0.20,0.20,value)
 ********************************************************************************************************************************************/
 #macro RES_SMD_MELF_GRND(c1,c2,c3,c4)
 union { 
-	object{Round_Cylinder_Union (<-1.75,0,0><-0.9,0>0.7,0.2)texture{col_silver}}
-	object{Round_Cylinder_Union (<0.9,0><1.75,0,0>0.7,0.2)texture{col_silver}}
-	cylinder{<-1.2,0,0><1.2,0,0>0.69 pigment{rgb<0.36,0.42,0.42>} finish{phong 0.5 ambient (0.1 * global_ambient_mul)}}
-	union{
+   object{Round_Cylinder_Union (<-1.75,0,0><-0.9,0>0.7,0.2)texture{col_silver}}
+   object{Round_Cylinder_Union (<0.9,0><1.75,0,0>0.7,0.2)texture{col_silver}}
+   cylinder{<-1.2,0,0><1.2,0,0>0.69 pigment{rgb<0.36,0.42,0.42>} finish{phong 0.5 ambient (0.1 * global_ambient_mul)}}
+   union{
         torus{0.69,0.01 texture{c1} scale<1,12,1> rotate<90,90,0> translate<0.8,0,0>}
-    	torus{0.69,0.01 texture{c2} scale<1,12,1> rotate<90,90,0> translate<0.35,0,0>}
-    	torus{0.69,0.01 texture{c3} scale<1,12,1> rotate<90,90,0> translate<-0.1,0,0>}
-    	torus{0.685,0.01 texture{c4} scale<1,18,1> rotate<90,90,0> translate<-0.7,0,0>}
+      torus{0.69,0.01 texture{c2} scale<1,12,1> rotate<90,90,0> translate<0.35,0,0>}
+      torus{0.69,0.01 texture{c3} scale<1,12,1> rotate<90,90,0> translate<-0.1,0,0>}
+      torus{0.685,0.01 texture{c4} scale<1,18,1> rotate<90,90,0> translate<-0.7,0,0>}
         finish{phong 1.0 ambient (0.1 * global_ambient_mul)}
     }
 }
@@ -2218,9 +2218,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -2230,28 +2230,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}

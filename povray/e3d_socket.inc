@@ -63,60 +63,60 @@ texture{col_silver}}
 ********************************************************************************************************************************************/
 #macro SOCKET_DIP_GRND(pin,a,breite)
 union{
-	difference{
-		union{
-			box{<-pin/4*2.54,0,breite/2+1.2><pin/4*2.54,2.8,breite/2-1.2>}
-			box{<-pin/4*2.54,0,-breite/2-1.2><pin/4*2.54,2.8,-breite/2+1.2>}
-		}
-		#local i=0;
-		#while(i<(a/4))
-			#if((pin/4)=div(pin,4))
-    			#local k = div(pin,4)-i-1;
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54+1.27,-7.15+2.9,breite/2>}
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54-1.27,-7.15+2.9,breite/2>}
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54+1.27,-7.15+2.9,-breite/2>}
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54-1.27,-7.15+2.9,-breite/2>}
-			#else
-				#local k = div(pin,4)-i;
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54,-7.15+2.9,breite/2>}
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54,-7.15+2.9,breite/2>}
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54,-7.15+2.9,-breite/2>}
-				cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54,-7.15+2.9,-breite/2>}
-			#end
-			#local i=i+1;
-		#end
-	}
-	#local i=0;
-	#while(i<(a/4))
-		#if((pin/4)=div(pin,4))
-			#local k = div(pin,4)-i-1;
-			object{SOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,breite/2>}
-			object{SOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,breite/2>}
-			object{SOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,-breite/2>}
-			object{SOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,-breite/2>}
-		#else
-			#local k = div(pin,4)-i;
-			object{SOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,breite/2>}
-			object{SOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,breite/2>}
-			object{SOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,-breite/2>}
-			object{SOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,-breite/2>}
-		#end
-		#local i=i+1;
-	#end
-	difference{
-		box{<-pin/4*2.54,0,breite/2-1.2><-pin/4*2.54+2,2,-breite/2+1.2>}
-		cylinder{<0,-0.1,0><0,3,0>1 translate<-pin/4*2.54-0.4,0,0>}
-	}
-	box{<pin/4*2.54,0,breite/2-1.2><pin/4*2.54-2,2,-breite/2+1.2>}
-	#if((pin>19)&(pin<33))
-		box{<-1,0,breite/2-1.2><1,2,-breite/2+1.2>}
-	#end
-	#if(pin>32)
-		box{<-pin/12*2.54+1,0,breite/2-1.2><-pin/12*2.54-1,2,-breite/2+1.2>}
-		box{<pin/12*2.54+1,0,breite/2-1.2><pin/12*2.54-1,2,-breite/2+1.2>}
-	#end
-	translate<0,0.1,0> 
-	pigment{Gray10}
+   difference{
+      union{
+         box{<-pin/4*2.54,0,breite/2+1.2><pin/4*2.54,2.8,breite/2-1.2>}
+         box{<-pin/4*2.54,0,-breite/2-1.2><pin/4*2.54,2.8,-breite/2+1.2>}
+      }
+      #local i=0;
+      #while(i<(a/4))
+         #if((pin/4)=div(pin,4))
+            #local k = div(pin,4)-i-1;
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54+1.27,-7.15+2.9,breite/2>}
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54-1.27,-7.15+2.9,breite/2>}
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54+1.27,-7.15+2.9,-breite/2>}
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54-1.27,-7.15+2.9,-breite/2>}
+         #else
+            #local k = div(pin,4)-i;
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54,-7.15+2.9,breite/2>}
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54,-7.15+2.9,breite/2>}
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<k*2.54,-7.15+2.9,-breite/2>}
+            cylinder{<0,-0.1,0><0,8,0>0.51 translate<-k*2.54,-7.15+2.9,-breite/2>}
+         #end
+         #local i=i+1;
+      #end
+   }
+   #local i=0;
+   #while(i<(a/4))
+      #if((pin/4)=div(pin,4))
+         #local k = div(pin,4)-i-1;
+         object{SOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,breite/2>}
+         object{SOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,breite/2>}
+         object{SOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,-breite/2>}
+         object{SOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,-breite/2>}
+      #else
+         #local k = div(pin,4)-i;
+         object{SOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,breite/2>}
+         object{SOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,breite/2>}
+         object{SOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,-breite/2>}
+         object{SOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,-breite/2>}
+      #end
+      #local i=i+1;
+   #end
+   difference{
+      box{<-pin/4*2.54,0,breite/2-1.2><-pin/4*2.54+2,2,-breite/2+1.2>}
+      cylinder{<0,-0.1,0><0,3,0>1 translate<-pin/4*2.54-0.4,0,0>}
+   }
+   box{<pin/4*2.54,0,breite/2-1.2><pin/4*2.54-2,2,-breite/2+1.2>}
+   #if((pin>19)&(pin<33))
+      box{<-1,0,breite/2-1.2><1,2,-breite/2+1.2>}
+   #end
+   #if(pin>32)
+      box{<-pin/12*2.54+1,0,breite/2-1.2><-pin/12*2.54-1,2,-breite/2+1.2>}
+      box{<pin/12*2.54+1,0,breite/2-1.2><pin/12*2.54-1,2,-breite/2+1.2>}
+   #end
+   translate<0,0.1,0> 
+   pigment{Gray10}
 }
 #end
 
@@ -386,93 +386,93 @@ SOCKET_DIP_GRND(68,68,22.86)
 #end
 
 union{
-	difference{
-		union{
-			box{<-L/2,0.6,-B/2+2><L/2,7.5,B/2-2>}
-			box{<-L/2+2,0.6,-B/2><L/2-2,7.5,B/2>}
-			cylinder{<-L/2+2,0.6,-B/2+2><-L/2+2,7.5,-B/2+2>,2}
-			cylinder{<L/2-2,0.6,-B/2+2><L/2-2,7.5,-B/2+2>,2}
-			cylinder{<-L/2+2,0.6,B/2-2><-L/2+2,7.5,B/2-2>,2}
-			cylinder{<L/2-2,0.6,B/2-2><L/2-2,7.5,B/2-2>,2}
-		}
-		box{<-Li/2,2.6,-Bi/2><Li/2,7.6,Bi/2>}
-		box{<sqrt(pow(L,2)+pow(B,2))/2-2.5,2.61,-0.8><-sqrt(pow(L,2)+pow(B,2))/2+2.5,7.6,0.8> rotate<0,-45,0>}
-		
-		#local i=0;
-		#while (i<pin_l)
-			box{<-0.3,2.61,0><0.3,7.6,-3> translate<1.27*i/2,0,Bi/2+2>}
-			#if(i!=0) 
-				box{<-0.3,2.61,0><0.3,7.6,-3> translate<-1.27*i/2,0,Bi/2+2>} 
-			#end
-			box{<-0.3,2.61,0><0.3,7.6,3> translate<1.27*i/2,0,-Bi/2-2>}
-			#if(i!=0) 
-				box{<-0.3,2.61,0><0.3,7.6,3> translate<-1.27*i/2,0,-Bi/2-2>} 
-			#end
-			#local i=i+2;
-		#end
-		
-		#local i=0;
-		#while (i<pin_b)
-			box{<-3,2.61,0.3><0,7.6,-0.3> translate<Li/2+2,0,1.27*i/2>}
-			#if(i!=0)
-				box{<-3,2.61,0.3><0,7.6,-0.3> translate<Li/2+2,0,-1.27*i/2>} 
-			#end
-			box{<3,2.61,0.3><0,7.6,-0.3> translate<-Li/2-2,0,1.27*i/2>}
-			#if(i!=0) 
-				box{<3,2.61,0.3><0,7.6,-0.3> translate<-Li/2-2,0,-1.27*i/2>} 
-			#end
-			#local i=i+2;
-		#end
-		cylinder{<0,0,0><0,4,0>1.5}
-		box{<-3,0,0><3,7.6,3> rotate<0,-45,0> translate<-L/2+1,0,B/2-1>}
-		box{<-1,2.61,-1><1,7.6,1> rotate<0,-45,0> translate<-L/2+2.5,0,B/2-2.5>}
-		box{<-1,2.61,-1><1,7.6,1> rotate<0,-45,0> translate<L/2-2,0,-B/2+2>}
-	}
-	box{<-1,1.5,0><1,7.5,1> rotate<0,-45,0> translate<-Li/2+0.5,0,Bi/2-0.5>}
-	//Innere Kontaktfedern
-	#local i=0;
-	#while (i<pin_l)
-		cylinder{<-0.25,5.5,Bi/2+1><0.25,5.5,Bi/2+1>0.8 texture{col_silver} translate<1.27*i/2,0,0>}
-		#if(i!=0) 
-			cylinder{<-0.25,5.5,Bi/2+1><0.25,5.5,Bi/2+1>0.8 texture{col_silver} translate<-1.27*i/2,0,0>} 
-		#end
-		cylinder{<-0.25,5.5,-Bi/2-1><0.25,5.5,-Bi/2-1>0.8 texture{col_silver} translate<1.27*i/2,0,0>}
-		#if(i!=0) 
-			cylinder{<-0.25,5.5,-Bi/2-1><0.25,5.5,-Bi/2-1>0.8 texture{col_silver} translate<-1.27*i/2,0,0>} 
-		#end
-		#local i=i+2;
-	#end
-	#local i=0;
-	#while (i<pin_b)
-		cylinder{<Li/2+1,5.5,-0.25><Li/2+1,5.5,0.25>0.8 texture{col_silver} translate<0,0,1.27*i/2>}
-		#if(i!=0)
-			cylinder{<Li/2+1,5.5,-0.25><Li/2+1,5.5,0.25>0.8 texture{col_silver} translate<0,0,-1.27*i/2>} 
-		#end
-		cylinder{<-Li/2-1,5.5,-0.25><-Li/2-1,5.5,0.25>0.8 texture{col_silver} translate<0,0,1.27*i/2>}
-		#if(i!=0) 
-			cylinder{<-Li/2-1,5.5,-0.25><-Li/2-1,5.5,0.25>0.8 texture{col_silver} translate<0,0,-1.27*i/2>} 
-		#end
-	#local i=i+2;
-	#end
-	//Pinplatzierung per Arrays
-	union{
-		#local i=-6;
-		#while(i<7)
-        	#local j=-6;
-        	#while(j<7)
-        		#if (pinar[i+6][j+6]=1)
-        			box{<-0.25,0.6,-0.1><0.25,-3,0.1> texture{col_silver} translate<j*2.54,0,i*2.54>}
-        		#end
-        		#if (pinar[i+6][j+6]=2)
-        			cylinder{<0,0.05,0><0,0.6,0>1 translate<j*2.54,0,i*2.54>}
-        		#end
-        	#local j=j+1;
-        	#end
-		#local i=i+1;
-		#end
-	object{chip translate<0,3.5,0> translate<-pincL,0,-pincB>}
-	translate<pincL,0,pincB>}
-	pigment{Gray40}
+   difference{
+      union{
+         box{<-L/2,0.6,-B/2+2><L/2,7.5,B/2-2>}
+         box{<-L/2+2,0.6,-B/2><L/2-2,7.5,B/2>}
+         cylinder{<-L/2+2,0.6,-B/2+2><-L/2+2,7.5,-B/2+2>,2}
+         cylinder{<L/2-2,0.6,-B/2+2><L/2-2,7.5,-B/2+2>,2}
+         cylinder{<-L/2+2,0.6,B/2-2><-L/2+2,7.5,B/2-2>,2}
+         cylinder{<L/2-2,0.6,B/2-2><L/2-2,7.5,B/2-2>,2}
+      }
+      box{<-Li/2,2.6,-Bi/2><Li/2,7.6,Bi/2>}
+      box{<sqrt(pow(L,2)+pow(B,2))/2-2.5,2.61,-0.8><-sqrt(pow(L,2)+pow(B,2))/2+2.5,7.6,0.8> rotate<0,-45,0>}
+      
+      #local i=0;
+      #while (i<pin_l)
+         box{<-0.3,2.61,0><0.3,7.6,-3> translate<1.27*i/2,0,Bi/2+2>}
+         #if(i!=0) 
+            box{<-0.3,2.61,0><0.3,7.6,-3> translate<-1.27*i/2,0,Bi/2+2>} 
+         #end
+         box{<-0.3,2.61,0><0.3,7.6,3> translate<1.27*i/2,0,-Bi/2-2>}
+         #if(i!=0) 
+            box{<-0.3,2.61,0><0.3,7.6,3> translate<-1.27*i/2,0,-Bi/2-2>} 
+         #end
+         #local i=i+2;
+      #end
+      
+      #local i=0;
+      #while (i<pin_b)
+         box{<-3,2.61,0.3><0,7.6,-0.3> translate<Li/2+2,0,1.27*i/2>}
+         #if(i!=0)
+            box{<-3,2.61,0.3><0,7.6,-0.3> translate<Li/2+2,0,-1.27*i/2>} 
+         #end
+         box{<3,2.61,0.3><0,7.6,-0.3> translate<-Li/2-2,0,1.27*i/2>}
+         #if(i!=0) 
+            box{<3,2.61,0.3><0,7.6,-0.3> translate<-Li/2-2,0,-1.27*i/2>} 
+         #end
+         #local i=i+2;
+      #end
+      cylinder{<0,0,0><0,4,0>1.5}
+      box{<-3,0,0><3,7.6,3> rotate<0,-45,0> translate<-L/2+1,0,B/2-1>}
+      box{<-1,2.61,-1><1,7.6,1> rotate<0,-45,0> translate<-L/2+2.5,0,B/2-2.5>}
+      box{<-1,2.61,-1><1,7.6,1> rotate<0,-45,0> translate<L/2-2,0,-B/2+2>}
+   }
+   box{<-1,1.5,0><1,7.5,1> rotate<0,-45,0> translate<-Li/2+0.5,0,Bi/2-0.5>}
+   //Innere Kontaktfedern
+   #local i=0;
+   #while (i<pin_l)
+      cylinder{<-0.25,5.5,Bi/2+1><0.25,5.5,Bi/2+1>0.8 texture{col_silver} translate<1.27*i/2,0,0>}
+      #if(i!=0) 
+         cylinder{<-0.25,5.5,Bi/2+1><0.25,5.5,Bi/2+1>0.8 texture{col_silver} translate<-1.27*i/2,0,0>} 
+      #end
+      cylinder{<-0.25,5.5,-Bi/2-1><0.25,5.5,-Bi/2-1>0.8 texture{col_silver} translate<1.27*i/2,0,0>}
+      #if(i!=0) 
+         cylinder{<-0.25,5.5,-Bi/2-1><0.25,5.5,-Bi/2-1>0.8 texture{col_silver} translate<-1.27*i/2,0,0>} 
+      #end
+      #local i=i+2;
+   #end
+   #local i=0;
+   #while (i<pin_b)
+      cylinder{<Li/2+1,5.5,-0.25><Li/2+1,5.5,0.25>0.8 texture{col_silver} translate<0,0,1.27*i/2>}
+      #if(i!=0)
+         cylinder{<Li/2+1,5.5,-0.25><Li/2+1,5.5,0.25>0.8 texture{col_silver} translate<0,0,-1.27*i/2>} 
+      #end
+      cylinder{<-Li/2-1,5.5,-0.25><-Li/2-1,5.5,0.25>0.8 texture{col_silver} translate<0,0,1.27*i/2>}
+      #if(i!=0) 
+         cylinder{<-Li/2-1,5.5,-0.25><-Li/2-1,5.5,0.25>0.8 texture{col_silver} translate<0,0,-1.27*i/2>} 
+      #end
+   #local i=i+2;
+   #end
+   //Pinplatzierung per Arrays
+   union{
+      #local i=-6;
+      #while(i<7)
+         #local j=-6;
+         #while(j<7)
+            #if (pinar[i+6][j+6]=1)
+               box{<-0.25,0.6,-0.1><0.25,-3,0.1> texture{col_silver} translate<j*2.54,0,i*2.54>}
+            #end
+            #if (pinar[i+6][j+6]=2)
+               cylinder{<0,0.05,0><0,0.6,0>1 translate<j*2.54,0,i*2.54>}
+            #end
+         #local j=j+1;
+         #end
+      #local i=i+1;
+      #end
+   object{chip translate<0,3.5,0> translate<-pincL,0,-pincB>}
+   translate<pincL,0,pincB>}
+   pigment{Gray40}
 }
 #end
 
@@ -519,10 +519,10 @@ SOCKET_PLCC_GRND(36.7,36.7,21,21,29.3,29.3,84,0,0,IC_SMD_PLCC84(value))
 #macro TEXSOCKET_SCREWHEAD_CROSS()
 #local w = RRand(0,89,1);
 difference{
-	superellipsoid{<1,0.1> rotate<90,0,0> scale<1.4,0.5,1.4> translate<0,0,0>}
-	box{<0.25,0,-1><-0.25,1,1>rotate<0, w,   0> translate<0,0,0>}
-	box{<0.25,0,-1><-0.25,1,1>rotate<0, w+90,0> translate<0,0,0>}
-	texture{col_silver}
+   superellipsoid{<1,0.1> rotate<90,0,0> scale<1.4,0.5,1.4> translate<0,0,0>}
+   box{<0.25,0,-1><-0.25,1,1>rotate<0, w,   0> translate<0,0,0>}
+   box{<0.25,0,-1><-0.25,1,1>rotate<0, w+90,0> translate<0,0,0>}
+   texture{col_silver}
 }
 #end
 /********************************************************************************************************************************************
@@ -536,21 +536,21 @@ box{<-0.2,0,-0.45><0.2,7,0.45> texture{col_silver}}
 ********************************************************************************************************************************************/
 #macro TEXSOCKET_CONT()
 union{
-	box{<-0.0,5,-breite/4.4><0.1,10,breite/4.4>}
-	box{< 0.2,5,-breite/4.4><0.3,10,breite/4.4>}
-	texture{col_silver}
+   box{<-0.0,5,-breite/4.4><0.1,10,breite/4.4>}
+   box{< 0.2,5,-breite/4.4><0.3,10,breite/4.4>}
+   texture{col_silver}
 }
 #end
 /********************************************************************************************************************************************
 
 ********************************************************************************************************************************************/
 
-#local texcolor = color red 0.15 green 0.5 blue 0.4;	//typical green color of the plastic body
+#local texcolor = color red 0.15 green 0.5 blue 0.4;  //typical green color of the plastic body
 union{
-	#local links=-pin/4*2.54-8.73;	//linker gehaeuserand (mit hebel)  10.5mm vom pin  10-1.27=8.73
-	#local rechts=pin/4*2.54+5.73;	//rechter gehaeuserand 7 mm vom pin 7-1.27=5.73
-	#local a=pin;
-        #local srand = 3.8;		//seitenrand , Abstand vom Pin zum Gehauserand
+   #local links=-pin/4*2.54-8.73;   //linker gehaeuserand (mit hebel)  10.5mm vom pin  10-1.27=8.73
+   #local rechts=pin/4*2.54+5.73;   //rechter gehaeuserand 7 mm vom pin 7-1.27=5.73
+   #local a=pin;
+        #local srand = 3.8;      //seitenrand , Abstand vom Pin zum Gehauserand
         #if(breite>20) 
                 #local srand = (33-breite) / 2;
                 #local links =-pin/4*2.54-11.36;
@@ -561,121 +561,121 @@ union{
                         #local rechts = 31;
                 #end
         #end
-	// beim 48W (248-1282-00-0602J) ist das Gehäuse um ca 2,5 mm in Richtung zum Hebel verschoben
+   // beim 48W (248-1282-00-0602J) ist das Gehäuse um ca 2,5 mm in Richtung zum Hebel verschoben
         #if(pin=48) 
                 #local links  = links - 2.5;
                 #local rechts = rechts - 2.5;
         #end
 
-	difference{
-		union{
-			// der gruene grundkoerper
-			// Länge: 2.54*pin/2 + 14.63
-			// Breite:  15.00=7.62+2x3.7   22.75=15.24+2x3.7
-			// Hoehe:   11.50
+   difference{
+      union{
+         // der gruene grundkoerper
+         // Länge: 2.54*pin/2 + 14.63
+         // Breite:  15.00=7.62+2x3.7   22.75=15.24+2x3.7
+         // Hoehe:   11.50
 
-			box{<links+1, 0, -breite/2-srand>  <rechts-1, 11.8  ,breite/2+srand>}
-			box{<links,   0, -breite/2-srand+1>  <rechts, 11.8  ,breite/2+srand-1>}
-			cylinder{<0,0,0><0,11.8,0>1 translate<links+1 , 0,  breite/2+srand-1>}
-			cylinder{<0,0,0><0,   7,0>1 translate<links+1 , 0, -breite/2-srand+1>}
-			cylinder{<0,0,0><0,11.8,0>1 translate<rechts-1, 0,  breite/2+srand-1>}
-			cylinder{<0,0,0><0,11.8,0>1 translate<rechts-1, 0, -breite/2-srand+1>}
+         box{<links+1, 0, -breite/2-srand>  <rechts-1, 11.8  ,breite/2+srand>}
+         box{<links,   0, -breite/2-srand+1>  <rechts, 11.8  ,breite/2+srand-1>}
+         cylinder{<0,0,0><0,11.8,0>1 translate<links+1 , 0,  breite/2+srand-1>}
+         cylinder{<0,0,0><0,   7,0>1 translate<links+1 , 0, -breite/2-srand+1>}
+         cylinder{<0,0,0><0,11.8,0>1 translate<rechts-1, 0,  breite/2+srand-1>}
+         cylinder{<0,0,0><0,11.8,0>1 translate<rechts-1, 0, -breite/2-srand+1>}
 
                         // Beschriftung      
                         text{ttf besch_font "3M" 0.5,0.1*x scale<3,4,1>  rotate<90,0,0> rotate<0,-90,0> translate<links+8,12,-2>}
-		}
+      }
                 // diferent width of the contacts (slots)
-		#local ii=0;
-		#if(breite>10) 
-			#local ii=2;
-		#end
-		#if(breite>20) 
-			#local ii=4.5;
-		#end
-		// die Ausspartung fuer den Hebel
-		box{<links-1, 5, -breite/2-srand+2><links+6, 12 ,-breite/2-srand-2>}
-		// Vertiefungen
-		box{<-pin/4*2.54, 2, -breite/4><pin/4*2.54, 3, breite/4> translate<0, 9,  breite/2-ii>} 
-		box{<-pin/4*2.54, 2, -breite/4><pin/4*2.54, 3, breite/4> translate<0, 9, -breite/2+ii>} 
-		//loecher fuer die schrauben
-		cylinder{<0,0,0><0,13,0>1.6 translate<links +2,0,0>}
-		cylinder{<0,0,0><0,13,0>1.6 translate<rechts-2,0,0>}
-		// fuer jedes Pin ein schlitz im Grundkoerper
-		// Breite 1.4mm, Laenge 7mm=15,24/2.2 oder 3.5mm=7,62/2,2
-		// Verschiebung breiter schlitze ist 2mm geringer
-		#local i=0;
-		#while(i<(a/4))
-			#if((pin/4)=div(pin,4))	// pinzahl durch 4 teilbar
-    			#local k = div(pin,4)-i-1;
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54+1.27,-7.15+2.9+9, breite/2-ii>}
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54-1.27,-7.15+2.9+9, breite/2-ii>}
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54+1.27,-7.15+2.9+9,-breite/2+ii>}
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54-1.27,-7.15+2.9+9,-breite/2+ii>}
-			#else			// pinzahl nicht durch 4 teilbar
-				#local k = div(pin,4)-i;
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54,-7.15+2.9+9, breite/2-ii>}
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54,-7.15+2.9+9, breite/2-ii>}
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54,-7.15+2.9+9,-breite/2+ii>}
-				box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54,-7.15+2.9+9,-breite/2+ii>}
-			#end
-			#local i=i+1;
-		#end
-		pigment{texcolor}
-	} //difference fuer den gruenen plastik-koerper endet hier
+      #local ii=0;
+      #if(breite>10) 
+         #local ii=2;
+      #end
+      #if(breite>20) 
+         #local ii=4.5;
+      #end
+      // die Ausspartung fuer den Hebel
+      box{<links-1, 5, -breite/2-srand+2><links+6, 12 ,-breite/2-srand-2>}
+      // Vertiefungen
+      box{<-pin/4*2.54, 2, -breite/4><pin/4*2.54, 3, breite/4> translate<0, 9,  breite/2-ii>} 
+      box{<-pin/4*2.54, 2, -breite/4><pin/4*2.54, 3, breite/4> translate<0, 9, -breite/2+ii>} 
+      //loecher fuer die schrauben
+      cylinder{<0,0,0><0,13,0>1.6 translate<links +2,0,0>}
+      cylinder{<0,0,0><0,13,0>1.6 translate<rechts-2,0,0>}
+      // fuer jedes Pin ein schlitz im Grundkoerper
+      // Breite 1.4mm, Laenge 7mm=15,24/2.2 oder 3.5mm=7,62/2,2
+      // Verschiebung breiter schlitze ist 2mm geringer
+      #local i=0;
+      #while(i<(a/4))
+         #if((pin/4)=div(pin,4)) // pinzahl durch 4 teilbar
+            #local k = div(pin,4)-i-1;
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54+1.27,-7.15+2.9+9, breite/2-ii>}
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54-1.27,-7.15+2.9+9, breite/2-ii>}
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54+1.27,-7.15+2.9+9,-breite/2+ii>}
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54-1.27,-7.15+2.9+9,-breite/2+ii>}
+         #else       // pinzahl nicht durch 4 teilbar
+            #local k = div(pin,4)-i;
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54,-7.15+2.9+9, breite/2-ii>}
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54,-7.15+2.9+9, breite/2-ii>}
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate< k*2.54,-7.15+2.9+9,-breite/2+ii>}
+            box{<-0.7,-0,-breite/4.4><0.7,15,breite/4.4> translate<-k*2.54,-7.15+2.9+9,-breite/2+ii>}
+         #end
+         #local i=i+1;
+      #end
+      pigment{texcolor}
+   } //difference fuer den gruenen plastik-koerper endet hier
 
-	// der Hebel
-	union{
-		cylinder{<  0,0,0><  0,0,3>0.8 texture{col_silver}} 
-		sphere{<    0,0,0>0.8 texture{col_silver}} 
-		cylinder{<  0,0,0><-14,0,0>0.8 texture{col_silver}} 
-		cylinder{<-14,0,0><-16.5,0,0>2.4 pigment{texcolor}}
-		sphere{<-14,0,0>2.4 pigment{texcolor}} 
-		sphere{<-16.5,0,0>2.4 pigment{texcolor}} 
-		translate<links+5, 7, -breite/2-srand+1>
-	}
+   // der Hebel
+   union{
+      cylinder{<  0,0,0><  0,0,3>0.8 texture{col_silver}} 
+      sphere{<    0,0,0>0.8 texture{col_silver}} 
+      cylinder{<  0,0,0><-14,0,0>0.8 texture{col_silver}} 
+      cylinder{<-14,0,0><-16.5,0,0>2.4 pigment{texcolor}}
+      sphere{<-14,0,0>2.4 pigment{texcolor}} 
+      sphere{<-16.5,0,0>2.4 pigment{texcolor}} 
+      translate<links+5, 7, -breite/2-srand+1>
+   }
 
-	//schrauben  Durchmesser 3mm, kreuz mit 2mm
-	object{TEXSOCKET_SCREWHEAD_CROSS() translate<links+2 , 11,0>}
-	object{TEXSOCKET_SCREWHEAD_CROSS() translate<rechts-2, 11,0>}
+   //schrauben  Durchmesser 3mm, kreuz mit 2mm
+   object{TEXSOCKET_SCREWHEAD_CROSS() translate<links+2 , 11,0>}
+   object{TEXSOCKET_SCREWHEAD_CROSS() translate<rechts-2, 11,0>}
 
-	//kontaktfedern
-	#local i=0;
-	#while(i<(a/4))
-		#if((pin/4)=div(pin,4))	// pinzahl durch 4 teilbar
-   			#local k = div(pin,4)-i-1;
-			object{TEXSOCKET_CONT() translate< k*2.54+1.27, 0 ,breite/2-ii>}
-			object{TEXSOCKET_CONT() translate<-k*2.54-1.27, 0, breite/2-ii>}
-			object{TEXSOCKET_CONT() translate< k*2.54+1.27, 0,-breite/2+ii>}
-			object{TEXSOCKET_CONT() translate<-k*2.54-1.27, 0,-breite/2+ii>}
-		#else			// pinzahl nicht durch 4 teilbar
-			#local k = div(pin,4)-i;
-			object{TEXSOCKET_CONT() translate< k*2.54, 0 ,breite/2-ii>}
-			object{TEXSOCKET_CONT() translate<-k*2.54, 0, breite/2-ii>}
-			object{TEXSOCKET_CONT() translate< k*2.54, 0,-breite/2+ii>}
-			object{TEXSOCKET_CONT() translate<-k*2.54, 0,-breite/2+ii>}
-		#end
-		#local i=i+1;
-	#end
+   //kontaktfedern
+   #local i=0;
+   #while(i<(a/4))
+      #if((pin/4)=div(pin,4)) // pinzahl durch 4 teilbar
+            #local k = div(pin,4)-i-1;
+         object{TEXSOCKET_CONT() translate< k*2.54+1.27, 0 ,breite/2-ii>}
+         object{TEXSOCKET_CONT() translate<-k*2.54-1.27, 0, breite/2-ii>}
+         object{TEXSOCKET_CONT() translate< k*2.54+1.27, 0,-breite/2+ii>}
+         object{TEXSOCKET_CONT() translate<-k*2.54-1.27, 0,-breite/2+ii>}
+      #else       // pinzahl nicht durch 4 teilbar
+         #local k = div(pin,4)-i;
+         object{TEXSOCKET_CONT() translate< k*2.54, 0 ,breite/2-ii>}
+         object{TEXSOCKET_CONT() translate<-k*2.54, 0, breite/2-ii>}
+         object{TEXSOCKET_CONT() translate< k*2.54, 0,-breite/2+ii>}
+         object{TEXSOCKET_CONT() translate<-k*2.54, 0,-breite/2+ii>}
+      #end
+      #local i=i+1;
+   #end
 
-	// nun die pins, in Form flacher Blechstreifen
-	#local i=0;
-	#while(i<(a/4))
-		#if((pin/4)=div(pin,4))
-			#local k = div(pin,4)-i-1;
-			object{TEXSOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,breite/2>}
-			object{TEXSOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,breite/2>}
-			object{TEXSOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,-breite/2>}
-			object{TEXSOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,-breite/2>}
-		#else
-			#local k = div(pin,4)-i;
-			object{TEXSOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,breite/2>}
-			object{TEXSOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,breite/2>}
-			object{TEXSOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,-breite/2>}
-			object{TEXSOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,-breite/2>}
-		#end
-		#local i=i+1;
-	#end
-	translate<0,0.1,0> 
+   // nun die pins, in Form flacher Blechstreifen
+   #local i=0;
+   #while(i<(a/4))
+      #if((pin/4)=div(pin,4))
+         #local k = div(pin,4)-i-1;
+         object{TEXSOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,breite/2>}
+         object{TEXSOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,breite/2>}
+         object{TEXSOCKET_DIP_PIN() translate<k*2.54+1.27,-7.15+2.9,-breite/2>}
+         object{TEXSOCKET_DIP_PIN() translate<-k*2.54-1.27,-7.15+2.9,-breite/2>}
+      #else
+         #local k = div(pin,4)-i;
+         object{TEXSOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,breite/2>}
+         object{TEXSOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,breite/2>}
+         object{TEXSOCKET_DIP_PIN() translate<k*2.54,-7.15+2.9,-breite/2>}
+         object{TEXSOCKET_DIP_PIN() translate<-k*2.54,-7.15+2.9,-breite/2>}
+      #end
+      #local i=i+1;
+   #end
+   translate<0,0.1,0> 
 }
 #end
 
@@ -736,9 +736,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -748,28 +748,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}

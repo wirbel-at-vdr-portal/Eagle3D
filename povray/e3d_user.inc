@@ -206,11 +206,11 @@ union{
     #local hpin=-min(4.5,(pin_length+pcb_height));
     
     union{
-    	text {ttf global_fontfile_arial "T18" 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,-0.4>}
-    	text {ttf global_fontfile_arial value 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,+1.6>}
-    	text {ttf global_fontfile_arial "3" 0.1, 0 scale 2 rotate<90,180,0> translate<-5,6.45,-0.4>}
-    	text {ttf global_fontfile_arial "0302" 0.1, 0 scale 2 rotate<90,180,0> translate<-1.8,6.45,+1.6>}
-    	text {ttf global_fontfile_eagle3d "0" 0.1, 0 scale 2 rotate<90,180,0> translate<+2,6.45,-0>}
+      text {ttf global_fontfile_arial "T18" 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,-0.4>}
+      text {ttf global_fontfile_arial value 0.1, 0 scale 2 rotate<90,180,0> translate<+8,6.45,+1.6>}
+      text {ttf global_fontfile_arial "3" 0.1, 0 scale 2 rotate<90,180,0> translate<-5,6.45,-0.4>}
+      text {ttf global_fontfile_arial "0302" 0.1, 0 scale 2 rotate<90,180,0> translate<-1.8,6.45,+1.6>}
+      text {ttf global_fontfile_eagle3d "0" 0.1, 0 scale 2 rotate<90,180,0> translate<+2,6.45,-0>}
         pigment{Black}
     }
     scale x*19/18  translate <-2,0,0>
@@ -225,7 +225,7 @@ union{
 union{
     
     //Body
-    box{<0,0,0><LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2>}            //Grundkörper braun
+    box{<0,0,0><LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2>}            //GrundkÃ¶rper braun
     
     //Marking
     text{ttf besch_font value 0.1,0 scale L/8 rotate<90,0,0> translate<-LT/4,H+(L-LT)/2+0.01,0> pigment{DarkWood*0.7}}
@@ -352,7 +352,7 @@ union {
                0.1,     //di_pcb  = Abstand des Kunststoff zur Platine
                0,       //kor_w   = Korrekturwinkel
                0,       //pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
-               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45° statt 10° verwendet (SO)
+               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45Â° statt 10Â° verwendet (SO)
                1.5,     //pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
                2.0,     //besch_s = Scalefaktor der Beschriftung
                0,       //besch_w = Wenn != 0 wird Beschriftung gedreht
@@ -372,7 +372,7 @@ union {
             box { <-5,6.5,-3+4.5> <5,6.5+3.15,20>  translate<0,0,0>} // ausschnitt um Zylinder.
             box { <-5,-1,14.5-3-2> <5,12.0,14.5-3+1>  translate<0,0,0>}      
             }
-        cylinder { <0,6.5,-2> <0,6.5,14.5-4> 8/2 }         // au�enhuelle fuer stecker
+        cylinder { <0,6.5,-2> <0,6.5,14.5-4> 8/2 }         // außenhuelle fuer stecker
         box { <-8/2,0,14.5-3-2> <8/2,6.5,14.5-4>  translate<0,0,0>}
         box { <-8/2,0,14.5-3-2> <-4/2,3.0,14.5-3>  translate<0,0,0>}
         box { < 4/2,0,14.5-3-2> < 8/2,3.0,14.5-3>  translate<0,0,0>}
@@ -512,7 +512,7 @@ union {
                0.05,    //di_pcb  = Abstand des Kunststoff zur Platine
                0,       //kor_w   = Korrekturwinkel
                0,       //pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
-               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45° statt 10° verwendet (SO)
+               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45Â° statt 10Â° verwendet (SO)
                1.5,     //pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
                0.75,     //besch_s = Scalefaktor der Beschriftung
                0,       //besch_w = Wenn != 0 wird Beschriftung gedreht

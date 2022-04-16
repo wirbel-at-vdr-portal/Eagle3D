@@ -41,21 +41,21 @@
 #macro SOT82_PIN_H()
 union{
 union{
-	// senkrechter spitzer teil
-	difference{
-		box{<-0.375,tr_SOT82_s_pin ,0><0.375,8.5,0.6>}
-		box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_SOT82_s_pin ,-0.2>}
-		box{<0,0,0><-1,1,1> rotate<0,0,25> translate< 0.3-0.375,tr_SOT82_s_pin ,-0.2>}}
-	// biegung
-	difference{
-		cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
-		cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
-	// horizontal zum koerper
-	box{<-0.375,8.5,0.6><0.375,9.1,5.0>}
-	translate<0, -7, -5.08>
+   // senkrechter spitzer teil
+   difference{
+      box{<-0.375,tr_SOT82_s_pin ,0><0.375,8.5,0.6>}
+      box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_SOT82_s_pin ,-0.2>}
+      box{<0,0,0><-1,1,1> rotate<0,0,25> translate< 0.3-0.375,tr_SOT82_s_pin ,-0.2>}}
+   // biegung
+   difference{
+      cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
+      cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
+   // horizontal zum koerper
+   box{<-0.375,8.5,0.6><0.375,9.1,5.0>}
+   translate<0, -7, -5.08>
 }
-	//verdickung
-	box{<-0.75, 8.5, 0><0.75, 9.1, 2> translate<0, -7, -4>}
+   //verdickung
+   box{<-0.75, 8.5, 0><0.75, 9.1, 2> translate<0, -7, -4>}
 }
 #end
 /********************************************************************************************************************************************
@@ -63,43 +63,43 @@ union{
 ********************************************************************************************************************************************/
 
 union{
-	#if(pin_short=off)
-		#local tr_SOT82_s_pin = 0;
-	#else
-		#local tr_SOT82_s_pin = 7-(pcb_height+pin_length);
-	#end
+   #if(pin_short=off)
+      #local tr_SOT82_s_pin = 0;
+   #else
+      #local tr_SOT82_s_pin = 7-(pcb_height+pin_length);
+   #end
 
-	//Pins
-	union{
-		object{SOT82_PIN_H() translate<-2.54,0,0>}
-		object{SOT82_PIN_H() translate< 2.54,0,0>}
-		object{SOT82_PIN_H()}
-		texture{col_silver}
-	}
+   //Pins
+   union{
+      object{SOT82_PIN_H() translate<-2.54,0,0>}
+      object{SOT82_PIN_H() translate< 2.54,0,0>}
+      object{SOT82_PIN_H()}
+      texture{col_silver}
+   }
 
-	//body
-	union{
-		//metal Body ground
-		box{<-2.8,4.5,1.8><2.8,12,2.551> texture{col_silver}}              
-		
-		difference{
-			//plastic Body
-			box{<-3.6,2.5,0><3.6,13.15,2.55>}
-			cylinder{<0,0,0.1><0,0,-0.4>1.55 translate<0,9.35,0>}
+   //body
+   union{
+      //metal Body ground
+      box{<-2.8,4.5,1.8><2.8,12,2.551> texture{col_silver}}              
+      
+      difference{
+         //plastic Body
+         box{<-3.6,2.5,0><3.6,13.15,2.55>}
+         cylinder{<0,0,0.1><0,0,-0.4>1.55 translate<0,9.35,0>}
 
-			cylinder{<0,0,1.25><0,0,-0.4>2 translate<-4.5,9.35,0>}
-			cylinder{<0,0,1.25><0,0,-0.4>2 translate< 4.5,9.35,0>}
+         cylinder{<0,0,1.25><0,0,-0.4>2 translate<-4.5,9.35,0>}
+         cylinder{<0,0,1.25><0,0,-0.4>2 translate< 4.5,9.35,0>}
 
-			cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,3.5,0>}
-			cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,3.5,0>}
+         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,3.5,0>}
+         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,3.5,0>}
 
-			pigment{Gray30}}	
-		
-		text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3, 5, -0.01>}
+         pigment{Gray30}}  
+      
+      text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3, 5, -0.01>}
 
-		rotate<90,0,0>
-		translate<0,2.55,-3.81>
-	}
+      rotate<90,0,0>
+      translate<0,2.55,-3.81>
+   }
 }
 #end
 
@@ -114,61 +114,61 @@ TR_SOT82_L_GRND(value)
 ********************************************************************************************************************************************/
 #macro TR_SOT82_S_GRND(value)
 union{
-	union{
-		union{
-			#if(pin_short=off)
-				#local tr_SOT82_s_pin = -14;
-			#else
-				#local tr_SOT82_s_pin = 0-(pcb_height+pin_length);
-			#end
+   union{
+      union{
+         #if(pin_short=off)
+            #local tr_SOT82_s_pin = -14;
+         #else
+            #local tr_SOT82_s_pin = 0-(pcb_height+pin_length);
+         #end
 
-			difference{    
-				//PIN Middle
-				box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}}
-			difference{ 
-				//PIN Left
-				box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}
-				translate<-2.54,0,0>}
-			difference{     
-				//PIN Right
-				box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}
-				translate<2.54,0,0>}
-			//PIN add-on
-			box{<0,0,0><1.5,1,0.6> translate<-0.375,0.8,0>}
-			box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<2.54,0.8,0>}
-			box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<-2.54,0.8,0>}
+         difference{    
+            //PIN Middle
+            box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}}
+         difference{ 
+            //PIN Left
+            box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}
+            translate<-2.54,0,0>}
+         difference{     
+            //PIN Right
+            box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}
+            translate<2.54,0,0>}
+         //PIN add-on
+         box{<0,0,0><1.5,1,0.6> translate<-0.375,0.8,0>}
+         box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<2.54,0.8,0>}
+         box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<-2.54,0.8,0>}
 
-			translate<-0.8/2,0,0.84>
-		}//END union3
+         translate<-0.8/2,0,0.84>
+      }//END union3
 
-		//metal plate / Body ground
-		box{<-2.8,4.5,1.8><2.8,12,2.551>}              
-		texture{col_silver}
-	}//END union2
+      //metal plate / Body ground
+      box{<-2.8,4.5,1.8><2.8,12,2.551>}              
+      texture{col_silver}
+   }//END union2
 
-	difference{
-		//plastic Body
-		box{<-3.6,2.5,0><3.6,13.15,2.55>}
-		cylinder{<0,0,0.1><0,0,-0.4>1.55 translate<0,9.35,0>}
+   difference{
+      //plastic Body
+      box{<-3.6,2.5,0><3.6,13.15,2.55>}
+      cylinder{<0,0,0.1><0,0,-0.4>1.55 translate<0,9.35,0>}
 
-		cylinder{<0,0,1.25><0,0,-0.4>2 translate<-4.5,9.35,0>}
-		cylinder{<0,0,1.25><0,0,-0.4>2 translate< 4.5,9.35,0>}
+      cylinder{<0,0,1.25><0,0,-0.4>2 translate<-4.5,9.35,0>}
+      cylinder{<0,0,1.25><0,0,-0.4>2 translate< 4.5,9.35,0>}
 
-		cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,3.5,0>}
-		cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,3.5,0>}
+      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,3.5,0>}
+      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,3.5,0>}
 
-		pigment{Gray30}}
+      pigment{Gray30}}
 
-	// lable
-	text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3,5,-0.01>}
+   // lable
+   text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3,5,-0.01>}
 
-	translate<0,0,-2.55>
+   translate<0,0,-2.55>
 }//END union1
 
 #end
@@ -330,21 +330,21 @@ TR_SOT93_GRND("V",-3.18,0,0,value, 0)
 #macro TO126_PIN_H()
 union{
 union{
-	// senkrechter spitzer teil
-	difference{
-		box{<-0.375,tr_to126_s_pin ,0><0.375,8.5,0.6>}
-		box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_to126_s_pin ,-0.2>}
-		box{<0,0,0><-1,1,1> rotate<0,0,25> translate< 0.3-0.375,tr_to126_s_pin ,-0.2>}}
-	// biegung
-	difference{
-		cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
-		cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
-	// horizontal zum koerper
-	box{<-0.375,8.5,0.6><0.375,9.1,5.0>}
-	translate<0, -7, -5.08>
+   // senkrechter spitzer teil
+   difference{
+      box{<-0.375,tr_to126_s_pin ,0><0.375,8.5,0.6>}
+      box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_to126_s_pin ,-0.2>}
+      box{<0,0,0><-1,1,1> rotate<0,0,25> translate< 0.3-0.375,tr_to126_s_pin ,-0.2>}}
+   // biegung
+   difference{
+      cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
+      cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
+   // horizontal zum koerper
+   box{<-0.375,8.5,0.6><0.375,9.1,5.0>}
+   translate<0, -7, -5.08>
 }
-	//verdickung
-	box{<-0.75, 8.5, 0><0.75, 9.1, 2> translate<0, -7, -4>}
+   //verdickung
+   box{<-0.75, 8.5, 0><0.75, 9.1, 2> translate<0, -7, -4>}
 }
 #end
 /********************************************************************************************************************************************
@@ -352,45 +352,45 @@ union{
 ********************************************************************************************************************************************/
 
 union{
-	#if(pin_short=off)
-		#local tr_to126_s_pin = 0;
-	#else
-		#local tr_to126_s_pin = 7-(pcb_height+pin_length);
-	#end
+   #if(pin_short=off)
+      #local tr_to126_s_pin = 0;
+   #else
+      #local tr_to126_s_pin = 7-(pcb_height+pin_length);
+   #end
 
-	//Pins
-	union{
-		object{TO126_PIN_H() translate<-2.54,0,0>}
-		object{TO126_PIN_H() translate< 2.54,0,0>}
-		object{TO126_PIN_H()}
-		texture{col_silver}
-	}
+   //Pins
+   union{
+      object{TO126_PIN_H() translate<-2.54,0,0>}
+      object{TO126_PIN_H() translate< 2.54,0,0>}
+      object{TO126_PIN_H()}
+      texture{col_silver}
+   }
 
-	//body
-	union{
-		difference{ 
-			//Body ground
-			box{<-2.8,4.5,1.8><2.8,12,2.551>}              
-			cylinder{<0,0,0><0,0,1>1.549 translate<0,9.35,1.7>}
-			texture{col_silver}
-		}
-		difference{
-			//Body
-			box{<-3.6,2.5,0><3.6,13.15,2.55>}
-			cylinder{<0,0,0><0,0,3>1.55 translate<0,9.35,-0.1>}
-			cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,11.5,0>}
-			cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,11.5,0>}
-			cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<0,6.5,0>}
-			box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> translate<0,9.35,0>}
-			box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0, 120> translate<0,9.35,0>}
-			box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0,-120> translate<0,9.35,0>}
-			pigment{Gray30}
-		}
-		text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3, 5, -0.01>}
+   //body
+   union{
+      difference{ 
+         //Body ground
+         box{<-2.8,4.5,1.8><2.8,12,2.551>}              
+         cylinder{<0,0,0><0,0,1>1.549 translate<0,9.35,1.7>}
+         texture{col_silver}
+      }
+      difference{
+         //Body
+         box{<-3.6,2.5,0><3.6,13.15,2.55>}
+         cylinder{<0,0,0><0,0,3>1.55 translate<0,9.35,-0.1>}
+         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,11.5,0>}
+         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,11.5,0>}
+         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<0,6.5,0>}
+         box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> translate<0,9.35,0>}
+         box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0, 120> translate<0,9.35,0>}
+         box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0,-120> translate<0,9.35,0>}
+         pigment{Gray30}
+      }
+      text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3, 5, -0.01>}
 
-		rotate<90,0,0>
-		translate<0,2.55,-3.81>
-	}
+      rotate<90,0,0>
+      translate<0,2.55,-3.81>
+   }
 }
 #end
 
@@ -405,62 +405,62 @@ TR_TO126_L_GRND(value)
 ********************************************************************************************************************************************/
 #macro TR_TO126_S_GRND(value)
 union{
-	union{
-		union{
-			#if(pin_short=off)
-				#local tr_to126_s_pin = -14;
-			#else
-				#local tr_to126_s_pin = 0-(pcb_height+pin_length);
-			#end
+   union{
+      union{
+         #if(pin_short=off)
+            #local tr_to126_s_pin = -14;
+         #else
+            #local tr_to126_s_pin = 0-(pcb_height+pin_length);
+         #end
 
-			difference{    
-				//PIN Middle
-				box{<0,tr_to126_s_pin,0><0.8,2.5,0.62>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to126_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to126_s_pin,-0.2>}}
-			difference{ 
-				//PIN Left
-				box{<0,tr_to126_s_pin,0><0.8,2.5,0.62>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to126_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to126_s_pin,-0.2>}
-				translate<-2.54,0,0>}
-			difference{     
-				//PIN Right
-				box{<0,tr_to126_s_pin,0><0.8,2.5,0.62>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to126_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to126_s_pin,-0.2>}
-				translate<2.54,0,0>}
-			//PIN add-on
-			box{<0,0,0><1.5,1,0.6> translate<-0.375,0.8,0>}
-			box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<2.54,0.8,0>}
-			box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<-2.54,0.8,0>}
+         difference{    
+            //PIN Middle
+            box{<0,tr_to126_s_pin,0><0.8,2.5,0.62>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to126_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to126_s_pin,-0.2>}}
+         difference{ 
+            //PIN Left
+            box{<0,tr_to126_s_pin,0><0.8,2.5,0.62>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to126_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to126_s_pin,-0.2>}
+            translate<-2.54,0,0>}
+         difference{     
+            //PIN Right
+            box{<0,tr_to126_s_pin,0><0.8,2.5,0.62>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to126_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to126_s_pin,-0.2>}
+            translate<2.54,0,0>}
+         //PIN add-on
+         box{<0,0,0><1.5,1,0.6> translate<-0.375,0.8,0>}
+         box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<2.54,0.8,0>}
+         box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<-2.54,0.8,0>}
 
-			translate<-0.8/2,0,0.84>
-		}//END union3
+         translate<-0.8/2,0,0.84>
+      }//END union3
 
-		difference{ 
-			//Body ground
-			box{<-2.8,4.5,1.8><2.8,12,2.551>}              
-			cylinder{<0,0,0><0,0,1>1.549 translate<0,9.35,1.7>}}
-		texture{col_silver}
-	}//END union2
+      difference{ 
+         //Body ground
+         box{<-2.8,4.5,1.8><2.8,12,2.551>}              
+         cylinder{<0,0,0><0,0,1>1.549 translate<0,9.35,1.7>}}
+      texture{col_silver}
+   }//END union2
 
-	difference{
-		//Body
-		box{<-3.6,2.5,0><3.6,13.15,2.55>}
-		cylinder{<0,0,0><0,0,3>1.55 translate<0,9.35,-0.1>}
-		cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,11.5,0>}
-		cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,11.5,0>}
-		cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<0,6.5,0>}
+   difference{
+      //Body
+      box{<-3.6,2.5,0><3.6,13.15,2.55>}
+      cylinder{<0,0,0><0,0,3>1.55 translate<0,9.35,-0.1>}
+      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,11.5,0>}
+      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,11.5,0>}
+      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<0,6.5,0>}
 
-		box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> translate<0,9.35,0>}
-		box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0, 120> translate<0,9.35,0>}
-		box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0,-120> translate<0,9.35,0>}
+      box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> translate<0,9.35,0>}
+      box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0, 120> translate<0,9.35,0>}
+      box{<-0.5,-1,-1><0.5,1,1> translate<0,1.3,0> rotate<0,0,-120> translate<0,9.35,0>}
 
-		pigment{Gray30}}
-	text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> 
-	translate<-3,5,-0.01>}
-	translate<0,0,-2.55>
+      pigment{Gray30}}
+   text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> 
+   translate<-3,5,-0.01>}
+   translate<0,0,-2.55>
 }//END union1
 
 #end
@@ -541,13 +541,13 @@ TR_TO18_GRND(value)
 #macro TR_TO202_BODY()
 // plastik grundkoerper
 difference{
-	box{<-4.8, 10, -2.5><4.8, 18, 2>}
-        box{<-2, 9, 4><0, 19, -4> rotate<0, 7, 0> translate<-4.8, 0, 0> }	                             
-        box{<-2, 9, 4><0, 19, -4> rotate<0,-7, 0> translate<-4.8, 0, 0> }	                             
-        box{< 2, 9, 4><0, 19, -4> rotate<0,45, 0> translate< 4.8, 0, 0> }	                             
-        box{< 2, 9, 4><0, 19, -4> rotate<0,-7, 0> translate< 4.8, 0, 0> }	                                                         
-//	cylinder{<0, 14, 2.4><0, 14, 2.6> 1.7}
-	pigment{Gray30}
+   box{<-4.8, 10, -2.5><4.8, 18, 2>}
+        box{<-2, 9, 4><0, 19, -4> rotate<0, 7, 0> translate<-4.8, 0, 0> }                               
+        box{<-2, 9, 4><0, 19, -4> rotate<0,-7, 0> translate<-4.8, 0, 0> }                               
+        box{< 2, 9, 4><0, 19, -4> rotate<0,45, 0> translate< 4.8, 0, 0> }                               
+        box{< 2, 9, 4><0, 19, -4> rotate<0,-7, 0> translate< 4.8, 0, 0> }                                                           
+// cylinder{<0, 14, 2.4><0, 14, 2.6> 1.7}
+   pigment{Gray30}
 }
 #end
 /********************************************************************************************************************************************
@@ -556,13 +556,13 @@ difference{
 #macro TR_TO202_PIN_V(shift)
 #local lshift = shift+lang;
 union{
- 	difference{
-		box{<0,tr_to202_s_pin,0><0.66, 10.5, 0.5>}
-		box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to202_s_pin,-0.2>}
-		box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to202_s_pin,-0.2>}  
-	        translate<-0.66/2, 0, -0.25>		
-	}
- 	box{<-0.375, 8, -0.25><0.375, 10.5, 0.25>}
+   difference{
+      box{<0,tr_to202_s_pin,0><0.66, 10.5, 0.5>}
+      box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to202_s_pin,-0.2>}
+      box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to202_s_pin,-0.2>}  
+           translate<-0.66/2, 0, -0.25>      
+   }
+   box{<-0.375, 8, -0.25><0.375, 10.5, 0.25>}
 }
 #end
 /********************************************************************************************************************************************
@@ -570,22 +570,22 @@ union{
 ********************************************************************************************************************************************/
 #macro TR_TO202_PIN_H(shift)
 union{
-	union{
-		#local tr_to202_v_pin = tr_to202_s_pin -2;
-		// senkrechter spitzer teil
-		difference{
-			box{<-0.375,tr_to202_v_pin ,0><0.375,8.5,0.6>}
-			box{<0,0,0>< 1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_to202_v_pin ,-0.2>}
-			box{<0,0,0><-1,1,1> rotate<0,0, 25> translate< 0.3-0.375,tr_to202_v_pin ,-0.2>}}
-		// biegung
-		difference{
-			cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
-			cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
-		// horizontal zum koerper
-		box{<-0.375, 8.5, 0.6> <0.375, 9.1, 5>} 
-	}
-	box{<-0.75, 8.5, 3><0.75, 9.1, 5> translate<0,0,0> }
-	translate<0, 0, -2.54-0.3> 
+   union{
+      #local tr_to202_v_pin = tr_to202_s_pin -2;
+      // senkrechter spitzer teil
+      difference{
+         box{<-0.375,tr_to202_v_pin ,0><0.375,8.5,0.6>}
+         box{<0,0,0>< 1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_to202_v_pin ,-0.2>}
+         box{<0,0,0><-1,1,1> rotate<0,0, 25> translate< 0.3-0.375,tr_to202_v_pin ,-0.2>}}
+      // biegung
+      difference{
+         cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
+         cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
+      // horizontal zum koerper
+      box{<-0.375, 8.5, 0.6> <0.375, 9.1, 5>} 
+   }
+   box{<-0.75, 8.5, 3><0.75, 9.1, 5> translate<0,0,0> }
+   translate<0, 0, -2.54-0.3> 
 }
 #end
 /********************************************************************************************************************************************
@@ -603,14 +603,14 @@ union{
 ********************************************************************************************************************************************/
 #macro TR_TO202_BACK()
 union{
-	// metallische Kuehlfahne
-	difference{
-		box{<-3.1, 17, -0.25> <3.1, 32, 0.25>}
-		cylinder{<0,0,-1><0,0,1>1.65 translate<0,29,0>}
-	}	
-	box{<-3.0, 20, -0.25> <-4.6, 32, 0.25>}
+   // metallische Kuehlfahne
+   difference{
+      box{<-3.1, 17, -0.25> <3.1, 32, 0.25>}
+      cylinder{<0,0,-1><0,0,1>1.65 translate<0,29,0>}
+   }  
+   box{<-3.0, 20, -0.25> <-4.6, 32, 0.25>}
         box{< 3.0, 20, -0.25> < 4.6, 32, 0.25>}
-	texture{col_silver}
+   texture{col_silver}
 }
 #end
 /********************************************************************************************************************************************
@@ -619,37 +619,37 @@ union{
 // pin_length = 2.5;
 // pcb_height = 1.5;
 
-union{	
-	#if(pin_short=off)
-		#local tr_to202_s_pin = 0;
-	#else
-		#local tr_to202_s_pin = 9.5-(pcb_height+pin_length);
-	#end
+union{   
+   #if(pin_short=off)
+      #local tr_to202_s_pin = 0;
+   #else
+      #local tr_to202_s_pin = 9.5-(pcb_height+pin_length);
+   #end
 
-	//Pins
-	union{
-           	object{TR_TO202_PIN(0) translate<-2.54,0,0>}
-		object{TR_TO202_PIN(0) translate< 2.54,0,0>}
-		object{TR_TO202_PIN(0)}
-     		texture{col_silver}
-		translate<0,-7,-2.54>
-	}
+   //Pins
+   union{
+            object{TR_TO202_PIN(0) translate<-2.54,0,0>}
+      object{TR_TO202_PIN(0) translate< 2.54,0,0>}
+      object{TR_TO202_PIN(0)}
+         texture{col_silver}
+      translate<0,-7,-2.54>
+   }
 
-	// Koerper
-	union{
-		// metallische Rueckplatte
-		object{TR_TO202_BACK()} 
-		// plastik grundkoerper
-		object{TR_TO202_BODY()}     
-		// Beschriftung
-		text{ttf besch_font value 0.5,0 pigment{White} scale<1,1.5,1> translate<-3.5,15,-0.01-2.5>}
-		translate<0,-7,-2>      // rueckseite schliesst mit 0 ab    
-		#if (hor=1)
-			translate< 0, -3, 0>
-			rotate<90,0,0>
-			translate< 0, 0, -1>
-		#end
-	}
+   // Koerper
+   union{
+      // metallische Rueckplatte
+      object{TR_TO202_BACK()} 
+      // plastik grundkoerper
+      object{TR_TO202_BODY()}     
+      // Beschriftung
+      text{ttf besch_font value 0.5,0 pigment{White} scale<1,1.5,1> translate<-3.5,15,-0.01-2.5>}
+      translate<0,-7,-2>      // rueckseite schliesst mit 0 ab    
+      #if (hor=1)
+         translate< 0, -3, 0>
+         rotate<90,0,0>
+         translate< 0, 0, -1>
+      #end
+   }
 }
 #end
 
@@ -782,17 +782,17 @@ TR_TO218_GRND(value,3,10,2,on,-90*x,9*y)
 #macro TR_TO220_BODY()
 // plastik grundkoerper
 difference{
-	box{<-5.1, 13.5, 0><5.1, 22.6, 4.5>}
-	box{<-5.5, 0, 0><5.5, 3.5, -2> rotate<80, 0, 0> translate<0, 22.6-0.6, 0> }
-	box{<-5.5, 0, 0><5.5, -1, 2> rotate<-20, 0, 0> translate<0, 13.5, 3.7> }
-	cone{<-5.4,16.5,-0.01>1.4<-5.4,16.5,3.23>1.2}
-	cone{<5.4,16.5,-0.01>1.4<5.4,16.5,3.23>1.2}
-	#if (pins>3)
-	cylinder{<-3.5, 14.5, 0.1><-3.5, 14.5, -0.05>0.7}
-	#else
-	cylinder{<0, 14.5, 0.1><0, 14.5, -0.05>0.7}
-	#end
-	pigment{Gray30}
+   box{<-5.1, 13.5, 0><5.1, 22.6, 4.5>}
+   box{<-5.5, 0, 0><5.5, 3.5, -2> rotate<80, 0, 0> translate<0, 22.6-0.6, 0> }
+   box{<-5.5, 0, 0><5.5, -1, 2> rotate<-20, 0, 0> translate<0, 13.5, 3.7> }
+   cone{<-5.4,16.5,-0.01>1.4<-5.4,16.5,3.23>1.2}
+   cone{<5.4,16.5,-0.01>1.4<5.4,16.5,3.23>1.2}
+   #if (pins>3)
+   cylinder{<-3.5, 14.5, 0.1><-3.5, 14.5, -0.05>0.7}
+   #else
+   cylinder{<0, 14.5, 0.1><0, 14.5, -0.05>0.7}
+   #end
+   pigment{Gray30}
 }
 #end
 /********************************************************************************************************************************************
@@ -801,52 +801,52 @@ difference{
 #macro TR_TO220_PIN_V(shift)
 #local lshift = shift+lang;
 union{
-	// die platinenoberflaeche liegt bei etwa 8.5
-	// unterer teil
-	union{
-	 	difference{
-			box{<0,tr_to220_s_pin,0><0.75, 9, 0.6>}
-			box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-			box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-		}
-		#if (inline=0)
-		#if (lshift>0)
-			// biegung
-			difference{
-				cylinder{< 0,  8.5, 0.6><0.75, 8.5, 0.6> 0.6}
-				cylinder{<-0.1,8.0, 1.1><0.76, 8.0, 1.1> 0.5}
-				translate<0, 0.5, 0>}
-		translate<0,0,-shift*2.54-lang>
-		#end
-		#end
-	}
+   // die platinenoberflaeche liegt bei etwa 8.5
+   // unterer teil
+   union{
+      difference{
+         box{<0,tr_to220_s_pin,0><0.75, 9, 0.6>}
+         box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
+         box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
+      }
+      #if (inline=0)
+      #if (lshift>0)
+         // biegung
+         difference{
+            cylinder{< 0,  8.5, 0.6><0.75, 8.5, 0.6> 0.6}
+            cylinder{<-0.1,8.0, 1.1><0.76, 8.0, 1.1> 0.5}
+            translate<0, 0.5, 0>}
+      translate<0,0,-shift*2.54-lang>
+      #end
+      #end
+   }
 
-	//oberer teil
-	box{<0,9.6,0><0.75,13.5,0.6>}
-	#if (inline=0)
-	#if (lshift>0)
-	difference{
-		cylinder{< 0,   9.6,   0  ><0.75, 9.6,   0> 0.6}
-		cylinder{<-0.1,10.1,  -0.5><0.76,10.1,-0.5> 0.5}
-	}
-	#end
-	#end
+   //oberer teil
+   box{<0,9.6,0><0.75,13.5,0.6>}
+   #if (inline=0)
+   #if (lshift>0)
+   difference{
+      cylinder{< 0,   9.6,   0  ><0.75, 9.6,   0> 0.6}
+      cylinder{<-0.1,10.1,  -0.5><0.76,10.1,-0.5> 0.5}
+   }
+   #end
+   #end
 
-	//mittlerer teil
-	#if (lshift>0)
-	#if (inline=1)
-		box{<0,9,0><0.75,9.6,0.6>}
-	#else
-		box{<0,9.6,-shift*2.54-lang+0.6><0.75,9,0.6-0.6>}
-	#end
-	#else
-		box{<0,9.6,-shift*2.54-lang+0.6><0.75,9,0.6-0.6>}
-	#end
+   //mittlerer teil
+   #if (lshift>0)
+   #if (inline=1)
+      box{<0,9,0><0.75,9.6,0.6>}
+   #else
+      box{<0,9.6,-shift*2.54-lang+0.6><0.75,9,0.6-0.6>}
+   #end
+   #else
+      box{<0,9.6,-shift*2.54-lang+0.6><0.75,9,0.6-0.6>}
+   #end
 
-	#if (pins<5)
-		box{<0,0,0><1.5, 3.7, 0.6> translate<-0.375, 9.8, 0>}
-	#end
-	translate<-0.75/2, -8.5  , -2.54-0.3>
+   #if (pins<5)
+      box{<0,0,0><1.5, 3.7, 0.6> translate<-0.375, 9.8, 0>}
+   #end
+   translate<-0.75/2, -8.5  , -2.54-0.3>
 }
 #end
 /********************************************************************************************************************************************
@@ -855,29 +855,29 @@ union{
 #macro TR_TO220_PIN_H(shift)
 union{
 union{
-	#local tr_to220_v_pin = tr_to220_s_pin -2;
-	// senkrechter spitzer teil
-	difference{
-		box{<-0.375,tr_to220_v_pin ,0><0.375,8.5,0.6>}
-		box{<0,0,0>< 1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_to220_v_pin ,-0.2>}
-		box{<0,0,0><-1,1,1> rotate<0,0, 25> translate< 0.3-0.375,tr_to220_v_pin ,-0.2>}}
-	// biegung
-	difference{
-		cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
-		cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
-	// horizontal zum koerper
-	box{<-0.375,8.5,0.6><0.375,9.1,4.0+2.54*shift>}
-	translate<0, -5.98,-6.7>
-	translate<0,     0, 5.08-lang>
-	#if (inline=0)
-		translate<0,0,-2.54*shift>
-	#end
+   #local tr_to220_v_pin = tr_to220_s_pin -2;
+   // senkrechter spitzer teil
+   difference{
+      box{<-0.375,tr_to220_v_pin ,0><0.375,8.5,0.6>}
+      box{<0,0,0>< 1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_to220_v_pin ,-0.2>}
+      box{<0,0,0><-1,1,1> rotate<0,0, 25> translate< 0.3-0.375,tr_to220_v_pin ,-0.2>}}
+   // biegung
+   difference{
+      cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
+      cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
+   // horizontal zum koerper
+   box{<-0.375,8.5,0.6><0.375,9.1,4.0+2.54*shift>}
+   translate<0, -5.98,-6.7>
+   translate<0,     0, 5.08-lang>
+   #if (inline=0)
+      translate<0,0,-2.54*shift>
+   #end
 }
 #if (pins<5)
 #if (lang>1)
-	box{<-0.75, 8.5, 2><0.75, 9.1, 6> translate<0, -5.98, -6.7>
-	translate<0,0,(5.08-lang)/2>
-	}
+   box{<-0.75, 8.5, 2><0.75, 9.1, 6> translate<0, -5.98, -6.7>
+   translate<0,0,(5.08-lang)/2>
+   }
 #end
 #end
 }
@@ -897,15 +897,15 @@ TR_TO220_PIN_V(shift)
 ********************************************************************************************************************************************/
 #macro TR_TO220_BACK()
 union{
-	// metallische Rueckplatte
-	difference{
-		box{<-5.1,22.6,4.5><5.1,29,4.5-1.27>}
-		cylinder{<0,0,0><0,0,2>1.9 translate<0,26.2,2.6>}
-		box{<0,0,0><1,3,3> rotate<0,0,20> translate<5.1,26.5,2>}
-		box{<0,0,0><-1,3,3> rotate<0,0,-20> translate<-5.1,26.5,2>}
-	}
-	box{<-4,22.6,4.5><4,16,4.501>}
-	texture{col_silver}
+   // metallische Rueckplatte
+   difference{
+      box{<-5.1,22.6,4.5><5.1,29,4.5-1.27>}
+      cylinder{<0,0,0><0,0,2>1.9 translate<0,26.2,2.6>}
+      box{<0,0,0><1,3,3> rotate<0,0,20> translate<5.1,26.5,2>}
+      box{<0,0,0><-1,3,3> rotate<0,0,-20> translate<-5.1,26.5,2>}
+   }
+   box{<-4,22.6,4.5><4,16,4.501>}
+   texture{col_silver}
 }
 #end
 /********************************************************************************************************************************************
@@ -914,46 +914,46 @@ union{
 // pin_length = 2.5;
 // pcb_height = 1.5;
 
-union{	
-	#if(pin_short=off)
-		#local tr_to220_s_pin = -2;
-	#else
-		#local tr_to220_s_pin = 9.5-(pcb_height+pin_length)-2;
-	#end
+union{   
+   #if(pin_short=off)
+      #local tr_to220_s_pin = -2;
+   #else
+      #local tr_to220_s_pin = 9.5-(pcb_height+pin_length)-2;
+   #end
 
-	//Pins
-	union{
-		#if (pins<5)
-			object{TR_TO220_PIN(0) translate<-2.54,0,0>}
-			object{TR_TO220_PIN(0) translate< 2.54,0,0>}
-			#if (pins>2)
-				object{TR_TO220_PIN(2)}
-			#end
-		#else
-			object{TR_TO220_PIN(1.5)}
-			object{TR_TO220_PIN(0)   translate<-1.778,0,0>}
-			object{TR_TO220_PIN(0)   translate< 1.778,0,0>}
-			object{TR_TO220_PIN(1.5) translate<-3.556,0,0>}
-			object{TR_TO220_PIN(1.5) translate< 3.556,0,0>}
-		#end			
-		texture{col_silver}
-	}
+   //Pins
+   union{
+      #if (pins<5)
+         object{TR_TO220_PIN(0) translate<-2.54,0,0>}
+         object{TR_TO220_PIN(0) translate< 2.54,0,0>}
+         #if (pins>2)
+            object{TR_TO220_PIN(2)}
+         #end
+      #else
+         object{TR_TO220_PIN(1.5)}
+         object{TR_TO220_PIN(0)   translate<-1.778,0,0>}
+         object{TR_TO220_PIN(0)   translate< 1.778,0,0>}
+         object{TR_TO220_PIN(1.5) translate<-3.556,0,0>}
+         object{TR_TO220_PIN(1.5) translate< 3.556,0,0>}
+      #end        
+      texture{col_silver}
+   }
 
-	// Koerper
-	union{
-		// metallische Rueckplatte
-		object{TR_TO220_BACK()}
-		// plastik grundkoerper
-		object{TR_TO220_BODY()}
-		// Beschriftung
-		text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3.5,18,-0.01>}
-		translate<0,-9.5,-4.5>
-		#if (hor=1)
-			translate< 0, -4, 4.5>
-			rotate<90,0,0>
-			translate< 0, 4.6, -1.4>
-		#end
-	}
+   // Koerper
+   union{
+      // metallische Rueckplatte
+      object{TR_TO220_BACK()}
+      // plastik grundkoerper
+      object{TR_TO220_BODY()}
+      // Beschriftung
+      text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3.5,18,-0.01>}
+      translate<0,-9.5,-4.5>
+      #if (hor=1)
+         translate< 0, -4, 4.5>
+         rotate<90,0,0>
+         translate< 0, 4.6, -1.4>
+      #end
+   }
 }
 #end
 
@@ -995,70 +995,70 @@ TR_TO220_GRND(value, 5, 0, 0, 2, 0)
 //dahamm@gmx.net
 ********************************************************************************************************************************************/
 #macro TR_TO220_T05A_S_GRND(value)
-union{	
-	union{
-		union{
-			#if(pin_short=off)
-				#local tr_to220_s_pin = 9.5;
-			#else
-				#local tr_to220_s_pin = 9.5-(pcb_height+pin_length);
-			#end
-			difference{
-				box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-			}
-			difference{
-				box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-				translate<-1.778,0,0>
-			}
-			difference{
-				box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-				translate<1.778,0,0>
-			}
-			difference{
-				box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-				translate<3.556,0,0>
-			}
-			difference{
-				box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-				box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-				box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-				translate<-3.556,0,0>
-			}
-			box{<0,0,0><1.5,3.7,0.6> translate<-0.375,9.8,0>}
-			box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<1.778,9.8,0>}
-			box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<-1.778,9.8,0>}
-			box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<3.556,9.8,0>}
-			box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<-3.556,9.8,0>}
-			translate<-0.75/2,0,1.6>
-		}
-		difference{
-			box{<-5.1,22.6,4.5><5.1,29,4.5-1.27>}
-			cylinder{<0,0,0><0,0,2>1.9 translate<0,26.2,2.6>}
-			box{<0,0,0><1,3,3> rotate<0,0,20> translate<5.1,26.5,2>}
-			box{<0,0,0><-1,3,3> rotate<0,0,-20> translate<-5.1,26.5,2>}
-		}
-		box{<-4,22.6,4.5><4,16,4.501>}
-		texture{col_silver}
-	}
-	difference{
-		box{<-5.1,13.5,0><5.1,22.6,4.5>}
-		box{<-5.5,0,0><5.5,3,-2> rotate<45,0,0> translate<0,22.6-1.8,0> }
-		box{<-5.5,0,0><5.5,-1,2> rotate<-20,0,0> translate<0,13.5,3.7> }
-		cone{<-5.4,16.5,-0.01>1.4<-5.4,16.5,3.23>1.2}
-		cone{<5.4,16.5,-0.01>1.4<5.4,16.5,3.23>1.2}
-		cylinder{<0,14.5,0.1><0,14.5,-0.05>0.7}
-		pigment{Gray30}
-	}
-	text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3.5,18,-0.01>}
-	translate<0,-9.5,-4.5>
+union{   
+   union{
+      union{
+         #if(pin_short=off)
+            #local tr_to220_s_pin = 9.5;
+         #else
+            #local tr_to220_s_pin = 9.5-(pcb_height+pin_length);
+         #end
+         difference{
+            box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
+         }
+         difference{
+            box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
+            translate<-1.778,0,0>
+         }
+         difference{
+            box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
+            translate<1.778,0,0>
+         }
+         difference{
+            box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
+            translate<3.556,0,0>
+         }
+         difference{
+            box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
+            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
+            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
+            translate<-3.556,0,0>
+         }
+         box{<0,0,0><1.5,3.7,0.6> translate<-0.375,9.8,0>}
+         box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<1.778,9.8,0>}
+         box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<-1.778,9.8,0>}
+         box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<3.556,9.8,0>}
+         box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<-3.556,9.8,0>}
+         translate<-0.75/2,0,1.6>
+      }
+      difference{
+         box{<-5.1,22.6,4.5><5.1,29,4.5-1.27>}
+         cylinder{<0,0,0><0,0,2>1.9 translate<0,26.2,2.6>}
+         box{<0,0,0><1,3,3> rotate<0,0,20> translate<5.1,26.5,2>}
+         box{<0,0,0><-1,3,3> rotate<0,0,-20> translate<-5.1,26.5,2>}
+      }
+      box{<-4,22.6,4.5><4,16,4.501>}
+      texture{col_silver}
+   }
+   difference{
+      box{<-5.1,13.5,0><5.1,22.6,4.5>}
+      box{<-5.5,0,0><5.5,3,-2> rotate<45,0,0> translate<0,22.6-1.8,0> }
+      box{<-5.5,0,0><5.5,-1,2> rotate<-20,0,0> translate<0,13.5,3.7> }
+      cone{<-5.4,16.5,-0.01>1.4<-5.4,16.5,3.23>1.2}
+      cone{<5.4,16.5,-0.01>1.4<5.4,16.5,3.23>1.2}
+      cylinder{<0,14.5,0.1><0,14.5,-0.05>0.7}
+      pigment{Gray30}
+   }
+   text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3.5,18,-0.01>}
+   translate<0,-9.5,-4.5>
 }
 #end
 #macro TR_TO220_T05A_S(value)
@@ -1196,45 +1196,45 @@ TR_TO247_GRND(value,3,10,2,on,-90*x,9*y)
 // pin_length = 2.5;
 // pcb_height = 1.5;
 
-union{	
-	#if(pin_short=off)
-		#local tr_to39_pin = 0;
-	#else
-		#local tr_to39_pin = 11-(pcb_height+pin_length);
-	#end
-	#if (pins=4)
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0,-1.8>}      //linker Pin
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0, 1.8>}      //hinterer Pin
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate< 1.8,0,0>}      //rechter Pin
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<-1.8,0,0>}      //vorderer Pin
-	#else
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0,-2.54>}      //linker Pin
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0, 2.54>}      //hinterer Pin Gehaeuse
-		cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate< 2.54,0,0>}      //rechter Pin
-	#end
+union{   
+   #if(pin_short=off)
+      #local tr_to39_pin = 0;
+   #else
+      #local tr_to39_pin = 11-(pcb_height+pin_length);
+   #end
+   #if (pins=4)
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0,-1.8>}      //linker Pin
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0, 1.8>}      //hinterer Pin
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate< 1.8,0,0>}      //rechter Pin
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<-1.8,0,0>}      //vorderer Pin
+   #else
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0,-2.54>}      //linker Pin
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate<0,0, 2.54>}      //hinterer Pin Gehaeuse
+      cylinder{<0,tr_to39_pin ,0><0,14,0>0.24 texture{col_silver} translate< 2.54,0,0>}      //rechter Pin
+   #end
 
-	union{                                                                                                       //Transistorkörper
-		torus{4.2 0.8 pigment {P_Silver3} translate <0.12,19.3,0>}
-		cylinder{<0,14,0><0,19.3,0>5 pigment{ P_Silver3}translate<0.12,0,0>}
-		cylinder{<0,19.3,0><0,20.1,0>4.2 pigment{ P_Silver3}translate<0.12,0,0>}
-		cylinder{<0,13.9,0><0,14,0>5.6  pigment{P_Silver3}translate<0.12,0,0>}}
-	box {<-0.56,0,2.6><0.56,0.1,6.2> pigment{P_Silver3}  translate <0.12,13.9,0> rotate <0,-135,0> }
-	text {ttf besch_font value 1, 0 pigment { Black } scale <1,1,1> rotate <90,0,0> translate<-1.5,20.2,-.5>}    //Beschriftung
-	finish {
- 	   ambient (0.25 * global_ambient_mul)
-	    brilliance 4
-	    diffuse 0.5
-	    metallic
-	    specular 0.80
- 	   roughness 1/80
- 	   reflection 0.5
-	}
-	pigment{ P_Silver3}
-	translate<0,-11,0>
-	
-	#if (pins=4)
-		rotate<0,45,0>
-	#end
+   union{                                                                                                       //Transistorkörper
+      torus{4.2 0.8 pigment {P_Silver3} translate <0.12,19.3,0>}
+      cylinder{<0,14,0><0,19.3,0>5 pigment{ P_Silver3}translate<0.12,0,0>}
+      cylinder{<0,19.3,0><0,20.1,0>4.2 pigment{ P_Silver3}translate<0.12,0,0>}
+      cylinder{<0,13.9,0><0,14,0>5.6  pigment{P_Silver3}translate<0.12,0,0>}}
+   box {<-0.56,0,2.6><0.56,0.1,6.2> pigment{P_Silver3}  translate <0.12,13.9,0> rotate <0,-135,0> }
+   text {ttf besch_font value 1, 0 pigment { Black } scale <1,1,1> rotate <90,0,0> translate<-1.5,20.2,-.5>}    //Beschriftung
+   finish {
+      ambient (0.25 * global_ambient_mul)
+       brilliance 4
+       diffuse 0.5
+       metallic
+       specular 0.80
+      roughness 1/80
+      reflection 0.5
+   }
+   pigment{ P_Silver3}
+   translate<0,-11,0>
+   
+   #if (pins=4)
+      rotate<0,45,0>
+   #end
 }
 #end
 
@@ -1468,66 +1468,66 @@ TR_TO72_GRND(value,4)
 ********************************************************************************************************************************************/
 #macro TR_TO92_G_GRND(value, pin, L, M, R, D)
 union{
-	//lower part of pin
-	#if(pin_short=off)
-		box{<-0.24,0,-0.22><0.24,10,0.22> translate< L,0,0>}                                      //linker Pin
-		#if (pin=3)
-		box{<-0.24,0,-0.22><0.24,10,0.22> translate< 0,0,M>}                                      //mittlerer Pin
-		#end
-		box{<-0.24,0,-0.22><0.24,10,0.22> translate< R,0,0>}                                      //rechter Pin
-	#else
-		box{<-0.24,9.3-(pcb_height+pin_length),-0.22><0.24,10,0.22> translate< L,0,0>}            //linker Pin
-		#if (pin=3)
-		box{<-0.24,9.3-(pcb_height+pin_length),-0.22><0.24,10,0.22> translate< 0,0,M>}            //mittlerer Pin
-		#end
-		box{<-0.24,9.3-(pcb_height+pin_length),-0.22><0.24,10,0.22> translate< R,0,0>}            //rechter Pin
-	#end
+   //lower part of pin
+   #if(pin_short=off)
+      box{<-0.24,0,-0.22><0.24,10,0.22> translate< L,0,0>}                                      //linker Pin
+      #if (pin=3)
+      box{<-0.24,0,-0.22><0.24,10,0.22> translate< 0,0,M>}                                      //mittlerer Pin
+      #end
+      box{<-0.24,0,-0.22><0.24,10,0.22> translate< R,0,0>}                                      //rechter Pin
+   #else
+      box{<-0.24,9.3-(pcb_height+pin_length),-0.22><0.24,10,0.22> translate< L,0,0>}            //linker Pin
+      #if (pin=3)
+      box{<-0.24,9.3-(pcb_height+pin_length),-0.22><0.24,10,0.22> translate< 0,0,M>}            //mittlerer Pin
+      #end
+      box{<-0.24,9.3-(pcb_height+pin_length),-0.22><0.24,10,0.22> translate< R,0,0>}            //rechter Pin
+   #end
 
-	// bended middle part of pin
-	#local M1=sqrt( (1.5*1.5) + (L+1.27-0.48)*(L+1.27-0.48) );
-	#local M2=sqrt( (1.5*1.5) + (M+0.44)*(M+0.44) );
-	#local M3=sqrt( (1.5*1.5) + (R-1.27+0.48)*(R-1.27+0.48) );
+   // bended middle part of pin
+   #local M1=sqrt( (1.5*1.5) + (L+1.27-0.48)*(L+1.27-0.48) );
+   #local M2=sqrt( (1.5*1.5) + (M+0.44)*(M+0.44) );
+   #local M3=sqrt( (1.5*1.5) + (R-1.27+0.48)*(R-1.27+0.48) );
 
-	#local L1=sqrt((M1*M1) - (0.48*0.48) );
-	#local L2=sqrt((M2*M2) - (0.44*0.44) );
-	#local L3=sqrt((M3*M3) - (0.48*0.48) );
+   #local L1=sqrt((M1*M1) - (0.48*0.48) );
+   #local L2=sqrt((M2*M2) - (0.44*0.44) );
+   #local L3=sqrt((M3*M3) - (0.48*0.48) );
 
-	#local A1= (asin( (L+1.27-0.48)/M1 ) + asin(0.48/M1) ) / 3.1415 * 180;
-	#local A2= (asin( (M+0.44)/M2 )      - asin(0.44/M2) ) / 3.1415 * 180;
-	#local A3= (asin( (R-1.27+0.48)/M3 ) - asin(0.48/M3) ) / 3.1415 * 180;
+   #local A1= (asin( (L+1.27-0.48)/M1 ) + asin(0.48/M1) ) / 3.1415 * 180;
+   #local A2= (asin( (M+0.44)/M2 )      - asin(0.44/M2) ) / 3.1415 * 180;
+   #local A3= (asin( (R-1.27+0.48)/M3 ) - asin(0.48/M3) ) / 3.1415 * 180;
 
-	box{<-0.24,-L1/2,-0.22><0.24,L1/2,0.22> rotate<0,0,A1> translate<(L+1.27)/2-1.27 ,10.75,0>}          //linker Pin Schraege
-	#if (pin=3)
- 	box{<-0.24,-L2/2,-0.22><0.24,L2/2,0.22> rotate<-A2,0,0> translate< 0,10.75,(M/2)>}                   //mittlerer Pin Schraege
-	#end
-	box{<-0.24,-L3/2,-0.22><0.24,L3/2,0.22> rotate<0,0, A3> translate<(R-1.27)/2+1.27,10.75,0>}          //rechter Pin Schraege
+   box{<-0.24,-L1/2,-0.22><0.24,L1/2,0.22> rotate<0,0,A1> translate<(L+1.27)/2-1.27 ,10.75,0>}          //linker Pin Schraege
+   #if (pin=3)
+   box{<-0.24,-L2/2,-0.22><0.24,L2/2,0.22> rotate<-A2,0,0> translate< 0,10.75,(M/2)>}                   //mittlerer Pin Schraege
+   #end
+   box{<-0.24,-L3/2,-0.22><0.24,L3/2,0.22> rotate<0,0, A3> translate<(R-1.27)/2+1.27,10.75,0>}          //rechter Pin Schraege
 
 
-	// upper part of pin at the housing
-	box{<-0.24,11.5,-0.22><0.24,14,0.22> translate<-1.27,0,0>}                                     //linker Pin
-	#if (pin=3)
-	box{<-0.24,11.5,-0.22><0.24,14,0.22> }                                                         //mittlerer Pin
-	#end
-	box{<-0.24,11.5,-0.22><0.24,14,0.22> translate< 1.27,0,0>}                                     //rechter Pin
+   // upper part of pin at the housing
+   box{<-0.24,11.5,-0.22><0.24,14,0.22> translate<-1.27,0,0>}                                     //linker Pin
+   #if (pin=3)
+   box{<-0.24,11.5,-0.22><0.24,14,0.22> }                                                         //mittlerer Pin
+   #end
+   box{<-0.24,11.5,-0.22><0.24,14,0.22> translate< 1.27,0,0>}                                     //rechter Pin
 
-	// wider part of pin close to the housing
-	box{<-0.34,12,-0.22><0.34,13,0.22> translate<-1.27,0,0>}                                        //Abstandhalter links
-	#if (pin=3)
-	box{<-0.34,12,-0.22><0.34,13,0.22> }                                                            //Abstandhalter mitte
-	#end
-	box{<-0.34,12,-0.22><0.34,13,0.22> translate< 1.27,0,0>}                                        //Abstandhalter rechts
+   // wider part of pin close to the housing
+   box{<-0.34,12,-0.22><0.34,13,0.22> translate<-1.27,0,0>}                                        //Abstandhalter links
+   #if (pin=3)
+   box{<-0.34,12,-0.22><0.34,13,0.22> }                                                            //Abstandhalter mitte
+   #end
+   box{<-0.34,12,-0.22><0.34,13,0.22> translate< 1.27,0,0>}                                        //Abstandhalter rechts
 
-	// plastic body
-	difference{                                                                                  //Transistorkoerper
-		cylinder{<0,14,0><0,19.2,0>2.4 pigment{ Gray30}translate<0.12,0,0>}
+   // plastic body
+   difference{                                                                                  //Transistorkoerper
+      cylinder{<0,14,0><0,19.2,0>2.4 pigment{ Gray30}translate<0.12,0,0>}
             box{<-3,13.9,-1><3,20,-3> pigment{ Gray30}}}
 
-	// label
-	text {ttf besch_font value 1, 0 pigment { White } translate<-1.8,17,-1.01>}                  //Beschriftung
+   // label
+   text {ttf besch_font value 1, 0 pigment { White } translate<-1.8,17,-1.01>}                  //Beschriftung
 
-	texture{col_silver}
-	translate<0, -9.3, 0>
-	rotate<0,D,0>
+   texture{col_silver}
+   translate<0, -9.3, 0>
+   rotate<0,D,0>
 }
 #end
 
@@ -1563,9 +1563,9 @@ Testing
 #local XYZ_span=20;
 
 //Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
+cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
 // Useful GRIDS:
 #local XYZ_step= 1 ;          // axis increment
@@ -1575,28 +1575,28 @@ cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
 // GRID PLANES: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
+   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+   
+   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+   
+   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+   
+   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
 
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
+   #local XYZ_cnt = XYZ_cnt+XYZ_step;
 #end
 
 camera
 {       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
+   #local tt = 40;            //let's you change the distance easily
+   location <-tt,tt,-tt>
+   //location<0,5,-50>        //alternate location
+   look_at <0,0,0>            //best to select the approximate centre of the object
+   angle 30
 }
 
 light_source { <100, 100, -100> White}
