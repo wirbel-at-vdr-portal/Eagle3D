@@ -361,7 +361,7 @@
       #declare LOGO_INDEX = "r"
   #end
 
-  #if (strcmp(S, "ST MICRO") = 0) // 73 e3d_ic.inc: 301 
+  #if (strcmp(S, "STMICROELECTRONICS") = 0) // 73 e3d_ic.inc: 301 
       #declare LOGO_INDEX = "s" 
   #end
 
@@ -413,13 +413,33 @@
 #end
 
 
-#macro Logo(NAME)   
-  LogoIndex(NAME)
 
-  // hint: LOGO_INDEX is set by logoIndex()
-  text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0 texture{e3d_tex_ic_marking_bright}}
+/*******************************************************************************
+ * draws a logo centered at current position into a window
+ * of size WIDTH x HEIGHT. NOTE: center of drawn image, not fonts.
+ * 20220415, wk
+ ******************************************************************************/
+#macro Logo(NAME,HEIGHT,WIDTH)
+  LogoIndex(NAME) // sets LOGO_INDEX
 
+  #local Obj = text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0 texture{e3d_tex_ic_marking_bright}}
+  #local MinE = min_extent ( Obj );
+  #local MaxE = max_extent ( Obj );
+  #local XLen = (MaxE.x - MinE.x);
+  #local YLen = (MaxE.y - MinE.y);
+  #local XScale = WIDTH  / XLen;
+  #local YScale = HEIGHT / YLen;
+  #local Scale = min(XScale,YScale);
+
+ union {
+    //#local tmp = vstr(2, <XScale,YScale>, ", ", 0,1);
+    //text{ttf global_fontfile_arial tmp 1,0 scale 0.2 rotate<0,0,0>  translate<1.5,0.03,0> pigment{Blue}}
+
+    text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0 
+       scale<Scale,Scale,1>
+       translate<-0.5*XLen*Scale,-0.5*YLen*Scale,0>
+       texture{e3d_tex_ic_marking_bright}
+       }
+    }
   // end: Logo()
 #end
-
-
