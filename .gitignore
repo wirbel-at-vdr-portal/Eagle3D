@@ -1,0 +1,13 @@
+#/******************************************************************************
+# * basic .gitignore for https://github.com/wirbel-at-vdr-portal/Eagle3D
+# *****************************************************************************/
+
+# the msys64 sync script isn't part of it:
+synchronize.sh
+
+# common development artifacts
+*.bak
+*.txt
+*.log
+*.new
+*.old
