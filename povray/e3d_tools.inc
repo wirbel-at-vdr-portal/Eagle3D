@@ -1191,100 +1191,100 @@ difference
 #end
 
 
-#macro TOOLS_LOGO_AND_CAPTION(caption, logo, min_p, max_p)
-union{
-
-#local tgt_size = <max_p.x, 1, max_p.y> - <min_p.x, 1, min_p.y>;
-
-#if(strcmp(logo,"AMD") = 0.0)
-    #local logo_obj = text{ttf global_fontfile_eagle3d "6" 0.01,0}
-    #local logo_extra_scale = 0.3;
-#end
-
-#if(strcmp(logo,"ATMEL") = 0.0)
-    #local logo_obj = text{ttf global_fontfile_eagle3d "a" 0.01,0}
-    #local logo_extra_scale = 0.7;
-#end
-
-#if(strcmp(logo,"FTDI") = 0.0)
-    #local logo_obj = text{ttf global_fontfile_eagle3d "f" 0.01,0}
-    #local logo_extra_scale = 0.7;
-#end
-
-#if(strcmp(logo,"MAXIM") = 0.0)
-    #local logo_obj = text{ttf global_fontfile_eagle3d "-" 0.01,0}
-    #local logo_extra_scale = 0.9;
-#end
-
-//Size and other calculations for logo placement
-#local logo_min = min_extent(logo_obj);
-#local logo_max = max_extent(logo_obj);
-#local logo_size = logo_max - logo_min;
-#local logo_obj = object{logo_obj translate -(logo_size / 2) rotate<90, 0, 0>};
-#local logo_min = min_extent(logo_obj);
-#local logo_max = max_extent(logo_obj);
-#local logo_size = logo_max - logo_min;
-#if(tgt_size.x < tgt_size.z)
-    #local logo_size = <logo_size.z, logo_size.y, logo_size.x>;
-#end
-#local logo_scale = min((tgt_size / logo_size).x, (tgt_size / logo_size).z) * logo_extra_scale;
-
-//Size and other calculations for caption placement
-#local caption_obj = text{ttf global_fontfile_arial caption 0.01, 0}
-#local caption_min = min_extent(caption_obj);
-#local caption_max = max_extent(caption_obj);
-#local caption_size = caption_max - caption_min;
-#local caption_obj = object{caption_obj translate -(caption_size / 2) rotate<90, 0, 0>};
-#local caption_min = min_extent(caption_obj);
-#local caption_max = max_extent(caption_obj);
-#local caption_size = caption_max - caption_min;
-#if(tgt_size.x < tgt_size.z)
-    #local caption_size = <caption_size.z, caption_size.y, caption_size.x>;
-#end
-#local caption_scale = min((tgt_size / caption_size).x, (tgt_size / caption_size).z) * (0.9 - logo_extra_scale);
-
-union
-{
-    //Logo placement
-    object{
-        logo_obj
-        scale <logo_scale, 1, logo_scale>
-        #if(tgt_size.x >= tgt_size.z)
-            translate -<tgt_size.x / 2 - logo_size.x / 2 * logo_scale, 0, 0>
-            translate <0, 0, tgt_size.z / 2 - logo_size.z / 2 * logo_scale>
-
-        #else
-            rotate<0, 90, 0>
-            translate <tgt_size.x / 2 - logo_size.x / 2 * logo_scale, 0, 0>
-            translate <0, 0, tgt_size.z / 2 - logo_size.z / 2 * logo_scale>
-
-        #end
-    }
-    /*
-    //Caption placement
-    object{
-        caption_obj
-        scale <caption_scale, 1, caption_scale>
-        #if(tgt_size.x >= tgt_size.z)
-
-        #else
-            rotate<0, 90, 0>
-            translate <tgt_size.x / 2 - logo_size.x * logo_scale - caption_size.x, 0, 0>
-            translate <0, 0, tgt_size.z / 2 - caption_size.z / 2 * caption_scale>
-
-        #end
-
-        pigment{Red}
-    }
-    */
-
-
-}
-
-//box{logo_min, logo_max}
-
-}
-#end
+//      #macro TOOLS_LOGO_AND_CAPTION(caption, logo, min_p, max_p)
+//      union{
+//      
+//      #local tgt_size = <max_p.x, 1, max_p.y> - <min_p.x, 1, min_p.y>;
+//      
+//      #if(strcmp(logo,"AMD") = 0.0)
+//          #local logo_obj = text{ttf global_fontfile_eagle3d "6" 0.01,0}
+//          #local logo_extra_scale = 0.3;
+//      #end
+//      
+//      #if(strcmp(logo,"ATMEL") = 0.0)
+//          #local logo_obj = text{ttf global_fontfile_eagle3d "a" 0.01,0}
+//          #local logo_extra_scale = 0.7;
+//      #end
+//      
+//      #if(strcmp(logo,"FTDI") = 0.0)
+//          #local logo_obj = text{ttf global_fontfile_eagle3d "f" 0.01,0}
+//          #local logo_extra_scale = 0.7;
+//      #end
+//      
+//      #if(strcmp(logo,"MAXIM") = 0.0)
+//          #local logo_obj = text{ttf global_fontfile_eagle3d "-" 0.01,0}
+//          #local logo_extra_scale = 0.9;
+//      #end
+//      
+//      //Size and other calculations for logo placement
+//      #local logo_min = min_extent(logo_obj);
+//      #local logo_max = max_extent(logo_obj);
+//      #local logo_size = logo_max - logo_min;
+//      #local logo_obj = object{logo_obj translate -(logo_size / 2) rotate<90, 0, 0>};
+//      #local logo_min = min_extent(logo_obj);
+//      #local logo_max = max_extent(logo_obj);
+//      #local logo_size = logo_max - logo_min;
+//      #if(tgt_size.x < tgt_size.z)
+//          #local logo_size = <logo_size.z, logo_size.y, logo_size.x>;
+//      #end
+//      #local logo_scale = min((tgt_size / logo_size).x, (tgt_size / logo_size).z) * logo_extra_scale;
+//      
+//      //Size and other calculations for caption placement
+//      #local caption_obj = text{ttf global_fontfile_arial caption 0.01, 0}
+//      #local caption_min = min_extent(caption_obj);
+//      #local caption_max = max_extent(caption_obj);
+//      #local caption_size = caption_max - caption_min;
+//      #local caption_obj = object{caption_obj translate -(caption_size / 2) rotate<90, 0, 0>};
+//      #local caption_min = min_extent(caption_obj);
+//      #local caption_max = max_extent(caption_obj);
+//      #local caption_size = caption_max - caption_min;
+//      #if(tgt_size.x < tgt_size.z)
+//          #local caption_size = <caption_size.z, caption_size.y, caption_size.x>;
+//      #end
+//      #local caption_scale = min((tgt_size / caption_size).x, (tgt_size / caption_size).z) * (0.9 - logo_extra_scale);
+//      
+//      union
+//      {
+//          //Logo placement
+//          object{
+//              logo_obj
+//              scale <logo_scale, 1, logo_scale>
+//              #if(tgt_size.x >= tgt_size.z)
+//                  translate -<tgt_size.x / 2 - logo_size.x / 2 * logo_scale, 0, 0>
+//                  translate <0, 0, tgt_size.z / 2 - logo_size.z / 2 * logo_scale>
+//      
+//              #else
+//                  rotate<0, 90, 0>
+//                  translate <tgt_size.x / 2 - logo_size.x / 2 * logo_scale, 0, 0>
+//                  translate <0, 0, tgt_size.z / 2 - logo_size.z / 2 * logo_scale>
+//      
+//              #end
+//          }
+//          /*
+//          //Caption placement
+//          object{
+//              caption_obj
+//              scale <caption_scale, 1, caption_scale>
+//              #if(tgt_size.x >= tgt_size.z)
+//      
+//              #else
+//                  rotate<0, 90, 0>
+//                  translate <tgt_size.x / 2 - logo_size.x * logo_scale - caption_size.x, 0, 0>
+//                  translate <0, 0, tgt_size.z / 2 - caption_size.z / 2 * caption_scale>
+//      
+//              #end
+//      
+//              pigment{Red}
+//          }
+//          */
+//      
+//      
+//      }
+//      
+//      //box{logo_min, logo_max}
+//      
+//      }
+//      #end
 
 /**********************************************************************
 This macro is used for simple object generation

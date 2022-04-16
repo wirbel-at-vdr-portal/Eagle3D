@@ -82,17 +82,24 @@ string ambient =
     "#end\n\n";
 
 //used in the logo assignment    
-string logo_names[] = 
-{
-    "ATMEL",
-    "FTDI",
-    "PHILIPS",
-    "ST",
-    "Motorola",
-    "Freescale",
-    "MAXIM",
-    "AMD",
-    "MICROCHIP"
+string logo_names[] = {
+  "ALTERA",
+  "AMD",
+  "ANALOG DEVICES",
+  "ATMEL",
+  "BURR-BROWN",
+  "DALLAS",
+  "Freescale",
+  "FTDI",
+  "LINEAR TECHNOLOGY",
+  "MAXIM",
+  "MICROCHIP",
+  "MOTOROLA",
+  "PHILIPS",
+  "STMicroelectronics",
+  "TEXAS INSTRUMENTS",
+  "TOSHIBA",
+  "XILINX"
 };                                                                
     
 
