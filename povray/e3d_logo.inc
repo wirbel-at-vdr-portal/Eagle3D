@@ -41,7 +41,7 @@
 //    #declare LOGO_INDEX = "";
 //#end
 
-  #if (strcmp(S, "XILINX") = 0) // 23  
+  #if (strcmp(S, "XILINX") = 0) // 23
       #declare LOGO_INDEX = "#"
   #end
 
@@ -54,7 +54,7 @@
 //#end
 
   #if (strcmp(S, "C&K TTI") = 0) // 26
-      #declare LOGO_INDEX = "&"  
+      #declare LOGO_INDEX = "&"
   #end
 
 //#if (strcmp(S, ) = 0) // 27 LEER
@@ -349,7 +349,7 @@
 //    #declare LOGO_INDEX = "o"
 //#end
 
-  #if (strcmp(S, "PHILIPS") = 0) // 70 e3d_ic.inc: 284  
+  #if (strcmp(S, "PHILIPS") = 0) // 70 e3d_ic.inc: 284
       #declare LOGO_INDEX = "p"
   #end
 
@@ -361,11 +361,11 @@
       #declare LOGO_INDEX = "r"
   #end
 
-  #if (strcmp(S, "STMICROELECTRONICS") = 0) // 73 e3d_ic.inc: 301 
+  #if (strcmp(S, "STMICROELECTRONICS") = 0) // 73 e3d_ic.inc: 301
       #declare LOGO_INDEX = "s" 
   #end
 
-  #if (strcmp(S, "TEXAS INSTRUMENTS") = 0) // 74 e3d_ic.inc: 328 
+  #if (strcmp(S, "TEXAS INSTRUMENTS") = 0) // 74 e3d_ic.inc: 328
       #declare LOGO_INDEX = "t"
   #end
 
@@ -435,7 +435,7 @@
     //#local tmp = vstr(2, <XScale,YScale>, ", ", 0,1);
     //text{ttf global_fontfile_arial tmp 1,0 scale 0.2 rotate<0,0,0>  translate<1.5,0.03,0> pigment{Blue}}
 
-    text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0 
+    text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0
        scale<Scale,Scale,1>
        translate<-0.5*XLen*Scale,-0.5*YLen*Scale,0>
        texture{e3d_tex_ic_marking_bright}
