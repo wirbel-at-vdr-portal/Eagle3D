@@ -11,3 +11,6 @@ synchronize.sh
 *.log
 *.new
 *.old
+
+# this is a per user and run file.
+ulp/3dconf.dat
