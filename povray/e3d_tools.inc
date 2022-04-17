@@ -45,6 +45,7 @@ global_settings{charset utf8}
 #include "transforms.inc"
 
 //Library files
+#include "e3d_logo.inc"
 #include "e3d_tex.inc"
 #include "e3d_ic.inc"
 #include "e3d_resistor.inc"
