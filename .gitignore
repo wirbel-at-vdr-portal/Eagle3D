@@ -14,3 +14,7 @@ synchronize.sh
 
 # this is a per user and run file.
 ulp/3dconf.dat
+
+# internal database.
+doc/3dpackdat.xlsx
+
