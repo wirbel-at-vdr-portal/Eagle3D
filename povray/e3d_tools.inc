@@ -101,17 +101,12 @@ global_settings{charset utf8}
 
 #end
 
-#declare global_fontfile_eagle3d        = "eagle3d.ttf"
 #declare global_fontfile_courier        = "DejaVuLGCSansMono.ttf";
 #declare global_fontfile_courier_bold   = "DejaVuLGCSansMono-Bold.ttf";
 #declare global_fontfile_arial          = "DejaVuLGCSans.ttf";
 #declare global_fontfile_arial_bold     = "DejaVuLGCSans-Bold.ttf";
 #declare global_fontfile_alphalcd       = "alphalcd.ttf"
 
-//The Eagle3D font has to exist
-#if(file_exists(global_fontfile_eagle3d) = 0)
-    #error "Eagle3D font not found. Please specify the path to eagle3d.ttf in the ini-file"
-#end
 
 //Check the availability of font files and set fallback font if not available
 #if(file_exists(global_fontfile_courier) = 0)

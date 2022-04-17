@@ -1,21 +1,14 @@
 
-/*
-#declare global_fontfile_eagle3d        = "eagle3d.ttf"                                              e3d_tools:103
-
-//The Eagle3D font has to exist                                                                      e3d_tools:110
-#if(file_exists(global_fontfile_eagle3d) = 0) = 0) = 0)                                                        e3d_tools:111
-    #error "Eagle3D font not found. Please specify the path to eagle3d.ttf in the ini-file"          e3d_tools:112
-#end                                                                                                 e3d_tools:113
-#macro TOOLS_LOGO_AND_CAPTION(caption, logo, min_p, max_p) = 0)                                           e3d_tools:1194
-#end                                                                                                 e3d_tools:1287
-*/
 
 
 /*******************************************************************************
  * several logos at:
  *  - http://www.ecadata.de/herst/showlogo.php?F_SPRACHE=1
  ******************************************************************************/
-
+#declare global_fontfile_eagle3d = "eagle3d.ttf"
+#if (file_exists(global_fontfile_eagle3d) = 0)
+    #error "Eagle3D font not found. Please specify the path to eagle3d.ttf in the ini-file"
+#end
 
 
 
