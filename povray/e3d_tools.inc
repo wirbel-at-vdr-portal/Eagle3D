@@ -141,17 +141,17 @@ global_settings{charset utf8}
 #ifdef(col_preset)
     //Verschieden Farb-Presets
     #switch(col_preset)
-        #case(1)//Standard PCB LĂśtstop
+        #case(1)//Standard PCB Loetstop
             #declare col_brd = texture{pigment{DarkGreen}}                                  //Farbe der Platine
             #declare col_wrs = texture{pigment{ForestGreen}}                                //Farbe der Leiterbahnen
             #declare col_pds = texture{T_Silver_5A}                                         //Farbe der Pad's und SMD's
             #declare col_hls = texture{pigment{Black}}                                      //Farbe der Pseudobohrungen
-            #declare col_bgr = White;                                                          //Hintergrundfarbe wenn keine Umgebung aktiviert
-            #declare col_slk = texture{pigment{White}}                                      //Farbe des Bestďż˝ckungsdruck
+            #declare col_bgr = White;                                                       //Hintergrundfarbe wenn keine Umgebung aktiviert
+            #declare col_slk = texture{pigment{White}}                                      //Farbe des Bestueckungsdrucks
             #declare col_thl = texture{T_Silver_5A}                                         //Farbe der Durchkontaktierungen
             #declare col_pol = col_wrs                                                      //Farbe der Polygone
         #break
-        #case(2)//PCB LĂśtstop MĂźcke
+        #case(2)//PCB Loetstop Maske
             //PCB material
             #declare col_brd =  texture{
                                     pigment{rgb<0.117647,0.243137,0.015686>}
@@ -187,7 +187,7 @@ global_settings{charset utf8}
             //Polygons
             #declare col_pol = col_wrs
         #break
-        #case(3)//PCB LĂśtstop MĂźcke 2
+        #case(3)//PCB Loetstop Maske 2
             #declare col_brd = texture{     pigment{rgb<0.117647,0.243137,0.015686>}
                                             normal {bumps 0.2 scale 0.00015}
                                             finish {ambient 0.2 diffuse 0.5 phong 0.1}}     //Farbe der Platine
@@ -197,7 +197,7 @@ global_settings{charset utf8}
             #declare col_pds = texture{pigment{Gray70} finish{F_MetalB}}                    //Farbe der Pad's und SMD's
             #declare col_hls = texture{pigment{Black}}                                      //Farbe der Pseudobohrungen
             #declare col_bgr = Gray50;                                                      //Hintergrundfarbe wenn keine Umgebung aktiviert
-            #declare col_slk = texture{pigment{White}}                                      //Farbe des BestĂźckungsdruck
+            #declare col_slk = texture{pigment{White}}                                      //Farbe des Bestueckungsdrucks
             #declare col_thl = texture{pigment{Gray70} finish{F_MetalB}}                    //Farbe der Durchkontaktierungen
             #declare col_pol = col_wrs                                                      //Farbe der Polygone
         #break
@@ -207,7 +207,7 @@ global_settings{charset utf8}
             #declare col_pds = texture{col_gold}                                            //Farbe der Pad's und SMD's
             #declare col_hls = texture{pigment{Black}}                                      //Farbe der Pseudobohrungen
             #declare col_bgr = White;                                                       //Hintergrundfarbe wenn keine Umgebung aktiviert
-            #declare col_slk = texture{pigment{Black}}                                      //Farbe des BestĂźckungsdruck
+            #declare col_slk = texture{pigment{Black}}                                      //Farbe des Bestueckungsdrucks
             #declare col_thl = texture{col_silver}                                          //Farbe der Durchkontaktierungen
             #declare col_pol = texture{T_Stone1}                                            //Farbe der Polygone
         #break
@@ -217,7 +217,7 @@ global_settings{charset utf8}
             #declare col_pds = texture{T_Silver_5A}                                         //Farbe der Pad's und SMD's
             #declare col_hls = texture{pigment{Black}}                                      //Farbe der Pseudobohrungen
             #declare col_bgr = White;                                                       //Hintergrundfarbe wenn keine Umgebung aktiviert
-            #declare col_slk = texture{pigment{Green}}                                      //Farbe des BestĂźckungsdruck
+            #declare col_slk = texture{pigment{Green}}                                      //Farbe des Bestueckungsdrucks
             #declare col_thl = texture{pigment{White}}                                      //Farbe der Durchkontaktierungen
             #declare col_pol = texture{T_Stone1}                                            //Farbe der Polygone
         #break
@@ -227,7 +227,7 @@ global_settings{charset utf8}
             #declare col_pds = texture{pigment{Gray70} finish{F_MetalB}}                    //Farbe der Pad's und SMD's
             #declare col_hls = texture{pigment{Black}}                                      //Farbe der Pseudobohrungen
             #declare col_bgr = White;                                                       //Hintergrundfarbe wenn keine Umgebung aktiviert
-            #declare col_slk = texture{pigment{White}}                                      //Farbe des BestĂźckungsdruck
+            #declare col_slk = texture{pigment{White}}                                      //Farbe des Bestueckungsdrucks
             #declare col_thl = texture{pigment{Gray70} finish{F_MetalB}}                    //Farbe der Durchkontaktierungen
             #declare col_pol = col_wrs                                                      //Farbe der Polygone
         #break
@@ -237,7 +237,7 @@ global_settings{charset utf8}
             #declare col_pds = texture{T_Silver_5A}                                         //Farbe der Pad's und SMD's
             #declare col_hls = texture{pigment{Black}}                                      //Farbe der Pseudobohrungen
             #declare col_bgr = White;                                                       //Hintergrundfarbe wenn keine Umgebung aktiviert
-            #declare col_slk = texture{pigment{White}}                                      //Farbe des BestĂźckungsdruck
+            #declare col_slk = texture{pigment{White}}                                      //Farbe des Bestueckungsdrucks
             #declare col_thl = texture{T_Silver_5A}                                         //Farbe der Durchkontaktierungen
             #declare col_pol = col_wrs                                                      //Farbe der Polygone
         #break
@@ -271,10 +271,10 @@ global_settings{charset utf8}
 //Joseph Zeglinski
 #macro TOOLS_WIRE_LEADS (Length, Width, Wirelength, Wirewidth,  Raster,  BendRadius, Seperation, H_V)
 
-    //Erzeugt DrahtbĂźgel passend fĂźr ein Bauteil
-    //Length:   LĂ¤nge des Bauteils (length of body part)
+    //Erzeugt Drahtbuegel passend fuer ein Bauteil
+    //Length:   Laenge des Bauteils (length of body part)
     //Width:    Durchmesser des Bauteils (diameter of body part)
-    //Wirelength:   LĂ¤nge des eines Drahtes (length of one wire lead)
+    //Wirelength:   Laenge des eines Drahtes (length of one wire lead)
     //Wirewidth:    Durchmesser des Drahtes (diameter of the wire)
     //Raster:   Raster
     //BendRadius:   Biegeradius (bending radius)
