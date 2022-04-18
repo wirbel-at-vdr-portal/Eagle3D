@@ -1404,6 +1404,30 @@ IC_SMD_GRND(15.9,11,3.3,14.2,10,10,1.27,1.27,0.47,0.47,0.28,0.2,0,3,0,7.5/6,7.5/
 #macro IC_SMD_PSO36(value,logo)
 IC_SMD_GRND(15.9,11,3.3,14.2,18,18,0.65,0.65,0.3,0.3,0.28,0.2,0,3,0,7.5/6,7.5/5,0,logo)
 #end
+
+#macro IC_SMD_MSOP08(value,logo)
+IC_SMD_GRND(
+  3.0, // LK      = Laenge des Kunststoff(Seite der Pins)
+  3.0, // BK      = Breite des Kunststoff(Seite ohne Pins)
+  0.85,// HK      = Hoehe des Kunststoff
+  4.9, // B       = Laenge der Seite ohne Pins ueber alles
+  4,   // pin_u   = Pins auf der "unteren" Seite
+  4,   // pin_o   = Pins auf der "oberen" Seite
+  0.65,// ptch_u  = Pitch der Pins auf der "unteren" Seite
+  0.65,// //ptch_o  = Pitch der Pins auf der "oberen" Seite
+  0.3, // pinb_u  = Breite der Pins auf der "unteren" Seite
+  0.3, // pinb_o  = Breite der Pins auf der  "oberen" Seite
+  0.2, // pin_s   = Staerke des Pinmaterials
+  0.1, // di_pcb  = Abstand des Kunststoff zur Platine
+  0,   // kor_w   = Korrekturwinkel
+  1,   // pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
+  0,   // pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45° statt 10° verwendet (SO)
+  0.5, // pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
+  0.65,// besch_s = Scalefaktor der Beschriftung
+  0,   // besch_w = Wenn != 0 wird Beschriftung gedreht
+  logo)//logo  = Name of the logo
+#end
+
 #macro IC_SMD_MSOP10(value,logo)
 IC_SMD_GRND(3,3,0.85,4.9,5,5,0.5,0.5,0.25,0.25,0.15,0.1,0,1,0,0.5,0.65,0,logo)
 #end
