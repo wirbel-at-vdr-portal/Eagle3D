@@ -1,0 +1,1104 @@
+
+
+#include "shapes3.inc"
+
+
+#macro GRID_BASE(OBJ, GRID, M, N)
+union {
+   #for(X, 1, M)
+       #for(Y, 1, N)
+           object { OBJ translate<X*GRID,0,Y*GRID> }
+       #end
+   #end
+   translate<-(1+M)/2*GRID,0,-(1+N)/2*GRID>
+   }
+#end
+
+
+
+/*******************************************************************************
+ * female header 2.54mm, 1-row, 2-row, 3-row.
+ ******************************************************************************/
+#macro MPE094_FEMALE(GRID,H)
+  union { 
+     difference {
+        box{<-GRID/2,0,-GRID/2>
+            <+GRID/2,H,+GRID/2>}
+        object{ Pyramid_N(4, GRID, 0.0, GRID)
+                rotate <180,0,0>
+                translate <0,H+GRID/2,0>}
+        box{<-1/2, -0.1,-1/2>
+            <+1/2,H+0.1,+1/2>}
+        }
+     }
+#end
+
+
+#macro MPE094_FEMALE_PIN()
+  intersection {
+     box{<-0.65/2, 2.0,-0.4/2>
+         <+0.65/2,-3.1,+0.4/2>}
+     box{<-8/2,-8/2,-0.5/2>
+         <+8/2,+8/2,+0.5/2>
+        rotate <0,0,45> translate <0,2.4,0>
+        }     
+     texture{col_gold}
+     }
+#end
+
+
+#macro CON_MPE094_FEMALE_254(X,Y)
+#local GRID = 2.54;
+union {
+  // plastic housing
+  difference {
+     GRID_BASE(MPE094_FEMALE(GRID,8.5),GRID,X,Y)
+     box {<-X/2*GRID -0.1,-0.1   ,-Y/2*GRID+GRID/3>
+          <+X/2*GRID +0.1,+GRID/3,+Y/2*GRID-GRID/3>}
+     pigment{Gray25}
+     }
+  // straight pin
+  GRID_BASE(MPE094_FEMALE_PIN(),GRID,X,Y)
+  }
+#end
+
+
+
+
+/*******************************************************************************
+ * female header 2.54mm, 1-row, 2-row, 3-row.
+ * - https://www.mpe-connector.de/de/produkte/
+ *           buchsenleisten/buchsenleiste-850-bauhoehe-254-mm
+ *     parts 094-1, 094-2, 094-3
+ * or
+ * - https://docs.rs-online.com/ed68/0900766b80da4106.pdf p.277,p.279
+ *     Assmann A-BL-254-E G-x xx D (1-row)
+ *     Assmann A-BL-254-D G-x xx D (2-row)
+ ******************************************************************************/
+#macro CON_MPE094_FEMALE_254_1_1()
+  CON_MPE094_FEMALE_254(1,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_2_1()
+  CON_MPE094_FEMALE_254(2,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_3_1()
+  CON_MPE094_FEMALE_254(3,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_4_1()
+  CON_MPE094_FEMALE_254(4,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_5_1()
+  CON_MPE094_FEMALE_254(5,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_6_1()
+  CON_MPE094_FEMALE_254(6,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_7_1()
+  CON_MPE094_FEMALE_254(7,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_8_1()
+  CON_MPE094_FEMALE_254(8,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_9_1()
+  CON_MPE094_FEMALE_254(9,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_10_1()
+  CON_MPE094_FEMALE_254(10,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_11_1()
+  CON_MPE094_FEMALE_254(11,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_12_1()
+  CON_MPE094_FEMALE_254(12,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_13_1()
+  CON_MPE094_FEMALE_254(13,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_14_1()
+  CON_MPE094_FEMALE_254(14,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_15_1()
+  CON_MPE094_FEMALE_254(15,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_16_1()
+  CON_MPE094_FEMALE_254(16,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_17_1()
+  CON_MPE094_FEMALE_254(17,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_18_1()
+  CON_MPE094_FEMALE_254(18,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_19_1()
+  CON_MPE094_FEMALE_254(19,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_20_1()
+  CON_MPE094_FEMALE_254(20,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_21_1()
+  CON_MPE094_FEMALE_254(21,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_22_1()
+  CON_MPE094_FEMALE_254(22,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_23_1()
+  CON_MPE094_FEMALE_254(23,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_24_1()
+  CON_MPE094_FEMALE_254(24,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_25_1()
+  CON_MPE094_FEMALE_254(25,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_26_1()
+  CON_MPE094_FEMALE_254(26,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_27_1()
+  CON_MPE094_FEMALE_254(27,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_28_1()
+  CON_MPE094_FEMALE_254(28,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_29_1()
+  CON_MPE094_FEMALE_254(29,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_30_1()
+  CON_MPE094_FEMALE_254(30,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_31_1()
+  CON_MPE094_FEMALE_254(31,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_32_1()
+  CON_MPE094_FEMALE_254(32,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_33_1()
+  CON_MPE094_FEMALE_254(33,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_34_1()
+  CON_MPE094_FEMALE_254(34,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_35_1()
+  CON_MPE094_FEMALE_254(35,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_36_1()
+  CON_MPE094_FEMALE_254(36,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_37_1()
+  CON_MPE094_FEMALE_254(37,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_38_1()
+  CON_MPE094_FEMALE_254(38,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_39_1()
+  CON_MPE094_FEMALE_254(39,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_40_1()
+  CON_MPE094_FEMALE_254(40,1)
+#end
+
+#macro CON_MPE094_FEMALE_254_1_2()
+  CON_MPE094_FEMALE_254(1,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_2_2()
+  CON_MPE094_FEMALE_254(2,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_3_2()
+  CON_MPE094_FEMALE_254(3,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_4_2()
+  CON_MPE094_FEMALE_254(4,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_5_2()
+  CON_MPE094_FEMALE_254(5,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_6_2()
+  CON_MPE094_FEMALE_254(6,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_7_2()
+  CON_MPE094_FEMALE_254(7,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_8_2()
+  CON_MPE094_FEMALE_254(8,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_9_2()
+  CON_MPE094_FEMALE_254(9,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_10_2()
+  CON_MPE094_FEMALE_254(10,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_11_2()
+  CON_MPE094_FEMALE_254(11,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_12_2()
+  CON_MPE094_FEMALE_254(12,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_13_2()
+  CON_MPE094_FEMALE_254(13,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_14_2()
+  CON_MPE094_FEMALE_254(14,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_15_2()
+  CON_MPE094_FEMALE_254(15,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_16_2()
+  CON_MPE094_FEMALE_254(16,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_17_2()
+  CON_MPE094_FEMALE_254(17,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_18_2()
+  CON_MPE094_FEMALE_254(18,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_19_2()
+  CON_MPE094_FEMALE_254(19,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_20_2()
+  CON_MPE094_FEMALE_254(20,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_21_2()
+  CON_MPE094_FEMALE_254(21,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_22_2()
+  CON_MPE094_FEMALE_254(22,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_23_2()
+  CON_MPE094_FEMALE_254(23,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_24_2()
+  CON_MPE094_FEMALE_254(24,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_25_2()
+  CON_MPE094_FEMALE_254(25,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_26_2()
+  CON_MPE094_FEMALE_254(26,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_27_2()
+  CON_MPE094_FEMALE_254(27,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_28_2()
+  CON_MPE094_FEMALE_254(28,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_29_2()
+  CON_MPE094_FEMALE_254(29,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_30_2()
+  CON_MPE094_FEMALE_254(30,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_31_2()
+  CON_MPE094_FEMALE_254(31,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_32_2()
+  CON_MPE094_FEMALE_254(32,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_33_2()
+  CON_MPE094_FEMALE_254(33,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_34_2()
+  CON_MPE094_FEMALE_254(34,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_35_2()
+  CON_MPE094_FEMALE_254(35,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_36_2()
+  CON_MPE094_FEMALE_254(36,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_37_2()
+  CON_MPE094_FEMALE_254(37,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_38_2()
+  CON_MPE094_FEMALE_254(38,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_39_2()
+  CON_MPE094_FEMALE_254(39,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_40_2()
+  CON_MPE094_FEMALE_254(40,2)
+#end
+
+#macro CON_MPE094_FEMALE_254_1_3()
+  CON_MPE094_FEMALE_254(1,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_2_3()
+  CON_MPE094_FEMALE_254(2,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_3_3()
+  CON_MPE094_FEMALE_254(3,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_4_3()
+  CON_MPE094_FEMALE_254(4,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_5_3()
+  CON_MPE094_FEMALE_254(5,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_6_3()
+  CON_MPE094_FEMALE_254(6,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_7_3()
+  CON_MPE094_FEMALE_254(7,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_8_3()
+  CON_MPE094_FEMALE_254(8,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_9_3()
+  CON_MPE094_FEMALE_254(9,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_10_3()
+  CON_MPE094_FEMALE_254(10,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_11_3()
+  CON_MPE094_FEMALE_254(11,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_12_3()
+  CON_MPE094_FEMALE_254(12,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_13_3()
+  CON_MPE094_FEMALE_254(13,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_14_3()
+  CON_MPE094_FEMALE_254(14,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_15_3()
+  CON_MPE094_FEMALE_254(15,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_16_3()
+  CON_MPE094_FEMALE_254(16,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_17_3()
+  CON_MPE094_FEMALE_254(17,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_18_3()
+  CON_MPE094_FEMALE_254(18,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_19_3()
+  CON_MPE094_FEMALE_254(19,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_20_3()
+  CON_MPE094_FEMALE_254(20,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_21_3()
+  CON_MPE094_FEMALE_254(21,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_22_3()
+  CON_MPE094_FEMALE_254(22,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_23_3()
+  CON_MPE094_FEMALE_254(23,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_24_3()
+  CON_MPE094_FEMALE_254(24,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_25_3()
+  CON_MPE094_FEMALE_254(25,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_26_3()
+  CON_MPE094_FEMALE_254(26,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_27_3()
+  CON_MPE094_FEMALE_254(27,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_28_3()
+  CON_MPE094_FEMALE_254(28,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_29_3()
+  CON_MPE094_FEMALE_254(29,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_30_3()
+  CON_MPE094_FEMALE_254(30,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_31_3()
+  CON_MPE094_FEMALE_254(31,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_32_3()
+  CON_MPE094_FEMALE_254(32,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_33_3()
+  CON_MPE094_FEMALE_254(33,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_34_3()
+  CON_MPE094_FEMALE_254(34,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_35_3()
+  CON_MPE094_FEMALE_254(35,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_36_3()
+  CON_MPE094_FEMALE_254(36,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_37_3()
+  CON_MPE094_FEMALE_254(37,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_38_3()
+  CON_MPE094_FEMALE_254(38,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_39_3()
+  CON_MPE094_FEMALE_254(39,3)
+#end
+
+#macro CON_MPE094_FEMALE_254_40_3()
+  CON_MPE094_FEMALE_254(40,3)
+#end
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+ * female header 2.00mm, 1-row, 2-row, 3-row.
+ ******************************************************************************/
+
+#macro MPE156_FEMALE(GRID,H)
+  union { 
+     difference {
+        box{<-GRID/2,0,-2.20/2>
+            <+GRID/2,H,+2.20/2>}
+        object{ Pyramid_N(4, GRID, 0.0, GRID)
+                rotate <180,0,0>
+                translate <0,H+GRID/2,0>}
+        box{<-0.9/2, -0.1,-0.9/2>
+            <+0.9/2,H+0.1,+0.9/2>}
+        }
+     }
+#end
+
+
+#macro MPE156_FEMALE_PIN()
+  intersection {
+     box{<-0.45/2, 2.0,-0.2/2>
+         <+0.45/2,-2.6,+0.2/2>}
+     box{<-5/2,-5/2,-0.5/2>
+         <+5/2,+5/2,+0.5/2>
+        rotate <0,0,45> translate <0,0.8,0>
+        }     
+     texture{col_gold}
+     }
+#end
+
+
+#macro CON_MPE156_FEMALE_200(X,Y)
+#local GRID = 2.00;
+union {
+  // plastic housing
+  union {
+     GRID_BASE(cylinder{<0,0.3,-0.75><0,0.3,0.75>0.3},GRID,X-1,Y)
+     difference {
+        GRID_BASE(MPE156_FEMALE(GRID,4.3),GRID,X,Y)
+        box {<-X/2*GRID -0.1,-0.1,-Y/2*GRID-0.1>
+             <+X/2*GRID +0.1,+0.3,+Y/2*GRID+0.1>}
+        }
+     pigment{Gray25}
+     }
+  // straight pin
+  GRID_BASE(MPE156_FEMALE_PIN(),GRID,X,Y)
+  }
+#end
+
+/*******************************************************************************
+ * female header 2.00mm, 1-row, 2-row, 3-row.
+ * - https://www.mpe-connector.de/de/produkte/
+ *           buchsenleisten/buchsenleiste-200-mm/156-1
+ *     parts 156 variant 1 and variant 3
+ * or
+ * - https://docs.rs-online.com/ed68/0900766b80da4106.pdf p.281,p.279
+ *     Assmann A-BL-200-E G-x xx D (1-row)
+ *     Assmann A-BL-200-D G-x xx D (2-row)
+ ******************************************************************************/
+#macro CON_MPE156_FEMALE_200_1_1()
+  CON_MPE156_FEMALE_200(1,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_2_1()
+  CON_MPE156_FEMALE_200(2,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_3_1()
+  CON_MPE156_FEMALE_200(3,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_4_1()
+  CON_MPE156_FEMALE_200(4,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_5_1()
+  CON_MPE156_FEMALE_200(5,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_6_1()
+  CON_MPE156_FEMALE_200(6,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_7_1()
+  CON_MPE156_FEMALE_200(7,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_8_1()
+  CON_MPE156_FEMALE_200(8,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_9_1()
+  CON_MPE156_FEMALE_200(9,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_10_1()
+  CON_MPE156_FEMALE_200(10,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_11_1()
+  CON_MPE156_FEMALE_200(11,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_12_1()
+  CON_MPE156_FEMALE_200(12,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_13_1()
+  CON_MPE156_FEMALE_200(13,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_14_1()
+  CON_MPE156_FEMALE_200(14,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_15_1()
+  CON_MPE156_FEMALE_200(15,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_16_1()
+  CON_MPE156_FEMALE_200(16,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_17_1()
+  CON_MPE156_FEMALE_200(17,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_18_1()
+  CON_MPE156_FEMALE_200(18,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_19_1()
+  CON_MPE156_FEMALE_200(19,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_20_1()
+  CON_MPE156_FEMALE_200(20,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_21_1()
+  CON_MPE156_FEMALE_200(21,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_22_1()
+  CON_MPE156_FEMALE_200(22,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_23_1()
+  CON_MPE156_FEMALE_200(23,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_24_1()
+  CON_MPE156_FEMALE_200(24,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_25_1()
+  CON_MPE156_FEMALE_200(25,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_26_1()
+  CON_MPE156_FEMALE_200(26,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_27_1()
+  CON_MPE156_FEMALE_200(27,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_28_1()
+  CON_MPE156_FEMALE_200(28,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_29_1()
+  CON_MPE156_FEMALE_200(29,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_30_1()
+  CON_MPE156_FEMALE_200(30,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_31_1()
+  CON_MPE156_FEMALE_200(31,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_32_1()
+  CON_MPE156_FEMALE_200(32,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_33_1()
+  CON_MPE156_FEMALE_200(33,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_34_1()
+  CON_MPE156_FEMALE_200(34,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_35_1()
+  CON_MPE156_FEMALE_200(35,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_36_1()
+  CON_MPE156_FEMALE_200(36,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_37_1()
+  CON_MPE156_FEMALE_200(37,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_38_1()
+  CON_MPE156_FEMALE_200(38,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_39_1()
+  CON_MPE156_FEMALE_200(39,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_40_1()
+  CON_MPE156_FEMALE_200(40,1)
+#end
+
+#macro CON_MPE156_FEMALE_200_1_2()
+  CON_MPE156_FEMALE_200(1,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_2_2()
+  CON_MPE156_FEMALE_200(2,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_3_2()
+  CON_MPE156_FEMALE_200(3,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_4_2()
+  CON_MPE156_FEMALE_200(4,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_5_2()
+  CON_MPE156_FEMALE_200(5,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_6_2()
+  CON_MPE156_FEMALE_200(6,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_7_2()
+  CON_MPE156_FEMALE_200(7,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_8_2()
+  CON_MPE156_FEMALE_200(8,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_9_2()
+  CON_MPE156_FEMALE_200(9,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_10_2()
+  CON_MPE156_FEMALE_200(10,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_11_2()
+  CON_MPE156_FEMALE_200(11,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_12_2()
+  CON_MPE156_FEMALE_200(12,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_13_2()
+  CON_MPE156_FEMALE_200(13,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_14_2()
+  CON_MPE156_FEMALE_200(14,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_15_2()
+  CON_MPE156_FEMALE_200(15,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_16_2()
+  CON_MPE156_FEMALE_200(16,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_17_2()
+  CON_MPE156_FEMALE_200(17,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_18_2()
+  CON_MPE156_FEMALE_200(18,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_19_2()
+  CON_MPE156_FEMALE_200(19,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_20_2()
+  CON_MPE156_FEMALE_200(20,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_21_2()
+  CON_MPE156_FEMALE_200(21,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_22_2()
+  CON_MPE156_FEMALE_200(22,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_23_2()
+  CON_MPE156_FEMALE_200(23,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_24_2()
+  CON_MPE156_FEMALE_200(24,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_25_2()
+  CON_MPE156_FEMALE_200(25,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_26_2()
+  CON_MPE156_FEMALE_200(26,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_27_2()
+  CON_MPE156_FEMALE_200(27,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_28_2()
+  CON_MPE156_FEMALE_200(28,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_29_2()
+  CON_MPE156_FEMALE_200(29,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_30_2()
+  CON_MPE156_FEMALE_200(30,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_31_2()
+  CON_MPE156_FEMALE_200(31,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_32_2()
+  CON_MPE156_FEMALE_200(32,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_33_2()
+  CON_MPE156_FEMALE_200(33,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_34_2()
+  CON_MPE156_FEMALE_200(34,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_35_2()
+  CON_MPE156_FEMALE_200(35,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_36_2()
+  CON_MPE156_FEMALE_200(36,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_37_2()
+  CON_MPE156_FEMALE_200(37,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_38_2()
+  CON_MPE156_FEMALE_200(38,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_39_2()
+  CON_MPE156_FEMALE_200(39,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_40_2()
+  CON_MPE156_FEMALE_200(40,2)
+#end
+
+#macro CON_MPE156_FEMALE_200_1_3()
+  CON_MPE156_FEMALE_200(1,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_2_3()
+  CON_MPE156_FEMALE_200(2,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_3_3()
+  CON_MPE156_FEMALE_200(3,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_4_3()
+  CON_MPE156_FEMALE_200(4,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_5_3()
+  CON_MPE156_FEMALE_200(5,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_6_3()
+  CON_MPE156_FEMALE_200(6,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_7_3()
+  CON_MPE156_FEMALE_200(7,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_8_3()
+  CON_MPE156_FEMALE_200(8,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_9_3()
+  CON_MPE156_FEMALE_200(9,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_10_3()
+  CON_MPE156_FEMALE_200(10,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_11_3()
+  CON_MPE156_FEMALE_200(11,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_12_3()
+  CON_MPE156_FEMALE_200(12,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_13_3()
+  CON_MPE156_FEMALE_200(13,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_14_3()
+  CON_MPE156_FEMALE_200(14,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_15_3()
+  CON_MPE156_FEMALE_200(15,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_16_3()
+  CON_MPE156_FEMALE_200(16,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_17_3()
+  CON_MPE156_FEMALE_200(17,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_18_3()
+  CON_MPE156_FEMALE_200(18,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_19_3()
+  CON_MPE156_FEMALE_200(19,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_20_3()
+  CON_MPE156_FEMALE_200(20,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_21_3()
+  CON_MPE156_FEMALE_200(21,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_22_3()
+  CON_MPE156_FEMALE_200(22,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_23_3()
+  CON_MPE156_FEMALE_200(23,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_24_3()
+  CON_MPE156_FEMALE_200(24,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_25_3()
+  CON_MPE156_FEMALE_200(25,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_26_3()
+  CON_MPE156_FEMALE_200(26,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_27_3()
+  CON_MPE156_FEMALE_200(27,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_28_3()
+  CON_MPE156_FEMALE_200(28,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_29_3()
+  CON_MPE156_FEMALE_200(29,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_30_3()
+  CON_MPE156_FEMALE_200(30,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_31_3()
+  CON_MPE156_FEMALE_200(31,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_32_3()
+  CON_MPE156_FEMALE_200(32,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_33_3()
+  CON_MPE156_FEMALE_200(33,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_34_3()
+  CON_MPE156_FEMALE_200(34,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_35_3()
+  CON_MPE156_FEMALE_200(35,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_36_3()
+  CON_MPE156_FEMALE_200(36,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_37_3()
+  CON_MPE156_FEMALE_200(37,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_38_3()
+  CON_MPE156_FEMALE_200(38,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_39_3()
+  CON_MPE156_FEMALE_200(39,3)
+#end
+
+#macro CON_MPE156_FEMALE_200_40_3()
+  CON_MPE156_FEMALE_200(40,3)
+#end
