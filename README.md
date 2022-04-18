@@ -6,6 +6,7 @@ Do you still remember that famous idea of rendering PCB 3D images using Cadsoft 
 It was, and still is, an eye catcher.
 
 ![alt text](examples/example1.png)
+![alt text](examples/example2.png)
 
 Well, years have been passed by..
 
