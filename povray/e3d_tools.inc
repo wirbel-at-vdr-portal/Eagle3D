@@ -136,16 +136,6 @@ global_settings{charset utf8}
 #end
 
 //******************************************************************************************************
-#macro COL_GOLD()
-    #warning "Please use direct texture{} or better the texture{col_gold} identifier instead of COL_GOLD()"
-    texture {col_gold}
-#end
-
-#macro COL_SILVER()
-    #warning "Please use direct texture{} or better the texture{col_silver} identifier instead of COL_SILVER()"
-    texture{col_silver}
-#end
-
 
 
 #ifdef(col_preset)

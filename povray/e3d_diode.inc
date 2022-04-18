@@ -1897,11 +1897,6 @@ DIODE_SMD_MELF_GRND(value)
 ********************************************************************************************************************************************/
 #macro DIODE_SMD_MINIMELF_GRND(value, s)
 union{                                                                                                             
-/*cylinder{<1,0,0><-0.9,0,0>0.8}                                                                                   
-torus{0.6,0.2 rotate<90,90,0> translate<1,0,0>}                                                                    
-torus{0.6,0.2 rotate<90,90,0> translate<-0.9,0,0>}                                                                 
-cylinder{<1.2,0,0><1.7,0,0>0.8 COL_SILVER()}                                                                       
-cylinder{<-1.25,0,0><-1.7,0,0>0.8 COL_SILVER()}*/                                                                  
 object{Round_Cylinder_Union(<-1.1,0,0><1.2,0,0>0.8,0.2)}                                                           
 cylinder{<-1.6,0,0><1.6,0,0>0.32 texture{col_silver}}                                                              
 object{Round_Cylinder_Union(<1.25,0,0><1.7,0,0>0.8,0.2) texture{col_silver}}                                       
