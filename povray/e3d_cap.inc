@@ -25,11 +25,7 @@
 #ifndef(__cap_inc)
 #declare __cap_inc = true;
 
-#ifndef(inc_testmode)
-#declare inc_testmode=true;
 #include "e3d_tools.inc"
-#undef inc_testmode
-#end
 
 /********************************************************************************************************************************************
 //Joerg Bredendiek <sprut(replace with at)sprut.de>  

@@ -25,12 +25,7 @@
 #ifndef(__diode_inc)
 #declare __diode_inc = true;
 
-#ifndef(inc_testmode)
-#declare inc_testmode=true;
 #include "e3d_tools.inc"
-#undef inc_testmode
-#end
-
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_DIODE_DIS_LED_7SEG_SYMBOL.inc.src

@@ -25,12 +25,7 @@
 #ifndef(__ic_inc)
 #declare __ic_inc = true;
 
-#ifndef(inc_testmode)
-#declare inc_testmode=true;
 #include "e3d_tools.inc"
-#undef inc_testmode
-#end
-
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_IC_DIS_PIN.inc.src

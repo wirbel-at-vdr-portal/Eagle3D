@@ -25,11 +25,7 @@
 #ifndef(__trafo_inc)
 #declare __trafo_inc = true;
 
-#ifndef(inc_testmode)
-#declare inc_testmode=true;
 #include "e3d_tools.inc"
-#undef inc_testmode
-#end
 
 /********************************************************************************************************************************************
 // Printtransformator Grundmakro era-Trafos mit EI-Schnitt

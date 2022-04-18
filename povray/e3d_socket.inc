@@ -25,12 +25,7 @@
 #ifndef(__socket_inc)
 #declare __socket_inc = true;
 
-#ifndef(inc_testmode)
-#declare inc_testmode=true;
 #include "e3d_tools.inc" 
-#undef inc_testmode
-#end
-
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_SOCKET_DIP_PIN.inc.src
