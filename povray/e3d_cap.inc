@@ -1344,23 +1344,58 @@ CAP_SMD_ELKO_GRND(12.8,12.8,12.5,12.5,1.2,4.7,4)
 #macro CAP_SMD_ELKO_1214(value)
 CAP_SMD_ELKO_GRND(12.8,12.8,14.5,12.5,1.2,4.7,4)
 #end
+
+#macro CAP_SMD_ELKO_PANASONIC_base(L,W,H,D,B,S,C)
+union {
+  #switch (D)
+  #range (3.9,4.1)
+     #local sc=0.6;
+     #local dx=0.5;
+  #break
+  #range (4.9,5.1)
+     #local sc=0.7;
+     #local dx=0.6;
+  #break
+  #range (6.2,6.4)
+     #local sc=0.9;
+     #local dx=0.7;
+  #break
+  #range (7.9,8.1)
+     #local sc=1.2;
+     #local dx=0.9;
+  #break
+  #else
+     #local sc=1.3;
+  #end
+  text {ttf besch_font value 0.5,0
+            scale sc rotate<90,180,0>
+            translate<dx,H+0.01,0> pigment{Gray20}
+       }
+  #local value="";
+  CAP_SMD_ELKO_GRND(L,W,H,D,B,S,C) // no label.
+  }
+#end
+
 #macro CAP_SMD_ELKO_PANASONIC_B(value)
-CAP_SMD_ELKO_GRND(4.3,4.3,5.8,4.0,0.65,1.0,1.8)
+CAP_SMD_ELKO_PANASONIC_base(4.3,4.3,5.8,4.0,0.65,1.0,1.8)
 #end
 #macro CAP_SMD_ELKO_PANASONIC_C(value)
-CAP_SMD_ELKO_GRND(5.3,5.3,5.8,5.0,0.65,1.5,2.2)
+CAP_SMD_ELKO_PANASONIC_base(5.3,5.3,5.8,5.0,0.65,1.5,2.2)
 #end
 #macro CAP_SMD_ELKO_PANASONIC_D(value)
-CAP_SMD_ELKO_GRND(6.6,6.6,5.8,6.3,0.65,1.8,2.6)
+CAP_SMD_ELKO_PANASONIC_base(6.6,6.6,5.8,6.3,0.65,1.8,2.6)
+#end
+#macro CAP_SMD_ELKO_PANASONIC_D8(value)
+CAP_SMD_ELKO_PANASONIC_base(6.6,6.6,7.7,6.3,0.65,1.8,2.6)
 #end
 #macro CAP_SMD_ELKO_PANASONIC_E(value)
-CAP_SMD_ELKO_GRND(8.3,8.3,6.2,8.0,0.65,2.2,3.4)
+CAP_SMD_ELKO_PANASONIC_base(8.3,8.3,6.2,8.0,0.65,2.2,3.4)
 #end
 #macro CAP_SMD_ELKO_PANASONIC_F(value)
-CAP_SMD_ELKO_GRND(8.3,8.3,10.2,8.0,0.9,3.1,3.4)
+CAP_SMD_ELKO_PANASONIC_base(8.3,8.3,10.2,8.0,0.9,3.1,3.4)
 #end
 #macro CAP_SMD_ELKO_PANASONIC_G(value)
-CAP_SMD_ELKO_GRND(10.3,10.3,10.2,10.0,0.9,4.6,3.5)
+CAP_SMD_ELKO_PANASONIC_base(10.3,10.3,10.2,10.0,0.9,4.6,3.5)
 #end
 
 
