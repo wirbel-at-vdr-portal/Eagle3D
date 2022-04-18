@@ -58,6 +58,7 @@ global_settings{charset utf8}
 #include "e3d_socket.inc"
 #include "e3d_qfp.inc"
 #include "e3d_switch.inc"
+#include "FUSE/ptcfuse.inc"
 
 //******************************************************************************************************
 #if(inc_testmode=true)
