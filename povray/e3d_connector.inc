@@ -31,6 +31,7 @@
 #undef inc_testmode
 #end
 
+#include "CONNECTOR/pinheader.inc"
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_AMP_HE14_1S.inc.src
