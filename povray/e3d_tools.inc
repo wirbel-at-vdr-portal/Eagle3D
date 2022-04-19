@@ -48,6 +48,7 @@ global_settings{charset utf8}
 #include "TOOLS/fonts.inc"
 #include "TOOLS/default_colors.inc"
 #include "TOOLS/ARC.inc"
+#include "TOOLS/RECT_BOGEN.inc"
 #include "TOOLS/WIRE_LEADS.inc"
 #include "e3d_logo.inc"
 #include "e3d_tex.inc"
@@ -87,35 +88,6 @@ global_settings{charset utf8}
 
 
 
-
-/**********************************************************************
-//Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
-//Privat: <fbleikamp@web.de>
-//Macro fuer gebogene Rechteckprofile mit Oeffnungswinkel von 1-179 Grad
-//Der Schenkel mit der laenge1 liegt mittig auf der x-Achse
-//bei einem Winkel von 90Grad der andere auf der y-Achse
-//der Innenradius muss >= 0 sein,
-//der Winkel zwischen den Schenkeln 0 > Winkel <180,
-//mittlerer Biegeradius = i_radius + dicke/2
-**********************************************************************/
-#macro TOOLS_RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
-union{
-    difference {
-        cylinder{<(breite/2) * -1,0,0><breite/2,0,0>(i_radius + dicke)}
-        cylinder{<(breite/2 + 0.1) * -1,0,0><breite/2 + 0.1,0,0>i_radius}
-        box{ <(breite/2 + 0.1) * -1,(i_radius + dicke + 0.1) * -1, 0>,
-             <breite/2 + 0.1, (i_radius + dicke + 0.1), (i_radius + dicke + 0.1)>
-        }
-        box{ <(breite/2 + 0.1) * -1,(i_radius + dicke + 0.1) * -1, 0>,
-             <breite/2 + 0.1, (i_radius + dicke + 0.1), (i_radius + dicke + 0.1)> rotate <winkel,0,0>}
-        }
-        box{<(breite/2) * -1,i_radius, 0>, <breite/2,i_radius + dicke, laenge1 >}
-        box{<(breite/2) * -1, 0, i_radius * -1>, <breite/2,laenge2 * -1, (i_radius + dicke) * -1>
-            rotate <(90 - winkel) * -1,0,0>
-        }
-        translate < 0,(i_radius + dicke/2) * -1,(i_radius + dicke/2)> rotate <0,-90,180>
-    }
-#end
 
 
 /**********************************************************************
