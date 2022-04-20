@@ -1,3 +1,7 @@
+// TOOLS_BENTPIPE() depends on TOOLS_TORUS_SPLINE() :(
+#ifndef(__TORUS_SPLINE)
+#declare __TORUS_SPLINE = true;
+
 /*******************************************************************************
  * Creates a smooth spline of toruses connecting a sequence of points.
  * Author: Ron Parker
@@ -116,4 +120,7 @@
         #declare V=V1;
     #end
   }
+#end
+
+// __TORUS_SPLINE
 #end
