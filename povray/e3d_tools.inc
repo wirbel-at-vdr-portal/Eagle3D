@@ -48,6 +48,7 @@ global_settings{charset utf8}
 #include "TOOLS/fonts.inc"
 #include "TOOLS/default_colors.inc"
 #include "TOOLS/ARC.inc"
+#include "TOOLS/PCB_SMD.inc"
 #include "TOOLS/PCB_VIA.inc"
 #include "TOOLS/RECT_BOGEN.inc"
 #include "TOOLS/WIRE_LEADS.inc"
@@ -92,44 +93,6 @@ global_settings{charset utf8}
 
 
 
-/**********************************************************************
-//Generates an SMD
-//xsize:    x-size of the SMD
-//ysize:    y-size of the SMD
-//thick:    the thikness of the copper
-//r:        roundness (0%-100%)
-**********************************************************************/
-#macro TOOLS_PCB_SMD(xsize,ysize,thick,r)
-
-    #if(r=0)
-        box{<-xsize/2,0,-ysize/2><xsize/2,thick,ysize/2>}
-    #else
-        union{
-
-            #if(xsize>ysize)
-
-                #local xsmall=xsize-(ysize)*(r/100);
-                    #local ysmall=ysize-(ysize)*(r/100);
-                    #local cyldif=(ysize)*(r/100);
-
-            #else
-                #local xsmall=xsize-(xsize)*(r/100);
-                    #local ysmall=ysize-(xsize)*(r/100);
-                    #local cyldif=(xsize)*(r/100);
-
-            #end
-
-            box{<-xsmall/2,0,-ysize/2><xsmall/2,thick,ysize/2>}
-            box{<-xsize/2,0,-ysmall/2><xsize/2,thick,ysmall/2>}
-
-            cylinder{<-xsize/2+cyldif/2,0,-ysize/2+cyldif/2><-xsize/2+cyldif/2,thick,-ysize/2+cyldif/2>cyldif/2}
-            cylinder{<-xsize/2+cyldif/2,0, ysize/2-cyldif/2><-xsize/2+cyldif/2,thick, ysize/2-cyldif/2>cyldif/2}
-            cylinder{< xsize/2-cyldif/2,0,-ysize/2+cyldif/2>< xsize/2-cyldif/2,thick,-ysize/2+cyldif/2>cyldif/2}
-            cylinder{< xsize/2-cyldif/2,0, ysize/2-cyldif/2>< xsize/2-cyldif/2,thick, ysize/2-cyldif/2>cyldif/2}
-
-        }
-    #end
-#end
 
 /**********************************************************************
 //By John van Sickle
