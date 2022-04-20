@@ -58,6 +58,7 @@ global_settings{charset utf8}
 #include "TOOLS/TORUS_SPLINE.inc"
 #include "TOOLS/WASHER.inc"
 #include "TOOLS/WIRE_LEADS.inc"
+
 #include "e3d_logo.inc"
 #include "e3d_tex.inc"
 #include "e3d_ic.inc"
@@ -92,32 +93,6 @@ global_settings{charset utf8}
     #declare global_show_washers = on;
     #declare global_show_nuts = on;
     #declare global_ambient_mul = 1.0;
-#end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**********************************************************************
-This macro is used for simple object generation
-**********************************************************************/
-#macro TOOLS_SSDL_BOX( corner1, corner2, trans, rot, sca, c)
-  #ifdef(global_create_ssdl_file)
-     #local corner1 = vrotate(corner1,B)
-     #write( ssdl_file, "BOX:", corner1, corner2, c, "\n")
-  #end
 #end
 
 #end
