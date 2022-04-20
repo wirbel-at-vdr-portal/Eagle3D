@@ -74,25 +74,4 @@ global_settings{charset utf8}
 #include "e3d_switch.inc"
 #include "FUSE/ptcfuse.inc"
 
-//******************************************************************************************************
-#if(inc_testmode=true)
-    #declare pin_short = on;
-    #declare pcb_height = 1.500000;
-    #declare pin_length = 2.5;
-
-    #declare global_res_colselect=1;
-    #declare global_res_col=1;
-    #declare global_res_shape=1;
-    #declare global_res_bend_radius=1;
-
-    #declare global_diode_bend_radius=1;
-
-    #declare global_seed=seed(1234);
-
-    #declare global_show_screws = on;
-    #declare global_show_washers = on;
-    #declare global_show_nuts = on;
-    #declare global_ambient_mul = 1.0;
-#end
-
 #end
