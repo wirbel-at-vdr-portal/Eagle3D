@@ -399,7 +399,7 @@ box{<0,0,-2.5><Pins*2.54,3,3>}
 #local i=0; #while (i<Pins) box{<0.77+i*2.54,-0.1,-3><1.77+i*2.54,0.8,4>} #local i=i+1; #end }
 box{<1.27,2,-2.5><(Pins-0.5)*2.54,11.3,-1.7>}
 box{<1.27,5.8,-2><(Pins-0.5)*2.54,7.5,-1.4>}
-translate <-Pins*1.27,0,0> texture {col_Molex}}
+translate <-Pins*1.27,0,0> texture {e3d_tex_con_Molex}}
 #end
 
 
@@ -481,7 +481,7 @@ sphere{<-xc,0.3,-3.2> 0.3}
 sphere{<-xc,0.3,3.2> 0.3}
 #local xc=xc+7.62;
 #end
-texture {col_Wannen}}
+texture{e3d_tex_con_IDC}
 #end
 
 
