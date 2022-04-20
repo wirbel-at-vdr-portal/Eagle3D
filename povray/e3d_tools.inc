@@ -55,6 +55,7 @@ global_settings{charset utf8}
 #include "TOOLS/ROUNDED_BAR.inc"
 #include "TOOLS/SCREW.inc"
 #include "TOOLS/TORUS_SPLINE.inc"
+#include "TOOLS/WASHER.inc"
 #include "TOOLS/WIRE_LEADS.inc"
 #include "e3d_logo.inc"
 #include "e3d_tex.inc"
@@ -104,78 +105,7 @@ global_settings{charset utf8}
 
 
 
-/********************************************************************************************************************************************
-//Macros for Washers : diameter 2, 2.5, 3, 4, 5
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.1 - 04/01/06
-//Col= color Type: 0=Z, 1=M, 2=L, 3=LL
-********************************************************************************************************************************************/
 
-#macro TOOLS_WASHER (d,Type,Col)
-#switch (d)
-    #case(2)
-        #local AZ = 4;
-        #local AM = 6;
-        #local AL = 8;
-        #local ALL = 10;
-        #local C = 0.6;
-        #local B = 2.25;
-    #break
-    #case(2.5)
-        #local AZ = 5;
-        #local AM = 7;
-        #local AL = 9;
-        #local ALL = 11;
-        #local C = 0.7;
-        #local B = 2.75;
-    #break
-    #case(3)
-        #local AZ = 6;
-        #local AM = 8;
-        #local AL = 12;
-        #local ALL = 14;
-        #local C = 0.8;
-        #local B = 3.25;
-    #break
-    #case(4)
-        #local AZ = 8;
-        #local AM = 10;
-        #local AL = 14;
-        #local ALL = 16;
-        #local C = 0.8;
-        #local B = 4.25;
-    #break
-    #case(5)
-        #local AZ = 10;
-        #local AM = 12;
-        #local AL = 16;
-        #local ALL = 20;
-        #local C = 1;
-        #local B = 5.25;
-    #break
-#end
-#switch (Type)
-    #case(0)
-        #local A=AZ;
-    #break
-    #case(1)
-        #local A=AM;
-    #break
-    #case(2)
-        #local A=AL;
-    #break
-    #case(3)
-        #local A=ALL;
-    #break
-#end
-
-difference
-{
-    cylinder {<0,0,0>, <0,C,0>, A/2}
-    cylinder {<0,-0.1,0>, <0,C+0.1,0>, B/2}
-    pigment{Col}
-}
-#end
 
 /********************************************************************************************************************************************
 //Macros for Nuts : M2, M2.5, M3, M4, M5
