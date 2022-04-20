@@ -1,16 +1,7 @@
-
-
-
 /*******************************************************************************
  * several logos at:
  *  - http://www.ecadata.de/herst/showlogo.php?F_SPRACHE=1
  ******************************************************************************/
-#declare global_fontfile_eagle3d = "eagle3d.ttf"
-#if (file_exists(global_fontfile_eagle3d) = 0)
-    #error "Eagle3D font not found. Please specify the path to eagle3d.ttf in the ini-file"
-#end
-
-
 
 
 /*******************************************************************************

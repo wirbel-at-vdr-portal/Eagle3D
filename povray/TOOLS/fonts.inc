@@ -21,12 +21,15 @@
 #declare global_fontfile_arial        = "DejaVuLGCSans.ttf";
 #declare global_fontfile_arial_bold   = "DejaVuLGCSans-Bold.ttf";
 #declare global_fontfile_alphalcd     = "alphalcd.ttf"
-
+#declare global_fontfile_eagle3d      = "eagle3d.ttf"
 
 CheckFont(global_fontfile_fallback     , "cyrvetic.ttf")
 CheckFont(global_fontfile_fallback     , "courbd.ttf")
 CheckFont(global_fontfile_fallback     , "")
 
+
+
+CheckFont(global_fontfile_eagle3d      , "")
 CheckFont(besch_font                   , global_fontfile_fallback)
 CheckFont(global_fontfile_courier      , global_fontfile_fallback)
 CheckFont(global_fontfile_courier_bold , global_fontfile_fallback)
