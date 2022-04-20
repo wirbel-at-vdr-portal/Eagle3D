@@ -1,21 +1,3 @@
-
-
-#include "shapes3.inc"
-
-
-#macro GRID_BASE(OBJ, GRID, M, N)
-union {
-   #for(X, 1, M)
-       #for(Y, 1, N)
-           object { OBJ translate<X*GRID,0,Y*GRID> }
-       #end
-   #end
-   translate<-(1+M)/2*GRID,0,-(1+N)/2*GRID>
-   }
-#end
-
-
-
 /*******************************************************************************
  * female header 2.54mm, 1-row, 2-row, 3-row.
  ******************************************************************************/
