@@ -26,65 +26,12 @@
 #include "TRANSISTOR/SOT82.inc"
 #include "TRANSISTOR/SOT93.inc"
 #include "TRANSISTOR/TO126.inc"
+#include "TRANSISTOR/TO18.inc"
+#include "TRANSISTOR/TO18D.inc"
 
 
-/********************************************************************************************************************************************
-//TO18D metal cup
-//daniel cardona dancardona50@hotmail.com
-********************************************************************************************************************************************/
-#macro TR_TO18D_GRND(value)
-union{
-cylinder{<0,0,0><0,14,0>0.24 texture{col_silver} translate<-0.8,0,-0.8>}                                          //linker Pin
-cylinder{<0,0,0><0,14,0>0.24 texture{col_silver} translate<1,0,1>}                                            //hinterer Pin Gehäuse
-union{                                                                                                          //Transitorkörper
-torus{1.6 0.8 pigment {Silver} translate <0.12,19.3,0>}
-
-cylinder{<0,14,0><0,19.3,0>2.4 pigment{ Silver}translate<0.12,0,0>}
-cylinder{<0,19.3,0><0,20.1,0>1.6 pigment{ Silver}translate<0.12,0,0>}
-cylinder{<0,13.9,0><0,14,0>2.9 pigment{ Silver}translate<0.12,0,0>}}
-box {<-0.56,0,2.6><0.56,0.1,4.2> pigment {Silver}  translate <0.12,13.9,0> rotate <0,-90,0> }
-text {ttf besch_font value 1, 0 pigment { Black } scale <0.7,1,0.7> rotate <90,135,0> translate<1,20.101,0.5>}                                //Beschriftung
-translate<0,-11,-0.22> rotate <0,-135,0> }
-#end
-
-#macro TR_TO18D(value)
-TR_TO18D_GRND(value)
-#end
 
 
-/********************************************************************************************************************************************
-//TO18 Gehäuse stehend        
-// Joerg Bredendiek <sprut(replace with at)sprut.de>   
-//based on Robert Eckelmann <dc6xs@dc6xs.de>
-********************************************************************************************************************************************/
-#macro TR_TO18_GRND(value)
-union{       
-        #if(pin_short=off)
-                #local tr_to18_pin=0;
-        #else
-                #local tr_to18_pin=11-(pcb_height+pin_length);
-        #end    
-
-        cylinder{<0,tr_to18_pin,0><0,14,0>0.24 texture{col_silver} translate<-1.27,0,-1.27>}                 //linker Pin
-        cylinder{<0,tr_to18_pin,0><0,14,0>0.24 texture{col_silver} translate<1.27,0,1.27>}                   //hinterer Pin Gehäuse
-        cylinder{<0,tr_to18_pin,0><0,14,0>0.24 texture{col_silver} translate<1.27,0,-1.27>}                  //rechter Pin
-
-union{                                                                                                       //Transitorkörper
-        torus{1.6 0.8 pigment {Silver} translate <0.12,19.3,0>}
-        cylinder{<0,14,0><0,19.3,0>2.4 pigment{ Silver}translate<0.12,0,0>}
-        cylinder{<0,19.3,0><0,20.1,0>1.6 pigment{ Silver}translate<0.12,0,0>}
-        cylinder{<0,13.9,0><0,14,0>2.9 pigment{ Silver}translate<0.12,0,0>}}
-
-box {<-0.58,0,2.6><0.58,0.1,4.07> pigment {Silver}  translate <0,13.9,0> rotate <0,-90,0> }
-text {ttf besch_font value 1, 0 pigment { Black } scale <0.7,1,0.7> rotate <90,0,0> translate<-1.5,20.101,-.5>} //Beschriftung
-translate<0,-11,0>
-}
-#end
-
-
-#macro TR_TO18(value)
-TR_TO18_GRND(value)
-#end
 
 
 /********************************************************************************************************************************************
