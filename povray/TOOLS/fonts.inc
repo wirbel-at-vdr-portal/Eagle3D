@@ -14,14 +14,14 @@
 #end
 
 
-#declare global_fontfile_fallback     = "DejaVuLGCSansMono-Bold.ttf";
-#declare besch_font                   = "DejaVuLGCSansMono-Bold.ttf"
-#declare global_fontfile_courier      = "DejaVuLGCSansMono.ttf";
-#declare global_fontfile_courier_bold = "DejaVuLGCSansMono-Bold.ttf";
-#declare global_fontfile_arial        = "DejaVuLGCSans.ttf";
-#declare global_fontfile_arial_bold   = "DejaVuLGCSans-Bold.ttf";
-#declare global_fontfile_alphalcd     = "alphalcd.ttf"
-#declare global_fontfile_eagle3d      = "eagle3d.ttf"
+#declare global_fontfile_fallback     = "TOOLS/fonts/DejaVuLGCSansMono-Bold.ttf";
+#declare besch_font                   = "TOOLS/fonts/DejaVuLGCSansMono-Bold.ttf"
+#declare global_fontfile_courier      = "TOOLS/fonts/DejaVuLGCSansMono.ttf";
+#declare global_fontfile_courier_bold = "TOOLS/fonts/DejaVuLGCSansMono-Bold.ttf";
+#declare global_fontfile_arial        = "TOOLS/fonts/DejaVuLGCSans.ttf";
+#declare global_fontfile_arial_bold   = "TOOLS/fonts/DejaVuLGCSans-Bold.ttf";
+#declare global_fontfile_alphalcd     = "TOOLS/fonts/alphalcd.ttf"
+#declare global_fontfile_eagle3d      = "TOOLS/fonts/eagle3d.ttf"
 
 CheckFont(global_fontfile_fallback     , "cyrvetic.ttf")
 CheckFont(global_fontfile_fallback     , "courbd.ttf")
