@@ -22,157 +22,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
-#ifndef(__transistor_inc)
-#declare __transistor_inc = true;
-
 #include "e3d_tools.inc"
-
-/********************************************************************************************************************************************
-//SOT82 Housing horizontal
-********************************************************************************************************************************************/
-#macro TR_SOT82_L_GRND(value)
-/********************************************************************************************************************************************
-//pin horizontal SOT82
-********************************************************************************************************************************************/
-#macro SOT82_PIN_H()
-union{
-union{
-   // senkrechter spitzer teil
-   difference{
-      box{<-0.375,tr_SOT82_s_pin ,0><0.375,8.5,0.6>}
-      box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45-0.375,tr_SOT82_s_pin ,-0.2>}
-      box{<0,0,0><-1,1,1> rotate<0,0,25> translate< 0.3-0.375,tr_SOT82_s_pin ,-0.2>}}
-   // biegung
-   difference{
-      cylinder{<-0.375,8.5,0.6><0.375,8.5,0.6>0.6}
-      cylinder{<-0.38,8.0,1.1><0.38,8.0,1.1>0.5}}
-   // horizontal zum koerper
-   box{<-0.375,8.5,0.6><0.375,9.1,5.0>}
-   translate<0, -7, -5.08>
-}
-   //verdickung
-   box{<-0.75, 8.5, 0><0.75, 9.1, 2> translate<0, -7, -4>}
-}
-#end
-/********************************************************************************************************************************************
-
-********************************************************************************************************************************************/
-
-union{
-   #if(pin_short=off)
-      #local tr_SOT82_s_pin = 0;
-   #else
-      #local tr_SOT82_s_pin = 7-(pcb_height+pin_length);
-   #end
-
-   //Pins
-   union{
-      object{SOT82_PIN_H() translate<-2.54,0,0>}
-      object{SOT82_PIN_H() translate< 2.54,0,0>}
-      object{SOT82_PIN_H()}
-      texture{col_silver}
-   }
-
-   //body
-   union{
-      //metal Body ground
-      box{<-2.8,4.5,1.8><2.8,12,2.551> texture{col_silver}}              
-      
-      difference{
-         //plastic Body
-         box{<-3.6,2.5,0><3.6,13.15,2.55>}
-         cylinder{<0,0,0.1><0,0,-0.4>1.55 translate<0,9.35,0>}
-
-         cylinder{<0,0,1.25><0,0,-0.4>2 translate<-4.5,9.35,0>}
-         cylinder{<0,0,1.25><0,0,-0.4>2 translate< 4.5,9.35,0>}
-
-         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,3.5,0>}
-         cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,3.5,0>}
-
-         pigment{Gray30}}  
-      
-      text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3, 5, -0.01>}
-
-      rotate<90,0,0>
-      translate<0,2.55,-3.81>
-   }
-}
-#end
-
-
-#macro TR_SOT82_L(value)
-TR_SOT82_L_GRND(value)
-#end
-
-
-/********************************************************************************************************************************************
-//SOT82 Housing standing
-********************************************************************************************************************************************/
-#macro TR_SOT82_S_GRND(value)
-union{
-   union{
-      union{
-         #if(pin_short=off)
-            #local tr_SOT82_s_pin = -14;
-         #else
-            #local tr_SOT82_s_pin = 0-(pcb_height+pin_length);
-         #end
-
-         difference{    
-            //PIN Middle
-            box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
-            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
-            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}}
-         difference{ 
-            //PIN Left
-            box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
-            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
-            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}
-            translate<-2.54,0,0>}
-         difference{     
-            //PIN Right
-            box{<0,tr_SOT82_s_pin,0><0.8,2.5,0.62>}
-            box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_SOT82_s_pin,-0.2>}
-            box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_SOT82_s_pin,-0.2>}
-            translate<2.54,0,0>}
-         //PIN add-on
-         box{<0,0,0><1.5,1,0.6> translate<-0.375,0.8,0>}
-         box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<2.54,0.8,0>}
-         box{<0,0,0><1.5,1,0.6> translate<-0.375,0,0> translate<-2.54,0.8,0>}
-
-         translate<-0.8/2,0,0.84>
-      }//END union3
-
-      //metal plate / Body ground
-      box{<-2.8,4.5,1.8><2.8,12,2.551>}              
-      texture{col_silver}
-   }//END union2
-
-   difference{
-      //plastic Body
-      box{<-3.6,2.5,0><3.6,13.15,2.55>}
-      cylinder{<0,0,0.1><0,0,-0.4>1.55 translate<0,9.35,0>}
-
-      cylinder{<0,0,1.25><0,0,-0.4>2 translate<-4.5,9.35,0>}
-      cylinder{<0,0,1.25><0,0,-0.4>2 translate< 4.5,9.35,0>}
-
-      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate<-2.5,3.5,0>}
-      cylinder{<0,0,0.1><0,0,-0.4>0.7 translate< 2.5,3.5,0>}
-
-      pigment{Gray30}}
-
-   // lable
-   text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3,5,-0.01>}
-
-   translate<0,0,-2.55>
-}//END union1
-
-#end
-
-
-#macro TR_SOT82_S(value)
-TR_SOT82_S_GRND(value)
-#end
+#include "TRANSISTOR/SOT82.inc"
 
 
 /********************************************************************************************************************************************
@@ -1555,56 +1406,53 @@ Testing
 **********************************************************************/
 #ifndef(inc_testmode)
           
-//Size of the Grid Plane (+/- span)
-#local XYZ_span=20;
-
-//Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
-
-// Useful GRIDS:
-#local XYZ_step= 1 ;          // axis increment
-#local XYZ_cnt = 0;           //  loop counter
-#local xyz_thick = 0.05;     // grid line thickness
-
-// GRID PLANES: Remove comment begin/end to activate & select PLANES:
-#while (XYZ_cnt <= XYZ_span)
-
-   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
-   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
-   
-   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
-   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
-   
-   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
-   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
-   
-   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
-   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
-
-   #local XYZ_cnt = XYZ_cnt+XYZ_step;
+     //Size of the Grid Plane (+/- span)
+     #local XYZ_span=20;
+     
+     //Orientation axes
+     cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
+     cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
+     cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
+     
+     // Useful GRIDS:
+     #local XYZ_step= 1 ;          // axis increment
+     #local XYZ_cnt = 0;           //  loop counter
+     #local xyz_thick = 0.05;     // grid line thickness
+     
+     // GRID PLANES: Remove comment begin/end to activate & select PLANES:
+     #while (XYZ_cnt <= XYZ_span)
+     
+        cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
+        cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
+        
+        //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
+        //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
+        
+        //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
+        //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
+        
+        cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
+        cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
+     
+        #local XYZ_cnt = XYZ_cnt+XYZ_step;
+     #end
+     
+     camera
+     {       
+        #local tt = 40;            //let's you change the distance easily
+        location <-tt,tt,-tt>
+        //location<0,5,-50>        //alternate location
+        look_at <0,0,0>            //best to select the approximate centre of the object
+        angle 30
+     }
+     
+     light_source { <100, 100, -100> White}
+     light_source { <-100, 100, -100> White }
+     light_source { <-100, 100, 100> White }
+     light_source { <100, 100, 100> White }
+     //light_source { <-tt,tt,-tt> White }
+     //light_source { <-tt,tt,-tt> White }
+     //light_source { <-tt,tt,-tt> White }
+     background{Grey}
+     
 #end
-
-camera
-{       
-   #local tt = 40;            //let's you change the distance easily
-   location <-tt,tt,-tt>
-   //location<0,5,-50>        //alternate location
-   look_at <0,0,0>            //best to select the approximate centre of the object
-   angle 30
-}
-
-light_source { <100, 100, -100> White}
-light_source { <-100, 100, -100> White }
-light_source { <-100, 100, 100> White }
-light_source { <100, 100, 100> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-background{Grey}
-
-#end
-
-#end
-//End of Macros
