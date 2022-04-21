@@ -31,7 +31,7 @@
         cylinder{<0,8,0><0,8.8,0>9.2}
         text {ttf besch_font value 0.5, 0 pigment { Black } scale 4 rotate <90,0,0> translate<-5,8.81,0>}
         translate<0,0,0>}
-        pigment{Silver}
+        pigment{P_Silver3}
         finish { ambient (0.1 * global_ambient_mul) }
         }
 #end
