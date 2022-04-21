@@ -34,6 +34,7 @@
 #include "TRANSISTOR/TO3.inc"
 #include "TRANSISTOR/TO39.inc"
 #include "TRANSISTOR/TO52.inc"
+#include "TRANSISTOR/TO66.inc"
 
 
 
@@ -45,58 +46,6 @@
 
 
 
-/********************************************************************************************************************************************
-//TO66 metal cup
-//daniel cardona<dancardona50@hotmail.com>
-********************************************************************************************************************************************/
-#macro TR_TO66_GRND(value)
-union{
-union{
-difference{
-   cylinder { <0, 0, 0>, <0, 1, 0>, 3.6   }
-    cylinder { <0, -0.5, 0>, <0, 1.1, 0>, 1.8   }
-translate <12,0,0>
-} 
-difference{
-   cylinder { <0, 0, 0>, <0, 1, 0>, 3.6   }
-    cylinder { <0, -0.5, 0>, <0, 1.1, 0>, 1.8   } 
-translate <-12,0,0> 
-}    
-translate<0,0,0>}
-union{  
-box {<0, 0, 0> < 10,  1,  3.7> translate <-9,0,5.>rotate <0,-25,0>}
-box {<0, 0, 0> < 10,  1,  3.7> translate <-1.4,0,-8.7>rotate <0,-25,0>}
-box {<0, 0, 0> < 10,  1,  3.7> translate <-1,0,4.6>rotate <0,25,0>}
-box {<0, 0, 0> < 10,  1,  3.7> translate <-9.4,0,-8.7>rotate <0,25,0>}
- cylinder{<0,0,0><0,4,0>0.6 translate<-2.6,-3,-2.8>} 
- cylinder{<0,0,0><0,4,0>0.6 translate<-2.6,-3,2.8>} 
-cylinder{<0,0,0><0,1,0>8.6}
-  cylinder{<0,1,0><0,2,0>7.6}
-   cylinder{<0,2,0><0,8,0>6} 
-    torus{5.2 0.8  translate <0,8,0>}
-     cylinder{<0,8,0><0,8.8,0>5.2} 
-text {ttf besch_font value 0.5, 0 pigment { Black } scale <2,1,2> rotate <90,0,0> translate<-4,8.81,0>} 
-translate<0,0,0>} 
-
-
-pigment{P_Chrome5}
-
-finish {
-    ambient (0.25 * global_ambient_mul)
-    brilliance 4
-    diffuse 0.5
-    metallic
-    specular 0.80
-    roughness 1/80
-    reflection 0.5
-}
-
-}
-#end
-
-#macro TR_TO66(value)
-TR_TO66_GRND(value)
-#end
 
 
 /********************************************************************************************************************************************
