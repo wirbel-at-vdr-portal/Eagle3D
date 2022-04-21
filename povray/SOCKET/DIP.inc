@@ -3,25 +3,7 @@
  * The following is a modified module section by Joseph Zeglinski,
  * Aug. 20, 2003
  * 20220421: rewrite to use GRID_BASE(), instead of local while loops. wk
- ******************************************************************************/
-
-#macro SOCKET_DIP_PIN()
-  difference {
-     union {
-        cylinder{<0,0,0><0,2.95,0>0.25}
-        sphere{<0,0,0>0.25}
-        cone{<0,2.95,0>0.25<0,3.45,0>0.6}
-        cylinder{<0,3.45,0><0,7.15,0>0.6}
-        cylinder{<0,6.4,0><0,7.15,0>0.85}
-        }
-     cylinder{<0,4,0><0,7.16,0>0.5}
-     texture{col_silver}
-     }
-#end
-
-
-
-/*******************************************************************************
+ * -----------------------------------------------------------------------------
  * produces either a fully pin populated DIL SOCKET, or, a DIL SOCKET with
  * fewer "quads" of pins, ie. some IC's, FET's, Optoisolators and Crystal
  * Oscillators - (8, 14, 16, or 24) pin body, with only 4, 6 or 12 outer pins.
