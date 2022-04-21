@@ -1,15 +1,14 @@
-
-/********************************************************************************************************************************************
-//B    = Breite (Z-Achse)
-//pin_l= Pins auf einer L-Seite
-//pin_b= Pins auf einer B-Seite
-//Li   = Länge innen
-//Bi   = Breite innen
-//totalPins= Anzahl der Pins komplett
-//pincL= Korrektur für Pinausrichtung auf L-Seite
-//pincB= Korrektur für Pinausrichtung auf L-Seite
-//chip = Der Chip für den Sockel
-********************************************************************************************************************************************/
+/*******************************************************************************
+ * B        : width in z axis        Breite (Z-Achse)
+ * pin_l    : pins on L side         Pins auf einer L-Seite
+ * pin_b    : pins on B side         Pins auf einer B-Seite
+ * Li       : inner length           Laenge innen
+ * Bi       : inner width            Breite innen
+ * totalPins: total number of pins   Anzahl der Pins komplett
+ * pincL    : pin correction L side  Korrektur für Pinausrichtung auf L-Seite
+ * pincB    : pin correction B side  Korrektur für Pinausrichtung auf L-Seite
+ * chip     : socketed chip name     Der Chip für den Sockel
+ ******************************************************************************/
 #macro SOCKET_PLCC_base(L,B,pin_l,pin_b,Li,Bi,totalPins,pincL,pincB,chip)
 
 #local plcc20_pina = array[13][13]
