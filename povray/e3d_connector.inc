@@ -88,7 +88,7 @@ pigment{MediumBlue} translate<1.27,0,0>}}
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_CON_PBL_F.inc.src
-// Pin fuer Buchsenleiste (flache Bauform), hinzugefügt von B.Redemann www.b-redemann.de
+// Pin fuer Buchsenleiste (flache Bauform), hinzugefuegt von B.Redemann www.b-redemann.de
 // //////////
 #macro CON_PBL_F()
 union {
@@ -344,10 +344,10 @@ difference {
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_MOLEX254.inc.src
 // Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Kunststoffkörper von geraden und abgewinkelten Molex-Stiftleisten RM 2.54.
-// Parameter: Anzahl Pins. (-> Breite. Höhe/Tiefe sind konstant für alle Größen.)
-// Bezugspunkt: Mitte der Pins in Auflagefläche (gerade Ausführung).
-// Kunststoffkörper von geraden und abgewinkelten Molex-Stiftleisten
+// Grundmakro: Kunststoffkoerper von geraden und abgewinkelten Molex-Stiftleisten RM 2.54.
+// Parameter: Anzahl Pins. (-> Breite. Hoehe/Tiefe sind konstant fuer alle Groessen.)
+// Bezugspunkt: Mitte der Pins in Auflageflaeche (gerade Ausfuehrung).
+// Kunststoffkoerper von geraden und abgewinkelten Molex-Stiftleisten
 // //////////
 #macro MOLEX254(Pins)
 union {
@@ -362,7 +362,7 @@ translate <-Pins*1.27,0,0> texture {e3d_tex_con_Molex}}
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_PBL.inc.src
-// Pin für Buchsenleiste
+// Pin fuer Buchsenleiste
 // //////////
 #macro PBL()
 union {
@@ -408,11 +408,11 @@ finish {ambient (0.1 * global_ambient_mul)}
 // Original file: ./1_PFOSTENWANNE.inc.src
 // //////////
 // Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Kunststoffkörper von Pfostenwannen.
-// Verwendung für gerade und abgewinkelte Bauform jeweils in Verbindung mit entspr. Pinreihen.
-// Parameter: Breite. (Höhe/Tiefe sind konstant für alle Größen.)
-// Bezugspunkt: Mitte der Auflagefläche (gerade Ausführung).
-// Kunststoffkörper von Pfostenwannen
+// Grundmakro: Kunststoffkoerper von Pfostenwannen.
+// Verwendung fuer gerade und abgewinkelte Bauform jeweils in Verbindung mit entspr. Pinreihen.
+// Parameter: Breite. (Hoehe/Tiefe sind konstant fuer alle Groessen.)
+// Bezugspunkt: Mitte der Auflageflaeche (gerade Ausfuehrung).
+// Kunststoffkoerper von Pfostenwannen
 #macro PFOSTENWANNE(B)
 union {
 difference {
@@ -446,7 +446,7 @@ texture{e3d_tex_con_IDC}
 // Original file: ./1_PHW2.inc.src
 // Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
 // Privat: <fbleikamp@web.de>
-// Pin für Stiftleisten Winkel obere Reihe
+// Pin fuer Stiftleisten Winkel obere Reihe
 // //////////
 #macro PHW2()
 union {
@@ -491,7 +491,7 @@ rotate<0,-90,0>
 // Original file: ./1_PHW.inc.src
 // Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
 // Privat: <fbleikamp@web.de>
-// Pin für Stiftleisten Winkel
+// Pin fuer Stiftleisten Winkel
 // //////////
 #macro PHW()
 union {
@@ -538,8 +538,8 @@ rotate<0,-90,0>
 // Original file: ./1_PIN_BENDED.inc.src
 // Tilmann Reh <tilmann.reh@autometer.de>
 // Grundmakro: Um 90° gebogener, quadratischer Stift eines Steckverbinders.
-// Verwendung für abgewinkelte Pfostenwannen sowie z.B. Wago-Steckerleisten.
-// Parameter: Stärke, Biegeradius (Mitte), Höhe über/unter PCB-Oberkante, Länge nach vorn (-Z), Farbe
+// Verwendung fuer abgewinkelte Pfostenwannen sowie z.B. Wago-Steckerleisten.
+// Parameter: Staerke, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z), Farbe
 // //////////
 #macro PIN_BENDED(D,R,HO,HU,L,col)
 union {
@@ -569,8 +569,8 @@ texture{col}}
 // Original file: ./1_PIN_STRAIGHT.inc.src
 // Tilmann Reh <tilmann.reh@autometer.de>
 // Grundmakro: Gerader, quadratischer Stift eines Steckverbinders.
-// Verwendung für gerade Pfostenwannen sowie z.B. Wago-Steckerleisten.
-// Parameter: Stärke, Höhe über/unter PCB-Oberkante, Farbe
+// Verwendung fuer gerade Pfostenwannen sowie z.B. Wago-Steckerleisten.
+// Parameter: Staerke, Hoehe ueber/unter PCB-Oberkante, Farbe
 // Gerader, quadratischer Stift eines Steckverbinders
 // //////////
 #macro PIN_STRAIGHT(D,HO,HU,col)
@@ -633,7 +633,7 @@ difference
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./2_PH.inc.src
-// Pin für Stiftleisten
+// Pin fuer Stiftleisten
 // //////////
 #macro PH()
 union {
@@ -653,8 +653,8 @@ box{<-1.3,-0.1,-0.635><1.3,0.5,0.635> pigment{Gray30} rotate<0,0,0> translate<0,
 // ////////////////////////////////////////////////////////////
 // Original file: ./2_PIN_BENDED_ROW.inc.src
 // Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Reihe gebogener quadratischer Stifte z.B. für Pfostenwannen oder Wago-Stecker.
-// Parameter: Anzahl Pins, Pitch, Stärke, Radius, Höhen über/unter PCB, Länge, Farbe.
+// Grundmakro: Reihe gebogener quadratischer Stifte z.B. fuer Pfostenwannen oder Wago-Stecker.
+// Parameter: Anzahl Pins, Pitch, Staerke, Radius, Hoehen ueber/unter PCB, Laenge, Farbe.
 // Bezugspunkt: Mitte der Pinreihe.
 // Reihe gebogener quadratischer Stifte
 // //////////
@@ -670,8 +670,8 @@ translate<-(Pins-1)*Pitch/2,0,0>}
 // Original file: ./2_PIN_STRAIGHT_ROW.inc.src
 // //////////
 // Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Reihe gerader quadratischer Stifte z.B. für Pfostenwannen oder Wago-Stecker.
-// Parameter: Anzahl Pins, Pitch, Stärke, Höhen über/unter PCB, Farbe.
+// Grundmakro: Reihe gerader quadratischer Stifte z.B. fuer Pfostenwannen oder Wago-Stecker.
+// Parameter: Anzahl Pins, Pitch, Staerke, Hoehen ueber/unter PCB, Farbe.
 // Bezugspunkt: Mitte der Pinreihe.
 // Reihe gerader quadratischer Stifte
 #macro PIN_STRAIGHT_ROW(Pins,Pitch,D,HO,HU,col)
@@ -720,21 +720,21 @@ union
 ********************************************************************************************************************************************/
 #macro CON_AK700_3_5_GRND()
 union {
-//***** Lötstift
+//***** Loetstift
 cylinder{<-5,-4,0><-5,1.1,0>0.6 texture{col_silver}}
 cylinder{<5,-4,0><5,1.1,0>0.6 texture{col_silver}}
-//***** Ende Lötstifte
+//***** Ende Loetstifte
 //
-//***** Grundkörper
+//***** Grundkoerper
 difference {
 box{<-7.5,0,-5><7.5,19,5>}
-//*****mittlerer Anschluß
+//*****mittlerer Anschluss
 box{<-2,3.9,-5.01><2,9.5,3.5>}
-//*****linker Anschluß
+//*****linker Anschluss
 box{<-6.5,3.9,-5.01><-2.5,9.5,3.5>}
-//*****rechter Anschluß
+//*****rechter Anschluss
 box{<2.5,3.9,-5.01><6.5,9.5,3.5>}
-//***** vordere Schräge
+//***** vordere Schraege
 box{<-7.6,9,-6.0><7.6,25,-1.1> rotate<20,0,0> translate<0,0,-8.7>}
 //box{<-7.6,12,-5.1><7.6,12.5,-4.6>}
 //***** hintere Kante
@@ -755,7 +755,7 @@ cylinder{<5,15.9,0><5,19.1,0>1.8}
 //***** Nut an der rechten Seite
 box{<7.0,0.0,-3.4><7.6,13.0,-4.0> }
 }
-//***** Ende Grundkörper
+//***** Ende Grundkoerper
 //
 //***** Steg an der linken Seite
 box{<-7.4,1.0,-3.4><-8.0,13.0,-4.0> }
@@ -775,21 +775,21 @@ box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> texture{col_silver} translate<-5,18.2,0
 difference {
 superellipsoid{<1,0.1> rotate<90,0,0> scale<1.5,0.5,1.5> texture{col_silver} translate<5,18.2,0>}
 box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> texture{col_silver} translate<5,18.2,0>}}
-//***** Ende Schraubenköpfe
+//***** Ende Schraubenkoepfe
 //
-//***** linke Zugbügelklemme
+//***** linke Zugbuegelklemme
 difference {
 box{<-6.4,4.1,-3.5><-2.6,9.4,2.5>}
 box{<-6.2,4.2,-3.6><-2.8,9.4,2.6>}
 texture{col_silver}}
 cylinder{<-5.8,9.0,-3.3><-3.1,9.0,-3.3>1.0 texture{col_silver}}
-//***** rechte Zugbügelklemme
+//***** rechte Zugbuegelklemme
 difference {
 box{<2.6,4.1,-3.5><6.4,9.4,2.5>}
 box{<2.8,4.2,-3.6><6.2,9.4,2.6>}
 texture{col_silver}}
 cylinder{<3.2,9.0,-3.3><5.8,9.0,-3.3>1.0 texture{col_silver}}
-//***** Ende Zugbügelklemme
+//***** Ende Zugbuegelklemme
 //
 pigment{LimeGreen} translate<0,0.2,0>}
 #end
@@ -884,33 +884,33 @@ CON_AMPMT_S_GRND(12)
 
 
 /********************************************************************************************************************************************
-//Grundmakro für Anreiklemme 3,50mm; Modified by Carsten Kögler, FTZ-Leipzig <koegler@ftz-leipzig.de>
+//Grundmakro fuer Anreiklemme 3,50mm; Modified by Carsten Koegler, FTZ-Leipzig <koegler@ftz-leipzig.de>
 ********************************************************************************************************************************************/
 #macro CON_ARK_350MM_GRND(j)
-// Makro für einpolige Reihenklemme -> siehe ARK_350MM_GRND
+// Makro fuer einpolige Reihenklemme -> siehe ARK_350MM_GRND
 // Based on Macro "ARK_PIN", Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
-// Modified by Carsten Kögler, FTZ-Leipzig <koegler@ftz-leipzig.de>
+// Modified by Carsten Koegler, FTZ-Leipzig <koegler@ftz-leipzig.de>
 // Vorlage: RIA Anschlussklemme AKL 059-xx
 #macro ARK_PIN_350MM()
 union {
 
-// Einlötstift
+// Einloetstift
    cylinder{<0,-3.0,0><0,1.0,0>0.45 texture{col_silver}}
    cone{<0,-3.0,0>0.45<0,-3.4,0>0.1 texture{col_silver}}
 
-// Plastikkörper
+// Plastikkoerper
    difference {
       box{<-1.75,0,-3.7><1.75,8.2,2.8>}               // Hauptbox
-      box{<-1.4 ,0.6,-4><1.4 ,5.1,2.2>}               // Loch für Drahteinführung
+      box{<-1.4 ,0.6,-4><1.4 ,5.1,2.2>}               // Loch fuer Drahteinfuehrung
       box{<-0.75,-0.1,-4.01><0.75,1.1,1>}             // Schlitz in der unteren Mitte
       box{<-1.5 ,-0.1,-1.5><1.5,0.7,1.5> rotate<0,45,0> translate<0,0,-4.8>}         // Schlitz etwas abrunden
-                box{<-2.6,5,0><2.6,0,-3> rotate<30,0,0> translate<0,4.6,-4>}      // Klemme vorne oben abschrägen
-      cylinder{<0,5.2,0><0,10,0>1.5}                  // Senkrechte Löcher für die Schraube - oben etwas weiter
+                box{<-2.6,5,0><2.6,0,-3> rotate<30,0,0> translate<0,4.6,-4>}      // Klemme vorne oben abschraegen
+      cylinder{<0,5.2,0><0,10,0>1.5}                  // Senkrechte Loecher fuer die Schraube - oben etwas weiter
       cylinder{<0,2.2,0><0,5.2,0>1.1}                 //                                    - unten kleiner
 
    }
 
-// Abgeschrägten Innenteil hinzufügen (siehe Datenblatt)
+// Abgeschraegten Innenteil hinzufuegen (siehe Datenblatt)
    box{<-1.4 , 4.6,-1.9><1.4,5.1,2.8>}
         difference {
          box{<-1.4 , -0.25,-0.25><1.4,0.25,0.25>}
@@ -927,7 +927,7 @@ union {
 
 // metallenes Innenleben
    difference {
-      box{<-1.35,0.65,-1.9><1.35,4.4,2.5>}   // Hauptkörper
+      box{<-1.35,0.65,-1.9><1.35,4.4,2.5>}   // Hauptkoerper
       cylinder{<0,2.2,-2.0><0,2.2,2.6>1.1}    // Loch
       cylinder{<0,2.2,0><0,5.2,0>1.1}
       texture{col_silver}
@@ -1017,7 +1017,7 @@ CON_ARK_350MM_GRND(12)
 
 
 /********************************************************************************************************************************************
-//Grundmakro für Anreiklemme 5mm
+//Grundmakro fuer Anreiklemme 5mm
 ********************************************************************************************************************************************/
 #macro CON_ARK_5MM_GRND(j)
 union {
@@ -1254,7 +1254,7 @@ CON_BLW_GRND(20,2)
 
 
 /********************************************************************************************************************************************
-//Grundmakro für Buchsenleisten (flach)
+//Grundmakro fuer Buchsenleisten (flach)
 ********************************************************************************************************************************************/
 #macro CON_BL_F_GRND(pin,row)
 union {
@@ -1348,7 +1348,7 @@ CON_BL_F_GRND(20,2)
 
 
 /********************************************************************************************************************************************
-//Grundmakro für Buchsenleisten
+//Grundmakro fuer Buchsenleisten
 ********************************************************************************************************************************************/
 #macro CON_BL_GRND(pin,row)
 union {
@@ -1442,7 +1442,7 @@ CON_BL_GRND(20,2)
 
 
 /********************************************************************************************************************************************
-//Macro fuer Präzisions Buchsenleisten
+//Macro fuer Praezisions Buchsenleisten
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
 #macro CON_BL_PRECISION_GRND(pin,row)
@@ -1569,7 +1569,7 @@ CON_BL_PRECISION_GRND(13,2)
 
 
 /********************************************************************************************************************************************
-//Makro für BNC-Buchse, gewinckelt von Felix Schad <felix_schad@gmx.de>
+//Makro fuer BNC-Buchse, gewinckelt von Felix Schad <felix_schad@gmx.de>
 ********************************************************************************************************************************************/
 #macro CON_BNC_W_GRND()
   union {
@@ -2204,7 +2204,7 @@ CON_DCPOWERCONNECTOR_GRND()
 #end
 
 /********************************************************************************************************************************************
-//Macro für Hohlstecker-Printeinbau (HEBO 13 - Reichelt.de)
+//Macro fuer Hohlstecker-Printeinbau (HEBO 13 - Reichelt.de)
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
 #macro CON_DC_JACK_HEBO_13_GRND()
@@ -2217,7 +2217,7 @@ union {
        texture{col_silver}
        translate<-0.7, 0, 0>
  } 
- //Gehäuse
+ //Gehaeuse
  difference {
         union {
         box{<-5.75,0,-2.5><5.75,4.5,2.5>}
@@ -2306,7 +2306,7 @@ CON_DC_JACK_HEBO_13_GRND()
    //                     bei Buchsen mit direktem Drahtanschluss
    // Verschraenkungsart: Art der "Verriegelung" der Kontaktfeder in
    //                     der Buchse. Ende gedreht oder abgewinkelt
-   // VSchraenkungwinkel: Drehwinkel der Verschraenkung für beide
+   // VSchraenkungwinkel: Drehwinkel der Verschraenkung fuer beide
    //                     Arten
 
 union {
@@ -2317,39 +2317,39 @@ union {
       difference {
             // Basis: box
          box { <1.7,Federdicke/2,0>, <-1.7,-Federdicke/2,8.4> }
-            // Ausschnitt: box 45 Grad gedreht, Einführung für Stift vom Stecker
+            // Ausschnitt: box 45 Grad gedreht, Einfuehrung fuer Stift vom Stecker
          box { <1,Federdicke/2+0.01,1>, <-1,-(Federdicke/2+0.01),-1> rotate<0,45,0>}
             // Ausschnitt: Freihaltung Innenbereich, Abrundung
          cylinder { <0,Federdicke/2+0.01,2.5> <0,-(Federdicke/2+0.01),2.5> 0.75 }
-            // Ausschnitt: Freihaltung für Stift vom Stecker, Innenbereich
+            // Ausschnitt: Freihaltung fuer Stift vom Stecker, Innenbereich
          box { <0.75,Federdicke/2+0.01,2.5>, <-0.75,-(Federdicke/2+0.01),7>}
             // Ausschnitt: Freihaltung Innenbereich, Abrundung
          cylinder { <0,Federdicke/2+0.01,7> <0,-(Federdicke/2+0.01),7> 0.75 }
-            // Ausschnitt: Freihaltung für Stift vom Stecker im Kontaktbereich
+            // Ausschnitt: Freihaltung fuer Stift vom Stecker im Kontaktbereich
          box { <0.5,Federdicke/2+0.01,0>, <-0.5,-(Federdicke/2+0.01),2.5>}
          }
-         // Ergänzung: box, Führung der Kontaktfeder im Durchsteckbereich
+         // Ergaenzung: box, Fuehrung der Kontaktfeder im Durchsteckbereich
       box { <1.15,Federdicke/2,8.0>, <-1.15,-Federdicke/2,10.5> }
-         // Ergänzung: box, Stummel des Oesenanschlusses im Durchsteckbereich
+         // Ergaenzung: box, Stummel des Oesenanschlusses im Durchsteckbereich
       box { <0.35,Federdicke/2,8.0>, <-0.35,-Federdicke/2,11.85> }
       }
 
-      // Endstück der Kontaktfeder
+      // Endstueck der Kontaktfeder
 
    difference {
       union {
-            // Ergänzung: box, Weiterführung des Stummels (ohne Überschneidung!)
+            // Ergaenzung: box, Weiterfuehrung des Stummels (ohne Ueberschneidung!)
          box { <0.35,Federdicke/2,0>, <-0.35,-Federdicke/2,1.15> }
-            // Ergänzung: box, Körper der Öse, variable Länge
+            // Ergaenzung: box, Koerper der Oese, variable Laenge
          box { <1.15,Federdicke/2,1.15>, <-1.15,-Federdicke/2,2.15+Oesenlaenge> }
-            // Ergänzung: cylinder, Abschluss der Öse, variable Position
+            // Ergaenzung: cylinder, Abschluss der Oese, variable Position
          cylinder { <0,Federdicke/2,2.15+Oesenlaenge> <0,-Federdicke/2,2.15+Oesenlaenge> 1.15 }
          }
-            // Ausschnitt: Freihaltung Innenbereich Öse, Abrundung
+            // Ausschnitt: Freihaltung Innenbereich Oese, Abrundung
       cylinder { <0,Federdicke/2+0.01,2.15> <0,-(Federdicke/2+0.01),2.15> 0.5 }
-            // Ausschnitt: Freihaltung für Ösenanschluss, Innenbereich
+            // Ausschnitt: Freihaltung fuer Oesenanschluss, Innenbereich
       box { <0.5,Federdicke/2+0.01,2.15>, <-0.5,-(Federdicke/2+0.01),2.15+Oesenlaenge>}
-            // Ausschnitt: Freihaltung Innenbereich Öse, Abrundung
+            // Ausschnitt: Freihaltung Innenbereich Oese, Abrundung
       cylinder { <0,Federdicke/2+0.01,2.15+Oesenlaenge> <0,-(Federdicke/2+0.01),2.15+Oesenlaenge> 0.5 }
 
 
@@ -2358,17 +2358,17 @@ union {
             translate<0,0, 11.85>
             rotate <0,0,VSchraenkungwinkel>
          #break
-         #case(4) // sowohl Abwinkelung als auch zusätzlich zweifache Verdrehung
+         #case(4) // sowohl Abwinkelung als auch zusaetzlich zweifache Verdrehung
             rotate <-VSchraenkungwinkel,0,0>
             rotate <0,0,2*VSchraenkungwinkel>
             translate<0,0, 11.85>
          #break
-         #case(3) // sowohl Abwinkelung als auch zusätzlich Verdrehung (invers)
+         #case(3) // sowohl Abwinkelung als auch zusaetzlich Verdrehung (invers)
             rotate <-VSchraenkungwinkel,0,0>
             rotate <0,0,-VSchraenkungwinkel>
             translate<0,0, 11.85>
          #break
-         #case(2) // sowohl Abwinkelung als auch zusätzlich Verdrehung
+         #case(2) // sowohl Abwinkelung als auch zusaetzlich Verdrehung
             rotate <-VSchraenkungwinkel,0,0>
             rotate <0,0,VSchraenkungwinkel>
             translate<0,0, 11.85>
@@ -2384,7 +2384,7 @@ union {
 
    #switch(Verschraenkungsart)                                                         
       #range(1, 4)   // Abwinkelung (nicht perfekt bei cases 2 und 3)
-            // bei Abwinkelung noch zusätzlich Abrundung und Auffüllen des "Biegeloches"
+            // bei Abwinkelung noch zusaetzlich Abrundung und Auffuellen des "Biegeloches"
          cylinder { <0.35,0,11.85> <-0.35,0,11.85> Federdicke/2 }
       #break
    #end
@@ -2399,7 +2399,7 @@ union {
 #end
 
 #macro CON_DIN_MA_Inlet_Basebody(Einsatzart)
-      // Einsatzart: Ausprägung des "Wulstes" am Ende zwecks Befestigung
+      // Einsatzart: Auspraegung des "Wulstes" am Ende zwecks Befestigung
       //             in einem Metallbecher oder zwei Metallhalbschalen
       //             einer Kupplung
 #local Gesamtlaenge=13;
@@ -2408,25 +2408,25 @@ difference {
       cylinder { <0,0,0>  <0,0,Gesamtlaenge> 5.85 }
 
       #switch(Einsatzart)
-         #case(0) // Scheibenwulst für Metallbechermontage
+         #case(0) // Scheibenwulst fuer Metallbechermontage
             cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-2> 7 }
-               // Stützwulst in Durchführung von Metallbecher
+               // Stuetzwulst in Durchfuehrung von Metallbecher
             cylinder { <0,0,Gesamtlaenge-2.001>  <0,0,Gesamtlaenge> 6.15 }
          #break
-         #case(1) // unterteilter Wulst für Metallhalbschalenmontage
+         #case(1) // unterteilter Wulst fuer Metallhalbschalenmontage
                   // in Kupplungen (wie auch Steckern)
-               // "dünner" Stützwulst
+               // "duenner" Stuetzwulst
             cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
 
             difference {
                   // "dickerer" Haltewulst
                cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-1> 6.55 }
 
-                  // "gerade" Begrenzug des Wulstes für abnehmbare Metallabschirmung
+                  // "gerade" Begrenzug des Wulstes fuer abnehmbare Metallabschirmung
                box      { < 5.5, 2.5,Gesamtlaenge-3.001>, <    7,-4,Gesamtlaenge-0.999>}
                box      { <-5.5, 2.5,Gesamtlaenge-3.001>, <   -7,-4,Gesamtlaenge-0.999>}
 
-                  // "abgeschrägte" Begrenzug des Wulstes für die nicht abnehmbare
+                  // "abgeschraegte" Begrenzug des Wulstes fuer die nicht abnehmbare
                   // Metallabschirmung mit der aufgenieteten Massekontaktzunge
                box      { <0.75,   0,Gesamtlaenge-3.001>, <-0.75,-3,Gesamtlaenge-0.999>
                   translate< -6.25,0,0>
@@ -2438,22 +2438,22 @@ difference {
                   }
                }
          #break
-         #else    // keine Veränderung
-               // Dummy: dünner Stützwulst für Metallhalbschalenmontage
+         #else    // keine Veraenderung
+               // Dummy: duenner Stuetzwulst fuer Metallhalbschalenmontage
             cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
       #end
       }
 
    #switch(Einsatzart)
       #case(0)
-            // Ausschnitt für Massefederkontakt (etwas kürzer)
+            // Ausschnitt fuer Massefederkontakt (etwas kuerzer)
          box { <1.3,3.4,-0.01>, <-1.3,7.001,Gesamtlaenge-1.998> }
-               // Breiterer Ausschnitt für Befestigung des
+               // Breiterer Ausschnitt fuer Befestigung des
                // Massefederkontaktes am Metallbecher
          box { <2.1,3.45,Gesamtlaenge-1.999>, <-2.1,6.201,Gesamtlaenge+0.01> }
       #break
       #else
-            // Ausschnitt für Massefederkontakt
+            // Ausschnitt fuer Massefederkontakt
          box { <1.3,3.4,-0.01>, <-1.3,7.001,Gesamtlaenge+0.01> }
    #end
 
@@ -2471,9 +2471,9 @@ difference {
 union {
       // Basisbox bis 3mm vor Grund
    box { <Stanzlochbreite/2,0.4,-0.001>, <-Stanzlochbreite/2,-0.4,Gesamtlaenge-3> }
-      // Röhre für Pin vom Stecker
+      // Roehre fuer Pin vom Stecker
    cylinder { <  0,  0,-0.001>  <   0,   0,Gesamtlaenge-3> 0.8 }
-      // Durchbruch für Pinanschluss
+      // Durchbruch fuer Pinanschluss
    box { <1.25,0.4,Gesamtlaenge-3.001>, <-1.25,-0.4,Gesamtlaenge+0.001> }
 
    #ifdef(CON_DIN_MA_Debug_Viewmode)
@@ -2485,12 +2485,12 @@ union {
 #end
 
 #macro TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(Major Minor, Dicke, Quadrant)
-   // Parametrisierung ähnlich zu der eines Torus
+   // Parametrisierung aehnlich zu der eines Torus
    // Major:    Radius des Ringes zur gedachten Mittellinie des zu
    //           einem Viertel aufgeschnittenen Ringtoruses
-   // Minor:    Radius zur Außenkante des zu einem Viertel
+   // Minor:    Radius zur Aussenkante des zu einem Viertel
    //           aufgeschnittenen Torusringes
-   // Dicke:    Die Blechdicke bestimmt abhängig vom Minor-Außenradius
+   // Dicke:    Die Blechdicke bestimmt abhaengig vom Minor-Aussenradius
    //           in der Folge den Innenradius des zu einem Viertel
    //           aufgeschnittenen Torusringes. Dicke sollte im Bereich
    //           0<=Dicke<=Minor  liegen.
@@ -2543,9 +2543,9 @@ union {
    object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.0, 1.0, 0.4, 4) translate<0,1,0> }
    object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(6.4, 1.0, 0.4, 2) translate<0,Gesamtlaenge-2,0> }
 
-      // Winkelstück zur Befestigung der Massekontakzunge
+      // Winkelstueck zur Befestigung der Massekontakzunge
    union {
-         // Viertelrohr als Biegeradius des Winkelstückes
+         // Viertelrohr als Biegeradius des Winkelstueckes
       intersection{
          cylinder { <2,0.5,-0.5>  <-2,0.5,-0.5> 0.5 }
          cylinder { <2.001,0.5,-0.5>  <-2.001,0.5,-0.5> 0.1 inverse}
@@ -2558,16 +2558,16 @@ union {
          cylinder { <0,-0.001,0>  <0,0.401,0> 6.201 translate<0,0,4.0> }
          }
 
-         // Kombination der Konstruktion von abgewinkeltem Anschlussstück
+         // Kombination der Konstruktion von abgewinkeltem Anschlussstueck
          // und der Massekontaktzunge in einer difference/union-Sektion,
          // was ein paar Anweisungen spart, die ganze Beschreibung
-         // allerdings etwas unübersichtlich macht.
+         // allerdings etwas unuebersichtlich macht.
       difference {
          union {
-               // Haltezunge für Niet
+               // Haltezunge fuer Niet
             box{<2,3.5,-0.4>, <-2,0.5,0>}
 
-               // Kontaktzunge für Massekontaktierung als Cubic-Spline
+               // Kontaktzunge fuer Massekontaktierung als Cubic-Spline
             prism {
                linear_sweep cubic_spline
                -1.15, 1.15, 14, // the number of points making up the shape ...
@@ -2583,7 +2583,7 @@ union {
                < 2.45-Gesamtlaenge,0.5>, <6.95-Gesamtlaenge,0.5>
                rotate<0,0,90>
                }
-               // Ergänzung des Cubic-Spline am hinteren Ende
+               // Ergaenzung des Cubic-Spline am hinteren Ende
             box  { <-1.15,13.30-(Gesamtlaenge),0.2>, <1.15,19.65-Gesamtlaenge,0> }
             cylinder { <0,19.65-(Gesamtlaenge),0.2>     <0,19.65-Gesamtlaenge,0> 1.15 }
    #ifdef(CON_DIN_MA_Debug_Viewmode)
@@ -2591,7 +2591,7 @@ union {
    #end     
             }
 
-            // Abschrägen der Haltezunge
+            // Abschraegen der Haltezunge
          box{< 2.05,-0.501,0.001>, < 3.0,3.075,-0.401> rotate <0,0, 15> }
          box{<-2.05,-0.501,0.001>, <-3.0,3.075,-0.401> rotate <0,0,-15> }
 
@@ -2616,7 +2616,7 @@ union {
    #local ZielLaenge = (2*(Winkel>=0)-1)*9.138 ;
    #local ZielWinkel = Winkel+(2*(Winkel>=0)-1)*34.58078 ;
    #switch(Bauteil)
-      #case(0) // Boxen für "difference" der Viertel-Torusse, allerdings
+      #case(0) // Boxen fuer "difference" der Viertel-Torusse, allerdings
                // nur oberhalb Blechdicke, nicht (mehr) komplett
          box {
             <0, -0.001,  -5.0   >, <ZielLaenge,1.001,0.001>
@@ -2625,19 +2625,19 @@ union {
             #end     
       #break
 
-         // Teile zur Konstruktion der geraden Randbögen vom Tiefziehen
+         // Teile zur Konstruktion der geraden Randboegen vom Tiefziehen
          // intersection{ 1 object{2 inverse} 3 }
-      #case(1) // Zylinder als Blechkante für Montageflügel
+      #case(1) // Zylinder als Blechkante fuer Montagefluegel
          cylinder{
             <0,1,-1>, <ZielLaenge,1,  -1  > 1.0
             #ifdef(CON_DIN_MA_Debug_Viewmode)
                pigment{Red}
             #end     
       #break
-      #case(2) // Innenzylinder für "intersection" mit Modifizierer
+      #case(2) // Innenzylinder fuer "intersection" mit Modifizierer
                // "inverse", Radius weniger Blechdicke (0.4)
                //
-               // Realisierung der Überstände für "difference" (aka
+               // Realisierung der Ueberstaende fuer "difference" (aka
                // inverse intersection) hier nicht absolut (+/- 0.001),
                // sondern relativ:  +/- FinLen * 0.001
          cylinder{
@@ -2646,8 +2646,8 @@ union {
                pigment{Yellow}
             #end     
       #break
-      #case(3) // Box für "intersection" zum Freischneiden des richtigen Viertels
-               // inklusive Überstände für Nicht-Schnittflächen
+      #case(3) // Box fuer "intersection" zum Freischneiden des richtigen Viertels
+               // inklusive Ueberstaende fuer Nicht-Schnittflaechen
          box {
             <-0.001,0,  -1.001  >, <ZielLaenge+0.001,1.001,  0  >
             #ifdef(CON_DIN_MA_Debug_Viewmode)
@@ -2656,7 +2656,7 @@ union {
       #break
 
       #else
-      // #case(4) // Box zum Ausfüllen mit Blechdicke bis zur Biegekante
+      // #case(4) // Box zum Ausfuellen mit Blechdicke bis zur Biegekante
          box {
             <0,0,-7.5>, <ZielLaenge,0.4,-1>
    #end
@@ -2676,19 +2676,19 @@ intersection{
 
 #macro CON_DIN_MA_Outlet_FrontFlansch()
    // Dazu kommt die Frontplatte mit den beiden Flansch"ohren", welche
-   // wiederum die beiden Befestigungslöcher enthalten
+   // wiederum die beiden Befestigungsloecher enthalten
 difference {
    union {
-         // Der vorne überstehende Ring
+         // Der vorne ueberstehende Ring
       cylinder { <0,0,0>  <0,0.4,0> 8.5 }
 
-         // Das Freischneiden der Ringtori an den Übergängen zu
-         // den geraden Randstücken kann "schlierenfrei" nur
+         // Das Freischneiden der Ringtori an den Uebergaengen zu
+         // den geraden Randstuecken kann "schlierenfrei" nur
          // durch eine weitere explizite difference/union-
-         // Beschreibung durchgeführt werden
+         // Beschreibung durchgefuehrt werden
       difference {
          union {
-               // Der vorne überstehende Torus am Ring
+               // Der vorne ueberstehende Torus am Ring
             object{TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.5, 1.0, 0.4, 3) translate<0,1,0> }
          
                // Die Flanschohren
@@ -2696,7 +2696,7 @@ difference {
             object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(2.2, 1.0, 0.4, 3) translate<-11.1,1,0> }
             }
 
-            // Abschneiden der Tori an den Übergängen
+            // Abschneiden der Tori an den Uebergaengen
             // zu den geraden Kantenverbindern
          CON_DIN_MA_Outlet_FrontHlpr1(   0, 0)
          CON_DIN_MA_Outlet_FrontHlpr1( 180, 0)
@@ -2707,17 +2707,17 @@ difference {
          #end     
          }
 
-         // Ausfüllung der Ohrentori
+         // Ausfuellung der Ohrentori
       object{ cylinder { <0,0,0>  <0,0.4,0> 2.2 } translate< 11.1,0,0> }
       object{ cylinder { <0,0,0>  <0,0.4,0> 2.2 } translate<-11.1,0,0> }
 
-         // Die gebogenen Ränder zu den Ohren hin
+         // Die gebogenen Raender zu den Ohren hin
       CON_DIN_MA_Outlet_FrontHlpr2(   0)
       CON_DIN_MA_Outlet_FrontHlpr2( 180)
       CON_DIN_MA_Outlet_FrontHlpr2(-180)
       CON_DIN_MA_Outlet_FrontHlpr2(-360)
       
-         // Verlängerung der gebogenen Ränder zu den Ohren mit Blech
+         // Verlaengerung der gebogenen Raender zu den Ohren mit Blech
       CON_DIN_MA_Outlet_FrontHlpr1(   0, 4)
       CON_DIN_MA_Outlet_FrontHlpr1( 180, 4)
       CON_DIN_MA_Outlet_FrontHlpr1(-180, 4)
@@ -2727,10 +2727,10 @@ difference {
       #end     
       }
 
-      // Ausschneiden des großen Loches in der Mitte
+      // Ausschneiden des grossen Loches in der Mitte
    cylinder { <0,-0.001,0>  <0,0.401,0> 8.0 }
 
-      // Ausschneiden der beiden kleinen Befestigungsbohrlöcher in den Ohren
+      // Ausschneiden der beiden kleinen Befestigungsbohrloecher in den Ohren
    object{ cylinder { <0,-0.001,0>  <0,0.401,0> 1.6 } translate< 11.1,0,0> }
    object{ cylinder { <0,-0.001,0>  <0,0.401,0> 1.6 } translate<-11.1,0,0> }
    }
@@ -2770,16 +2770,16 @@ difference {
 
 #macro CON_DIN_MA_InletAction(Typ, LochRotWinkel, LochPosWinkel)
    // Typ:           Art der Bearbeitung, derzeit definiert sind:
-   //                0 - Fräsen bzw. Ausstanzen des kontaktfederloches
-   //                1 - Kontaktfedereinsatz, Anschluss gebogen, Öse lang
-   //                2 - Kontaktfedereinsatz, Anschluss gedreht, Öse lang
-   //                3 - Kontaktfedereinsatz, Anschluss gedreht, Öse kurz
+   //                0 - Fraesen bzw. Ausstanzen des kontaktfederloches
+   //                1 - Kontaktfedereinsatz, Anschluss gebogen, Oese lang
+   //                2 - Kontaktfedereinsatz, Anschluss gedreht, Oese lang
+   //                3 - Kontaktfedereinsatz, Anschluss gedreht, Oese kurz
    //                4 - Kontaktfedereinsatz, Anschluss gebogen und
-   //                    gedreht, Öse lang
+   //                    gedreht, Oese lang
    //                5 - Kontaktfedereinsatz, Anschluss gebogen und
-   //                    invers gedreht, Öse lang
+   //                    invers gedreht, Oese lang
    //                6 - Kontaktfedereinsatz, Anschluss gebogen und
-   //                    zweifach gedreht (60° statt 30°), Öse lang
+   //                    zweifach gedreht (60° statt 30°), Oese lang
    //
    // LochRotWinkel: Rotation des Stanzloches um die eigene Achse
    //                (dieser wird gegen "LochPosWinkel" kompensiert
@@ -2788,32 +2788,32 @@ difference {
    //
    // Spezialfall: Wenn  LochPosWinkel=180  dann wird das Stanzloch
    // Mitelloch    genau in der Mitte des Inlets positioniert. Da
-   //              das Loch ansonsten im Ausschnitt für den
-   //              Massekontakt zu liegen käme, ist das "Fehlen" des
+   //              das Loch ansonsten im Ausschnitt fuer den
+   //              Massekontakt zu liegen kaeme, ist das "Fehlen" des
    //              180'er Winkels daher nicht tragisch.
    //
 #local PositionRadius=3.5;
 object{
    #switch(Typ)
-      #case(6) // Anschluss gebogen und zweifach verdreht, Öse lang
+      #case(6) // Anschluss gebogen und zweifach verdreht, Oese lang
          CON_DIN_MA_Inlet_Kontaktfeder(3, 4, 30)
       #break
-      #case(5) // Anschluss gebogen und invers verdreht, Öse lang
+      #case(5) // Anschluss gebogen und invers verdreht, Oese lang
          CON_DIN_MA_Inlet_Kontaktfeder(3, 3, 30)
       #break
-      #case(4) // Anschluss gebogen und verdreht, Öse lang
+      #case(4) // Anschluss gebogen und verdreht, Oese lang
          CON_DIN_MA_Inlet_Kontaktfeder(3, 2, 30)
       #break
-      #case(1) // Anschluss gebogen, Öse lang
+      #case(1) // Anschluss gebogen, Oese lang
          CON_DIN_MA_Inlet_Kontaktfeder(3, 1, 30)
       #break
-      #case(2) // Anschluss gedreht, Öse lang
+      #case(2) // Anschluss gedreht, Oese lang
          CON_DIN_MA_Inlet_Kontaktfeder(3, 0,-30)
       #break
-      #case(3) // Anschluss gedreht, Öse kurz
+      #case(3) // Anschluss gedreht, Oese kurz
          CON_DIN_MA_Inlet_Kontaktfeder(1, 0,-30)
       #break
-      #else    // wie #case(0), Fräsen bzw. Ausstanzen der Löcher
+      #else    // wie #case(0), Fraesen bzw. Ausstanzen der Loecher
          CON_DIN_MA_Inlet_Millbody()
    #end
 
@@ -2827,14 +2827,14 @@ object{
 
 #macro CON_DIN_MA_InletPinComposition(MA_Typ, PinAction, MidPinAct)
    // MA_Typ:    Selektion der Buchsenart, Anzahl der Pins,
-   //            Winkelstellung der Pins usw. über Typcodes.
+   //            Winkelstellung der Pins usw. ueber Typcodes.
    //
    //    Derzeit definitiert:
    //       30 - Anordnung wie bei:          MAB_3_S
    //       40 - Anordnung wie bei:          MAB_4
    //       51 - Anordnung wie bei:          MAB_5_S
    //       52 - Anordnung wie bei:          MAB_5
-   //       53 - Anordnung wie bei: (kreuzförmig, nicht Hirschmann)
+   //       53 - Anordnung wie bei: (kreuzfoermig, nicht Hirschmann)
    //       61 - Anordnung wie bei:          MAB_6
    //       62 - Anordnung wie bei (exklusiv):  MAB_6_V
    //       63 - Anordnung wie bei (exklusiv):  MAB_6_H
@@ -2843,9 +2843,9 @@ object{
    //       81 - Anordnung wie bei:          MAB_8_S
    //       82 - Anordnung wie bei:          MAB_8_SN
    //
-   //       39 - Für rekursive Aufrufe benötigt
-   //       58 - Für rekursive Aufrufe benötigt
-   //       59 - Für rekursive Aufrufe benötigt
+   //       39 - Fuer rekursive Aufrufe benoetigt
+   //       58 - Fuer rekursive Aufrufe benoetigt
+   //       59 - Fuer rekursive Aufrufe benoetigt
    //
    //    "Vererbungshierarchien":
    //          30 <|-- 51 <|-- 81
@@ -2854,14 +2854,14 @@ object{
    //          ohne: 40, 52, 53, 62, 63, 71
    //
    // PinAction: Art der Bearbeitung, derzeit definiert sind:
-   //            0 - Fräsen bzw. Ausstanzen des Kontaktfederloches
-   //            1 - Kontaktfedereinsatz, Anschluss gebogen, Öse lang
-   //            2 - Kontaktfedereinsatz, Anschluss gedreht, Öse lang
-   //            3 - Kontaktfedereinsatz, Anschluss gedreht, Öse kurz
+   //            0 - Fraesen bzw. Ausstanzen des Kontaktfederloches
+   //            1 - Kontaktfedereinsatz, Anschluss gebogen, Oese lang
+   //            2 - Kontaktfedereinsatz, Anschluss gedreht, Oese lang
+   //            3 - Kontaktfedereinsatz, Anschluss gedreht, Oese kurz
    //
-   // MidPinAct: Gesondert definierbare Bearbeitungsart für das Mittelloch
+   // MidPinAct: Gesondert definierbare Bearbeitungsart fuer das Mittelloch
    //
-   // ACHTUNG: Der äußere aufrufende Kontext sollte diesem Makro eine
+   // ACHTUNG: Der aeussere aufrufende Kontext sollte diesem Makro eine
    //          klammernde Struktur umstellen, wie z.B.:  union {}
    //
 
@@ -2893,7 +2893,7 @@ object{
          object{CON_DIN_MA_InletAction(MidPinAct, 0,180) translate<0,0.7,0>}
 
       #case(72)
-            // Kontakte 6 und 7 unten ergänzen
+            // Kontakte 6 und 7 unten ergaenzen
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),-135,-135)
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), 135, 135)
 
@@ -2908,15 +2908,15 @@ object{
       //############################################
 
       #case(61)
-            // Loch rechts unten ausstanzen und befüllen
+            // Loch rechts unten ausstanzen und befuellen
          CON_DIN_MA_InletAction(PinAction, 300,-120)
       #case(58)
             // Mittelloch ausstanzen (6'er Buchse)
          CON_DIN_MA_InletAction(MidPinAct,  60, 180)
-            // Loch rechts unten ausstanzen und befüllen
+            // Loch rechts unten ausstanzen und befuellen
          CON_DIN_MA_InletAction(PinAction, 240, 120)
       #case(39)
-            // 3 Löcher mit 60°-"Abständen" ausstanzen (für 6'er Buchse)
+            // 3 Loecher mit 60°-"Abstaenden" ausstanzen (fuer 6'er Buchse)
          #local Rotator=-60;
          #while (Rotator<=60)
             CON_DIN_MA_InletAction(PinAction, Rotator+120, Rotator)
@@ -2926,13 +2926,13 @@ object{
       //############################################
 
       #case(40)
-            // Loch links unten ausstanzen und befüllen
+            // Loch links unten ausstanzen und befuellen
          CON_DIN_MA_InletAction(PinAction, -18,-108)
             // Links oben
          CON_DIN_MA_InletAction(PinAction,  72, -36)
             // Rechts oben
          CON_DIN_MA_InletAction(PinAction, 108,  36)
-            // Loch rechts unten ausstanzen und befüllen
+            // Loch rechts unten ausstanzen und befuellen
          CON_DIN_MA_InletAction(PinAction, 198, 108)
       #break;
       //############################################
@@ -2940,13 +2940,13 @@ object{
       #case(52)
             // rekursives "Holen" der 3'er Basis
          CON_DIN_MA_InletPinComposition(39, (PinAction!=1?PinAction:5), MidPinAct)
-            // Loch rechts unten ausstanzen und befüllen
+            // Loch rechts unten ausstanzen und befuellen
             //   diese Ausrichtung (nach Spec!!!) kann so nicht
-            //   sein (Überschneidungen), müsste eigentlich einer
+            //   sein (Ueberschneidungen), muesste eigentlich einer
             //   62'er ohne Mittelpin entsprechen, bzw. der Anw.:
             //     CON_DIN_MA_InletAction(PinAction, 240, 120)
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:6), 120, 120)
-            // Loch links unten ausstanzen und befüllen
+            // Loch links unten ausstanzen und befuellen
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),   0,-120)
       #break;
       //############################################
@@ -2954,10 +2954,10 @@ object{
       #case(53)
             // Mittelloch ausstanzen (5'er Kreuz-Buchse)
          CON_DIN_MA_InletAction(MidPinAct,  0, 180)
-            // 2 Löcher oben mit 90°-"Abstand" ausstanzen
+            // 2 Loecher oben mit 90°-"Abstand" ausstanzen
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:4), -45, -45)
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-135,  45)
-            // 2 Löcher unten mit 90°-"Abstand" ausstanzen
+            // 2 Loecher unten mit 90°-"Abstand" ausstanzen
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:4),-82.5,-135)
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-97.5, 135)
       #break;
@@ -2966,7 +2966,7 @@ object{
       #case(62)
             // rekursives "Holen" der 5'er Basis
          CON_DIN_MA_InletPinComposition(58, PinAction, MidPinAct)
-            // Loch links unten ausstanzen und befüllen
+            // Loch links unten ausstanzen und befuellen
          CON_DIN_MA_InletAction(PinAction, 0,-120)
       #break;
       //############################################
@@ -2976,14 +2976,14 @@ object{
          CON_DIN_MA_InletAction(MidPinAct,  90, 180)
 
 
-            // 5 Löcher mit 60°-"Abständen" ausstanzen (für 6'er Buchse)
+            // 5 Loecher mit 60°-"Abstaenden" ausstanzen (fuer 6'er Buchse)
          CON_DIN_MA_InletAction(PinAction,   0, -120)
          CON_DIN_MA_InletAction(PinAction, 120,   60)
          CON_DIN_MA_InletAction(PinAction, 180,  120)
 
-            // bei Abwinkelung zusätzlich Verdrehung
+            // bei Abwinkelung zusaetzlich Verdrehung
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:6),   0,    0)
-            // bei Abwinkelung zusätzlich inverse Verdrehung
+            // bei Abwinkelung zusaetzlich inverse Verdrehung
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),  60,  -60)
       #break;
       //############################################
@@ -2991,7 +2991,7 @@ object{
       #case(71)
             // rekursives "Holen" der 5'er Basis
          CON_DIN_MA_InletPinComposition(59, PinAction, MidPinAct)
-            // Ergänzen der beiden Pins 6 und 7
+            // Ergaenzen der beiden Pins 6 und 7
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:4),-90,-135)
          CON_DIN_MA_InletAction((PinAction!=1?PinAction:5),-90, 135)
       #break;
@@ -3000,15 +3000,15 @@ object{
 #end
 
    // MA_Typ:    Selektion der Buchsenart, Anzahl der Pins,
-   //            Winkelstellung der Pins usw. über Typcodes.
+   //            Winkelstellung der Pins usw. ueber Typcodes.
    //            Die Typcodes sind derzeit noch nicht mit dem
    //            DIN-Standard abgestimmt
    //
-   // MA_Subtyp: Selektion der weiteren Ausprägung, derzeit definiert:
+   // MA_Subtyp: Selektion der weiteren Auspraegung, derzeit definiert:
    //            0 - Buchse im Metallbecher mit Flansch
    //                 (es fehlt noch der Masseanschluss)
    //            1 - Buchse im Metallbecher ohne Flansch
-   //                (nicht fertiggestellt, Ösen statt Pins)
+   //                (nicht fertiggestellt, Oesen statt Pins)
    //            2 - Kupplung (nicht fertiggestellt, Metallabschirmung
    //                [Becher] und Ummantelung fehlen noch komplett)
 
@@ -3024,22 +3024,22 @@ union {
 
             // die folgenden Definitionen verlangen eigentlich
             // einen Pin. Leider ist anhand der Specs nicht
-            // ersichtlich, wie die Verankerung im Gehäuse
-            // stattfindet, noch wie groß der Offset des
+            // ersichtlich, wie die Verankerung im Gehaeuse
+            // stattfindet, noch wie gross der Offset des
             // Anschlusspins vom Mittelpunkt ist.
-            // Daher zunächst Verwendung langer Ösen mit
+            // Daher zunaechst Verwendung langer Oesen mit
             // Verriegelung durch Verdrehen.
-         #local PinEnde=2;    // Öse lang, verdreht
-         #local MLPEnde=2;    // Öse lang, verdreht
+         #local PinEnde=2;    // Oese lang, verdreht
+         #local MLPEnde=2;    // Oese lang, verdreht
       #break
       #case(2)
-         // Makro für Kupplungs-/Steckergehäuse fehlt (noch)
+         // Makro fuer Kupplungs-/Steckergehaeuse fehlt (noch)
          #if(AllParts>=3)
             #end
 
          #local Wulst=1;      // Halbschalenmontage
-         #local PinEnde=3;    // Öse kurz, verdreht
-         #local MLPEnde=2;    // Öse lang, verdreht
+         #local PinEnde=3;    // Oese kurz, verdreht
+         #local MLPEnde=2;    // Oese lang, verdreht
       #break
       #else // selbe wie case(0)
          #if(AllParts>=3)
@@ -3047,8 +3047,8 @@ union {
             #end
 
          #local Wulst=0;      // Metallbechermontage
-         #local PinEnde=1;    // Öse lang, abgebogen
-         #local MLPEnde=2;    // Öse lang, verdreht
+         #local PinEnde=1;    // Oese lang, abgebogen
+         #local MLPEnde=2;    // Oese lang, verdreht
       #end
 
       // noch eine extra union, damit nur ein Objekt
@@ -3057,7 +3057,7 @@ union {
       #if(AllParts>=2)
          difference {
             CON_DIN_MA_Inlet_Basebody(Wulst)
-               // Ausfräsungen für die Kontaktfedern: 0,0
+               // Ausfraesungen fuer die Kontaktfedern: 0,0
             CON_DIN_MA_InletPinComposition(MA_Typ, 0, 0)
             }
          #end
@@ -3067,9 +3067,9 @@ union {
          CON_DIN_MA_InletPinComposition(MA_Typ, PinEnde, MLPEnde)
          #end
 
-         // Gesamtlänge über alles ohne Pins laut Hirschmann-Spec: 13.6
+         // Gesamtlaenge ueber alles ohne Pins laut Hirschmann-Spec: 13.6
          // Body ist aber nur 13.0, wobei jenes Inlet aber etwas im
-         // Gehäuse (Becher) versenkt ist. Daher Positionierung desselben
+         // Gehaeuse (Becher) versenkt ist. Daher Positionierung desselben
       translate<0,0,0.6>
       }
    }
@@ -3098,23 +3098,23 @@ CON_DIN_MA_XX_GRND(81, 0)
 #macro CON_DIN_MAB_8SN()
 CON_DIN_MA_XX_GRND(82, 0)
 #end
-// (noch) keine richtigen Pinanschlüsse
+// (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_5SV()   
 CON_DIN_MA_XX_GRND(51, 1)
 #end
-// (noch) keine richtigen Pinanschlüsse
+// (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_6V()    
 CON_DIN_MA_XX_GRND(62, 1)
 #end
-// (noch) keine richtigen Pinanschlüsse
+// (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_7SV()   
 CON_DIN_MA_XX_GRND(72, 1)
 #end
-// (noch) keine richtigen Pinanschlüsse
+// (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_8SV()   
 CON_DIN_MA_XX_GRND(81, 1)
 #end
-// (noch) keine richtigen Pinanschlüsse
+// (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_8SNV()
 CON_DIN_MA_XX_GRND(82, 1)
 #end
@@ -3126,7 +3126,7 @@ CON_DIN_MA_XX_GRND(82, 1)
 ********************************************************************************************************************************************/
 #macro CON_DIS_DIN41617_GRND(Pins)
 // Grundmakro: Um 90° gebogener, runder Stift eines Steckverbinders nach DIN41617.
-// Parameter: Stärke über/unter PCB, Biegeradius (Mitte), Höhe über/unter PCB-Oberkante, Länge nach vorn (-Z), Farbe
+// Parameter: Staerke ueber/unter PCB, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z), Farbe
 // J.Bartels@arcor.de, www.mec-krefeld.de
 #macro PIN41617 (DO,DU,R,HO,HU,L,col)
 union {
@@ -3410,11 +3410,11 @@ CON_DIS_MATNLOK_9263_GRND(10,5)
 
 
 /********************************************************************************************************************************************
-//Makro für DSUBD Andreas Fecht <info@vetter-und-fecht.de>
+//Makro fuer DSUBD Andreas Fecht <info@vetter-und-fecht.de>
 //modifiziert und erweitert von Duane Clark <dclark@akamail.com>
-//etwas mißbraucht zur Kantenmontage durch USER_Ma(China)
-//Modifikation zur exakten Ausrichtung auf halbe Platinenhöhe: Wolfgang Moser <womo (a) d81.de>
-//Erweitert für stehende print Montage von Stefan Seegel
+//etwas missbraucht zur Kantenmontage durch USER_Ma(China)
+//Modifikation zur exakten Ausrichtung auf halbe Platinenhoehe: Wolfgang Moser <womo (a) d81.de>
+//Erweitert fuer stehende print Montage von Stefan Seegel
 ********************************************************************************************************************************************/
 #macro CON_DSUBD_GRND(pin, female, print)
 
@@ -3695,7 +3695,7 @@ CON_DSUBD_GRND(37,false,true)
 
 
 /********************************************************************************************************************************************
-//Makro für DSUB Andreas Fecht <info@vetter-und-fecht.de>
+//Makro fuer DSUB Andreas Fecht <info@vetter-und-fecht.de>
 //modifiziert und erweitert von Duane Clark <dclark@akamail.com>
 ********************************************************************************************************************************************/
 #macro CON_DSUB_GRND(pin, female)
@@ -4413,7 +4413,7 @@ CON_MICROMATCH_FEMALE_GRND(20)
 union   {
         difference {
                 union   {
-                        // Grundkörper
+                        // Grundkoerper
                         box{<-plastic_x/2+0.5, 0 ,-plastic_z/2+0.5> <plastic_x/2-0.5, plastic_Y, plastic_z/2-0.5> }
                         
                         // Kranz
@@ -4437,7 +4437,7 @@ union   {
                         #end
                 }
                         
-                // Ausschnitte im Kunststoff für SMD Pins
+                // Ausschnitte im Kunststoff fuer SMD Pins
                 #if (frm = 0)
                         #local i=0;
                         #while(i<(pin/2))
@@ -4447,7 +4447,7 @@ union   {
                         #end
                 #end
 
-                // Löcher für Stecker
+                // Loecher fuer Stecker
                 #local i=0;
                 #while(i<(pin/2))
                         box{<-0.2,-1,0><0.2,6,1.5> translate<-(pin/2-0.5)*pitch+pitch*i*2,0,0>}
@@ -4473,7 +4473,7 @@ union   {
                         #local i=i+1;
                 #end
         #else
-                // Anschlußdraht
+                // Anschlussdraht
                 #if(pin_short=off)
                         #local pp=3.0;
                 #else
@@ -4629,7 +4629,7 @@ CON_MICROMATCH_MALE_GRND(20)
 
 
 /********************************************************************************************************************************************
-// Makro fuer AMP-tyco MicroMatch-Federleiste SMD-Ausführung
+// Makro fuer AMP-tyco MicroMatch-Federleiste SMD-Ausfuehrung
 // pin  - Anzahl Kontakte
 ********************************************************************************************************************************************/
 #macro CON_MICROMATCH_SMD_GRND(pin)
@@ -5246,7 +5246,7 @@ CON_MOLEX_53048_GRND(15)
 /********************************************************************************************************************************************
 // Tilmann Reh <tilmann.reh@autometer.de>
 // gerade Molex-Stiftleisten RM 2.54.
-// Bezugspunkt: Mitte der Pins auf PCB-Oberfläche
+// Bezugspunkt: Mitte der Pins auf PCB-Oberflaeche
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_PSL_XX_G_GRND(Pins)
 union {
@@ -5285,7 +5285,7 @@ CON_MOLEX_PSL_XX_G_GRND(10)
 /********************************************************************************************************************************************
 // Tilmann Reh <tilmann.reh@autometer.de>
 // abgewinkelte Molex-Stiftleisten RM 2.54.
-// Bezugspunkt: Mitte der Pins auf PCB-Oberfläche
+// Bezugspunkt: Mitte der Pins auf PCB-Oberflaeche
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_PSL_XX_W_GRND(Pins)
 union {
@@ -6948,31 +6948,31 @@ union
 {
    difference
    {
-      // Aussenabmaße : 15.8  x  13.0  x  21.4 mm
+      // Aussenabmasse : 15.8  x  13.0  x  21.4 mm
       union
       {
          object {body(15.8,13.0,21.4,0.3) translate<7.9,0,10.7>  }
          box{<0,12.0,0.2><0.5,13,7.7> }
          box{<15.5,12.0,0.2><15.8,13,7.7>}
       }
-      // das Ganze aushöhlen
+      // das Ganze aushoehlen
       box{<0.25 ,-1 , 0.2><15.8-0.25 ,13.0-0.25,21.4-0.25>}
       
-      // Vorne typischer Ausbruch für Stecker
+      // Vorne typischer Ausbruch fuer Stecker
       stecker1
 
       // kleiner Schlitz hinten oben
       box{<3.5,13-0.35,21.4-0.35><15.8-3.5,13+0.35,21.4+0.35> }
 
       // Schlitze an den Seiten
-      // Schrägen hinten (links und rechts)
+      // Schraegen hinten (links und rechts)
       box{<-0.3,-0.1,-1.64><0.3,0.1,2.0> rotate<-45,0,0> translate<0,10.5+1.15+0.04,10-1.15+0.02+11.2>}
       box{<15.8-0.3,-0.1,-1.64><16,0.1,2.0> rotate<-45,0,0> translate<0,10.5+1.15+0.04,10-1.15+0.02+11.2>}
       // Senkrechten
       box{<-1,-1,18.8><20,10.6,19.00>}
       // waagerechte hinten
       box{<-1,10.45,10><20,10.65,18.8> }
-      // Schrägen vorne
+      // Schraegen vorne
       box{<-1,-0.1,-1.52><20,0.1,1.64> rotate<45,0,0> translate<0,10.5+1.15+0.04,10-1.15+0.02> }
       // waagerechte vorn
       box{<-1,12.6,0.2><20,12.8,7.82>}
@@ -6989,7 +6989,7 @@ union
    superellipsoid{<0.3,0.3> scale<0.35,0.35,0.35> translate<15.8-0.35,1.4,20.1> texture{tex_rj45_metal}}
    superellipsoid{<0.3,0.3> scale<0.35,0.35,0.35> translate<15.8-0.35,8.4,20.1> texture{tex_rj45_metal}}
 
-   // Schirmanschlüsse
+   // Schirmanschluesse
    box     {<0   , 1, 14-0.75><0.2     , -4,14+0.75> texture{tex_rj45_metal}}
    cylinder{<0   ,-4, 14     ><0.2     , -4,14     > 0.75 texture{tex_rj45_metal}}
    box     {<15.8, 1, 14-0.75><15.8-0.2, -4,14+0.75> texture{tex_rj45_metal}}
@@ -7004,7 +7004,7 @@ union
       texture{tex_rj45_pastic}
     }
  
-   // Plastikfüße zur Befestigung
+   // Plastikfuesse zur Befestigung
    difference
    {
       cylinder{<2,-3.5,14-3.05><2,1,14-3.05> 1.5}
@@ -7062,7 +7062,7 @@ union
    object { pin_intern  translate<+1.27-2.54,0,0>}
    object { pin_intern  translate<+1.27-5.08,0,0>}
  
-   translate<0,0.5,0>  // Anhebung um höhe der Plastikrollen
+   translate<0,0.5,0>  // Anhebung um hoehe der Plastikrollen
    translate<-15.8/2,0,-21.4/2>  // 0-Punkt in die Mitte der Buchse platzieren
 }
 #end
@@ -7079,11 +7079,11 @@ CON_RJ45_GRND()
 #macro CON_SD_CARD_GRND(col)
 #local b  = 24.0;       // Breite        
 #local b1 = 22.5;       // Breite dicker Teil
-#local l  = 32.0;       // Länge
-#local h  = 2.1;        // Höhe
-#local h1 = 1.4;        // Höhe dünner Teil
-#local s  = 4.0;        // Schräge
-#local s1 = s+b1-b;     // Schräge dicker Teil
+#local l  = 32.0;       // Laenge
+#local h  = 2.1;        // Hoehe
+#local h1 = 1.4;        // Hoehe duenner Teil
+#local s  = 4.0;        // Schraege
+#local s1 = s+b1-b;     // Schraege dicker Teil
 #local r1 = 1.0;        // Radius
 #local r2 = 0.5;        // Radius
 #local k1 = sin(pi/4)*r1;
@@ -7098,7 +7098,7 @@ CON_RJ45_GRND()
 #local labl_b = 13.8;
 #local labl_r = 1.5;
 
-#local pin_h = 1.4;     // Höhe der Pins
+#local pin_h = 1.4;     // Hoehe der Pins
 #local pin_a = 2.5;     // Pin Abstand
 #local pin_l = 6.05;    // Pinposition
 #local pin_s = 0.6;     // Steg zwischen den Pins
@@ -7120,7 +7120,7 @@ difference {
 #end 
 
 union {
-        // Kunststoffkörper
+        // Kunststoffkoerper
         difference {
                 merge {
                         prism{ 0, h1 11
@@ -7158,7 +7158,7 @@ union {
                         translate< 0, labs_t, labs_z>
                 }
 
-                // Labelfläche
+                // Labelflaeche
                 merge {
                         prism{ 0, -h, 9
                                 < -labl_l/2+labl_r, 0>, < labl_l/2-labl_r, 0>, < labl_l/2, labl_r>, < labl_l/2, labl_b-labl_r>,
@@ -7273,7 +7273,7 @@ CON_SD_CARD_GRND(rgb< 0.1, 0.1, 0.1>)
 
 
 union {
-        // Metallkörper
+        // Metallkoerper
 //        box{ <-4.98, 0, 0> < 23.02, h, 29.0> }
         difference {
                 prism{ 0, h, 25
@@ -7295,7 +7295,7 @@ union {
                 texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)} }
         }
         
-        // Kunststoffkörper
+        // Kunststoffkoerper
         difference {
                 merge {
                         prism{ 0, h-bl_d-ua, 9
@@ -7708,15 +7708,15 @@ CON_STEREO_35MM_GRND()
 
 
 /********************************************************************************************************************************************
-//Macro für USB-Buchse USB-787616 aus der con-amp.lib
+//Macro fuer USB-Buchse USB-787616 aus der con-amp.lib
 //12.10.2004
 //Designed by hebel23 <hebel(replace with at)hebel23.de> 
 ********************************************************************************************************************************************/
 #macro CON_USB_A_001_GRND()
 union {
-        /* Blechgehäuse  */               
+        /* Blechgehaeuse  */               
         difference {
-                box { <-7,2,0>,<7,8,14>} // Außenhülle
+                box { <-7,2,0>,<7,8,14>} // Aussenhuelle
                 box { <-6.5, 2.5, -1>, <6.5, 7.5, 14> } // Aussparung in der Mitte
                 box { <-6.5, 0, 12>, <6.5, 7.5, 15> }  // Aussparung hinten
                 difference {                                      // Feder links oben                                      
@@ -7746,8 +7746,8 @@ union {
                 texture{col_silver}
                 } 
         union {
-                box { <-7, -2, 9.5>, <-6.5, 3, 11> }            // linke Lötlasche
-                box { <7, -2, 9.5>, <6.5, 3, 11> }              // rechte Lötasche
+                box { <-7, -2, 9.5>, <-6.5, 3, 11> }            // linke Loetlasche
+                box { <7, -2, 9.5>, <6.5, 3, 11> }              // rechte Loetasche
                 texture{col_silver}
                }
         union {       
@@ -7759,7 +7759,7 @@ union {
                 union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,270>translate<3.5,2.25,-0.5>}
                 texture{col_silver}
                }
-        /* weißer Kontaktträger */
+        /* weisser Kontakttraeger */
         difference {
                 box { <-5,4,1>,<5,6,12>} // Quader in der Mitte
                 union {
@@ -7793,7 +7793,7 @@ union {
                 box { <3.2,-2,12.5>,<3.8,5,13>} // Kontakt 4 hinten
                 texture{col_gold}
              }
-        /* weißer Sockel */
+        /* weisser Sockel */
         union {      
                 difference {
                         box { <-6,0,2>,<6,2,12>} // Sockel links
@@ -7809,11 +7809,11 @@ union {
                                }                
                         difference {
                         box { <-6.5, 0.5, 12>, <6.5, 7.5, 14> } // Sockel hinten
-                        box { <-6, 2.5, 12.5>, <6, 8, 15> }  // Aussparung für Kontakte
-                        box { <-3.8,-2,12>,<-3.2,5,15> }  // Aussparung für Kontakte
-                        box { <-1.3,-2,12>,<-0.7,5,15> }  // Aussparung für Kontakte
-                        box { <0.7,-2,12>,<1.3,5,15> }  // Aussparung für Kontakte
-                        box { <3.2,-2,12>,<3.8,5,15> }  // Aussparung für Kontakte
+                        box { <-6, 2.5, 12.5>, <6, 8, 15> }  // Aussparung fuer Kontakte
+                        box { <-3.8,-2,12>,<-3.2,5,15> }  // Aussparung fuer Kontakte
+                        box { <-1.3,-2,12>,<-0.7,5,15> }  // Aussparung fuer Kontakte
+                        box { <0.7,-2,12>,<1.3,5,15> }  // Aussparung fuer Kontakte
+                        box { <3.2,-2,12>,<3.8,5,15> }  // Aussparung fuer Kontakte
                 texture{pigment{color White}}
                                 }
              }  
@@ -7984,14 +7984,14 @@ CON_USB_B_001_GRND()
 
 
 /********************************************************************************************************************************************
-//Macro für USB-Mini-Buchse MOLEX 54919-0578 (RS-Components Artikel: 418-0172)
+//Macro fuer USB-Mini-Buchse MOLEX 54919-0578 (RS-Components Artikel: 418-0172)
 //Designed by hebel23 <hebel(replace with at)hebel23.de>
 //24.10.2004
 ********************************************************************************************************************************************/
 #macro CON_USB_B_002_GRND()
 union {
     union {      
-     // Blechgehäuse                    
+     // Blechgehaeuse                    
     difference {      
     union {      
           union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)translate<-3.355,0.15,-4>}
@@ -8017,7 +8017,7 @@ union {
              box { <-0.5, 3, -1>, <0.5,5,-5> }      
                 }
           }
-     // Lötfahnen
+     // Loetfahnen
      difference {     
      union {
           union {TOOLS_RECT_BOGEN(0.5,90,0.25,5.5,0.5,2.5)translate<3.85,0.1,-5.75>}
@@ -8028,7 +8028,7 @@ union {
           }
           texture{col_silver}
          }
-     // schwarzer Kontaktträger in der Mitte
+     // schwarzer Kontakttraeger in der Mitte
         difference {
                 box { <-2.5,1,-1>,<2.5,2,-7>} 
                 box { <-0.25,1.25,0>,<0.25,1.75,-8>} 
@@ -8038,7 +8038,7 @@ union {
                 box { <1.75,1.25,0>,<1.25,1.75,-8>} 
                 texture{pigment{color rgb <0.1, 0.1, 0.1>}}
                 }
-     // schwarzer Kontaktträger Hinten
+     // schwarzer Kontakttraeger Hinten
          difference {
                 box { <-3.75,0,-6>,<3.75,3.75,-8.5>} 
                 box { <-2,1.9,-7>,<3,4,-8.6>} 
@@ -8531,7 +8531,7 @@ CON_WAGO_233_GRND(48,5)
 /********************************************************************************************************************************************
 // Tilmann Reh <tilmann.reh@autometer.de>
 // gerade Pfostenwannen
-// Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberfläche
+// Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberflaeche
 ********************************************************************************************************************************************/
 #macro CON_WS_XX_G_GRND(Pins)
 union {
