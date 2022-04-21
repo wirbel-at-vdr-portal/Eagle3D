@@ -26,52 +26,9 @@
 #declare __connector_inc = true;
 
 #include "e3d_tools.inc"
+#include "CONNECTOR/AMP_HE14.inc"
 #include "CONNECTOR/pinheader.inc"
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_AMP_HE14_1S.inc.src
-// Macros for HE14 serie Right-Angle Single-Row
-// Designed by Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
-// Rev. 1.0  09/02/08
-// //////////
-#macro AMP_HE14_1S(Pins)
-#local HE14Blue = color green 0.5 blue 1;
-union{
-    difference{
-        union{
-                box{<0,0.8,-2.54><Pins*2.54,2.6,2.54>}
-                #local i=0; #while (i<Pins) box{<0.87+i*2.54,0,2.1><1.67+i*2.54,0.8,+2.54>} #local i=i+1; #end
-
-                difference{
-                    box{<0,0,-2.1><Pins*2.54,2.6,-2.54>}
-                    #local i=0; #while (i<Pins) box{<0.4+i*2.54,-0.1,-2><2.14+i*2.54,0.8,-3>} #local i=i+1; #end
-                    box{<-0.01,-0.01,0><0.41,0.8,-3>}
-                    box{<Pins*2.54+0.01,-0.01,0><Pins*2.54-0.41,0.8,-3>}
-                }
-            }
-        union{
-                cylinder{<0,-2,-2.54+0.2><0,3,-2.54+0.2> 1.2}
-                box{<Pins*2.54-0.4,-2,+2.541><Pins*2.55,3,+2.54-0.4>}
-                box{<Pins*2.54-0.4,-2,-2.541><Pins*2.55,3,-2.54+1.2>}//front right
-                box{<Pins*2.54-1.27,-2,-2.541><Pins*2.55,3,-2.54+0.4>}//front right
-                box{<+0.4,-2,+2.541><-0.01,3,+2.54-0.4>} //back right
-        }
-    }
-
-    difference{
-        box{<1.27,2.6,-2.54><(Pins-0.5)*2.54,11.4,-1.9>}
-        box{<1.27-1,9,-2.54><(Pins-0.5)*2.54+1,13,-1.9> rotate -8.5*x translate 2*z}
-    }
-    box{<1.27,8,-2.54><(Pins-0.5)*2.54,8.5,-1.7>}
-    box{<1.27,8,-2><(Pins-0.5)*2.54,8.5,-1.7> rotate -30*x translate <0,2.45,3.75>}
-
-    difference{
-        box{<0.4,2.6,+2.54><Pins*2.54-0.4,11.4,+1.9>}
-        box{<0.4-1,9,+2.54><Pins*2.54-0.4+1,13,+1.9> rotate 8.5*x translate -2*z}
-    }
-    translate <-Pins*1.27,0,0> pigment {HE14Blue}
-}
-#end
 
 
 
@@ -82,10 +39,10 @@ union{
 // Privat: <fbleikamp@web.de>
 // //////////
 #macro ARK_PIN()
-union{
+union {
    cylinder{<0,-3,0><0,1.1,0>0.4 texture{col_silver}}
    cone{<0,-3,0>0.4<0,-3.5,0>0.1 texture{col_silver}}
-   difference{
+   difference {
       box{<-2.54,0,-4><2.54,10,4>}
       box{<-2.04,1,-4.01><2.04,6,3>}
       box{<-0.75,-0.1,-4.01><0.75,1.1,1>}
@@ -95,11 +52,11 @@ union{
       cone{<0,9,0>1.4<0,10.1,0>1.8}
    }
    superellipsoid{<1,0.1> rotate<90,0,0> scale<1,2.3,1> texture{col_silver} translate<0,7,0>}
-   difference{
+   difference {
       superellipsoid{<1,0.1> rotate<90,0,0> scale<1.3,0.5,1.3> texture{col_silver} translate<0,9.5,0>}
       box{<0.25,0,-2><-0.25,1,2>rotate<0,rand(global_seed)*180,0> translate<0,9.8,0>}
    }
-   difference{
+   difference {
       box{<-2,1.1,-2.5><2,5.9,2.5>}
       cylinder{<0,3.5,-2.6><0,3.5,2.6>1.4}
       cylinder{<0,3.5,0><0,6,0>1.4}
@@ -117,12 +74,12 @@ union{
 //  Jumper
 // //////////
 #macro CON_JUMPER()
-union{
-difference{
+union {
+difference {
 box{<0,0,0><2.54,6.0,2.00> translate<-1.27,2.5,-1.27>}
 box{<0,0,0><0.635,10.0,0.635> translate<-0.3175,2.5,-0.3175>}
 pigment{MediumBlue}translate<-1.27,0,0>}
-difference{
+difference {
 box{<0,0,0><2.54,6.0,2.00> translate<-1.27,2.5,-1.27>}
 box{<0,0,0><0.635,10.0,0.635> translate<-0.3175,2.5,-0.3175>}
 pigment{MediumBlue} translate<1.27,0,0>}}
@@ -134,9 +91,9 @@ pigment{MediumBlue} translate<1.27,0,0>}}
 // Pin fuer Buchsenleiste (flache Bauform), hinzugefügt von B.Redemann www.b-redemann.de
 // //////////
 #macro CON_PBL_F()
-union{
+union {
 
-difference{
+difference {
    box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
    box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
    box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
@@ -144,8 +101,8 @@ difference{
    box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
    texture{col_gold}
 }
-difference{
-   difference{
+difference {
+   difference {
       box{<-1.27,0,-1.27><1.27,3,1.27>}
       box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
       box{<-1.27,-0.1,-1.27><1.27,3.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
@@ -155,13 +112,13 @@ difference{
    cylinder{<0,1,0><0,3.1,0>1.0}
 }
 
-difference{
+difference {
    cylinder{<0,2.5,0><0,3.03,0>1.0}
    cylinder{<0,1.9,0><0,3.2,0>0.9}
    texture{col_silver}
 }
 
-difference{
+difference {
    cylinder{<0,0.5,0><0,2.55,0>0.9}
    cylinder{<0,0.4,0><0,2.6,0>0.7}
    texture{col_gold}
@@ -179,8 +136,8 @@ pigment{Gray30}}
 // Phoenix - Grund-Gehaeuse Kunststoff
 // //////////
 #macro CON_PHOENIX_381_PHGH()
-union{
-   difference{
+union {
+   difference {
       box{<-1,0,-1.905><8,7,1.905> }
       cylinder{<-1.1,5,0><0.6,5,0>0.65 }
       box{<-1.1,6,-1.4><-0.8,6.5,1.4> }
@@ -194,7 +151,7 @@ union{
       pigment{ForestGreen}
    }
    //Rundung unten
-   difference{
+   difference {
       cylinder{<2,-1.0,0><8,-1.0,0>2.0 }
       box{<1.9,-3.1,-2.1><8.1,0.1,2.1> }
       pigment{ForestGreen}
@@ -219,9 +176,9 @@ union{
 // Phoenix - Gegenstecker Kunststoff MC 1,5/xx-ST-381
 // //////////
 #macro CON_PHOENIX_381_PHGSG()
-union{
+union {
    difference {
-   merge{
+   merge {
       box{<0,0,-1.905><9,9.5,1.905> }
       box{<4,9.5,-1.905><9,11,1.905> }
       box{<-6.2,4,-1.5><0,8,1.5> }
@@ -256,9 +213,9 @@ union{
 // und MCVR 1,5/xx-ST-381 (type =1) Kunststoffteil
 // //////////
 #macro CON_PHOENIX_381_PHGSRW(typ)
-union{
-   difference{
-   union{
+union {
+   difference {
+   union {
       box{<-1.5,0,-1.9><1.5,-6.6,2.2>}
       box{<-0.4,-6.5,-1.9><0.4,-4,-3.2> }
    }
@@ -269,8 +226,8 @@ union{
       rotate <0,180,0>
    #end
    }
-   difference{
-      union{
+   difference {
+      union {
          box{<-1.905,0,3.7><1.905,11.6,-4.6>}
          cylinder{<-1.905,7.3,4.9><1.905,7.3,4.9>0.3 }
          box{<-1.905,0,3.7><1.905,7.3,5.2>}
@@ -281,8 +238,8 @@ union{
       box{<-0.9,2.7,5.3><0.9,5.5,-4>}
       box{<-1.5,2.5,5.3><1.5,6.6,4>}
    }
-   difference{
-      union{
+   difference {
+      union {
          cylinder{<-1.905,12.2,2.7><1.905,12.2,2.7>0.3 }
          cylinder{<-1.905,12.2,-1.65><1.905,12.2,-1.65>0.3 }
          box{<-1.905,11.9,2.7><1.905,12.5,-1.65>}
@@ -304,7 +261,7 @@ union{
 // Privat: <fbleikamp@web.de>
 // Nummer
 #macro CON_PHOENIX_381_PHNR(n)
-union{
+union {
    box{<-1.905,0,-1.75><1.905,0.1,1.75> pigment{White}}
    box{<-1.89,0,-1.75><-1.905,0.25,1.75> pigment{Gray20}}
    box{<1.905,0,-1.75><1.89,0.25,1.75> pigment{Gray20}}
@@ -325,7 +282,7 @@ union{
 // Phoenix - Kontakt (gerade)
 // //////////
 #macro CON_PHOENIX_381_PHPIN()
-difference{
+difference {
    box{<-0.35,-3.5,-0.35><0.35,7.5,0.35>}
    // anspitzen oben
    box{<0,0,-0.7><0.7,0.7,0.7> rotate<0,0,30> translate<0.4,7,0>}
@@ -350,7 +307,7 @@ difference{
 // Phoenix - Kontakt Winkel
 // //////////
 #macro CON_PHOENIX_381_PHPINW()
-difference{
+difference {
    //#macro RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
    object {TOOLS_RECT_BOGEN(0.1,90,0.7,0.7,6,7)}
    //laenge1 anspitzen
@@ -376,7 +333,7 @@ difference{
 // Schraubenkopf
 // //////////
 #macro CON_PHOENIX_381_SCREWHEAD()
-difference{
+difference {
    superellipsoid{<1,0.1> rotate<90,0,0> scale<1.4,0.5,1.4> translate<0,0,0>}
    box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> translate<0,0,0>}
    texture{col_silver}
@@ -393,8 +350,8 @@ difference{
 // Kunststoffkörper von geraden und abgewinkelten Molex-Stiftleisten
 // //////////
 #macro MOLEX254(Pins)
-union{
-difference{
+union {
+difference {
 box{<0,0,-2.5><Pins*2.54,3,3>}
 #local i=0; #while (i<Pins) box{<0.77+i*2.54,-0.1,-3><1.77+i*2.54,0.8,4>} #local i=i+1; #end }
 box{<1.27,2,-2.5><(Pins-0.5)*2.54,11.3,-1.7>}
@@ -408,9 +365,9 @@ translate <-Pins*1.27,0,0> texture {e3d_tex_con_Molex}}
 // Pin für Buchsenleiste
 // //////////
 #macro PBL()
-union{
+union {
 
-difference{
+difference {
    box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
    box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
    box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
@@ -418,8 +375,8 @@ difference{
    box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
    texture{col_gold}
 }
-difference{
-   difference{
+difference {
+   difference {
       box{<-1.27,0,-1.27><1.27,8,1.27>}
       box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
       box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
@@ -429,13 +386,13 @@ difference{
    cylinder{<0,1,0><0,8.1,0>1.0}
 }
 
-difference{
+difference {
    cylinder{<0,7.5,0><0,8.03,0>1.0}
    cylinder{<0,6.9,0><0,8.2,0>0.9}
    texture{col_silver}
 }
 
-difference{
+difference {
    cylinder{<0,0.5,0><0,7.55,0>0.9}
    cylinder{<0,0.4,0><0,7.6,0>0.7}
    texture{col_gold}
@@ -457,14 +414,14 @@ finish {ambient (0.1 * global_ambient_mul)}
 // Bezugspunkt: Mitte der Auflagefläche (gerade Ausführung).
 // Kunststoffkörper von Pfostenwannen
 #macro PFOSTENWANNE(B)
-union{
-difference{
+union {
+difference {
 box{<-B/2,0.3,-4.2><B/2,9,4.5>}
 box{<-B/2+1,2.5,-3.2><B/2-1,10,3.5>}
 box{<-2.2,2,2.5><2.2,10,5>}
 box{<B/2-1.1,0,-1.75><B/2+0.1,6.5,1.75>}
 box{<-B/2+1.1,0,-1.75><-B/2-0.1,6.5,1.75>}}
-difference{
+difference {
 box{<B/2-6.08,6,4><B/2-4.08,8,4.6>}
 box{<0,0,0><2,3,0.7> rotate<0,0,-30> translate<B/2-5.08,6,4>}
 box{<0,0,0><-2,3,0.7> rotate<0,0,30> translate<B/2-5.08,6,4>}}
@@ -492,9 +449,9 @@ texture{e3d_tex_con_IDC}
 // Pin für Stiftleisten Winkel obere Reihe
 // //////////
 #macro PHW2()
-union{
+union {
 //PIN Loetseite
-difference{
+difference {
 box{<0,0,0><0.6,5.54,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
 box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-30> translate<0.1,0,0>}
 box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,30> translate<-0.1,0,0>}
@@ -502,7 +459,7 @@ box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<30,0,0> translate<0,0,0.1>}
 box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-30,0,0> translate<0,0,-0.1>}
 translate<0,-2.22,0>}
 //PIN Steckseite
-difference{
+difference {
 box{<0,0,0><0.6,11.54,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
 box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-60> translate<0.1,11.54,0>}
 box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,60> translate<-0.1,11.54,0>}
@@ -510,17 +467,17 @@ box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<60,0,0> translate<0,11.54,0
 box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-60,0,0> translate<0,11.54,-0.1>}
 rotate<0,0,-90> translate<0.5,3.81,0>}
 //PIN Bogen
-difference{
+difference {
 box{<0,0,0><0.6,0.4,0.4> texture{col_gold} translate<0,0.0,0.0>}
 cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_gold} translate<0,0.0,0.0>}
 rotate<0,-90,0> translate<0.5,3.31,-0.3>}
-difference{
+difference {
 cylinder{<0,0,0><0.6,0,0>0.8 texture{col_gold} translate<0,0,0> }
 box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,0,-0.1>}
 box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,-1.8,0.4>}
 rotate<0,-90,0> translate<0.5,3.31,-0.3>}
 //Kunststoff
-difference{
+difference {
 box{<0,-2,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
 box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,1.76>}
 box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,-1.76>}
@@ -537,9 +494,9 @@ rotate<0,-90,0>
 // Pin für Stiftleisten Winkel
 // //////////
 #macro PHW()
-union{
+union {
 //PIN Loetseite
-difference{
+difference {
 box{<0,0,0><0.6,3,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
 box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-30> translate<0.1,0,0>}
 box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,30> translate<-0.1,0,0>}
@@ -547,7 +504,7 @@ box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<30,0,0> translate<0,0,0.1>}
 box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-30,0,0> translate<0,0,-0.1>}
 translate<0,-2.22,0>}
 //PIN Steckseite
-difference{
+difference {
 box{<0,0,0><0.6,9,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
 box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-60> translate<0.1,9,0>}
 box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,60> translate<-0.1,9,0>}
@@ -555,17 +512,17 @@ box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<60,0,0> translate<0,9,0.1>}
 box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-60,0,0> translate<0,9,-0.1>}
 rotate<0,0,-90> translate<0.5,1.27,0>}
 //PIN Bogen
-difference{
+difference {
 box{<0,0,0><0.6,0.4,0.4> texture{col_gold} translate<0,0.0,0.0>}
 cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_gold} translate<0,0.0,0.0>}
 rotate<0,-90,0> translate<0.5,0.77,-0.3>}
-difference{
+difference {
 cylinder{<0,0,0><0.6,0,0>0.8 texture{col_gold} translate<0,0,0> }
 box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,0,-0.1>}
 box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,-1.8,0.4>}
 rotate<0,-90,0> translate<0.5,0.77,-0.3>}
 //Kunststoff
-difference{
+difference {
 box{<0,-1.27,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
 box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,1.76>}
 box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,-1.76>}
@@ -585,20 +542,20 @@ rotate<0,-90,0>
 // Parameter: Stärke, Biegeradius (Mitte), Höhe über/unter PCB-Oberkante, Länge nach vorn (-Z), Farbe
 // //////////
 #macro PIN_BENDED(D,R,HO,HU,L,col)
-union{
-difference{
+union {
+difference {
 cylinder{<0,-D/2,0><0,D/2,0> R+D/2}
 cylinder{<0,-D,0><0,D,0> R-D/2}
 box{<-R-D,-D,-R-D><0,D,R+D>}
 box{<-R-D,-D,-R-D><R+D,D,0>}
 rotate<0,0,90> translate<0,HO-R,-R>}
-difference{
+difference {
 box{<-D/2,-HU,-D/2><D/2,HO-R,D/2>}
 box{<0,0,-0.6*D><0.6*D,0.6*D,0.6*D> rotate<0,0,-45> translate<D/4,-HU,0>}
 box{<0,0,-0.6*D><-0.6*D,0.6*D,0.6*D> rotate<0,0,45> translate<-D/4,-HU,0>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,0.6*D> rotate<45,0,0> translate<0,-HU,D/4>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<-45,0,0> translate<0,-HU,-D/4>}}
-difference{
+difference {
 box{<-D/2,HO-D/2,-L><D/2,HO+D/2,-R>}
 box{<0,-0.6*D,0><0.6*D,0.6*D,0.6*D> rotate<0,45,0> translate<D/4,HO,-L>}
 box{<0,-0.6*D,0><-0.6*D,0.6*D,0.6*D> rotate<0,-45,0> translate<-D/4,HO,-L>}
@@ -617,7 +574,7 @@ texture{col}}
 // Gerader, quadratischer Stift eines Steckverbinders
 // //////////
 #macro PIN_STRAIGHT(D,HO,HU,col)
-difference{
+difference {
 box{<-D/2,-HU,-D/2><D/2,HO,D/2>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,0.6*D> rotate<45,0,0> translate<0,HO,D/4>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<-45,0,0> translate<0,HO,-D/4>}
@@ -679,9 +636,9 @@ difference
 // Pin für Stiftleisten
 // //////////
 #macro PH()
-union{
+union {
 object{PIN_STRAIGHT(0.5,9,3,col_gold)}
-difference{
+difference {
 box{<0,0,0><2.54,2,2.54> pigment{Gray30} translate<-1.27,0,-1.27>}
 box{<0,-0.5,0><1,2.5,1> pigment{Gray30} rotate<0,45,0> translate<0.635,0,1.27>}
 box{<0,-0.5,0><1,2.5,1> pigment{Gray30} rotate<0,-45,0> translate<-1.27,0,0.635>}
@@ -702,7 +659,7 @@ box{<-1.3,-0.1,-0.635><1.3,0.5,0.635> pigment{Gray30} rotate<0,0,0> translate<0,
 // Reihe gebogener quadratischer Stifte
 // //////////
 #macro PIN_BENDED_ROW(Pins,Pitch,D,R,HO,HU,L,col)
-union{
+union {
 #local i=0;
 #while(i<Pins) object{PIN_BENDED (D,R,HO,HU,L,col) translate<i*Pitch,0,0>} #local i=i+1; #end
 translate<-(Pins-1)*Pitch/2,0,0>}
@@ -718,7 +675,7 @@ translate<-(Pins-1)*Pitch/2,0,0>}
 // Bezugspunkt: Mitte der Pinreihe.
 // Reihe gerader quadratischer Stifte
 #macro PIN_STRAIGHT_ROW(Pins,Pitch,D,HO,HU,col)
-union{
+union {
 #local i=0;
 #while(i<Pins) object{PIN_STRAIGHT (D,HO,HU,col) translate<i*Pitch,0,0>} #local i=i+1; #end
 translate<-(Pins-1)*Pitch/2,0,0>}
@@ -762,14 +719,14 @@ union
 //AK-700 Klemme ohne Mittelanschluss RM 5.0 Uwe Lorenz <u.lorenz@er-dresden.net>
 ********************************************************************************************************************************************/
 #macro CON_AK700_3_5_GRND()
-union{
+union {
 //***** Lötstift
 cylinder{<-5,-4,0><-5,1.1,0>0.6 texture{col_silver}}
 cylinder{<5,-4,0><5,1.1,0>0.6 texture{col_silver}}
 //***** Ende Lötstifte
 //
 //***** Grundkörper
-difference{
+difference {
 box{<-7.5,0,-5><7.5,19,5>}
 //*****mittlerer Anschluß
 box{<-2,3.9,-5.01><2,9.5,3.5>}
@@ -811,23 +768,23 @@ box{<4.0,6.3,3.8><5.4,7.3,4.8> texture{col_silver} }
 //***** Ende hintere Silberfahnen
 //
 //***** rechter Schraubenkopf
-difference{
+difference {
 superellipsoid{<1,0.1> rotate<90,0,0> scale<1.5,0.5,1.5> texture{col_silver} translate<-5,18.2,0>}
 box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> texture{col_silver} translate<-5,18.2,0>}}
 //***** linker Schraubenkopf
-difference{
+difference {
 superellipsoid{<1,0.1> rotate<90,0,0> scale<1.5,0.5,1.5> texture{col_silver} translate<5,18.2,0>}
 box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> texture{col_silver} translate<5,18.2,0>}}
 //***** Ende Schraubenköpfe
 //
 //***** linke Zugbügelklemme
-difference{
+difference {
 box{<-6.4,4.1,-3.5><-2.6,9.4,2.5>}
 box{<-6.2,4.2,-3.6><-2.8,9.4,2.6>}
 texture{col_silver}}
 cylinder{<-5.8,9.0,-3.3><-3.1,9.0,-3.3>1.0 texture{col_silver}}
 //***** rechte Zugbügelklemme
-difference{
+difference {
 box{<2.6,4.1,-3.5><6.4,9.4,2.5>}
 box{<2.8,4.2,-3.6><6.2,9.4,2.6>}
 texture{col_silver}}
@@ -924,85 +881,6 @@ CON_AMPMT_S_GRND(12)
 #end
 
 
-/********************************************************************************************************************************************
-//Macros for HE14 serie Right-Angle Single-Row
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
-//Rev. 1.0  09/02/08
-********************************************************************************************************************************************/
-#macro CON_AMP_HE14_1R_GRND(Pins)
-union{
-object{AMP_HE14_1S(Pins) rotate<90,180,0> translate<0,2.54,-1.2>}
-object{PIN_BENDED_ROW (Pins,2.54,0.63,0.8,2.5,3,12.5,col_silver) translate<0,0,0>}}
-rotate 180*y
-#end
-
-#macro CON_AMP_HE14_1R_02()
-CON_AMP_HE14_1R_GRND(2)
-#end
-#macro CON_AMP_HE14_1R_03()
-CON_AMP_HE14_1R_GRND(3)
-#end
-#macro CON_AMP_HE14_1R_04()
-CON_AMP_HE14_1R_GRND(4)
-#end
-#macro CON_AMP_HE14_1R_05()
-CON_AMP_HE14_1R_GRND(5)
-#end
-#macro CON_AMP_HE14_1R_06()
-CON_AMP_HE14_1R_GRND(6)
-#end
-#macro CON_AMP_HE14_1R_07()
-CON_AMP_HE14_1R_GRND(7)
-#end
-#macro CON_AMP_HE14_1R_08()
-CON_AMP_HE14_1R_GRND(8)
-#end
-#macro CON_AMP_HE14_1R_09()
-CON_AMP_HE14_1R_GRND(9)
-#end
-#macro CON_AMP_HE14_1R_10()
-CON_AMP_HE14_1R_GRND(10)
-#end
-
-
-/********************************************************************************************************************************************
-//Macros for HE14 serie Right-Angle Single-Row
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
-//Rev. 1.0  09/02/08
-********************************************************************************************************************************************/
-#macro CON_AMP_HE14_1S_GRND(Pins)
-union{
-object{AMP_HE14_1S(Pins)}
-object{PIN_STRAIGHT_ROW (Pins,2.54,0.635,11,3,col_silver)}}
-#end
-
-#macro CON_AMP_HE14__1S_02()
-CON_AMP_HE14_1S_GRND(2)
-#end
-#macro CON_AMP_HE14__1S_03()
-CON_AMP_HE14_1S_GRND(3)
-#end
-#macro CON_AMP_HE14__1S_04()
-CON_AMP_HE14_1S_GRND(4)
-#end
-#macro CON_AMP_HE14__1S_05()
-CON_AMP_HE14_1S_GRND(5)
-#end
-#macro CON_AMP_HE14__1S_06()
-CON_AMP_HE14_1S_GRND(6)
-#end
-#macro CON_AMP_HE14__1S_07()
-CON_AMP_HE14_1S_GRND(7)
-#end
-#macro CON_AMP_HE14__1S_08()
-CON_AMP_HE14_1S_GRND(8)
-#end
-#macro CON_AMP_HE14__1S_09()
-CON_AMP_HE14_1S_GRND(9)
-#end
-#macro CON_AMP_HE14__1S_10()
-CON_AMP_HE14_1S_GRND(10)
-#end
 
 
 /********************************************************************************************************************************************
@@ -1014,14 +892,14 @@ CON_AMP_HE14_1S_GRND(10)
 // Modified by Carsten Kögler, FTZ-Leipzig <koegler@ftz-leipzig.de>
 // Vorlage: RIA Anschlussklemme AKL 059-xx
 #macro ARK_PIN_350MM()
-union{
+union {
 
 // Einlötstift
    cylinder{<0,-3.0,0><0,1.0,0>0.45 texture{col_silver}}
    cone{<0,-3.0,0>0.45<0,-3.4,0>0.1 texture{col_silver}}
 
 // Plastikkörper
-   difference{
+   difference {
       box{<-1.75,0,-3.7><1.75,8.2,2.8>}               // Hauptbox
       box{<-1.4 ,0.6,-4><1.4 ,5.1,2.2>}               // Loch für Drahteinführung
       box{<-0.75,-0.1,-4.01><0.75,1.1,1>}             // Schlitz in der unteren Mitte
@@ -1034,7 +912,7 @@ union{
 
 // Abgeschrägten Innenteil hinzufügen (siehe Datenblatt)
    box{<-1.4 , 4.6,-1.9><1.4,5.1,2.8>}
-        difference{
+        difference {
          box{<-1.4 , -0.25,-0.25><1.4,0.25,0.25>}
             box{<-1.5 , -0.35,-0.35><1.5,0.35,0.35>rotate<45,0,0> translate<0,-0.25,-0.25>}
                 translate<0,4.85,-2.15>
@@ -1042,13 +920,13 @@ union{
 
 // Schraube
    superellipsoid{<1,0.1> rotate<90,0,0> scale<0.9,2.0,1> texture{col_silver} translate<0,5.0,0>}
-   difference{
+   difference {
       superellipsoid{<1,0.1> rotate<90,0,0> scale<1.3,0.5,1.3> texture{col_silver} translate<0,7.3,0>}
       box{<0.25,0,-2><-0.25,1,2>rotate<0,rand(global_seed)*180,0> translate<0,7.6,0>}
    }
 
 // metallenes Innenleben
-   difference{
+   difference {
       box{<-1.35,0.65,-1.9><1.35,4.4,2.5>}   // Hauptkörper
       cylinder{<0,2.2,-2.0><0,2.2,2.6>1.1}    // Loch
       cylinder{<0,2.2,0><0,5.2,0>1.1}
@@ -1057,7 +935,7 @@ union{
 
 // Drahtschutz
    box{<-0.95,4.45,-2.0><0.95,4.5,2.5>texture{col_silver}}    // oberer Teil
-        difference{                                                // oberer Bogen
+        difference {                                                // oberer Bogen
                 cylinder {<-0.95,-0.1 ,0>,< 0.95,-0.1 ,0>,0.1 }
                 cylinder {<-1.0 ,-0.1 ,0>,< 1.0 ,-0.1 ,0>,0.05}
                 box{<-1,-1.0,-2><1,-0.1,2>}
@@ -1067,7 +945,7 @@ union{
                 translate<0,4.5,-2.0 >
         }
    box{<-0.95,2.2,-2.1><0.95,4.4,-2.05>texture{col_silver}}   // vorderer Teil
-        difference{                                                // unterer Bogen
+        difference {                                                // unterer Bogen
                 cylinder {<-0.95,-0.1 ,0>,< 0.95,-0.1 ,0>,0.1 }
                 cylinder {<-1.0 ,-0.1 ,0>,< 1.0 ,-0.1 ,0>,0.05}
                 box{<-1,-1.0,-2><1,-0.1,2>}
@@ -1084,14 +962,14 @@ union{
 }
 #end
 
-union{
+union {
    #local i = 0;
    #while(i<j)
       object{ARK_PIN_350MM() translate<i*3.5,0,0>}
       #local i=i+1;
    #end
 
-   union{
+   union {
       #local i = 0;
       #while(i<j)
          text {ttf besch_font str(j-i,0,0) 0.2,0  scale<2,2,2> rotate<30,0,0> translate<-i*3.5-1.27,6.1,-3> translate<0,0.3,0.1> pigment{Black}}
@@ -1142,14 +1020,14 @@ CON_ARK_350MM_GRND(12)
 //Grundmakro für Anreiklemme 5mm
 ********************************************************************************************************************************************/
 #macro CON_ARK_5MM_GRND(j)
-union{
+union {
    #local i = 0;
    #while(i<j)
       object{ARK_PIN() translate<i*5.08,0,0>}
       #local i=i+1;
    #end
 
-   union{
+   union {
       #local i = 0;
       #while(i<j)
          text {ttf besch_font str(j-i,0,0) 0.2,0  scale<3,3,3> rotate<30,0,0> translate<-i*5.08-1.27,7.21,-4> translate<0,0.3,0.1> pigment{Black}}
@@ -1209,10 +1087,10 @@ CON_ARK_5MM_GRND(12)
 // a=1 obere  Reihe
 #macro CON_BLW_PIN(a)
 #local ii = a*2.54;
-union{
-union{
+union {
+union {
    //PIN Loetseite 4mm, etwas angespitzt
-   difference{
+   difference {
       box{<0,0,0><0.4,4.1+ii,0.4> texture{col_silver} translate<-0.2,0,-0.2>}
       box{<0,0,-0.5><0.5,0.5,0.5> texture{col_silver} rotate<0,0,-30> translate<0.1,0,0>}
       box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_silver} rotate<0,0,30> translate<-0.1,0,0>}
@@ -1227,14 +1105,14 @@ union{
 
    //PIN Bogen 
    //innenkurve
-   difference{
+   difference {
       box{<0,0,0><0.4,0.4,0.4> texture{col_silver} translate<0,0.0,0.0>}
       cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_silver} translate<0,0.0,0.0>}
       rotate<0,-90,0> translate<0.5,0.77+ii,-0.2>
       translate<-0.1,0.1,0> 
    }
    //aussenkurve
-   difference{
+   difference {
       cylinder{<0,0,0><0.4,0,0>0.6 texture{col_silver} translate<0,0,0> }
       box{<0,0,0><2,2.2,-2> texture{col_silver} translate<-0.1,0,-0.1>}
       box{<0,0,0><2,2.2,-2> texture{col_silver} translate<-0.1,-1.8,0.4>}
@@ -1243,11 +1121,11 @@ union{
    } 
    rotate<0,-90,0>
 }
-union{
+union {
    //schwarzes plastik mit loch 8mm lang   
    // wird vertikal gebaut                        
-   difference{
-      difference{
+   difference {
+      difference {
          box{<-1.27,0,-1.27><1.27,8,1.27>}
          box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate<-1.95,0,-1.95> }
          box{<-1.27,-0.1,-1.27><1.27,8.1,1.27> rotate<0,45,0> translate< 1.95,0,-1.95> }
@@ -1257,13 +1135,13 @@ union{
       cylinder{<0,1,0><0,8.1,0>1.0}
    }
    //rundes buchsenloch versilbert
-   difference{
+   difference {
       cylinder{<0,7.5,0><0,8.03,0>1.0}
       cylinder{<0,6.9,0><0,8.2,0>0.9}  
       texture{col_silver}
    }
    //vergoldeter Kontakt im siblernen Buchsenloch
-   difference{
+   difference {
       cylinder{<0,0.5,0><0,7.55,0>0.9}
       cylinder{<0,0.4,0><0,7.6,0>0.7}  
       texture{col_gold}
@@ -1279,7 +1157,7 @@ union{
 }
 #end
 
-union{
+union {
    #local i=0;
    #while(i<pin)
       object{CON_BLW_PIN(0) translate<i*2.54,0,0>}
@@ -1379,7 +1257,7 @@ CON_BLW_GRND(20,2)
 //Grundmakro für Buchsenleisten (flach)
 ********************************************************************************************************************************************/
 #macro CON_BL_F_GRND(pin,row)
-union{
+union {
 #local i=0;
 #while(i<pin)
 object{CON_PBL_F() translate<i*2.54,0,0>}
@@ -1473,7 +1351,7 @@ CON_BL_F_GRND(20,2)
 //Grundmakro für Buchsenleisten
 ********************************************************************************************************************************************/
 #macro CON_BL_GRND(pin,row)
-union{
+union {
 #local i=0;
 #while(i<pin)
 object{PBL() translate<i*2.54,0,0>}
@@ -1570,8 +1448,8 @@ CON_BL_GRND(20,2)
 #macro CON_BL_PRECISION_GRND(pin,row)
 //Single Pin
 #macro CON_BL_PRECISION_PIN()
-union{
-  difference{
+union {
+  difference {
              box{<0,0,0><2.54,2,2.54> pigment{Gray10} translate<-1.27,0,-1.27>}
              box{<0,-0.5,0><1,2.5,1> pigment{Gray10} rotate<0,45,0> translate<0.635,0,1.27>}
              box{<0,-0.5,0><1,2.5,1> pigment{Gray10} rotate<0,-45,0> translate<-1.27,0,0.635>}
@@ -1581,8 +1459,8 @@ union{
   translate<0,5.10,0>
   }
   
- difference{
-  union{
+ difference {
+  union {
         cylinder{<0,0,0><0,2.95,0>0.25}
         sphere{<0,0,0>0.25}
         cone{<0,2.95,0>0.25<0,3.45,0>0.6}
@@ -1595,7 +1473,7 @@ union{
  } 
 #end
 
-union{
+union {
    #local i=0;
    #while(i<pin)
       object{CON_BL_PRECISION_PIN() translate<i*2.54,0,0>}
@@ -1694,7 +1572,7 @@ CON_BL_PRECISION_GRND(13,2)
 //Makro für BNC-Buchse, gewinckelt von Felix Schad <felix_schad@gmx.de>
 ********************************************************************************************************************************************/
 #macro CON_BNC_W_GRND()
-  union{
+  union {
         union { // Korpus
                 difference {
                         box {
@@ -1861,7 +1739,7 @@ CON_BL_PRECISION_GRND(13,2)
                 texture{T_Silver_1A finish { phong 1 ambient (0.1 * global_ambient_mul)}}
         }
 
-        difference{
+        difference {
                 cylinder { // innerer Anschluss A
                         <0,0,0>,<0,0,1>,3.8
                         translate<7.25,6.25,29>
@@ -1951,7 +1829,7 @@ CON_BNC_W_GRND()
                                         
 //Metalloese in Frontplatte fuer den Buegel        
 #macro OESE(ho,vo)
-  difference{
+  difference {
         cylinder{<ho,vo-1.5,-1><ho,vo+1.5,-1>1.8 texture{col_silver} }
         cylinder{<ho,vo-1.6,-1><ho,vo+1.6,-1>1.2 texture{col_silver} }       
         texture{T_Chrome_5B} 
@@ -1995,7 +1873,7 @@ union
 
         #if (female)
         // gefuellt mit blauer plastik
-           difference{
+           difference {
               DSHELL(ps, vc)               
               box{<po-2.5, vc-vs/2, -2> <po+ps+2.5, vc+vs/2, -9.2>pigment{centcolor} }   //mit einem 5 mm breitem schacht in der Mitte, 5mm breiter als pinspacing     
               // loecher ueber/unter den Pins 
@@ -2132,7 +2010,7 @@ CON_CENTRONICS_GRND(50, true)
 // CF card+ holder
 ********************************************************************************************************************************************/
 #macro CON_CF_AND_CARD_GRND(value)
-union{
+union {
       union {
          box{<0,0,0><43,3.5,36.4> pigment{Gray10}} // Card
          box{<0,-0.6,0><43,3.5,0.7> pigment{Gray10}} // Card
@@ -2330,9 +2208,9 @@ CON_DCPOWERCONNECTOR_GRND()
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
 #macro CON_DC_JACK_HEBO_13_GRND()
-union{ 
+union { 
  //Stift 
- union{
+ union {
        cylinder{<0, 4.5, 0><5.5, 4.5, 0> 0.65}
        cylinder{<0, 4.5, 0><0.2, 4.5, 0> 0.9} 
        sphere {<5.5, 4.5, 0> 0.65}
@@ -2340,8 +2218,8 @@ union{
        translate<-0.7, 0, 0>
  } 
  //Gehäuse
- difference{
-        union{
+ difference {
+        union {
         box{<-5.75,0,-2.5><5.75,4.5,2.5>}
         cylinder{<-5.75, 4.5, 0><5.75, 4.5, 0> 2.5}
   }
@@ -2349,7 +2227,7 @@ union{
   box{<-0.75,2.5,-10><10, 20, 10>}
  } 
  //PIN
- union{
+ union {
        box{<0,0,0.9><3.6-0.9, 0.3,-0.9>}
        cylinder{<3.6-0.9, 0,0><3.6-0.9, 0.3,0> 0.9}
        rotate<0,0,-90>
@@ -2357,7 +2235,7 @@ union{
        texture{col_silver}
  }
  //PIN
- union{
+ union {
        box{<0,0,0.9><3.6-0.9, 0.3,-0.9>}
        cylinder{<3.6-0.9, 0,0><3.6-0.9, 0.3,0> 0.9}
        rotate<0,0,-90>
@@ -2365,14 +2243,14 @@ union{
        texture{col_silver}
  }
  //PIN
- union{
+ union {
        box{<0,0,0.9><3.6-0.9, 0.3,-0.9>}
        cylinder{<3.6-0.9, 0,0><3.6-0.9, 0.3,0> 0.9}
        rotate<-90,0,-90>
        translate<-3.2,0,3.25>
        texture{col_silver}
  } 
- difference{
+ difference {
             cylinder{<0,0,0><1.8,0,0>0.75}
             cylinder{<-1,0,0><2.8,0,0>0.45} 
             box{<-10,0,-10><10,-10,10>}
@@ -2381,8 +2259,8 @@ union{
             translate<-4.1,0,2.5>
  }
  //Feder
- union{ 
-       difference{
+ union { 
+       difference {
                   cylinder{<0,0,0><2.6,0,0>0.75}
                   cylinder{<-1,0,0><3.6,0,0>0.45} 
                   box{<-10,0,-10><10,-10,10>}
@@ -2395,8 +2273,8 @@ union{
        translate<2.5,3,1.3>
  }
  //Heckplatte
- difference{
-           union{
+ difference {
+           union {
                  cylinder{<0,0,0><0,0.3,0>1.5}
                  cylinder{<0,0,0><0,0.4,0>0.75}
                  box{<0,0,-1.5><2.5,0.3,1.5>}
@@ -2431,12 +2309,12 @@ CON_DC_JACK_HEBO_13_GRND()
    // VSchraenkungwinkel: Drehwinkel der Verschraenkung für beide
    //                     Arten
 
-union{
+union {
 
    #local Federdicke=0.5;
       // Hauptteil der Kontaktfeder
-   union{
-      difference{
+   union {
+      difference {
             // Basis: box
          box { <1.7,Federdicke/2,0>, <-1.7,-Federdicke/2,8.4> }
             // Ausschnitt: box 45 Grad gedreht, Einführung für Stift vom Stecker
@@ -2458,8 +2336,8 @@ union{
 
       // Endstück der Kontaktfeder
 
-   difference{
-      union{
+   difference {
+      union {
             // Ergänzung: box, Weiterführung des Stummels (ohne Überschneidung!)
          box { <0.35,Federdicke/2,0>, <-0.35,-Federdicke/2,1.15> }
             // Ergänzung: box, Körper der Öse, variable Länge
@@ -2525,8 +2403,8 @@ union{
       //             in einem Metallbecher oder zwei Metallhalbschalen
       //             einer Kupplung
 #local Gesamtlaenge=13;
-difference{
-   union{
+difference {
+   union {
       cylinder { <0,0,0>  <0,0,Gesamtlaenge> 5.85 }
 
       #switch(Einsatzart)
@@ -2540,7 +2418,7 @@ difference{
                // "dünner" Stützwulst
             cylinder { <0,0,Gesamtlaenge-4>  <0,0,Gesamtlaenge> 6 }
 
-            difference{
+            difference {
                   // "dickerer" Haltewulst
                cylinder { <0,0,Gesamtlaenge-3>  <0,0,Gesamtlaenge-1> 6.55 }
 
@@ -2590,7 +2468,7 @@ difference{
 #macro CON_DIN_MA_Inlet_Millbody()
 #local Gesamtlaenge=13;
 #local Stanzlochbreite=3.9;
-union{
+union {
       // Basisbox bis 3mm vor Grund
    box { <Stanzlochbreite/2,0.4,-0.001>, <-Stanzlochbreite/2,-0.4,Gesamtlaenge-3> }
       // Röhre für Pin vom Stecker
@@ -2627,7 +2505,7 @@ union{
 #else
    intersection{
 #end
-      difference{
+      difference {
          torus{Major, Minor}
          torus{Major, Minor-Dicke}
 
@@ -2650,11 +2528,11 @@ union{
 
 #macro CON_DIN_MA_Outlet_BecherBase()
 #local Gesamtlaenge=13;
-union{
+union {
       // Hauptteil des Metallbechers, aufgebaut aus
       // ausgeschnittenen Ringtori und Zylinderringen
-   difference{
-      union{
+   difference {
+      union {
          cylinder { <0,1,0>  <0,Gesamtlaenge-2,0> 7.4 }
          cylinder { <0,Gesamtlaenge-1.4,0>  <0,Gesamtlaenge-1,0> 6.4 }
          }
@@ -2666,7 +2544,7 @@ union{
    object{ TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(6.4, 1.0, 0.4, 2) translate<0,Gesamtlaenge-2,0> }
 
       // Winkelstück zur Befestigung der Massekontakzunge
-   union{
+   union {
          // Viertelrohr als Biegeradius des Winkelstückes
       intersection{
          cylinder { <2,0.5,-0.5>  <-2,0.5,-0.5> 0.5 }
@@ -2684,8 +2562,8 @@ union{
          // und der Massekontaktzunge in einer difference/union-Sektion,
          // was ein paar Anweisungen spart, die ganze Beschreibung
          // allerdings etwas unübersichtlich macht.
-      difference{
-         union{
+      difference {
+         union {
                // Haltezunge für Niet
             box{<2,3.5,-0.4>, <-2,0.5,0>}
 
@@ -2799,8 +2677,8 @@ intersection{
 #macro CON_DIN_MA_Outlet_FrontFlansch()
    // Dazu kommt die Frontplatte mit den beiden Flansch"ohren", welche
    // wiederum die beiden Befestigungslöcher enthalten
-difference{
-   union{
+difference {
+   union {
          // Der vorne überstehende Ring
       cylinder { <0,0,0>  <0,0.4,0> 8.5 }
 
@@ -2808,8 +2686,8 @@ difference{
          // den geraden Randstücken kann "schlierenfrei" nur
          // durch eine weitere explizite difference/union-
          // Beschreibung durchgeführt werden
-      difference{
-         union{
+      difference {
+         union {
                // Der vorne überstehende Torus am Ring
             object{TIEFZIEH_ABRUNDUNG_VIERTELTORTORUS(8.5, 1.0, 0.4, 3) translate<0,1,0> }
          
@@ -2862,7 +2740,7 @@ difference{
    // Flansch: on/off
 
 #if(Flansch=on)
-   union{
+   union {
          // Hauptbecher
       CON_DIN_MA_Outlet_BecherBase()
          // Frontflansch
@@ -2984,7 +2862,7 @@ object{
    // MidPinAct: Gesondert definierbare Bearbeitungsart für das Mittelloch
    //
    // ACHTUNG: Der äußere aufrufende Kontext sollte diesem Makro eine
-   //          klammernde Struktur umstellen, wie z.B.:  union{}
+   //          klammernde Struktur umstellen, wie z.B.:  union {}
    //
 
    #switch(MA_Typ)
@@ -3134,7 +3012,7 @@ object{
    //            2 - Kupplung (nicht fertiggestellt, Metallabschirmung
    //                [Becher] und Ummantelung fehlen noch komplett)
 
-union{
+union {
    #local AllParts=3;
    #switch(MA_Subtyp)
       #case(1)
@@ -3175,9 +3053,9 @@ union{
 
       // noch eine extra union, damit nur ein Objekt
       // "translationiert" (verschoben) werden braucht
-   union{
+   union {
       #if(AllParts>=2)
-         difference{
+         difference {
             CON_DIN_MA_Inlet_Basebody(Wulst)
                // Ausfräsungen für die Kontaktfedern: 0,0
             CON_DIN_MA_InletPinComposition(MA_Typ, 0, 0)
@@ -3251,7 +3129,7 @@ CON_DIN_MA_XX_GRND(82, 1)
 // Parameter: Stärke über/unter PCB, Biegeradius (Mitte), Höhe über/unter PCB-Oberkante, Länge nach vorn (-Z), Farbe
 // J.Bartels@arcor.de, www.mec-krefeld.de
 #macro PIN41617 (DO,DU,R,HO,HU,L,col)
-union{
+union {
    intersection{ 
       torus{ R, DO/2 rotate<0,0,90> translate<0,HO-R,-R> }
       box{ <DO/2,HO-R,DO/2><-DO/2,HO+DO/2,-R> }
@@ -3267,7 +3145,7 @@ union{
 // Grundmakro: Reihe von Stiften eines Steckverbinders nach DIN41617.
 // J.Bartels@arcor.de, www.mec-krefeld.de
 #macro PIN41617_ROW (Pins)
-union{
+union {
    #local i=0;
    #while(i<Pins) 
       object{PIN41617 (1,0.8,1.2,1.6,3.3,13.9,col_gold) translate<i*2.5,0,-1.25>} 
@@ -3285,11 +3163,11 @@ union{
 #local A=(Pins-1)*2.5+15.6;
 #local D=(Pins-1)*2.5+10;
 #local E=Pins*2.5;
-union{
+union {
  PIN41617_ROW( Pins )
  box{ <-E/2,0,-4.5/2><E/2,8.5,4.5/2> }
  //Befestigungs-Ohr
-difference{ 
+difference { 
  box{ <A/2,0,-4.5/2><E/2,4.2,8.1-4.5/2> }
  intersection{
    cylinder{<D/2,-1,4.5/2><D/2,1+4.2,4.5/2>,1.6}
@@ -3298,7 +3176,7 @@ difference{
  box{ <-(A-E-5)/2,-1,0><0,1+4.2,8.1-4.5+10> rotate<0,20,0> translate<E/2,0,4.5/2> }
 }
  //Befestigungs-Ohr
-difference{ 
+difference { 
  box{ <-A/2,0,-4.5/2><-E/2,4.2,8.1-4.5/2> }
  intersection{
    cylinder{<-D/2,-1,4.5/2><-D/2,1+4.2,4.5/2>,1.6}
@@ -3345,10 +3223,10 @@ CON_DIS_DIN41617_GRND(31)
 #break
 #end
 
-union{
+union {
     
-    difference{
-        merge{
+    difference {
+        merge {
             //body
          box{<-6.35*n/2-.5,-3.8,0><6.35*n/2+.5,3.8,14>}
 
@@ -3362,7 +3240,7 @@ union{
             #local i=0; #while (i<n+1) box{<-(6.35*n/2)+(i*6.35)-.5,-3.8,0><-(6.35*n/2)+(i*6.35)+.5,-4.6,2> } #local i=i+1; #end
          }
          
-         merge{
+         merge {
             //Cylindrical holes
             #local i=0; #while (i<n) cylinder{<-(6.35/2*(n-1))+(i*6.35),0,1><-(6.35/2*(n-1))+(i*6.35),0,15> 3 } #local i=i+1; #end
             //Half square holes in the first hole
@@ -3393,8 +3271,8 @@ union{
         #end
     }
     #local i=0; #while (i<n)
-        difference{
-            union{
+        difference {
+            union {
                 //Pin
                 cylinder{<-(6.35/2*(n-1))+(i*6.35),0,-2><-(6.35/2*(n-1))+(i*6.35),0,4> 0.85  }
                 cylinder{<-(6.35/2*(n-1))+(i*6.35),0,4><-(6.35/2*(n-1))+(i*6.35),0,10.5> 1.05  }
@@ -3701,7 +3579,7 @@ union
             {
             #local i = 0;
             #while(i<j)
-                        difference{
+                        difference {
             cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l> pin_diao/2}
             cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l+1> pin_diai/2}
 
@@ -3710,7 +3588,7 @@ union
             texture{pin_col}
             }
 
-                  difference{
+                  difference {
 
             cylinder{<po+hs*(i+0.5),vc-vs/2,0.5><po+hs*(i+0.5),vc-vs/2,pin_l> pin_diao/2}
 
@@ -3727,7 +3605,7 @@ union
             #end
 
 
-                                   difference{
+                                   difference {
 
                cylinder{<po+hs*i,vc+vs/2,0.5><po+hs*i,vc+vs/2,pin_l> pin_diao/2}
 
@@ -4156,14 +4034,14 @@ CON_EUROCARD_GRND(64,2)
 //Rev. 1.1 du 09/01/06
 ********************************************************************************************************************************************/
 #macro CON_FASTON_GRND ()
-union{
-    difference{
-        union{
+union {
+    difference {
+        union {
             box{<-0.4,0,-3.175><+0.4,+15.8,+3.175>  rotate<0,0,0> translate<0,0,0> } 
             box{<-0.4,0,-3.75><+0.4,+6.8,+3.75>     rotate<0,0,0> translate<0,0,0> }
         }
         
-        union{  
+        union {  
             box{<-1,-1,-3.2><+1,+1,+3.2>    rotate<0,0,45> translate<-1.5,16,0> }
             box{<-1,-1,-3.2><+1,+1,+3.2>    rotate<0,0,45> translate<+1.5,16,0> }
             box{<-1,-1,-1><+1,+1,+1>        rotate<45,0,0> translate<0,16,3.8> }
@@ -4313,14 +4191,14 @@ CON_FPCON65_GRND()
 #macro CON_LMI_L115_GRND(n)
 // Macro for pin
 #local CosseL115 =
-union{
-    difference{
-        union{
+union {
+    difference {
+        union {
             box{<-0.25,-4.5,-1.4><+0.25,+15,+1.4>  } 
             box{<-0.25,-4.5,-1.8><+0.25,+6.8,+1.4> }
         }
         
-        union{  
+        union {  
             //connexion side pin bisel
             //length bisel
             box{<-1,-1,-3><+1,+1,+3>        rotate<0,0,45> translate<-1.1,15.4,0> }
@@ -4343,7 +4221,7 @@ union{
 }
 
 #local PAS = 5.08;
-union{
+union {
     //terminals
     #local i=0; 
     #while (i<n)
@@ -4351,9 +4229,9 @@ union{
         object{CosseL115 translate<0,0,-(PAS/2*(n-1))+(i*PAS)>}
     #local i=i+1; #end
     //body
-    difference{
-        union{
-            difference{
+    difference {
+        union {
+            difference {
                 box{<2.75,5,-PAS*n/2><-2.75,6,+PAS*n/2> }
                 box{<1.6,5.6,-PAS*n/2-0.01><-2.0,6.01,+PAS*n/2+0.01> }
             }
@@ -4394,18 +4272,18 @@ CON_LMI_L115_GRND(20)
 ********************************************************************************************************************************************/
 #macro CON_LSP_GRND(s)
 union {
-   difference{
+   difference {
       box { <-0.8,0,-0.2>,<0.8,5,0.2> texture{col_silver} translate<0,0,0>}
       box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,-3> translate<1.1,0,0>}
       box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,3> translate<-1.1,0,0>}
       translate<0,-5.0,0>
    }
-   difference{
+   difference {
       box { <-1.5,0,-0.2>,<1.5,3,0.2> texture{col_silver} translate<0,0,0>}
       box { <-0.5,1.5,-0.3>,<0.5,3.1,0.3> texture{col_silver} translate<0,0,0>}
       cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,1.5,0>}
    }
-   difference{
+   difference {
       cylinder{<0,0,-0.2><0,0,0.2>1.5 texture{col_silver} translate<0,3,0>}
       cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,3,0>}
       box { <-1.5,0,-0.3>,<1.5,3,0.3> texture{col_silver} translate<0,0,0>}
@@ -4437,9 +4315,9 @@ CON_LSP_GRND(13)
 
 #local plastic_x=pitch*(pin-1)+3.37;
 
-union{
+union {
     difference {
-        union{
+        union {
             box{<-plastic_x/2,0.5,-plastic_z/2><plastic_x/2,2.1,plastic_z/2> } //Main box
             box{<-plastic_x/2+0.5,0.5,-plastic_z/2+0.5><plastic_x/2-0.5,4,plastic_z/2-0.5> } //Main box
         }
@@ -4469,11 +4347,11 @@ union{
         
         cylinder{<0,1,-1.4><0,3.9,-1.4> 0.15 translate<-(pin/2-0.5)*pitch+pitch*i*2,0,0>}
         cylinder{<0,1,1.4><0,3.9,1.4> 0.2 translate<-(pin/2-1.5)*pitch+pitch*i*2,0,0>}
-        difference{
+        difference {
             box{<-0.15,1,0><0.15,3.9,1.5> translate<-(pin/2-0.5)*pitch+pitch*i*2,0,0> }
             box{<-0.2,1,0.5><0.2,4,1> translate<-(pin/2-0.5)*pitch+pitch*i*2,0,0> }
         }
-        difference{
+        difference {
             box{<-0.15,1,0><0.15,3.9,-1.5> translate<-(pin/2-1.5)*pitch+pitch*i*2,0,0> }
             box{<-0.2,1,-0.5><0.2,4,-1> translate<-(pin/2-1.5)*pitch+pitch*i*2,0,0> }
         }
@@ -4533,7 +4411,7 @@ CON_MICROMATCH_FEMALE_GRND(20)
 #end
 
 union   {
-        difference{
+        difference {
                 union   {
                         // Grundkörper
                         box{<-plastic_x/2+0.5, 0 ,-plastic_z/2+0.5> <plastic_x/2-0.5, plastic_Y, plastic_z/2-0.5> }
@@ -4656,16 +4534,16 @@ CON_MICROMATCH_GRND(20,1)
 
 #local plastic_x=pitch*(pin-1)+3.37;
 
-union{
+union {
     difference {
-        union{
+        union {
             box{<-plastic_x/2,0,-plastic_z/2><plastic_x/2,3.6,plastic_z/2> } //Main box
-            difference{//left hook
+            difference {//left hook
                 box{<-0.5,-1,-0.5><0.5,1,0.5> rotate<0,0,30> translate<-plastic_x/2+0.2,2,0> }
                 box{<-1,-1,-1><1,1,1> rotate<0,0,0> translate<-plastic_x/2,3.5,0> }
                 box{<-1,-1,-1><1,1,1> rotate<0,0,0> translate<-plastic_x/2-1.5,2.5,0> }
             }
-            difference{//right hook
+            difference {//right hook
                 box{<-0.5,-1,-0.5><0.5,1,0.5> rotate<0,0,-30> translate<+plastic_x/2-0.2,2,0> }
                 box{<-1,-1,-1><1,1,1> rotate<0,0,0> translate<+plastic_x/2,3.5,0> }
                 box{<-1,-1,-1><1,1,1> rotate<0,0,0> translate<+plastic_x/2+1.5,2.5,0> }
@@ -4677,7 +4555,7 @@ union{
         texture{CON_MMTCH_PLASTIC_TEXTURE}
     }
     difference {//Détrompeur
-        union{
+        union {
             box{<-plastic_x/2,3.6,-1.16><-plastic_x/2+0.65,7.1,1.16> } //top part
             box{<-plastic_x/2,3.6,-1.16-0.3><-plastic_x/2+0.65,3.6+0.3,1.16+0.3> } //down part        
         }
@@ -4699,14 +4577,14 @@ union{
         box{<-0.25,-3.15+.25,-0.2><+0.25,1,+0.2> translate<-(plastic_x-3.37)/2+1.27+i*2.54,0,+1.27>}
         cylinder{<0,-3.15+0.25,-0.2><0,-3.15+0.25,+0.2> 0.25 translate<-(plastic_x-3.37)/2+1.27+i*2.54,0,+1.27>}
     //contacts    
-        difference{
+        difference {
             box{<-0.35,1,-0.2><+0.35,3.6-0.2,+0.2> translate<-(plastic_x-3.37)/2+i*2.54,0,-0.75> }
             box{<-0.36,-0.5,-0.2><+0.36,+0.5,+0.2> rotate<-10,0,0> translate<-(plastic_x-3.37)/2+i*2.54,3.6-0.2,-0.75+0.32> }
             box{<-0.36,-0.5,-0.2><+0.36,+0.5,+0.2> rotate<+10,0,0> translate<-(plastic_x-3.37)/2+i*2.54,3.6-0.2,-0.75-0.32> }
             box{<-0.36,-0.5,-0.2><+0.36,+0.5,+0.2> rotate<-10,90,0> translate<-(plastic_x-3.37)/2+i*2.54+0.5,3.6-0.2,-0.75> }
             box{<-0.36,-0.5,-0.2><+0.36,+0.5,+0.2> rotate<-10,-90,0> translate<-(plastic_x-3.37)/2+i*2.54-0.5,3.6-0.2,-0.75> }
         }
-        difference{
+        difference {
             box{<-0.35,1,-0.2><+0.35,3.6-0.2,+0.2> translate<-(plastic_x-3.37)/2+1.27+i*2.54,0,+0.75>}
             box{<-0.36,-0.5,-0.2><+0.36,+0.5,+0.2> rotate<-10,0,0> translate<-(plastic_x-3.37)/2+1.27+i*2.54,3.6-0.2,+0.75+0.32> }
             box{<-0.36,-0.5,-0.2><+0.36,+0.5,+0.2> rotate<+10,0,0> translate<-(plastic_x-3.37)/2+1.27+i*2.54,3.6-0.2,+0.75-0.32> }
@@ -4761,7 +4639,7 @@ CON_MICROMATCH_MALE_GRND(20)
 #local plastic_x=pitch*pin+2; // formula is a good match to the table in the datasheet
 
 union   {
-        difference{
+        difference {
                 union   {
                         box{<-plastic_x/2+0.5,0,-plastic_z/2+0.5><plastic_x/2-0.5,5.3,plastic_z/2-0.5>}
                         difference {
@@ -4910,8 +4788,8 @@ union
                 #local sb = 15.5+1;
         #end        
         //Metallhuelle, quaderfoermig mit abgerundeten Ecken und Kanten        
-        union{          
-                difference{
+        union {          
+                difference {
                         box{<-sb/2, 0, -8.5 > < sb/2, bh+1 , -8+bt+1> texture{T_Chrome_5B}}                      //Ummantelung                      
                         box{<-bb/2, 0, -8   > < bb/2, bh   , -8+bt  > texture{T_Chrome_5B}}                      //Aushoehlung
                         box{<-sb/2-0.1, bh+0.5, -8.6 > < -sb/2+0.5, bh+1.1 , -8+bt+1> texture{T_Chrome_5B}}      //obere Seitenkannten ausfraesen                  
@@ -4952,8 +4830,8 @@ union
                 #local sb = 15.5+1;
         #end           
         //Metallhuelle, quaderfoermig mit abgerundeten Ecken und Kanten       
-        union{          
-                difference{
+        union {          
+                difference {
                         box{<-sb/2+0.5, 0, -8.5 > < sb/2-0.5, bh+0.5 ,  -8  > texture{T_Chrome_5B}}                // Frontplatte                                            
                         stecker2                                                                                   // Durchbrueche
                 }                                                                                                     
@@ -4987,8 +4865,8 @@ union
                 #local sb = 15.5+1;
         #end           
         //Metallhuelle, quaderfoermig mit abgerundeten Ecken und Kanten       
-        union{          
-                difference{
+        union {          
+                difference {
                         box{<-sb/2, 0, -8.2 > < sb/2, bh+0.4 ,  -2  > texture{T_Chrome_5B}}                      //Ummantelung                      
                         box{<-bb/2, 0, -8   > < bb/2, bh   , -8+bt  > texture{T_Chrome_5B}}                      //Aushoehlung
                         box{<-sb/2-0.1, bh+0.5, -8 > < -sb/2+0.5, bh+1.1 , -8+bt+1> texture{T_Chrome_5B}}        //obere Seitenkannten ausfraesen                  
@@ -5189,7 +5067,7 @@ CON_MODULAR_GRND(4, 8*1.27, 0, 2, 1)
 //n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_53047_GRND(n)
-union{
+union {
   #local L = n * 1.25 + 1.75;
   #local l = 3.2;
   #local h = 4.2;
@@ -5209,7 +5087,7 @@ union{
      pigment{White}
    }
   #local pin =
-  union{
+  union {
     cylinder {<0, 0, -0.5> <0, -2, -0.5> 0.18}
     box{<-0.2, 0 , -1 > <0.2, 3.1, 0 > }
     cylinder {<0, 1.555, -1.> <0, 1.555, 0.> 0.2 scale < 1, 2, 1>}
@@ -5274,7 +5152,7 @@ CON_MOLEX_53047_GRND(15)
 //n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_53048_GRND(n)
-union{
+union {
   #local L = n * 1.25 + 1.75;
   #local l = 5.5;
   #local h = 3.5;
@@ -5298,7 +5176,7 @@ union{
     pigment{White}
   }
   #local pin =
-  union{
+  union {
     cylinder {<0, -2.3, -1.25> <0, 1.27, -1.25> 0.18}
     cylinder {<0, 1.52, -1> <0, 1.52, -0.75> 0.18}
     intersection {
@@ -5371,7 +5249,7 @@ CON_MOLEX_53048_GRND(15)
 // Bezugspunkt: Mitte der Pins auf PCB-Oberfläche
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_PSL_XX_G_GRND(Pins)
-union{
+union {
 object{MOLEX254(Pins)}
 object{PIN_STRAIGHT_ROW (Pins,2.54,0.635,11,3,col_silver)}}
 #end
@@ -5410,7 +5288,7 @@ CON_MOLEX_PSL_XX_G_GRND(10)
 // Bezugspunkt: Mitte der Pins auf PCB-Oberfläche
 ********************************************************************************************************************************************/
 #macro CON_MOLEX_PSL_XX_W_GRND(Pins)
-union{
+union {
 object{MOLEX254(Pins) rotate<-90,0,0> translate<0,2.5,-1.8>}
 object{PIN_BENDED_ROW (Pins,2.54,0.635,0.8,2.5,3,12.5,col_silver) translate<0,0,0>}}
 #end
@@ -5449,7 +5327,7 @@ CON_MOLEX_PSL_XX_W_GRND(10)
 // PC power connector male
 ********************************************************************************************************************************************/
 #macro CON_PCPWR514M_GRND()
-union{
+union {
         difference {
         box{<0,0,0><23.2,10,8.4> translate <-11.6,0.5,-4.20> }
         box{<0,0,0><21,8,6.4> translate <-10.5,2.6,-3.20> }
@@ -5559,7 +5437,7 @@ CON_PH2SMD_2MM_GRND(16)
 //Grundmacro fuer Phoenix Mini-Combicon 3.81mm Klemmen Winkel (horizontal) mit Gegenstecker
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHGGHWS_GRND(j)
-union{
+union {
    #local i = 0;
    #while(i<j)
       object {CON_PHOENIX_381_PHPINW() translate<0,0,i*3.81>}
@@ -5617,7 +5495,7 @@ CON_PHOENIX_381_PHGGHWS_GRND(13)
 //Grundmacro fuer Phoenix Mini-Combicon 3.81mm Klemmen Winkel MC 1,5/xx-G-381 (horizontal)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHGGHW_GRND(j)
-union{
+union {
    #local i = 0;
    #while(i<j)
       object {CON_PHOENIX_381_PHPINW() translate<0,0,i*3.81>}
@@ -5672,7 +5550,7 @@ CON_PHOENIX_381_PHGGHW_GRND(13)
 //Grundmacro fuer Phoenix Mini-Combicon 3.81mm Klemmen MCV 1,5/xx-G-381 (vertical)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHGGH_GRND(j)
-union{
+union {
    #local i = 0;
    #while(i<j)
       object {CON_PHOENIX_381_PHPIN() translate<0,0,i*3.81>}
@@ -5729,7 +5607,7 @@ CON_PHOENIX_381_PHGGH_GRND(13)
 // MCVW 1,5/xx-ST-381 (k=0) und MCVR 1,5/xx-ST-381 (k=1)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHMCVRW_GRND(j,k)
-union{
+union {
    #local i = 0;
    #while(i<j)
       object {CON_PHOENIX_381_PHGSRW(k) translate<-i*3.81,0,0>}
@@ -5828,7 +5706,7 @@ CON_PHOENIX_381_PHMCVRW_GRND(13,1)
 //Grundmacro fuer Phoenix Mini-Combicon 3.81mm Gegenstecker MC 1,5/xx-ST-381 (horizontal)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_381_PHWS_GRND(j)
-union{
+union {
    #local i = 0;
    #while(i<j)
       object {CON_PHOENIX_381_PHGSG() translate<8,-2.9,i*3.81>}
@@ -5884,9 +5762,9 @@ CON_PHOENIX_381_PHWS_GRND(13)
 ********************************************************************************************************************************************/
 #macro CON_PHOENIX_508_GRND(n,vertical,a)
 // n = pins ; Vertical = 1 if yes ; With border a = 1 / Whithout border a = 0
-union{
-    difference{
-        union{
+union {
+    difference {
+        union {
             #local PAS = 5.08;
             //body
          box{<-PAS*n/2-a,-4.15,0><+PAS*n/2+a,4.15,12> }
@@ -5894,7 +5772,7 @@ union{
          box{<-PAS*n/2-a,+4.15,9><+PAS*n/2+a,4.15+0.5,12> }
          }
          
-         union{
+         union {
             
             #local i=0; 
             #while (i<n)
@@ -5921,7 +5799,7 @@ union{
     }
     #if(vertical)
         #local i=0; #while (i<n)
-            union{
+            union {
                 //pin body
                 box{<-(PAS/2*(n-1))+(i*PAS)-0.4,-0.4,-4><-(PAS/2*(n-1))+(i*PAS)+0.4,+0.4,9> }
                 //pin top
@@ -5936,7 +5814,7 @@ union{
     #else
         #local i=0; #while (i<n)
             //inside part pin
-            union{
+            union {
                 //pin body
                 box{<-(PAS/2*(n-1))+(i*PAS)-0.4,-0.4,2><-(PAS/2*(n-1))+(i*PAS)+0.4,+0.4,9> texture { pigment{P_Silver2} }}
                 //pin top
@@ -6243,14 +6121,14 @@ CON_PHOENIX_508_GRND(24,0,1)
 ********************************************************************************************************************************************/
 #macro CON_PHONE_JACK_GRND(value)
 
-union{
+union {
         #if(pin_short=off)
                 #local pp=7.0;
         #else
                 #local pp=pcb_height+pin_length;
         #end
         
-        difference{
+        difference {
                 box{<-7.1882,-0.1,5.9182><7.1882,5,-5.9182> pigment{Black}}
                 box{<-6.4882,-0.2,5.2182><6.4882,6,-5.2182> pigment{Black}}}
 
@@ -6259,11 +6137,11 @@ union{
            
 
         
-        difference{
+        difference {
         cylinder { < -7.1882 , 3 , 0 >,< -10.7442, 3 , 0 >,2.6  pigment{White}}
         cylinder { < -7.1882 , 3 , 0 >,< -11.7442, 3 , 0 >,1.75  pigment{White}}
           }
-        union{
+        union {
                 lathe { linear_spline 13,<2.6, -10.7442>,<2.9, -10.4442>, <2.6, -10.1442>,<2.9, -9.8442>,<2.6, -9.5442>,
                 <2.9, -9.2442>,<2.6, -8.9442>,<2.9, -8.6442>,<2.6, -8.3442>,<2.9, -8.0442>,
                 <2.6, -7.7442>,<2.9, -7.4442>,<2.6, -7.1442>pigment {Silver} } 
@@ -6272,7 +6150,7 @@ union{
              }
 
         
-        union{
+        union {
                 cylinder{<2.8494,2,4.8996>,<2.8494,-pp,4.8996>,0.25 }
                 cylinder{<-4.9979,2,-0.2035>,<-4.9979,-pp,-0.2035>,0.25 }
                 cylinder{<1.4575,2,2.3985>,<1.4575,-pp,2.3985>,0.25 }  
@@ -6280,7 +6158,7 @@ union{
                 cylinder{<5.7543,2,-4.3787>,<5.7543,-pp,-4.3787>,0.25 }
                 pigment{Silver}
         }
-        union{
+        union {
                box{<3.5543,1,-1.3><5.85,5,-1.6> pigment{Silver}}
                box{<5.5543,1,-4.3787><5.85,5,-0.4787> pigment{Silver}} 
                prism{linear_sweep 0,5,11,            // segment "A"
@@ -6312,7 +6190,7 @@ CON_PHONE_JACK_GRND(value)
 //b = Pins
 ********************************************************************************************************************************************/
 #macro CON_PHW_GRND(a,b)
-union{
+union {
 #if(a=1)
 #local i=0;
         #while(i<b)
@@ -6520,7 +6398,7 @@ CON_PHW_GRND(2,30)
 ********************************************************************************************************************************************/
 #macro CON_PH_GRND(a,b,j,pitch)
 #if((a>1)|(b>1))
-union{
+union {
 #else
 object{
 #end
@@ -7232,7 +7110,7 @@ CON_RJ45_GRND()
 
 #macro SD_CARD_AUSSCHNITT(l,b,h)
 #local r3 = 0.3;        // Radius
-difference{
+difference {
         prism{ -1, h+1, 9
                 < 0,-l/2>, < b-r3,-l/2>, < b,-l/2-r3>, < b+1,-l/2-r3>, < b+1, l/2+r3>, < b, l/2+r3>, < b-r3, l/2>, < 0, l/2>, < 0,-l/2>
         }
@@ -7241,10 +7119,10 @@ difference{
 }
 #end 
 
-union{
+union {
         // Kunststoffkörper
-        difference{
-                merge{
+        difference {
+                merge {
                         prism{ 0, h1 11
                                 < -b/2+r1, 0>, < b/2-r1, 0>, < b/2, r1>, < b/2, l-r1>, < b/2-r1, l>,
                                 < -b/2+s, l>, <-b/2+s-k1, l-r1+k1>, < -b/2+r1-k1, l-s+k1>, < -b/2, l-s>,
@@ -7273,7 +7151,7 @@ union{
                 object{ SD_CARD_AUSSCHNITT( 1.5, (b-b1)/2,h) rotate< 0, 180, 0> translate<-b1/2, 0, 21.25> }
         
                 // Schlitz Labelseite
-                merge{
+                merge {
                         box{ < -labs_l/2+labs_b/2, 0, -labs_b/2> < labs_l/2-labs_b/2, -h, labs_b/2> }
                         cylinder{ < -labs_l/2+labs_b/2, 0, 0> < -labs_l/2+labs_b/2, -h, 0> labs_b/2 } 
                         cylinder{ <  labs_l/2-labs_b/2, 0, 0> <  labs_l/2-labs_b/2, -h, 0> labs_b/2 } 
@@ -7281,7 +7159,7 @@ union{
                 }
 
                 // Labelfläche
-                merge{
+                merge {
                         prism{ 0, -h, 9
                                 < -labl_l/2+labl_r, 0>, < labl_l/2-labl_r, 0>, < labl_l/2, labl_r>, < labl_l/2, labl_b-labl_r>,
                                 < labl_l/2-labl_r, labl_b>, < -labl_l/2+labl_r, labl_b>, < -labl_l/2, labl_b-labl_r>, < -labl_l/2, labl_r>,
@@ -7312,7 +7190,7 @@ union{
         }
 
         // Pads
-        union{
+        union {
                 #local i = 0;
                 #local pin_x = -10.3; // Position Pin 1
                 box{ < pin_x, pin_h+0.001, l-7.8> < pin_x+pin_b-0.05, pin_h+0.035, l-3.3>}
@@ -7368,7 +7246,7 @@ CON_SD_CARD_GRND(rgb< 0.1, 0.1, 0.1>)
         #local r2 = s*rf;
 
                 #macro SMD_PIN_AUSSCHNITT()
-                merge{
+                merge {
                         cylinder{ < r2, r2, -ua> < r2, r2, b+ua> r2 }
                         prism{ -ua, b+ua, 6 < r2, 0>, < r1+r2+ua, 0>, < r1+r2+ua, -r1-r2-ua>, < 0, -r1-r2-ua>, < 0, -r2>, < r2, 0> 
                                 rotate< 90, 0, 0> 
@@ -7376,9 +7254,9 @@ CON_SD_CARD_GRND(rgb< 0.1, 0.1, 0.1>)
                 }
                 #end
 
-        union{
-                difference{
-                        merge{
+        union {
+                difference {
+                        merge {
                                 box{ < 0, 0, 0> < l1-r1, s, b>}
                                 cylinder{ < l1-r1, r1, 0> < l1-r1, r1, b> r1}
                                 box{ < l1-s, r1, 0> < l1, h-r1, b>}
@@ -7394,10 +7272,10 @@ CON_SD_CARD_GRND(rgb< 0.1, 0.1, 0.1>)
         #end
 
 
-union{
+union {
         // Metallkörper
 //        box{ <-4.98, 0, 0> < 23.02, h, 29.0> }
-        difference{
+        difference {
                 prism{ 0, h, 25
                         <-4.98, 1.0>, <-3.98, 1.0>, <-3.98, 0>, <-1.5, 0>, <-1.5, 0.5>, < 5.5, 0.5>, < 5.5, 2.0>, < 7.5, 2.0>,
                         < 7.5, 0.5>, < 10.0, 0.5>, < 10.0, 2.0>, < 12.0, 2.0>, < 12.0, 0.5>, < 15.0, 0.5>, < 15.0, 2.0>,
@@ -7418,8 +7296,8 @@ union{
         }
         
         // Kunststoffkörper
-        difference{
-                merge{
+        difference {
+                merge {
                         prism{ 0, h-bl_d-ua, 9
                                 <-4.98+bl_d+ua, 0>, < 23.02-bl_d-ua, 0>, < 23.02-bl_d-ua, 29.0>, < 20.72, 29.0>, < 20.72, 25.2>, <-1.78, 25.2>, <-1.78, 29.0>,
                                 <-4.98+bl_d+ua, 29.0>, <-4.98+bl_d+ua, 0>
@@ -7433,7 +7311,7 @@ union{
                         < 1.38, 2.0>, < 21.38, 2.0>, < 21.38, 34.0>, <-2.62, 34.0>, <-2.62, 6.0>, < 1.38, 2.0>
                 }
                 // Ausschnitt im Boden
-                merge{
+                merge {
                         #local r = 0.5;
                         prism{ -ua, h+ua, 9
                                 < 0.08, 10.5>, < 18.18, 10.5>, < 18.68, 11.0>, < 18.68, 20.2>, < 18.18, 20.7>, < 0.08, 20.7>, <-0.42, 20.2>,
@@ -7533,7 +7411,7 @@ union
   // the base piece
   union
   {
-    difference{
+    difference {
       cylinder{<0,0,2.79> <0,0,4.25> 4.10 }
       cylinder{<0,0,2.7> <0,0,3.3> 3.08 }
       box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<4.6,0,1.3>}
@@ -7572,7 +7450,7 @@ union
     translate<0,0,12.31>
   }
   cone{<0,0,4.24> 3.19 <0,0,4.75> 2.68 }
-  difference{
+  difference {
     cylinder{<0,0,2.79> <0,0,4.25> 4.10 }
     cylinder{<0,0,2.7> <0,0,3.3> 3.08 }
     box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<4.6,0,1.3>}
@@ -7601,17 +7479,17 @@ CON_SMA_JV_GRND()
 //n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_SMD_AMP_147323_GRND(n)
-union{
+union {
 
    #local pin =
-   union{
+   union {
       object{TOOLS_RECT_BOGEN(0.5,90,0.64,0.64,2.5,1.5) rotate<0,90,0> translate<0,0.32,0>}
       object{TOOLS_RECT_BOGEN(0.5,90,0.64,0.64,10,1.5) rotate<0,90,0> rotate<180,0,0> translate<0,3.32,0>}
    
    }
 
    //Pins
-   union{
+   union {
       #local i = 0;
       #while(i<n)
          object{pin translate<-(n-1)*2.54/2+i*2.54,0,0>}
@@ -7625,9 +7503,9 @@ union{
    }
 
    //Plastikkoerper
-   union{
-      difference{
-         union{
+   union {
+      difference {
+         union {
             object{Round_Box_Union(<(n+3)*2.54/2-0.8,0.2,0>,<-(n+3)*2.54/2+0.8,5.3,13.6>,0.1)}
             object{Round_Box_Union(<-1.27*2-0.5,5,10.6>,<1.27*2+0.5,6.9,13.6>,0.1)}
             
@@ -7683,17 +7561,17 @@ CON_SMD_AMP_147323_GRND(10)
 //n      Number of Pins
 ********************************************************************************************************************************************/
 #macro CON_SMD_MOLEX_53261_GRND(n)
-union{
+union {
 
    #local pin =
-   union{
+   union {
       box{<-0.18,-0.35,0><0.18,0.35,3.6> translate<0,1.375,0>}
       box{<-0.18,0.8,0><0.18,1.375,-0.3> }
       box{<-0.18,0.0,-0.3><0.18,1.375,-1.0> }
    }
 
    //Pins
-   union{
+   union {
       #local i = 0;
       #while(i<n)
          object{pin translate<-(n-1)*1.25/2+i*1.25,0,0>}
@@ -7706,8 +7584,8 @@ union{
    }
 
    //Plastikkoerper
-   union{
-      difference{
+   union {
+      difference {
          box{<-(4.25+(n-2)*1.25)/2,0,0.01><(4.25+(n-2)*1.25)/2,3.4,4.2>}
          box{<-(3.05+(n-2)*1.25)/2,0.6,0.8><(3.05+(n-2)*1.25)/2,3.0,4.3>}
          box{<-(4.3+(n-2)*1.25)/2,2.99,3.2><(4.3+(n-2)*1.25)/2,3.41,4.3>}
@@ -7777,9 +7655,9 @@ CON_SMD_MOLEX_53261_GRND(15)
 // Small stereo 3.5mm
 ********************************************************************************************************************************************/
 #macro CON_STEREO_35MM_GRND()
-union{
+union {
 difference {
-union{
+union {
   box{<0,0,0><7,5,12> translate <-3.5,1,2>}
   box{<0,0,0><5,1,10> translate <-2.5,1,2>}
   cylinder {<0,0,0><0,0,2> 3 translate <0,3,0>}
@@ -7793,7 +7671,7 @@ union{
  cylinder {<0,0,0><0,1,0> 0.5 translate <0,0,4.5>}
  cylinder {<0,0,0><0,1,0> 0.5 translate <0,0,11.5>}
 
-union{
+union {
   // Legs front
   box{<0,0,0><0.3,8.5,1.1> translate <-3.65,-2.5,4>}
   box{<0,0,0><0.3,8.5,1.1> translate <3.35,-2.5,4>}
@@ -7835,80 +7713,80 @@ CON_STEREO_35MM_GRND()
 //Designed by hebel23 <hebel(replace with at)hebel23.de> 
 ********************************************************************************************************************************************/
 #macro CON_USB_A_001_GRND()
-union{
+union {
         /* Blechgehäuse  */               
-        difference{
+        difference {
                 box { <-7,2,0>,<7,8,14>} // Außenhülle
                 box { <-6.5, 2.5, -1>, <6.5, 7.5, 14> } // Aussparung in der Mitte
                 box { <-6.5, 0, 12>, <6.5, 7.5, 15> }  // Aussparung hinten
-                difference{                                      // Feder links oben                                      
+                difference {                                      // Feder links oben                                      
                            cone {<-3,8,8> , 1.5 , <-3,8,1> , 1.0}
                            cone {<-3,8,8> , 1 , <-3,8,2> , 0.5}
                           }
-                difference{                                      // Feder rechts oben                                      
+                difference {                                      // Feder rechts oben                                      
                            cone {<3,8,8> , 1.5 , <3,8,1> , 1.0}
                            cone {<3,8,8> , 1 , <3,8,2> , 0.5}
                           }
-                difference{                                      // Feder links unten                                     
+                difference {                                      // Feder links unten                                     
                            cone {<-3,2,8> , 1.5 , <-3,2,1> , 1.0}
                            cone {<-3,2,8> , 1 , <-3,2,2> , 0.5}
                           }
-                difference{                                      // Feder rechts unten                                      
+                difference {                                      // Feder rechts unten                                      
                            cone {<3,2,8> , 1.5 , <3,2,1> , 1.0}
                            cone {<3,2,8> , 1 , <3,2,2> , 0.5}
                           }
-                difference{                                      // Feder links                                      
+                difference {                                      // Feder links                                      
                            cone {<-7,5,8> , 1.5 , <-7,5,1> , 1.0}
                            cone {<-7,5,8> , 1 , <-7,5,2> , 0.5}
                           }
-                difference{                                      // Feder rechts                                      
+                difference {                                      // Feder rechts                                      
                            cone {<7,5,8> , 1.5 , <7,5,1> , 1.0}
                            cone {<7,5,8> , 1 , <7,5,2> , 0.5}
                           }
                 texture{col_silver}
                 } 
-        union{
+        union {
                 box { <-7, -2, 9.5>, <-6.5, 3, 11> }            // linke Lötlasche
                 box { <7, -2, 9.5>, <6.5, 3, 11> }              // rechte Lötasche
                 texture{col_silver}
                }
-        union{       
-                union{TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,0>translate<6.75,5,-0.5>}
-                union{TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,270,0>translate<-6.75,5,-0.5>}
-                union{TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,90>translate<-3.5,7.75,-0.5>}
-                union{TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,90>translate<3.5,7.75,-0.5>}
-                union{TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,270>translate<-3.5,2.25,-0.5>}
-                union{TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,270>translate<3.5,2.25,-0.5>}
+        union {       
+                union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,0>translate<6.75,5,-0.5>}
+                union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,270,0>translate<-6.75,5,-0.5>}
+                union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,90>translate<-3.5,7.75,-0.5>}
+                union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,90>translate<3.5,7.75,-0.5>}
+                union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,270>translate<-3.5,2.25,-0.5>}
+                union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,270>translate<3.5,2.25,-0.5>}
                 texture{col_silver}
                }
         /* weißer Kontaktträger */
-        difference{
+        difference {
                 box { <-5,4,1>,<5,6,12>} // Quader in der Mitte
-                union{
+                union {
                       box{<-6,5.3,0>,<6,7,5>}
                       rotate <-10, 0, 0>        // Abflachung oben
                       }
-                union{
+                union {
                       box{<-6,4.3,0>,<6,3.5,5>}
                       rotate <10, 0, 0>        // Abflachung unten
                      }
                  texture{pigment{color White}}
                 }  
         /* Kontakte */
-        difference{    
-                  union{
+        difference {    
+                  union {
                         box { <-3.8,3.5,3>,<-3,4,8>} // Kontakt 1
                         box { <-1.8,3.5,3>,<-0.8,4,8>} // Kontakt 2
                         box { <1.8,3.5,3>,<0.8,4,8>} // Kontakt 3
                         box { <3.8,3.5,3>,<3,4,8>} // Kontakt 4
                         texture{col_gold}
                         }   
-                  union{
+                  union {
                         box{<-4,4,1>,<4,3.5,5>}
                         rotate <5, 0, 0> // Abflachung der Kontakte
                         }
                 }
-        union{
+        union {
                 box { <-3.8,-2,12.5>,<-3.2,5,13>} // Kontakt 1 hinten
                 box { <-1.3,-2,12.5>,<-0.7,5,13>} // Kontakt 2 hinten
                 box { <0.7,-2,12.5>,<1.3,5,13>} // Kontakt 3 hinten
@@ -7916,20 +7794,20 @@ union{
                 texture{col_gold}
              }
         /* weißer Sockel */
-        union{      
-                difference{
+        union {      
+                difference {
                         box { <-6,0,2>,<6,2,12>} // Sockel links
                         box { <-1,0,1>,<1,2,12>} // Sockel rechts
-                        union{
+                        union {
                                 box{<1.5,0,0>,<7,2,12>}
                                 rotate <-10, 0, 0>        // Abflachung links
                                 }
-                         union{
+                         union {
                                 box{<-1.5,0,0>,<-7,2,12>}
                                 rotate <-10, 0, 0>        // Abflachung links
                                 }
                                }                
-                        difference{
+                        difference {
                         box { <-6.5, 0.5, 12>, <6.5, 7.5, 14> } // Sockel hinten
                         box { <-6, 2.5, 12.5>, <6, 8, 15> }  // Aussparung für Kontakte
                         box { <-3.8,-2,12>,<-3.2,5,15> }  // Aussparung für Kontakte
@@ -7958,11 +7836,11 @@ CON_USB_A_001_GRND()
 ********************************************************************************************************************************************/
 #macro CON_USB_A_002_GRND()
 #local tex_usb_metal = texture { T_Chrome_5B } ;
-union{                          
+union {                          
         #local a = -9;
         /* Blechgehaeuse  0.3mm dickes Blech*/               
-        difference{                                                                   
-                union{
+        difference {                                                                   
+                union {
                         box{<-5.7, 4.2, 1><+5.7, 4.5, a-8.65>}            //oben
                         box{<-5.7, 0, 1><-0.1, 0.3, a-8.65>}              //unten links
                         box{< 0.1, 0, 1><+5.7, 0.3, a-8.65>}              //unten rechts
@@ -7980,7 +7858,7 @@ union{
                 texture{ T_Chrome_5B}
                 }             
 
-         union{
+         union {
                 box { <-5.75, -2, -0.75>, <-6.25, 3, 0.75> }            // linke Loetlasche
                 box { < 5.75, -2, -0.75>, < 6.25, 3, 0.75> }            // rechte Loetasche
                 texture{col_silver}
@@ -7992,14 +7870,14 @@ union{
      
 
         // Kontakte 
-       union{
+       union {
                 box { <-3.8, 2, a>,<-3  , 2.4, a-7.41>} // Kontakt 1
                 box { <-1.8, 2, a>,<-0.8, 2.4, a-6.41>} // Kontakt 2
                 box { < 1.8, 2, a>,< 0.8, 2.4, a-6.41>} // Kontakt 3
                 box { < 3.8, 2, a>,< 3,   2.4, a-7.41>} // Kontakt 4
                 texture{col_gold}
         }   
-        union{
+        union {
       box { <-3.8, 2, 2>,<-3.2, 2.4, a-7.41>} // Kontakt 1
       box { <-1.3, 2, 2>,<-0.7, 2.4, a-6.41>} // Kontakt 2
       box { < 0.7, 2, 2>,< 1.3, 2.4, a-6.41>} // Kontakt 3
@@ -8028,7 +7906,7 @@ CON_USB_A_002_GRND()
 union {
 
 #macro SHELL_PIN_USB_B()
-   merge{
+   merge {
       difference {
          box { <-0.2,-3.5,-1.15> <0.2,0.5,1.15>}
          box { <-0.21,-4,-1.15> <0.21,1,1.15> translate <0,0,2.3> rotate<6.5,0,0>}
@@ -8111,39 +7989,39 @@ CON_USB_B_001_GRND()
 //24.10.2004
 ********************************************************************************************************************************************/
 #macro CON_USB_B_002_GRND()
-union{
-    union{      
+union {
+    union {      
      // Blechgehäuse                    
-    difference{      
-    union{      
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)translate<-3.355,0.15,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)rotate<0,180,0>translate<3.355,0.15,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1)translate<-3.85,2.15,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1)rotate<0,180,0>translate<3.85,2.15,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1.3)rotate<0,0,180>translate<-3.35,2.2,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1.3)rotate<0,180,180>translate<3.35,2.2,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)rotate<0,0,180>translate<3.85,3.85,-4>}
-          union{TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)rotate<0,180,180>translate<-3.85,3.85,-4>}
+    difference {      
+    union {      
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)translate<-3.355,0.15,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)rotate<0,180,0>translate<3.355,0.15,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1)translate<-3.85,2.15,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1)rotate<0,180,0>translate<3.85,2.15,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1.3)rotate<0,0,180>translate<-3.35,2.2,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,0,1.3)rotate<0,180,180>translate<3.35,2.2,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)rotate<0,0,180>translate<3.85,3.85,-4>}
+          union {TOOLS_RECT_BOGEN(0.25,90,0.25,8,4,0)rotate<0,180,180>translate<-3.85,3.85,-4>}
          }     
           box { <-4.5, -0.1, -2.9>, <4.5,2.75,-9> }       
-             difference{                                                                           
+             difference {                                                                           
              cone {<-2.5,4,-4.5> , 0.75 , <-2.5,4,-1> , 0.5}
              cone {<-2.5,4,-4.5> , 0.5 , <-2.5,4,-2> , 0.25}
                 }
-             difference{                                                                          
+             difference {                                                                          
              cone {<2.5,4,-4.5> , 0.75 , <2.5,4,-1> , 0.5}
              cone {<2.5,4,-4.5> , 0.5 , <2.5,4,-2> , 0.25}
                 }
-             difference{                                                                           
+             difference {                                                                           
              box { <-0.75, 3, -1>, <0.75,5,-6> }      
              box { <-0.5, 3, -1>, <0.5,5,-5> }      
                 }
           }
      // Lötfahnen
-     difference{     
-     union{
-          union{TOOLS_RECT_BOGEN(0.5,90,0.25,5.5,0.5,2.5)translate<3.85,0.1,-5.75>}
-          union{TOOLS_RECT_BOGEN(0.5,90,0.25,5.5,0.5,2.5)rotate<0,180,0>translate<-3.85,0.1,-5.75>}
+     difference {     
+     union {
+          union {TOOLS_RECT_BOGEN(0.5,90,0.25,5.5,0.5,2.5)translate<3.85,0.1,-5.75>}
+          union {TOOLS_RECT_BOGEN(0.5,90,0.25,5.5,0.5,2.5)rotate<0,180,0>translate<-3.85,0.1,-5.75>}
           }
                 box { <-4.01, -0.1, -5>, <-5.1,1,-7> }     
                 box { <4.01, -0.1, -5>, <5.1,1,-7> }       
@@ -8151,7 +8029,7 @@ union{
           texture{col_silver}
          }
      // schwarzer Kontaktträger in der Mitte
-        difference{
+        difference {
                 box { <-2.5,1,-1>,<2.5,2,-7>} 
                 box { <-0.25,1.25,0>,<0.25,1.75,-8>} 
                 box { <-1.00,1.25,0>,<-0.50,1.75,-8>} 
@@ -8161,7 +8039,7 @@ union{
                 texture{pigment{color rgb <0.1, 0.1, 0.1>}}
                 }
      // schwarzer Kontaktträger Hinten
-         difference{
+         difference {
                 box { <-3.75,0,-6>,<3.75,3.75,-8.5>} 
                 box { <-2,1.9,-7>,<3,4,-8.6>} 
                 box { <-4,3,-8>,<4,4,-8.6>} 
@@ -8174,10 +8052,10 @@ union{
                 texture{pigment{color rgb <0.1, 0.1, 0.1>}}
                 }                
         // Kontakte
-                difference{
-                union{
-                      union{TOOLS_RECT_BOGEN(0.25,90,0.25,3.5,1,0.65)rotate<0,90,0>translate<0,0.125,-7.3>}
-                      union{TOOLS_RECT_BOGEN(0.25,90,0.25,3.5,0,0)rotate<180,270,0>translate<0,1.5,-7.3>}
+                difference {
+                union {
+                      union {TOOLS_RECT_BOGEN(0.25,90,0.25,3.5,1,0.65)rotate<0,90,0>translate<0,0.125,-7.3>}
+                      union {TOOLS_RECT_BOGEN(0.25,90,0.25,3.5,0,0)rotate<180,270,0>translate<0,1.5,-7.3>}
                       box { <-0.25,1.5,-1>,<0.25,1.75,-7>rotate<7,0,0>} 
                       box { <-1.00,1.5,-1>,<-0.50,1.75,-7>rotate<7,0,0>} 
                       box { <-1.25,1.5,-1>,<-1.75,1.75,-7>rotate<7,0,0>} 
@@ -8191,7 +8069,7 @@ union{
                 texture{col_silver}
                 }
         // Aufkleber
-                union{
+                union {
                 box{<-3.2,3.9,-0.5><3.2,4.05,-7>}
                 pigment{color rgbf <1, 0, 0, 0.9>}
                }
@@ -8228,16 +8106,16 @@ union {
 #macro CON_WAGO73X_PINHEADER_GRND(pins, rm, wo, height, depth, h1, h2, h3, n1, n2, p1, p2, pw, ph)
 
 #macro WAGOSTIFT(w, h)
-difference{
+difference {
   box{<-w/2,0,-w/2><w/2,h,w/2>}
 texture{col_silver}
 }
 #end
 
 #local WIDTH = pins * rm + wo;
-union{
-  union{
-    difference{
+union {
+  union {
+    difference {
       box{<-WIDTH/2,0,-depth/2><WIDTH/2,height,depth/2>}
 
       box{<-WIDTH/2+1,h1,-depth/2+1.9><WIDTH/2-1,height+1,depth/2-1.7>}
@@ -8387,10 +8265,10 @@ CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 
 
 //ein weisser Klemmhebel
 #macro CLAMP_WAGO_233_HAND()
-        union{
+        union {
 
                 box{<-0.5, 0, 0><0.5, 10, 2> pigment{handcolor}}
-                difference{
+                difference {
                         box{<-1  ,10, 0><1,   13.5,  4> pigment{handcolor}}
                         box{<-1.1, -5, -3><1.1, 0, +3> rotate<-45,0,0> translate<0,15,-2> pigment{handcolor}}
                         cylinder{<-0.5  ,13, 1><0.5  ,13, 1> 2 pigment{handcolor}}
@@ -8402,8 +8280,8 @@ CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 
 
 //eine einzelne Klemme
 #macro CLAMP_WAGO_233_SLICE(typ, raster)
-        union{
-                difference{
+        union {
+                difference {
                         object{
                                 prism {
                                         linear_spline
@@ -8461,8 +8339,8 @@ CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 
 #end
 
 object{
-        difference{
-                union{
+        difference {
+                union {
               #local i=0;
               #while(i<a)
                  object{CLAMP_WAGO_233_SLICE(typ, raster) translate< -i*raster, 0, 0>}
@@ -8656,7 +8534,7 @@ CON_WAGO_233_GRND(48,5)
 // Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberfläche
 ********************************************************************************************************************************************/
 #macro CON_WS_XX_G_GRND(Pins)
-union{
+union {
 object{PFOSTENWANNE(7.62+Pins*1.27)}
 object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,-1.27>}
 object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,1.27>}}
@@ -8699,7 +8577,7 @@ CON_WS_XX_G_GRND(64)
 // Bezugspunkt: mittig, 5.08mm vor der unteren/inneren Pinreihe.
 ********************************************************************************************************************************************/
 #macro CON_WS_XX_W_GRND(Pins)
-union{
+union {
 object{PFOSTENWANNE(7.62+Pins*1.27) rotate<-90,0,0> translate<0,4.5,3.3>}
 object{PIN_BENDED_ROW (Pins/2,2.54,0.635,0.8,4.5-1.27,3,10.5,col_gold) translate<0,0,5.08>}
 object{PIN_BENDED_ROW (Pins/2,2.54,0.635,0.8,4.5+1.27,3,13.04,col_gold) translate<0,0,7.62>}}
