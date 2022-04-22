@@ -27,6 +27,7 @@
 
 #include "e3d_tools.inc"
 #include "CONNECTOR/AMP_HE14.inc"
+#include "CONNECTOR/JUMPER.inc"
 #include "CONNECTOR/pinheader.inc"
 #include "CONNECTOR/TERMINALBLOCK_3.5mm.inc"
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
@@ -35,22 +36,6 @@
 
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_CON_JUMPER.inc.src
-//  MOSES <iloff@mosesele.de>
-//  Jumper
-// //////////
-#macro CON_JUMPER()
-union {
-difference {
-box{<0,0,0><2.54,6.0,2.00> translate<-1.27,2.5,-1.27>}
-box{<0,0,0><0.635,10.0,0.635> translate<-0.3175,2.5,-0.3175>}
-pigment{MediumBlue}translate<-1.27,0,0>}
-difference {
-box{<0,0,0><2.54,6.0,2.00> translate<-1.27,2.5,-1.27>}
-box{<0,0,0><0.635,10.0,0.635> translate<-0.3175,2.5,-0.3175>}
-pigment{MediumBlue} translate<1.27,0,0>}}
-#end
 
 
 // ////////////////////////////////////////////////////////////
