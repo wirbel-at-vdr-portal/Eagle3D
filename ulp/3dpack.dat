@@ -1527,28 +1527,28 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_H
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_HE14_1S_08(:HE14 Right Angle Single Row:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_HE14_1S_09(:HE14 Right Angle Single Row:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_HE14_1S_10(:HE14 Right Angle Single Row:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_2(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_3(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_4(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_5(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_6(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_7(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_8(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_9(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_10(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_11(:connector:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_350MM_12(:connector:
-AK500/2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_2(:Anreihklemmen 2Pin (con-ptr500.lib):Screw Terminal conn. 2Pin (con-ptr500.lib)
-AK500/3:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_3(:Anreihklemmen 3Pin (con-ptr500.lib):Screw Terminal conn. 3Pin (con-ptr500.lib)
-AK500/4:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_4(:Anreihklemmen 4Pin (con-ptr500.lib):Screw Terminal conn. 4Pin (con-ptr500.lib)
-AK500/5:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_5(:Anreihklemmen 5Pin (con-ptr500.lib):Screw Terminal conn. 5Pin (con-ptr500.lib)
-AK500/6:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_6(:Anreihklemmen 6Pin (con-ptr500.lib):Screw Terminal conn. 6Pin (con-ptr500.lib)
-AK500/7:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_7(:Anreihklemmen 7Pin (con-ptr500.lib):Screw Terminal conn. 7Pin (con-ptr500.lib)
-AK500/8:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_8(:Anreihklemmen 8Pin (con-ptr500.lib):Screw Terminal conn. 8Pin (con-ptr500.lib)
-AK500/9:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_9(:Anreihklemmen 9Pin (con-ptr500.lib):Screw Terminal conn. 9Pin (con-ptr500.lib)
-AK500/10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_10(:Anreihklemmen 10Pin (con-ptr500.lib):Screw Terminal conn. 10Pin (con-ptr500.lib)
-AK500/11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_11(:Anreihklemmen 11Pin (con-ptr500.lib):Screw Terminal conn. 11Pin (con-ptr500.lib)
-AK500/12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_ARK_5MM_12(:Anreihklemmen 12Pin (con-ptr500.lib):Screw Terminal conn. 12Pin (con-ptr500.lib)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_2(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_3(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_4(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_5(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_6(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_7(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_8(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_9(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_10(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_11(:connector:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_3_5mm_12(:connector:
+AK500/2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_2(:Anreihklemmen 2Pin (con-ptr500.lib):Screw Terminal conn. 2Pin (con-ptr500.lib)
+AK500/3:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_3(:Anreihklemmen 3Pin (con-ptr500.lib):Screw Terminal conn. 3Pin (con-ptr500.lib)
+AK500/4:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_4(:Anreihklemmen 4Pin (con-ptr500.lib):Screw Terminal conn. 4Pin (con-ptr500.lib)
+AK500/5:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_5(:Anreihklemmen 5Pin (con-ptr500.lib):Screw Terminal conn. 5Pin (con-ptr500.lib)
+AK500/6:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_6(:Anreihklemmen 6Pin (con-ptr500.lib):Screw Terminal conn. 6Pin (con-ptr500.lib)
+AK500/7:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_7(:Anreihklemmen 7Pin (con-ptr500.lib):Screw Terminal conn. 7Pin (con-ptr500.lib)
+AK500/8:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_8(:Anreihklemmen 8Pin (con-ptr500.lib):Screw Terminal conn. 8Pin (con-ptr500.lib)
+AK500/9:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_9(:Anreihklemmen 9Pin (con-ptr500.lib):Screw Terminal conn. 9Pin (con-ptr500.lib)
+AK500/10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_10(:Anreihklemmen 10Pin (con-ptr500.lib):Screw Terminal conn. 10Pin (con-ptr500.lib)
+AK500/11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_11(:Anreihklemmen 11Pin (con-ptr500.lib):Screw Terminal conn. 11Pin (con-ptr500.lib)
+AK500/12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_12(:Anreihklemmen 12Pin (con-ptr500.lib):Screw Terminal conn. 12Pin (con-ptr500.lib)
 FE05W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X5(:Buchsenleiste gewinkelt 5Pin 1Reihe (con-lsta.lib):Female Header  5Pin 1Row (con-lsta.lib) 
 FE06W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X6(:Buchsenleiste gewinkelt 6Pin 1Reihe (con-lsta.lib):Female Header  6Pin 1Row (con-lsta.lib) 
 FE07W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X7(:Buchsenleiste gewinkelt 7Pin 1Reihe (con-lsta.lib):Female Header  7Pin 1Row (con-lsta.lib) 
