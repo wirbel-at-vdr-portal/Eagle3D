@@ -28,6 +28,7 @@
 #include "e3d_tools.inc"
 #include "CONNECTOR/AMP_HE14.inc"
 #include "CONNECTOR/JUMPER.inc"
+#include "CONNECTOR/MOLEX_PSL_series.inc"
 #include "CONNECTOR/PHOENIX_MINI_COMBICON_3.81mm.inc"
 #include "CONNECTOR/pinheader.inc"
 #include "CONNECTOR/TERMINALBLOCK_3.5mm.inc"
@@ -83,23 +84,7 @@ pigment{Gray30}}
 
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_MOLEX254.inc.src
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Kunststoffkoerper von geraden und abgewinkelten Molex-Stiftleisten RM 2.54.
-// Parameter: Anzahl Pins. (-> Breite. Hoehe/Tiefe sind konstant fuer alle Groessen.)
-// Bezugspunkt: Mitte der Pins in Auflageflaeche (gerade Ausfuehrung).
-// Kunststoffkoerper von geraden und abgewinkelten Molex-Stiftleisten
-// //////////
-#macro MOLEX254(Pins)
-union {
-difference {
-box{<0,0,-2.5><Pins*2.54,3,3>}
-#local i=0; #while (i<Pins) box{<0.77+i*2.54,-0.1,-3><1.77+i*2.54,0.8,4>} #local i=i+1; #end }
-box{<1.27,2,-2.5><(Pins-0.5)*2.54,11.3,-1.7>}
-box{<1.27,5.8,-2><(Pins-0.5)*2.54,7.5,-1.4>}
-translate <-Pins*1.27,0,0> texture {e3d_tex_con_Molex}}
-#end
+
 
 
 // ////////////////////////////////////////////////////////////
@@ -4798,84 +4783,10 @@ CON_MOLEX_53048_GRND(15)
 #end
 
 
-/********************************************************************************************************************************************
-// Tilmann Reh <tilmann.reh@autometer.de>
-// gerade Molex-Stiftleisten RM 2.54.
-// Bezugspunkt: Mitte der Pins auf PCB-Oberflaeche
-********************************************************************************************************************************************/
-#macro CON_MOLEX_PSL_XX_G_GRND(Pins)
-union {
-object{MOLEX254(Pins)}
-object{PIN_STRAIGHT_ROW (Pins,2.54,0.635,11,3,col_silver)}}
-#end
-#macro CON_MOLEX_PSL2G()
-CON_MOLEX_PSL_XX_G_GRND(2)
-#end
-#macro CON_MOLEX_PSL3G()
-CON_MOLEX_PSL_XX_G_GRND(3)
-#end
-#macro CON_MOLEX_PSL4G()
-CON_MOLEX_PSL_XX_G_GRND(4)
-#end
-#macro CON_MOLEX_PSL5G()
-CON_MOLEX_PSL_XX_G_GRND(5)
-#end
-#macro CON_MOLEX_PSL6G()
-CON_MOLEX_PSL_XX_G_GRND(6)
-#end
-#macro CON_MOLEX_PSL7G()
-CON_MOLEX_PSL_XX_G_GRND(7)
-#end
-#macro CON_MOLEX_PSL8G()
-CON_MOLEX_PSL_XX_G_GRND(8)
-#end
-#macro CON_MOLEX_PSL9G()
-CON_MOLEX_PSL_XX_G_GRND(9)
-#end
-#macro CON_MOLEX_PSL10G()
-CON_MOLEX_PSL_XX_G_GRND(10)
-#end
 
 
-/********************************************************************************************************************************************
-// Tilmann Reh <tilmann.reh@autometer.de>
-// abgewinkelte Molex-Stiftleisten RM 2.54.
-// Bezugspunkt: Mitte der Pins auf PCB-Oberflaeche
-********************************************************************************************************************************************/
-#macro CON_MOLEX_PSL_XX_W_GRND(Pins)
-union {
-object{MOLEX254(Pins) rotate<-90,0,0> translate<0,2.5,-1.8>}
-object{PIN_BENDED_ROW (Pins,2.54,0.635,0.8,2.5,3,12.5,col_silver) translate<0,0,0>}}
-#end
 
 
-#macro CON_MOLEX_PSL2W()
-CON_MOLEX_PSL_XX_W_GRND(2)
-#end
-#macro CON_MOLEX_PSL3W()
-CON_MOLEX_PSL_XX_W_GRND(3)
-#end
-#macro CON_MOLEX_PSL4W()
-CON_MOLEX_PSL_XX_W_GRND(4)
-#end
-#macro CON_MOLEX_PSL5W()
-CON_MOLEX_PSL_XX_W_GRND(5)
-#end
-#macro CON_MOLEX_PSL6W()
-CON_MOLEX_PSL_XX_W_GRND(6)
-#end
-#macro CON_MOLEX_PSL7W()
-CON_MOLEX_PSL_XX_W_GRND(7)
-#end
-#macro CON_MOLEX_PSL8W()
-CON_MOLEX_PSL_XX_W_GRND(8)
-#end
-#macro CON_MOLEX_PSL9W()
-CON_MOLEX_PSL_XX_W_GRND(9)
-#end
-#macro CON_MOLEX_PSL10W()
-CON_MOLEX_PSL_XX_W_GRND(10)
-#end
 
 
 /********************************************************************************************************************************************

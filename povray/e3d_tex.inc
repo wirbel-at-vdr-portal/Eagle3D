@@ -33,7 +33,6 @@
 #declare e3d_tex_cap_smd_electrolytic_base = texture { pigment { Gray30 }       finish {          ambient(0.10 * global_ambient_mul) } }
 #declare e3d_tex_cap_smd_ceramic_1         = texture { pigment { DarkWood }     finish {          ambient(0.10 * global_ambient_mul) } }
 #declare e3d_tex_heatsink_silver           = texture { T_Silver_5A              finish {          ambient(0.10 * global_ambient_mul)  phong 0.1 phong_size 10 } }
-#declare e3d_tex_con_Molex                 = texture { pigment { Wheat }        finish {          ambient(0.10 * global_ambient_mul) } }
 
 /*******************************************************************************
  * alias names
