@@ -90,7 +90,7 @@ union {
       texture{col_slk}
       }
 
-  // pinheader bestückt.
+  // pinheader bestueckt.
   object{ _loc_PINHDR(2,6) rotate<0,-90,0> translate<0,0,34.00> } 
 
   // LEDs
@@ -287,13 +287,6 @@ union {
 #end
 
 
-
-
-
-
-
-
-
 /********************************************************************************************************************************************
  * Digilent Cmod S6 FPGA Board
  *******************************************************************************************************************************************/
@@ -410,13 +403,13 @@ union {
                 0, //pin_u = Anzahl Pins "unten"
               0.5, //pitch = Abstand der einzelnen Pins
               0.1, //pin_br= Breite eines Pins
-              0.1, //pin_h = Höhe eines Pins
+              0.1, //pin_h = Hoehe eines Pins
               0.1, //pin_t = Tiefe eines Pins
               0.2, //HKoP  = Hoehe des Kunststoffs ueber der Platine (Y-Achse)
                 0, //KORW  = Korrekturwinkel
                 1, //kp1ab = Wenn 0, wird Abschraegung an Pin1 erzeugt
-                0, //cool_x= Kühlfläche unter dem Chip (X-Achse)
-                0, //cool_z= Kühlfläche unter dem Chip (Z-Achse)
+                0, //cool_x= Kuehlflaeche unter dem Chip (X-Achse)
+                0, //cool_z= Kuehlflaeche unter dem Chip (Z-Achse)
                 )
          #end
          object { CMODS6_FPGA_XILINX("XC6SLX4") rotate<0,-90,0> translate<0,0,2.5>}
