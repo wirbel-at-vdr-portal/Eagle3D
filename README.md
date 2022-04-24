@@ -29,4 +29,6 @@ Documentation is lost as well, as those have been links to upstream web page, wh
 
 Anyhow, i want to preserve that project here, just in case.
 
+IMPORTANT: if you're looking for Copyright, please look at the file 'README'. Note the similar file name. 
+
 --Winfried
