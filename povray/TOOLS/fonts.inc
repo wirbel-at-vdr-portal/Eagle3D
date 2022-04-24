@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * Here we declare all fonts and their fallbacks, if a font cannot be found.
  *
  * The last fallback font for all fonts is courbd.ttf, as we used this font in

@@ -1,6 +1,11 @@
 /*******************************************************************************
- * Original file: ./1_IC_DIS_PIN.inc.src
- * Pin Diskretes IC
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * DIP Pin
  ******************************************************************************/
 #macro IC_DIS_PIN()

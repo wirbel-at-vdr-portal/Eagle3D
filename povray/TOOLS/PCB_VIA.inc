@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * Generates a VIA
  * dia_min:  diameter of the hole
  * dia_max:  diameter of the via

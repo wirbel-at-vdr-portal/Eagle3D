@@ -1,6 +1,13 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * This macro repeats the povray object OBJ in a MxN grid with spacing GRID.
- * 20220418, wk
+ * Author: 20220418, wk
  ******************************************************************************/
 
 #macro GRID_BASE(OBJ, GRID, M, N)

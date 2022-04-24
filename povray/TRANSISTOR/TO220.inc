@@ -1,6 +1,13 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * TO220_(3,5)_(H,V)(,1,2,X):
- *    Joerg Bredendiek <sprut(replace with at)sprut.de> 
+ * Author: Joerg Bredendiek <sprut(replace with at)sprut.de> 
  *******************************************************************************
  * TR_TO220_T05A_S:
  *    dahamm@gmx.net

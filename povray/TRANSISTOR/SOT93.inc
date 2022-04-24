@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * Macro TR_SOT93_base - SOT93 Transistor package
  * SOT93 package for horizontal and vertical mounting.
  *

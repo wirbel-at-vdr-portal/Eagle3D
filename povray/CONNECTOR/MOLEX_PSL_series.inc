@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * MOLEX econ connect Board-to-Wire Connectors
  *    PSL - Identifier        : Wafer Series CV Pitch 2.54 mm single row
  *    #   - Number of contacts: 2..20
@@ -6,7 +13,6 @@
  * 
  * Author: Tilmann Reh <tilmann.reh@autometer.de>
  ******************************************************************************/
-
 
 
 /*******************************************************************************

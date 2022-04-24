@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * TO3 metal cup
  * Author: daniel cardona<dancardona50@hotmail.com>
  ******************************************************************************/

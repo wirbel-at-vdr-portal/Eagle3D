@@ -1,27 +1,10 @@
-//Eagle3D 20110101 INC-File e3d_resistor.inc
-//created by: INC SRC Compiler v2.02
-//created on: 01.01.2011 17:33:58
-//(c) 2011 by M. Weisser
-//or the author of the macro
+/*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
 
-/*
- * Copyright 2005-2010 Matthias Weisser <matthias@matwei.de>
- *
- * This file is part of Eagle3D
- *
- * Eagle3D is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; version 2 of the License.
- *
- * Eagle3D is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
- 
+
 #ifndef(__resistor_inc)
 #declare __resistor_inc = true;
 

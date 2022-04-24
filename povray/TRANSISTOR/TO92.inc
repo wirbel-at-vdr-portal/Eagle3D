@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * TO92 & SOT54 packages, vertical
  * Author: Joerg Bredendiek <sprut(replace with at)sprut.de>
  *    pin: number of pins (2 or 3)

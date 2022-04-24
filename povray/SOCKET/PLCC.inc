@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * B        : width in z axis        Breite (Z-Achse)
  * pin_l    : pins on L side         Pins auf einer L-Seite
  * pin_b    : pins on B side         Pins auf einer B-Seite

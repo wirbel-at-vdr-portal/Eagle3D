@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * Macros for Screws :
  * Author: Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
  * Rev. 1.1 - 04/01/06

@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * PCB Standard Terminal Block, Wire to Board, 3.5mm grid
  * Author(s): Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
  *            Carsten Koegler, FTZ-Leipzig <koegler@ftz-leipzig.de>

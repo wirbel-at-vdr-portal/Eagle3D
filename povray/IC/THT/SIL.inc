@@ -1,8 +1,16 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * Sharp SIL-type solid-state-relay, relay.lib
+ * Joerg Bredendiek <sprut(replace with at)sprut.de>
+ *
  * s2xxEx = S202SE1, S202SE2, (S202S12, S216S02), S216SE1, S216SE2, S102S11,
  *          S102S12
- * Joerg Bredendiek <sprut(replace with at)sprut.de>
  * Mittelpunkt: geometrische Mitte zwischen den Aussenpins
  ******************************************************************************/
 #macro IC_DIS_S2XXEX(value)
@@ -74,6 +82,3 @@ union {
       }
    } // end: IC_DIS_S2XXEX
 #end
-
-//------------------------------------------------------------------------------
-

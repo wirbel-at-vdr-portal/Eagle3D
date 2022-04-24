@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * HE14 serie Right-Angle and Straight, Single-Row
  * Author: Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
  * Rev. 1.0  09/02/08

@@ -1,8 +1,15 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * Draws a bended rectangular profile, with angle 1-179 deg.
- * Macro fuer gebogene Rechteckprofile mit Oeffnungswinkel von 1-179 Grad
  * Author: Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
  *------------------------------------------------------------------------------
+ * Macro fuer gebogene Rechteckprofile mit Oeffnungswinkel von 1-179 Grad
  * i_radius : inner radius, >= 0
  * winkel   : bend angle. greather 0 and less 180
  * dicke    : thickness

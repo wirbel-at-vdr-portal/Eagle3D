@@ -1,4 +1,11 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+
+/*******************************************************************************
  * TO72
  * Joerg Bredendiek <sprut(replace with at)sprut.de>,
  *    based on TO52 by Philippe Boucheny
