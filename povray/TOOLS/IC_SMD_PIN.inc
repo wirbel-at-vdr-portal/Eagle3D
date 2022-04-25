@@ -17,7 +17,7 @@
  *  - IC_SMD_MB2S_GRND
  *  - IC_SMD_SOT143_GRND
  ******************************************************************************/
-macro IC_SMD_PIN(H,B,T,S)
+#macro IC_SMD_PIN(H,B,T,S)
   union {
      box{<0,H,T/2> <B/4,H-S,-T/2>}
      difference{
