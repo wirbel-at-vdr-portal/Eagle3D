@@ -20,57 +20,14 @@
 #include "IC/SMT/MICROMAX.inc"
 #include "IC/SMT/PLCC.inc"
 #include "IC/SMT/QFN.inc"
+#include "IC/SMT/QSOP.inc"
+#include "IC/SMT/SO.inc"
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
 #include "IC/SMT/TSSOP.inc"
 
 
-#macro IC_SMD_SO8(value,logo)
-IC_SMD_BASE(4.9,3.9,1.35,6,4,4,1.27,1.27,0.4,0.4,0.22,0.18,0,1,1,3.9/5,3.9/5,0,logo)
-#end
-#macro IC_SMD_SO14(value,logo)
-IC_SMD_BASE(8.65,3.9,1.35,6,7,7,1.27,1.27,0.4,0.4,0.22,0.18,0,1,1,3.9/5,3.9/4,0,logo)
-#end
-#macro IC_SMD_SO16(value,logo)
-IC_SMD_BASE(9.9,3.9,1.35,6,8,8,1.27,1.27,0.4,0.4,0.22,0.18,0,1,1,3.9/5,3.9/4,0,logo)
-#end
-#macro IC_SMD_SO16W(value,logo)
-IC_SMD_BASE(10.3,7.5,2.35,10.3,8,8,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
-#end
 
-//Rudi Hofer <rudi.hofer@t-online.de>
-#macro IC_SMD_SO18W(value,logo)
-IC_SMD_BASE(11.6,7.5,2.35,10.3,9,9,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
-#end
-#macro IC_SMD_SO20W(value,logo)
-IC_SMD_BASE(12.8,7.5,2.35,10.3,10,10,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
-#end
-#macro IC_SMD_SO24W(value,logo)
-IC_SMD_BASE(15.4,7.5,2.35,10.3,12,12,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
-#end
-#macro IC_SMD_SO28W(value,logo)
-IC_SMD_BASE(17.9,7.5,2.35,10.3,14,14,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
-#end
-#macro IC_SMD_SO32_400(value,logo)
-IC_SMD_BASE(20.5,7.5,2.35,10.3,16,16,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
-#end
-#macro IC_SMD_SO32_525(value,logo)
-IC_SMD_BASE(20.5,11.43,2.74,14.12,16,16,1.27,1.27,0.4,0.4,0.2,0.05,0,1,1,7.5/5,7.5/5,0,logo)
-#end
-
-
-#macro IC_SMD_QSOP16(value,logo)
-IC_SMD_BASE(4.9,3.9,1.45,6,8,8,0.635,0.635,0.25,0.25,0.225,0.15,0,1,1,0.7,0.7,0,logo)
-#end
-#macro IC_SMD_QSOP20(value,logo)
-IC_SMD_BASE(8.65,3.9,1.45,6,10,10,0.635,0.635,0.25,0.25,0.225,0.15,0,1,1,0.7,1.1,0,logo)
-#end
-#macro IC_SMD_QSOP24(value,logo)
-IC_SMD_BASE(8.65,3.9,1.45,6,12,12,0.635,0.635,0.25,0.25,0.225,0.15,0,1,1,0.7,1.1,0,logo)
-#end
-#macro IC_SMD_QSOP28(value,logo)
-IC_SMD_BASE(9.9,3.9,1.45,6,14,14,0.635,0.635,0.25,0.25,0.225,0.15,0,1,1,0.7,1.1,0,logo)
-#end
 #macro IC_SMD_SSOP14(value,logo)
 IC_SMD_BASE(6.2,5.3,1.7,7.7,7,7,0.65,0.65,0.32,0.32,0.15,0.15,0,1,0,0.5,0.85,0,logo)
 #end
