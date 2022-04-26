@@ -70,3 +70,7 @@
 #macro IC_SMD_TSSOP56(value,logo)
   IC_SMD_BASE(14,6.1,0.95,8.1,28,28,0.5,0.5,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
 #end
+
+#macro IC_SMD_TSSOP64(value,logo)
+  IC_SMD_BASE(17,6.1,0.95,8.1,32,32,0.5,0.5,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
+#end
