@@ -22,6 +22,7 @@
 #include "IC/SMT/QFN.inc"
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
+#include "IC/SMT/TSSOP.inc"
 
 
 #macro IC_SMD_SO8(value,logo)
@@ -56,33 +57,7 @@ IC_SMD_BASE(20.5,7.5,2.35,10.3,16,16,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/
 #macro IC_SMD_SO32_525(value,logo)
 IC_SMD_BASE(20.5,11.43,2.74,14.12,16,16,1.27,1.27,0.4,0.4,0.2,0.05,0,1,1,7.5/5,7.5/5,0,logo)
 #end
-#macro IC_SMD_TSSOP8(value,logo)
-IC_SMD_BASE(2.9,4.4,1,6.4,4,4,0.65,0.65,0.22,0.22,0.15,0.1,0,1,0,0.5,0.6,1,logo)
-#end
-#macro IC_SMD_TSSOP14(value,logo)
-IC_SMD_BASE(5,4.4,1.1,6.375,7,7,0.65,0.65,0.22,0.22,0.15,0.1,0,1,0,0.5,0.8,0,logo)
-#end
-#macro IC_SMD_TSSOP16(value,logo)
-IC_SMD_BASE(5.2,4.4,1.1,6.375,8,8,0.65,0.65,0.22,0.22,0.15,0.1,0,1,0,0.5,0.8,0,logo)
-#end
-#macro IC_SMD_TSSOP20(value,logo)
-IC_SMD_BASE(6.5,4.4,1.1,6.375,10,10,0.65,0.65,0.22,0.22,0.15,0.1,0,1,0,0.5,1.0,0,logo)
-#end
-#macro IC_SMD_TSSOP24(value,logo)
-IC_SMD_BASE(7.8,4.4,1.1,6.375,12,12,0.65,0.65,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
-#end
-#macro IC_SMD_TSSOP28(value,logo)
-IC_SMD_BASE(9.7,4.4,1.1,6.375,14,14,0.65,0.65,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
-#end
-#macro IC_SMD_TSSOP38(value,logo)
-IC_SMD_BASE(9.7,4.4,1.1,6.4,19,19,0.5,0.5,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
-#end
-#macro IC_SMD_TSSOP48(value,logo)
-IC_SMD_BASE(12.5,6.1,0.95,8.1,24,24,0.5,0.5,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
-#end
-#macro IC_SMD_TSSOP56(value,logo)
-IC_SMD_BASE(14,6.1,0.95,8.1,28,28,0.5,0.5,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
-#end
+
 #macro IC_SMD_TSSOP64(value,logo)
 IC_SMD_BASE(17,6.1,0.95,8.1,32,32,0.5,0.5,0.22,0.22,0.15,0.1,0,1,0,0.5,1.1,0,logo)
 #end
