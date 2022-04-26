@@ -41,6 +41,7 @@ global_settings{charset utf8}
 #include "TOOLS/BENTPIPE.inc"
 #include "TOOLS/GRID_BASE.inc"
 #include "TOOLS/IC_SMD_PIN.inc"
+#include "TOOLS/IC_SMD_BASE.inc"
 #include "TOOLS/NUT.inc"
 #include "TOOLS/PCB_SMD.inc"
 #include "TOOLS/PCB_VIA.inc"

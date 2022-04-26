@@ -12,8 +12,8 @@
  * T: pin depth
  * S: material strength
  * used by:
- *  - IC_SMD_DFS_GRND
- *  - IC_SMD_GRND
+ *  - DIODE_SMD_DFS
+ *  - IC_SMD_BASE
  *  - IC_SMD_MB2S_GRND
  *  - IC_SMD_SOT143_GRND
  ******************************************************************************/

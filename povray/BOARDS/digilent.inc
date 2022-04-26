@@ -210,7 +210,7 @@ union {
      } 
 
   #macro _loc_TINYCHIP1(value,logo)
-     IC_SMD_GRND(3,2.5,0.85, // Kunststoff LxBxH
+     IC_SMD_BASE(3,2.5,0.85, // Kunststoff LxBxH
                        3.9,      // Laenge der Seite ohne Pins ueber alles
                        4,4,      // Pins oben, unten
                        0.5,0.5,  // pitch oben, unten
@@ -227,7 +227,7 @@ union {
   #end
 
   #macro _loc_TINYCHIP2(value,logo)
-     IC_SMD_GRND(3,2,0.85, // Kunststoff LxBxH
+     IC_SMD_BASE(3,2,0.85, // Kunststoff LxBxH
                        3.4,      // Laenge der Seite ohne Pins ueber alles
                        5,5,      // Pins oben, unten
                        0.5,0.5,  // pitch oben, unten

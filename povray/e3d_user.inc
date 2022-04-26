@@ -345,7 +345,7 @@ union {
  * TO-263-7                                                                                                                                    
  ************************************************************************************************************************************/
 #macro IC_TO_263_7(value,logo)
-   object{IC_SMD_GRND(10.41,   //LK      = Laenge des Kunststoff(Seite der Pins)
+   object{IC_SMD_BASE(10.41,   //LK      = Laenge des Kunststoff(Seite der Pins)
                 8.89,   //BK      = Breite des Kunststoff(Seite ohne Pins)
                 4.485,  //HK      = Hoehe des Kunststoff
                15.2,    //B       = Laenge der Seite ohne Pins ueber alles
@@ -504,7 +504,7 @@ union {
  * SOT-223(5) package.
  *******************************************************************************************************************************************/
 #macro IC_SMD_SOT223_5(value,logo)
-   object{IC_SMD_GRND(
+   object{IC_SMD_BASE(
                 6.5,    //LK      = Laenge des Kunststoff(Seite der Pins)
                 3.56,   //BK      = Breite des Kunststoff(Seite ohne Pins)                
                 1.675,  //HK      = Hoehe des Kunststoff
