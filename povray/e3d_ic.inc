@@ -26,17 +26,11 @@
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
 #include "IC/SMT/TSSOP.inc"
+#include "IC/SMT/VSO.inc"
 
 
 
 
-//Tilmann Reh <tilmann.reh@autometer.de>
-#macro IC_SMD_VSO40(value,logo)
-IC_SMD_BASE(15.4,7.55,2.35,12.05,20,20,0.762,0.762,0.36,0.36,0.18,0.2,0,2,0,7.5/6,7.5/5,0,logo)
-#end
-#macro IC_SMD_VSO56(value,logo)
-IC_SMD_BASE(21.7,11.05,2.9,15.5,28,28,0.75,0.75,0.36,0.36,0.18,0.2,0,2,0,11/6,11/5,0,logo)
-#end
 #macro IC_SMD_PSO20(value,logo)
 IC_SMD_BASE(15.9,11,3.3,14.2,10,10,1.27,1.27,0.47,0.47,0.28,0.2,0,3,0,7.5/6,7.5/5,0,logo)
 #end
