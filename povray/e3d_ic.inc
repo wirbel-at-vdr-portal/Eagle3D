@@ -18,6 +18,7 @@
 #include "IC/THT/SIL.inc"
 #include "IC/THT/multiwatt.inc"
 #include "IC/SMT/MICROMAX.inc"
+#include "IC/SMT/MSOP.inc"
 #include "IC/SMT/PLCC.inc"
 #include "IC/SMT/PSO.inc"
 #include "IC/SMT/QFN.inc"
@@ -33,9 +34,7 @@
 
 
 
-#macro IC_SMD_MSOP10(value,logo)
-IC_SMD_BASE(3,3,0.85,4.9,5,5,0.5,0.5,0.25,0.25,0.15,0.1,0,1,0,0.5,0.65,0,logo)
-#end
+
 #macro IC_SMD_SOT23(value,logo)
 IC_SMD_BASE(2.9,1.3,1,2.8,2,1,1.9,1.9,0.45,0.45,0.13,0.1,0,0,0,1.5,0.7,0,logo)
 #end
