@@ -35,46 +35,7 @@
 
 
 
-/********************************************************************************************************************************************
-//Macros for SMD bridge DF...S from Int. Rectifier
-//    NOTE: bought by Infineon Technologies.
-//Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
-//Rev. 1.0  26/03/06
-********************************************************************************************************************************************/
-#macro IC_SMD_DFS_GRND()
-union{
-    
-    //Body
-    difference{
-        box{<-4.1,0.3,-3.1><+4.1,1.9,+3.1>}
-        cylinder{<3,1.8,0><3,2,0> 0.4}    
-        texture{e3d_tex_ic_body_1}
-    }
 
-    // Marking
-    union{
-        text {ttf global_fontfile_eagle3d "j" 0.02, 0    scale 2 rotate<90,0,0> translate<-2.8,1.91,-0.8>}
-        text {ttf global_fontfile_arial_bold "+" 0.02, 0 scale 1 rotate<90,0,0> translate<+2.3,1.91,+2>}
-        text {ttf global_fontfile_arial_bold "-" 0.02, 0 scale 1 rotate<90,0,0> translate<-2.7,1.91,+2>}
-        text {ttf global_fontfile_arial_bold "~" 0.02, 0 scale 1 rotate<90,0,0> translate<+2.3,1.91,-3>}
-        text {ttf global_fontfile_arial_bold "~" 0.02, 0 scale 1 rotate<90,0,0> translate<-2.7,1.91,-3>}
-        texture{e3d_tex_ic_marking_bright}
-    }
-    
-    //Pins
-    union{
-        object {IC_SMD_PIN(1.5,1.5,1.2,0.3) rotate -90*y translate<-2.5,0,3>}
-        object {IC_SMD_PIN(1.5,1.5,1.2,0.3) rotate -90*y translate<+2.5,0,3>}
-        object {IC_SMD_PIN(1.5,1.5,1.2,0.3) rotate +90*y translate<-2.5,0,-3>}
-        object {IC_SMD_PIN(1.5,1.5,1.2,0.3) rotate +90*y translate<+2.5,0,-3>}
-        texture{e3d_tex_silver}
-    }
-}
-#end
-
-#macro IC_SMD_DFS()
-IC_SMD_DFS_GRND()
-#end
 
 
 /********************************************************************************************************************************************

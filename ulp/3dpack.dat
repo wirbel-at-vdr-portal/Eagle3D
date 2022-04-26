@@ -43,7 +43,7 @@ DIL24-3/12:0:1:0:0:0:1:0:0:0:SOCKET_DIP24A12(:30:IC-Sockel 12 of 24Pin:0:0:0:0:0
 DIL24/12:0:1:0:0:0:1:0:0:0:SOCKET_DIP24A12(:30:IC-Sockel 12 of 24Pin:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:IC_DIS_DIP24A12(:DIP24 body with 12 pins:
 S2XXEX:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_DIS_S2XXEX(:Sharp solid state relay (relay.lib):Sharp solid state relay (relay.lib) 
 MULTIWATT-15:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:-5.08:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_MULTIWATT15V(:Multiwatt 15 vertikal:Multiwatt 15 vertical
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMD_DFS(:SMD BRIDGE 4 pins:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMD_DFS(:SMD BRIDGE 4 pins:
 TSOP6:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:IC_SMD_TSOP6(:TSOP6 Package:
 SO08:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:IC_SMD_SO8(:SMD IC SO8 Package:
 SO-08M:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:IC_SMD_SO8(:SMD IC SO8 Package (microchip.lib):
