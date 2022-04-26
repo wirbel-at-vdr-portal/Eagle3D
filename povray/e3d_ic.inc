@@ -17,10 +17,11 @@
 #include "IC/THT/DIL.inc"
 #include "IC/THT/SIL.inc"
 #include "IC/THT/multiwatt.inc"
+#include "IC/SMT/MICROMAX.inc"
 #include "IC/SMT/PLCC.inc"
 #include "IC/SMT/QFN.inc"
-
-
+#include "IC/SMT/TSOP.inc"
+#include "IC/SMT/TSOP-II.inc"
 
 
 #macro IC_SMD_SO8(value,logo)
@@ -35,12 +36,7 @@ IC_SMD_BASE(9.9,3.9,1.35,6,8,8,1.27,1.27,0.4,0.4,0.22,0.18,0,1,1,3.9/5,3.9/4,0,l
 #macro IC_SMD_SO16W(value,logo)
 IC_SMD_BASE(10.3,7.5,2.35,10.3,8,8,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
 #end
-#macro IC_SMD_UMAX10(value,logo)
-IC_SMD_BASE(3,3,0.8,4.9,5,5,0.5,0.5,0.22,0.22,0.13,0.1,0,1,0,0.4,0.7,0,logo)
-#end
-#macro IC_SMD_UMAX8(value,logo)
-IC_SMD_BASE(3,3,0.8,4.9,4,4,0.65,0.65,0.3,0.3,0.13,0.1,0,1,0,0.4,0.7,0,logo)
-#end
+
 //Rudi Hofer <rudi.hofer@t-online.de>
 #macro IC_SMD_SO18W(value,logo)
 IC_SMD_BASE(11.6,7.5,2.35,10.3,9,9,1.27,1.27,0.4,0.4,0.27,0.2,0,1,1,7.5/6,7.5/5,0,logo)
