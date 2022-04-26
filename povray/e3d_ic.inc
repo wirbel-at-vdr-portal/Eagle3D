@@ -22,40 +22,14 @@
 #include "IC/SMT/QFN.inc"
 #include "IC/SMT/QSOP.inc"
 #include "IC/SMT/SO.inc"
+#include "IC/SMT/SSOP.inc"
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
 #include "IC/SMT/TSSOP.inc"
 
 
 
-#macro IC_SMD_SSOP14(value,logo)
-IC_SMD_BASE(6.2,5.3,1.7,7.7,7,7,0.65,0.65,0.32,0.32,0.15,0.15,0,1,0,0.5,0.85,0,logo)
-#end
-#macro IC_SMD_SSOP16(value,logo)
-IC_SMD_BASE(6.2,5.3,1.7,7.7,8,8,0.65,0.65,0.32,0.32,0.15,0.15,0,1,0,0.5,0.85,0,logo)
-#end
-#macro IC_SMD_SSOP20(value,logo)
-IC_SMD_BASE(7.2,5.3,1.7,7.7,10,10,0.65,0.65,0.32,0.32,0.15,0.15,0,1,0,0.5,0.95,0,logo)
-#end
-#macro IC_SMD_SSOP24(value,logo)
-IC_SMD_BASE(8.2,5.3,1.7,7.7,12,12,0.65,0.65,0.32,0.32,0.15,0.15,0,1,0,0.5,0.95,0,logo)
-#end
-#macro IC_SMD_SSOP28(value,logo)
-IC_SMD_BASE(10.2,5.3,1.7,7.7,14,14,0.65,0.65,0.32,0.32,0.15,0.15,0,1,0,0.5,0.95,0,logo)
-#end
-#macro IC_SMD_SSOP30(value,logo)
-IC_SMD_BASE(10.2,6.1,1.2,8.1,15,15,0.65,0.65,0.24,0.24,0.15,0.1,0,1,0,0.5,0.95,0,logo)
-#end
-#macro IC_SMD_SSOP48(value,logo)
-IC_SMD_BASE(15.8,7.5,2.25,10.2,24,24,0.635,0.635,0.25,0.25,0.15,0.3,0,1,0,0.5,1.1,0,logo)
-#end
-//Joseph Zeglinski
-#macro IC_SMD_SSOP56DL(value,logo)
-IC_SMD_BASE(18.4,7.5,2.25,10.2,28,28,0.635,0.635,0.25,0.25,0.15,0.3,0,1,0,0.5,1.1,0,logo)
-#end
-#macro IC_SMD_SSOP56(value,logo)
-IC_SMD_BASE(23.7,13.3,2.25,10.2,28,28,0.635,0.635,0.25,0.25,0.15,0.3,0,1,0,0.5,1.1,0,logo)
-#end
+
 //Tilmann Reh <tilmann.reh@autometer.de>
 #macro IC_SMD_VSO40(value,logo)
 IC_SMD_BASE(15.4,7.55,2.35,12.05,20,20,0.762,0.762,0.36,0.36,0.18,0.2,0,2,0,7.5/6,7.5/5,0,logo)
