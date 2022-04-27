@@ -51,9 +51,6 @@ IC_SMD_BASE(6.5,3.5,1.6,7,3,1,2.3,2.3,0.75,3,0.2,0.2,0,0,0,0,1.0,0,logo)
 IC_SMD_BASE(2.0,1.25,1.0,2.1,3,3,0.65,0.65,0.25,0.25,0.15,0.1,0,1,0,0,0.5,0,logo)
 #end
 //SMD-Transistoren aus SIC_GRND abgeleitet
-#macro IC_TR_SOT23(value,logo)
-IC_SMD_BASE(2.9,1.3,1,2.8,2,1,1.9,1.9,0.45,0.45,0.13,0.1,0,0,0,1.5,0.7,0,logo)
-#end
 #macro IC_TR_TO252(value,logo)
 IC_SMD_BASE(6.1,6.5,2.2,10,2,1,4.5,1.9,0.9,5.3,0.5,0.1,0,0,0,1.5,1.0,0,logo)
 #end
