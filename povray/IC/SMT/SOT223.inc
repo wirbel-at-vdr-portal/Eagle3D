@@ -34,14 +34,27 @@
  * logo   : Name of the logo
  ******************************************************************************/
 
+
+// https://www.infineon.com/cms/en/product/packages/PG-SOT223/PG-SOT223-3-1
+// 3 terminal version. 20220429, wk
+#macro IC_SMD_SOT223_3(value,logo)
+  IC_SMD_BASE(6.5,3.5,1.66,7,2,1,4.6,2.3,0.70,3,0.25,0.25,0,0,0,0,1.0,0,logo)
+#end
+
 // similar to
 // https://www.infineon.com/cms/en/product/packages/PG-SOT223/PG-SOT223-4-33/
 #macro IC_SMD_SOT223(value,logo) // 4 terminal version
   IC_SMD_BASE(6.5,3.5,1.6,7,3,1,2.3,2.3,0.75,3,0.2,0.2,0,0,0,0,1.0,0,logo)
 #end
 
-// https://www.infineon.com/cms/en/product/packages/PG-SOT223/PG-SOT223-3-1
-// 3 terminal version. 20220429, wk
-#macro IC_SMD_SOT223_3(value,logo)
-  IC_SMD_BASE(6.5,3.5,1.66,7,2,1,4.6,2.3,0.70,3,0.25,0.25,0,0,0,0,1.0,0,logo)
+// https://en.wikipedia.org/wiki/Small-outline_transistor#SOT223-5
+// 5 terminal version. 20220429, wk
+#macro IC_SMD_SOT223_5(value,logo)
+  IC_SMD_BASE(6.5,3.5,1.66,7,4,1,1.27,1.27,0.46,3,0.25,0.25,0,0,0,0,1.0,0,logo)
+#end
+
+// https://en.wikipedia.org/wiki/Small-outline_transistor#SOT223-8
+// 8 terminal version. 20220429, wk
+#macro IC_SMD_SOT223_8(value,logo)
+  IC_SMD_BASE(6.6,3.5,1.66,7,4,4,1.53,1.53,0.8,0.8,0.25,0.25,0,0,0,0,1.0,0,logo)
 #end
