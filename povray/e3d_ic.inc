@@ -24,6 +24,7 @@
 #include "IC/SMT/QFN.inc"
 #include "IC/SMT/QSOP.inc"
 #include "IC/SMT/SO.inc"
+#include "IC/SMT/SOT23.inc"
 #include "IC/SMT/SSOP.inc"
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
@@ -35,15 +36,8 @@
 
 
 
-#macro IC_SMD_SOT23(value,logo)
-IC_SMD_BASE(2.9,1.3,1,2.8,2,1,1.9,1.9,0.45,0.45,0.13,0.1,0,0,0,1.5,0.7,0,logo)
-#end
-#macro IC_SMD_SOT23_5(value,logo)
-IC_SMD_BASE(2.9,1.6,1,2.8,3,2,0.95,1.90,0.35,0.35,0.13,0.1,0,0,0,1.5,0.7,0,logo)
-#end
-#macro IC_SMD_SOT23_6(value,logo)
-IC_SMD_BASE(2.9,1.6,1,2.8,3,3,0.95,0.95,0.35,0.35,0.13,0.1,0,1,0,0.3,0.7,0,logo)
-#end
+
+
 #macro IC_SMD_SOT223(value,logo)
 IC_SMD_BASE(6.5,3.5,1.6,7,3,1,2.3,2.3,0.75,3,0.2,0.2,0,0,0,0,1.0,0,logo)
 #end
