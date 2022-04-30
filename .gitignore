@@ -340,3 +340,7 @@ ulp/via-mask-one-layer.ulp
 ulp/warning.bmp
 ulp/DESCRIPTION
 doc/devtools/PartTest.png
+doc/devtools/PartTest.pov
+*.exe
+doc/devtools/*.dll
+doc/devtools/*.dll.a
