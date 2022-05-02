@@ -42,10 +42,8 @@
  * 20220429, full rewrite, wk
  ******************************************************************************/
 
-#macro IC_SMD_TO252_BASE(value,logo,npins,grid,pinwidth)
+#macro IC_SMD_TO252_BASE(value,logo,npins,grid,pinwidth,centercut)
   union {
-     #local diff = box { <-pinwidth/2-0.3,-0.1,-7> <+pinwidth/2+0.3,2,-3.9> }
-
      // plastic base without pins.
      IC_SMD_BASE(6.5,6.1,2.3,11.74,0,0,4.57,4.57,0.75,0.75,0.5,0.075,0,0,0,6.5/2,1.0,0,logo)
 
@@ -75,7 +73,10 @@
               };
            GRID_BASE(pin, grid, npins, 1)
            }
-        object { diff }
+        #if (centercut = 1)
+            #local diff = box { <-pinwidth/2-0.3,-0.1,-7> <+pinwidth/2+0.3,2,-3.9> }
+            object { diff }
+        #end
         texture{e3d_tex_silver}
         }
 
@@ -89,7 +90,7 @@
  * fdd4141-348236.pdf
  ******************************************************************************/
 #macro IC_SMD_TO252_3(value,logo)
-   IC_SMD_TO252_BASE(value,logo,3,2.29,0.75)
+   IC_SMD_TO252_BASE(value,logo,3,2.29,0.75,1)
 #end
 
 /*******************************************************************************
@@ -97,5 +98,19 @@
  * https://www.infineon.com/dgdl/PG-TO252-5-13-PO.eps?fileId=5546d462580663ef015807046a6f1080
  ******************************************************************************/
 #macro IC_SMD_TO252_5(value,logo)
-   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6)
+   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,1)
+#end
+
+/*******************************************************************************
+ * 5 pin, moved by 0.833mm in y
+ ******************************************************************************/
+#macro IC_SMD_TO252_5_11(value,logo)
+   object { IC_SMD_TO252_5(value,logo) translate<0,0,-0.833> }
+#end
+
+/*******************************************************************************
+ * TO-252-5-P2, as IC_SMD_TO252_5, but with center pin.
+ ******************************************************************************/
+#macro IC_SMD_TO252_5_P2(value,logo)
+   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,0)
 #end

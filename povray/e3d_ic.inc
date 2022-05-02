@@ -48,10 +48,7 @@
 #macro IC_TR_TO263(value,logo)
 IC_SMD_BASE(10.2,8.7,4.2,15.2,2,1,5.1,1.9,1.4,10.2,0.5,0.1,0,0,0,1.5,1.0,0,logo)
 #end
-// Friedrich Bleikamp
-#macro IC_SMD_DPAK_369C(value,logo)
-IC_SMD_BASE(6.1,6.5,2.2,11,2,0,4.5,0,0.8,0,0.5,0.1,0,4,0,1.5,1.0,0,logo)
-#end
+
 
 
 
