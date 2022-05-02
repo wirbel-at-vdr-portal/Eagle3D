@@ -29,6 +29,7 @@
 #include "IC/SMT/SOT363.inc"
 #include "IC/SMT/SSOP.inc"
 #include "IC/SMT/TO252_DPAK.inc"
+#include "IC/SMT/TO263_D2PAK.inc"
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
 #include "IC/SMT/TSSOP.inc"
@@ -42,12 +43,6 @@
 
 
 
-
-//SMD-Transistoren aus SIC_GRND abgeleitet
-
-#macro IC_TR_TO263(value,logo)
-IC_SMD_BASE(10.2,8.7,4.2,15.2,2,1,5.1,1.9,1.4,10.2,0.5,0.1,0,0,0,1.5,1.0,0,logo)
-#end
 
 
 
