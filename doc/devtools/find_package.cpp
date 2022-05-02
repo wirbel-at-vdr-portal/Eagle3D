@@ -41,6 +41,12 @@ int main(int n, char** args) {
      std::string package_name;
      std::string package_desc;
 
+     // blacklisted libs here.
+     if ((file == "ref-packages-longpad.lbr") or
+         (file == "ref-packages.lbr") or
+         (file == "smd-ipc.lbr"))
+        continue;
+
      for(auto line:lines) {
         LineNumber++;
 
