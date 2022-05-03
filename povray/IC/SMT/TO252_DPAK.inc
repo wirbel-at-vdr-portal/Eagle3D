@@ -89,7 +89,7 @@
  * https://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-11/
  * fdd4141-348236.pdf
  ******************************************************************************/
-#macro IC_SMD_TO252_3(value,logo)
+#macro IC_SMD_TO252_3Lead(value,logo)
    IC_SMD_TO252_BASE(value,logo,3,2.29,0.75,1)
 #end
 
@@ -97,20 +97,20 @@
  * 5 pin
  * https://www.infineon.com/dgdl/PG-TO252-5-13-PO.eps?fileId=5546d462580663ef015807046a6f1080
  ******************************************************************************/
-#macro IC_SMD_TO252_5(value,logo)
+#macro IC_SMD_TO252_5Lead(value,logo)
    IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,1)
 #end
 
 /*******************************************************************************
  * 5 pin, moved by 0.833mm in y
  ******************************************************************************/
-#macro IC_SMD_TO252_5_11(value,logo)
-   object { IC_SMD_TO252_5(value,logo) translate<0,0,-0.833> }
+#macro IC_SMD_TO252_5Lead_11(value,logo)
+   object { IC_SMD_TO252_5Lead(value,logo) translate<0,0,-0.833> }
 #end
 
 /*******************************************************************************
- * TO-252-5-P2, as IC_SMD_TO252_5, but with center pin.
+ * TO-252-5-P2, as IC_SMD_TO252_5Lead, but with center pin.
  ******************************************************************************/
-#macro IC_SMD_TO252_5_P2(value,logo)
+#macro IC_SMD_TO252_5Lead_P2(value,logo)
    IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,0)
 #end
