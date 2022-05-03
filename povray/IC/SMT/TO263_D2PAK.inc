@@ -106,38 +106,77 @@
 
 
 
-/*************************************************************************************************************************************
- * TO-263 3 pin; 7L Center Lead NOT Trimmed                                                                                                                                    
- ************************************************************************************************************************************/
-#macro IC_TO_263_7(value,logo)
-   object{IC_SMD_BASE(10.41,   //LK      = Laenge des Kunststoff(Seite der Pins)
-                8.89,   //BK      = Breite des Kunststoff(Seite ohne Pins)
-                4.485,  //HK      = Hoehe des Kunststoff
-               15.2,    //B       = Laenge der Seite ohne Pins ueber alles
-                7,      //pin_u   = Pins auf der "unteren" Seite
-                1,      //pin_o   = Pins auf der "oberen" Seite
-               1.27,    //ptch_u  = Pitch der Pins auf der "unteren" Seite
-               1.9,     //ptch_o  = Pitch der Pins auf der "oberen" Seite
-               0.715,   //pinb_u  = Breite der Pins auf der "unteren" Seite
-              10.41,    //pinb_o  = Breite der Pins auf der  "oberen" Seite
-               0.51,    //pin_s   = Staerke des Pinmaterials
-               0.1,     //di_pcb  = Abstand des Kunststoff zur Platine
-               0,       //kor_w   = Korrekturwinkel
-               0,       //pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
-               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45Â° statt 10Â° verwendet (SO)
-               1.5,     //pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
-               2.0,     //besch_s = Scalefaktor der Beschriftung
-               0,       //besch_w = Wenn != 0 wird Beschriftung gedreht
-               logo     //logo  = Name of the logo
-               ) translate <0,0,1> }
+/*******************************************************************************
+ * TO-263 7 pin; 7L Center Lead NOT Trimmed
+ * 20220503, full rewrite, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_7LEAD(value,logo)
+  IC_SMD_TO263_BASE(value,logo,7,1.27,0.6,0.6,0)
 #end
 
 
-//SMD-Transistoren aus SIC_GRND abgeleitet
+
+
+
+
+
+
+
+/*******************************************************************************
+ * This is IC_SMD_TO263_3LEAD(), but moved in y by 7.25 mm.
+ * diode.lbr:TO263AB
+ *
+ * deprecated package, part no longer available.
+ * DO NOT USE FOR NEW DEVELOPMENT.
+ * 20220503, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263AB_3LEAD(value,logo)
+  object { IC_SMD_TO263_3LEAD(value,logo) translate<0,0,7.25> }
+#end
+
+
+/*******************************************************************************
+ * This is IC_SMD_TO263_7LEAD(), but moved in y by 7.25 mm.
+ * diode.lbr:TO263AB
+ *
+ * deprecated package, part no longer available.
+ * DO NOT USE FOR NEW DEVELOPMENT.
+ * 20220503, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_3LEAD_1(value,logo)
+  IC_SMD_TO263_BASE(value,logo,7,1.27,0.6,0.6,0)
+#end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*
+
+OK  : diode.lbr:4963:                    package: 'TO263AB'            description: 'DIODEPackage: TO263AB'                                                                devices: BY229B,
+nOK : infineon.lbr:1485:                 package: 'P-TO263-7-1'        description: 'Plastic Transistor Single Outline Package P-TO263-7-1 Option E3180Source: www.infineon.com .. tle5205-2.pdf'devices: TLE5205-2,
+nOK : infineon.lbr:1693:                 package: 'PG-TO263-7-3'       description: 'PG-TO263-7-3Source: 1859075.pdf (Farnell)'                                            devices: IPB180N06S4-H1,
+nOK : led.lbr:2863:                      package: 'P-TO263-7-1'        description: 'P-TO263-7-1 (Plastic Transistor Single Outline)Source: Infineon .. tle4242.pdf'       devices: TLE4242,
+nOK : linear.lbr:2275:                   package: 'TO263-3'            description: 'TO-263 3-Lead Plastic Surface Mount Package NS Package Number TS3BSource. cache.national.com/ds/LM/LM2937-2.5.pdf'devices: LM340?-*,LM2937,
+nOK : on-semiconductor.lbr:156:          package: 'TO263_5'            description: 'TO-263 5-LEAD (TV)Source: ON Semiconductor .. 4101.pdf'                               devices: CAT4101,
+nOK : transistor-fet.lbr:965:            package: 'TO263'              description: 'SMALL OUTLINE TRANSISTORTS-005'                                                       devices: SPB80P06P,
+
 
 https://www.topline.tv/DPAK_D2PAK.html
 TO-263-4  4L Center Lead Trimmed SOT426
