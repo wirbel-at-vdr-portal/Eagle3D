@@ -42,41 +42,42 @@
  * 20220502, full rewrite, wk
  ******************************************************************************/
 
-#macro IC_SMD_TO263_BASE(value,logo,npins,grid,pinwidth,centercut)
+#macro IC_SMD_TO263_BASE(value,logo,npins,grid,pinwidth,pinwidth2,centercut)
   union {
      // plastic base without pins.
-
      IC_SMD_BASE((10.41+9.78)/2,
                  (9.40+8.38)/2,
                  (4.65+4.32)/2,
                  (15.37+15.11)/2,
                  0,0,4.57,4.57,0.75,0.75,0.5,0.075,0,0,0,6.5/2,1.5,0,logo)
+     box {<-(10.41+9.78)/4,0.075,-(9.40+8.38)/4>
+          <+(10.41+9.78)/4,(4.65+4.32)/4,+(9.40+8.38)/4>
+          texture{e3d_tex_ic_body_1} }
 
 
      // backside/cooling plate
      difference {
         union {
-           box { <-9.5/2,0.05,8.38/2> <+9.5/2,0.55,8.38/2+(1.587+1.485)/2> }
+           box { <-(10.41+9.78)/4,0.05,(9.40+8.38)/4>
+                 <+(10.41+9.78)/4,0.55,(9.40+8.38)/4+(1.587+1.485)/2> }
            box { <-7.62/2,0.05,8/2+1.27-8> <+7.62/2,0.55,9/2+0.1> }
            }
-        box { <-3/2,0,-1> <+3/2,0.6,+1> translate <0,0,7.72> rotate<0,+35,0>}
-        box { <-3/2,0,-1> <+3/2,0.6,+1> translate <0,0,7.72> rotate<0,-35,0>}
-/*
-        cylinder { <0,4,0> <0,4.7,0> 1 }
-        cylinder { <-3.5/2,0,+2.5> <-3.5/2,0.6,+2.5> 0.3 }
-        box { <+6.0/2,0.0,+2.5-0.6/2> <+3.5/2,0.6,+2.5+0.6/2> }
-        box { <-6.0/2,0.0,+2.5-0.6/2> <-3.5/2,0.6,+2.5+0.6/2> }
-*/
+        box { <-3/2,0,-1> <+3/2,0.6,+1> translate <0,0,8> rotate<0,+35,0>}
+        box { <-3/2,0,-1> <+3/2,0.6,+1> translate <0,0,8> rotate<0,-35,0>}
 
+        box { <-1.5/2,0.0,+1.5/2> <+1.5/2,0.6,-1.5/2> translate<-3.7,0,+3.7>}
+        box { <-1.5/2,0.0,+1.5/2> <+1.5/2,0.6,-1.5/2> translate<+3.7,0,+3.7>}
         texture{e3d_tex_silver}
         }
+
      // pins
      difference {
         union {
            #local pin = union {
-              object { TOOLS_RECT_BOGEN(0.5,100,0.5,1.25,2.8,0.0) rotate <0,-90,180> translate <0,1.6-0.5/2,-6.5> }
-              object { TOOLS_RECT_BOGEN(0.5,100,0.5,1.25,2.0,0.0) rotate <0,90,   0> translate <0,    0.5/2,-6.4> }
-              box { <-0.9/2,1.6-0.5,-3.7-0.6/2> <+0.9/2,1.6    ,-3.7+0.6/2> }
+              object { TOOLS_RECT_BOGEN(0.5,100,0.5,pinwidth2,2.8,0.0) rotate <0,-90,180> translate <0,1.6-0.5/2,-6.5> }
+              object { TOOLS_RECT_BOGEN(0.5,100,0.5,pinwidth2,2.0,0.0) rotate <0,90,   0> translate <0,    0.5/2,-6.4> }
+              box { <-pinwidth/2,1.6-0.5,-5.7-0.6/2>
+                    <+pinwidth/2,1.6    ,-5.7+2.6/2> }
               texture{e3d_tex_silver}
               };
            GRID_BASE(pin, grid, npins, 1)
@@ -91,21 +92,58 @@
      translate <0,0,+2.54>
      }
 #end
+    
 
 
 
+/*******************************************************************************
+ * TO-263 3 pin; 2L Center Lead Trimmed (TO-263AA, TO-263AB or SOT404)
+ * 20220503, full rewrite, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_3LEAD(value,logo)
+  IC_SMD_TO263_BASE(value,logo,3,2.54,1.25,0.75,1)
+#end
+
+
+
+/*************************************************************************************************************************************
+ * TO-263 3 pin; 7L Center Lead NOT Trimmed                                                                                                                                    
+ ************************************************************************************************************************************/
+#macro IC_TO_263_7(value,logo)
+   object{IC_SMD_BASE(10.41,   //LK      = Laenge des Kunststoff(Seite der Pins)
+                8.89,   //BK      = Breite des Kunststoff(Seite ohne Pins)
+                4.485,  //HK      = Hoehe des Kunststoff
+               15.2,    //B       = Laenge der Seite ohne Pins ueber alles
+                7,      //pin_u   = Pins auf der "unteren" Seite
+                1,      //pin_o   = Pins auf der "oberen" Seite
+               1.27,    //ptch_u  = Pitch der Pins auf der "unteren" Seite
+               1.9,     //ptch_o  = Pitch der Pins auf der "oberen" Seite
+               0.715,   //pinb_u  = Breite der Pins auf der "unteren" Seite
+              10.41,    //pinb_o  = Breite der Pins auf der  "oberen" Seite
+               0.51,    //pin_s   = Staerke des Pinmaterials
+               0.1,     //di_pcb  = Abstand des Kunststoff zur Platine
+               0,       //kor_w   = Korrekturwinkel
+               0,       //pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
+               0,       //pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45Â° statt 10Â° verwendet (SO)
+               1.5,     //pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
+               2.0,     //besch_s = Scalefaktor der Beschriftung
+               0,       //besch_w = Wenn != 0 wird Beschriftung gedreht
+               logo     //logo  = Name of the logo
+               ) translate <0,0,1> }
+#end
 
 
 //SMD-Transistoren aus SIC_GRND abgeleitet
 
-#macro IC_TR_TO263(value,logo)
-  IC_SMD_TO263_BASE(value,logo,3,2.54,1.25,1)
-#end
+
 
 /*
-TO263:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:IC_TR_TO263(:TO263:
-TO263-3:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:IC_TR_TO263(:TO263:
 
+https://www.topline.tv/DPAK_D2PAK.html
+TO-263-4  4L Center Lead Trimmed SOT426
+TO-263-5  5L Full 5 Leads Untrimmed 1.27mm
+TO-263-7     Center Lead Trimmed SOT427
+TO-263-7F 7L Full 7 Leads Untrimmed 0.85mm
  	
 
     TO-263-X1X2 (where X1 is the lead count and X2 is the length of the centre pin).
@@ -150,45 +188,3 @@ transistor-fet.lbr:965:            package: 'TO263'              description: 'S
 
 */
 
-
-
-/*******************************************************************************
- * 2 pin, short middle cut off
- * https://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-11/
- * fdd4141-348236.pdf
- ******************************************************************************/
-#macro IC_SMD_TO263_2S(value,logo)
-  IC_SMD_BASE(value,logo,3,2.29,0.75,1)
-#end
-
-
-/*******************************************************************************
- * 3 pin
- * https://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-11/
- * fdd4141-348236.pdf
- ******************************************************************************/
-//#macro IC_SMD_TO252_3(value,logo)
-//   IC_SMD_TO252_BASE(value,logo,3,2.29,0.75,1)
-//#end
-
-/*******************************************************************************
- * 5 pin
- * https://www.infineon.com/dgdl/PG-TO252-5-13-PO.eps?fileId=5546d462580663ef015807046a6f1080
- ******************************************************************************/
-//#macro IC_SMD_TO252_5(value,logo)
-//   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,1)
-//#end
-
-/*******************************************************************************
- * 5 pin, moved by 0.833mm in y
- ******************************************************************************/
-//#macro IC_SMD_TO252_5_11(value,logo)
-//   object { IC_SMD_TO252_5(value,logo) translate<0,0,-0.833> }
-//#end
-
-/*******************************************************************************
- * TO-252-5-P2, as IC_SMD_TO252_5, but with center pin.
- ******************************************************************************/
-//#macro IC_SMD_TO252_5_P2(value,logo)
-//   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,0)
-//#end
