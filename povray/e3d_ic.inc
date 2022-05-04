@@ -4,16 +4,6 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-
-#ifndef(__ic_inc)
-#declare __ic_inc = true;
-
-#ifndef(inc_testmode)
-#declare inc_testmode=true;
-#include "e3d_tools.inc"
-#undef inc_testmode
-#end
-
 #include "IC/THT/DIL.inc"
 #include "IC/THT/SIL.inc"
 #include "IC/THT/multiwatt.inc"
@@ -29,6 +19,7 @@
 #include "IC/SMT/SOT363.inc"
 #include "IC/SMT/SSOP.inc"
 #include "IC/SMT/TO252_DPAK.inc"
+#include "IC/SMT/TO253_SOT143.inc"
 #include "IC/SMT/TO263_D2PAK.inc"
 #include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
@@ -158,119 +149,4 @@ IC_SMD_MLF_GRND(9,9,0.9,16,16,16,16,0.5,0.23,0.25,0.60,0.02,0,1,5.4,5.4)
 
 
 
-/********************************************************************************************************************************************
-//Makro fuer 4-pin SMD-IC's mit Pins nur auf 2-Seiten (SO, TSOP, TSSOP usw.)
-//Bas Laarhoven <aesmail@xs4all.nl>
-//LK      = Laenge des Kunststoff(Seite der Pins)
-//BK      = Breite des Kunststoff(Seite ohne Pins)
-//HK      = Hoehe des Kunststoff
-//B       = Laenge der Seite ohne Pins ueber alles
-//pinb_1  = Breite der Pin 1
-//pinb_x  = Breite der anderen Pins
-//pin_s   = Staerke des Pinmaterials
-//di_pcb  = Abstand des Kunststoff zur Platine
-//kor_w   = Korrekturwinkel
-//pin0_m  = Pin-1-Markierung: 0 = keine, 1 = Farbklecks, 2 = Kerbe wie bei DIP, 3 = PowerSO, 4 = DPAK
-//pin0_45 = Wenn != 0 wird an der unteren Seite ein Winkel am Koerper von 45° statt 10° verwendet (SO)
-//pin0_a  = Abstand des Pin0-Kennzeichners vom Rand
-//besch_s = Scalefaktor der Beschriftung
-********************************************************************************************************************************************/
-#macro IC_SMD_SOT143_GRND(LK,BK,HK,B,pinb_1,pinb_x,pin_s,di_pcb,kor_w,pin0_m,pin0_45,pin0_a,besch_s)
-union{
-    difference{
-        box{<LK/2,di_pcb,BK/2><-LK/2,di_pcb+HK,-BK/2>}
-        box{<LK/2+0.01,0,0><-LK/2-0.1,-HK,1>  rotate<10,0,0> translate<0,(di_pcb+HK)/2-pin_s/2,BK/2>}
-        box{<LK/2+0.01,0,0><-LK/2-0.1,-HK,-1>  rotate<-10,0,0> translate<0,(di_pcb+HK)/2-pin_s/2,-BK/2>}
-        box{<LK/2+0.01,0,0><-LK/2-0.1,HK,1>  rotate<-10,0,0> translate<0,(di_pcb+HK)/2+pin_s/2,BK/2>}
-        box{<LK/2+0.01,0,0><-LK/2-0.1,HK,-1>  rotate<10,0,0> translate<0,(di_pcb+HK)/2+pin_s/2,-BK/2>}
-        #if(pin0_45!=0)
-            box{<LK/2+0.01,0,0><-LK/2-0.1,HK,-1>  rotate<45,0,0> translate<0,(di_pcb+HK)/2+pin_s/2+pin_s*1.5,-BK/2>}
-        #end
-        box{<0,0,-BK/2-0.1><1,HK,BK/2+0.1>  rotate<0,0,10> translate<LK/2,(di_pcb+HK)/2+pin_s/2,0>}
-        box{<0,0,-BK/2-0.1><-1,HK,BK/2+0.1>  rotate<0,0,-10> translate<-LK/2,(di_pcb+HK)/2+pin_s/2,0>}
-        box{<0,0,-BK/2-0.1><1,-HK,BK/2+0.1>  rotate<0,0,-10> translate<LK/2,(di_pcb+HK)/2-pin_s/2,0>}
-        box{<0,0,-BK/2-0.1><-1,-HK,BK/2+0.1>  rotate<0,0,10> translate<-LK/2,(di_pcb+HK)/2-pin_s/2,0>}
-        #if(pin0_m = 0)
-            #local TextX = -LK/2+0.1*LK;
-        #end // ohne Pin-1-Markierung
-    }
-    
-    union{       
-        object{IC_SMD_PIN((HK+di_pcb)/2+pin_s/2,(B-BK)/2,pinb_x,pin_s) rotate<0,90,0> translate<0.95,0,-BK/2>}
-        object{IC_SMD_PIN((HK+di_pcb)/2+pin_s/2,(B-BK)/2,pinb_1,pin_s) rotate<0,90,0> translate<-0.75,0,-BK/2>}
-        object{IC_SMD_PIN((HK+di_pcb)/2+pin_s/2,(B-BK)/2,pinb_x,pin_s) rotate<0,-90,0> translate<0.95,0,BK/2>}
-        object{IC_SMD_PIN((HK+di_pcb)/2+pin_s/2,(B-BK)/2,pinb_x,pin_s) rotate<0,-90,0> translate<-0.95,0,BK/2>}
-        texture{e3d_tex_silver}
-    }
-      
-    text{ttf besch_font value 0.2,0 rotate<90,0,0> scale<besch_s,1,besch_s> translate<TextX,HK+di_pcb+0.01,-besch_s/2> texture{e3d_tex_ic_marking_bright} }
-    
-    rotate<0,kor_w,0>
-    
-    texture{e3d_tex_ic_body_1}
-}
-#end
 
-#macro IC_SMD_SOT143(value)
-IC_SMD_SOT143_GRND(3.0,1.4,1.1,2.9,0.88,0.48,0.12,0.1,0,0,30,0,0.7)
-#end
-
-
-/**********************************************************************
-Testing
-**********************************************************************/
-#ifndef(inc_testmode)
-          
-//Size of the Grid Plane (+/- span)
-#local XYZ_span=20;
-
-//Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}}	//X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}		//Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}	//Z
-
-// Useful GRIDS:
-#local XYZ_step= 1 ;          // axis increment
-#local XYZ_cnt = 0;           //  loop counter
-#local xyz_thick = 0.05;     // grid line thickness
-
-// GRID PLANES: Remove comment begin/end to activate & select PLANES:
-#while (XYZ_cnt <= XYZ_span)
-
-	cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}		// Positive Z-Lines
-	cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}	// Negative Z-Lines
-	
-	//cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}		// Positive Y-Z Plane Lines
-	//cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}	// Negative Y-Z Plane Lines
-	
-	//cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}		// Positive Y-X Plane Lines
-	//cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}}	// Negative Y-X Plane Lines
-	
-	cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Positive X-Lines
-	cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}	// Negative X-Lines
-
-	#local XYZ_cnt = XYZ_cnt+XYZ_step;
-#end
-
-camera
-{       
-	#local tt = 40;				//let's you change the distance easily
-	location <-tt,tt,-tt>
-	//location<0,5,-50>			//alternate location
-	look_at <0,0,0>				//best to select the approximate centre of the object
-	angle 30
-}
-
-light_source { <100, 100, -100> White}
-light_source { <-100, 100, -100> White }
-light_source { <-100, 100, 100> White }
-light_source { <100, 100, 100> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-background{Grey}
-
-#end
-
-#end
-//End of Macros
