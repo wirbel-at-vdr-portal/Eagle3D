@@ -10,6 +10,7 @@
 
 #include "e3d_tools.inc"
 #include "DIODE/DFxxS-bridge.inc"
+#include "DIODE/MBxS-bridge.inc"
 
 // ////////////////////////////////////////////////////////////
 // Original file: ./1_DIODE_DIS_LED_7SEG_SYMBOL.inc.src
