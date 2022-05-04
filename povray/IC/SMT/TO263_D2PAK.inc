@@ -38,7 +38,6 @@
 
 /*******************************************************************************
  * TO263 = D2PAK
- *
  * 20220502, full rewrite, wk
  ******************************************************************************/
 
@@ -97,18 +96,53 @@
 
 
 /*******************************************************************************
- * TO-263 3 pin; 2L Center Lead Trimmed (TO-263AA, TO-263AB or SOT404)
+ * TO-263 2 pin; 2L Center Lead Trimmed (TO-263AA, TO-263AB or SOT404)
  * 20220503, full rewrite, wk
  ******************************************************************************/
-#macro IC_SMD_TO263_3LEAD(value,logo)
+#macro IC_SMD_TO263_2LEAD(value,logo)
   IC_SMD_TO263_BASE(value,logo,3,2.54,1.25,0.75,1)
 #end
 
 
+/*******************************************************************************
+ * TO-263 3 pin; 3L Center Lead NOT Trimmed
+ * 20220504, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_3LEAD(value,logo)
+  IC_SMD_TO263_BASE(value,logo,3,2.54,1.25,0.75,0)
+#end
+
 
 /*******************************************************************************
- * TO-263 7 pin; 7L Center Lead NOT Trimmed
- * 20220503, full rewrite, wk
+ * TO-263 4 pin; 5L Center Lead Trimmed
+ * 20220504, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_4LEAD(value,logo)
+  IC_SMD_TO263_BASE(value,logo,5,1.70,0.75,0.75,1)
+#end
+
+
+/*******************************************************************************
+ * TO-263 5 pin; 5L Center Lead NOT Trimmed
+ * 20220504, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_5LEAD(value,logo)
+  IC_SMD_TO263_BASE(value,logo,5,1.70,0.75,0.75,0)
+#end
+
+
+/*******************************************************************************
+ * TO-263 6 pin; 7L Center Lead Trimmed, ie. IPB180N06S4-H1
+ * 20220504, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_6LEAD(value,logo)
+  IC_SMD_TO263_BASE(value,logo,7,1.27,0.6,0.6,1)
+#end
+
+
+/*******************************************************************************
+ * TO-263 7 pin; 7L Center Lead NOT Trimmed, ie. OPA552
+ * 20220504, full rewrite, wk
  ******************************************************************************/
 #macro IC_SMD_TO263_7LEAD(value,logo)
   IC_SMD_TO263_BASE(value,logo,7,1.27,0.6,0.6,0)
@@ -120,110 +154,56 @@
 
 
 
+/*******************************************************************************
+ *
+ * IMPORTANT:  DO NOT USE ANYTHING BELOW FOR NEW DEVELOPMENT.
+ *
+ ******************************************************************************/
 
 
 /*******************************************************************************
- * This is IC_SMD_TO263_3LEAD(), but moved in y by 7.25 mm.
+ * This is IC_SMD_TO263_2LEAD(), but moved in y.
  * diode.lbr:TO263AB
  *
- * deprecated package, part no longer available.
- * DO NOT USE FOR NEW DEVELOPMENT.
+ * deprecated package: DO NOT USE FOR NEW DEVELOPMENT.
  * 20220503, wk
  ******************************************************************************/
-#macro IC_SMD_TO263AB_3LEAD(value,logo)
-  object { IC_SMD_TO263_3LEAD(value,logo) translate<0,0,7.25> }
+#macro IC_SMD_TO263_2LEAD_1(value,logo)
+  object { IC_SMD_TO263_2LEAD(value,logo) translate<0,0,7.25> }
 #end
 
 
 /*******************************************************************************
- * This is IC_SMD_TO263_7LEAD(), but moved in y by 7.25 mm.
- * diode.lbr:TO263AB
+ * This is IC_SMD_TO263_5LEAD(), but moved in y.
+ * on-semiconductor.lbr:CAT4101
  *
- * deprecated package, part no longer available.
- * DO NOT USE FOR NEW DEVELOPMENT.
- * 20220503, wk
+ * deprecated package: DO NOT USE FOR NEW DEVELOPMENT.
+ * 20220504, wk
  ******************************************************************************/
-#macro IC_SMD_TO263_3LEAD_1(value,logo)
-  IC_SMD_TO263_BASE(value,logo,7,1.27,0.6,0.6,0)
+#macro IC_SMD_TO263_5LEAD_1(value,logo)
+  object { IC_SMD_TO263_5LEAD(value,logo) translate<0,0,-2.5> }
 #end
 
 
+/*******************************************************************************
+ * This is IC_SMD_TO263_6LEAD(), but moved in y.
+ * infineon.lbr:IPB180N06S4
+ *
+ * deprecated package: DO NOT USE FOR NEW DEVELOPMENT.
+ * 20220504, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_6LEAD_1(value,logo)
+  object { IC_SMD_TO263_6LEAD(value,logo) translate<0,0,-3.5> }
+#end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-OK  : diode.lbr:4963:                    package: 'TO263AB'            description: 'DIODEPackage: TO263AB'                                                                devices: BY229B,
-nOK : infineon.lbr:1485:                 package: 'P-TO263-7-1'        description: 'Plastic Transistor Single Outline Package P-TO263-7-1 Option E3180Source: www.infineon.com .. tle5205-2.pdf'devices: TLE5205-2,
-nOK : infineon.lbr:1693:                 package: 'PG-TO263-7-3'       description: 'PG-TO263-7-3Source: 1859075.pdf (Farnell)'                                            devices: IPB180N06S4-H1,
-nOK : led.lbr:2863:                      package: 'P-TO263-7-1'        description: 'P-TO263-7-1 (Plastic Transistor Single Outline)Source: Infineon .. tle4242.pdf'       devices: TLE4242,
-nOK : linear.lbr:2275:                   package: 'TO263-3'            description: 'TO-263 3-Lead Plastic Surface Mount Package NS Package Number TS3BSource. cache.national.com/ds/LM/LM2937-2.5.pdf'devices: LM340?-*,LM2937,
-nOK : on-semiconductor.lbr:156:          package: 'TO263_5'            description: 'TO-263 5-LEAD (TV)Source: ON Semiconductor .. 4101.pdf'                               devices: CAT4101,
-nOK : transistor-fet.lbr:965:            package: 'TO263'              description: 'SMALL OUTLINE TRANSISTORTS-005'                                                       devices: SPB80P06P,
-
-
-https://www.topline.tv/DPAK_D2PAK.html
-TO-263-4  4L Center Lead Trimmed SOT426
-TO-263-5  5L Full 5 Leads Untrimmed 1.27mm
-TO-263-7     Center Lead Trimmed SOT427
-TO-263-7F 7L Full 7 Leads Untrimmed 0.85mm
- 	
-
-    TO-263-X1X2 (where X1 is the lead count and X2 is the length of the centre pin).
-             ^^ nothing: middle lead
-                short cut off: S
-
-TO-263 (Transistor Outline 263, JEDEC)
-TO-263AB (TO-263-3S only)
-TO-279 (TO-263 THIN only, by Texas Instruments)
-
-Variants
-
-    TO-263-X1X2 (where X1 is the lead count and X2 is the length of the centre pin).
-    TO-263 THIN (a thinner variant of the standard TO-263 package by Texas Instruments).
-
-Pin Count
-  Depends on variant.
-  3, 5, 7, or 9 (this is X1). All packages also have a thermal pad.
-Pitch
-  Depends on variant.
-  TO-263-3, TO-263-3S: 2.54mm
-
-    TO-263-7, TO-263-7S: 1.7mm
-
-Package LxWxH
-Height:
-
-    All except TO-263 THIN: 4.57mm
-    TO-263 THIN: 2.00mm
-
-
-
-
-
-diode.lbr:4963:                    package: 'TO263AB'            description: 'DIODEPackage: TO263AB'                                                                devices: BY229B,
-infineon.lbr:1485:                 package: 'P-TO263-7-1'        description: 'Plastic Transistor Single Outline Package P-TO263-7-1 Option E3180Source: www.infineon.com .. tle5205-2.pdf'devices: TLE5205-2,
-infineon.lbr:1693:                 package: 'PG-TO263-7-3'       description: 'PG-TO263-7-3Source: 1859075.pdf (Farnell)'                                            devices: IPB180N06S4-H1,
-led.lbr:2863:                      package: 'P-TO263-7-1'        description: 'P-TO263-7-1 (Plastic Transistor Single Outline)Source: Infineon .. tle4242.pdf'       devices: TLE4242,
-linear.lbr:2275:                   package: 'TO263-3'            description: 'TO-263 3-Lead Plastic Surface Mount Package NS Package Number TS3BSource. cache.national.com/ds/LM/LM2937-2.5.pdf'devices: LM340?-*,LM2937,
-on-semiconductor.lbr:156:          package: 'TO263_5'            description: 'TO-263 5-LEAD (TV)Source: ON Semiconductor .. 4101.pdf'                               devices: CAT4101,
-transistor-fet.lbr:965:            package: 'TO263'              description: 'SMALL OUTLINE TRANSISTORTS-005'                                                       devices: SPB80P06P,
-
-*/
-
+/*******************************************************************************
+ * This is IC_SMD_TO263_7LEAD(), but moved in y.
+ * infineon.lbr:TLE5205-2G
+ *
+ * deprecated package: DO NOT USE FOR NEW DEVELOPMENT.
+ * 20220504, wk
+ ******************************************************************************/
+#macro IC_SMD_TO263_7LEAD_1(value,logo)
+  object { IC_SMD_TO263_7LEAD(value,logo) translate<0,0,-3.5> }
+#end

@@ -84,34 +84,58 @@
      }
 #end
 
+
 /*******************************************************************************
- * 3 pin; 2L Center Lead Trimmed
- * https://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-11/
- * fdd4141-348236.pdf
+ * TO-252 2 pin; 2L Center Lead Trimmed
  ******************************************************************************/
-#macro IC_SMD_TO252_3LEAD(value,logo)
+#macro IC_SMD_TO252_2LEAD(value,logo)
    IC_SMD_TO252_BASE(value,logo,3,2.29,0.75,1)
 #end
 
+
 /*******************************************************************************
- * 5 pin; 4L Center Lead Trimmed
- * https://www.infineon.com/dgdl/PG-TO252-5-13-PO.eps?fileId=5546d462580663ef015807046a6f1080
+ * TO-252 3 pin; 3L Center Lead NOT Trimmed
  ******************************************************************************/
-#macro IC_SMD_TO252_5LEAD(value,logo)
+#macro IC_SMD_TO252_3LEAD(value,logo)
+   IC_SMD_TO252_BASE(value,logo,3,2.29,0.75,0)
+#end
+
+
+/*******************************************************************************
+ * TO-252 4 pin; 4L Center Lead Trimmed
+ ******************************************************************************/
+#macro IC_SMD_TO252_4LEAD(value,logo)
    IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,1)
 #end
 
 /*******************************************************************************
- * 5 pin; 4L Center Lead Trimmed
- * IC_SMD_TO252_5LEAD moved by 0.833mm in PCB layout
+ * TO-252 5 pin; 5L Center Lead NOT Trimmed
+ * TO-252-5-P2
  ******************************************************************************/
-#macro IC_SMD_TO252_5LEAD_11(value,logo)
-   object { IC_SMD_TO252_5LEAD(value,logo) translate<0,0,-0.833> }
+#macro IC_SMD_TO252_5LEAD(value,logo)
+   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,0)
 #end
 
+
+
+
+
+
+
 /*******************************************************************************
- * TO-252-5-P2, 5L Center Lead NOT Trimmed
+ *
+ * IMPORTANT:  DO NOT USE ANYTHING BELOW FOR NEW DEVELOPMENT.
+ *
  ******************************************************************************/
-#macro IC_SMD_TO252_5LEAD_P2(value,logo)
-   IC_SMD_TO252_BASE(value,logo,5,1.14,0.6,0)
+
+/*******************************************************************************
+ * This is IC_SMD_TO252_4LEAD(), but moved in y.
+ * infineon.lbr:BTS428L2
+ * micro-siemens.lbr:BTS428L2
+ *
+ * deprecated package: DO NOT USE FOR NEW DEVELOPMENT.
+ * 20220503, wk
+ ******************************************************************************/
+#macro IC_SMD_TO252_4LEAD_1(value,logo)
+   object { IC_SMD_TO252_4LEAD(value,logo) translate<0,0,-0.833> }
 #end
