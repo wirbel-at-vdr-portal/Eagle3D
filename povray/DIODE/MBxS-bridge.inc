@@ -7,11 +7,13 @@
 
 /*******************************************************************************
  * Macros for SMD bridge MB...S from Vishay
- *   - MB2S, MB4S, MB6S
+ *   - MB1S, MB2S, MB4S, MB6S, MB8S
  * Author: Philippe Boucheny <philippe.boucheny(at)free.fr>
  * Rev. 1.0  16/12/06
+ *
+ * modified && renamend: 20220504, wk
  ******************************************************************************/
-#macro IC_SMD_MB2S_BASE(code)
+#macro DIODE_SMD_MBS(value)
   union {
      //Body
      difference {
@@ -30,6 +32,24 @@
 
      // Marking
      union {
+        #local code = value;
+
+        #if (value = "MB1S")
+            #local code = "1";
+        #end
+        #if (value = "MB2S")
+            #local code = "2";
+        #end
+        #if (value = "MB4S")
+            #local code = "4";
+        #end
+        #if (value = "MB6S")
+            #local code = "6";
+        #end
+        #if (value = "MB8S")
+            #local code = "8";
+        #end
+
         text {ttf global_fontfile_arial_bold code 0.02, 0  scale 1.2 rotate<90,180,0> translate<+0.45,2.66,-0.2>}  
         text {ttf global_fontfile_arial_bold "2N3" 0.02, 0 scale 1.2 rotate<90,180,0> translate<+1.2,2.66,+1.3>}
         text {ttf global_fontfile_arial_bold "-" 0.02, 0   scale 1 rotate<90,0,0> translate<+1.07,2.66,-1.35>}
@@ -46,17 +66,4 @@
         texture{e3d_tex_silver}
         }
      }
-#end
-
-
-#macro IC_SMD_MB2S()
-  IC_SMD_MB2S_BASE("2")
-#end
-
-#macro IC_SMD_MB4S()
-  IC_SMD_MB2S_BASE("4")
-#end
-
-#macro IC_SMD_MB6S()
-  IC_SMD_MB2S_BASE("6")
 #end
