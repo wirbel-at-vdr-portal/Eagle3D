@@ -127,18 +127,14 @@ union{
 }
 #end
 
-//MLP-28 aus CP2102-GM Datasheet
-#macro IC_SMD_MLF_28_050MM(value)
-IC_SMD_MLF_GRND(5,5,0.9,7,7,7,7,0.5,0.23,0.25,0.55,0.02,0,1,3.15,3.15)
-#end
+
+
+
 //MLF-32 aus ATmega8 Datasheet
 #macro IC_SMD_MLF_32_050MM(value)
 IC_SMD_MLF_GRND(5,5,0.9,8,8,8,8,0.5,0.23,0.25,0.60,0.02,0,1,3.1,3.1)
 #end
-//MLF-44 aus ATmega16 Datasheet
-#macro IC_SMD_MLF_44_050MM(value)
-IC_SMD_MLF_GRND(7,7,0.9,11,11,11,11,0.5,0.23,0.25,0.64,0.02,0,1,5,5)
-#end
+
 //MLF-32 aus ATmega128 Datasheet
 #macro IC_SMD_MLF_64_050MM(value)
 IC_SMD_MLF_GRND(9,9,0.9,16,16,16,16,0.5,0.23,0.25,0.60,0.02,0,1,5.4,5.4)
