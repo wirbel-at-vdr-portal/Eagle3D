@@ -1,0 +1,117 @@
+
+
+
+
+IC_SMD_TO252_2LEAD    : linear.lbr:1467:                   package: 'TO252'              description: 'SMALL OUTLINE TRANSISTORTS-003'                                                       devices: 78*,
+IC_SMD_TO252_2LEAD    : national-semiconductor.lbr:677:    package: 'TO252'              description: 'SMALL OUTLINE TRANSISTORPAD-Name corrected by www.ti.com/lit/ds/symlink/lp2950-n.pdf' devices: LP2950,LM2936?*,
+IC_SMD_TO252_2LEAD    : transistor-fet.lbr:897:            package: 'TO252'              description: 'SMALL OUTLINE TRANSISTORTS-003'                                                       devices: SPD30P06P,FDD4141,
+IC_SMD_TO252_2LEAD    : transistor-neu-to92.lbr:406:       package: 'DPAK'               description: 'DPAK CASE 369-07Source MOTOROLA / ON Semiconductor mjd32-d.pdf'
+IC_SMD_TO252_2LEAD    : transistor-power.lbr:2495:         package: 'D-PAK_TO252AA'      description: 'D-Pak (TO-252AA) Source: www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf'    devices: IRF?5305,
+IC_SMD_TO252_2LEAD    : transistor-fet.lbr:1092:           package: 'TO252-51'           description: 'Transistor Outline PackageP-TO252-5-1 SIEMENS TLE4270'                                devices: SPD50P03LG,
+IC_SMD_TO252_4LEAD_1  : infineon.lbr:145:                  package: 'TO252-5-11'         description: 'Dpak-5 Pin P-TO252-5-11 Source: www.infineon.com .. BTS428L2_20030912.pdf'            devices: BTS428L2,
+IC_SMD_TO252_4LEAD_1  : micro-siemens.lbr:8404:            package: 'TO252-5-11'         description: 'Dpak-5 Pin P-TO252-5-11 Source: www.infineon.com .. BTS428L2_20030912.pdf'            devices: BTS428L2,
+IC_SMD_TO263_2LEAD    : transistor-fet.lbr:965:            package: 'TO263'              description: 'SMALL OUTLINE TRANSISTORTS-005'                                                       devices: SPB80P06P,
+IC_SMD_TO263_2LEAD_1  : diode.lbr:4963:                    package: 'TO263AB'            description: 'DIODEPackage: TO263AB'                                                                devices: BY229B,
+IC_SMD_TO263_3LEAD    : linear.lbr:2275:                   package: 'TO263-3'            description: 'TO-263 3-Lead Plastic Surface Mount Package NS Package Number TS3BSource. cache.national.com/ds/LM/LM2937-2.5.pdf'devices: LM340?-*,LM2937,
+IC_SMD_TO263_5LEAD_1  : on-semiconductor.lbr:156:          package: 'TO263_5'            description: 'TO-263 5-LEAD (TV)Source: ON Semiconductor .. 4101.pdf'                               devices: CAT4101,
+IC_SMD_TO263_6LEAD_1  : infineon.lbr:1693:                 package: 'PG-TO263-7-3'       description: 'PG-TO263-7-3Source: 1859075.pdf (Farnell)'                                            devices: IPB180N06S4-H1,
+IC_SMD_TO263_7LEAD    : _Winfried.lbr:                     package: 'TO-263-7'           description: 'TO263 7-pin package'                                                                  devices: OPA552,
+IC_SMD_TO263_7LEAD_1  : infineon.lbr:1485:                 package: 'P-TO263-7-1'        description: 'Plastic Transistor Single Outline Package P-TO263-7-1 Option E3180Source: www.infineon.com .. tle5205-2.pdf'devices: TLE5205-2,
+DIODE_SMD_MBS         : rectifier.lbr:1173:                package: 'MBS'                description: 'Surface Mount Glass Passivated Bridge RectifiersSource: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf'devices: B*S,
+
+
+IC_SMD_SOT143         : avago.lbr:383:                     package: 'SOT143_AVAGO'       description: 'SOT-143 AVAGOSource: <a href="www.farnell.com/datasheets/461166.pdf"< Data sheet </a>'devices: HSMS-2855,
+IC_SMD_SOT143         : diode.lbr:4154:                    package: 'SOT143-R'           description: 'SOT143 / SOT143B Reflow solderingSource: Philips SC01_Mounting_1996.pdf / BAS70_1PS7XSB70_SER_8.pdf'devices: BAS70-07,
+IC_SMD_SOT143         : transistor-small-signal.lbr:1713:  package: 'SOT143R_INFINEON'   description: 'Small Outline Transistor; 4 leads Reflow solderingINFINEON, www.infineon.com/cmc_upload/0/000/010/257/eh_db_5b.pdf'devices:
+IC_SMD_SOT143         : transistor-small-signal.lbr:1731:  package: 'SOT143W_INFINEON'   description: 'Small Outline Transistor; 4 leads Wave solderingINFINEON, www.infineon.com/cmc_upload/0/000/010/257/eh_db_5b.pdf'devices:
+IC_SMD_SOT143         :                                             'SOT143B'
+
+
+$ ./doc/devtools/find_package.exe /C/Programme_2/EAGLE-7.6.0/lbr/ *MLP*
+IC_SMD_MLP11_050MM    : silabs.lbr:84:                     package: 'MLP11'              description: 'Tiny MLP packageSource: www.silabs.com/products/microcontroller .. C8051F30xrev2_3.pdf'devices: C8051F30*,
+IC_SMD_QFN20_050MM    : silabs.lbr:351:                    package: 'MLP20'              description: 'MLP 20Source: www.silabs.com .. C8051F33x.pdf'                                        devices: C8051F330*,
+IC_SMD_QFN28_050MM    : silabs.lbr:160:                    package: 'MLP28'              description: 'MLP 28Source: www.silabs.com .. CP2101.pdf'                                           devices: CP210*,
+IC_SMD_QFP44_050MM    : atmel.lbr:6080:                    package: 'MLF44-TH'           description: '44M1 Micro Lead Frame package (MLF)Source: www.atmel.com/dyn/resources/prod_documents/doc2593.pdf'devices: MEGA16-M,MEGA32-M,MEGA8515-M,MEGA8535_M,ATMEGA644*,XMEGA16A4,
+IC_SMD_QFN64_050MM    : gennum.lbr:127:                    package: 'QFN64-9X9'          description: 'QFN64-9X9Source: www.gennum.com/video/pdf/36655DOC.pdf'                               devices: GS4911B,GS4910B,
+IC_SMD_QFN20_065MM    : atmel.lbr:4581:                    package: 'MLF20-5X5-TH'       description: 'HP-VFQFP-N20 QFN 20 -5 x 5 mm Micro Lead Frame package (MLF)Source: www.atmel.com/dyn/resources/prod_documents/doc4533.pdf'devices: T7024,
+
+
+
+
+$ ./doc/devtools/find_package.exe /C/Programme_2/EAGLE-7.6.0/lbr/ *MLF*
+
+
+atmel.lbr:6646:                    package: 'MLF20-4X4'          description: '20M1 20-pad, 4 x 4 x 0.8 mm BodySource: <a href="www.atmel.com/Images/doc2543.pdf"> Data sheet </a>'devices: AT90S2313,
+micrel.lbr:77:                     package: 'MLF44'              description: 'MLF-44 Micro Lead Frame PackageSource: www.micrel.com/_PDF/HBW/sy89537l.pdf'          devices: S89537,
+micrel.lbr:267:                    package: 'MLF10'              description: 'MLF 10 (ML) 2.5 x 2.5 mm, 10-Pin PackageSource: Source: www.micrel.com/_PDF/mic2297.pdf'devices: MIC2297,
+
+$ ./doc/devtools/find_package.exe /C/Programme_2/EAGLE-7.6.0/lbr/ *QFN*
+
+
+micronas.lbr:506:                  package: 'PQFN64-1'           description: 'Plastic Quad Flat Non-leaded package 64 pins, 9 × 9 × 0.85 mm³, 0.5 mm pitchSource: www.micronas.com .. mas35x9f_3ds.pdf'devices: MAS35*9,
+
+74xx-eu.lbr:1715:                  package: 'DHVQFN14'           description: 'plastic dual in-line compatible thermal enhanced very thin quad flat package; no leads; 14 terminals; body 2.5 x 3 x 0.85 mmSource: www.nxp.com/documents/data_sheet/74ABT125.pdf'devices: 74*125,
+74xx-us.lbr:1882:                  package: 'DHVQFN14'           description: 'plastic dual in-line compatible thermal enhanced very thin quad flat package; no leads; 14 terminals; body 2.5 x 3 x 0.85 mmSource: www.nxp.com/documents/data_sheet/74ABT125.pdf'devices: 74*125,
+allegro.lbr:902:                   package: 'QFN28ET'            description: '28 Pin QFN ETSource: www.allegromicro.com/en/Products/Part_Numbers/4983/4983.pdf'     devices: A4983,
+allegro.lbr:963:                   package: 'QFN20'              description: 'ES Package, 20-Contact QFN with Exposed Thermal Pad<a href="www.allegromicro.com/en/Products/Part_Numbers/3906/3906.pdf"> Data sheet </a>'devices: A3906,
+atmel.lbr:4917:                    package: 'QFN44ML8X8'         description: '44-Lead Plastic Quad Flat No Lead Package (ML) 8x8 mm Body (QFN)Source: ww1.microchip.com/downloads/en/devicedoc/39632c.pdf'devices:
+cypress.lbr:1606:                  package: 'QFN48'              description: '48-pin QFN 7 x 7 mm LF48Source: v4.cypress.com/cfuploads/img/products/cywusb6934.pdf' devices: CYWUSB6934,
+cypress.lbr:2935:                  package: 'QFN56'              description: '56-Lead QFN 8 x 8 mm LF56ASource: Source: www.cypress.com .. cy7c68013a_5.pdf'        devices: CY7C6801*A-56QFN,CY7C6801*A-56QFN,
+cypress.lbr:4192:                  package: 'QFN32-MAX06'        description: '32-Pin (5x5 mm 0.60 MAX) QFNSource: www.cypress.com .. 38-12025_0P_V.pdf'             devices:
+cypress.lbr:4387:                  package: 'QFN32-SAWN'         description: '32-Pin (5x5 mm Sawn) QFNSource: www.cypress.com .. 38-12025_0P_V.pdf'                 devices: CY8C21434,CY8C21634,
+cypress.lbr:4533:                  package: 'QFN32'              description: '32-Pin (5x5 mm) QFNSource: www.cypress.com .. 38-12025_0P_V.pdf'                      devices: CY8C21434,CY8C21634,
+freescale.lbr:2148:                package: 'QFN48'              description: '48-pin QFN 7 x 7 mm LF48Source: v4.cypress.com/cfuploads/img/products/cywusb6934.pdf' devices: MC9S08GT*A-48,
+freescale.lbr:2790:                package: 'QFN32'              description: 'QFN 32 5 x 5 mmSource: datasheets.maxim-ic.com/en/ds/MAX7042.pdf'                     devices: MC9S08GT*A-32,
+ftdichip.lbr:144:                  package: 'QFN32'              description: 'QFN 32Source: www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf'               devices: FT232R,FT232B,
+ftdichip.lbr:784:                  package: 'QFN16'              description: 'QFN-16 4 x 4 mmSource: <a href="www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT230X.pdf"> Data sheet </a>'devices: FT230X,
+gennum.lbr:77:                     package: 'QFN16-4X4'          description: 'QFN-16 4x4 mmSource: www.gennum.com/video/pdf/37184DOC.pdf'                           devices: GS2974,
+gennum.lbr:217:                    package: 'QFN40-6X6'          description: 'QFN40 6x6 mmSource: www.gennum.com/video/pdf/39145DOC.pdf'                            devices: GS4915,
+infineon.lbr:1118:                 package: 'PG-VQFN-108-2'      description: 'PG-VQFN-108-2Source: Z8B00137584_POL_PG_VQFN_108_2_02.pdf'                            devices:
+linear-technology.lbr:1342:        package: 'QFN24-4X4'          description: 'UF Package 24-Lead (4mm × 4mm) Plastic QFNSource: cds.linear.com/docs/Datasheet/5598f.pdf'devices: LT5598,
+linear-technology.lbr:1441:        package: 'QFN38-5X7'          description: 'UHF Package 38-Lead Plastic QFN (5mm × 7mm)Source: <a href="cds.linear.com/docs/Datasheet/2444589fb.pdf"> Data sheet </a>'devices: LTC2444,LTC2448,LTC2445,LTC2449,
+linear-technology.lbr:1573:        package: 'QFN3X3-6'           description: '16-Lead Plastic QFN (3mm × 3mm)Source: cds.linear.com/docs/en/datasheet/3645f.pdf'   devices: LT3645,
+maxim.lbr:2650:                    package: '68LQFN'             description: '68L QFNpdfserv.maxim-ic.com/package_dwgs/21-0142D.PDF'                                devices: MAX12527,
+maxim.lbr:2924:                    package: 'QFN32'              description: 'QFN 32 5 x 5 mmSource: datasheets.maxim-ic.com/en/ds/MAX7042.pdf'                     devices: MAX7042,
+maxim.lbr:3576:                    package: 'TQFN24-EP'          description: '24 TQFN-EP 24 T2444-4Source: datasheets.maxim-ic.com/en/ds/MAX4947-MAX4948.pdf'       devices: MAX4948ETG,MAX4947ETG,MAX7313ATG,
+maxim.lbr:3905:                    package: 'TQFN32'             description: 'TQFN 7x7 mmSource: www.maxim-ic.com/packages .. 90-0125.pdf'                          devices: DS2726,
+maxim.lbr:4015:                    package: 'TQFN20-5X5'         description: 'THIN QFN 20 5x5x0.75mmSource: pdfserv.maxim-ic.com/package_dwgs/21-0140.PDF'          devices: DS8500,
+micro-philips.lbr:5355:            package: 'HVQFN24'            description: 'plastic thermal enhanced very thin quad flat package SOT616-1Source: PCA9555_5.pdf'   devices: PCA9555,
+micro-philips.lbr:5556:            package: 'HVQFN32'            description: 'HVQFN32 (SOT617-3) plastic thermal enhanced very thin quad flat package; no leadsSource: www.semiconductors.philips.com/acrobat_download/packages/SOT617-3.pdf'devices:
+micro-philips.lbr:5698:            package: 'HVQFN40'            description: 'HVQFN40 plastic thermal enhanced very thin quad flat package SOT618-1Source: www.semiconductors.philips.com/acrobat_download/packages/SOT618-1.pdf'devices: PN531,TEA5764HN,
+micro-philips.lbr:6354:            package: 'HVQFN28'            description: 'HVQFN28: plastic thermal enhanced very thin quad flat package SOT788-1Source: <a href="www.nxp.com/documents/data_sheet/P89LPC933_934_935_936.pdf"> Data sheet</a>'devices: P98LPC935,
+micro-philips.lbr:6709:            package: 'HVQFN16_4X4'        description: 'HVQFN16: plastic thermal enhanced very thin quad flat package; no leads; 16 terminals; body 4 x 4 x 0.85 mm SOT629-1Source: PCA9534_3.pdf'devices: PCA9534,
+micro-philips.lbr:6865:            package: 'HVQFN16_3X3'        description: 'HVQFN16: plastic thermal enhanced very thin quad flat package; no leads; 16 terminals; body 3 x 3 x 0.85 mm SOT758-1Source: PCA9534_3.pdf'devices: PCA9534,
+micro-renesas.lbr:319:             package: 'P-HVQFN32-5X5'      description: 'P-HVQFN32-5X5</TABLE>'                                                                devices: R5F10PBDYNA,RL78/F14-32,RL78/F13-32,
+micro-renesas.lbr:895:             package: 'P-HVQFN48-7X7'      description: 'P-HVQFN48-7X7</TABLE>'                                                                devices: RL78/F14-48,RL78/F13-48,
+microchip.lbr:2673:                package: 'QFN28'              description: '28-Lead Plastic Quad Flat No Lead Package (ML)Source: ww1.microchip.com/downloads/en/DeviceDoc/39605c.pdf'devices: PIC18F1*20?,PIC16*F1826/27,
+microchip.lbr:2918:                package: 'QFN28-ML_6X6MM'     description: 'QFN28-ML_6X6MMSource: www.microchip.com .. 39637a.pdf'                                devices: PIC18F2*80,MCP23017,MCP23S17,PIC24FJ64GA002_QFN,PIC24FJ48GA002_QFN,PIC24FJ32GA002_QFN,PIC24FJ16GA002_QFN,PIC24HJ12GP202,DSPIC33FJ12MC202,DSPIC33FJ12GP202,PIC16F19*,PIC18F2*J53,
+microchip.lbr:3200:                package: 'QFN44ML8X8'         description: '44-Lead Plastic Quad Flat No Lead Package (ML) 8x8 mm Body (QFN)Source: ww1.microchip.com/downloads/en/devicedoc/39632c.pdf'devices: PIC18F4*_QFN,PIC16F193*ML,PIC18F4*J53ML,
+microchip.lbr:3839:                package: 'QFN40ML6X6MM'       description: '40-Lead Plastic Quad Flat 6x6x0.9 mm Body [QFN]Source: ww1.microchip.com/downloads/en/DeviceDoc/39776a.pdf'devices: MRF24J40,
+microchip.lbr:4241:                package: 'QFN16-4X4'          description: '16-Lead Plastic Quad Flat, No Lead Package (ML) - 4x4x0.9mm Body [QFN]Source: ww1.microchip.com/downloads/en/DeviceDoc/41203E.pdf'devices: PIC16F688,
+microchip.lbr:4818:                package: 'UQFN28_4X4MM'       description: '28-Lead Platic Ultra Thin Quad Flat, No Lead Package (MV) - 4x4x0.5 mm Body [UQFN]Source: PIC16F1516.pdf'devices: PIC16*F1516/18,
+microchip.lbr:4917:                package: 'UQFN40ML5X5MM'      description: '40-Lead Platic Ultra Thin Quad Flat, No Lead Package (MV) - 5x5mm Body [UQFN]Source: www.microchip.com PIC16F1516.pdf'devices: PIC16*F1517/19,
+microwave.lbr:78:                  package: 'QFN24'              description: 'QFN 4x4 mmSource: www.hittite.com/product_info/product_specs/dividersdetectors/hmc394lp4.pdf'devices: HMC394LP4,HMC385LP4,HMC641LC4,
+microwave.lbr:168:                 package: 'QFN16'              description: 'QFN 16 3x3 mmSource: www.hittite.com .. hmc492lp3.pdf'                                devices: HMC492,HMC541LP3,
+quantum-research-group.lbr:3078:   package: 'QFN32'              description: 'QFN 32 5 x 5 mmSource: www.qprox.com ... QT1106_-8IR0.07-16262.pdf'                   devices: QT1106,
+sharp.lbr:77:                      package: 'VQFN036-P-0606'     description: 'VQFN036-P-0606Source: document.sharpsma.com/files/IR2E49U6.pdf'                       devices: IR2E49U6,
+sharp.lbr:365:                     package: 'HQFN052'            description: 'HQFN052-P-0707Source: document.sharpsma.com/files/IR2D20U.pdf'                        devices: IR2D20U,
+silabs.lbr:565:                    package: 'QFN-10'             description: '10-Pin QFNSource: www.silabs.com/Support%20Documents/TechnicalDocs/Si1145-46-47.pdf'  devices: SI114*,
+st-microelectronics.lbr:3121:      package: 'QFN-44-7X7'         description: 'QFN-44 (7x7x1.8mm)Source: www.st.com/stonline/products/literature/ds/11020.pdf'       devices: LIS3L02AQ3,
+texas.lbr:10140:                   package: 'QFN40-6X6'          description: 'RHA (S-PQFP-N40) 6 x 6 mmSource: focus.ti.com/lit/ds/symlink/tps65020.pdf'            devices: TPS65020,CC2540,
+texas.lbr:10395:                   package: 'QFN40-5X5'          description: 'RSB (S-PWQFN-N40)Source: RSB_TPS65023RSB_Land_Pattern.pdf'                            devices: TPS65023,
+texas.lbr:10557:                   package: 'QFN20_3,5X4,5'      description: 'RHL (R-PQFP-N20)Source: www.ti.com .. TI-bq24125.pdf'                                 devices: BQ24120,BQ24123,BQ24125,
+texas.lbr:11631:                   package: 'QFN16'              description: 'RTE (S-PQFP-N16) 3x3 mmSource: www.ti.com .. tpa6132a2 direct path stereo $.65.pdf'   devices: TPA6132A2,
+texas.lbr:21651:                   package: 'RHA_S-PVQFN-N40'    description: 'RHA (S-PVQFN-N40)Source: focus.ti.com/lit/ds/symlink/cc2531.pdf'                      devices: CC2531,
+
+
+
+
+
+// not easy or separate :
+zetex.lbr:432:                     package: 'MLP322'             description: 'MLP322 PackageSource: www.zetex.com/ .. zxtam322.pdf'                                 devices: ZXTAM322,
+zetex.lbr:461:                     package: 'MLP832'             description: 'MLP832 PackageSource: www.zetex.com/ .. zxtd1m832.pdf'                                devices: ZXTD1M832,
+zetex.lbr:503:                     package: 'MLP5'               description: 'MLP5 PackageSource : Analog and Discrete Components Databook ST306 April 2001'        devices:
+linear-technology.lbr:482:         package: 'QFN64-9X9'          description: '<b<WP Package 64-Lead QFN Multipad (9mm × 9mm)Source: www.linear.com ..'             devices: LTC3611,LTC3610,
+
+// NOT FIXABLE: package duplicates with same name, but different layout.
+nOK                   : led.lbr:2863:                      package: 'P-TO263-7-1'        description: 'P-TO263-7-1 (Plastic Transistor Single Outline)Source: Infineon .. tle4242.pdf'       devices: TLE4242,

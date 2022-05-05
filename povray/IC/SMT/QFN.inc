@@ -200,10 +200,10 @@ union {
 
 /*******************************************************************************
  * 64-pin (16x16) QFN64 with 0.5mm pitch and chamfer
- * FIXME:  to be found and currently considered broken.
+ * gennum.lbr:GS4910B; atmel.lbr:MEGA128-M
  * 20220505, wk
  ******************************************************************************/
-#macro QFN64_090_090_009_054_054(value)
+#macro IC_SMD_QFN64_050MM(value)
    object {
       #local A  = 0.90; // A  - Overall Height
       #local A1 = 0.02; // A1 - Standoff
