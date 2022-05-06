@@ -130,10 +130,7 @@ union{
 
 
 
-//MLF-32 aus ATmega8 Datasheet
-#macro IC_SMD_MLF_32_050MM(value)
-IC_SMD_MLF_GRND(5,5,0.9,8,8,8,8,0.5,0.23,0.25,0.60,0.02,0,1,3.1,3.1)
-#end
+
 
 
 

@@ -177,6 +177,28 @@ union {
 
 
 /*******************************************************************************
+ * 32-pin (8x8) QFN with 0.5mm pitch and chamfer
+ * silabs.lbr:CP2102-GM
+ * 20220506, wk
+ ******************************************************************************/
+#macro IC_SMD_QFN32_050MM(value)
+   object {
+      #local A  = 0.90; // A  - Overall Height
+      #local A1 = 0.02; // A1 - Standoff
+      #local A3 = 0.20; // A3 - Contact Thickness
+      #local b  = 0.23; // b  - Contact Width
+      #local D  = 5.00; // D  - Overall Length
+      #local D2 = 3.50; // D2 - Exposed Pad Length
+      #local e  = 0.50; // e  - Pitch
+      #local E  = 5.00; // E  - Overall Width
+      #local E2 = 3.50; // E2 - Exposed Pad Width
+      #local L  = 0.40; // L  - Contact Length
+      QFN_base(8,8,e,A,A1,A3,E,E2,D,D2,b,L,"chamfer",value)
+      }
+#end
+
+
+/*******************************************************************************
  * 44-pin (11x11) QFN44 with 0.5mm pitch and chamfer
  * atmel.lbr:MEGA16-M,MEGA32-M,MEGA8515-M,MEGA8535_M,ATMEGA644*,XMEGA16A4
  * 20220505, wk
@@ -238,5 +260,49 @@ union {
       #local E2 = 3.10; // E2 - Exposed Pad Width
       #local L  = 0.60; // L  - Contact Length
       QFN_base(5,5,e,A,A1,A3,E,E2,D,D2,b,L,"chamfer",value)
+      }
+#end
+
+
+/*******************************************************************************
+ * 28-pin (7x7) QFN28 with 0.65mm pitch and chamfer
+ * atmel.lbr:T7024
+ * 20220505, wk
+ ******************************************************************************/
+#macro IC_SMD_QFN28_065MM(value)
+   object {
+      #local A  = 0.90; // A  - Overall Height
+      #local A1 = 0.05; // A1 - Standoff
+      #local A3 = 0.20; // A3 - Contact Thickness
+      #local b  = 0.30; // b  - Contact Width
+      #local D  = 6.00; // D  - Overall Length
+      #local D2 = 4.10; // D2 - Exposed Pad Length
+      #local e  = 0.65; // e  - Pitch
+      #local E  = 6.00; // E  - Overall Width
+      #local E2 = 4.10; // E2 - Exposed Pad Width
+      #local L  = 0.60; // L  - Contact Length
+      QFN_base(7,7,e,A,A1,A3,E,E2,D,D2,b,L,"chamfer",value)
+      }
+#end
+
+
+/*******************************************************************************
+ * 32-pin (8x8) QFN32 with 0.65mm pitch and chamfer
+ * maxim.lbr:DS2726
+ * 20220505, wk
+ ******************************************************************************/
+#macro IC_SMD_QFN32_065MM(value)
+   object {
+      #local A  = 0.75; // A  - Overall Height
+      #local A1 = 0.02; // A1 - Standoff
+      #local A3 = 0.20; // A3 - Contact Thickness
+      #local b  = 0.30; // b  - Contact Width
+      #local D  = 7.00; // D  - Overall Length
+      #local D2 = 4.70; // D2 - Exposed Pad Length
+      #local e  = 0.65; // e  - Pitch
+      #local E  = 7.00; // E  - Overall Width
+      #local E2 = 4.70; // E2 - Exposed Pad Width
+      #local L  = 0.55; // L  - Contact Length
+      QFN_base(8,8,e,A,A1,A3,E,E2,D,D2,b,L,"chamfer",value)
       }
 #end
