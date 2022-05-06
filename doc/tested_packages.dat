@@ -42,13 +42,6 @@ IC_SMD_QFN20_065MM    : atmel.lbr:4581:                    package: 'MLF20-5X5-T
 IC_SMD_QFN28_065MM    : micro-philips.lbr:6354:            package: 'HVQFN28'            description: 'HVQFN28: plastic thermal enhanced very thin quad flat package SOT788-1'               devices: P98LPC935,
 IC_SMD_QFN32_065MM    : maxim.lbr:3905:                    package: 'TQFN32'             description: 'TQFN 7x7 mmSource: www.maxim-ic.com/packages .. 90-0125.pdf'                          devices: DS2726,
 
-$ ./doc/devtools/find_package.exe /C/Programme_2/EAGLE-7.6.0/lbr/ *QFN*32*
-                   
-
-
-
-
-
 
 
 $ ./doc/devtools/find_package.exe /C/Programme_2/EAGLE-7.6.0/lbr/ *MLF*
