@@ -390,36 +390,29 @@ union {
        }
 
       union {
-         object { IC_SMD_MLF_64_050MM("MEGA16U2") scale 0.6 rotate<0,-90,0> translate<0,0,-21>}
+         object { IC_SMD_QFN64_050MM("MEGA16U2") scale 0.6 rotate<0,180,0> translate<0,0,-21>}
          union{
             text {ttf global_fontfile_arial "IC3" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<-3,0.05,-19>}
             texture{col_slk}
             }
          }
       union {
-         #macro CMODS6_FPGA_XILINX(value)
-            IC_SMD_MLF_GRND(
-              8.0, //LK    = Laenge des Kunststoff (x-Achse)
-              8.0, //BK    = Breite des Kunststoff (z-Achse)
-              0.8, //H     = Hoehe des Kunststoff (Y-Achse)
-                0, //pin_l = Anzahl Pins links
-                0, //pin_r = Anzahl Pins rechts
-                0, //pin_o = Anzahl Pins "oben"
-                0, //pin_u = Anzahl Pins "unten"
-              0.5, //pitch = Abstand der einzelnen Pins
-              0.1, //pin_br= Breite eines Pins
-              0.1, //pin_h = Hoehe eines Pins
-              0.1, //pin_t = Tiefe eines Pins
-              0.2, //HKoP  = Hoehe des Kunststoffs ueber der Platine (Y-Achse)
-                0, //KORW  = Korrekturwinkel
-                1, //kp1ab = Wenn 0, wird Abschraegung an Pin1 erzeugt
-                0, //cool_x= Kuehlflaeche unter dem Chip (X-Achse)
-                0, //cool_z= Kuehlflaeche unter dem Chip (Z-Achse)
-                )
-         #end
-         object { CMODS6_FPGA_XILINX("XC6SLX4") rotate<0,-90,0> translate<0,0,2.5>}
-         union {
-            text {ttf global_fontfile_arial "IC5" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<4,0.05,-5>}
+         // we do not have an BGA macro yet, emulate CPG196 as a QFN.
+         #local A  = 1.00; // A  - Overall Height
+         #local A1 = 0.20; // A1 - Standoff
+         #local A3 = 0.10; // A3 - Contact Thickness
+         #local b  = 0.10; // b  - Contact Width
+         #local D  = 8.00; // D  - Overall Length
+         #local D2 = 0.00; // D2 - Exposed Pad Length
+         #local e  = 0.00; // e  - Pitch
+         #local E  = 8.00; // E  - Overall Width
+         #local E2 = 0.00; // E2 - Exposed Pad Width
+         #local L  = 0.00; // L  - Contact Length
+         object { QFN_base(0,0,e,A,A1,A3,E,E2,D,D2,b,L,"","XC6SLX4")
+            rotate<0,180,0> translate <0,0,2.5>
+            }
+         text { ttf global_fontfile_arial "IC5" 0.2, 0 scale 1.8
+            rotate<90,-90,0> translate<4,0.05,-5>
             texture{col_slk}
             }
          }
