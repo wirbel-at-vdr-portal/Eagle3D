@@ -26,8 +26,10 @@ IC_SMD_SOT143         : transistor-small-signal.lbr:1713:  package: 'SOT143R_INF
 IC_SMD_SOT143         : transistor-small-signal.lbr:1731:  package: 'SOT143W_INFINEON'   description: 'Small Outline Transistor; 4 leads Wave solderingINFINEON, www.infineon.com/cmc_upload/0/000/010/257/eh_db_5b.pdf'devices:
 IC_SMD_SOT143         :                                             'SOT143B'
 
-IC_SMD_MLP11_050MM    : silabs.lbr:84:                     package: 'MLP11'              description: 'Tiny MLP packageSource: www.silabs.com/products/microcontroller.. C8051F30xrev2_3.pdf'devices: C8051F30*,
+
+IC_SMD_MLP11_050MM    : silabs.lbr:84:                     package: 'MLP11'              description: 'Tiny MLP  www.silabs.com/products/microcontroller.. C8051F30xrev2_3.pdf'              devices: C8051F30*,
 IC_SMD_QFN20_050MM    : silabs.lbr:351:                    package: 'MLP20'              description: 'MLP 20Source: www.silabs.com .. C8051F33x.pdf'                                        devices: C8051F330*,
+IC_SMD_QFN20_050MM    : atmel.lbr:6646:                    package: 'MLF20-4X4'          description: '20M1 20-pad, 4x4x0.8 www.atmel.com/Images/doc2543.pdf                                 devices: AT90S2313,
 IC_SMD_QFN28_050MM    : silabs.lbr:160:                    package: 'MLP28'              description: 'MLP 28Source: www.silabs.com .. CP2101.pdf'                                           devices: CP210*,
 IC_SMD_QFN32_050MM    : cypress.lbr:4533:                  package: 'QFN32'              description: '32-Pin (5x5 mm) QFNSource: www.cypress.com .. 38-12025_0P_V.pdf'                      devices: CY8C21434,CY8C21634,
 IC_SMD_QFN32_050MM    : freescale.lbr:2790:                package: 'QFN32'              description: 'QFN 32 5 x 5 mmSource: datasheets.maxim-ic.com/en/ds/MAX7042.pdf'                     devices: MC9S08GT*A-32,
@@ -37,6 +39,7 @@ IC_SMD_QFN32_050MM    : maxim.lbr:2924:                    package: 'QFN32'     
 IC_SMD_QFN32_050MM    : quantum-research-group.lbr:3078:   package: 'QFN32'              description: 'QFN 32 5 x 5 mmSource: www.qprox.com ... QT1106_-8IR0.07-16262.pdf'                   devices: QT1106,
 
 IC_SMD_QFP44_050MM    : atmel.lbr:6080:                    package: 'MLF44-TH'           description: '44M1 package MLF  www.atmel.com/dyn/resources/prod_documents/doc2593.pdf'             devices: MEGA16-M,MEGA32-M,MEGA8515-M,MEGA8535_M,ATMEGA644*,XMEGA16A4,
+IC_SMD_QFP44_050MM    : micrel.lbr:77:                     package: 'MLF44'              description: 'MLF-44 Micro Lead Frame PackageSource: www.micrel.com/_PDF/HBW/sy89537l.pdf'          devices: S89537,
 IC_SMD_QFN64_050MM    : gennum.lbr:127:                    package: 'QFN64-9X9'          description: 'QFN64-9X9Source: www.gennum.com/video/pdf/36655DOC.pdf'                               devices: GS4911B,GS4910B,
 IC_SMD_QFN20_065MM    : atmel.lbr:4581:                    package: 'MLF20-5X5-TH'       description: 'HP-VFQFP-N20 QFN 20 -5 x 5 mm www.atmel.com/dyn/resources/prod_documents/doc4533.pdf' devices: T7024,
 IC_SMD_QFN28_065MM    : micro-philips.lbr:6354:            package: 'HVQFN28'            description: 'HVQFN28: plastic thermal enhanced very thin quad flat package SOT788-1'               devices: P98LPC935,
@@ -47,8 +50,8 @@ IC_SMD_QFN32_065MM    : maxim.lbr:3905:                    package: 'TQFN32'    
 $ ./doc/devtools/find_package.exe /C/Programme_2/EAGLE-7.6.0/lbr/ *MLF*
 
 
-atmel.lbr:6646:                    package: 'MLF20-4X4'          description: '20M1 20-pad, 4 x 4 x 0.8 mm BodySource: <a href="www.atmel.com/Images/doc2543.pdf"> Data sheet </a>'devices: AT90S2313,
-micrel.lbr:77:                     package: 'MLF44'              description: 'MLF-44 Micro Lead Frame PackageSource: www.micrel.com/_PDF/HBW/sy89537l.pdf'          devices: S89537,
+
+
 micrel.lbr:267:                    package: 'MLF10'              description: 'MLF 10 (ML) 2.5 x 2.5 mm, 10-Pin PackageSource: Source: www.micrel.com/_PDF/mic2297.pdf'devices: MIC2297,
 
 

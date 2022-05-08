@@ -8,13 +8,10 @@
 #include <iostream>
 #include <algorithm>
 #include "repfunc.h"
+#include "pugixml.hpp"
 
 
-typedef struct {
-  std::string lbr;
-  std::string name;
-  std::string desc;  
-} tPackage;
+
 
 
 int main(int n, char** args) {

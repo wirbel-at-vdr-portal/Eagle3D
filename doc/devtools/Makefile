@@ -5,7 +5,8 @@
 # *****************************************************************************/
 
 INCLUDE  = -I.
-INCLUDE  = -I../../../librepfunc_git
+INCLUDE += -I../../../librepfunc_git
+INCLUDE += -I../../../pugixml/src/
 
 LIBS = -L../../../librepfunc_git -l:librepfunc.dll
 
