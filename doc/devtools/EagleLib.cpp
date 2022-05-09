@@ -134,11 +134,30 @@ POLYGON::POLYGON() :
 
 
 
+#include <iostream>
+#include "pugixml.hpp"
 
-
-int main() {
+int main(int n, char** a) {
   LIBRARY lib;
+  std::string progname(*a);
+  std::vector<std::string> args;
+  for(int i=1; i<n; i++)
+     args.push_back(a[i]);
 
+
+
+  std::cout << args[0] << std::endl;
+
+  pugi::xml_document doc;
+  auto result = doc.load_file(args[0].c_str());
+
+  if (not result) {
+     std::cerr << "Parsing " << args[0] << "failed. :-(" << std::endl;
+     return -1;
+     }
+
+
+  std::cout << result.description() << std::endl;
 
   return 0;
 }
