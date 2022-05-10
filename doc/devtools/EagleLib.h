@@ -193,12 +193,12 @@ public:
 
 class GRID {
 public:
-  double distance;
+  double distance, altdistance;
   bool dots;                            // int, 0=lines, 1=dots
   bool on;                              // int, 0=off, 1=on
   int multiple;                         //
-  int unit;                             // GRID_UNIT_{MIC,MM,MIL,INCH}
-  int unitdist;                         // GRID_UNIT_{MIC,MM,MIL,INCH}
+  int unit, altunit;                    // GRID_UNIT_{MIC,MM,MIL,INCH}
+  int unitdist, altunitdist;            // GRID_UNIT_{MIC,MM,MIL,INCH}
 public:
   GRID();
 };
@@ -464,6 +464,8 @@ public:
   std::string headline;                 // erste Zeile der Beschreibung ohne HTML-Tags ausgibt
   std::string name;                     //
   GRID grid;                            //
+  bool alwaysvectorfont;
+  bool verticaltextdown;
 
   // Loop members
   std::vector<DEVICE> devices;
