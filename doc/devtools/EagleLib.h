@@ -123,10 +123,10 @@ constexpr int POLYGON_POUR_CUTOUT            = 2;  // POLYGON; cutout
 constexpr int SMD_FLAG_STOP                  = 1;  // SMD;
 constexpr int SMD_FLAG_CREAM                 = 2;  // SMD;
 constexpr int SMD_FLAG_THERMALS              = 4;  // SMD;
-constexpr int WIRE_STYLE_CONTINUOUS = 0; // durchgezogen
-constexpr int WIRE_STYLE_LONGDASH   = 1; // lang gestrichelt
-constexpr int WIRE_STYLE_SHORTDASH  = 2; // kurz gestrichelt
-constexpr int WIRE_STYLE_DASHDOT    = 3; // Strich-Punkt-Linie
+constexpr int WIRE_STYLE_CONTINUOUS          = 0;  // WIRE; durchgezogen
+constexpr int WIRE_STYLE_LONGDASH            = 1;  // WIRE; lang gestrichelt
+constexpr int WIRE_STYLE_SHORTDASH           = 2;  // WIRE; kurz gestrichelt
+constexpr int WIRE_STYLE_DASHDOT             = 3;  // WIRE; Strich-Punkt-Linie
 
 /*******************************************************************************
  * forward decls
@@ -223,6 +223,7 @@ public:
   int number;                           //
 public:
   LAYER();
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
 };
 
 class PAD {
@@ -243,7 +244,8 @@ public:
 
 class WIRE {
 public:
-  ARC arc;
+  std::string extent;                   // Only airwires, the layers a via or airwire extends through, given as "topmost-bottommost"
+//ARC arc;
   int cap;                              // CAP_FLAT,CAP_ROUND
   double curve;                         //
   int layer;                            // LAYER_(*)
@@ -256,6 +258,7 @@ public:
   std::vector<WIRE> pieces;
 public:
   WIRE();
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
 };
 
 class TEXT {
@@ -266,16 +269,17 @@ public:
   int font;                             // FONT_VECTOR, FONT_PROPORTIONAL, FONT_FIXED
   int layer;                            // LAYER_(*)
   int linedistance;                     //
-  int mirror;                           //
+  bool mirror;                          //
   int ratio;                            //
-  int size;                             //
-  int spin;                             //
-  int x, y;                             //
+  double size;                          //
+  bool spin;                            //
+  double x, y;                          //
 
   // Loop members
   std::vector<WIRE> wires;
 public:
   TEXT();
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
 };
 
 class ATTRIBUTE {
@@ -302,15 +306,16 @@ public:
 class SMD {
 public:
   std::string name;                     //
-  std::string signal;                   //
+  std::string signal;                   // member not in *.lbr initialized.
   double angle;                         // (0.0...359.9)
-  int dx[101], dy[101];                 //
+  int dx, dy;                           //
   int flags;                            // flags of SMD_FLAG_{STOP,CREAM,THERMALS}
   int layer;                            // LAYER_(*)
   int roundness;                        //
   int x, y;                             //
 public:
   SMD();
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
 };
 
 class CONTACT {
@@ -343,6 +348,7 @@ public:
   std::vector<HOLE> holes;
   std::vector<POLYGON> polygons;
   std::vector<RECTANGLE> rectangles;
+  std::vector<SMD> smds;
   std::vector<TEXT> texts;
   std::vector<WIRE> wires;
 public:
@@ -396,12 +402,12 @@ class DIMENSION {
   int layer;                            //
   int precision;                        // (Genauigkeit der Massangabe)
   int ratio;                            //
-  int size;                             //
+  double size;                          //
   int unit;                             // Einheit: GRID_UNIT_{MIC,MM,MIL,INCH}
-  int width;                            //
-  int x1, y1;                           // (erster Bezugspunkt)
-  int x2, y2;                           // (zweiter Bezugspunkt)
-  int x3, y3;                           // (Hilfspunkt für die Ausrichtung)
+  double width;                         //
+  double x1, y1;                        // (erster Bezugspunkt)
+  double x2, y2;                        // (zweiter Bezugspunkt)
+  double x3, y3;                        // (Hilfspunkt für die Ausrichtung)
 
   // Loop members
   std::vector<TEXT> texts;
@@ -500,6 +506,14 @@ public:
   PIN();
 };
 
+class VERTEX {
+public:
+  int x,y;
+  double curve;                         //  The curvature from this vertex to the next one
+public:
+  VERTEX();
+};
+
 class POLYGON {
 public:
   int isolate;                          //
@@ -509,7 +523,7 @@ public:
   int rank;                             //
   int spacing;                          //
   bool thermals;                        // int (0=off, 1=on)
-  int width;
+  double width;
 
   // Loop members
   std::vector<WIRE> contours;
@@ -517,6 +531,8 @@ public:
   std::vector<WIRE> wires;
 public:
   POLYGON();
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
 };
 
 
