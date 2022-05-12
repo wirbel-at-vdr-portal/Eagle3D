@@ -469,6 +469,60 @@ void FRAME::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterat
  ******************************************************************************/
 SYMBOL::SYMBOL() {}
 
+void SYMBOL::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) {
+  for(auto c = begin; c != end; ++c) {
+     std::string name(c->name());
+     std::string value(c->value());
+
+     if (name == "description") {
+        description = c->text().get();
+        headline = HeadLine(description);
+        }
+     else if (name == "polygon") {
+        POLYGON polygon;
+        polygon.Parse(c->begin(), c->end());
+        polygon.Parse(c->attributes_begin(), c->attributes_end());
+        polygons.push_back(polygon);
+        }
+     else if (name == "wire") {
+        WIRE wire;
+        wire.Parse(c->attributes_begin(), c->attributes_end());
+        wires.push_back(wire);
+        }
+     else if (name == "text") {
+        TEXT text;
+        text.value = c->text().get();
+        text.Parse(c->attributes_begin(), c->attributes_end());
+        texts.push_back(text);
+        }
+     else if (name == "dimension") {
+        DIMENSION dimension;
+        dimension.Parse(c->attributes_begin(), c->attributes_end());
+        dimensions.push_back(dimension);
+        }
+     else if (name == "pin") {
+        PIN pin;
+        pin.Parse(c->attributes_begin(), c->attributes_end());
+        pins.push_back(pin);
+        }
+     else if (name == "circle") {
+        CIRCLE circle;
+        circle.Parse(c->attributes_begin(), c->attributes_end());
+        circles.push_back(circle);
+        }
+     else if (name == "rectangle") {
+        RECTANGLE rectangle;
+        rectangle.Parse(c->attributes_begin(), c->attributes_end());
+        rectangles.push_back(rectangle);
+        }
+     else if (name == "frame") {
+        FRAME frame;
+        frame.Parse(c->attributes_begin(), c->attributes_end());
+        frames.push_back(frame);
+        }
+     }
+}
+
 /*******************************************************************************
  * class GATE
  ******************************************************************************/
@@ -483,8 +537,55 @@ LIBRARY::LIBRARY() : alwaysvectorfont(false), verticaltextdown(false) {}
  * class PIN
  ******************************************************************************/
 PIN::PIN() :
-  angle(0.0),direction(0),function(0),length(0),route(0),swaplevel(0),
-  visible(0),x(0),y(0) {}
+  x(0.0),y(0.0),visible_pin(true),visible_pad(true),
+  length(PIN_LENGTH_LONG),direction(PIN_DIRECTION_IO),
+  inverted(false),clock(false),swaplevel(0),angle(0.0) {}
+
+void PIN::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+  visible_pin = true;
+  visible_pad = true;
+  length = PIN_LENGTH_LONG;
+  direction = PIN_DIRECTION_IO;
+  inverted = false;
+  clock = false;
+  swaplevel = 0;
+  angle = 0.0;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string name(a->name());
+     std::string value(a->value());
+
+          if (name == "name")      name      = value;
+     else if (name == "x")         x         = std::stod(value);
+     else if (name == "y")         y         = std::stod(value);
+     else if (name == "swaplevel") swaplevel = std::stoi(value);
+     else if (name == "rot")       angle     = std::stod(value.substr(value.find_first_of("0123456789")));
+
+     else if (name == "visible") {
+        visible_pin = (value == "pin") or (value == "both");
+        visible_pad = (value == "pad") or (value == "both");
+        }
+     else if (name == "length")
+        Choice(length,value,
+           {"point","short",
+            "middle","long"},
+           {PIN_LENGTH_POINT,PIN_LENGTH_SHORT,
+            PIN_LENGTH_MIDDLE,PIN_LENGTH_LONG});
+     else if (name == "direction")
+        Choice(direction,value,
+           {"nc","in","out",
+            "io","oc","pwr",
+            "pas","hiz","sup"},
+           {PIN_DIRECTION_NC,PIN_DIRECTION_IN,PIN_DIRECTION_OUT,
+            PIN_DIRECTION_IO,PIN_DIRECTION_OC,PIN_DIRECTION_PWR,
+            PIN_DIRECTION_PAS,PIN_DIRECTION_HIZ,PIN_DIRECTION_SUP});
+     else if (name == "function") {
+        inverted = (value == "dot") or (value == "dotclk");
+        clock    = (value == "clk") or (value == "dotclk");
+        }
+     }
+}
+
 
 /*******************************************************************************
  * class POLYGON
@@ -635,73 +736,20 @@ int main(int n, char** a) {
      package.name = p->attributes_begin()->value();
      package.Parse(p->begin(),p->end());
      lib.packages.push_back(package);
-/*
-        {
-        std::string name(c->name());
-        std::string value(c->value());
-
-        if (name == "description") {
-           package.description = c->text().get();
-           package.headline = HeadLine(package.description);
-           }
-        else if (name == "polygon") {
-           POLYGON polygon;
-           polygon.Parse(c->begin(), c->end());
-           polygon.Parse(c->attributes_begin(), c->attributes_end());
-           package.polygons.push_back(polygon);
-           }
-        else if (name == "wire") {
-           WIRE wire;
-           wire.Parse(c->attributes_begin(), c->attributes_end());
-           package.wires.push_back(wire);
-           }
-        else if (name == "text") {
-           TEXT text;
-           text.value = c->text().get();
-           text.Parse(c->attributes_begin(), c->attributes_end());
-           package.texts.push_back(text);
-           }
-        else if (name == "dimension") {
-           DIMENSION dimension;
-           dimension.Parse(c->attributes_begin(), c->attributes_end());
-           package.dimensions.push_back(dimension);
-           }
-        else if (name == "circle") {
-           CIRCLE circle;
-           circle.Parse(c->attributes_begin(), c->attributes_end());
-           package.circles.push_back(circle);
-           }
-        else if (name == "rectangle") {
-           RECTANGLE rectangle;
-           rectangle.Parse(c->attributes_begin(), c->attributes_end());
-           package.rectangles.push_back(rectangle);
-           }
-        else if (name == "frame") {
-           FRAME frame;
-           frame.Parse(c->attributes_begin(), c->attributes_end());
-           package.frames.push_back(frame);
-           }
-        else if (name == "hole") {
-           HOLE hole;
-           hole.Parse(c->attributes_begin(), c->attributes_end());
-           package.holes.push_back(hole);
-           }
-        else if (name == "pad") {
-           PAD pad;
-           pad.Parse(c->attributes_begin(), c->attributes_end());
-           package.pads.push_back(pad);
-           }
-        else if (name == "smd") {
-           SMD smd;
-           smd.Parse(c->attributes_begin(), c->attributes_end());
-           package.smds.push_back(smd);
-           }
-        }
-*/
      }
   }
 
+  { /* <symbols>..</symbols> */
+  auto symbols = eagle.child("drawing").child("library").child("symbols");
 
+  for(auto s = symbols.begin(); s != symbols.end(); ++s) {
+     SYMBOL symbol;
+     symbol.library = lib.name;
+     symbol.name = s->attributes_begin()->value();
+     symbol.Parse(s->begin(),s->end());
+     lib.symbols.push_back(symbol);
+     }
+  }
 
 
   return 0;

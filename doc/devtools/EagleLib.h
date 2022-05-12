@@ -100,16 +100,10 @@ constexpr int PIN_DIRECTION_PWR              = 5;  // PIN; Power-Input-Pin
 constexpr int PIN_DIRECTION_PAS              = 6;  // PIN; Passiv
 constexpr int PIN_DIRECTION_HIZ              = 7;  // PIN; High-Impedance-Output
 constexpr int PIN_DIRECTION_SUP              = 8;  // PIN; Supply-Pin
-constexpr int PIN_FUNCTION_FLAG_NONE         = 0;  // PIN; standard pin
-constexpr int PIN_FUNCTION_FLAG_DOT          = 1;  // PIN; inverted pin
-constexpr int PIN_FUNCTION_FLAG_CLK          = 2;  // PIN; clock pin
 constexpr int PIN_LENGTH_POINT               = 0;  // PIN; no wire at pin, just a dot
 constexpr int PIN_LENGTH_SHORT               = 1;  // PIN; 100mil wire at pin
 constexpr int PIN_LENGTH_MIDDLE              = 2;  // PIN; 200mil wire at pin
 constexpr int PIN_LENGTH_LONG                = 3;  // PIN; 300mil wire at pin
-constexpr int PIN_VISIBLE_FLAG_OFF           = 0;  // PIN; pad name and pin name are hidden
-constexpr int PIN_VISIBLE_FLAG_PAD           = 1;  // PIN; pad name visible
-constexpr int PIN_VISIBLE_FLAG_PIN           = 2;  // PIN; pin name visible
 constexpr int POLYGON_POUR_SOLID             = 0;  // POLYGON; solid
 constexpr int POLYGON_POUR_HATCH             = 1;  // POLYGON; hatch
 constexpr int POLYGON_POUR_CUTOUT            = 2;  // POLYGON; cutout
@@ -135,30 +129,25 @@ class RECTANGLE;
 class SMD;
 class TEXT;
 class WIRE;
-
+class PIN;
+class SYMBOL;
 
 class GATE;
 class DEVICE;
 class DEVICESET;
-class PIN;
-class SYMBOL;
 
-
-
-//class ARC;
-class AREA;
-class CONTACT;
 
 
 /*******************************************************************************
  * classes and types
  ******************************************************************************/
 
-// (POLYGON | WIRE | TEXT | DIMENSION | CIRCLE | RECTANGLE | FRAME | HOLE | PAD | SMD)
+// (POLYGON | WIRE | TEXT | DIMENSION | PIN | CIRCLE | RECTANGLE | FRAME)
 
 
 class CIRCLE {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   double x, y;
   double radius;
@@ -172,6 +161,7 @@ public:
 
 class DIMENSION {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   double x1, y1;                        // (erster Bezugspunkt)
   double x2, y2;                        // (zweiter Bezugspunkt)
@@ -198,6 +188,7 @@ public:
 
 class FRAME {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   double x1, y1;                        // lower left
   double x2, y2;                        // upper right
@@ -279,6 +270,7 @@ public:
 
 class POLYGON {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   class VERTEX {
   public:
@@ -311,6 +303,7 @@ public:
 
 class RECTANGLE {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   double x1, y1;                        // lower left
   double x2, y2;                        // upper right
@@ -343,6 +336,7 @@ public:
 
 class TEXT {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   double x, y;                          //
   double size;                          //
@@ -365,6 +359,7 @@ public:
 
 class WIRE {
 friend class PACKAGE;
+friend class SYMBOL;
 public:
   double x1, y1;                        // Anfangspunkt
   double x2, y2;                        // Endpunkt
@@ -407,13 +402,61 @@ public:
   void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
 };
 
+class PIN {
+friend class SYMBOL;
+public:
+  std::string name;                     //
+  double x, y;
+  bool visible_pin;                     // "visible" = "pin"
+  bool visible_pad;                     // "visible" = "pad"
+  int length;                           // PIN_LENGTH_{POINT,SHORT,MIDDLE,LONG}
+  int direction;                        // PIN_DIRECTION_{NC,IN,OUT,IO,OC,PWR,PAS,HIZ,SUP}
+  bool inverted;                        // "function" = "dot"
+  bool clock;                           // "function" = "clock"
+  int swaplevel;
+  double angle;                         // "rot" = "R(0,90,180,270)"
+  //int route;                          // CONTACT_ROUTE_{ANY,ALL}
+  //std::string net;                    //
+  //CONTACT contact;                    // deprecated.
+  // Loop members
+  // std::vector<CIRCLE> circles;
+  // std::vector<CONTACT> contacts;
+  // std::vector<TEXT> texts;
+  // std::vector<WIRE> wires;
+private:
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+public:
+  PIN();
+};
+
+class SYMBOL {
+public:
+  std::string name;
+  std::string description;
+  std::string headline;
+  std::string library;
+  //AREA area;
+  // Loop members
+  std::vector<CIRCLE> circles;
+  std::vector<DIMENSION> dimensions;
+  std::vector<FRAME> frames;
+  std::vector<RECTANGLE> rectangles;
+  std::vector<PIN> pins;
+  std::vector<POLYGON> polygons;
+  std::vector<TEXT> texts;
+  std::vector<WIRE> wires;
+public:
+  SYMBOL();
+  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+};
 
 
 
 
 
-
-
+//class ARC;
+class AREA;
+class CONTACT;
 
 //class ARC {
 //public:
@@ -513,26 +556,7 @@ public:
 
 
 
-class SYMBOL {
-public:
-  std::string name;
-  std::string description;
-  std::string headline;
-  std::string library;
-  AREA area;
 
-  // Loop members
-  std::vector<CIRCLE> circles;
-  std::vector<DIMENSION> dimensions;
-  std::vector<FRAME> frames;
-  std::vector<RECTANGLE> rectangles;
-  std::vector<PIN> pins;
-  std::vector<POLYGON> polygons;
-  std::vector<TEXT> texts;
-  std::vector<WIRE> wires;
-public:
-  SYMBOL();
-};
 
 class GATE {
 public:
@@ -564,28 +588,7 @@ public:
   LIBRARY();
 };
 
-class PIN {
-public:
-  std::string name;                     //
-  std::string net;                      //
-  double angle;                         // (0,90,180,270)
-  //CONTACT contact;                    // deprecated.
-  int direction;                        // PIN_DIRECTION_{NC,IN,OUT,IO,OC,PWR,PAS,HIZ,SUP}
-  int function;                         // PIN_FUNCTION_FLAG_{NONE,DOT,CLK}
-  int length;                           // PIN_LENGTH_{POINT,SHORT,MIDDLE,LONG}
-  int route;                            // CONTACT_ROUTE_{ANY,ALL}
-  int swaplevel;
-  int visible;                          // or'ed flags: PIN_VISIBLE_FLAG_{OFF,PIN,PAD}
-  int x, y;
 
-  // Loop members
-  std::vector<CIRCLE> circles;
-  std::vector<CONTACT> contacts;
-  std::vector<TEXT> texts;
-  std::vector<WIRE> wires;
-public:
-  PIN();
-};
 
 
 
