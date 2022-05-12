@@ -65,7 +65,7 @@ AREA::AREA() : x1(0.0),y1(0.0),x2(0.0),y2(0.0) {}
 CIRCLE::CIRCLE() : 
   x(0.0),y(0.0),radius(0.0),width(0.0),layer(0) {}
 
-void CIRCLE::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void CIRCLE::Parse(attributes begin, attributes end) {
   for(auto a = begin; a != end; ++a) {
      std::string name(a->name());
      std::string value(a->value());
@@ -89,7 +89,7 @@ GRID::GRID() :
  ******************************************************************************/
 HOLE::HOLE() : x(0.0),y(0.0),drill(0.0) {}
 
-void HOLE::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void HOLE::Parse(attributes begin, attributes end) {
   for(auto a = begin; a != end; ++a) {
      std::string name(a->name());
      std::string value(a->value());
@@ -104,7 +104,7 @@ void HOLE::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterato
  ******************************************************************************/
 LAYER::LAYER() : used(true),visible(true),color(0),fill(0),number(0) {}
 
-void LAYER::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void LAYER::Parse(attributes begin, attributes end) {
   used    = true;
   visible = true;
 
@@ -127,7 +127,7 @@ PAD::PAD() :
   x(0.0),y(0.0),drill(0.0),diameter(0.0),shape(PAD_SHAPE_ROUND),angle(0.0),
   stop(true),thermals(true),first(false) {}
 
-void PAD::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void PAD::Parse(attributes begin, attributes end) {
   diameter = 0.0;
   shape = PAD_SHAPE_ROUND;
   angle = 0.0;
@@ -164,7 +164,7 @@ WIRE::WIRE() :
   x1(0),y1(0),x2(0),y2(0),width(0),layer(0),style(WIRE_STYLE_CONTINUOUS),
   curve(0.0), cap(CAP_ROUND) {}
 
-void WIRE::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void WIRE::Parse(attributes begin, attributes end) {
   style = WIRE_STYLE_CONTINUOUS;
   curve = 0.0;
   cap = CAP_ROUND;
@@ -197,7 +197,7 @@ TEXT::TEXT() :
   angle(0.0),mirror(false),spin(false),align(ALIGN_BOTTOM_LEFT),
   linedistance(50) {}
 
-void TEXT::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void TEXT::Parse(attributes begin, attributes end) {
   font = FONT_PROPORTIONAL;
   ratio = 8;
   angle = 0.0;
@@ -246,7 +246,7 @@ ATTRIBUTE::ATTRIBUTE() : constant(false), display(0) {}
 RECTANGLE::RECTANGLE() : 
   x1(0.0),y1(0.0),x2(0.0),y2(0.0),layer(0),angle(0.0) {}
 
-void RECTANGLE::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void RECTANGLE::Parse(attributes begin, attributes end) {
   angle = 0.0;
 
   for(auto a = begin; a != end; ++a) {
@@ -271,7 +271,7 @@ SMD::SMD() :
   x(0.0),y(0.0),dx(0.0),dy(0.0),layer(0),roundness(0),angle(0.0),
   stop(true),thermals(true),cream(true) {}
 
-void SMD::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void SMD::Parse(attributes begin, attributes end) {
   roundness = 0;
   angle = 0.0;
   stop = true;
@@ -306,7 +306,7 @@ CONTACT::CONTACT() : x(0),y(0) {}
  ******************************************************************************/
 PACKAGE::PACKAGE() {}
 
-void PACKAGE::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) {
+void PACKAGE::Parse(childs begin, childs end) {
   for(auto c = begin; c != end; ++c) {
      std::string name(c->name());
      std::string value(c->value());
@@ -373,14 +373,14 @@ void PACKAGE::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) 
 /*******************************************************************************
  * class DEVICE
  ******************************************************************************/
-DEVICE::DEVICE() : value(false) {}
+DEVICE::DEVICE() {}
 
 /*******************************************************************************
  * class DEVICESET
  ******************************************************************************/
 DEVICESET::DEVICESET() : uservalue(false) {}
 
-void DEVICESET::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void DEVICESET::Parse(attributes begin, attributes end) {
   prefix.clear();
   uservalue = false;
 
@@ -393,7 +393,7 @@ void DEVICESET::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_it
      }
 }
 
-void DEVICESET::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) {
+void DEVICESET::Parse(childs begin, childs end) {
   description.clear();
   headline.clear();
   devices.clear();
@@ -434,7 +434,7 @@ DIMENSION::DIMENSION() :
   extoffset(0.0),size(0.0),ratio(8),unit(GRID_UNIT_MM),precision(2),
   visible(false) {}
 
-void DIMENSION::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void DIMENSION::Parse(attributes begin, attributes end) {
   dtype = DIMENSION_PARALLEL;
   extlength = 0.0;
   extoffset = 0.0;
@@ -485,7 +485,7 @@ FRAME::FRAME() :
   x1(0.0),y1(0.0),x2(0.0),y2(0.0),columns(0),rows(0),layer(0),
   border_left(true),border_top(true),border_right(true),border_bottom(true) {}
 
-void FRAME::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void FRAME::Parse(attributes begin, attributes end) {
   border_left   = true;
   border_top    = true;
   border_right  = true;
@@ -514,7 +514,7 @@ void FRAME::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterat
  ******************************************************************************/
 SYMBOL::SYMBOL() {}
 
-void SYMBOL::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) {
+void SYMBOL::Parse(childs begin, childs end) {
   for(auto c = begin; c != end; ++c) {
      std::string name(c->name());
      std::string value(c->value());
@@ -586,7 +586,7 @@ PIN::PIN() :
   length(PIN_LENGTH_LONG),direction(PIN_DIRECTION_IO),
   inverted(false),clock(false),swaplevel(0),angle(0.0) {}
 
-void PIN::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void PIN::Parse(attributes begin, attributes end) {
   visible_pin = true;
   visible_pad = true;
   length = PIN_LENGTH_LONG;
@@ -639,7 +639,7 @@ POLYGON::POLYGON() :
   width(0.0),layer(0),spacing(0),pour(POLYGON_POUR_SOLID),isolate(0),
   orphans(false),thermals(true),rank(0) {}
 
-void POLYGON::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+void POLYGON::Parse(attributes begin, attributes end) {
   pour = POLYGON_POUR_SOLID;
   orphans = false;
   thermals = true;
@@ -663,7 +663,7 @@ void POLYGON::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iter
      }
 }
 
-void POLYGON::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) {
+void POLYGON::Parse(childs begin, childs end) {
   vertices.clear();
   for(auto v = begin; v != end; ++v) {
      VERTEX vertex;

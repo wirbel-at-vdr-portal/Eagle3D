@@ -112,6 +112,14 @@ constexpr int WIRE_STYLE_LONGDASH            = 1;  // WIRE; lang gestrichelt
 constexpr int WIRE_STYLE_SHORTDASH           = 2;  // WIRE; kurz gestrichelt
 constexpr int WIRE_STYLE_DASHDOT             = 3;  // WIRE; Strich-Punkt-Linie
 
+
+/*******************************************************************************
+ * types and using directives here:
+ ******************************************************************************/
+using childs     = pugi::xml_node_iterator;
+using attributes = pugi::xml_attribute_iterator;
+
+
 /*******************************************************************************
  * forward decls
  ******************************************************************************/
@@ -154,7 +162,7 @@ public:
   double width;
   int layer;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   CIRCLE();
 };
@@ -181,7 +189,7 @@ public:
   //std::vector<TEXT> texts;
   //std::vector<WIRE> wires;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   DIMENSION();
 };
@@ -203,7 +211,7 @@ public:
   //std::vector<TEXT> texts;
   //std::vector<WIRE> wires;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   FRAME();
 };
@@ -228,7 +236,7 @@ public:
   //int diameter[101];                  // defined only for {LAYER_TSTOP, LAYER_BSTOP} &&  defines the stop masks diameter there.
   //int drillsymbol;                    // number of drill symbol, that is assigned acc. to diameter. See handbook. 0 = none.
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   HOLE();
 };
@@ -243,7 +251,7 @@ public:
   int number;                           //
 public:
   LAYER();
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 };
 
 class PAD {
@@ -263,7 +271,7 @@ public:
   //int elongation;                     //
   //std::string signal;                 //
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   PAD();
 };
@@ -295,8 +303,8 @@ public:
   //std::vector<WIRE> fillings;         // not set in lbr
   //std::vector<WIRE> wires;            // not set in lbr
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
-  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+  void Parse(attributes begin, attributes end);
+  void Parse(childs begin, childs end);
 public:
   POLYGON();
 };
@@ -310,7 +318,7 @@ public:
   int layer;                            //
   double angle;                         // (0.0...359.9)
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   RECTANGLE();
 };
@@ -329,7 +337,7 @@ public:
   bool cream;                           //
   //std::string signal;                 // member not in *.lbr initialized.
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   SMD();
 };
@@ -352,7 +360,7 @@ public:
   // Loop members
   //std::vector<WIRE> wires;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   TEXT();
 };
@@ -373,7 +381,7 @@ public:
   // Loop members
   //std::vector<WIRE> pieces;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   WIRE();
 };
@@ -399,7 +407,7 @@ public:
 
 public:
   PACKAGE();
-  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+  void Parse(childs begin, childs end);
 };
 
 class PIN {
@@ -424,7 +432,7 @@ public:
   // std::vector<TEXT> texts;
   // std::vector<WIRE> wires;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(attributes begin, attributes end);
 public:
   PIN();
 };
@@ -447,7 +455,7 @@ public:
   std::vector<WIRE> wires;
 public:
   SYMBOL();
-  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+  void Parse(childs begin, childs end);
 };
 
 
@@ -546,8 +554,8 @@ public:
 //std::vector<ATTRIBUTE> attributes(std::string technology);
 //std::vector<GATE> gates;
 private:
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
-  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+  void Parse(attributes begin, attributes end);
+  void Parse(childs begin, childs end);
 public:
   DEVICE();
 };
@@ -578,8 +586,8 @@ public:
   std::vector<GATE> gates;
 public:
   DEVICESET();
-  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
-  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+  void Parse(attributes begin, attributes end);
+  void Parse(childs begin, childs end);
 };
 
 
