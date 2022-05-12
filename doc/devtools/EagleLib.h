@@ -140,7 +140,9 @@ class WIRE;
 class PIN;
 class SYMBOL;
 
+
 class GATE;
+class CONNECT;
 class DEVICE;
 class DEVICESET;
 
@@ -149,10 +151,6 @@ class DEVICESET;
 /*******************************************************************************
  * classes and types
  ******************************************************************************/
-
-// (POLYGON | WIRE | TEXT | DIMENSION | PIN | CIRCLE | RECTANGLE | FRAME)
-
-
 class CIRCLE {
 friend class PACKAGE;
 friend class SYMBOL;
@@ -185,9 +183,6 @@ public:
   int unit;                             // Einheit: GRID_UNIT_{MIC,MM,MIL,INCH}
   int precision;                        // default:2. Nachkommastellen,Genauigkeit der Massangabe
   bool visible;                         // int (0=off, 1=on)
-  // Loop members
-  //std::vector<TEXT> texts;
-  //std::vector<WIRE> wires;
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -207,9 +202,6 @@ public:
   bool border_top;                      //
   bool border_right;                    //
   bool border_bottom;                   //
-  // Loop members
-  //std::vector<TEXT> texts;
-  //std::vector<WIRE> wires;
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -233,8 +225,6 @@ friend class PACKAGE;
 public:
   double x, y;                          //
   double drill;                         //
-  //int diameter[101];                  // defined only for {LAYER_TSTOP, LAYER_BSTOP} &&  defines the stop masks diameter there.
-  //int drillsymbol;                    // number of drill symbol, that is assigned acc. to diameter. See handbook. 0 = none.
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -267,9 +257,6 @@ public:
   bool thermals;                        // Loetstopmaske generieren
   bool first;                           // Thermals generieren
   int flags;                            // spezielle Form fuer "erstes Pad" verwenden
-  //int drillsymbol;                    //
-  //int elongation;                     //
-  //std::string signal;                 //
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -280,6 +267,7 @@ class POLYGON {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
+  /* subclasses */
   class VERTEX {
   public:
      double x,y;
@@ -287,6 +275,7 @@ public:
   public:
      VERTEX() : curve(0.0) {}
   };
+
 public:
   double width;
   int layer;                            // LAYER_(*)
@@ -297,11 +286,6 @@ public:
   bool thermals;                        // int (0=off, 1=on)
   int rank;                             //
   std::vector<VERTEX> vertices;
-
-  // Loop members
-  //std::vector<WIRE> contours;         // not set in lbr
-  //std::vector<WIRE> fillings;         // not set in lbr
-  //std::vector<WIRE> wires;            // not set in lbr
 private:
   void Parse(attributes begin, attributes end);
   void Parse(childs begin, childs end);
@@ -335,7 +319,6 @@ public:
   bool stop;                            //
   bool thermals;                        //
   bool cream;                           //
-  //std::string signal;                 // member not in *.lbr initialized.
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -357,8 +340,6 @@ public:
   int align;                            // ALIGN_{BOTTOM_LEFT,BOTTOM_CENTER,BOTTOM_RIGHT,CENTER_LEFT,CENTER,CENTER_RIGHT,TOP_LEFT,TOP_CENTER,TOP_RIGHT}
   int linedistance;                     // "distance"
   std::string value;
-  // Loop members
-  //std::vector<WIRE> wires;
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -377,9 +358,6 @@ public:
   int style;                            // WIRE_STYLE_{CONTINUOUS,LONGDASH,SHORTDASH,DASHDOT}
   double curve;                         //
   int cap;                              // CAP_FLAT,CAP_ROUND
-  //ARC arc;
-  // Loop members
-  //std::vector<WIRE> pieces;
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -392,8 +370,6 @@ public:
   std::string headline;
   std::string library;
   std::string name;
-  //AREA area;
-  // Loop members
   std::vector<POLYGON> polygons;
   std::vector<WIRE> wires;
   std::vector<TEXT> texts;
@@ -404,7 +380,6 @@ public:
   std::vector<HOLE> holes;
   std::vector<PAD> pads;
   std::vector<SMD> smds;
-
 public:
   PACKAGE();
   void Parse(childs begin, childs end);
@@ -423,14 +398,6 @@ public:
   bool clock;                           // "function" = "clock"
   int swaplevel;
   double angle;                         // "rot" = "R(0,90,180,270)"
-  //int route;                          // CONTACT_ROUTE_{ANY,ALL}
-  //std::string net;                    //
-  //CONTACT contact;                    // deprecated.
-  // Loop members
-  // std::vector<CIRCLE> circles;
-  // std::vector<CONTACT> contacts;
-  // std::vector<TEXT> texts;
-  // std::vector<WIRE> wires;
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -443,8 +410,6 @@ public:
   std::string description;
   std::string headline;
   std::string library;
-  //AREA area;
-  // Loop members
   std::vector<CIRCLE> circles;
   std::vector<DIMENSION> dimensions;
   std::vector<FRAME> frames;
@@ -456,37 +421,6 @@ public:
 public:
   SYMBOL();
   void Parse(childs begin, childs end);
-};
-
-
-
-
-
-//class ARC;
-class AREA;
-class CONTACT;
-
-//class ARC {
-//public:
-//  double angle1;                        // Startwinkel, 0.0...359.9
-//  double angle2;                        // Endwinkel, 0.0...719.9
-//  int cap;                              // CAP_FLAT,CAP_ROUND
-//  int layer;                            //
-//  int radius;                           //
-//  int width;                            //
-//  int x1, y1;                           // Startpunkt
-//  int x2, y2;                           // Endpunkt
-//  int xc, yc;                           // Mittelpunkt
-//public:
-//  ARC();
-//};
-
-class AREA {
-public:
-  int x1, y1;
-  int x2, y2;
-public:
-  AREA();
 };
 
 
@@ -508,18 +442,48 @@ public:
 };
 
 
-class CONTACT {
+class TECHNOLOGY {
 public:
   std::string name;
-  std::string signal;
-  PAD pad;
-  SMD smd;
-  int x, y;
-  // Loop members
-  std::vector<POLYGON> polygons;
-  std::vector<WIRE> wires;
 public:
-  CONTACT();
+  TECHNOLOGY();
+};
+
+
+/*
+
+<!ELEMENT technology (attribute)*>
+<!ATTLIST technology
+          name          %String;       #REQUIRED
+          >
+
+<!ELEMENT attribute EMPTY>
+<!ATTLIST attribute
+          name          %String;       #REQUIRED
+          value         %String;       #IMPLIED
+          x             %Coord;        #IMPLIED
+          y             %Coord;        #IMPLIED
+          size          %Dimension;    #IMPLIED
+          layer         %Layer;        #IMPLIED
+          font          %TextFont;     #IMPLIED
+          ratio         %Int;          #IMPLIED
+          rot           %Rotation;     "R0"
+          display       %AttributeDisplay; "value"
+          constant      %Bool;         "no"
+          >
+          <!-- display: Only in <element> or <instance> context -->
+          <!-- constant:Only in <device> context -->
+*/
+
+
+class CONNECT {
+public:
+  std::string gate;                     // #REQUIRED
+  std::string pin;                      // #REQUIRED
+  std::string pad;                      // #REQUIRED
+  bool route;                           // hmm. I don't see any difference between those choices? "(all | any)" - However, 'all' seems to be broader. :(
+public:
+  CONNECT();
 };
 
 
@@ -529,8 +493,8 @@ friend class DEVICESET;
 public:
   std::string name;                     //
   std::string package;                  //
-
-
+  std::vector<CONNECT> connects;        //
+  std::vector<TECHNOLOGY> technologies; //
 
 //<!ELEMENT device (connects?, technologies?)>
 //<!ATTLIST device
@@ -547,7 +511,6 @@ public:
 //std::string prefix;                   //
 //std::string technologies;             // all techologies, separated by a SPACE
 //bool value;                           // string ("On" oder "Off")
-//AREA area;                            //
 //PACKAGE package;
 //
 ////Loop members
@@ -580,7 +543,6 @@ public:
   std::string description;              //
   std::string headline;                 //
   //DEVICE* activedevice;               // if a set is currently beeing edited, this one is delivered here.
-  //AREA area;                          //
   // Loop members
   std::vector<DEVICE> devices;
   std::vector<GATE> gates;
@@ -590,85 +552,22 @@ public:
   void Parse(childs begin, childs end);
 };
 
-
-
-
-
-
-
 class LIBRARY {
 public:
   std::string description;              // vollstaendiger Beschreibungstext, der mit dem DESCRIPTION-Befehl erzeugt wurde
   std::string headline;                 // erste Zeile der Beschreibung ohne HTML-Tags ausgibt
-  std::string name;                     //
+  std::string name;                     // %String;       #REQUIRED
   GRID grid;                            //
   bool alwaysvectorfont;
   bool verticaltextdown;
 
-  // Loop members
-  std::vector<DEVICE> devices;
-  std::vector<DEVICESET> devicesets; 
-  std::vector<LAYER> layers;
   std::vector<PACKAGE> packages;
   std::vector<SYMBOL> symbols;
+  std::vector<DEVICESET> devicesets;
+// std::vector<DEVICE> devices;
+  std::vector<LAYER> layers;
+
+
 public:
   LIBRARY();
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-p27: Objekt-Hierarchie einer Bibliothek:
-LIBRARY
-  +-GRID
-  +-LAYER
-  +-DEVICESET
-  |  +-DEVICE
-  |  +-GATE
-  +-PACKAGE
-  |  +-CONTACT
-  |  |   +-PAD
-  |  |   +-SMD
-  |  +-CIRCLE
-  |  +-HOLE
-  |  +-RECTANGLE
-  |  +-FRAME
-  |  +-DIMENSION
-  |  +-TEXT
-  |  +-WIRE
-  |  +-POLYGON
-  |  |   +-WIRE
-  +-SYMBOL
-  |  +-PIN
-  |  +-CIRCLE
-  |  +-RECTANGLE
-  |  +-FRAME
-  |  +-DIMENSION
-  |  +-TEXT
-  |  +-WIRE
-  |  +-POLYGON
-  |  |   +-WIRE
-*/
-
-
-
-
-
-
-
-

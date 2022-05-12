@@ -26,14 +26,6 @@ std::string HeadLine(std::string& Description) {
 }
 
 template<class T>
-void Flags(T& flags, bool yes, T flag) {
-  if (yes)
-     flags |= flag;
-  else
-     flags &= ~flag;
-}
-
-template<class T>
 void Choice(T& result, std::string& value, std::vector<std::string> strs, std::vector<T> vals) {
   for(size_t i=0; i<strs.size(); i++) {
      if (value == strs[i]) {
@@ -45,19 +37,6 @@ void Choice(T& result, std::string& value, std::vector<std::string> strs, std::v
 }
 
 
-
-
-/*******************************************************************************
- * class ARC
- ******************************************************************************/
-//ARC::ARC() :
-//  angle1(0.0), angle2(0.0), cap(0),layer(0),radius(0),width(0),
-//  x1(0),y1(0),x2(0),y2(0),xc(0),yc(0) {}
-
-/*******************************************************************************
- * class AREA
- ******************************************************************************/
-AREA::AREA() : x1(0.0),y1(0.0),x2(0.0),y2(0.0) {}
 
 /*******************************************************************************
  * class CIRCLE
@@ -296,10 +275,6 @@ void SMD::Parse(attributes begin, attributes end) {
      }
 }
 
-/*******************************************************************************
- * class CONTACT
- ******************************************************************************/
-CONTACT::CONTACT() : x(0),y(0) {}
 
 /*******************************************************************************
  * class PACKAGE
@@ -374,6 +349,44 @@ void PACKAGE::Parse(childs begin, childs end) {
  * class DEVICE
  ******************************************************************************/
 DEVICE::DEVICE() {}
+
+void DEVICE::Parse(attributes begin, attributes end) {
+  name.clear();
+  package.clear();
+
+  for(auto a = begin; a != end; ++a) {
+     std::string name(a->name());
+     std::string value(a->value());
+          if (name == "name")      name       = value;
+     else if (name == "package")   package    = value;
+     }
+}
+
+void DEVICE::Parse(childs begin, childs end) {
+  connects.clear();
+  technologies.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string name(c->name());
+
+     if (name == "connects") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+        //POLYGON polygon;
+        //polygon.Parse(c->begin(), c->end());
+        //polygon.Parse(c->attributes_begin(), c->attributes_end());
+        //polygons.push_back(polygon);
+           }
+        }
+     else if (name == "technologies") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+        //WIRE wire;
+        //wire.Parse(c->attributes_begin(), c->attributes_end());
+        //wires.push_back(wire);
+           }
+        }
+     }
+
+}
 
 /*******************************************************************************
  * class DEVICESET
