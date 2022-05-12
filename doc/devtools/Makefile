@@ -13,3 +13,5 @@ LIBS = -L../../../librepfunc_git -l:librepfunc.dll
 all:
 	g++ -O2 -Wall -Wextra $(INCLUDE) find_package.cpp $(LIBS) -o find_package
 
+deepscan:
+	g++ -Wall -Wextra EagleLib.cpp -o EagleLib  -L. -l:librepfunc.dll
