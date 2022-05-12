@@ -378,7 +378,52 @@ DEVICE::DEVICE() : value(false) {}
 /*******************************************************************************
  * class DEVICESET
  ******************************************************************************/
-DEVICESET::DEVICESET() : activedevice(nullptr),value(false) {}
+DEVICESET::DEVICESET() : uservalue(false) {}
+
+void DEVICESET::Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end) {
+  prefix.clear();
+  uservalue = false;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string name(a->name());
+     std::string value(a->value());
+          if (name == "name")      name       = value;
+     else if (name == "prefix")    prefix     = value;
+     else if (name == "uservalue") uservalue  = (value == "yes");
+     }
+}
+
+void DEVICESET::Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end) {
+  description.clear();
+  headline.clear();
+  devices.clear();
+  gates.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string name(c->name());
+     std::string value(c->value());
+
+     if (name == "description") {
+        description = c->text().get();
+        headline = HeadLine(description);
+        }
+     else if (name == "devices") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+        //POLYGON polygon;
+        //polygon.Parse(c->begin(), c->end());
+        //polygon.Parse(c->attributes_begin(), c->attributes_end());
+        //polygons.push_back(polygon);
+           }
+        }
+     else if (name == "gates") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+        //WIRE wire;
+        //wire.Parse(c->attributes_begin(), c->attributes_end());
+        //wires.push_back(wire);
+           }
+        }
+     }
+}
 
 /*******************************************************************************
  * class DIMENSION
@@ -751,6 +796,17 @@ int main(int n, char** a) {
      }
   }
 
+  { /* <devicesets>..</devicesets> */
+  auto devicesets = eagle.child("drawing").child("library").child("devicesets");
+
+  for(auto d = devicesets.begin(); d != devicesets.end(); ++d) {
+     DEVICESET deviceset;
+     deviceset.library = lib.name;
+     deviceset.Parse(d->attributes_begin(),d->attributes_end());
+     deviceset.Parse(d->begin(),d->end());
+     lib.devicesets.push_back(deviceset);
+     }
+  }
 
   return 0;
 }

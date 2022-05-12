@@ -517,46 +517,40 @@ public:
 
 
 class DEVICE {
+friend class DEVICESET;
 public:
-  std::string activetechnology;         //
-  std::string description;              //
-  std::string headline;                 //
-  std::string library;                  //
   std::string name;                     //
-  std::string prefix;                   //
-  std::string technologies;             // all techologies, separated by a SPACE
-  bool value;                           // string ("On" oder "Off")
-  AREA area;                            //
-  PACKAGE package;
+  std::string package;                  //
 
-  //Loop members
-  std::vector<ATTRIBUTE> attributes(std::string technology);
-  std::vector<GATE> gates;
+
+
+//<!ELEMENT device (connects?, technologies?)>
+//<!ATTLIST device
+//        name          %String;       ""
+//        package       %String;       #IMPLIED
+//        >
+//
+//
+//std::string activetechnology;         //
+//std::string description;              //
+//std::string headline;                 //
+//std::string library;                  //
+//
+//std::string prefix;                   //
+//std::string technologies;             // all techologies, separated by a SPACE
+//bool value;                           // string ("On" oder "Off")
+//AREA area;                            //
+//PACKAGE package;
+//
+////Loop members
+//std::vector<ATTRIBUTE> attributes(std::string technology);
+//std::vector<GATE> gates;
+private:
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
 public:
   DEVICE();
 };
-
-class DEVICESET {
-public:
-  std::string library;                  //
-  std::string description;              // vollstaendiger Beschreibungstext, der mit dem DESCRIPTION-Befehl erzeugt wurde
-  std::string headline;                 // erste Zeile der Beschreibung ohne HTML-Tags ausgibt
-  std::string name;                     //
-  std::string prefix;                   //
-  DEVICE* activedevice;                 // if a set is currently beeing edited, this one is delivered here.
-  AREA area;                            //
-  bool value;                           // string ("On" oder "Off")
-
-  // Loop members
-  std::vector<DEVICE> devices;
-  std::vector<GATE> gates;
-public:
-  DEVICESET();
-};
-
-
-
-
 
 class GATE {
 public:
@@ -568,6 +562,31 @@ public:
 public:
   GATE();
 };
+
+class DEVICESET {
+public:
+  std::string library;                  //
+  std::string name;                     //
+  std::string prefix;                   //
+  bool uservalue;
+  std::string description;              //
+  std::string headline;                 //
+  //DEVICE* activedevice;               // if a set is currently beeing edited, this one is delivered here.
+  //AREA area;                          //
+  // Loop members
+  std::vector<DEVICE> devices;
+  std::vector<GATE> gates;
+public:
+  DEVICESET();
+  void Parse(pugi::xml_attribute_iterator begin, pugi::xml_attribute_iterator end);
+  void Parse(pugi::xml_node_iterator begin, pugi::xml_node_iterator end);
+};
+
+
+
+
+
+
 
 class LIBRARY {
 public:
