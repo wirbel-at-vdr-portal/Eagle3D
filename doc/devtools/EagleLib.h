@@ -237,6 +237,25 @@ public:
   PAD();
 };
 
+class PIN {
+friend class SYMBOL;
+public:
+  std::string name;                     // #REQUIRED
+  double x, y;                          // #REQUIRED
+  bool showpin;                         // true    "visible" = "pin"
+  bool showpad;                         // true    "visible" = "pad"
+  double length;                        // 7.62    pin length in mm; (point | short | middle | long) <-> (0,2.54,5.08,7.62)
+  std::string direction;                // "io"   {nc,in,out,io,oc,pwr,pas,hiz,sup}
+  bool inverted;                        // false  "function" = "dot"
+  bool clock;                           // false  "function" = "clock"
+  int swaplevel;                        // 0
+  double angle;                         // R0     "rot" = "R(0,90,180,270)"
+private:
+  void Parse(attributes begin, attributes end);
+public:
+  PIN();
+};
+
 class POLYGON {
 friend class PACKAGE;
 friend class SYMBOL;
@@ -365,24 +384,7 @@ public:
 
 
 
-class PIN {
-friend class SYMBOL;
-public:
-  std::string name;                     //
-  double x, y;
-  bool visible_pin;                     // "visible" = "pin"
-  bool visible_pad;                     // "visible" = "pad"
-  int length;                           // PIN_LENGTH_{POINT,SHORT,MIDDLE,LONG}
-  int direction;                        // PIN_DIRECTION_{NC,IN,OUT,IO,OC,PWR,PAS,HIZ,SUP}
-  bool inverted;                        // "function" = "dot"
-  bool clock;                           // "function" = "clock"
-  int swaplevel;
-  double angle;                         // "rot" = "R(0,90,180,270)"
-private:
-  void Parse(attributes begin, attributes end);
-public:
-  PIN();
-};
+
 
 class SYMBOL {
 public:

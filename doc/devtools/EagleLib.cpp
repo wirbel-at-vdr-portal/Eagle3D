@@ -229,6 +229,45 @@ void PAD::Parse(attributes begin, attributes end) {
 }
 
 /*******************************************************************************
+ * class PIN
+ ******************************************************************************/
+PIN::PIN() :
+  x(0.0),y(0.0),showpin(true),showpad(true),length(3.0*2.54),direction("io"),
+  inverted(false),clock(false),swaplevel(0),angle(0.0) {}
+
+void PIN::Parse(attributes begin, attributes end) {
+  showpin = true;
+  showpad = true;
+  length = 3.0*2.54;
+  direction = "io";
+  inverted = false;
+  clock = false;
+  swaplevel = 0;
+  angle = 0.0;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "name")      name      = Value;
+     else if (Name == "x")         x         = std::stod(Value);
+     else if (Name == "y")         y         = std::stod(Value);
+     else if (Name == "visible") {
+        showpin = (Value == "pin") or (Value == "both");
+        showpad = (Value == "pad") or (Value == "both");
+        }
+     else if (Name == "length")    Choice(length,Value,{"point","short","middle","long"},{0.0,2.54,5.08,7.62});
+     else if (Name == "direction") direction = Value;
+     else if (Name == "function") {
+        inverted = (Value == "dot") or (Value == "dotclk");
+        clock    = (Value == "clk") or (Value == "dotclk");
+        }
+     else if (Name == "swaplevel") swaplevel = std::stoi(Value);
+     else if (Name == "rot")       angle     = std::stod(Value.substr(Value.find_first_of("0123456789")));
+     }
+}
+
+/*******************************************************************************
  * class POLYGON
  ******************************************************************************/
 POLYGON::POLYGON() :
@@ -874,58 +913,7 @@ void DRAWING::Parse(childs begin, childs end) {
 
 
 
-/*******************************************************************************
- * class PIN
- ******************************************************************************/
-PIN::PIN() :
-  x(0.0),y(0.0),visible_pin(true),visible_pad(true),
-  length(PIN_LENGTH_LONG),direction(PIN_DIRECTION_IO),
-  inverted(false),clock(false),swaplevel(0),angle(0.0) {}
 
-void PIN::Parse(attributes begin, attributes end) {
-  visible_pin = true;
-  visible_pad = true;
-  length = PIN_LENGTH_LONG;
-  direction = PIN_DIRECTION_IO;
-  inverted = false;
-  clock = false;
-  swaplevel = 0;
-  angle = 0.0;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string Name(a->name());
-     std::string Value(a->value());
-
-          if (Name == "name")      name      = Value;
-     else if (Name == "x")         x         = std::stod(Value);
-     else if (Name == "y")         y         = std::stod(Value);
-     else if (Name == "swaplevel") swaplevel = std::stoi(Value);
-     else if (Name == "rot")       angle     = std::stod(Value.substr(Value.find_first_of("0123456789")));
-
-     else if (Name == "visible") {
-        visible_pin = (Value == "pin") or (Value == "both");
-        visible_pad = (Value == "pad") or (Value == "both");
-        }
-     else if (Name == "length")
-        Choice(length,Value,
-           {"point","short",
-            "middle","long"},
-           {PIN_LENGTH_POINT,PIN_LENGTH_SHORT,
-            PIN_LENGTH_MIDDLE,PIN_LENGTH_LONG});
-     else if (Name == "direction")
-        Choice(direction,Value,
-           {"nc","in","out",
-            "io","oc","pwr",
-            "pas","hiz","sup"},
-           {PIN_DIRECTION_NC,PIN_DIRECTION_IN,PIN_DIRECTION_OUT,
-            PIN_DIRECTION_IO,PIN_DIRECTION_OC,PIN_DIRECTION_PWR,
-            PIN_DIRECTION_PAS,PIN_DIRECTION_HIZ,PIN_DIRECTION_SUP});
-     else if (Name == "function") {
-        inverted = (Value == "dot") or (Value == "dotclk");
-        clock    = (Value == "clk") or (Value == "dotclk");
-        }
-     }
-}
 
 
 
