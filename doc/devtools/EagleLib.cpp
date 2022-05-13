@@ -22,6 +22,8 @@ std::string HeadLine(std::string& Description) {
   ReplaceAll(headline, "<P>", ""); ReplaceAll(headline, "</P>", "");
   ReplaceAll(headline, "<br>", ""); ReplaceAll(headline, "</br>", "");
   ReplaceAll(headline, "<BR>", ""); ReplaceAll(headline, "</BR>", "");
+  ReplaceAll(headline, "&lt;", ""); ReplaceAll(headline, "&gt;", "");
+  ReplaceAll(headline, "&LT;", ""); ReplaceAll(headline, "&GT;", "");
   return headline;
 }
 
@@ -46,13 +48,87 @@ CIRCLE::CIRCLE() :
 
 void CIRCLE::Parse(attributes begin, attributes end) {
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "x")       x       = std::stod(value);
-     else if (name == "y")       y       = std::stod(value);
-     else if (name == "radius")  radius  = std::stod(value);
-     else if (name == "width")   width   = std::stod(value);
-     else if (name == "layer")   layer   = std::stoi(value);
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "x")       x       = std::stod(Value);
+     else if (Name == "y")       y       = std::stod(Value);
+     else if (Name == "radius")  radius  = std::stod(Value);
+     else if (Name == "width")   width   = std::stod(Value);
+     else if (Name == "layer")   layer   = std::stoi(Value);
+     }
+}
+
+/*******************************************************************************
+ * class DIMENSION
+ ******************************************************************************/
+DIMENSION::DIMENSION() :
+  x1(0.0),y1(0.0),x2(0.0),y2(0.0),x3(0.0),y3(0.0),layer(0),
+  dtype("parallel"),width(0.0),extwidth(0.0),extlength(0.0),
+  extoffset(0.0),size(0.0),ratio(8),unit("mm"),precision(2),
+  visible(false) {}
+
+void DIMENSION::Parse(attributes begin, attributes end) {
+  dtype = "parallel";
+  extlength = 0.0;
+  extoffset = 0.0;
+  extwidth = 0.0;
+  ratio = 8;
+  unit = "mm";
+  precision = 2;
+  visible = false;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "x1")        x1         = std::stod(Value);
+     else if (Name == "y1")        y1         = std::stod(Value);
+     else if (Name == "x2")        x2         = std::stod(Value);
+     else if (Name == "y2")        y2         = std::stod(Value);
+     else if (Name == "x3")        x3         = std::stod(Value);
+     else if (Name == "y3")        y3         = std::stod(Value);
+     else if (Name == "layer")     layer      = std::stoi(Value);
+     else if (Name == "dtype")     dtype      = Value;
+     else if (Name == "width")     width      = std::stod(Value);
+     else if (Name == "textsize")  size       = std::stod(Value);
+     else if (Name == "extwidth")  extwidth   = std::stod(Value);
+     else if (Name == "extlength") extlength  = std::stod(Value);
+     else if (Name == "extoffset") extoffset  = std::stod(Value);
+     else if (Name == "textratio") ratio      = std::stoi(Value);
+     else if (Name == "unit")      unit       = Value;
+     else if (Name == "precision") precision  = std::stoi(Value);
+     else if (Name == "visible")   visible    = (Value == "yes");
+     }
+}
+
+/*******************************************************************************
+ * class FRAME
+ ******************************************************************************/
+FRAME::FRAME() :
+  x1(0.0),y1(0.0),x2(0.0),y2(0.0),columns(0),rows(0),layer(0),
+  border_left(true),border_top(true),border_right(true),border_bottom(true) {}
+
+void FRAME::Parse(attributes begin, attributes end) {
+  border_left   = true;
+  border_top    = true;
+  border_right  = true;
+  border_bottom = true;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "x1")            x1            = std::stod(Value);
+     else if (Name == "y1")            y1            = std::stod(Value);
+     else if (Name == "x2")            x2            = std::stod(Value);
+     else if (Name == "y2")            y2            = std::stod(Value);
+     else if (Name == "columns")       columns       = std::stoi(Value);
+     else if (Name == "rows")          rows          = std::stoi(Value);
+     else if (Name == "layer")         layer         = std::stoi(Value);
+     else if (Name == "border-left")   border_left   = (Value!="no");
+     else if (Name == "border-top")    border_top    = (Value!="no");
+     else if (Name == "border-right")  border_right  = (Value!="no");
+     else if (Name == "border-bottom") border_bottom = (Value!="no");
      }
 }
 
@@ -60,8 +136,29 @@ void CIRCLE::Parse(attributes begin, attributes end) {
  * class GRID
  ******************************************************************************/
 GRID::GRID() :
-  distance(0.0),altdistance(0.0),dots(false),on(false),multiple(0),
-  unit(0),altunit(0),unitdist(0),altunitdist(0) {}
+  distance(0.0),unitdist("mm"),unit("mm"),style("lines"),multiple(1),
+  display(false),altdistance(0.0),altunitdist("mm"),altunit("mm") {}
+
+void GRID::Parse(attributes begin, attributes end) {
+  style = "lines";
+  multiple = 1;
+  display = false;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "distance")      distance      = std::stod(Value);
+     else if (Name == "unitdist")      unitdist      = Value;
+     else if (Name == "unit")          unit          = Value;
+     else if (Name == "style")         style         = Value;
+     else if (Name == "multiple")      multiple      = std::stoi(Value);
+     else if (Name == "display")       display       = (Value == "yes");
+     else if (Name == "altdistance")   altdistance   = std::stod(Value);
+     else if (Name == "altunitdist")   altunitdist   = Value;
+     else if (Name == "altunit")       altunit       = Value;
+     }
+}
 
 /*******************************************************************************
  * class HOLE
@@ -70,32 +167,32 @@ HOLE::HOLE() : x(0.0),y(0.0),drill(0.0) {}
 
 void HOLE::Parse(attributes begin, attributes end) {
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "x")       x       = std::stod(value);
-     else if (name == "y")       y       = std::stod(value);
-     else if (name == "drill")   drill   = std::stod(value);
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "x")       x       = std::stod(Value);
+     else if (Name == "y")       y       = std::stod(Value);
+     else if (Name == "drill")   drill   = std::stod(Value);
      }
 }
 
 /*******************************************************************************
  * class LAYER
  ******************************************************************************/
-LAYER::LAYER() : used(true),visible(true),color(0),fill(0),number(0) {}
+LAYER::LAYER() : number(0),color(0),fill(0),visible(true),active(true) {}
 
 void LAYER::Parse(attributes begin, attributes end) {
-  used    = true;
   visible = true;
+  active  = true;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "number")  number  = std::stod(value);
-     else if (name == "name")    name    = value;
-     else if (name == "color")   color   = std::stod(value);
-     else if (name == "fill")    fill    = std::stod(value);
-     else if (name == "visible") visible = (value != "no");
-     else if (name == "active")  used    = (value != "no");
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "number")  number  = std::stod(Value);
+     else if (Name == "name")    name    = Value;
+     else if (Name == "color")   color   = std::stoi(Value);
+     else if (Name == "fill")    fill    = std::stoi(Value);
+     else if (Name == "visible") visible = (Value != "no");
+     else if (Name == "active")  active  = (Value != "no");
      }
 }
 
@@ -103,121 +200,76 @@ void LAYER::Parse(attributes begin, attributes end) {
  * class PAD
  ******************************************************************************/
 PAD::PAD() :
-  x(0.0),y(0.0),drill(0.0),diameter(0.0),shape(PAD_SHAPE_ROUND),angle(0.0),
+  x(0.0),y(0.0),drill(0.0),diameter(0.0),shape("round"),angle(0.0),
   stop(true),thermals(true),first(false) {}
 
 void PAD::Parse(attributes begin, attributes end) {
   diameter = 0.0;
-  shape = PAD_SHAPE_ROUND;
+  shape = "round";
   angle = 0.0;
   stop = true;
   thermals = true;
   first = false;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
+     std::string Name(a->name());
+     std::string Value(a->value());
 
-          if (name == "name")     name     = value;
-     else if (name == "x")        x        = std::stod(value);
-     else if (name == "y")        y        = std::stod(value);
-     else if (name == "drill")    drill    = std::stod(value);
-     else if (name == "diameter") diameter = std::stod(value);
-     else if (name == "rot")      angle    = std::stod(value.substr(value.find_first_of("0123456789")));
-     else if (name == "stop")     stop     = (value != "no");
-     else if (name == "thermals") thermals = (value != "no");
-     else if (name == "first")    first    = (value == "yes");
-     else if (name == "shape")
-        Choice(shape, value,
-           {"square","round","octagon",
-            "long","offset"},
-           {PAD_SHAPE_SQUARE,PAD_SHAPE_ROUND,PAD_SHAPE_OCTAGON,
-            PAD_SHAPE_LONG,PAD_SHAPE_OFFSET});
+          if (Name == "name")     name     = Value;
+     else if (Name == "x")        x        = std::stod(Value);
+     else if (Name == "y")        y        = std::stod(Value);
+     else if (Name == "drill")    drill    = std::stod(Value);
+     else if (Name == "diameter") diameter = std::stod(Value);
+     else if (Name == "shape")    shape    = Value;
+     else if (Name == "rot")      angle    = std::stod(Value.substr(Value.find_first_of("0123456789")));
+     else if (Name == "stop")     stop     = (Value != "no");
+     else if (Name == "thermals") thermals = (Value != "no");
+     else if (Name == "first")    first    = (Value == "yes");
      }
 }
 
 /*******************************************************************************
- * class WIRE
+ * class POLYGON
  ******************************************************************************/
-WIRE::WIRE() :
-  x1(0),y1(0),x2(0),y2(0),width(0),layer(0),style(WIRE_STYLE_CONTINUOUS),
-  curve(0.0), cap(CAP_ROUND) {}
+POLYGON::POLYGON() :
+  width(0.0),layer(0),spacing(0.0),pour("solid"),isolate(0.0),
+  orphans(false),thermals(true),rank(0) {}
 
-void WIRE::Parse(attributes begin, attributes end) {
-  style = WIRE_STYLE_CONTINUOUS;
-  curve = 0.0;
-  cap = CAP_ROUND;
+void POLYGON::Parse(attributes begin, attributes end) {
+  pour = "solid";
+  orphans = false;
+  thermals = true;
+  rank = 0;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "x1")     x1    = std::stod(value);
-     else if (name == "y1")     y1    = std::stod(value);
-     else if (name == "x2")     x2    = std::stod(value);
-     else if (name == "y2")     y2    = std::stod(value);
-     else if (name == "width")  width = std::stod(value);
-     else if (name == "layer")  layer = std::stoi(value);
-     else if (name == "curve")  curve = std::stod(value);
-     else if (name == "extent") extent = value; // Only applicable for airwires
-     else if (name == "style")
-        Choice(style, value,{"continuous","longdash","shortdash","dashdot"},
-           {WIRE_STYLE_CONTINUOUS,WIRE_STYLE_LONGDASH,
-            WIRE_STYLE_SHORTDASH, WIRE_STYLE_DASHDOT});
-     else if (name == "cap")
-        Choice(cap, value,{"flat","round"},{CAP_FLAT,CAP_ROUND});
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "width")     width     = std::stod(Value);
+     else if (Name == "layer")     layer     = std::stoi(Value);
+     else if (Name == "spacing")   spacing   = std::stod(Value);
+     else if (Name == "pour")      pour      = Value;
+     else if (Name == "isolate")   isolate   = std::stod(Value);  // Only in <signal> or <package> context
+     else if (Name == "orphans")   orphans   = (Value == "yes");  // Only in <signal> context
+     else if (Name == "thermals")  thermals  = (Value != "no");   // Only in <signal> context
+     else if (Name == "rank     ") rank      = std::stoi(Value);  // 1..6 in <signal> context, 0 or 7 in <package> context
      }
 }
 
-/*******************************************************************************
- * class TEXT
- ******************************************************************************/
-TEXT::TEXT() :
-  x(0.0),y(0.0),size(0.0),layer(0),font(FONT_PROPORTIONAL),ratio(8),
-  angle(0.0),mirror(false),spin(false),align(ALIGN_BOTTOM_LEFT),
-  linedistance(50) {}
-
-void TEXT::Parse(attributes begin, attributes end) {
-  font = FONT_PROPORTIONAL;
-  ratio = 8;
-  angle = 0.0;
-  align = ALIGN_BOTTOM_LEFT;
-  linedistance = 50;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-
-          if (name == "x")        x     = std::stod(value);
-     else if (name == "y")        y     = std::stod(value);
-     else if (name == "size")     size  = std::stod(value);
-     else if (name == "layer")    layer = std::stoi(value);
-     else if (name == "distance") linedistance = std::stoi(value);
-     else if (name == "ratio")    ratio = std::stoi(value);
-     else if (name == "rot") {
-        angle  = std::stod(value.substr(value.find_first_of("0123456789")));
-        mirror = value.find("M") != std::string::npos;
-        spin   = value.find("S") != std::string::npos;
+void POLYGON::Parse(childs begin, childs end) {
+  vertices.clear();
+  for(auto v = begin; v != end; ++v) {
+     VERTEX vertex;
+     for(auto a = v->attributes_begin(); a != v->attributes_end(); ++a) {
+        std::string Name(a->name());
+        std::string Value(a->value());
+             if (Name == "x")     vertex.x     = std::stod(Value);
+        else if (Name == "y")     vertex.y     = std::stod(Value);
+        else if (Name == "curve") vertex.curve = std::stod(Value);
         }
-     else if (name == "align")
-        Choice(align, value,
-           {"bottom-left","bottom-center","bottom-right",
-            "center-left","center","center-right","top-left",
-           "top-center","top-right"},
-           {ALIGN_BOTTOM_LEFT,ALIGN_BOTTOM_CENTER,ALIGN_BOTTOM_RIGHT,
-            ALIGN_CENTER_LEFT,ALIGN_CENTER,ALIGN_CENTER_RIGHT,ALIGN_TOP_LEFT,
-            ALIGN_TOP_CENTER,ALIGN_TOP_RIGHT});
-
-     else if (name == "font")
-        Choice(font, value,
-           {"vector","proportional","fixed"},
-           {FONT_VECTOR,FONT_PROPORTIONAL,FONT_FIXED});
+     vertices.push_back(vertex);
      }
 }
-
-/*******************************************************************************
- * class ATTRIBUTE
- ******************************************************************************/
-ATTRIBUTE::ATTRIBUTE() : constant(false), display(0) {}
 
 /*******************************************************************************
  * class RECTANGLE
@@ -229,17 +281,15 @@ void RECTANGLE::Parse(attributes begin, attributes end) {
   angle = 0.0;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
+     std::string Name(a->name());
+     std::string Value(a->value());
 
-          if (name == "x1")       x1    = std::stod(value);
-     else if (name == "y1")       y1    = std::stod(value);
-     else if (name == "x2")       x2    = std::stod(value);
-     else if (name == "y2")       y2    = std::stod(value);
-     else if (name == "layer")    layer = std::stoi(value);
-     else if (name == "rot") {
-        angle  = std::stod(value.substr(value.find_first_of("0123456789")));
-        }
+          if (Name == "x1")       x1    = std::stod(Value);
+     else if (Name == "y1")       y1    = std::stod(Value);
+     else if (Name == "x2")       x2    = std::stod(Value);
+     else if (Name == "y2")       y2    = std::stod(Value);
+     else if (Name == "layer")    layer = std::stoi(Value);
+     else if (Name == "rot")      angle = std::stod(Value.substr(Value.find_first_of("0123456789")));
      }
 }
 
@@ -258,23 +308,87 @@ void SMD::Parse(attributes begin, attributes end) {
   cream = true;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
+     std::string Name(a->name());
+     std::string Value(a->value());
 
-          if (name == "name")      name      = value;
-     else if (name == "x")         x         = std::stod(value);
-     else if (name == "y")         y         = std::stod(value);
-     else if (name == "dx")        dx        = std::stod(value);
-     else if (name == "dy")        dy        = std::stod(value);
-     else if (name == "layer")     layer     = std::stoi(value);
-     else if (name == "roundness") roundness = std::stoi(value);
-     else if (name == "rot")       angle     = std::stod(value.substr(value.find_first_of("0123456789")));
-     else if (name == "stop")      stop      = (value != "no");
-     else if (name == "thermals")  thermals  = (value != "no");
-     else if (name == "cream")     cream     = (value != "no");
+          if (Name == "name")      name      = Value;
+     else if (Name == "x")         x         = std::stod(Value);
+     else if (Name == "y")         y         = std::stod(Value);
+     else if (Name == "dx")        dx        = std::stod(Value);
+     else if (Name == "dy")        dy        = std::stod(Value);
+     else if (Name == "layer")     layer     = std::stoi(Value);
+     else if (Name == "roundness") roundness = std::stoi(Value);
+     else if (Name == "rot")       angle     = std::stod(Value.substr(Value.find_first_of("0123456789")));
+     else if (Name == "stop")      stop      = (Value != "no");
+     else if (Name == "thermals")  thermals  = (Value != "no");
+     else if (Name == "cream")     cream     = (Value != "no");
      }
 }
 
+/*******************************************************************************
+ * class TEXT
+ ******************************************************************************/
+TEXT::TEXT() :
+  x(0.0),y(0.0),size(0.0),layer(0),font("proportional"),ratio(8),
+  angle(0.0),mirror(false),spin(false),align("bottom-left"),
+  distance(50) {}
+
+void TEXT::Parse(attributes begin, attributes end) {
+  font = "proportional";
+  ratio = 8;
+  angle = 0.0;
+  mirror = false;
+  spin = false;
+  align = "bottom-left";
+  distance = 50;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "x")        x            = std::stod(Value);
+     else if (Name == "y")        y            = std::stod(Value);
+     else if (Name == "size")     size         = std::stod(Value);
+     else if (Name == "layer")    layer        = std::stoi(Value);
+     else if (Name == "font")     font         = Value;
+     else if (Name == "ratio")    ratio        = std::stoi(Value);
+     else if (Name == "rot") {
+        angle  = std::stod(Value.substr(Value.find_first_of("0123456789")));
+        mirror = Value.find("M") != std::string::npos;
+        spin   = Value.find("S") != std::string::npos;
+        }
+     else if (Name == "align")    align        = Value;
+     else if (Name == "distance") distance     = std::stoi(Value);
+     }
+}
+
+/*******************************************************************************
+ * class WIRE
+ ******************************************************************************/
+WIRE::WIRE() :
+  x1(0.0),y1(0.0),x2(0.0),y2(0.0),width(0.0),layer(0),style("continuous"),
+  curve(0.0), cap_round(true) {}
+
+void WIRE::Parse(attributes begin, attributes end) {
+  style = "continuous";
+  curve = 0.0;
+  cap_round = true;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "x1")     x1        = std::stod(Value);
+     else if (Name == "y1")     y1        = std::stod(Value);
+     else if (Name == "x2")     x2        = std::stod(Value);
+     else if (Name == "y2")     y2        = std::stod(Value);
+     else if (Name == "width")  width     = std::stod(Value);
+     else if (Name == "layer")  layer     = std::stoi(Value);
+     else if (Name == "extent") extent    = Value;
+     else if (Name == "curve")  curve     = std::stod(Value);
+     else if (Name == "style")  style     = Value;
+     else if (Name == "cap")    cap_round = Value != "flat";
+     }
+}
 
 /*******************************************************************************
  * class PACKAGE
@@ -282,68 +396,187 @@ void SMD::Parse(attributes begin, attributes end) {
 PACKAGE::PACKAGE() {}
 
 void PACKAGE::Parse(childs begin, childs end) {
-  for(auto c = begin; c != end; ++c) {
-     std::string name(c->name());
-     std::string value(c->value());
+  description.clear();
+  headline.clear();
+  polygons.clear();
+  wires.clear();
+  texts.clear();
+  dimensions.clear();
+  circles.clear();
+  rectangles.clear();
+  frames.clear();
+  holes.clear();
+  pads.clear();
+  smds.clear();
 
-     if (name == "description") {
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+
+     if (Name == "description") {
         description = c->text().get();
         headline = HeadLine(description);
         }
-     else if (name == "polygon") {
+     else if (Name == "polygon") {
         POLYGON polygon;
         polygon.Parse(c->begin(), c->end());
         polygon.Parse(c->attributes_begin(), c->attributes_end());
         polygons.push_back(polygon);
         }
-     else if (name == "wire") {
+     else if (Name == "wire") {
         WIRE wire;
         wire.Parse(c->attributes_begin(), c->attributes_end());
         wires.push_back(wire);
         }
-     else if (name == "text") {
+     else if (Name == "text") {
         TEXT text;
         text.value = c->text().get();
         text.Parse(c->attributes_begin(), c->attributes_end());
         texts.push_back(text);
         }
-     else if (name == "dimension") {
+     else if (Name == "dimension") {
         DIMENSION dimension;
         dimension.Parse(c->attributes_begin(), c->attributes_end());
         dimensions.push_back(dimension);
         }
-     else if (name == "circle") {
+     else if (Name == "circle") {
         CIRCLE circle;
         circle.Parse(c->attributes_begin(), c->attributes_end());
         circles.push_back(circle);
         }
-     else if (name == "rectangle") {
+     else if (Name == "rectangle") {
         RECTANGLE rectangle;
         rectangle.Parse(c->attributes_begin(), c->attributes_end());
         rectangles.push_back(rectangle);
         }
-     else if (name == "frame") {
+     else if (Name == "frame") {
         FRAME frame;
         frame.Parse(c->attributes_begin(), c->attributes_end());
         frames.push_back(frame);
         }
-     else if (name == "hole") {
+     else if (Name == "hole") {
         HOLE hole;
         hole.Parse(c->attributes_begin(), c->attributes_end());
         holes.push_back(hole);
         }
-     else if (name == "pad") {
+     else if (Name == "pad") {
         PAD pad;
         pad.Parse(c->attributes_begin(), c->attributes_end());
         pads.push_back(pad);
         }
-     else if (name == "smd") {
+     else if (Name == "smd") {
         SMD smd;
         smd.Parse(c->attributes_begin(), c->attributes_end());
         smds.push_back(smd);
         }
      }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+ * class ATTRIBUTE
+ ******************************************************************************/
+ATTRIBUTE::ATTRIBUTE() :
+  x(0.0),y(0.0),size(0.0),layer(0),font(FONT_PROPORTIONAL),ratio(0),
+  angle(0.0),show_value(true),show_name(false),constant(false) {}
+
+void ATTRIBUTE::Parse(attributes begin, attributes end) {
+  x = 0.0;
+  y = 0.0;
+  size = 0.0;
+  layer = 0;
+  font = FONT_PROPORTIONAL;
+  ratio = 0;
+  angle = 0.0;
+  show_value = true;
+  show_name = false;
+  constant = false;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "name")     name     = Value;
+     else if (Name == "value")    value    = Value;
+     else if (Name == "x")        x        = std::stod(Value);
+     else if (Name == "y")        y        = std::stod(Value);
+     else if (Name == "size")     size     = std::stod(Value);
+     else if (Name == "layer")    layer    = std::stoi(Value);
+     else if (Name == "ratio")    ratio    = std::stoi(Value);
+     else if (Name == "constant") constant = Value == "yes";
+     else if (Name == "font")
+        Choice(font, Value,
+           {"vector","proportional","fixed"},
+           {FONT_VECTOR,FONT_PROPORTIONAL,FONT_FIXED});
+     else if (Name == "rot") {
+        angle  = std::stod(Value.substr(Value.find_first_of("0123456789")));
+        }
+     else if (Name == "display") {
+        show_value = (Value == "value") or (Value == "both");
+        show_name  = (Value == "name")  or (Value == "both");
+        }
+     }
+}
+
+
+/*******************************************************************************
+ * class TECHNOLOGY
+ ******************************************************************************/
+TECHNOLOGY::TECHNOLOGY() {}
+
+void TECHNOLOGY::Parse(childs begin, childs end) {
+  Attributes.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+
+     if (Name == "attribute") {
+        ATTRIBUTE Attribute;
+        Attribute.Parse(c->attributes_begin(), c->attributes_end());
+        Attributes.push_back(Attribute);
+        }
+     }
+}
+
+
+
+
+
+
+
+
+/*******************************************************************************
+ * class CONNECT
+ ******************************************************************************/
+CONNECT::CONNECT() : route_all(true) {}
+
+void CONNECT::Parse(attributes begin, attributes end) {
+  gate.clear();
+  pin.clear();
+  pad.clear();
+  route_all = true;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "gate")      gate       = Value;
+     else if (Name == "pin")       pin        = Value;
+     else if (Name == "pad")       pad        = Value;
+     else if (Name == "route")     route_all  = (Value != "any");
+     }
+}
+
 
 /*******************************************************************************
  * class DEVICE
@@ -355,10 +588,10 @@ void DEVICE::Parse(attributes begin, attributes end) {
   package.clear();
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "name")      name       = value;
-     else if (name == "package")   package    = value;
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "name")      name       = Value;
+     else if (Name == "package")   package    = Value;
      }
 }
 
@@ -367,21 +600,21 @@ void DEVICE::Parse(childs begin, childs end) {
   technologies.clear();
 
   for(auto c = begin; c != end; ++c) {
-     std::string name(c->name());
+     std::string Name(c->name());
 
-     if (name == "connects") {
+     if (Name == "connects") {
         for(auto ch = c->begin(); ch != c->end(); ++ch) {
-        //POLYGON polygon;
-        //polygon.Parse(c->begin(), c->end());
-        //polygon.Parse(c->attributes_begin(), c->attributes_end());
-        //polygons.push_back(polygon);
+           CONNECT connect;
+           connect.Parse(ch->attributes_begin(), ch->attributes_end());
+           connects.push_back(connect);
            }
         }
-     else if (name == "technologies") {
+     else if (Name == "technologies") {
         for(auto ch = c->begin(); ch != c->end(); ++ch) {
-        //WIRE wire;
-        //wire.Parse(c->attributes_begin(), c->attributes_end());
-        //wires.push_back(wire);
+           TECHNOLOGY technology;
+           technology.name = ch->attribute("name").value();
+           technology.Parse(ch->begin(), ch->end());
+           technologies.push_back(technology);
            }
         }
      }
@@ -398,11 +631,11 @@ void DEVICESET::Parse(attributes begin, attributes end) {
   uservalue = false;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "name")      name       = value;
-     else if (name == "prefix")    prefix     = value;
-     else if (name == "uservalue") uservalue  = (value == "yes");
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "name")      name       = Value;
+     else if (Name == "prefix")    prefix     = Value;
+     else if (Name == "uservalue") uservalue  = (Value == "yes");
      }
 }
 
@@ -413,114 +646,32 @@ void DEVICESET::Parse(childs begin, childs end) {
   gates.clear();
 
   for(auto c = begin; c != end; ++c) {
-     std::string name(c->name());
-     std::string value(c->value());
+     std::string Name(c->name());
+     std::string Value(c->value());
 
-     if (name == "description") {
+     if (Name == "description") {
         description = c->text().get();
         headline = HeadLine(description);
         }
-     else if (name == "devices") {
+     else if (Name == "devices") {
         for(auto ch = c->begin(); ch != c->end(); ++ch) {
-        //POLYGON polygon;
-        //polygon.Parse(c->begin(), c->end());
-        //polygon.Parse(c->attributes_begin(), c->attributes_end());
-        //polygons.push_back(polygon);
+           DEVICE device;
+           device.Parse(ch->begin(), ch->end());
+           device.Parse(ch->attributes_begin(), ch->attributes_end());
+           devices.push_back(device);
            }
         }
-     else if (name == "gates") {
+     else if (Name == "gates") {
         for(auto ch = c->begin(); ch != c->end(); ++ch) {
-        //WIRE wire;
-        //wire.Parse(c->attributes_begin(), c->attributes_end());
-        //wires.push_back(wire);
+           GATE gate;
+           gate.Parse(ch->attributes_begin(), ch->attributes_end());
+           gates.push_back(gate);
            }
         }
      }
 }
 
-/*******************************************************************************
- * class DIMENSION
- ******************************************************************************/
-DIMENSION::DIMENSION() :
-  x1(0.0),y1(0.0),x2(0.0),y2(0.0),x3(0.0),y3(0.0),layer(0),
-  dtype(DIMENSION_PARALLEL),width(0.0),extwidth(0.0),extlength(0.0),
-  extoffset(0.0),size(0.0),ratio(8),unit(GRID_UNIT_MM),precision(2),
-  visible(false) {}
 
-void DIMENSION::Parse(attributes begin, attributes end) {
-  dtype = DIMENSION_PARALLEL;
-  extlength = 0.0;
-  extoffset = 0.0;
-  extwidth = 0.0;
-  ratio = 8;
-  unit = GRID_UNIT_MM;
-  precision = 2;
-  visible = false;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-
-          if (name == "x1")        x1         = std::stod(value);
-     else if (name == "y1")        y1         = std::stod(value);
-     else if (name == "x2")        x2         = std::stod(value);
-     else if (name == "y2")        y2         = std::stod(value);
-     else if (name == "x3")        x3         = std::stod(value);
-     else if (name == "y3")        y3         = std::stod(value);
-     else if (name == "layer")     layer      = std::stoi(value);
-     else if (name == "width")     width      = std::stod(value);
-     else if (name == "textsize")  size       = std::stod(value);
-     else if (name == "extwidth")  extwidth   = std::stod(value);
-     else if (name == "extlength") extlength  = std::stod(value);
-     else if (name == "extoffset") extoffset  = std::stod(value);
-     else if (name == "textratio") ratio      = std::stoi(value);
-     else if (name == "visible")   visible    = (value == "yes");
-     else if (name == "precision") precision  = std::stoi(value);
-     else if (name == "dtype")
-        Choice(dtype,value,
-           {"parallel","horizontal","vertical",
-            "radius","diameter","angle",
-            "leader"},
-           {DIMENSION_PARALLEL,DIMENSION_HORIZONTAL,DIMENSION_VERTICAL,
-            DIMENSION_RADIUS,DIMENSION_DIAMETER,DIMENSION_ANGLE,
-            DIMENSION_LEADER});
-     else if (name == "unit")
-        Choice(unit,value,
-           {"mic","mm","mil","inch"},
-           {GRID_UNIT_MIC,GRID_UNIT_MM,GRID_UNIT_MIL,GRID_UNIT_INCH});
-     }
-}
-
-/*******************************************************************************
- * class FRAME
- ******************************************************************************/
-FRAME::FRAME() :
-  x1(0.0),y1(0.0),x2(0.0),y2(0.0),columns(0),rows(0),layer(0),
-  border_left(true),border_top(true),border_right(true),border_bottom(true) {}
-
-void FRAME::Parse(attributes begin, attributes end) {
-  border_left   = true;
-  border_top    = true;
-  border_right  = true;
-  border_bottom = true;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-
-          if (name == "x1")            x1            = std::stod(value);
-     else if (name == "y1")            y1            = std::stod(value);
-     else if (name == "x2")            x2            = std::stod(value);
-     else if (name == "y2")            y2            = std::stod(value);
-     else if (name == "columns")       columns       = std::stoi(value);
-     else if (name == "rows")          rows          = std::stoi(value);
-     else if (name == "layer")         layer         = std::stoi(value);
-     else if (name == "border-left")   border_left   = (value!="no");
-     else if (name == "border-top")    border_top    = (value!="no");
-     else if (name == "border-right")  border_right  = (value!="no");
-     else if (name == "border-bottom") border_bottom = (value!="no");
-     }
-}
 
 /*******************************************************************************
  * class SYMBOL
@@ -529,51 +680,51 @@ SYMBOL::SYMBOL() {}
 
 void SYMBOL::Parse(childs begin, childs end) {
   for(auto c = begin; c != end; ++c) {
-     std::string name(c->name());
-     std::string value(c->value());
+     std::string Name(c->name());
+     std::string Value(c->value());
 
-     if (name == "description") {
+     if (Name == "description") {
         description = c->text().get();
         headline = HeadLine(description);
         }
-     else if (name == "polygon") {
+     else if (Name == "polygon") {
         POLYGON polygon;
         polygon.Parse(c->begin(), c->end());
         polygon.Parse(c->attributes_begin(), c->attributes_end());
         polygons.push_back(polygon);
         }
-     else if (name == "wire") {
+     else if (Name == "wire") {
         WIRE wire;
         wire.Parse(c->attributes_begin(), c->attributes_end());
         wires.push_back(wire);
         }
-     else if (name == "text") {
+     else if (Name == "text") {
         TEXT text;
         text.value = c->text().get();
         text.Parse(c->attributes_begin(), c->attributes_end());
         texts.push_back(text);
         }
-     else if (name == "dimension") {
+     else if (Name == "dimension") {
         DIMENSION dimension;
         dimension.Parse(c->attributes_begin(), c->attributes_end());
         dimensions.push_back(dimension);
         }
-     else if (name == "pin") {
+     else if (Name == "pin") {
         PIN pin;
         pin.Parse(c->attributes_begin(), c->attributes_end());
         pins.push_back(pin);
         }
-     else if (name == "circle") {
+     else if (Name == "circle") {
         CIRCLE circle;
         circle.Parse(c->attributes_begin(), c->attributes_end());
         circles.push_back(circle);
         }
-     else if (name == "rectangle") {
+     else if (Name == "rectangle") {
         RECTANGLE rectangle;
         rectangle.Parse(c->attributes_begin(), c->attributes_end());
         rectangles.push_back(rectangle);
         }
-     else if (name == "frame") {
+     else if (Name == "frame") {
         FRAME frame;
         frame.Parse(c->attributes_begin(), c->attributes_end());
         frames.push_back(frame);
@@ -584,12 +735,144 @@ void SYMBOL::Parse(childs begin, childs end) {
 /*******************************************************************************
  * class GATE
  ******************************************************************************/
-GATE::GATE() : addlevel(0),swaplevel(0),x(0),y(0) {}
+GATE::GATE() : x(0.0),y(0.0),addlevel(GATE_ADDLEVEL_NEXT),swaplevel(0) {}
+
+void GATE::Parse(attributes begin, attributes end) {
+  name.clear();
+  symbol.clear();
+  x = 0.0;
+  y = 0.0;
+  addlevel = GATE_ADDLEVEL_NEXT;
+  swaplevel = 0;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "name")      name      = Value;
+     else if (Name == "symbol")    symbol    = Value;
+     else if (Name == "x")         x         = std::stod(Value);
+     else if (Name == "y")         y         = std::stod(Value);
+     else if (Name == "swaplevel") swaplevel = std::stoi(Value);
+     else if (Name == "addlevel")
+        Choice(addlevel,Value,
+           {"must","can","next",
+            "request","always"},
+           {GATE_ADDLEVEL_MUST,GATE_ADDLEVEL_CAN,GATE_ADDLEVEL_NEXT,
+            GATE_ADDLEVEL_REQUEST,GATE_ADDLEVEL_ALWAYS});
+     }
+}
+
+
+
 
 /*******************************************************************************
  * class LIBRARY
  ******************************************************************************/
-LIBRARY::LIBRARY() : alwaysvectorfont(false), verticaltextdown(false) {}
+LIBRARY::LIBRARY() {}
+
+void LIBRARY::Parse(childs begin, childs end) {
+  description.clear();
+  headline.clear();
+  packages.clear();
+  symbols.clear();
+  devicesets.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+
+     if (Name == "description") {
+        description = c->text().get();
+        headline = HeadLine(description);
+        }
+     else if (Name == "packages") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           PACKAGE package;
+           package.name = ch->attribute("name").value();
+           package.Parse(ch->begin(),ch->end());
+           packages.push_back(package);
+           }
+        }
+     else if (Name == "symbols") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           SYMBOL symbol;
+           symbol.name = ch->attribute("name").value();
+           symbol.Parse(ch->begin(),ch->end());
+           symbols.push_back(symbol);
+           }
+        }
+     else if (Name == "devicesets") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           DEVICESET deviceset;
+           deviceset.Parse(ch->attributes_begin(),ch->attributes_end());
+           deviceset.Parse(ch->begin(),ch->end());
+           devicesets.push_back(deviceset);
+           }
+        }
+     }
+}
+
+/*******************************************************************************
+ * class DRAWING
+ ******************************************************************************/
+DRAWING::DRAWING() :
+  verticaltextup(true),isLibrary(false),isSchematic(false),isBoard(false) {}
+
+void DRAWING::Parse(childs begin, childs end) {
+  verticaltextup = true;
+  isLibrary = false;
+  isSchematic = false;
+  isBoard = false;
+
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+
+     if (Name == "settings") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           for(auto a = ch->attributes_begin(); a != ch->attributes_end(); ++a) {
+              std::string Name(a->name());
+              std::string Value(a->value());
+              if (Name == "alwaysvectorfont")
+                 alwaysvectorfont = (Value == "yes");
+              else if (Name == "verticaltext")
+                 verticaltextup = (Value == "up");
+              }
+           }
+        }
+     else if (Name == "grid")
+        grid.Parse(c->attributes_begin(), c->attributes_end());
+     else if (Name == "layers") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           LAYER layer;
+           layer.Parse(ch->attributes_begin(),ch->attributes_end());
+           layers.push_back(layer);
+           }
+        }
+     else if (Name == "library") {
+        isLibrary = true;
+        library.name = c->attribute("name").value();
+        library.Parse(c->begin(), c->end());
+        }
+     else if (Name == "schematic") {
+        isSchematic = true;
+        //schematic.Parse(c->begin(), c->end());
+        }
+     else if (Name == "board") {
+        isBoard = true;
+        //board.Parse(c->begin(), c->end());
+        }
+     }
+}
+
+
+
+
+
+
+
+
+
+
 
 /*******************************************************************************
  * class PIN
@@ -610,86 +893,42 @@ void PIN::Parse(attributes begin, attributes end) {
   angle = 0.0;
 
   for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
+     std::string Name(a->name());
+     std::string Value(a->value());
 
-          if (name == "name")      name      = value;
-     else if (name == "x")         x         = std::stod(value);
-     else if (name == "y")         y         = std::stod(value);
-     else if (name == "swaplevel") swaplevel = std::stoi(value);
-     else if (name == "rot")       angle     = std::stod(value.substr(value.find_first_of("0123456789")));
+          if (Name == "name")      name      = Value;
+     else if (Name == "x")         x         = std::stod(Value);
+     else if (Name == "y")         y         = std::stod(Value);
+     else if (Name == "swaplevel") swaplevel = std::stoi(Value);
+     else if (Name == "rot")       angle     = std::stod(Value.substr(Value.find_first_of("0123456789")));
 
-     else if (name == "visible") {
-        visible_pin = (value == "pin") or (value == "both");
-        visible_pad = (value == "pad") or (value == "both");
+     else if (Name == "visible") {
+        visible_pin = (Value == "pin") or (Value == "both");
+        visible_pad = (Value == "pad") or (Value == "both");
         }
-     else if (name == "length")
-        Choice(length,value,
+     else if (Name == "length")
+        Choice(length,Value,
            {"point","short",
             "middle","long"},
            {PIN_LENGTH_POINT,PIN_LENGTH_SHORT,
             PIN_LENGTH_MIDDLE,PIN_LENGTH_LONG});
-     else if (name == "direction")
-        Choice(direction,value,
+     else if (Name == "direction")
+        Choice(direction,Value,
            {"nc","in","out",
             "io","oc","pwr",
             "pas","hiz","sup"},
            {PIN_DIRECTION_NC,PIN_DIRECTION_IN,PIN_DIRECTION_OUT,
             PIN_DIRECTION_IO,PIN_DIRECTION_OC,PIN_DIRECTION_PWR,
             PIN_DIRECTION_PAS,PIN_DIRECTION_HIZ,PIN_DIRECTION_SUP});
-     else if (name == "function") {
-        inverted = (value == "dot") or (value == "dotclk");
-        clock    = (value == "clk") or (value == "dotclk");
+     else if (Name == "function") {
+        inverted = (Value == "dot") or (Value == "dotclk");
+        clock    = (Value == "clk") or (Value == "dotclk");
         }
      }
 }
 
 
-/*******************************************************************************
- * class POLYGON
- ******************************************************************************/
-POLYGON::POLYGON() :
-  width(0.0),layer(0),spacing(0),pour(POLYGON_POUR_SOLID),isolate(0),
-  orphans(false),thermals(true),rank(0) {}
 
-void POLYGON::Parse(attributes begin, attributes end) {
-  pour = POLYGON_POUR_SOLID;
-  orphans = false;
-  thermals = true;
-  rank = 0;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-
-          if (name == "width")     width     = std::stod(value);
-     else if (name == "layer")     layer     = std::stoi(value);
-     else if (name == "spacing")   spacing   = std::stod(value);
-     else if (name == "rank     ") rank      = std::stoi(value);
-     else if (name == "pour")
-        Choice(pour,value,
-           {"solid","hatch","cutout"},
-           {POLYGON_POUR_SOLID,POLYGON_POUR_HATCH,POLYGON_POUR_CUTOUT});
-     else if (name == "isolate")   isolate   = std::stod(value);  // Only in <signal> or <package> context
-     else if (name == "orphans")   orphans   = (value == "yes");  // Only in <signal> context
-     else if (name == "thermals")  thermals  = (value != "no");   // Only in <signal> context
-     }
-}
-
-void POLYGON::Parse(childs begin, childs end) {
-  vertices.clear();
-  for(auto v = begin; v != end; ++v) {
-     VERTEX vertex;
-     for(auto a = v->attributes_begin(); a != v->attributes_end(); ++a) {
-        std::string name(a->name());
-        std::string value(a->value());
-             if (name == "x")     vertex.x     = std::stod(value);
-        else if (name == "y")     vertex.y     = std::stod(value);
-        else if (name == "curve") vertex.curve = std::stod(value);
-        }
-     vertices.push_back(vertex);
-     }
-}
 
 
 
@@ -716,111 +955,9 @@ int main(int n, char** a) {
      return -1;
      }
 
-  ReplaceAll(args[0], ".lbr", ""); 
-  pugi::xml_node eagle = doc.child("eagle");
-  LIBRARY lib;
-
-  { /* <settings>..</settings> */
-  auto settings = eagle.child("drawing").child("settings");
-  for(auto s = settings.begin(); s != settings.end(); ++s) {
-     auto a = s->attributes_begin();
-     std::string name(a->name());
-     std::string value(a->value());
-          if (name == "alwaysvectorfont") lib.alwaysvectorfont = (value == "yes");
-     else if (name == "verticaltext")     lib.verticaltextdown = (value == "down");
-     }
-  }
-
-  { /* <grid .. /> */
-  auto grid = eagle.child("drawing").child("grid");
-  for(auto a = grid.attributes_begin(); a != grid.attributes_end(); ++a) {
-     std::string name(a->name());
-     std::string value(a->value());
-     if ((name == "distance") or (name == "altdistance")) {
-        double d = std::stod(value);
-        if (name == "distance") lib.grid.distance    = d;
-        else                    lib.grid.altdistance = d;
-        }
-     else if ((name == "unit")     or (name == "altunit") or
-              (name == "unitdist") or (name == "altunitdist")) {
-        int u;
-        Choice(u,value,
-           {"mic","mm","mil","inch"},
-           {GRID_UNIT_MIC,GRID_UNIT_MM,GRID_UNIT_MIL,GRID_UNIT_INCH});
-
-             if (name == "unit")       lib.grid.unit        = u;
-        else if (name == "altunit")    lib.grid.altunit     = u;
-        else if (name == "unitdist")   lib.grid.unitdist    = u;
-        else                           lib.grid.altunitdist = u;
-        }
-     else if (name == "style") {
-        lib.grid.dots = value != "lines";
-        }
-     else if (name == "multiple") {
-        lib.grid.multiple = std::stoi(value);
-        }
-     else if (name == "display") {
-        lib.grid.on = (value != "no");
-        }
-     }
-
-  }
-
-  { /* <layers>..</layers> */
-  auto layers = eagle.child("drawing").child("layers");
-  for(auto l = layers.begin(); l != layers.end(); ++l) {
-     LAYER layer;
-     layer.Parse(l->attributes_begin(),l->attributes_end());
-     lib.layers.push_back(layer);
-     }
-  }
-
-  { /* <description>..</description> */
-  auto libname = args[0];
-  ReplaceAll(libname, ".lbr", "");
-  lib.name = SplitStr(libname, '/').back();
-
-  auto description = eagle.child("drawing").child("library").child("description");
-  lib.description = description.text().get();
-  lib.headline = HeadLine(lib.description);
-  }
-
-  { /* <packages>..</packages> */
-  auto packages = eagle.child("drawing").child("library").child("packages");
-
-  for(auto p = packages.begin(); p != packages.end(); ++p) {
-     PACKAGE package;
-     package.library = lib.name;
-     package.name = p->attributes_begin()->value();
-     package.Parse(p->begin(),p->end());
-     lib.packages.push_back(package);
-     }
-  }
-
-  { /* <symbols>..</symbols> */
-  auto symbols = eagle.child("drawing").child("library").child("symbols");
-
-  for(auto s = symbols.begin(); s != symbols.end(); ++s) {
-     SYMBOL symbol;
-     symbol.library = lib.name;
-     symbol.name = s->attributes_begin()->value();
-     symbol.Parse(s->begin(),s->end());
-     lib.symbols.push_back(symbol);
-     }
-  }
-
-  { /* <devicesets>..</devicesets> */
-  auto devicesets = eagle.child("drawing").child("library").child("devicesets");
-
-  for(auto d = devicesets.begin(); d != devicesets.end(); ++d) {
-     DEVICESET deviceset;
-     deviceset.library = lib.name;
-     deviceset.Parse(d->attributes_begin(),d->attributes_end());
-     deviceset.Parse(d->begin(),d->end());
-     lib.devicesets.push_back(deviceset);
-     }
-  }
+  DRAWING drawing;
+  drawing.Parse(doc.child("eagle").child("drawing").begin(),
+                doc.child("eagle").child("drawing").end());
 
   return 0;
 }
-

@@ -5,29 +5,8 @@
 /*******************************************************************************
  * consts here:
  ******************************************************************************/
-constexpr int ALIGN_BOTTOM_LEFT              = 0;  // TEXT; unten/links ausgerichtet
-constexpr int ALIGN_BOTTOM_CENTER            = 1;  // TEXT; unten/mittig ausgerichtet
-constexpr int ALIGN_BOTTOM_RIGHT             = 2;  // TEXT; unten/rechts ausgerichtet
-constexpr int ALIGN_CENTER_LEFT              = 3;  // TEXT; mittig/links ausgerichtet
-constexpr int ALIGN_CENTER                   = 4;  // TEXT; zentriert
-constexpr int ALIGN_CENTER_RIGHT             = 5;  // TEXT; mittig/rechts ausgerichtet
-constexpr int ALIGN_TOP_LEFT                 = 6;  // TEXT; oben/links ausgerichtet
-constexpr int ALIGN_TOP_CENTER               = 7;  // TEXT; oben/mittig ausgerichtet
-constexpr int ALIGN_TOP_RIGHT                = 8;  // TEXT; oben/rechts ausgerichtet
-constexpr int ATTRIBUTE_DISPLAY_FLAG_OFF     = 0;  // ATTRIBUTE; name and value hidden
-constexpr int ATTRIBUTE_DISPLAY_FLAG_VALUE   = 1;  // ATTRIBUTE; value is shown
-constexpr int ATTRIBUTE_DISPLAY_FLAG_NAME    = 2;  // ATTRIBUTE; name is shown
-constexpr int CAP_FLAT                       = 0;  // WIRE; flache Kreisbogen-Enden
-constexpr int CAP_ROUND                      = 1;  // WIRE; runde Kreisbogen-Enden
 constexpr int CONTACT_ROUTE_ALL              = 0;  // PIN; any contact has to be connected
 constexpr int CONTACT_ROUTE_ANY              = 1;  // PIN; any contact may to be connected
-constexpr int DIMENSION_PARALLEL             = 0;  // DIMENSION; lineare Bemassung mit paralleler Masslinie
-constexpr int DIMENSION_HORIZONTAL           = 1;  // DIMENSION; lineare Bemassung mit waagerechter Masslinie
-constexpr int DIMENSION_VERTICAL             = 2;  // DIMENSION; lineare Bemassung mit senkrechter Masslinie
-constexpr int DIMENSION_RADIUS               = 3;  // DIMENSION; Radius-Bemassung
-constexpr int DIMENSION_DIAMETER             = 4;  // DIMENSION; Durchmesser-Bemassung
-constexpr int DIMENSION_ANGLE                = 5;  // DIMENSION; Winkel-Bemassung
-constexpr int DIMENSION_LEADER               = 6;  // DIMENSION; ein beliebiger Pfeil
 constexpr int FONT_VECTOR                    = 0;  // TEXT; Vector-Font
 constexpr int FONT_PROPORTIONAL              = 1;  // TEXT; Proportional-Font
 constexpr int FONT_FIXED                     = 2;  // TEXT; Fixed-Font
@@ -36,61 +15,52 @@ constexpr int GATE_ADDLEVEL_CAN              = 1;  // GATE;
 constexpr int GATE_ADDLEVEL_NEXT             = 2;  // GATE;
 constexpr int GATE_ADDLEVEL_REQUEST          = 3;  // GATE;
 constexpr int GATE_ADDLEVEL_ALWAYS           = 4;  // GATE;
-constexpr int GRID_UNIT_MIC                  = 0;  // GRID; micron
-constexpr int GRID_UNIT_MM                   = 1;  // GRID; mm
-constexpr int GRID_UNIT_MIL                  = 2;  // GRID; mil
-constexpr int GRID_UNIT_INCH                 = 3;  // GRID; inch
-constexpr int LAYER_TOP                      = 1;  // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer. 
-constexpr int LAYER_BOTTOM                   = 16; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_PADS                     = 17; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_VIAS                     = 18; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_UNROUTED                 = 19; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_DIMENSION                = 20; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TPLACE                   = 21; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BPLACE                   = 22; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TORIGINS                 = 23; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BORIGINS                 = 24; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TNAMES                   = 25; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BNAMES                   = 26; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TVALUES                  = 27; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BVALUES                  = 28; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TSTOP                    = 29; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BSTOP                    = 30; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TCREAM                   = 31; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BCREAM                   = 32; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TFINISH                  = 33; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BFINISH                  = 34; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TGLUE                    = 35; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BGLUE                    = 36; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TTEST                    = 37; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BTEST                    = 38; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TKEEPOUT                 = 39; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BKEEPOUT                 = 40; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TRESTRICT                = 41; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BRESTRICT                = 42; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_VRESTRICT                = 43; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_DRILLS                   = 44; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_HOLES                    = 45; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_MILLING                  = 46; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_MEASURES                 = 47; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_DOCUMENT                 = 48; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_REFERENCE                = 49; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_TDOCU                    = 51; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BDOCU                    = 52; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_NETS                     = 91; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_BUSSES                   = 92; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_PINS                     = 93; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_SYMBOLS                  = 94; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_NAMES                    = 95; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_VALUES                   = 96; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_INFO                     = 97; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_GUIDE                    = 98; // CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int LAYER_USER                     = 100;// CIRCLE,POLYGON,RECTANGLE,SMD,TEXT,WIRE; integer consts for layer.
-constexpr int PAD_SHAPE_SQUARE               = 0;  // PAD;
-constexpr int PAD_SHAPE_ROUND                = 1;  // PAD;
-constexpr int PAD_SHAPE_OCTAGON              = 2;  // PAD;
-constexpr int PAD_SHAPE_LONG                 = 3;  // PAD;
-constexpr int PAD_SHAPE_OFFSET               = 4;  // PAD;
+constexpr int LAYER_TOP                      = 1;  // integer consts for layer. 
+constexpr int LAYER_BOTTOM                   = 16; // integer consts for layer.
+constexpr int LAYER_PADS                     = 17; // integer consts for layer.
+constexpr int LAYER_VIAS                     = 18; // integer consts for layer.
+constexpr int LAYER_UNROUTED                 = 19; // integer consts for layer.
+constexpr int LAYER_DIMENSION                = 20; // integer consts for layer.
+constexpr int LAYER_TPLACE                   = 21; // integer consts for layer.
+constexpr int LAYER_BPLACE                   = 22; // integer consts for layer.
+constexpr int LAYER_TORIGINS                 = 23; // integer consts for layer.
+constexpr int LAYER_BORIGINS                 = 24; // integer consts for layer.
+constexpr int LAYER_TNAMES                   = 25; // integer consts for layer.
+constexpr int LAYER_BNAMES                   = 26; // integer consts for layer.
+constexpr int LAYER_TVALUES                  = 27; // integer consts for layer.
+constexpr int LAYER_BVALUES                  = 28; // integer consts for layer.
+constexpr int LAYER_TSTOP                    = 29; // integer consts for layer.
+constexpr int LAYER_BSTOP                    = 30; // integer consts for layer.
+constexpr int LAYER_TCREAM                   = 31; // integer consts for layer.
+constexpr int LAYER_BCREAM                   = 32; // integer consts for layer.
+constexpr int LAYER_TFINISH                  = 33; // integer consts for layer.
+constexpr int LAYER_BFINISH                  = 34; // integer consts for layer.
+constexpr int LAYER_TGLUE                    = 35; // integer consts for layer.
+constexpr int LAYER_BGLUE                    = 36; // integer consts for layer.
+constexpr int LAYER_TTEST                    = 37; // integer consts for layer.
+constexpr int LAYER_BTEST                    = 38; // integer consts for layer.
+constexpr int LAYER_TKEEPOUT                 = 39; // integer consts for layer.
+constexpr int LAYER_BKEEPOUT                 = 40; // integer consts for layer.
+constexpr int LAYER_TRESTRICT                = 41; // integer consts for layer.
+constexpr int LAYER_BRESTRICT                = 42; // integer consts for layer.
+constexpr int LAYER_VRESTRICT                = 43; // integer consts for layer.
+constexpr int LAYER_DRILLS                   = 44; // integer consts for layer.
+constexpr int LAYER_HOLES                    = 45; // integer consts for layer.
+constexpr int LAYER_MILLING                  = 46; // integer consts for layer.
+constexpr int LAYER_MEASURES                 = 47; // integer consts for layer.
+constexpr int LAYER_DOCUMENT                 = 48; // integer consts for layer.
+constexpr int LAYER_REFERENCE                = 49; // integer consts for layer.
+constexpr int LAYER_TDOCU                    = 51; // integer consts for layer.
+constexpr int LAYER_BDOCU                    = 52; // integer consts for layer.
+constexpr int LAYER_NETS                     = 91; // integer consts for layer.
+constexpr int LAYER_BUSSES                   = 92; // integer consts for layer.
+constexpr int LAYER_PINS                     = 93; // integer consts for layer.
+constexpr int LAYER_SYMBOLS                  = 94; // integer consts for layer.
+constexpr int LAYER_NAMES                    = 95; // integer consts for layer.
+constexpr int LAYER_VALUES                   = 96; // integer consts for layer.
+constexpr int LAYER_INFO                     = 97; // integer consts for layer.
+constexpr int LAYER_GUIDE                    = 98; // integer consts for layer.
+constexpr int LAYER_USER                     = 100;// integer consts for layer.
 constexpr int PIN_DIRECTION_NC               = 0;  // PIN; Not connected
 constexpr int PIN_DIRECTION_IN               = 1;  // PIN; Input
 constexpr int PIN_DIRECTION_OUT              = 2;  // PIN; Output (totem-pole)
@@ -104,13 +74,6 @@ constexpr int PIN_LENGTH_POINT               = 0;  // PIN; no wire at pin, just 
 constexpr int PIN_LENGTH_SHORT               = 1;  // PIN; 100mil wire at pin
 constexpr int PIN_LENGTH_MIDDLE              = 2;  // PIN; 200mil wire at pin
 constexpr int PIN_LENGTH_LONG                = 3;  // PIN; 300mil wire at pin
-constexpr int POLYGON_POUR_SOLID             = 0;  // POLYGON; solid
-constexpr int POLYGON_POUR_HATCH             = 1;  // POLYGON; hatch
-constexpr int POLYGON_POUR_CUTOUT            = 2;  // POLYGON; cutout
-constexpr int WIRE_STYLE_CONTINUOUS          = 0;  // WIRE; durchgezogen
-constexpr int WIRE_STYLE_LONGDASH            = 1;  // WIRE; lang gestrichelt
-constexpr int WIRE_STYLE_SHORTDASH           = 2;  // WIRE; kurz gestrichelt
-constexpr int WIRE_STYLE_DASHDOT             = 3;  // WIRE; Strich-Punkt-Linie
 
 
 /*******************************************************************************
@@ -139,26 +102,23 @@ class TEXT;
 class WIRE;
 class PIN;
 class SYMBOL;
-
-
 class GATE;
 class CONNECT;
 class DEVICE;
 class DEVICESET;
 
 
-
 /*******************************************************************************
- * classes and types
+ * classes
  ******************************************************************************/
 class CIRCLE {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  double x, y;
-  double radius;
-  double width;
-  int layer;
+  double x, y;                          // #REQUIRED
+  double radius;                        // #REQUIRED
+  double width;                         // #REQUIRED
+  int layer;                            // #REQUIRED
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -169,20 +129,27 @@ class DIMENSION {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  double x1, y1;                        // (erster Bezugspunkt)
-  double x2, y2;                        // (zweiter Bezugspunkt)
-  double x3, y3;                        // (Hilfspunkt für die Ausrichtung)
-  int layer;                            //
-  int dtype;                            // DIMENSION_{PARALLEL,HORIZONTAL,VERTICAL,RADIUS,DIAMETER,ANGLE,LEADER}
-  double width;                         //
-  double extwidth;                      //
-  double extlength;                     //
-  double extoffset;                     //
-  double size;                          // textsize
-  int ratio;                            // textratio
-  int unit;                             // Einheit: GRID_UNIT_{MIC,MM,MIL,INCH}
-  int precision;                        // default:2. Nachkommastellen,Genauigkeit der Massangabe
-  bool visible;                         // int (0=off, 1=on)
+  double x1, y1;                        // #REQUIRED (erster Bezugspunkt)
+  double x2, y2;                        // #REQUIRED (zweiter Bezugspunkt)
+  double x3, y3;                        // #REQUIRED (Hilfspunkt für die Ausrichtung)
+  int layer;                            // #REQUIRED 
+  std::string dtype;                    // "parallel",  ("parallel","horizontal","vertical","radius","diameter","angle","leader")
+                                        //       parallel   - lineare Bemassung mit paralleler Masslinie
+                                        //       horizontal - lineare Bemassung mit waagerechter Masslinie
+                                        //       vertical   - lineare Bemassung mit senkrechter Masslinie
+                                        //       radius     - Radius-Bemassung
+                                        //       diameter   - Durchmesser-Bemassung
+                                        //       angle      - Winkel-Bemassung
+                                        //       leader     - ein beliebiger Pfeil
+  double width;                         // #REQUIRED 
+  double extwidth;                      // 0
+  double extlength;                     // 0
+  double extoffset;                     // 0
+  double size;                          // #REQUIRED textsize
+  int ratio;                            // 8    textratio
+  std::string unit;                     // mm   Einheit: "mic","mm","mil","inch"
+  int precision;                        // 2    Nachkommastellen,Genauigkeit der Massangabe
+  bool visible;                         // no   int (0=off, 1=on)
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -193,15 +160,15 @@ class FRAME {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  double x1, y1;                        // lower left
-  double x2, y2;                        // upper right
-  int columns;                          // (-127...127)
-  int rows;                             // (-26...26)
-  int layer;                            //
-  bool border_left;                     //
-  bool border_top;                      //
-  bool border_right;                    //
-  bool border_bottom;                   //
+  double x1, y1;                        // #REQUIRED lower left
+  double x2, y2;                        // #REQUIRED upper right
+  int columns;                          // #REQUIRED (-127...127)
+  int rows;                             // #REQUIRED (-26...26)
+  int layer;                            // #REQUIRED
+  bool border_left;                     // yes  draw border?
+  bool border_top;                      // yes  draw border?
+  bool border_right;                    // yes  draw border?
+  bool border_bottom;                   // yes  draw border?
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -209,13 +176,19 @@ public:
 };
 
 class GRID {
+friend class DRAWING;
 public:
-  double distance, altdistance;
-  bool dots;                            // int, 0=lines, 1=dots
-  bool on;                              // int, 0=off, 1=on
-  int multiple;                         //
-  int unit, altunit;                    // GRID_UNIT_{MIC,MM,MIL,INCH}
-  int unitdist, altunitdist;            // GRID_UNIT_{MIC,MM,MIL,INCH}
+  double distance;                      // #IMPLIED
+  std::string unitdist;                 // #IMPLIED Einheit: "mic","mm","mil","inch"
+  std::string unit;                     // #IMPLIED Einheit: "mic","mm","mil","inch"
+  std::string style;                    // "lines"   lines | dots
+  int multiple;                         // "1"
+  bool display;                         // "no"
+  double altdistance;                   // #IMPLIED
+  std::string altunitdist;              // #IMPLIED Einheit: "mic","mm","mil","inch"
+  std::string altunit;                  // #IMPLIED Einheit: "mic","mm","mil","inch"
+private:
+  void Parse(attributes begin, attributes end);
 public:
   GRID();
 };
@@ -223,8 +196,8 @@ public:
 class HOLE {
 friend class PACKAGE;
 public:
-  double x, y;                          //
-  double drill;                         //
+  double x, y;                          // #REQUIRED
+  double drill;                         // #REQUIRED
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -232,31 +205,32 @@ public:
 };
 
 class LAYER {
+friend class DRAWING;
 public:
-  std::string name;                     //
-  bool used;                            // int (0=unbenutzt, 1=benutzt)
-  bool visible;                         // int (0=off, 1=on)
-  int color;                            //
-  int fill;                             //
-  int number;                           //
+  int number;                           // #REQUIRED
+  std::string name;                     // #REQUIRED
+  int color;                            // #REQUIRED
+  int fill;                             // #REQUIRED
+  bool visible;                         // "yes"
+  bool active;                          // "yes" (false=unbenutzt, true=benutzt)
+private:
+  void Parse(attributes begin, attributes end);
 public:
   LAYER();
-  void Parse(attributes begin, attributes end);
 };
 
 class PAD {
 friend class PACKAGE;
 public:
-  std::string name;                     //
-  double x, y;                          //
-  double drill;                         //
-  double diameter;                      //
-  int shape;                            // PAD_SHAPE_{SQUARE,ROUND,OCTAGON,LONG,OFFSET}
-  double angle;                         // "rot" (0.0...359.9)
-  bool stop;                            //
-  bool thermals;                        // Loetstopmaske generieren
-  bool first;                           // Thermals generieren
-  int flags;                            // spezielle Form fuer "erstes Pad" verwenden
+  std::string name;                     // #REQUIRED
+  double x, y;                          // #REQUIRED
+  double drill;                         // #REQUIRED
+  double diameter;                      // 0
+  std::string shape;                    // "round"  {SQUARE,ROUND,OCTAGON,LONG,OFFSET}
+  double angle;                         // "rot"="R0" (0.0...359.9)
+  bool stop;                            // "yes" Loetstopmaske generieren
+  bool thermals;                        // "yes" Thermals generieren
+  bool first;                           // "no" spezielle Form fuer "erstes Pad" verwenden 
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -267,25 +241,23 @@ class POLYGON {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  /* subclasses */
   class VERTEX {
   public:
-     double x,y;
-     double curve;                      //  The curvature from this vertex to the next one
+     double x,y;                        // #REQUIRED
+     double curve;                      // 0 The curvature from this vertex to the next one
   public:
      VERTEX() : curve(0.0) {}
   };
-
 public:
-  double width;
-  int layer;                            // LAYER_(*)
-  int spacing;                          //
-  int pour;                             // POLYGON_POUR_{SOLID,HATCH,CUTOUT}
-  int isolate;                          //
-  bool orphans;                         // int (0=off, 1=on)
-  bool thermals;                        // int (0=off, 1=on)
-  int rank;                             //
-  std::vector<VERTEX> vertices;
+  double width;                         // #REQUIRED
+  int layer;                            // #REQUIRED  LAYER_(*)
+  double spacing;                       // #IMPLIED
+  std::string pour;                     // "solid"
+  double isolate;                       // #IMPLIED   Only in <signal> or <package> context
+  bool orphans;                         // "no"       Only in <signal> context
+  bool thermals;                        // "yes"      Only in <signal> context
+  int rank;                             // 0          1..6 in <signal> context, 0 or 7 in <package> context
+  std::vector<VERTEX> vertices;         // (vertex)*
 private:
   void Parse(attributes begin, attributes end);
   void Parse(childs begin, childs end);
@@ -297,10 +269,10 @@ class RECTANGLE {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  double x1, y1;                        // lower left
-  double x2, y2;                        // upper right
-  int layer;                            //
-  double angle;                         // (0.0...359.9)
+  double x1, y1;                        // #REQUIRED lower left
+  double x2, y2;                        // #REQUIRED upper right
+  int layer;                            // #REQUIRED
+  double angle;                         // "R0" (0.0...359.9)
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -310,15 +282,15 @@ public:
 class SMD {
 friend class PACKAGE;
 public:
-  std::string name;                     //
-  double x, y;                          //
-  double dx, dy;                        //
-  int layer;                            // LAYER_(*)
-  int roundness;                        //
-  double angle;                         // "rot" (0.0...359.9)
-  bool stop;                            //
-  bool thermals;                        //
-  bool cream;                           //
+  std::string name;                     // #REQUIRED
+  double x, y;                          // #REQUIRED
+  double dx, dy;                        // #REQUIRED
+  int layer;                            // #REQUIRED LAYER_(*)
+  int roundness;                        // 0
+  double angle;                         // "rot"="R0" (0.0...359.9)
+  bool stop;                            // "yes"
+  bool thermals;                        // "yes"
+  bool cream;                           // "yes"
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -329,17 +301,17 @@ class TEXT {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  double x, y;                          //
-  double size;                          //
-  int layer;                            // LAYER_(*)
-  int font;                             // FONT_VECTOR, FONT_PROPORTIONAL, FONT_FIXED
-  int ratio;                            //
-  double angle;                         // "rot" (0.0...359.9)
+  double x, y;                          // #REQUIRED
+  double size;                          // #REQUIRED
+  int layer;                            // #REQUIRED  LAYER_(*)
+  std::string font;                     // "proportional"
+  int ratio;                            // 8
+  double angle;                         // "rot"=R0 (0.0...359.9)
   bool mirror;                          // "rot" M
   bool spin;                            // "rot" S
-  int align;                            // ALIGN_{BOTTOM_LEFT,BOTTOM_CENTER,BOTTOM_RIGHT,CENTER_LEFT,CENTER,CENTER_RIGHT,TOP_LEFT,TOP_CENTER,TOP_RIGHT}
-  int linedistance;                     // "distance"
-  std::string value;
+  std::string align;                    // "bottom-left"
+  int distance;                         // 50  linedistance
+  std::string value;                    // (#PCDATA)
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -350,14 +322,14 @@ class WIRE {
 friend class PACKAGE;
 friend class SYMBOL;
 public:
-  double x1, y1;                        // Anfangspunkt
-  double x2, y2;                        // Endpunkt
-  double width;                         //
-  int layer;                            // LAYER_(*)
-  std::string extent;                   // Only airwires, the layers a via or airwire extends through, given as "topmost-bottommost"
-  int style;                            // WIRE_STYLE_{CONTINUOUS,LONGDASH,SHORTDASH,DASHDOT}
-  double curve;                         //
-  int cap;                              // CAP_FLAT,CAP_ROUND
+  double x1, y1;                        // #REQUIRED   Anfangspunkt
+  double x2, y2;                        // #REQUIRED   Endpunkt
+  double width;                         // #REQUIRED
+  int layer;                            // #REQUIRED   LAYER_(*)
+  std::string extent;                   // #IMPLIED    Only airwires, the layers a via or airwire extends through, given as "topmost-bottommost"
+  std::string style;                    // "continuous" {continuous,longdash,shortdash,dashdot}
+  double curve;                         // 0
+  bool cap_round;                       // "round" -> true, needs (curve!=0)
 private:
   void Parse(attributes begin, attributes end);
 public:
@@ -365,25 +337,33 @@ public:
 };
 
 class PACKAGE {
+friend class LIBRARY;
 public:
-  std::string description;
-  std::string headline;
-  std::string library;
-  std::string name;
-  std::vector<POLYGON> polygons;
-  std::vector<WIRE> wires;
-  std::vector<TEXT> texts;
-  std::vector<DIMENSION> dimensions;
-  std::vector<CIRCLE> circles;
-  std::vector<RECTANGLE> rectangles;
-  std::vector<FRAME> frames;
-  std::vector<HOLE> holes;
-  std::vector<PAD> pads;
-  std::vector<SMD> smds;
+  std::string description;              // #PCDATA?
+  std::string headline;                 // first line of description.
+  std::string name;                     // #REQUIRED
+  std::vector<POLYGON> polygons;        // polygon*
+  std::vector<WIRE> wires;              // wire*
+  std::vector<TEXT> texts;              // text*
+  std::vector<DIMENSION> dimensions;    // dimension*
+  std::vector<CIRCLE> circles;          // circle*
+  std::vector<RECTANGLE> rectangles;    // rectangle*
+  std::vector<FRAME> frames;            // frame*
+  std::vector<HOLE> holes;              // hole*
+  std::vector<PAD> pads;                // pad*
+  std::vector<SMD> smds;                // smd*
+private:
+  void Parse(childs begin, childs end);
 public:
   PACKAGE();
-  void Parse(childs begin, childs end);
 };
+
+
+
+
+
+
+
 
 class PIN {
 friend class SYMBOL;
@@ -430,92 +410,66 @@ public:
 
 
 
+
+
+
+
+
 class ATTRIBUTE {
-  std::string name;
-  std::string value;                    //
-  std::string defaultvalue;             //
-  bool constant;                        //  int (0=no, may be modified, 1=const)
-  int display;                          // flag of: ATTRIBUTE_DISPLAY_FLAG_{OFF,NAME.VALUE}
-  TEXT text;
+friend class TECHNOLOGY;
+public:
+  std::string name;                     // #REQUIRED 
+  std::string value;                    // #IMPLIED
+  double x, y;                          // #IMPLIED
+  double size;                          // #IMPLIED: textsize
+  int layer;                            // #IMPLIED
+  int font;                             // #IMPLIED: FONT_{VECTOR,PROPORTIONAL,FIXED}
+  int ratio;                            // #IMPLIED: textratio
+  double angle;                         // rot %Rotation; "R0"
+  bool show_value;                      // value (off | value | name | both) -> true ; Only in <element> or <instance> context
+  bool show_name;                       // value (off | value | name | both) -> false; Only in <element> or <instance> context
+  bool constant;                        // false; Only in <device> context; false:may be modified true:const
+private:
+  void Parse(attributes begin, attributes end);
 public:
   ATTRIBUTE();
 };
 
-
 class TECHNOLOGY {
+friend class DEVICE;
 public:
-  std::string name;
+  std::string name;                     // %String;       #REQUIRED 
+  std::vector<ATTRIBUTE> Attributes;    // (attribute)*
+private:
+  void Parse(childs begin, childs end);
 public:
   TECHNOLOGY();
 };
 
-
-/*
-
-<!ELEMENT technology (attribute)*>
-<!ATTLIST technology
-          name          %String;       #REQUIRED
-          >
-
-<!ELEMENT attribute EMPTY>
-<!ATTLIST attribute
-          name          %String;       #REQUIRED
-          value         %String;       #IMPLIED
-          x             %Coord;        #IMPLIED
-          y             %Coord;        #IMPLIED
-          size          %Dimension;    #IMPLIED
-          layer         %Layer;        #IMPLIED
-          font          %TextFont;     #IMPLIED
-          ratio         %Int;          #IMPLIED
-          rot           %Rotation;     "R0"
-          display       %AttributeDisplay; "value"
-          constant      %Bool;         "no"
-          >
-          <!-- display: Only in <element> or <instance> context -->
-          <!-- constant:Only in <device> context -->
-*/
-
-
 class CONNECT {
+friend class DEVICE;
 public:
   std::string gate;                     // #REQUIRED
   std::string pin;                      // #REQUIRED
   std::string pad;                      // #REQUIRED
-  bool route;                           // hmm. I don't see any difference between those choices? "(all | any)" - However, 'all' seems to be broader. :(
+  bool route_all;                       // "all" (all | any) -> default: true
+  /* NOTE: "all" means every one of the available choices.
+   *       "any" means some subset of the available choices; Depending on
+   *        context, it may mean just one, or it could mean that more than one
+   *        is allowed. */
+private:
+  void Parse(attributes begin, attributes end);
 public:
   CONNECT();
 };
 
-
-
 class DEVICE {
 friend class DEVICESET;
 public:
-  std::string name;                     //
-  std::string package;                  //
+  std::string name;                     // %String;       ""
+  std::string package;                  // %String;       #IMPLIED
   std::vector<CONNECT> connects;        //
   std::vector<TECHNOLOGY> technologies; //
-
-//<!ELEMENT device (connects?, technologies?)>
-//<!ATTLIST device
-//        name          %String;       ""
-//        package       %String;       #IMPLIED
-//        >
-//
-//
-//std::string activetechnology;         //
-//std::string description;              //
-//std::string headline;                 //
-//std::string library;                  //
-//
-//std::string prefix;                   //
-//std::string technologies;             // all techologies, separated by a SPACE
-//bool value;                           // string ("On" oder "Off")
-//PACKAGE package;
-//
-////Loop members
-//std::vector<ATTRIBUTE> attributes(std::string technology);
-//std::vector<GATE> gates;
 private:
   void Parse(attributes begin, attributes end);
   void Parse(childs begin, childs end);
@@ -524,12 +478,16 @@ public:
 };
 
 class GATE {
+friend class DEVICESET;
 public:
-  std::string name;                     //
-  int addlevel;                         // GATE_ADDLEVEL_{MUST,CAN,NEXT,REQUEST,ALWAYS}
-  int swaplevel;                        //
-  int x, y;                             // Aufhaengepunkt
-  SYMBOL symbol;                        //
+  std::string name;                     // #REQUIRED
+  std::string symbol;                   // #REQUIRED
+  double x, y;                          // #REQUIRED, Aufhaengepunkt
+  int addlevel;                         // GATE_ADDLEVEL_NEXT; GATE_ADDLEVEL_{MUST,CAN,NEXT,REQUEST,ALWAYS}
+  int swaplevel;                        // 0
+//SYMBOL symbol;                        //
+private:
+  void Parse(attributes begin, attributes end);
 public:
   GATE();
 };
@@ -552,22 +510,39 @@ public:
   void Parse(childs begin, childs end);
 };
 
+
+
+//<!ELEMENT library (description?, packages?, symbols?, devicesets?)>
+
 class LIBRARY {
+friend class DRAWING;
 public:
-  std::string description;              // vollstaendiger Beschreibungstext, der mit dem DESCRIPTION-Befehl erzeugt wurde
-  std::string headline;                 // erste Zeile der Beschreibung ohne HTML-Tags ausgibt
-  std::string name;                     // %String;       #REQUIRED
-  GRID grid;                            //
-  bool alwaysvectorfont;
-  bool verticaltextdown;
-
-  std::vector<PACKAGE> packages;
-  std::vector<SYMBOL> symbols;
-  std::vector<DEVICESET> devicesets;
-// std::vector<DEVICE> devices;
-  std::vector<LAYER> layers;
-
-
+  std::string description;              // #PCDATA?    vollstaendiger Beschreibungstext, der mit dem DESCRIPTION-Befehl erzeugt wurde
+  std::string headline;                 //             erste Zeile der Beschreibung ohne HTML-Tags ausgibt
+  std::string name;                     // #REQUIRED   name: Only in libraries used inside boards or schematics
+  std::vector<PACKAGE> packages;        // packages?
+  std::vector<SYMBOL> symbols;          // symbols?
+  std::vector<DEVICESET> devicesets;    // devicesets?
+private:
+  void Parse(childs begin, childs end);
 public:
   LIBRARY();
+};
+
+class DRAWING {
+public:
+  bool alwaysvectorfont;                // settings?
+  bool verticaltextup;                  // settings?
+  GRID grid;                            // grid?
+  std::vector<LAYER> layers;            // layers
+  LIBRARY library;                      // (library | schematic | board)
+//SCHEMATIC schematic;                  // (library | schematic | board)
+//BOARD board;                          // (library | schematic | board)
+ 
+  bool isLibrary;
+  bool isSchematic;
+  bool isBoard;
+public:
+  DRAWING();
+  void Parse(childs begin, childs end);
 };
