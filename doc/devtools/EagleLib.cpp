@@ -27,8 +27,7 @@ std::string HeadLine(std::string& Description) {
   return headline;
 }
 
-template<class T>
-void Choice(T& result, std::string& value, std::vector<std::string> strs, std::vector<T> vals) {
+template<class T> void Choice(T& result, std::string& value, std::vector<std::string> strs, std::vector<T> vals) {
   for(size_t i=0; i<strs.size(); i++) {
      if (value == strs[i]) {
         result = vals[i];
@@ -38,7 +37,45 @@ void Choice(T& result, std::string& value, std::vector<std::string> strs, std::v
   std::cout << __PRETTY_FUNCTION__  << ": " << value << " not found." << std::endl;
 }
 
+/*******************************************************************************
+ * class ATTRIBUTE
+ ******************************************************************************/
+ATTRIBUTE::ATTRIBUTE() :
+  x(0.0),y(0.0),size(0.0),layer(0),font("proportional"),ratio(0),
+  angle(0.0),showvalue(true),showname(false),constant(false) {}
 
+void ATTRIBUTE::Parse(attributes begin, attributes end) {
+  x = 0.0;
+  y = 0.0;
+  size = 0.0;
+  layer = 0;
+  font = "proportional";
+  ratio = 0;
+  angle = 0.0;
+  showvalue = true;
+  showname = false;
+  constant = false;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "name")     name     = Value;
+     else if (Name == "value")    value    = Value;
+     else if (Name == "x")        x        = std::stod(Value);
+     else if (Name == "y")        y        = std::stod(Value);
+     else if (Name == "size")     size     = std::stod(Value);
+     else if (Name == "layer")    layer    = std::stoi(Value);
+     else if (Name == "font")     font     = Value;
+     else if (Name == "ratio")    ratio    = std::stoi(Value);
+     else if (Name == "rot")      angle    = std::stod(Value.substr(Value.find_first_of("0123456789")));
+     else if (Name == "display") {
+        showvalue = (Value == "value") or (Value == "both");
+        showname  = (Value == "name")  or (Value == "both");
+        }
+     else if (Name == "constant") constant = (Value == "yes");
+     }
+}
 
 /*******************************************************************************
  * class CIRCLE
@@ -55,6 +92,27 @@ void CIRCLE::Parse(attributes begin, attributes end) {
      else if (Name == "radius")  radius  = std::stod(Value);
      else if (Name == "width")   width   = std::stod(Value);
      else if (Name == "layer")   layer   = std::stoi(Value);
+     }
+}
+
+/*******************************************************************************
+ * class CONNECT
+ ******************************************************************************/
+CONNECT::CONNECT() : route_all(true) {}
+
+void CONNECT::Parse(attributes begin, attributes end) {
+  gate.clear();
+  pin.clear();
+  pad.clear();
+  route_all = true;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "gate")      gate       = Value;
+     else if (Name == "pin")       pin        = Value;
+     else if (Name == "pad")       pad        = Value;
+     else if (Name == "route")     route_all  = (Value != "any");
      }
 }
 
@@ -129,6 +187,32 @@ void FRAME::Parse(attributes begin, attributes end) {
      else if (Name == "border-top")    border_top    = (Value!="no");
      else if (Name == "border-right")  border_right  = (Value!="no");
      else if (Name == "border-bottom") border_bottom = (Value!="no");
+     }
+}
+
+/*******************************************************************************
+ * class GATE
+ ******************************************************************************/
+GATE::GATE() : x(0.0),y(0.0),addlevel("next"),swaplevel(0) {}
+
+void GATE::Parse(attributes begin, attributes end) {
+  name.clear();
+  symbol.clear();
+  x = 0.0;
+  y = 0.0;
+  addlevel = "next";
+  swaplevel = 0;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+
+          if (Name == "name")      name      = Value;
+     else if (Name == "symbol")    symbol    = Value;
+     else if (Name == "x")         x         = std::stod(Value);
+     else if (Name == "y")         y         = std::stod(Value);
+     else if (Name == "addlevel")  addlevel  = Value;
+     else if (Name == "swaplevel") swaplevel = std::stoi(Value);
      }
 }
 
@@ -365,6 +449,25 @@ void SMD::Parse(attributes begin, attributes end) {
 }
 
 /*******************************************************************************
+ * class TECHNOLOGY
+ ******************************************************************************/
+TECHNOLOGY::TECHNOLOGY() {}
+
+void TECHNOLOGY::Parse(childs begin, childs end) {
+  Attributes.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+
+     if (Name == "attribute") {
+        ATTRIBUTE Attribute;
+        Attribute.Parse(c->attributes_begin(), c->attributes_end());
+        Attributes.push_back(Attribute);
+        }
+     }
+}
+
+/*******************************************************************************
  * class TEXT
  ******************************************************************************/
 TEXT::TEXT() :
@@ -426,6 +529,108 @@ void WIRE::Parse(attributes begin, attributes end) {
      else if (Name == "curve")  curve     = std::stod(Value);
      else if (Name == "style")  style     = Value;
      else if (Name == "cap")    cap_round = Value != "flat";
+     }
+}
+
+
+
+
+/*******************************************************************************
+ * !!! higher classes with dependencies
+ ******************************************************************************/
+
+
+
+
+/*******************************************************************************
+ * class DEVICE
+ ******************************************************************************/
+DEVICE::DEVICE() {}
+
+void DEVICE::Parse(attributes begin, attributes end) {
+  name.clear();
+  package.clear();
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "name")      name       = Value;
+     else if (Name == "package")   package    = Value;
+     }
+}
+
+void DEVICE::Parse(childs begin, childs end) {
+  connects.clear();
+  technologies.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+
+     if (Name == "connects") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           CONNECT connect;
+           connect.Parse(ch->attributes_begin(), ch->attributes_end());
+           connects.push_back(connect);
+           }
+        }
+     else if (Name == "technologies") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           TECHNOLOGY technology;
+           technology.name = ch->attribute("name").value();
+           technology.Parse(ch->begin(), ch->end());
+           technologies.push_back(technology);
+           }
+        }
+     }
+}
+
+/*******************************************************************************
+ * class DEVICESET
+ ******************************************************************************/
+DEVICESET::DEVICESET() : uservalue(false) {}
+
+void DEVICESET::Parse(attributes begin, attributes end) {
+  prefix.clear();
+  uservalue = false;
+
+  for(auto a = begin; a != end; ++a) {
+     std::string Name(a->name());
+     std::string Value(a->value());
+          if (Name == "name")      name       = Value;
+     else if (Name == "prefix")    prefix     = Value;
+     else if (Name == "uservalue") uservalue  = (Value == "yes");
+     }
+}
+
+void DEVICESET::Parse(childs begin, childs end) {
+  description.clear();
+  headline.clear();
+  gates.clear();
+  devices.clear();
+
+  for(auto c = begin; c != end; ++c) {
+     std::string Name(c->name());
+     std::string Value(c->value());
+
+     if (Name == "description") {
+        description = c->text().get();
+        headline = HeadLine(description);
+        }
+     else if (Name == "gates") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           GATE gate;
+           gate.Parse(ch->attributes_begin(), ch->attributes_end());
+           gates.push_back(gate);
+           }
+        }
+     else if (Name == "devices") {
+        for(auto ch = c->begin(); ch != c->end(); ++ch) {
+           DEVICE device;
+           device.Parse(ch->begin(), ch->end());
+           device.Parse(ch->attributes_begin(), ch->attributes_end());
+           devices.push_back(device);
+           }
+        }
      }
 }
 
@@ -510,208 +715,6 @@ void PACKAGE::Parse(childs begin, childs end) {
      }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*******************************************************************************
- * class ATTRIBUTE
- ******************************************************************************/
-ATTRIBUTE::ATTRIBUTE() :
-  x(0.0),y(0.0),size(0.0),layer(0),font(FONT_PROPORTIONAL),ratio(0),
-  angle(0.0),show_value(true),show_name(false),constant(false) {}
-
-void ATTRIBUTE::Parse(attributes begin, attributes end) {
-  x = 0.0;
-  y = 0.0;
-  size = 0.0;
-  layer = 0;
-  font = FONT_PROPORTIONAL;
-  ratio = 0;
-  angle = 0.0;
-  show_value = true;
-  show_name = false;
-  constant = false;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string Name(a->name());
-     std::string Value(a->value());
-
-          if (Name == "name")     name     = Value;
-     else if (Name == "value")    value    = Value;
-     else if (Name == "x")        x        = std::stod(Value);
-     else if (Name == "y")        y        = std::stod(Value);
-     else if (Name == "size")     size     = std::stod(Value);
-     else if (Name == "layer")    layer    = std::stoi(Value);
-     else if (Name == "ratio")    ratio    = std::stoi(Value);
-     else if (Name == "constant") constant = Value == "yes";
-     else if (Name == "font")
-        Choice(font, Value,
-           {"vector","proportional","fixed"},
-           {FONT_VECTOR,FONT_PROPORTIONAL,FONT_FIXED});
-     else if (Name == "rot") {
-        angle  = std::stod(Value.substr(Value.find_first_of("0123456789")));
-        }
-     else if (Name == "display") {
-        show_value = (Value == "value") or (Value == "both");
-        show_name  = (Value == "name")  or (Value == "both");
-        }
-     }
-}
-
-
-/*******************************************************************************
- * class TECHNOLOGY
- ******************************************************************************/
-TECHNOLOGY::TECHNOLOGY() {}
-
-void TECHNOLOGY::Parse(childs begin, childs end) {
-  Attributes.clear();
-
-  for(auto c = begin; c != end; ++c) {
-     std::string Name(c->name());
-
-     if (Name == "attribute") {
-        ATTRIBUTE Attribute;
-        Attribute.Parse(c->attributes_begin(), c->attributes_end());
-        Attributes.push_back(Attribute);
-        }
-     }
-}
-
-
-
-
-
-
-
-
-/*******************************************************************************
- * class CONNECT
- ******************************************************************************/
-CONNECT::CONNECT() : route_all(true) {}
-
-void CONNECT::Parse(attributes begin, attributes end) {
-  gate.clear();
-  pin.clear();
-  pad.clear();
-  route_all = true;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string Name(a->name());
-     std::string Value(a->value());
-          if (Name == "gate")      gate       = Value;
-     else if (Name == "pin")       pin        = Value;
-     else if (Name == "pad")       pad        = Value;
-     else if (Name == "route")     route_all  = (Value != "any");
-     }
-}
-
-
-/*******************************************************************************
- * class DEVICE
- ******************************************************************************/
-DEVICE::DEVICE() {}
-
-void DEVICE::Parse(attributes begin, attributes end) {
-  name.clear();
-  package.clear();
-
-  for(auto a = begin; a != end; ++a) {
-     std::string Name(a->name());
-     std::string Value(a->value());
-          if (Name == "name")      name       = Value;
-     else if (Name == "package")   package    = Value;
-     }
-}
-
-void DEVICE::Parse(childs begin, childs end) {
-  connects.clear();
-  technologies.clear();
-
-  for(auto c = begin; c != end; ++c) {
-     std::string Name(c->name());
-
-     if (Name == "connects") {
-        for(auto ch = c->begin(); ch != c->end(); ++ch) {
-           CONNECT connect;
-           connect.Parse(ch->attributes_begin(), ch->attributes_end());
-           connects.push_back(connect);
-           }
-        }
-     else if (Name == "technologies") {
-        for(auto ch = c->begin(); ch != c->end(); ++ch) {
-           TECHNOLOGY technology;
-           technology.name = ch->attribute("name").value();
-           technology.Parse(ch->begin(), ch->end());
-           technologies.push_back(technology);
-           }
-        }
-     }
-
-}
-
-/*******************************************************************************
- * class DEVICESET
- ******************************************************************************/
-DEVICESET::DEVICESET() : uservalue(false) {}
-
-void DEVICESET::Parse(attributes begin, attributes end) {
-  prefix.clear();
-  uservalue = false;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string Name(a->name());
-     std::string Value(a->value());
-          if (Name == "name")      name       = Value;
-     else if (Name == "prefix")    prefix     = Value;
-     else if (Name == "uservalue") uservalue  = (Value == "yes");
-     }
-}
-
-void DEVICESET::Parse(childs begin, childs end) {
-  description.clear();
-  headline.clear();
-  devices.clear();
-  gates.clear();
-
-  for(auto c = begin; c != end; ++c) {
-     std::string Name(c->name());
-     std::string Value(c->value());
-
-     if (Name == "description") {
-        description = c->text().get();
-        headline = HeadLine(description);
-        }
-     else if (Name == "devices") {
-        for(auto ch = c->begin(); ch != c->end(); ++ch) {
-           DEVICE device;
-           device.Parse(ch->begin(), ch->end());
-           device.Parse(ch->attributes_begin(), ch->attributes_end());
-           devices.push_back(device);
-           }
-        }
-     else if (Name == "gates") {
-        for(auto ch = c->begin(); ch != c->end(); ++ch) {
-           GATE gate;
-           gate.Parse(ch->attributes_begin(), ch->attributes_end());
-           gates.push_back(gate);
-           }
-        }
-     }
-}
-
-
-
 /*******************************************************************************
  * class SYMBOL
  ******************************************************************************/
@@ -770,40 +773,6 @@ void SYMBOL::Parse(childs begin, childs end) {
         }
      }
 }
-
-/*******************************************************************************
- * class GATE
- ******************************************************************************/
-GATE::GATE() : x(0.0),y(0.0),addlevel(GATE_ADDLEVEL_NEXT),swaplevel(0) {}
-
-void GATE::Parse(attributes begin, attributes end) {
-  name.clear();
-  symbol.clear();
-  x = 0.0;
-  y = 0.0;
-  addlevel = GATE_ADDLEVEL_NEXT;
-  swaplevel = 0;
-
-  for(auto a = begin; a != end; ++a) {
-     std::string Name(a->name());
-     std::string Value(a->value());
-
-          if (Name == "name")      name      = Value;
-     else if (Name == "symbol")    symbol    = Value;
-     else if (Name == "x")         x         = std::stod(Value);
-     else if (Name == "y")         y         = std::stod(Value);
-     else if (Name == "swaplevel") swaplevel = std::stoi(Value);
-     else if (Name == "addlevel")
-        Choice(addlevel,Value,
-           {"must","can","next",
-            "request","always"},
-           {GATE_ADDLEVEL_MUST,GATE_ADDLEVEL_CAN,GATE_ADDLEVEL_NEXT,
-            GATE_ADDLEVEL_REQUEST,GATE_ADDLEVEL_ALWAYS});
-     }
-}
-
-
-
 
 /*******************************************************************************
  * class LIBRARY
@@ -871,10 +840,8 @@ void DRAWING::Parse(childs begin, childs end) {
            for(auto a = ch->attributes_begin(); a != ch->attributes_end(); ++a) {
               std::string Name(a->name());
               std::string Value(a->value());
-              if (Name == "alwaysvectorfont")
-                 alwaysvectorfont = (Value == "yes");
-              else if (Name == "verticaltext")
-                 verticaltextup = (Value == "up");
+              if (Name == "alwaysvectorfont")  alwaysvectorfont = (Value == "yes");
+              else if (Name == "verticaltext") verticaltextup   = (Value == "up");
               }
            }
         }

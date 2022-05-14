@@ -5,16 +5,6 @@
 /*******************************************************************************
  * consts here:
  ******************************************************************************/
-constexpr int CONTACT_ROUTE_ALL              = 0;  // PIN; any contact has to be connected
-constexpr int CONTACT_ROUTE_ANY              = 1;  // PIN; any contact may to be connected
-constexpr int FONT_VECTOR                    = 0;  // TEXT; Vector-Font
-constexpr int FONT_PROPORTIONAL              = 1;  // TEXT; Proportional-Font
-constexpr int FONT_FIXED                     = 2;  // TEXT; Fixed-Font
-constexpr int GATE_ADDLEVEL_MUST             = 0;  // GATE;
-constexpr int GATE_ADDLEVEL_CAN              = 1;  // GATE;
-constexpr int GATE_ADDLEVEL_NEXT             = 2;  // GATE;
-constexpr int GATE_ADDLEVEL_REQUEST          = 3;  // GATE;
-constexpr int GATE_ADDLEVEL_ALWAYS           = 4;  // GATE;
 constexpr int LAYER_TOP                      = 1;  // integer consts for layer. 
 constexpr int LAYER_BOTTOM                   = 16; // integer consts for layer.
 constexpr int LAYER_PADS                     = 17; // integer consts for layer.
@@ -61,19 +51,6 @@ constexpr int LAYER_VALUES                   = 96; // integer consts for layer.
 constexpr int LAYER_INFO                     = 97; // integer consts for layer.
 constexpr int LAYER_GUIDE                    = 98; // integer consts for layer.
 constexpr int LAYER_USER                     = 100;// integer consts for layer.
-constexpr int PIN_DIRECTION_NC               = 0;  // PIN; Not connected
-constexpr int PIN_DIRECTION_IN               = 1;  // PIN; Input
-constexpr int PIN_DIRECTION_OUT              = 2;  // PIN; Output (totem-pole)
-constexpr int PIN_DIRECTION_IO               = 3;  // PIN; In/Output (bidirectional)
-constexpr int PIN_DIRECTION_OC               = 4;  // PIN; Open Collector
-constexpr int PIN_DIRECTION_PWR              = 5;  // PIN; Power-Input-Pin
-constexpr int PIN_DIRECTION_PAS              = 6;  // PIN; Passiv
-constexpr int PIN_DIRECTION_HIZ              = 7;  // PIN; High-Impedance-Output
-constexpr int PIN_DIRECTION_SUP              = 8;  // PIN; Supply-Pin
-constexpr int PIN_LENGTH_POINT               = 0;  // PIN; no wire at pin, just a dot
-constexpr int PIN_LENGTH_SHORT               = 1;  // PIN; 100mil wire at pin
-constexpr int PIN_LENGTH_MIDDLE              = 2;  // PIN; 200mil wire at pin
-constexpr int PIN_LENGTH_LONG                = 3;  // PIN; 300mil wire at pin
 
 
 /*******************************************************************************
@@ -86,31 +63,55 @@ using attributes = pugi::xml_attribute_iterator;
 /*******************************************************************************
  * forward decls
  ******************************************************************************/
-
+class ATTRIBUTE;
 class CIRCLE;
+class CONNECT;
 class DIMENSION;
 class FRAME;
+class GATE;
 class GRID;
 class HOLE;
 class LAYER;
 class PAD;
-class PACKAGE;
+class PIN;
 class POLYGON;
 class RECTANGLE;
 class SMD;
+class TECHNOLOGY;
 class TEXT;
 class WIRE;
-class PIN;
-class SYMBOL;
-class GATE;
-class CONNECT;
+//---
 class DEVICE;
 class DEVICESET;
+class PACKAGE;
+class SYMBOL;
+//---
+class DRAWING;
 
 
 /*******************************************************************************
  * classes
  ******************************************************************************/
+class ATTRIBUTE {
+friend class TECHNOLOGY;
+public:
+  std::string name;                     // #REQUIRED 
+  std::string value;                    // #IMPLIED
+  double x, y;                          // #IMPLIED
+  double size;                          // #IMPLIED: textsize
+  int layer;                            // #IMPLIED
+  std::string font;                     // #IMPLIED: (vector,proportional,fixed)
+  int ratio;                            // #IMPLIED: textratio
+  double angle;                         // rot %Rotation; "R0"
+  bool showvalue;                       // value (off | value | name | both) -> true ; Only in <element> or <instance> context
+  bool showname;                        // value (off | value | name | both) -> false; Only in <element> or <instance> context
+  bool constant;                        // false; Only in <device> context; false:may be modified true:const
+private:
+  void Parse(attributes begin, attributes end);
+public:
+  ATTRIBUTE();
+};
+
 class CIRCLE {
 friend class PACKAGE;
 friend class SYMBOL;
@@ -123,6 +124,22 @@ private:
   void Parse(attributes begin, attributes end);
 public:
   CIRCLE();
+};
+
+class CONNECT {
+friend class DEVICE;
+public:
+  std::string gate;                     // #REQUIRED
+  std::string pin;                      // #REQUIRED
+  std::string pad;                      // #REQUIRED
+  bool route_all;                       // "all" (all | any) -> default: true
+  /* NOTE: "all" means every one of the available choices.
+   *       "any" means a 'picky' subset of available choices.
+   */
+private:
+  void Parse(attributes begin, attributes end);
+public:
+  CONNECT();
 };
 
 class DIMENSION {
@@ -173,6 +190,20 @@ private:
   void Parse(attributes begin, attributes end);
 public:
   FRAME();
+};
+
+class GATE {
+friend class DEVICESET;
+public:
+  std::string name;                     // #REQUIRED
+  std::string symbol;                   // #REQUIRED
+  double x, y;                          // #REQUIRED, Aufhaengepunkt
+  std::string  addlevel;                // "next"    (must,can,next,request,always)
+  int swaplevel;                        // 0
+private:
+  void Parse(attributes begin, attributes end);
+public:
+  GATE();
 };
 
 class GRID {
@@ -316,6 +347,17 @@ public:
   SMD();
 };
 
+class TECHNOLOGY {
+friend class DEVICE;
+public:
+  std::string name;                     // #REQUIRED 
+  std::vector<ATTRIBUTE> Attributes;    // attribute*
+private:
+  void Parse(childs begin, childs end);
+public:
+  TECHNOLOGY();
+};
+
 class TEXT {
 friend class PACKAGE;
 friend class SYMBOL;
@@ -355,12 +397,47 @@ public:
   WIRE();
 };
 
+
+
+
+/*******************************************************************************
+ * higher classes with dependencies
+ ******************************************************************************/
+class DEVICE {
+friend class DEVICESET;
+public:
+  std::string name;                     // ""
+  std::string package;                  // #IMPLIED
+  std::vector<CONNECT> connects;        // connects?
+  std::vector<TECHNOLOGY> technologies; // technologies?
+private:
+  void Parse(attributes begin, attributes end);
+  void Parse(childs begin, childs end);
+public:
+  DEVICE();
+};
+
+class DEVICESET {
+public:
+  std::string name;                     // #REQUIRED
+  std::string prefix;                   // ""
+  bool uservalue;                       // false
+  std::string description;              // description?
+  std::string headline;                 // first line of description.
+  std::vector<GATE> gates;              // gate*
+  std::vector<DEVICE> devices;          // device*
+public:
+  DEVICESET();
+  void Parse(attributes begin, attributes end);
+  void Parse(childs begin, childs end);
+};
+
 class PACKAGE {
 friend class LIBRARY;
 public:
+  std::string name;                     // #REQUIRED
   std::string description;              // #PCDATA?
   std::string headline;                 // first line of description.
-  std::string name;                     // #REQUIRED
   std::vector<POLYGON> polygons;        // polygon*
   std::vector<WIRE> wires;              // wire*
   std::vector<TEXT> texts;              // text*
@@ -377,151 +454,32 @@ public:
   PACKAGE();
 };
 
-
-
-
-
-
-
-
-
-
 class SYMBOL {
-public:
-  std::string name;
-  std::string description;
-  std::string headline;
-  std::string library;
-  std::vector<CIRCLE> circles;
-  std::vector<DIMENSION> dimensions;
-  std::vector<FRAME> frames;
-  std::vector<RECTANGLE> rectangles;
-  std::vector<PIN> pins;
-  std::vector<POLYGON> polygons;
-  std::vector<TEXT> texts;
-  std::vector<WIRE> wires;
-public:
-  SYMBOL();
-  void Parse(childs begin, childs end);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-class ATTRIBUTE {
-friend class TECHNOLOGY;
-public:
-  std::string name;                     // #REQUIRED 
-  std::string value;                    // #IMPLIED
-  double x, y;                          // #IMPLIED
-  double size;                          // #IMPLIED: textsize
-  int layer;                            // #IMPLIED
-  int font;                             // #IMPLIED: FONT_{VECTOR,PROPORTIONAL,FIXED}
-  int ratio;                            // #IMPLIED: textratio
-  double angle;                         // rot %Rotation; "R0"
-  bool show_value;                      // value (off | value | name | both) -> true ; Only in <element> or <instance> context
-  bool show_name;                       // value (off | value | name | both) -> false; Only in <element> or <instance> context
-  bool constant;                        // false; Only in <device> context; false:may be modified true:const
-private:
-  void Parse(attributes begin, attributes end);
-public:
-  ATTRIBUTE();
-};
-
-class TECHNOLOGY {
-friend class DEVICE;
-public:
-  std::string name;                     // %String;       #REQUIRED 
-  std::vector<ATTRIBUTE> Attributes;    // (attribute)*
-private:
-  void Parse(childs begin, childs end);
-public:
-  TECHNOLOGY();
-};
-
-class CONNECT {
-friend class DEVICE;
-public:
-  std::string gate;                     // #REQUIRED
-  std::string pin;                      // #REQUIRED
-  std::string pad;                      // #REQUIRED
-  bool route_all;                       // "all" (all | any) -> default: true
-  /* NOTE: "all" means every one of the available choices.
-   *       "any" means some subset of the available choices; Depending on
-   *        context, it may mean just one, or it could mean that more than one
-   *        is allowed. */
-private:
-  void Parse(attributes begin, attributes end);
-public:
-  CONNECT();
-};
-
-class DEVICE {
-friend class DEVICESET;
-public:
-  std::string name;                     // %String;       ""
-  std::string package;                  // %String;       #IMPLIED
-  std::vector<CONNECT> connects;        //
-  std::vector<TECHNOLOGY> technologies; //
-private:
-  void Parse(attributes begin, attributes end);
-  void Parse(childs begin, childs end);
-public:
-  DEVICE();
-};
-
-class GATE {
-friend class DEVICESET;
+friend class LIBRARY;
 public:
   std::string name;                     // #REQUIRED
-  std::string symbol;                   // #REQUIRED
-  double x, y;                          // #REQUIRED, Aufhaengepunkt
-  int addlevel;                         // GATE_ADDLEVEL_NEXT; GATE_ADDLEVEL_{MUST,CAN,NEXT,REQUEST,ALWAYS}
-  int swaplevel;                        // 0
-//SYMBOL symbol;                        //
+  std::string description;              // #PCDATA?
+  std::string headline;                 // first line of description.
+  std::vector<POLYGON> polygons;        // polygon*
+  std::vector<WIRE> wires;              // wire*
+  std::vector<TEXT> texts;              // text*
+  std::vector<DIMENSION> dimensions;    // dimension*
+  std::vector<PIN> pins;                // pin*
+  std::vector<CIRCLE> circles;          // circle*
+  std::vector<RECTANGLE> rectangles;    // rectangle*
+  std::vector<FRAME> frames;            // frame*
 private:
-  void Parse(attributes begin, attributes end);
-public:
-  GATE();
-};
-
-class DEVICESET {
-public:
-  std::string library;                  //
-  std::string name;                     //
-  std::string prefix;                   //
-  bool uservalue;
-  std::string description;              //
-  std::string headline;                 //
-  //DEVICE* activedevice;               // if a set is currently beeing edited, this one is delivered here.
-  // Loop members
-  std::vector<DEVICE> devices;
-  std::vector<GATE> gates;
-public:
-  DEVICESET();
-  void Parse(attributes begin, attributes end);
   void Parse(childs begin, childs end);
+public:
+  SYMBOL();
 };
-
-
-
-//<!ELEMENT library (description?, packages?, symbols?, devicesets?)>
 
 class LIBRARY {
 friend class DRAWING;
 public:
+  std::string name;                     // #REQUIRED   name: Only in libraries used inside boards or schematics
   std::string description;              // #PCDATA?    vollstaendiger Beschreibungstext, der mit dem DESCRIPTION-Befehl erzeugt wurde
   std::string headline;                 //             erste Zeile der Beschreibung ohne HTML-Tags ausgibt
-  std::string name;                     // #REQUIRED   name: Only in libraries used inside boards or schematics
   std::vector<PACKAGE> packages;        // packages?
   std::vector<SYMBOL> symbols;          // symbols?
   std::vector<DEVICESET> devicesets;    // devicesets?
@@ -531,6 +489,10 @@ public:
   LIBRARY();
 };
 
+
+/*******************************************************************************
+ * this is the top-most class after 'eagle'.
+ ******************************************************************************/
 class DRAWING {
 public:
   bool alwaysvectorfont;                // settings?
@@ -546,5 +508,5 @@ public:
   bool isBoard;
 public:
   DRAWING();
-  void Parse(childs begin, childs end);
+  void Parse(childs begin, childs end); // yes - public for top-most class
 };
