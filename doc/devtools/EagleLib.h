@@ -418,6 +418,7 @@ public:
 };
 
 class DEVICESET {
+friend class LIBRARY;
 public:
   std::string name;                     // #REQUIRED
   std::string prefix;                   // ""
@@ -426,10 +427,11 @@ public:
   std::string headline;                 // first line of description.
   std::vector<GATE> gates;              // gate*
   std::vector<DEVICE> devices;          // device*
-public:
-  DEVICESET();
+private:
   void Parse(attributes begin, attributes end);
   void Parse(childs begin, childs end);
+public:
+  DEVICESET();
 };
 
 class PACKAGE {
@@ -489,6 +491,40 @@ public:
   LIBRARY();
 };
 
+/*
+class SCHEMATIC {
+friend class DRAWING;
+public:
+
+<!ELEMENT schematic (description?, libraries?, attributes?, variantdefs?, classes?, modules?, parts?, sheets?, errors?)>
+<!ATTLIST schematic
+          xreflabel     %String;       #IMPLIED
+          xrefpart      %String;       #IMPLIED
+          >
+private:
+  void Parse(attributes begin, attributes end);
+  void Parse(childs begin, childs end);
+public:
+  SCHEMATIC();
+};
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*******************************************************************************
  * this is the top-most class after 'eagle'.
@@ -509,4 +545,5 @@ public:
 public:
   DRAWING();
   void Parse(childs begin, childs end); // yes - public for top-most class
+  void Save(std::string filename);
 };

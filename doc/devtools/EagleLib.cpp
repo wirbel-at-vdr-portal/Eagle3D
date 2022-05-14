@@ -870,17 +870,10 @@ void DRAWING::Parse(childs begin, childs end) {
      }
 }
 
+void DRAWING::Save(std::string filename) {
+  std::stringstream ss;
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -916,3 +909,4 @@ int main(int n, char** a) {
 
   return 0;
 }
+  
