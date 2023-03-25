@@ -2969,7 +2969,7 @@ else if((1 == pov_system_selected) ||  //Linux
     }
 }
 
-dlgMessageBox(lang[130]);
+// dlgMessageBox(lang[130]); // POVRay-Datei erfolgreich geschrieben
 
 mpd_dlg=0;
 socket_dlg=0;
