@@ -11,6 +11,7 @@
 #include "e3d_tools.inc"
 #include "CONNECTOR/AMP_HE14.inc"
 #include "CONNECTOR/JUMPER.inc"
+#include "CONNECTOR/MOLEX_87832_series.inc"
 #include "CONNECTOR/MOLEX_PSL_series.inc"
 #include "CONNECTOR/PHOENIX_MINI_COMBICON_3.81mm.inc"
 #include "CONNECTOR/pinheader.inc"
@@ -149,6 +150,7 @@ sphere{<-xc,0.3,3.2> 0.3}
 #local xc=xc+7.62;
 #end
 texture{e3d_tex_con_IDC}
+}
 #end
 
 
