@@ -7,6 +7,7 @@ It was, and still is, an eye catcher.
 
 ![alt text](examples/example1.png)
 ![alt text](examples/example2.png)
+![alt text](examples/example3.png)
 
 Well, years have been passed by..
 
