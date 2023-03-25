@@ -11,6 +11,8 @@
 #include "e3d_tools.inc"
 #include "DCDC/traco.inc"      // 06.04.2022, move TRACO to DCDC/traco.inc
 #include "BOARDS/digilent.inc" // 06.04.2022, add Digilent S6 FPGA devboard
+#include "CRYSTAL/oscillator.inc"
+
 
 // Copyright 2010 Gary French <gary@chromiteblue.com>
 // Simple wire jumpers
