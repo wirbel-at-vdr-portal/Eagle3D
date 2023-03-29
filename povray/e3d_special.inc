@@ -9,110 +9,13 @@
 #declare __special_inc = true;
 
 #include "e3d_tools.inc"
-#include "DCDC/traco.inc"      // 06.04.2022, move TRACO to DCDC/traco.inc
-#include "BOARDS/digilent.inc" // 06.04.2022, add Digilent S6 FPGA devboard
-#include "CRYSTAL/oscillator.inc"
+#include "DCDC/traco.inc"                 // 06.04.2022, move TRACO to DCDC/traco.inc
+#include "BOARDS/digilent.inc"            // 06.04.2022, add Digilent S6 FPGA devboard
+#include "BUZZER/TDB.inc"                 // 29.03.2023, move SPC_BUZZER_TDB to BUZZER/TDB.inc
+#include "CRYSTAL/ceramic_resonator.inc"  // 29.03.2023, move ceramic resonators to ceramic_resonator.inc
+#include "CRYSTAL/oscillator.inc"         // 
 
 
-// Copyright 2010 Gary French <gary@chromiteblue.com>
-// Simple wire jumpers
-/********************************************************************************************************************************************
-//Buzzer Grundmakro   
-//bearbeitet von Ronny Schulz
-//val_size      Groesse der Beschriftung
-//dis           Abstand der Pins      
-//dia           Radius des Buzzers 
-//hig           Hoehe des Buzzers
-//hole          Radius des sound emission hole
-//dia_b         Radius des Anschlussdrahtes
-********************************************************************************************************************************************/
-#macro SPC_BUZZER_GRND(val_size,dis,dia,hig,hole,dia_b)
-union{
-   union{
-      cylinder{<0,0,0><0,hig,0>dia pigment{Gray20}}                                                           //Buzzer Koerper
-      cylinder{<0,hig-1,0><0,hig+0.1,0>hole pigment{Black}}                                                   //Oeffnung oben
-         }
-   union{                                                                                                          //Plus Symbol
-         torus{(dia-hole)/3.5,0.15}
-           box{<-(dia-hole)/3.5,-0.15,-0.15><(dia-hole)/3.5,0.15,0.15>}
-           box{<-0.1,-0.15,-(dia-hole)/3.5><0.15,0.15,(dia-hole)/3.5>}
-           translate<(dia+hole)/2,hig,0>
-      pigment{Gray20} 
-   }
-   #if(pin_short=off)
-      cylinder{<0,0,0><0,-14.5,0>dia_b texture{col_silver} translate<dis/2,0,0>}                              //Beinchen rechts
-      cylinder{<0,0,0><0,-17.5,0>dia_b texture{col_silver} translate<-dis/2,0,0>}                        //Beinchen links
-   #else
-      cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b texture{col_silver} translate<dis/2,0,0>}   //Beinchen rechts
-      cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b texture{col_silver} translate<-dis/2,0,0>}  //Beinchen links
-   #end
-}
-#end
-
-#macro SPC_BUZZER_TDB()
-SPC_BUZZER_GRND(1,7.62,12/2,9.5,2.5/2,1/2)
-#end
-
-
-/********************************************************************************************************************************************
-// Ceramic Resonator
-// Producer: Abracon
-// Web: www.abracon.com
-// Part: ABM3B
-// Carsten Koegler <koegler(replace with at)ftz-leipzig.de>
-********************************************************************************************************************************************/
-#macro SPC_CRES_ABRACON_ABM3B_GRND(value)
-#local SPC_CRES_METAL_TEXTURE = texture { T_Chrome_5B } ;
-#local SPC_CRES_TEXT_PIGMENT = pigment { White*0.5 } ;
-
-union{
-   //Grundkoerper
-   union{
-        Round_Box_Union(<-2.5,0.03,-1.6>,<2.5,0.9, 1.6>, 0.05 ) pigment{White*0.1}
-        }
-   
-   //Anschlusspads
-   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate<-2.05,0, 1.1>}
-   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate<-2.05,0,-1.1>}
-   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate< 2.05,0, 1.1>}
-   box{<-0.5,0,-0.45><0.5,0.3,0.45> texture{col_gold} translate< 2.05,0,-1.1>}
-
-        Round_Box_Union(<-2.5,0.85,-1.6>, <2.5,1.0, 1.6>, 0.05 )
-        Round_Box_Union(<-2.5+0.5,0.5,-1.6+0.5>,<2.5-0.5,1.1, 1.6-0.5>, 0.05 )
-        text {ttf besch_font value 0.02, 0 pigment{SPC_CRES_TEXT_PIGMENT} rotate<90,0,0> scale 1.0 translate<-1.5, 1.11,-0.1>}
-
-        texture {SPC_CRES_METAL_TEXTURE}  
-}
-#end
-
-#macro SPC_CRES_ABRACON_ABM3B(value)
-SPC_CRES_ABRACON_ABM3B_GRND(value)
-#end
-
-
-/********************************************************************************************************************************************
-//Ceramic Resonator
-********************************************************************************************************************************************/
-#macro SPC_CRES_MURATA_CSTCE_G_A_GRND(value)
-union{
-   //Grundkörper
-   box{<-1.6,0,-0.65><1.6,0.4,0.65> pigment{White}}
-   //Anschlußflächen
-   box{<-0.25,0,-0.6501><0.25,0.3,0.6501> texture{col_gold}}
-   box{<-0.25,0,-0.6501><0.25,0.41,0.6501> texture{col_gold} translate<-1.2,0,0>}
-   box{<-0.25,0,-0.6501><0.25,0.41,0.6501> texture{col_gold} translate<1.2,0,0>}
-   
-   difference{
-      Round_Box_Union(<-1.5,0.1,-0.55>,<1.5,0.7,0.55>, 0.1)
-      text {ttf besch_font value 0.02, 0 rotate<90,0,0> scale 0.5 translate<-1,0.701,-0.1>}
-      texture{col_silver}
-   }
-}
-#end
-
-#macro SPC_CRES_MURATA_CSTCE_G_A(value)
-SPC_CRES_MURATA_CSTCE_G_A_GRND(value)
-#end
 
 
 /********************************************************************************************************************************************
