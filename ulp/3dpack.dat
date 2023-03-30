@@ -215,12 +215,6 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATS
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_RAWA400_8P(:TO220 heatsink RAWA400-8P:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_RAWA400_9P(:TO220 heatsink RAWA400-9P:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_RAWA400_11P(:TO220 heatsink RAWA400-11P:
-NMA-D:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_D(:NMA-D Dual Output DC-DC CONVERTER:
-NMA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_S(:NMA-S Dual output DC-DC CONVERTER:
-NME:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NME_S(:NME-S Single output DC-DC CONVERTER:
-FUSE1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (special.lib):Fuse Holder (special.lib)
-SHK20L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
-SHK20Q:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE2(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK104_254_STS(:Kuehlkoerper SK104 STS 25.4mm:Heatsink SK104 STS 25.4mm
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK104_254_STIS(:Kuehlkoerper SK104 STIS 25.4mm:Heatsink SK104 STIS 25.4mm
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK104_254_STSB(:Kuehlkoerper SK104 STSB 25.4mm:Heatsink SK104 STSB 25.4mm
@@ -237,6 +231,12 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATS
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK104_635_STIS(:Kuehlkoerper SK104 STIS 63.5mm:Heatsink SK104 STIS 63.5mm
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK104_635_STSB(:Kuehlkoerper SK104 STSB 63.5mm:Heatsink SK104 STSB 63.5mm
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK104_635_MC(:Kuehlkoerper SK104 mit Montageclip 63.5mm:Heatsink SK104 with mounting clamp 63.5mm
+NMA-D:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_D(:NMA-D Dual Output DC-DC CONVERTER:
+NMA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_S(:NMA-S Dual output DC-DC CONVERTER:
+NME:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NME_S(:NME-S Single output DC-DC CONVERTER:
+FUSE1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (special.lib):Fuse Holder (special.lib)
+SHK20L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
+SHK20Q:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE2(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
 SK96/84:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_SK96_84(:Strang- Kuehlkoerper Fa. Fischer-Elektronik SK96/84:Extruded Heatsink from Fischer-Elektronik SK96/84
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_VIEWCOM_HS_1_25GY_50(:TO220 Heatsink 6,8 C/W HS-1.25GY-50 from Viewcom:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_5MM(:Drahtbrücke:Wire jumper
