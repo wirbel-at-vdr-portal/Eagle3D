@@ -15,7 +15,7 @@
 #include "CRYSTAL/ceramic_resonator.inc"  // 29.03.2023, move ceramic resonators to CRYSTAL/ceramic_resonator.inc
 #include "CRYSTAL/crystal.inc"            // 30.03.2023, move crystals to CRYSTAL/crystal.inc
 #include "CRYSTAL/oscillator.inc"         // 25.03.2023, add 3.2 x 2.5mm oscillator
-#include "HEATSINK/KL195.inc"             // 30.03.2023, move heatsinks ot subfolder
+#include "HEATSINK/KL195.inc"             // 30.03.2023, move heatsinks to subfolder
 
 
 
