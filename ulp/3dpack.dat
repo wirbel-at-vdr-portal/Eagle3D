@@ -236,6 +236,7 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATS
 SHK20Q:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE_SHK20Q(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
 FUSE1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE_SHK20L(:Sicherung Halter (special.lib):Fuse Holder (special.lib)
 SHK20L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE_SHK20L(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_RELAY_DK1A_L2:Panasonic Relay DK1a-L2:
 NMA-D:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_D(:NMA-D Dual Output DC-DC CONVERTER:
 NMA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_S(:NMA-S Dual output DC-DC CONVERTER:
 NME:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NME_S(:NME-S Single output DC-DC CONVERTER:
