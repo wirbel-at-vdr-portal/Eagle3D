@@ -7,7 +7,7 @@
 /*******************************************************************************
  * Kuehlkoerper SK96/84
  * *****************************************************************************/
-#macro SPC_HEATSINK_SK96_GRND(l)
+#macro SPC_HEATSINK_SK96_BASE(l)
   union {
      #local black_al =
         texture {
@@ -177,7 +177,7 @@
 #end
 
 #macro SPC_HEATSINK_SK96_84()
-  SPC_HEATSINK_SK96_GRND(84)
+  SPC_HEATSINK_SK96_BASE(84)
 #end
 
 
