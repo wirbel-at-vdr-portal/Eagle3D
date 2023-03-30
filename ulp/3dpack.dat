@@ -203,12 +203,6 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_XTAL_
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_XTAL_OSZ_CFPT_126(:SMD TCVCXO CFPT-126:
 DIL14S:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_XTAL_OSZ_DIP14(:Quarzoszillator im DIP14:Quartz oscillator DIP14
 DIL08S:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_XTAL_OSZ_DIP8(:Quarzoszillator im DIP8:Quartz oscillator DIP8
-NMA-D:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_D(:NMA-D Dual Output DC-DC CONVERTER:
-NMA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_S(:NMA-S Dual output DC-DC CONVERTER:
-NME:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NME_S(:NME-S Single output DC-DC CONVERTER:
-FUSE1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (special.lib):Fuse Holder (special.lib)
-SHK20L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
-SHK20Q:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE2(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_KL195_25(:TO220 heatsink 6.2°C/W:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_KL195_38(:TO220 heatsink 5.0°C/W:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_KL195_50(:TO220 heatsink 4.2°C/W:
@@ -217,6 +211,12 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATS
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_KL195_38I(:TO220 heatsink 5.0°C/W isolated:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_KL195_50I(:TO220 heatsink 4.2°C/W isolated:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_KL195_63I(:TO220 heatsink 3.6°C/W isolated:
+NMA-D:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_D(:NMA-D Dual Output DC-DC CONVERTER:
+NMA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NMA_S(:NMA-S Dual output DC-DC CONVERTER:
+NME:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DC_DC_NME_S(:NME-S Single output DC-DC CONVERTER:
+FUSE1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (special.lib):Fuse Holder (special.lib)
+SHK20L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE1(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
+SHK20Q:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_FUSE2(:Sicherung Halter (fuse.lib):Fuse Holder (fuse.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_RA37_3(:TO220 heatsink RA 37/3 from SEEM:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_RAWA400_8P(:TO220 heatsink RAWA400-8P:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_HEATSINK_RAWA400_9P(:TO220 heatsink RAWA400-9P:
