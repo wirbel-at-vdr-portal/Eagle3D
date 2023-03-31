@@ -21,6 +21,9 @@ ulp/3dconf.dat
 # internal database.
 doc/3dpackdat.xlsx
 
+# dont want to see changes there now
+doc/devtools
+
 # files automatically synchronized, which share the same folder
 ulp/Felicitas_PCBSim.ulp
 ulp/bom.ulp
