@@ -23,9 +23,17 @@
 #end
 
 
-#macro MF_MSMF050_style2()
+#macro FUSE_MF_MSMF050_style2()
 union {
    #local value = "502I";
    MF_MSMF_style2(4.5,3.2,0.6)
    }
 #end
+
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+
+// begin assignment
+//=FUSE_MF_MSMF050_style2(:resettable PTC fuse, Bourns MF-MSMF 
+// end assignment
