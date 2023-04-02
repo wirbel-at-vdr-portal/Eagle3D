@@ -6,10 +6,10 @@
 
 
 /*******************************************************************************
-//Macros for DC-DC CONVERTERs DIP series from TRACO
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.0 - 24/12/05
-*******************************************************************************/
+ * TRACO DC/DC Converter DIP series
+ * Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
+ * Rev. 1.0 - 24/12/05
+ *******************************************************************************/
 #macro SPC_VCONV_DIP_GRND(value,M,Lb,Tp,L,W,H,p1,p2,p3,p9,p10,p11,p12,p13,p14,p15,p16,p22,p23,p24,offsetX,pw,hpin)
 union{
     #if(M=0)  // Plastic
@@ -141,114 +141,114 @@ union{
 #end
 
 
-#macro SPC_VCONV_DIP_TYL(value)
+#macro SPC_DCDC_TYL(value)
   SPC_VCONV_DIP_GRND(value,1,1,0,32.6,20.4,10.3,1,0,0,0,1,0,1,1,0,1,0,0,0,1,0,"1.5W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEM2(value)
+#macro SPC_DCDC_TEM2(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"2W",3.8)
 #end
 
-#macro SPC_VCONV_DIP_TEL2(value)
+#macro SPC_DCDC_TEL2(value)
   SPC_VCONV_DIP_GRND(value,0,2,1,23.8,13.7,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"2W",4)
 #end
 
-#macro SPC_VCONV_DIP_THI_S(value)
+#macro SPC_DCDC_THI_S(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,0,0,0,0,1,1,0,0,0,0,1,1,0,"2W",4)
 #end
 
-#macro SPC_VCONV_DIP_THI_D(value)
+#macro SPC_DCDC_THI_D(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,0,0,1,1,0,1,0,0,0,0,1,1,0,"2W",4)
 #end
 
-#macro SPC_VCONV_DIP_THP3_S(value)
+#macro SPC_DCDC_THP3_S(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,"2W",4)
 #end
 
-#macro SPC_VCONV_DIP_THP3_D(value)
+#macro SPC_DCDC_THP3_D(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,0,0,0,0,1,0,1,0,1,0,0,1,1,0,"2W",4)
 #end
 
-#macro SPC_VCONV_DIP_TEM3(value)
+#macro SPC_DCDC_TEM3(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"3W",3.8)
 #end
 
-#macro SPC_VCONV_DIP_TEL3(value)
+#macro SPC_DCDC_TEL3(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"3W",4.5)
 #end
 
-#macro SPC_VCONV_DIP_TEL3NP_S(value)
+#macro SPC_DCDC_TEL3NP_S(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"3W",4.5)
 #end
 
-#macro SPC_VCONV_DIP_TEL3NP_D(value)
+#macro SPC_DCDC_TEL3NP_D(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"3W",4.5)
 #end
 
-#macro SPC_VCONV_DIP_TEN3_S(value)
+#macro SPC_DCDC_TEN3_S(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"3W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEN3_D(value)
+#macro SPC_DCDC_TEN3_D(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"3W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEN4_S(value)
+#macro SPC_DCDC_TEN4_S(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"4W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEN4_D(value)
+#macro SPC_DCDC_TEN4_D(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"4W",5)
 #end
 
-#macro SPC_VCONV_DIP_TVL(value)
+#macro SPC_DCDC_TVL(value)
   SPC_VCONV_DIP_GRND(value,1,3,2,51.3,51.3,8,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",6)
 #end
 
-#macro SPC_VCONV_DIP_TEL5_S(value)
+#macro SPC_DCDC_TEL5_S(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20.3,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEL5_D(value)
+#macro SPC_DCDC_TEL5_D(value)
   SPC_VCONV_DIP_GRND(value,0,0,0,32,20.3,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEN5_S(value)
+#macro SPC_DCDC_TEN5_S(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEN5_D(value)
+#macro SPC_DCDC_TEN5_D(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
-#macro SPC_VCONV_DIP_TEN5WI_S(value)
+#macro SPC_DCDC_TEN5WI_S(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
-#macro SPC_VCONV_DIP_TEN5WI_D(value)
+#macro SPC_DCDC_TEN5WI_D(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
-#macro SPC_VCONV_DIP_TEN6_S(value)
+#macro SPC_DCDC_TEN6_S(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
-#macro SPC_VCONV_DIP_TEN6_D(value)
+#macro SPC_DCDC_TEN6_D(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
-#macro SPC_VCONV_DIP_TEN8(value)
+#macro SPC_DCDC_TEN8(value)
   SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,1,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"8W",3.8)
 #end
 
 
 
-/********************************************************************************************************************************************
-//Macros for DC-DC CONVERTERs SIP series from TRACO
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.0 - 21/12/05
-********************************************************************************************************************************************/
-#macro SPC_VCONV_SIP_GRND(value,s,Lg,lg1,lg,h,p1,p2,p3,p4,p5,p6,p7,p8,os,pl)
+/*******************************************************************************
+ * TRACO DC/DC Converter SIP series
+ * Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
+ * Rev. 1.0 - 21/12/05
+ ******************************************************************************/
+#macro SPC_DCDC_GRND(value,s,Lg,lg1,lg,h,p1,p2,p3,p4,p5,p6,p7,p8,os,pl)
 union{
     #local s = -((5*1.27)+s);
     #local lg1 = lg1+0.125;
@@ -298,68 +298,68 @@ union{
 #end
 
 //TMA single/dual voltage, less or equal to 24V input voltage
-#macro SPC_VCONV_SIP_TMA_S(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
+#macro SPC_DCDC_TMA_S(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMA_D(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
+#macro SPC_DCDC_TMA_D(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMA_S_24V(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
+#macro SPC_DCDC_TMA_S_24V(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMA_D_24V(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
+#macro SPC_DCDC_TMA_D_24V(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
 //TME less or equal to 24V input voltage
-#macro SPC_VCONV_SIP_TME(value)
-  SPC_VCONV_SIP_GRND(value,1.9,+11.5,4.2,6,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
+#macro SPC_DCDC_TME(value)
+  SPC_DCDC_GRND(value,1.9,+11.5,4.2,6,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TME_24V(value)
-  SPC_VCONV_SIP_GRND(value,1.9,+11.5,5.2,7,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
+#macro SPC_DCDC_TME_24V(value)
+  SPC_DCDC_GRND(value,1.9,+11.5,5.2,7,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
 #end
 
 //TMV single/dual voltage, less or equal to 24V input voltage
-#macro SPC_VCONV_SIP_TMV_S(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
+#macro SPC_DCDC_TMV_S(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMV_D(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
+#macro SPC_DCDC_TMV_D(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMV_S_24V(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
+#macro SPC_DCDC_TMV_S_24V(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMV_D_24V(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
+#macro SPC_DCDC_TMV_D_24V(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
 #end
 
 // TMVEN  single/dual voltage
-#macro SPC_VCONV_SIP_TMVEN_S(value)
-  SPC_VCONV_SIP_GRND(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,0,1,0,0.5,4)
+#macro SPC_DCDC_TMVEN_S(value)
+  SPC_DCDC_GRND(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,0,1,0,0.5,4)
 #end
 
-#macro SPC_VCONV_SIP_TMVEN_D(value)
-  SPC_VCONV_SIP_GRND(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,1,1,0,0.5,4)
+#macro SPC_DCDC_TMVEN_D(value)
+  SPC_DCDC_GRND(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,1,1,0,0.5,4)
 #end
 
 // TMH  single/dual voltage
-#macro SPC_VCONV_SIP_TMH_S(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,0,1,0,0,0,3.2)
+#macro SPC_DCDC_TMH_S(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
-#macro SPC_VCONV_SIP_TMH_D(value)
-  SPC_VCONV_SIP_GRND(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,1,1,0,0,0,3.2)
+#macro SPC_DCDC_TMH_D(value)
+  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,1,1,0,0,0,3.2)
 #end
 // TMR  single/dual voltage
-#macro SPC_VCONV_SIP_TMR(value)
-  SPC_VCONV_SIP_GRND(value,2,+21.8,3.2,9.2,11.1,1,1,0,0,0,1,1,1,1.5,4)
+#macro SPC_DCDC_TMR(value)
+  SPC_DCDC_GRND(value,2,+21.8,3.2,9.2,11.1,1,1,0,0,0,1,1,1,1.5,4)
 #end
 
 
@@ -369,7 +369,7 @@ union{
  * 06.04.2022, wirbel
  ******************************************************************************/
 
-#macro TEN6_xxxx_GRND(has_pin9,metal_case,value)
+#macro TEN6_xxxx_BASE(has_pin9,metal_case,value)
 union {
 
   // Gehaeuse
@@ -427,165 +427,252 @@ union {
      #end
   #end
 }
-// end: TEN6_xxxx_GRND(sd,value)
+// end: TEN6_xxxx_BASE (sd,value)
 #end
 
-#macro TEN6_1210N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_1210N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_1211N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_1211N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_1212N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_1212N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_1213N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_1213N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_1215N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_1215N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_1221N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_1221N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_1222N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_1222N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_1223N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_1223N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_2410N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2410N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2411N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2411N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2412N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2412N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2413N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2413N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2415N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2415N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2421N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_2421N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_2422N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_2422N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_2423N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_2423N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_4810N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4810N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4811N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4811N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4812N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4812N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4813N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4813N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4815N(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4815N(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4821N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_4821N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_4822N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_4822N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_4823N(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_4823N(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_2410WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2410WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2411WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2411WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2412WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2412WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2413WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2413WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2415WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_2415WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_2421WIN(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_2421WIN(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_2422WIN(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_2422WIN(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_2423WIN(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_2423WIN(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_4810WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4810WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4811WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4811WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4812WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4812WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4813WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4813WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4815WIN(value)
-   TEN6_xxxx_GRND(0, 0, value)
+#macro DCDC_TEN6_4815WIN(value)
+   TEN6_xxxx_BASE(0, 0, value)
 #end
 
-#macro TEN6_4821WIN(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_4821WIN(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_4822WIN(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_4822WIN(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
 
-#macro TEN6_4823WIN(value)
-   TEN6_xxxx_GRND(1, 0, value)
+#macro DCDC_TEN6_4823WIN(value)
+   TEN6_xxxx_BASE(1, 0, value)
 #end
+
+
+
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+
+// begin assignment
+//=SPC_DCDC_TMA_S(:TRACO DC/DC
+//=SPC_DCDC_TMA_D(:TRACO DC/DC
+//=SPC_DCDC_TMA_S_24V(:TRACO DC/DC
+//=SPC_DCDC_TMA_D_24V(:TRACO DC/DC
+//=SPC_DCDC_TME(:TRACO DC/DC
+//=SPC_DCDC_TME_24V(:TRACO DC/DC
+//=SPC_DCDC_TMV_S(:TRACO DC/DC
+//=SPC_DCDC_TMV_D(:TRACO DC/DC
+//=SPC_DCDC_TMV_S_24V(:TRACO DC/DC
+//=SPC_DCDC_TMV_D_24V(:TRACO DC/DC
+//=SPC_DCDC_TMVEN_S(:TRACO DC/DC
+//=SPC_DCDC_TMVEN_D(:TRACO DC/DC
+//=SPC_DCDC_TMH_S(:TRACO DC/DC
+//=SPC_DCDC_TMH_D(:TRACO DC/DC
+//=SPC_DCDC_TMR(:TRACO DC/DC
+//=SPC_DCDC_TYL(:TRACO DC/DC
+//=SPC_DCDC_TEM2(:TRACO DC/DC
+//=SPC_DCDC_TEL2(:TRACO DC/DC
+//=SPC_DCDC_THI_S(:TRACO DC/DC
+//=SPC_DCDC_THI_D(:TRACO DC/DC 
+//=SPC_DCDC_THP3_S(:TRACO DC/DC
+//=SPC_DCDC_THP3_D(:TRACO DC/DC
+//=SPC_DCDC_TEM3(:TRACO DC/DC
+//=SPC_DCDC_TEL3(:TRACO DC/DC
+//=SPC_DCDC_TEL3NP_S(:TRACO DC/DC
+//=SPC_DCDC_TEL3NP_D(:TRACO DC/DC  
+//=SPC_DCDC_TEN3_S(:TRACO DC/DC
+//=SPC_DCDC_TEN3_D(:TRACO DC/DC
+//=SPC_DCDC_TEN4_S(:TRACO DC/DC
+//=SPC_DCDC_TEN4_D(:TRACO DC/DC
+//=SPC_DCDC_TEL5_S(:TRACO DC/DC
+//=SPC_DCDC_TEL5_D(:TRACO DC/DC
+//=SPC_DCDC_TVL(:TRACO DC/DC
+//=SPC_DCDC_TEN5WI_S(:TRACO DC/DC
+//=SPC_DCDC_TEN5WI_D(:TRACO DC/DC
+//=SPC_DCDC_TEN6_S(:TRACO DC/DC
+//=SPC_DCDC_TEN6_D(:TRACO DC/DC
+//=SPC_DCDC_TEN8(:TRACO DC/DC
+//=DCDC_TEN6_1210N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1211N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1212N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1213N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1215N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1221N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1222N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_1223N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2410N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2411N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2412N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2413N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2415N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2421N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2422N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2423N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4810N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4811N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4812N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4813N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4815N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4821N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4822N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4823N(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2410WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2411WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2412WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2413WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2415WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2421WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2422WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_2423WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4810WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4811WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4812WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4813WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4815WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4821WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4822WIN(:TRACO DC/DC TEN6
+//=DCDC_TEN6_4823WIN(:TRACO DC/DC TEN6
+// end assignment
