@@ -16,7 +16,7 @@
 #include "CRYSTAL/crystal.inc"            // 30.03.2023, move crystals to CRYSTAL/crystal.inc
 #include "CRYSTAL/oscillator.inc"         // 25.03.2023, add 3.2 x 2.5mm oscillator
 #include "DCDC/Murata.inc"                // 02.04.2023, move DC/DC to DCDC/Murata.inc
-#include "DCDC/traco.inc"                 // 06.04.2022, move DC/DC to DCDC/traco.inc
+#include "DCDC/Traco.inc"                 // 06.04.2022, move DC/DC to DCDC/traco.inc
 #include "FUSE/SHK20L.inc"                // 30.03.2023, move fuses to subfolder
 #include "FUSE/SHK20Q.inc"                // 30.03.2023, move fuses to subfolder
 #include "HEATSINK/KL195.inc"             // 30.03.2023, move heatsinks to subfolder
