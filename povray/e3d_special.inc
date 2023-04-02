@@ -12,6 +12,7 @@
 #include "DCDC/traco.inc"                 // 06.04.2022, move TRACO to DCDC/traco.inc
 #include "BOARDS/digilent.inc"            // 06.04.2022, add Digilent S6 FPGA devboard
 #include "BUZZER/TDB.inc"                 // 29.03.2023, move SPC_BUZZER_TDB to BUZZER/TDB.inc
+#include "CONNECTOR/wirejumper.inc"       // 02.04.2023, move wire jumpers to CONNECTOR/wirejumper.inc
 #include "CRYSTAL/ceramic_resonator.inc"  // 29.03.2023, move ceramic resonators to CRYSTAL/ceramic_resonator.inc
 #include "CRYSTAL/crystal.inc"            // 30.03.2023, move crystals to CRYSTAL/crystal.inc
 #include "CRYSTAL/oscillator.inc"         // 25.03.2023, add 3.2 x 2.5mm oscillator
@@ -125,101 +126,6 @@ SPC_DC_DC_NME_S_GRND(value)
 
 
 
-
-/********************************************************************************************************************************************
-//Macros for jumper such simple wire
-//Designed by Philippe Boucheny <philippe.boucheny(at)numericable.fr>
-//Modified by Adriano Gandolfo <adrirobot(at)yahoo.it>
-//Rev. 1.1  30/10/08
-//If value is set in Eagle (1 to 9), colors can be passed to POV, by Emil Crisbaseanu
-//<emilcrisba(at)gmail.com>
-********************************************************************************************************************************************/
-#macro SPC_JUMPER_WIRE_GRND(Lg,value)
-              
-
-#local h=0.9;
-
-
-#if (strcmp (value,"1")=0)
-#local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Brown } finish { Shiny }}
-#else
-        #if (strcmp (value,"2")=0)
-        #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Red } finish { Shiny }}
-        #else
-                #if (strcmp (value,"3")=0)
-                #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Orange } finish { Shiny }}
-                #else
-                        #if (strcmp (value,"4")=0)
-                        #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Yellow } finish { Shiny }}
-                        #else
-                                #if (strcmp (value,"5")=0)
-                                #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Blue } finish { Shiny }}
-                                #else
-                                        #if (strcmp (value,"6")=0)
-                                        #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Green } finish { Shiny }}
-                                        #else
-                                                #if (strcmp (value,"7")=0)
-                                                #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Pink } finish { Shiny }}
-                                                #else
-                                                        #if (strcmp (value,"8")=0)
-                                                        #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { Gray60 } finish { Shiny }}
-                                                        #else
-                                                                #if (strcmp (value,"9")=0)
-                                                                #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.6 pigment { White } finish { Shiny }}
-                                                                #else
-                                                                        #local gain=cylinder{<-(Lg-1)/2,h,0>,<(Lg-1)/2,h,0>,0.1 pigment { Brown } finish { Shiny }}
-                                                                #end
-                                                        #end
-                                                #end
-                                        #end
-                                #end
-                        #end
-                  
-                #end
-         #end
-#end     
-
-union {        
-      object{ TOOLS_WIRE_LEADS(0, 1, 1, 0.4,  Lg,  0.5, 0, "H") translate<0,h,0> }
-      object{gain}
-}
-#end
-
-
-
-#macro SPC_JUMPER_WIRE_5MM(value)
-SPC_JUMPER_WIRE_GRND(5.08,value)
-#end
-#macro SPC_JUMPER_WIRE_7MM(value)
-SPC_JUMPER_WIRE_GRND(7.62,value)
-#end
-#macro SPC_JUMPER_WIRE_10MM(value)
-SPC_JUMPER_WIRE_GRND(10.16,value)
-#end
-#macro SPC_JUMPER_WIRE_12MM(value)
-SPC_JUMPER_WIRE_GRND(12.7,value)
-#end
-#macro SPC_JUMPER_WIRE_15MM(value)
-SPC_JUMPER_WIRE_GRND(15.24,value)
-#end
-#macro SPC_JUMPER_WIRE_17MM(value)
-SPC_JUMPER_WIRE_GRND(17.78,value)
-#end
-#macro SPC_JUMPER_WIRE_20MM(value)
-SPC_JUMPER_WIRE_GRND(20.32,value)
-#end
-#macro SPC_JUMPER_WIRE_22MM(value)
-SPC_JUMPER_WIRE_GRND(22.86,value)
-#end
-#macro SPC_JUMPER_WIRE_25MM(value)
-SPC_JUMPER_WIRE_GRND(25.40,value)
-#end
-#macro SPC_JUMPER_WIRE_27MM(value)
-SPC_JUMPER_WIRE_GRND(27.94,value)
-#end
-#macro SPC_JUMPER_WIRE_30MM(value)
-SPC_JUMPER_WIRE_GRND(30.48,value)
-#end
 
 
 /********************************************************************************************************************************************
@@ -1332,69 +1238,6 @@ SPC_MURATA_NFE61P_GRND()
 
 
 
-/********************************************************************************************************************************************
-// Auth: Gary French <gary@chromiteblue.com>
-//
-// Uses existing TOOLS_WIRE_LEADS macro to generate simple wire jumpers.
-// SPC_SIMPLE_WIRE_JUMPER_GRND(l,d,r,lw,dw,op,w)
-//   l:  length, passed to TOOLS_WIRE_LEADS:Length
-//   d:  diameter, passed to TOOLS_WIRE_LEADS:Width
-//   r:  raster, passed to TOOLS_WIRE_LEADS:Raster
-//   lw: length of wire, 2 * value passed to TOOLS_WIRE_LEADS:Wirelength
-//   dw:
-//   op: offset?
-//   w:
-// Defined values:
-//   jumper_diameter: wire diameter (currently defaults to the value of dim_mm_awg_24)
-//   jumper_bend_radius: radius of jumper corners
-//   jumper_seperation: distance of jumper from board surface
-********************************************************************************************************************************************/
-#macro SPC_SIMPLE_WIRE_JUMPER_GRND(l,d,r,lw,dw,op,w)
-//general declarations
-#local user_pcb_hole_pitch = 2.54;
-
-//typical wire gauges scaled to Eagle3D
-#local dim_mm_awg_16 = 1.290; //AWG-16
-#local dim_mm_awg_18 = 1.024; //AWG-18 (standard)
-#local dim_mm_awg_20 = 0.812; //AWG-20
-#local dim_mm_awg_22 = 0.644; //AWG-22
-#local dim_mm_awg_24 = 0.511; //AWG-24
-#local dim_mm_awg_26 = 0.405; //AWG-26
-
-#local jumper_diameter = dim_mm_awg_24;
-#local jumper_bend_radius = 0.200;
-#local jumper_seperation = 0.0;
-
-object{
-    TOOLS_WIRE_LEADS(l,d,lw*2,dim_mm_awg_24,r,jumper_bend_radius,jumper_seperation,"H")
-    translate<0,dim_mm_awg_24/2+op,0>
-}
-#end
-
-#macro SPC_SIMPLE_WIRE_JUMPER_05MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*2, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_07MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*3, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_10MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*4, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_12MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*5, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_15MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*6, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_20MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*8, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_25MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*10, 20, 0.6, 0, 0.3)
-#end
-#macro SPC_SIMPLE_WIRE_JUMPER_30MM()
-SPC_SIMPLE_WIRE_JUMPER_GRND(5.8, 2.2, 2.54*12, 20, 0.6, 0, 0.3)
-#end
 
 
 /********************************************************************************************************************************************
