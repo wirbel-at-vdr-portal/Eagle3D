@@ -9,13 +9,14 @@
 #declare __special_inc = true;
 
 #include "e3d_tools.inc"
-#include "DCDC/traco.inc"                 // 06.04.2022, move TRACO to DCDC/traco.inc
 #include "BOARDS/digilent.inc"            // 06.04.2022, add Digilent S6 FPGA devboard
 #include "BUZZER/TDB.inc"                 // 29.03.2023, move SPC_BUZZER_TDB to BUZZER/TDB.inc
 #include "CONNECTOR/wirejumper.inc"       // 02.04.2023, move wire jumpers to CONNECTOR/wirejumper.inc
 #include "CRYSTAL/ceramic_resonator.inc"  // 29.03.2023, move ceramic resonators to CRYSTAL/ceramic_resonator.inc
 #include "CRYSTAL/crystal.inc"            // 30.03.2023, move crystals to CRYSTAL/crystal.inc
 #include "CRYSTAL/oscillator.inc"         // 25.03.2023, add 3.2 x 2.5mm oscillator
+#include "DCDC/Murata.inc"                // 02.04.2023, move DC/DC to DCDC/Murata.inc
+#include "DCDC/traco.inc"                 // 06.04.2022, move DC/DC to DCDC/traco.inc
 #include "FUSE/SHK20L.inc"                // 30.03.2023, move fuses to subfolder
 #include "FUSE/SHK20Q.inc"                // 30.03.2023, move fuses to subfolder
 #include "HEATSINK/KL195.inc"             // 30.03.2023, move heatsinks to subfolder
@@ -30,97 +31,10 @@
 #include "RELAY/SIL.inc"                  // 31.03.2023, move relays to subfolder
 
 
-/********************************************************************************************************************************************
-// DC-DC CONVERTERs BY J. ZEGLINSKI
-// DC-DC CONVERTER "NMA" D-series 6-pin DIP14  Package 1 Watt  Dual output voltage (e.g. NMA1205D)
-// <JAZeglinski@rogers.com>
-// C & D Technologies (formerly Newport Components) Dc-DC Converters:
-********************************************************************************************************************************************/
-#macro SPC_DC_DC_NMA_D_GRND(value)
-union{
-box{<-9.75,0,-4.9><9.75,6.8,4.9>}     // Body
-cylinder{<-7.62,6.85,-3.81><-7.62,6.80,-3.81> 0.5 pigment{White} }   // Pin #1 marking
-//
-box{<-0.25,0,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-7.62,0,+3.81> } // six square leads
-box{<-0.25,0,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-7.62,0,-3.81> } 
-box{<-0.25,0,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<0,0,+3.81> } 
-box{<-0.25,0,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<5.08,0,+3.81>  }
-box{<-0.25,0,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<7.62,0,-3.81>  }
-box{<-0.25,0,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<7.62,0,+3.81>  }
-//
-text {ttf besch_font value 0.1, 0 pigment{White} scale 1.75 rotate<90,0,0> translate<-8.75,6.81,3>}  // Marking on top surface
-text {ttf besch_font "DC-DC CONVERTER" 0.1, 0 pigment{White} scale 1 rotate<90,0,0> translate<-8.75,6.81,2>} // Markings front surface 
-text {ttf besch_font "C&D"  0.1, 0 pigment{White} scale<3.5,1.25,1> rotate<90,0,0> translate<2.41,6.81,-3.31>} 
-text {ttf besch_font "TECHNOLOGIES"  0.1, 0 pigment{White} scale<0.85,1,1> rotate<90,0,0> translate<2.41,6.81,-4.31>} 
-}
-pigment{Gray20} 
-#end
-#macro SPC_DC_DC_NMA_D(value)
-SPC_DC_DC_NMA_D_GRND(value)
-#end
 
 
-/********************************************************************************************************************************************
-// DC-DC CONVERTERs BY J. ZEGLINSKI
-// DC-DC CONVERTER "NMA" S-series 5-pin SIP7   Package 1 Watt  Dual output voltage (e.g. NMA1205S)
-// <JAZeglinski@rogers.com>
-// C & D Technologies (formerly Newport Components) Dc-DC Converters:
-********************************************************************************************************************************************/
-#macro SPC_DC_DC_NMA_S_GRND(value)
-union{
-box{<-9.75,0,-3><-9.25,0.5,3>}    // Feet left and right side
-box{<9.75,0,-3><9.25,0.5,3>}
-box{<-9.75,0.5,-3><9.75,10,3>}     // Body
-cylinder{<-7.75,2.0,-3.05><-7.75,2.0,-3.00> 0.5 pigment{White} }   // Pin #1 marking
-//
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-7.75,0,1.75> } // five square leads
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-5.21,0,1.75> } // NB: Different from the NME_S
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-0.13,0,1.75> } //  NMA_S pins along "back" edge
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<2.41,0,1.75>  }
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<4.95,0,1.75>  }
-//
-text {ttf besch_font value 0.1, 0 pigment{White} scale 1.75 rotate<90,0,0> translate<-8.75,10.01,0>}  // Value on top surface
-text {ttf besch_font value 0.1, 0 pigment{White} scale 1.75 translate<-8.75,8,-3.05>}                // Markings on vertical front face
-text {ttf besch_font "DC-DC CONVERTER" 0.1, 0 pigment{White} scale 1 translate<-8.75,7,-3.05>} 
-text {ttf besch_font "C&D"  0.1, 0 pigment{White} scale<3.5,1.25,1> translate<2.41,2.5,-3.05>} 
-text {ttf besch_font "TECHNOLOGIES"  0.1, 0 pigment{White} scale<0.85,1,1> translate<2.41,1.5,-3.05>} 
-}
-pigment{Gray20}  translate<1.27,0,-1.75>  rotate<0,90,0>
-#end
-#macro SPC_DC_DC_NMA_S(value)
-SPC_DC_DC_NMA_S_GRND(value)
-#end
 
 
-/********************************************************************************************************************************************
-// DC-DC CONVERTERs BY J. ZEGLINSKI
-// DC-DC CONVERTER "NME" S-series 4-pin SIP4   Package 2 Watts Single output voltage (e.g. NML0505S) 
-// <JAZeglinski@rogers.com>
-// C & D Technologies (formerly Newport Components) Dc-DC Converters:
-********************************************************************************************************************************************/
-#macro SPC_DC_DC_NME_S_GRND(value)
-union{
-box{<-7,0,-3.75><-6.5,0.5,3.75>}    // Feet left and right side
-box{<7,0,-3.75><6.5,0.5,3.75>}
-box{<-7,0.5,-3.75><7,10,3.75>}     // Body
-cylinder{<-3.81,2.0,-3.80><-3.75,2.0,-3.0> 0.5 pigment{White} }   // Pin #1 marking
-//
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-3.81,0,-2.5> } // four square leads
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<-1.27,0,-2.5> } 
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<3.81,0,-2.5> } 
-box{<-0.25,0.5,-0.125><0.25,-min(4.1,(pin_length+pcb_height)),0.125 > texture{col_silver} translate<1.27,0,-2.5> }
-//
-text {ttf besch_font value 0.1, 0 pigment{White} scale 1.75 rotate<90,0,0> translate<-6,10.01,0>}
-text {ttf besch_font value 0.1, 0 pigment{White} scale 1.75 translate<-6,8,-3.80>}
-text {ttf besch_font "DC-DC CONVERTER" 0.1, 0 pigment{White} scale 1 translate<-6,7,-3.80>} 
-text {ttf besch_font "C&D"  0.1, 0 pigment{White} scale<3.5,1.25,1> translate<-1.27,2.5,-3.80>} 
-text {ttf besch_font "TECHNOLOGIES"  0.1, 0 pigment{White} scale<0.85,1,1> translate<-1.27,1.5,-3.80>} 
-}
-pigment{Gray20}  translate<0,0,2.5>  rotate<0,90,0>
-#end
-#macro SPC_DC_DC_NME_S(value)
-SPC_DC_DC_NME_S_GRND(value)
-#end
 
 
 
