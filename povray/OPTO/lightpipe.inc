@@ -1,4 +1,10 @@
 /*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
+
+/*******************************************************************************
  * light pipe from dialight
  * Philippe Boucheny <philippe.boucheny(at)numericable.fr>
  * Rev. 1.0  24/12/06
