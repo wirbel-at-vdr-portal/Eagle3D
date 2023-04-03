@@ -242,7 +242,7 @@ NMA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DCDC_NMA_S(:
 NME:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_DCDC_NME_S(:NME-S Single Output DC/DC Converter:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_LIGHTPIPE_5151049F(:light pipe: light pipe
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_5MM_S(:Inductor d=8mm h=10mm:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_EF12(:EF12 Spulenkern:EF12 Spulenkern
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_EF12(:EF12 Inductor:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_EF16(:EF16 Spulenkern:EF16 Spulenkern
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_MURATA_2012_LQH3C(:Spule MURATA Chip Coil:Inductor MURATA Chip Coil
 SFT830D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_TOROIDAL_SFT830D(:Spule strehend (induktor.lib):
