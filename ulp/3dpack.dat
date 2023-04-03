@@ -261,8 +261,8 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:-90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_W
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:-90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_LF622MV(:Inductor LF622/MS:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:-90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_LF632LV(:Inductor LF632/MS:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:-90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_LF642XV(:Inductor LF642/MS:
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PD4(:Würth Chip Coil:Würth Chip Coil
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PDM(:Würth Chip Coil:Würth Chip Coil
+NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PD4(:Wuerth Chip Coil:Wuerth Chip Coil
+NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PDM(:Wuerth Chip Coil:Wuerth Chip Coil
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PD_S(:Speicherdrossel WE-PD Wuerth Elektronik:Inductor WE-PD Wuerth Elektronik
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PD_M(:Speicherdrossel WE-PD Wuerth Elektronik:Inductor WE-PD Wuerth Elektronik
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_L_WE_PD_L(:Speicherdrossel WE-PD Wuerth Elektronik:Inductor WE-PD Wuerth Elektronik
@@ -588,7 +588,7 @@ FB15A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_FB15
 FB15:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_FB15(:Gleichrichter:AC/DC-Converter
 FB32:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_FB32(:Gleichrichter:AC/DC-Converter
 KBU:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_KBU_4_6_8(:Rectifier Bridge KBU 4/6/8 A to M from General Semiconductor:
-RB1A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_RB1A(:Brückengleichrichter 1A, rund:Rectifier 1A, Round
+RB1A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_RB1A(:Brueckengleichrichter 1A, rund:Rectifier 1A, Round
 DO214AC:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMD_DO214AC(:DO214 AC:
 DO214AA:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMD_DO214AA(:DO214 AA:
 DO214BA:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMD_DO214AB(:DO214 BA:
@@ -1660,14 +1660,14 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BNC_W
 B35N61:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_COAX_B35N61(:BNC socket (con-coax.lib):
 733989-5:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DCPOWERCONNECTOR(:DC power connector:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DC_JACK_HEBO_13(:Hohlstecker-Printeinbaubuchse, gewinkelt (Reichelt.de HEBO 13):DC-Jack, Print (Reichelt.de HEBO 13)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_3S(:Hirschmann DIN-Buchse MAB_3S, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_4(:Hirschmann DIN-Buchse MAB_4, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5(:Hirschmann DIN-Buchse MAB_5, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5S(:Hirschmann DIN-Buchse MAB_5S, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_6(:Hirschmann DIN-Buchse MAB_6, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_7S(:Hirschmann DIN-Buchse MAB_7S, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8S(:Hirschmann DIN-Buchse MAB_8S, Frontplattenmontage, Anschluss über Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8SN(:Hirschmann DIN-Buchse MAB_8SN, Frontplattenmontage, Anschluss über Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_3S(:Hirschmann DIN-Buchse MAB_3S, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_4(:Hirschmann DIN-Buchse MAB_4, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5(:Hirschmann DIN-Buchse MAB_5, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5S(:Hirschmann DIN-Buchse MAB_5S, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_6(:Hirschmann DIN-Buchse MAB_6, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_7S(:Hirschmann DIN-Buchse MAB_7S, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8S(:Hirschmann DIN-Buchse MAB_8S, Frontplattenmontage, Anschluss ueber Kabel:
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8SN(:Hirschmann DIN-Buchse MAB_8SN, Frontplattenmontage, Anschluss ueber Kabel:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5SV(:Hirschmann DIN-Buchse MAB_5SV, unvollständig, Anschlussösen statt Pins:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_6V(:Hirschmann DIN-Buchse MAB_6V, unvollständig, Anschlussösen statt Pins:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_7SV(:Hirschmann DIN-Buchse MAB_7SV, unvollständig, Anschlussösen statt Pins:
