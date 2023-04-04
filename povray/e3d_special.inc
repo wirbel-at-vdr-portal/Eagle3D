@@ -17,6 +17,8 @@
 #include "CRYSTAL/oscillator.inc"         // 25.03.2023, add 3.2 x 2.5mm oscillator
 #include "DCDC/Murata.inc"                // 02.04.2023, move DC/DC to DCDC/Murata.inc
 #include "DCDC/Traco.inc"                 // 06.04.2022, move DC/DC to DCDC/traco.inc
+
+
 #include "FUSE/SHK20L.inc"                // 30.03.2023, move fuses to subfolder
 #include "FUSE/SHK20Q.inc"                // 30.03.2023, move fuses to subfolder
 #include "HEATSINK/KL195.inc"             // 30.03.2023, move heatsinks to subfolder
@@ -50,70 +52,6 @@
 
 
 
-/*******************************************************************************
-//Macros for MURATA NFE61P EMI FILTERS
-//Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
-//Rev. 1.0  13/01/06
-*******************************************************************************/
-#macro SPC_MURATA_CSTCC_G_A_GRND(value)
-union {
-    difference {
-        union {
-            superellipsoid { <0.09, 0.09> scale <3.6,0.25,1.5> translate <0,0.25,0> }
-            intersection{
-                superellipsoid { <0.09, 0.09> scale <3.6,0.25,1.5> translate <0,0.25,0> }
-                union {
-                    box {<-4,-0.1,-1.6> <-3.1,1,+1.6>}
-                    box {<-1.9,-0.1,-1.6> <-0.7,1,+1.6>}
-                    box {<+0.7,-0.1,-1.6> <+1.9,1,+1.6>}
-                    box {<+4,-0.1,-1.6> <+3.1,1,+1.6>}
-                }
-                pigment {color red 0.85 green 0.85 blue 0.71}
-            }     
-        }
-        union {
-            cylinder {<-2.5,0,-1.5> <-2.5,0.6,-1.5> 0.23 }
-            cylinder {<+2.5,0,-1.5> <+2.5,0.6,-1.5> 0.23 }
-            cylinder {<0,0,-1.5> <0,0.6,-1.5> 0.23 }
-            cylinder {<-2.5,0,+1.5> <-2.5,0.6,+1.5> 0.23 }
-            cylinder {<+2.5,0,+1.5> <+2.5,0.6,+1.5> 0.23 }
-            cylinder {<0,0,+1.5> <0,0.6,+1.5> 0.23 }
-        }
-        texture{col_silver}
-    }
-    difference {
-        superellipsoid { <0.2, 0.2> scale <3.3,1.55,1.05> translate <0,0,0>  }
-        union {
-            box {<-3.4,0,-1.6> <+3.4,-2,+1.6> texture{col_silver}}
-            text { ttf global_fontfile_arial value 0.08, 0 scale 1 rotate <90,0,0> translate <-2,1.6,-0.45>}     // Ref Marking
-        }
-        texture{col_silver}
-    }
-}
-#end
-#macro SPC_MURATA_CSTCC_G_A(value)
-SPC_MURATA_CSTCC_G_A_GRND(value)
-#end
-
-
-/*******************************************************************************
-//Macros for MURATA NFE61P EMI FILTERS
-//Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
-//Rev. 1.0  13/01/06
-*******************************************************************************/
-#macro SPC_MURATA_NFE61P_GRND()
-union {
-    difference {
-        superellipsoid { <0.09, 0.09> scale <3.4,0.8,0.8> translate <0,0.8,0> texture{col_silver} }
-        cylinder {<-2.7,0.8,0> <+2.7,0.8,0> 1.2 texture{col_silver}}
-    }
-    superellipsoid { <0.09, 0.09> scale <1.3,0.8,0.8> translate <0,0.8,0> texture{col_silver} }
-    cylinder {<-2.7,0.8,0> <+2.7,0.8,0> 0.7 pigment {Gray30}}
-}
-#end
-#macro SPC_MURATA_NFE61P()
-SPC_MURATA_NFE61P_GRND()
-#end
 
 
 

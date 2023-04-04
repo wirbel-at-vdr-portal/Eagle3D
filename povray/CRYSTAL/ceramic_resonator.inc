@@ -84,7 +84,7 @@
 /*******************************************************************************
  * Murata cstce*g*a, Ceramic Resonator (discontinued)
  * *****************************************************************************/
-#macro SPC_CRES_MURATA_CSTCE_G_A_BASE(value)
+#macro SPC_CRES_MURATA_CSTCE(value)
   union {
      //Grundkoerper
      box {
@@ -127,9 +127,89 @@
      }
 #end
 
-#macro SPC_CRES_MURATA_CSTCE_G_A(value)
-  SPC_CRES_MURATA_CSTCE_G_A_BASE(value)
+
+
+/*******************************************************************************
+ * MURATA 3 TERMINAL, Low Profile (Surface Mount) CERALOCK resonator CSTCC
+ * Philippe Boucheny <philippe.boucheny(at)free.fr>
+ * Rev. 1.0  13/01/06
+*******************************************************************************/
+#macro SPC_CRES_MURATA_CSTCC(value)
+  union {
+     difference {
+        union {
+           superellipsoid {
+              <0.09, 0.09>
+              scale <3.6,0.25,1.5>
+              translate <0,0.25,0>
+              }
+           intersection {
+              superellipsoid {
+                 <0.09, 0.09>
+                 scale <3.6,0.25,1.5>
+                 translate <0,0.25,0>
+                 }
+              union {
+                 box { <-4  ,-0.1,-1.6> <-3.1,1,+1.6> }
+                 box { <-1.9,-0.1,-1.6> <-0.7,1,+1.6> }
+                 box { <+0.7,-0.1,-1.6> <+1.9,1,+1.6> }
+                 box { <+4  ,-0.1,-1.6> <+3.1,1,+1.6> }
+                 }
+              pigment {
+                 color red 0.85 green 0.85 blue 0.71
+                 }
+              }     
+           } // union
+        union {
+           cylinder {
+              <-2.5,0,-1.5> <-2.5,0.6,-1.5> 0.23
+              }
+           cylinder {
+              <+2.5,0,-1.5> <+2.5,0.6,-1.5> 0.23
+              }
+           cylinder {
+              <0,0,-1.5> <0,0.6,-1.5> 0.23
+              }
+           cylinder {
+              <-2.5,0,+1.5> <-2.5,0.6,+1.5> 0.23
+              }
+           cylinder {
+              <+2.5,0,+1.5> <+2.5,0.6,+1.5> 0.23
+              }
+           cylinder {
+              <0,0,+1.5> <0,0.6,+1.5> 0.23
+              }
+           } // union
+        texture {
+           col_silver
+           }
+        } // difference
+     difference {
+        superellipsoid {
+           <0.2, 0.2>
+           scale <3.3,1.55,1.05>
+           translate <0,0,0>
+           }
+        union {
+           box {
+              <-3.4,0,-1.6> <+3.4,-2,+1.6>
+              texture {
+                 col_silver
+                 }
+              }
+           text { // Ref Marking
+              ttf global_fontfile_arial value 0.08, 0
+              rotate <90,0,0>
+              translate <-2,1.6,-0.45>
+              }
+           }
+        texture {
+           col_silver
+           }
+        }
+     }
 #end
+
 
 
 /*******************************************************************************
@@ -138,5 +218,6 @@
 
 // begin assignment
 //=SPC_CRES_ABRACON_ABM3B(:Abracon Ceramic Resonator ABM3B
-//=SPC_CRES_MURATA_CSTCE_G_A(:Murata cstce*g*a, Ceramic Resonator (discontinued)
+//=SPC_CRES_MURATA_CSTCE(:Murata cstce*g*a Ceramic Resonator(discontinued)
+//=SPC_CRES_MURATA_CSTCC(:Murata CSTCC Ceramic Resonator
 // end assignment
