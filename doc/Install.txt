@@ -5,7 +5,66 @@ As a user with elevated permissions:
 1) copy the content of folder 'ulp' to your Eagle installation ulp folder,
    ie. "C:\Program Files\EAGLE-7.6.0\ulp"
 
-2) copy the content of folder 'povray' to your POV-Ray include folder,
-   ie. "C:\Program Files\Povray3.7\include"
+2) copy the content of folder 'povray' into a new folder 'Eagle3D' in your
+   POV-Ray include folder, ie.
+      "C:\Program Files\Povray3.7\include\Eagle3D"
 
-3) copy the file 'povray\Eagle3D_main.inc' to your POV-Ray include folder.
+3) copy the file 'povray\Eagle3D_main.inc' to your POV-Ray include folder,
+   ie.
+      "C:\Program Files\Povray3.7\include\Eagle3D_main.inc"   
+
+4) Add the exact path from 2) to your master POV-Ray ini file as
+   a Library_Path, for example:
+
+      Library_Path=""C:\Program Files\Povray3.7\include\Eagle3D"
+
+   You may use the editor menu for this:
+   Tool -> Edit master POVRAY.INI
+
+
+
+
+
+--------------------------------------------------------------------------
+
+example:
+a) Eagle setup:
+    C:\Program Files\EAGLE-7.6.0\ulp\
+                                    +-- 3d50.ulp
+                                    +-- 3d_cam.png
+                                    +-- 3d_ko.png
+                                    +-- 3dcol.dat
+                                    +-- 3dcol_e.dat
+                                    +-- 3dcol_fr.dat
+                                    +-- 3dcol_hu.dat
+                                    +-- 3dcol_it.dat
+                                    +-- 3dcol_pt.dat
+                                    +-- 3dcol_sp.dat
+                                    +-- 3dconf.dat
+                                    +-- 3dfunc.ulp
+                                    +-- 3dlang.dat
+                                    +-- 3dlang_e.dat
+                                    +-- 3dlang_fr.dat
+                                    +-- 3dlang_hu.dat
+                                    +-- 3dlang_it.dat
+                                    +-- 3dlang_pt.dat
+                                    +-- 3dlang_sp.dat
+                                    +-- 3dpack.dat
+                                    +-- 3dusrpac.dat
+                                    +-- img\
+                                |   +--(..)
+
+b) POV-Ray setup:                                
+    C:\Program Files\Povray3.7\
+                              +ini\
+                              |   +--povray.ini
+                              |   |      ^^ Library_Path="C:\Program Files\Povray3.7\include\Eagle3D"
+                              |   +--(..)
+                              |   +--(..)
+                              |
+                              +include\
+                              |       Eagle3D_main.inc
+                              |       Eagle3D\
+                              |              +--BOARDS\
+                              |              +--BUFFER\
+                              |              +--(..)
