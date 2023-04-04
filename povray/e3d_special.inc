@@ -3,11 +3,6 @@
  *
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
-
-
-#ifndef(__special_inc)
-#declare __special_inc = true;
-
 #include "e3d_tools.inc"
 #include "BOARDS/digilent.inc"            // 06.04.2022, add Digilent S6 FPGA devboard
 #include "BUZZER/TDB.inc"                 // 29.03.2023, move SPC_BUZZER_TDB to BUZZER/TDB.inc
@@ -26,6 +21,7 @@
 #include "HEATSINK/SK96.inc"              // 30.03.2023, move heatsinks to subfolder
 #include "HEATSINK/SK104.inc"             // 30.03.2023, move heatsinks to subfolder
 #include "HEATSINK/viewcom.inc"           // 30.03.2023, move heatsinks to subfolder
+#include "INDUCTOR/CTC-coils.inc"         // 04.04.2023, move inductors to subfolder
 #include "INDUCTOR/L_5MM_S.inc"           // 03.04.2023, move inductors to subfolder
 #include "INDUCTOR/L_EF_core.inc"         // 03.04.2023, move inductors to subfolder
 #include "INDUCTOR/Murata.inc"            // 03.04.2023, move inductors to subfolder
@@ -65,90 +61,6 @@
 
 
 
-/*******************************************************************************
-// SMD-Drossel von CTC
-// http://www.ctccoils.com
-// L - Gesamt Laenge der Drossel
-// B - Gesamt Breite der Drossel
-// H - Gesamt Hoehe der Drossel
-// value - Aufschrift
-// everyone1@freenet.de
-*******************************************************************************/
-#macro SPC_SMD_INDUCTOR_SMSL_GRND(L,B,H,value)
-
-#local PX = 2.54;       // Pad-Groesse
-
-#local U = 0.1;         // Überlappung Differenzebildung
-#local R = B*0.9/2;     // Radius Spulenkoerper
-#local R1 = 0.2;        // Radius Draht
-#local H1 = 0.8;        // Hoehe Grundplatte
-#local H2 = 0.6;        // Dicke der Deckplatten der Spule
-#local L1 = L*0.95/2;   // Halbe Laenge der Grundplatte
-#local X1 = L1*0.2;     // Halbe Laenge der geraden Seite
-#local Z1 = B*0.33/2;   // Halbe Breite der geraden Seite
-
-#declare Draht =  torus { R-R1-0.3, R1 
-                        texture{Copper_Metal
-                                pigment {color rgb<0.7,0.2,0>}
-                                finish {metallic brilliance 4  ambient (0.1 * global_ambient_mul)}
-                        }            
-                  }
-#local H3 = H-0.1-H1-2*H2;
-#local A = int(H3 / (2*R1)) + 1;    // Anzahl der Windungen
-#local C = H3 / A;
-#local Y2 = H1+H2+R1;
-
-union {
-        box { <-L/2+H1/4, 0, -B*0.30/2> <-L/2+PX, H1+0.2, B*0.30/2> texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}}
-        cylinder { < 0, 0,-B*0.30/2> < 0, 0, B*0.30/2> H1/2+0.1 
-                scale< 0.5, 1, 1>
-                translate <-L/2+H1/4, H1/2+0.1, 0>
-                texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}
-        }
-        box { < L/2-H1/4, 0, -B*0.30/2> < L/2-PX, H1+0.2, B*0.30/2> texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}}
-        cylinder { < 0, 0,-B*0.30/2> < 0, 0, B*0.30/2> H1/2+0.1 
-                scale< 0.5, 1, 1>
-                translate < L/2-H1/4, H1/2+0.1, 0>
-                texture{ col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}
-        }
-
-
-        prism{ 0.1, H1, 9
-                <-X1,-B/2>, < X1,-B/2>, < L1,-Z1>, < L1, Z1>, < X1, B/2>, 
-                <-X1, B/2>, <-L1, Z1>, <-L1,-Z1>, <-X1,-B/2>
-                texture{pigment { Gray20 }}
-        }
-        
-        cylinder { < 0, 0.1+H1, 0> < 0, 0.1+H1+H2, 0> R-H2/2 
-                texture{pigment { Gray10 }}
-        }
-        torus { R-H2/2, H2/2
-                texture{pigment { Gray10 }}
-                translate < 0, 0.1+H1+H2/2, 0>
-        }
-
-        cylinder { < 0, H, 0> < 0, H-H2, 0> R-H2/2 
-                texture{pigment { Gray10 }}
-        }
-        torus { R-H2/2, H2/2
-                texture{pigment { Gray10 }}
-                translate < 0, H-H2/2, 0>
-        }
-        
-        #while ( A >= 0 )
-                object{ Draht translate < 0, Y2, 0> }
-                #declare Y2 = Y2 + C;
-                #declare A = A -1;
-        #end
-        
-        text{ ttf global_fontfile_arial value 0.1,0 rotate <90,0,0> scale<1.8,1,1.8> translate <-R+1, H+0.01, 0.0> pigment {Gray60}}
-
-}
-#end
-
-#macro SPC_SMD_INDUCTOR_SMSL_1305(value)
-SPC_SMD_INDUCTOR_SMSL_GRND(12.95, 9.4, 5.21, value)
-#end
 
 
 /*******************************************************************************
@@ -212,7 +124,3 @@ SPC_TOXX173_GRND(1)
 #macro SPC_TORX173()
 SPC_TOXX173_GRND(0)
 #end
-
-
-#end
-//End of Macros
