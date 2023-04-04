@@ -61,7 +61,7 @@ string usrinc =
     ;
 
 string incfiles =
-    "#include \"e3d_tools.inc\"\n"
+    "#include \"Eagle3D_main.inc\"\n"
     "#include \"e3d_user.inc\"\n"
     "\nglobal_settings{charset utf8}\n"
     "\n";
