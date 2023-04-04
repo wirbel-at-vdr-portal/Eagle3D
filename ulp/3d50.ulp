@@ -62,7 +62,6 @@ string usrinc =
 
 string incfiles =
     "#include \"Eagle3D_main.inc\"\n"
-    "global_settings{charset utf8}\n"
     "\n";
 
 //String für die Umgebung

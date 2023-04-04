@@ -4,14 +4,13 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-
-#include "e3d_tools.inc"
 #include "TRANSISTOR/SOT82.inc"
 #include "TRANSISTOR/SOT93.inc"
 #include "TRANSISTOR/TO126.inc"
 #include "TRANSISTOR/TO18.inc"
 #include "TRANSISTOR/TO18D.inc"
 #include "TRANSISTOR/TO202.inc"
+#include "TRANSISTOR/TO218.inc"
 #include "TRANSISTOR/TO220.inc"
 #include "TRANSISTOR/TO247.inc"
 #include "TRANSISTOR/TO3.inc"

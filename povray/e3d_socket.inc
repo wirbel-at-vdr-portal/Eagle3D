@@ -6,6 +6,3 @@
 
 
 #include "e3d_tools.inc" 
-#include "SOCKET/DIP.inc"
-#include "SOCKET/PLCC.inc"
-#include "SOCKET/TEXTOOL.inc"

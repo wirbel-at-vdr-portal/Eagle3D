@@ -4,9 +4,6 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-#include "IC/THT/DIL.inc"
-#include "IC/THT/SIL.inc"
-#include "IC/THT/multiwatt.inc"
 #include "IC/SMT/MICROMAX.inc"
 #include "IC/SMT/MSOP.inc"
 #include "IC/SMT/PLCC.inc"
@@ -21,7 +18,10 @@
 #include "IC/SMT/TO252_DPAK.inc"
 #include "IC/SMT/TO253_SOT143.inc"
 #include "IC/SMT/TO263_D2PAK.inc"
-#include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSOP-II.inc"
+#include "IC/SMT/TSOP.inc"
 #include "IC/SMT/TSSOP.inc"
 #include "IC/SMT/VSO.inc"
+#include "IC/THT/DIL.inc"
+#include "IC/THT/SIL.inc"
+#include "IC/THT/multiwatt.inc"
