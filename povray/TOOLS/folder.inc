@@ -4,6 +4,7 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 #include "TOOLS/fonts.inc"
+#include "TOOLS/colors.inc"
 #include "TOOLS/default_colors.inc"
 
 #include "TOOLS/ARC.inc"

@@ -12,7 +12,6 @@
 
 
 #include "e3d_logo.inc"
-#include "e3d_tex.inc"
 #include "e3d_resistor.inc"
 #include "e3d_trafo.inc"
 #include "e3d_connector.inc"
