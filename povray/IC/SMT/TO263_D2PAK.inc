@@ -51,7 +51,7 @@
                  0,0,4.57,4.57,0.75,0.75,0.5,0.075,0,0,0,6.5/2,1.5,0,logo)
      box {<-(10.41+9.78)/4,0.075,-(9.40+8.38)/4>
           <+(10.41+9.78)/4,(4.65+4.32)/4,+(9.40+8.38)/4>
-          texture{e3d_tex_ic_body_1} }
+          texture{col_ic_body_1} }
 
 
      // backside/cooling plate
@@ -66,7 +66,7 @@
 
         box { <-1.5/2,0.0,+1.5/2> <+1.5/2,0.6,-1.5/2> translate<-3.7,0,+3.7>}
         box { <-1.5/2,0.0,+1.5/2> <+1.5/2,0.6,-1.5/2> translate<+3.7,0,+3.7>}
-        texture{e3d_tex_silver}
+        texture{col_silver}
         }
 
      // pins
@@ -77,7 +77,7 @@
               object { TOOLS_RECT_BOGEN(0.5,100,0.5,pinwidth2,2.0,0.0) rotate <0,90,   0> translate <0,    0.5/2,-6.4> }
               box { <-pinwidth/2,1.6-0.5,-5.7-0.6/2>
                     <+pinwidth/2,1.6    ,-5.7+2.6/2> }
-              texture{e3d_tex_silver}
+              texture{col_silver}
               };
            GRID_BASE(pin, grid, npins, 1)
            }
@@ -85,7 +85,7 @@
             #local diff = box { <-pinwidth/2-0.3,-0.1,-10> <+pinwidth/2+0.3,2,-5.7> }
             object { diff }
         #end
-        texture{e3d_tex_silver}
+        texture{col_silver}
         }
 
      translate <0,0,+2.54>

@@ -89,7 +89,7 @@ union{
             #local i=i+1;
         #end
         translate<-p/2*1.27+1.27,0,0>
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
 
     // ADAPTIVE print scaling for small IC's
@@ -139,10 +139,10 @@ union{
                 text{ttf global_fontfile_eagle3d "t" 0.2,0 scale<b*0.9,b*0.9,b*0.9> rotate<90,0,0> translate<-(p/5)*2.54,h+0.01,-b/2.2>}
             #end
         #end
-        texture{e3d_tex_ic_marking_bright}
+        texture{col_bright_marking}
     }
     translate<0,0.25,0>
-    texture{e3d_tex_ic_body_1}
+    texture{col_ic_body_1}
    } // end: IC_DIS_DIP_GRND
 #end
 
@@ -308,7 +308,7 @@ union {
       box{<-23,-1,0><23,10,5> rotate<-3,0,0> translate<0,0,11>}    //Schraege lange Seite
       box{<-6,8.3,-5>,<6,10,5>} //Aufkleberfläche*/
       cylinder{<-20.5,9.0,-9.5>,<-20.5,10.0,-9.5> 0.25}
-      texture{e3d_tex_ic_body_1}
+      texture{col_ic_body_1}
       }
 
    // Holo-Aufkleber
@@ -322,9 +322,9 @@ union {
       box{<-5.75,8.3,-4.25>,<5.75,8.3+w,4.25>}
       texture{T_Chrome_5C}
       }
-   text{ttf global_fontfile_arial_bold "@CHIP" 1, 0 scale<3.3,3.3,0> rotate<90,0,0> translate<-5.5,8.3+w,1.5> texture{e3d_tex_ic_marking_black}}
-   text{ttf global_fontfile_arial_bold "License SL01" 1, 0 scale<1.2,1.2,0> rotate<90,0,0> translate<-3.5,8.3+w,-2.0> texture{e3d_tex_ic_marking_black}}
-   text{ttf global_fontfile_arial_bold "2001 BECK IPC" 1, 0 scale<1.2,1.2,0> rotate<90,0,0> translate<-4.0,8.3+w,-3.5> texture{e3d_tex_ic_marking_black}}
+   text{ttf global_fontfile_arial_bold "@CHIP" 1, 0 scale<3.3,3.3,0> rotate<90,0,0> translate<-5.5,8.3+w,1.5> texture{col_black_marking}}
+   text{ttf global_fontfile_arial_bold "License SL01" 1, 0 scale<1.2,1.2,0> rotate<90,0,0> translate<-3.5,8.3+w,-2.0> texture{col_black_marking}}
+   text{ttf global_fontfile_arial_bold "2001 BECK IPC" 1, 0 scale<1.2,1.2,0> rotate<90,0,0> translate<-4.0,8.3+w,-3.5> texture{col_black_marking}}
 
    // Pins
    union {
@@ -335,7 +335,7 @@ union {
          #local i=i+1;
       #end
 
-      texture{e3d_tex_silver}
+      texture{col_silver}
       }
    } // end: IC_BECK_SC12
 #end
@@ -363,16 +363,16 @@ union {
       object{IC_DIS_PIN() rotate<0,180,0> translate<-2.54,-3.75,3.81>}
       object{IC_DIS_PIN() translate<-2.54,-3.75,-3.81>}
       object{IC_DIS_PIN() translate<2.54,-3.75,-3.81>}
-      texture{e3d_tex_silver}
+      texture{col_silver}
       }
    union{    
       text {ttf besch_font value 0.2, 0     rotate <90,0,0> scale<1.5,1,1.5> translate<-3.1,3.21,-0.3>}
       text {ttf besch_font "~     ~" 0.2, 0 rotate <90,0,0> scale<1.5,1,1.5> translate<-3.0,3.21,1.8>}
       text {ttf besch_font "+     -" 0.2, 0 rotate <90,0,0> scale<1.5,1,1.5> translate<-3.0,3.21,-2.5>}
-      texture{e3d_tex_ic_marking_bright}
+      texture{col_bright_marking}
       }
    translate<0,0.25,0>
-   texture{e3d_tex_ic_body_1}
+   texture{col_ic_body_1}
    } // end: IC_DIS_DIP4S_RECTIFIER
 #end
 

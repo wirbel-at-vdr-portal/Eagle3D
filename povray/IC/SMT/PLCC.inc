@@ -57,12 +57,12 @@ union {
          box { <-0.1,0,0> <xsize+0.1,-3,1>  rotate <10,0,0>  translate <0,1.85,ysize> }
          box { <-0.1,0,0> <xsize+0.1,3,1>   rotate <-45,0,0> translate <0,3,ysize>    }
          box { <0,-0.1,-3> <-2,4.5,3>       rotate <0,45,0>  translate <0.8,0,ysize-0.8> }
-         sphere { <xsize/2,4.05,ysize-2>0.5 texture{e3d_tex_ic_marking_bright}        }
+         sphere { <xsize/2,4.05,ysize-2>0.5 texture{col_bright_marking}        }
          }     
       //Marking
-      text{ttf besch_font value 0.2,0 scale<valsize,valsize,valsize> rotate <90,0,0> translate <1.5,4.051,ysize/2> texture{e3d_tex_ic_marking_bright} }
+      text{ttf besch_font value 0.2,0 scale<valsize,valsize,valsize> rotate <90,0,0> translate <1.5,4.051,ysize/2> texture{col_bright_marking} }
       translate <-xsize/2,0,-ysize/2>
-      texture{e3d_tex_ic_body_1}
+      texture{col_ic_body_1}
       }
     
    union {
@@ -84,7 +84,7 @@ union {
          object{IC_SMD_PLCC_PIN() rotate <0,-90,0> translate <+xsize/2,-0.7,-i*1.27> }
          #local i=i+1;
       #end
-      texture{e3d_tex_silver}
+      texture{col_silver}
       }
    } // end: IC_SMD_PLCC_GRND
 #end

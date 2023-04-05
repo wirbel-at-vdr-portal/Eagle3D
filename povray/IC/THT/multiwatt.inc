@@ -9,6 +9,15 @@
  * Heatsink
  ******************************************************************************/
 #macro MWHeatSink_()
+  #local heatsink_silver = texture {
+     T_Silver_5A
+     finish {
+        ambient (0.10 * global_ambient_mul)
+        phong 0.1
+        phong_size 10
+        }
+     }
+
 difference {
    box { <-9.8,0,0> <9.8,1.5,17.5> }
    cylinder { <0,-1,14.7> <0,2,14.7> 3.75/2 }
@@ -26,7 +35,7 @@ difference {
    box { <-8.8,-1,0> <-10,2,10> }
    box { <-0.5,-1,0> <0.5,2,2> }
    box { <-10,-1,-1> <10,2,1> }
-   texture{e3d_tex_heatsink_silver}
+   texture{heatsink_silver}
    }
 #end
 
@@ -51,9 +60,9 @@ difference {
       #local T2 = text { ttf Font "||" 1 0 scale <Size, Size, 1> }
       ((max_extent(T1).x - min_extent(T1).x) - (max_extent(T2).x - min_extent(T2).x))
    #end
-   text { ttf besch_font value 1, 0 scale <2,2,1> rotate 90*x translate <-Length_(value, besch_font, 2)/2,5.95,6> texture{e3d_tex_ic_marking_bright}}
+   text { ttf besch_font value 1, 0 scale <2,2,1> rotate 90*x translate <-Length_(value, besch_font, 2)/2,5.95,6> texture{col_bright_marking}}
 
-   texture{e3d_tex_ic_body_2}
+   texture{col_ic_body_2}
 }
 #end
 
@@ -122,7 +131,7 @@ difference {
          translate -(NpinB-1)*G*x
          }
       translate -1.27*z
-      texture{e3d_tex_silver}
+      texture{col_silver}
       }
 #end
 

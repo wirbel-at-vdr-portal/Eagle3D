@@ -46,7 +46,7 @@
      object {
         IC_SMD_PIN((1.1+0.03)/2,(2.5-1.4)/2,0.4,0.18)
         rotate<0,+90,0> translate<-1.92/2+0.4-0.01,0,-1.4/2>
-        texture{e3d_tex_silver}
+        texture{col_silver}
         }
      }
 #end

@@ -417,12 +417,12 @@ union {
            #if ((PIN=9) & (has_pin9=0))
               // TEN_SINGLE: skip pin9
            #else
-              object { cylinder{ <0,0,0> <0,-3,> 0.25 translate<XOFFS + PIN*2.54,0,YOFFS> texture{e3d_tex_silver}} }
+              object { cylinder{ <0,0,0> <0,-3,> 0.25 translate<XOFFS + PIN*2.54,0,YOFFS> texture{col_silver}} }
            #end
         #else
            #local XOFFS = +18.5*2.54;
            #local YOFFS = +3 * 2.54;
-           object { cylinder{ <0,0,0> <0,-3,> 0.25 translate<XOFFS - PIN*2.54,0,YOFFS> texture{e3d_tex_silver}} }
+           object { cylinder{ <0,0,0> <0,-3,> 0.25 translate<XOFFS - PIN*2.54,0,YOFFS> texture{col_silver}} }
         #end
      #end
   #end

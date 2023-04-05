@@ -60,7 +60,7 @@
         cylinder { <-3.5/2,0,+2.5> <-3.5/2,0.6,+2.5> 0.3 }
         box { <+6.0/2,0.0,+2.5-0.6/2> <+3.5/2,0.6,+2.5+0.6/2> }
         box { <-6.0/2,0.0,+2.5-0.6/2> <-3.5/2,0.6,+2.5+0.6/2> }
-        texture{e3d_tex_silver}
+        texture{col_silver}
         }
      // pins
      difference {
@@ -69,7 +69,7 @@
               object { TOOLS_RECT_BOGEN(0.5,100,0.5,0.75,2.4,0.0) rotate <0,-90,180> translate <0,1.6-0.5/2,-4.5> }
               object { TOOLS_RECT_BOGEN(0.5,100,0.5,0.75,1.0,0.0) rotate <0,90,   0> translate <0,    0.5/2,-4.4> }
               box { <-0.9/2,1.6-0.5,-3.7-0.6/2> <+0.9/2,1.6    ,-3.7+0.6/2> }
-              texture{e3d_tex_silver}
+              texture{col_silver}
               };
            GRID_BASE(pin, grid, npins, 1)
            }
@@ -77,7 +77,7 @@
             #local diff = box { <-pinwidth/2-0.3,-0.1,-7> <+pinwidth/2+0.3,2,-3.9> }
             object { diff }
         #end
-        texture{e3d_tex_silver}
+        texture{col_silver}
         }
 
      translate <0,0,+0.833>

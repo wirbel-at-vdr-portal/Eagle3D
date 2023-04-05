@@ -18,7 +18,7 @@
       texture{ Gold_Metal }
       }
     box{<-A/4,0,-B/2-0.05><+A/4,C+0.05,+B/2+0.05> pigment{Gray25}}
-    text {ttf besch_font value 0.5,0  rotate<90,90,0> translate<-0.3,C+0.1,B/2-0.5> texture{e3d_tex_ic_marking_bright}}
+    text {ttf besch_font value 0.5,0  rotate<90,90,0> translate<-0.3,C+0.1,B/2-0.5> texture{col_bright_marking}}
     }
 #end
 

@@ -65,7 +65,7 @@ union{
             #else
                 #local i = -(pin_u-1)/2*ptch_u;
             #end
-            sphere{<i,HK+di_pcb+0.1,-BK/2+pin0_a>0.15 texture{e3d_tex_ic_marking_bright}}
+            sphere{<i,HK+di_pcb+0.1,-BK/2+pin0_a>0.15 texture{col_bright_marking}}
         #end
         #if(pin0_m = 2)  // VSO-Kerbe
             #local TextX = -LK/2+0.15*LK;
@@ -83,18 +83,18 @@ union{
         #end
     }
     #if(pin0_m = 3)  // PSO-Metallboden (vereinfacht, da der Rest sowieso unsichtbar bleibt)
-        box{<-LK/2,0,-1.5> <LK/2,1,1.5> texture{e3d_tex_silver}}
+        box{<-LK/2,0,-1.5> <LK/2,1,1.5> texture{col_silver}}
     #end
 
     #if(pin0_m = 4)  // DPAK-SEATING PLANE & BLIND PIN
-            box{<-pinb_u/2,(HK+di_pcb)/2+pin_s/2,-(BK/2+1)> <pinb_u/2,(HK+di_pcb)/2-pin_s/2,-(BK/2-0.1)> texture{e3d_tex_silver}}
-            box{<-0.57,0,-5.25> <0.57,0.5,-4.5> translate<ptch_u/2,0,0> texture{e3d_tex_silver}}
-            box{<-0.57,0,-5.25> <0.57,0.5,-4.5> translate<-ptch_u/2,0,0> texture{e3d_tex_silver}}
+            box{<-pinb_u/2,(HK+di_pcb)/2+pin_s/2,-(BK/2+1)> <pinb_u/2,(HK+di_pcb)/2-pin_s/2,-(BK/2-0.1)> texture{col_silver}}
+            box{<-0.57,0,-5.25> <0.57,0.5,-4.5> translate<ptch_u/2,0,0> texture{col_silver}}
+            box{<-0.57,0,-5.25> <0.57,0.5,-4.5> translate<-ptch_u/2,0,0> texture{col_silver}}
             difference{
                 box{<-2.5,0,-0.85> <2.5,0.55,4.5>}
                 box{<-0.5,-0.1,-0.5> <0.5,1.1,0.5> rotate <0,45,0> translate<-2.5,0,4.5>}
                 box{<-0.5,-0.1,-0.5> <0.5,0.6,0.5> rotate <0,45,0> translate<2.5,0,4.5>}
-                texture{e3d_tex_silver}
+                texture{col_silver}
             }
     #end
 
@@ -122,7 +122,7 @@ union{
             #end
         #local i=i+1;
         #end
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
 
     #local value_arial_size_min = 0.0;
@@ -236,9 +236,9 @@ union{
         #else
             object{label rotate<0,270,0>}
         #end
-        texture{e3d_tex_ic_marking_bright}
+        texture{col_bright_marking}
     }
     rotate<0,kor_w,0>
-    texture{e3d_tex_ic_body_1}
+    texture{col_ic_body_1}
 }
 #end

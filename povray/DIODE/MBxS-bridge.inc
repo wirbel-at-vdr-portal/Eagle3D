@@ -27,7 +27,7 @@
         box{<-1,-0.5,2><+1,0.5,-2> rotate -80*z translate<-2.5-0.2,1.325-0.5,0>}
         box{<-1,-0.5,2><+1,0.5,-2> rotate -80*z translate<+2.5+0.2,2.65-0.5,0>}
         box{<-1,-0.5,2><+1,0.5,-2> rotate +80*z translate<+2.5+0.2,1.325-0.5,0>}
-        texture{e3d_tex_ic_body_1}
+        texture{col_ic_body_1}
         }
 
      // Marking
@@ -54,7 +54,7 @@
         text {ttf global_fontfile_arial_bold "2N3" 0.02, 0 scale 1.2 rotate<90,180,0> translate<+1.2,2.66,+1.3>}
         text {ttf global_fontfile_arial_bold "-" 0.02, 0   scale 1 rotate<90,0,0> translate<+1.07,2.66,-1.35>}
         text {ttf global_fontfile_arial_bold "+" 0.02, 0   scale 1 rotate<90,0,0> translate<-1.27,2.66,-1.4>}
-        texture{e3d_tex_ic_marking_bright}
+        texture{col_bright_marking}
         }
     
      //Pins
@@ -63,7 +63,7 @@
         object {IC_SMD_PIN(1.5,1.5,0.6,0.3) rotate -90*y translate<+1.27,0,1.9>}
         object {IC_SMD_PIN(1.5,1.5,0.6,0.3) rotate +90*y translate<-1.27,0,-1.9>}
         object {IC_SMD_PIN(1.5,1.5,0.6,0.3) rotate +90*y translate<+1.27,0,-1.9>}
-        texture{e3d_tex_silver}
+        texture{col_silver}
         }
      }
 #end

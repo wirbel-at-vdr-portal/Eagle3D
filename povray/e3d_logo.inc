@@ -414,7 +414,7 @@
 #macro Logo(NAME,HEIGHT,WIDTH)
   LogoIndex(NAME) // sets LOGO_INDEX
 
-  #local Obj = text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0 texture{e3d_tex_ic_marking_bright}}
+  #local Obj = text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0 texture{col_bright_marking}}
   #local MinE = min_extent ( Obj );
   #local MaxE = max_extent ( Obj );
   #local XLen = (MaxE.x - MinE.x);
@@ -430,7 +430,7 @@
     text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0
        scale<Scale,Scale,1>
        translate<-0.5*XLen*Scale,-0.5*YLen*Scale,0>
-       texture{e3d_tex_ic_marking_bright}
+       texture{col_bright_marking}
        }
     }
   // end: Logo()

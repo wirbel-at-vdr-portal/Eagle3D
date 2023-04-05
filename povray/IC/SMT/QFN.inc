@@ -36,7 +36,7 @@ union {
      box { <-D/2,A1,-E/2> <+D/2,A,+E/2> }
      cylinder { <-D/2+L,A-0.075,+E/2-L>
                 <-D/2+L,A+0.1,+E/2-L> b}
-     texture { e3d_tex_ic_body_1 }
+     texture { col_ic_body_1 }
      }
 
 
@@ -54,41 +54,41 @@ union {
   #if (D2 > 0)
       // exposed center pad
       #if (ExposedPadCut = "")
-         object{TOOLS_PCB_SMD(D2,E2,0.035,13) texture{e3d_tex_silver}}
+         object{TOOLS_PCB_SMD(D2,E2,0.035,13) texture{col_silver}}
       #else
           #if (ExposedPadCut = "chamfer")
             difference {
                 object{TOOLS_PCB_SMD(D2,E2,0.035,13)}
                 box{ <-b,-0.1,-b> <+b,0.5,+b> rotate<0,45,0> translate<-D2/2,0,+E2/2> }
-                texture{e3d_tex_silver}
+                texture{col_silver}
                 }
           #end
           #if (ExposedPadCut = "irregular corner")
             difference {
                 object{TOOLS_PCB_SMD(D2,E2,0.035,13)}
                 cylinder{ <0,-0.1,0> <0,0.5,0> e translate<-D2/2,0,+E2/2> }
-                texture{e3d_tex_silver}
+                texture{col_silver}
                 }
           #end
           #if (ExposedPadCut = "corner square")
             union {
                 object{TOOLS_PCB_SMD(D2,E2,0.035,13)}
                 object{TOOLS_PCB_SMD(0.6*L,0.6*L,0.035,13) translate<-D/2+0.6*L,0,+E/2-0.6*L>}
-                texture{e3d_tex_silver}
+                texture{col_silver}
                 }
           #end
           #if (ExposedPadCut = "irregular edge")
             difference {
                 object{TOOLS_PCB_SMD(D2,E2,0.035,13)}
                 cylinder{ <0,-0.1,0> <0,0.5,0> e/2 translate<-D2/2,0,+E2/2-e> }
-                texture{e3d_tex_silver}
+                texture{col_silver}
                 }
           #end
       #end
   #end
 
 
-  text { ttf besch_font value 0.2,0 rotate<90,0,0> scale 1*(E/9) translate<-E/4,A+0.02,-D/4> texture{e3d_tex_ic_marking_bright} }
+  text { ttf besch_font value 0.2,0 rotate<90,0,0> scale 1*(E/9) translate<-E/4,A+0.02,-D/4> texture{col_bright_marking} }
   } // end: QFN_base
 #end
 

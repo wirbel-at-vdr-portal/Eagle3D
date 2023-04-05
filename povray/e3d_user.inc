@@ -293,7 +293,7 @@ union{
             box{<3*(L-LT)/4,(L-LT)/2,-0.04><L-LT,L-LT,WT+0.002>}
             translate<-L/2-0.02,0,-WT/2>
         }
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     
     rotate<0,180,0>
@@ -318,7 +318,7 @@ union {
         cylinder{<0,1.5,0><0,5,0> 1.15  /*1.25*/}                           //central hole
        // box{<+0.1,-1,-0.55><-0.1,6,+0.55> translate -2.9*x }    //front pin groove on round side
        // box{<+0.1,-1,-0.6><-0.1,1.1,0.6> translate +2.91*x}     //back pin groove on flat side
-        } texture{e3d_tex_ic_body_1} //pigment{col}
+        } texture{col_ic_body_1} //pigment{col}
 
      }
       
@@ -333,7 +333,7 @@ union {
             <+0.25,4.51,+0.7>}
         } translate <0,-1.6,0>
 
-     } texture{e3d_tex_silver}
+     } texture{col_silver}
 
 }
 
@@ -404,7 +404,7 @@ union {
      cylinder{<+5.08/2,0,-5.08/2> <+5.08/2,-3+0.7/2,-5.08/2> 0.7/2 }  sphere{<+5.08/2,-3+0.7/2,-5.08/2> 0.7/2}
      cylinder{<-5.08/2,0,+5.08/2> <-5.08/2,-3+0.7/2,+5.08/2> 0.7/2 }  sphere{<-5.08/2,-3+0.7/2,+5.08/2> 0.7/2}
      cylinder{<-5.08/2,0,-5.08/2> <-5.08/2,-3+0.7/2,-5.08/2> 0.7/2 }  sphere{<-5.08/2,-3+0.7/2,-5.08/2> 0.7/2}
-     texture{e3d_tex_silver}  rotate <0,180,0>
+     texture{col_silver}  rotate <0,180,0>
      }
 // end: LEMO_EPA_00_250_NTN_L
 #end

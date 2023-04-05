@@ -139,7 +139,10 @@ sphere{<-xc,0.3,-3.2> 0.3}
 sphere{<-xc,0.3,3.2> 0.3}
 #local xc=xc+7.62;
 #end
-texture{e3d_tex_con_IDC}
+
+  
+texture{pigment { Gray70 }
+     finish { ambient(0.10 * global_ambient_mul) }}
 }
 #end
 

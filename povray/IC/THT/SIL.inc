@@ -50,7 +50,7 @@ union {
          box{<-8.2, 4.5, 0.3><8.2, 28.8, -0.3>}
          cylinder{<0,0,-2><0,0,2>2 translate<0,28.8-3.2,0>}
          }
-      texture{e3d_tex_silver}
+      texture{col_silver}
       }
    // plastic body
    // front part
@@ -64,21 +64,21 @@ union {
       cylinder{<0,0,front-0.1><0,0,front+0.1>1 translate< 0,  6, 0>}
       cylinder{<0,0,front-0.1><0,0,front+0.1>1 translate<-7.5, 21, 0>}
       cylinder{<0,0,front-0.1><0,0,front+0.1>1 translate< 7.5, 21, 0>}
-      texture{e3d_tex_ic_body_2}
+      texture{col_ic_body_2}
       }
    // plastic at the back of the metal plate
    difference {
       box{<-8.2, 4.2, -0.4><8.2, top, front+5.5>} 
       cylinder{<0,0,-7><0,0,2>1.6 translate<0, top-3.2, 0>}         
       cylinder{<-9, top-3.2, 0><9, top-3.2, 0>0.5 translate<0, 0, -0.5>}           
-      texture{e3d_tex_ic_body_2}
+      texture{col_ic_body_2}
       }    
    // labels
    union {    
       text{ttf besch_font value            0.5,0 scale<3,3,1.7>   translate<-6, 15,   front-0.01>}
       text{ttf besch_font "SHARP"          0.5,0 scale<3,2.5,1.7> translate<-4.5, 12, front-0.01>}
       text{ttf besch_font "~         + -"  0.5,0 scale<1.7,2,1.7> translate<-5.7, 5,  front-0.01>}
-      texture{e3d_tex_ic_marking_bright}
+      texture{col_bright_marking}
       }
    } // end: IC_DIS_S2XXEX
 #end

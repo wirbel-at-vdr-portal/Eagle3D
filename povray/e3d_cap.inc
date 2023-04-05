@@ -48,43 +48,50 @@ union{
     #end
 
     #if (Ra=10.16)    //d=0.7mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.35 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.35 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
     #end
 
     #if (Ra=15.24)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
     #end
 
     #if (Ra=22.5)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
     #end
 
     #if (Ra=27.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
     #end
 
     #if (Ra=32.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
     #end
 
     #if (Ra=37.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
     #end
 
-    // hellblau
-    texture{e3d_tex_cap_block_blue}
+    #local hellblau = texture {
+       pigment {
+          rgb<0.3,0.3,1>
+          }
+       finish {
+          ambient (0.10 * global_ambient_mul)
+          }
+       }
+    texture{hellblau}
 }   
 #end
 
@@ -369,7 +376,7 @@ union{
             torus{ rr rrr rotate <90,90,0> translate<-Lg/2,0,0> }
             cylinder{<-Lg/2-rrr,0,0><-Lg/2+rrr,0,0> rr}
         }
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     //Plus pin
     cylinder {<-Lg/2-Lt+rrr,0,0><-Lg/2+1,0,0> dw*1.5 texture{Aluminum}}
@@ -382,7 +389,7 @@ union{
                 text {ttf global_fontfile_arial "+" 2,0 scale(Lg/20.8)*3  rotate<-90,180,180> translate<-Lg/2.5,diam/2,-(diam/9.1)*1.5 > }
                 text {ttf global_fontfile_arial value 2,0  scale diam/9.1*3 rotate<-90,180,180> translate<-Lg/3.5,diam/2,-(diam/9.1)*1.5> }
         }
-        texture{e3d_tex_cap_marking_black}
+        texture{col_black_marking}
         translate +0.01*y
     }
     
@@ -446,14 +453,14 @@ union{
         
         //Abdeckung oben
         cylinder{<0,-(dis/2-3.6),0><0,-(dis/2-3.1),0>dia*0.8*pow(dia/16,0.11)           
-            texture{e3d_tex_silver}
+            texture{col_silver}
         }
 
         //Abdeckung unten
         cylinder{<0,dis/2-3.2,0><0,dis/2-3.5,0>dia-0.5 pigment{Black}}                  
         
         //Kontakt
-        cylinder{<0,-(dis/2-3.2),0><0,-(dis/2-2),0> 1.5 texture{e3d_tex_silver}}            
+        cylinder{<0,-(dis/2-3.2),0><0,-(dis/2-2),0> 1.5 texture{col_silver}}            
         intersection{
             cylinder{<0,dis/2,0><0,-dis/2 + val_size + 3.5,0>dia}
             text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia>}
@@ -613,7 +620,7 @@ union{
             cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b translate<dis/2,0,0>}    //Beinchen rechts
             cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b translate<-dis/2,0,0>}   //Beinchen links
         #end
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     
     //Beschriftung
@@ -707,7 +714,7 @@ union{
             cylinder{<0,1,0><0,-1*(pcb_height+pin_length)-1.2,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
             cylinder{<0,1,0><0,-1*(pcb_height+pin_length)-1.2,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
         #end
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     
     //Marking
@@ -720,7 +727,7 @@ union{
             sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0>}
             text {ttf besch_font value obj_dia+0.4,0  scale<sca_txt,1,1> rotate<0,0,90> translate<0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2>}
         }
-        texture{e3d_tex_cap_marking_black}
+        texture{col_black_marking}
     }
     translate<0,((obj_hgt/obj_dia)*obj_dia)/2+0.2,0>
 }
@@ -786,7 +793,7 @@ union{
         sphere{<0,0,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0>}
         sphere{<0,0,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>}
         sphere{<0,0,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>}
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     //Marking
     union{
@@ -798,7 +805,7 @@ union{
             sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0>}
             text {ttf besch_font value obj_dia+0.4,0  scale<sca_txt,1,1> rotate<0,0,90> translate<0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2>}
         }
-        texture{e3d_tex_cap_marking_black}
+        texture{col_black_marking}
     }
     translate<0,((obj_hgt/obj_dia)*obj_dia)/2+1.5,0>
 }
@@ -878,63 +885,68 @@ union{
     #end
 
     #if (Ra=2.54)    //d=0.4mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.20 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.20 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<1.0,1.0,1.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-0.6, H-4.3, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<1.4,1.4,1.4> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-0.6, H-2.8, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.20 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.20 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<1.0,1.0,1.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-0.6, H-4.3, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<1.4,1.4,1.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-0.6, H-2.8, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=5.08)    //d=0.5mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.25 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.25 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<1.4,1.4,1.4> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-1.2, H-4.3, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<2.0,2.0,2.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-1.2, H-2.8, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.25 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.25 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<1.4,1.4,1.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.2, H-4.3, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<2.0,2.0,2.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.2, H-2.8, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=7.50)    //d=0.7mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<2.0,2.0,2.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-1.8, H-5.5, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<2.7,2.7,2.7> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-1.8, H-3.3, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<2.0,2.0,2.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.8, H-5.5, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<2.7,2.7,2.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.8, H-3.3, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=10.0)    //d=0.7mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<3.1,3.1,3.1> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-2.5, H-3.5, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<3.1,3.1,3.1> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-3.5, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=15.0)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<3.7,3.7,3.7> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-4.0, H-4.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<3.7,3.7,3.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-4.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=22.5)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<4.2,4.2,4.2> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-6.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<4.2,4.2,4.2> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=27.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<4.7,4.7,4.7> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-10.0, H- 8.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<4.7,4.7,4.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H- 8.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     #if (Ra=37.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{e3d_tex_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<5.2,5.2,5.2> texture{e3d_tex_cap_marking_black} rotate<0,180,0> translate<B/2-15.0, H-10.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text {ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        text {ttf besch_font "WIMA"   0.1, 0 scale<5.2,5.2,5.2> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-10.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
     #end
 
     rotate<0,180,0>
-    texture{e3d_tex_cap_wima}    
+    texture {
+       pigment { Red }
+       finish {
+          ambient (0.10 * global_ambient_mul)
+          }
+       }    
 }
 #end
 
@@ -1074,7 +1086,7 @@ union{
     object{
         Round_Box_Union(<0,0.05,0>, <l,h,b>, min(b,l,h)/6)
         translate<-l/2,0,-b/2>
-        texture{e3d_tex_cap_smd_ceramic_1}
+        texture{col_ceramic_cap}
     }
         
     //Pins
@@ -1090,7 +1102,7 @@ union{
             #local x_pos = x_pos + pitch;
         
         #end
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }    
 }
 #end
@@ -1107,13 +1119,13 @@ CAP_SMD_CHIP_ARRAY_GRND(1.60,3.20,0.8,0.4,0.8,4)
 #macro CAP_SMD_CHIP_GRND(L,W,T,K)
 union{
     //Body
-    superellipsoid{<0.25-(L+W)/150, 0.25-(L+W)/150> texture{e3d_tex_cap_smd_ceramic_1} scale<L/2,W/2,T/2> }     //Grundkörper braun
+    superellipsoid{<0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkörper braun
     
     //Contacts
     union{
         superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <(L-K)/2,0,0>}
         superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <-(L-K)/2,0,0>}
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     rotate<90,0,0>
     translate<0,T/2,0>
@@ -1219,7 +1231,7 @@ union{
             box{<3*(L-LT)/4,(L-LT)/2,-0.04><L-LT,L-LT,WT+0.002>}
             translate<-L/2-0.02,0,-WT/2>
         }
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     
     rotate<0,180,0>
@@ -1257,7 +1269,16 @@ CAP_SMD_CHIP_TT_GRND(2.0,1.6,1.0,1.9,1.2,0.6,0.5,value)
 //C = Länge Anschlußpins
 ********************************************************************************************************************************************/
 #macro CAP_SMD_ELKO_GRND(L,W,H,D,B,S,C)
-union{
+  union {
+    #local col_smd_elko = texture {
+       pigment {
+          Gray30
+          }
+       finish {
+          ambient (0.10 * global_ambient_mul)
+          }
+       }
+
     //Contacts
     box{<-S/2,0,-B/2><-S/2-C,0.3,B/2>}
     box{<S/2,0,-B/2><S/2+C,0.3,B/2>}
@@ -1266,7 +1287,7 @@ union{
         box{<-L/2,0.3,-W/2><L/2,2,W/2>}
         box{<0,0,0><6,3,-5> rotate<0,-45,0> translate<L/2-L/4,0,-W/2>}
         box{<0,0,0><6,3,5> rotate<0,45,0> translate<L/2-L/4,0,W/2>}
-        texture{e3d_tex_cap_smd_electrolytic_base}
+        texture{col_smd_elko}
     }
     //Body
     difference{
@@ -1283,10 +1304,10 @@ union{
             box{<-D/6,H-0.5,-D/2><D/2,H+0.1,D/2>}            
         }
         text {ttf besch_font value 0.5,0 scale D/7 rotate<90,-90,0> translate<D/16,H+0.01,-D/2+D/8>}
-        texture{e3d_tex_cap_marking_black}
+        texture{col_black_marking}
     }
     rotate<0,180,0>
-    texture{e3d_tex_silver}
+    texture{col_silver}
 }
 #end
 
@@ -1447,7 +1468,7 @@ union{
 
         box{<+0.1,-0.35355,-0.35355><-0.1,0.35355,+0.35355> rotate 45*x translate <2.54,-3,0>}         //flat side pin
         box{<+0.125,-0.35355,-0.35355><-0.125,0.35355,+0.35355> rotate 45*x translate <-2.54,-3,0>}    //round side pin
-        texture{e3d_tex_silver}
+        texture{col_silver}
     }
     
     #if(dot=1)

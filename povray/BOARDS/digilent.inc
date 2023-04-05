@@ -122,7 +122,7 @@ union {
   union {
     union {
        box { <-D/2,A1,-E/2> <+D/2,A,+E/2> }
-       texture { e3d_tex_ic_body_1 }
+       texture { col_ic_body_1 }
        }
     #for (PinNumber, 1, N/4)
        union {
@@ -150,7 +150,7 @@ union {
           texture{col_silver}
           }
     #end
-    text { ttf besch_font value 0.2,0 rotate<90,0,0> scale 1*(E/9) translate<-E/4,A+0.02,-D/4> texture{e3d_tex_ic_marking_bright} }
+    text { ttf besch_font value 0.2,0 rotate<90,0,0> scale 1*(E/9) translate<-E/4,A+0.02,-D/4> texture{col_bright_marking} }
   } // end: _loc_QFN
   #end
 
@@ -175,9 +175,9 @@ union {
   union {
     union {
        box { <-D/2,A1,-E/2> <+D/2,A,+E/2> }
-       texture { e3d_tex_ic_body_1 }
+       texture { col_ic_body_1 }
        }
-    text { ttf besch_font value 0.2,0 rotate<90,0,0> scale 1*(E/9) translate<-E/4,A+0.02,-D/4> texture{e3d_tex_ic_marking_bright} }
+    text { ttf besch_font value 0.2,0 rotate<90,0,0> scale 1*(E/9) translate<-E/4,A+0.02,-D/4> texture{col_bright_marking} }
     } // end: _loc_BGA
   #end
 
@@ -191,8 +191,8 @@ union {
        10.00, // D  - Overall Length
         "cpg236-1")// value Text to be printed
        }
-     text { ttf besch_font "ARTIX-7" 0.2,0 rotate<90,0,0> scale 1.5 translate<-3,1.30,+2> texture{e3d_tex_ic_marking_bright} }
-     text { ttf besch_font "35T"     0.2,0 rotate<90,0,0> scale 1.5 translate<-1,1.30,+0> texture{e3d_tex_ic_marking_bright} }
+     text { ttf besch_font "ARTIX-7" 0.2,0 rotate<90,0,0> scale 1.5 translate<-3,1.30,+2> texture{col_bright_marking} }
+     text { ttf besch_font "35T"     0.2,0 rotate<90,0,0> scale 1.5 translate<-1,1.30,+0> texture{col_bright_marking} }
      rotate<0,-90,0> translate<0,0,-2>
      }
 
@@ -270,10 +270,10 @@ union {
        box{ <-0.25,2,-2.0> <0.25,5,0.0> rotate<0,0,0> translate<+2.5,0,0>  }
        box{ <-0.25,2,-2.0> <0.25,5,0.0> rotate<0,0,0> translate<-2.0,0,3>  }
        box{ <-0.25,2,-2.0> <0.25,5,0.0> rotate<0,0,0> translate<+2.0,0,3>  }
-       texture{e3d_tex_silver}
+       texture{col_silver}
        }
     box{ <-3/2,1.2,-2> <+3/2,2,2.5,> pigment { Gray20 } finish { Shiny  ambient (0.1 * global_ambient_mul)} }
-    texture{e3d_tex_silver}
+    texture{col_silver}
     translate<0,0,-30>
     }
  
@@ -428,10 +428,10 @@ union {
            box{ <-0.25,2,-2.0> <0.25,5,0.0> rotate<0,0,0> translate<+2.5,0,0>  }
            box{ <-0.25,2,-2.0> <0.25,5,0.0> rotate<0,0,0> translate<-2.0,0,3>  }
            box{ <-0.25,2,-2.0> <0.25,5,0.0> rotate<0,0,0> translate<+2.0,0,3>  }
-           texture{e3d_tex_silver}
+           texture{col_silver}
            }
         box{ <-3/2,1.2,-2> <+3/2,2,2.5,> pigment { Gray20 } finish { Shiny  ambient (0.1 * global_ambient_mul)} }
-        texture{e3d_tex_silver}
+        texture{col_silver}
         translate<0,0,-30>
         }
 
