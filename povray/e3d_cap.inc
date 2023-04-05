@@ -444,8 +444,7 @@ union{
             torus{dia+0.85,1 translate<0,dis/2-5,0>}                                    
             
             //Textur fuer Minusmarkierung
-            pigment{                                                                    
-                    image_map{png "tex_elko_axial.png" map_type 2 interpolate 4}
+            pigment{ tex_elko_axial                                                                   
                     scale <dia*2*pi*1.35,dia*2*pi,dia*2*pi*1.35>                
             }
             finish{reflection { 0.03, 0.1}  phong 0.4 crand 0.05 ambient (0.1 * global_ambient_mul) }        
@@ -597,7 +596,7 @@ union{
         torus{dia+0.85,1 translate<0,2.5,0>}                                     
 
         //Textur für Minusmarkierung
-        pigment{image_map{png "tex_elko.png"}scale tex_scale}                    
+        pigment { tex_elko scale tex_scale }                   
         finish{reflection { 0.03, 0.1}  phong 0.4 crand 0.05 ambient (0.1 * global_ambient_mul)}
     }
 

@@ -6,8 +6,7 @@
 
 
 /*******************************************************************************
- * This is the global texture definition file. All texture definitions
- * for parts have to be taken from here or have to be defined here.
+ * This is the global color definition file.
  ******************************************************************************/
 
 #declare col_gold           = texture { T_Gold_5E             finish { F_MetalA ambient(0.35 * global_ambient_mul) } }
