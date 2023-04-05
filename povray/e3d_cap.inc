@@ -5,8 +5,6 @@
  ******************************************************************************/
 
 
-#ifndef(__cap_inc)
-#declare __cap_inc = true;
 
 #include "e3d_tools.inc"
 
@@ -16,28 +14,28 @@
 //Grundmacro - Breite=B , Tiefe = T, Hoehe = H, Raster = Ra
 ********************************************************************************************************************************************/
 #macro CAP_DIS_BLOCK_GRND(B,T,H,Ra)
-union{
+union {
 
-    box{<-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0>} //Grundkörper
-    box{<-B/2,     0,    -T/2+0.2> <B/2,    H-0.2, T/2-0.2>  rotate<0,0,0> translate<0,0,0>} //Kleine Box innen
-    box{<-B/2+0.2, H-0.2,-T/2+0.2> <B/2-0.2,H    , T/2-0.2>  rotate<0,0,0> translate<0,0,0>} //Kleine Box oben
+    box { <-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0> } //Grundkörper
+    box { <-B/2,     0,    -T/2+0.2> <B/2,    H-0.2, T/2-0.2>  rotate<0,0,0> translate<0,0,0> } //Kleine Box innen
+    box { <-B/2+0.2, H-0.2,-T/2+0.2> <B/2-0.2,H    , T/2-0.2>  rotate<0,0,0> translate<0,0,0> } //Kleine Box oben
 
-    cylinder{<-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2>} //Rundungen rechts
-    cylinder{<-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,-T/2+0.2>} //Rundungen rechts
-    cylinder{< B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2>} //Rundungen links
-    cylinder{< B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0, -T/2+0.2>} //Rundungen links
+    cylinder { <-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2> } //Rundungen rechts
+    cylinder { <-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,-T/2+0.2> } //Rundungen rechts
+    cylinder { < B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2> } //Rundungen links
+    cylinder { < B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0, -T/2+0.2> } //Rundungen links
 
-    sphere{< B/2-0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
-    sphere{< B/2-0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
-    sphere{<-B/2+0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
-    sphere{<-B/2+0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
+    sphere { < B/2-0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
+    sphere { < B/2-0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
+    sphere { <-B/2+0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
+    sphere { <-B/2+0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
 
-    cylinder{<-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0, T/2-0.2>}   //Rundungen vorne
-    cylinder{<-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0,-T/2+0.2>}   //Rundungen hinten
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate <-B/2+0.2, 0, 0>}  //Rundungen rechts kurz
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate <-B/2+0.2, 0, 0>}  //Rundungen rechts kurz
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate < B/2-0.2, 0, 0>}  //Rundungen links kurz
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate < B/2-0.2, 0, 0>}  //Rundungen links kurz
+    cylinder { <-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0, T/2-0.2> }   //Rundungen vorne
+    cylinder { <-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0,-T/2+0.2> }   //Rundungen hinten
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate <-B/2+0.2, 0, 0> }  //Rundungen rechts kurz
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate <-B/2+0.2, 0, 0> }  //Rundungen rechts kurz
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate < B/2-0.2, 0, 0> }  //Rundungen links kurz
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate < B/2-0.2, 0, 0> }  //Rundungen links kurz
 
     //Drahtdurchmesser und Beschriftung an die Kondensatorgröße anpassen
 
@@ -48,39 +46,39 @@ union{
     #end
 
     #if (Ra=10.16)    //d=0.7mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder { <-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,block_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
     #end
 
     #if (Ra=15.24)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder { <-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
     #end
 
     #if (Ra=22.5)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder { <-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,block_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
     #end
 
     #if (Ra=27.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder { <-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
     #end
 
     #if (Ra=32.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder { <-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
     #end
 
     #if (Ra=37.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
+        cylinder { <-Ra/2 ,0> <-Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,block_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
     #end
 
     #local hellblau = texture {
@@ -221,14 +219,14 @@ CAP_DIS_BLOCK_GRND(41.7,20.2,39.5,37.5)
 ********************************************************************************************************************************************/
 #macro CAP_DIS_CERAMIC_DISK_GRND(diam1, value, leadspc, bcolour, tcolour)
     #local diam = diam1/2;
-    #local cap = object {superellipsoid{<1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0>} } 
-    #local txt = text{ ttf besch_font ,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20>} 
+    #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } } 
+    #local txt = text{ ttf besch_font ,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> } 
     #local leg = object{ cylinder {  <0,diam*0.2,0>,<0,-10.0>,0.25 texture{col_silver}}}  
     #local ls2 = leadspc/2 ;
-    union{ 
+    union { 
         object{ intersection{ object{txt} object{cap} } translate <0,0,-0.05> pigment{tcolour} }
         object {cap pigment{bcolour}}
-        difference{
+        difference {
             torus { leadspc/2, 0.25 rotate -90*x  pigment{bcolour} }
             box { <-leadspc,0,0.5>, <leadspc,-leadspc,-0.5> }
             translate <0,diam*0.2,0>  
@@ -303,14 +301,14 @@ CAP_DIS_CERAMIC_DISK_GRND(25, value, 10.16, Gray, Blue)
 ********************************************************************************************************************************************/
 #macro CAP_DIS_CERAMIC_GRND(diam1,value,leadspc,bcolour,tcolour)
  #local diam = diam1/2;
- #local cap = object {superellipsoid{<1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0>} } 
- #local txt = text{ ttf besch_font,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20>} 
+ #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } } 
+ #local txt = text{ ttf besch_font,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> } 
  #local leg = object{ cylinder {  <0,diam*0.2,0>,<0,-10.0>,0.25 texture{col_silver}}}  
  #local ls2 = leadspc/2 ;
- union{ 
+ union { 
   object{ intersection{ object{txt} object{cap} } translate <0,0,-0.05> pigment{tcolour} }
   object {cap pigment{bcolour}}
-  difference{
+  difference {
    torus { leadspc/2, 0.25 rotate -90*x  pigment{bcolour} }
    box { <-leadspc,0,0.5>, <leadspc,-leadspc,-0.5> }
    translate <0,diam*0.2,0>  
@@ -363,31 +361,31 @@ CAP_DIS_CERAMIC_GRND(10.16,value,7.62,Gray,Black)
 //   dw         = pins width / Largeur des pattes
 ********************************************************************************************************************************************/
 #macro CAP_DIS_CTS_GRND(diam,Lg,Lt,r,lw,dw,value)
-union{
+union {
 
 #local rr=diam/2*0.7;
 #local rrr=0.8;
 
-    difference{
+    difference {
         //Body
-        cylinder {<-Lg/2,0,0><+Lg/2,0,0> diam/2-0.1 }
+        cylinder { <-Lg/2,0,0> <+Lg/2,0,0> diam/2-0.1 }
         //Plus side
-        union{
-            torus{ rr rrr rotate <90,90,0> translate<-Lg/2,0,0> }
-            cylinder{<-Lg/2-rrr,0,0><-Lg/2+rrr,0,0> rr}
+        union {
+            torus { rr rrr rotate <90,90,0> translate<-Lg/2,0,0> }
+            cylinder { <-Lg/2-rrr,0,0> <-Lg/2+rrr,0,0> rr}
         }
         texture{col_silver}
     }
     //Plus pin
-    cylinder {<-Lg/2-Lt+rrr,0,0><-Lg/2+1,0,0> dw*1.5 texture{Aluminum}}
+    cylinder { <-Lg/2-Lt+rrr,0,0> <-Lg/2+1,0,0> dw*1.5 texture{Aluminum}}
     //pins
     object{TOOLS_WIRE_LEADS(Lg,diam,lw*2,dw,r,global_res_bend_radius,0,"H")}
     //Text value
     intersection{
-        cylinder {<-Lg/2,0,0><+Lg/2,0,0> diam/2-0.1 }
-        union{
-                text {ttf global_fontfile_arial "+" 2,0 scale(Lg/20.8)*3  rotate<-90,180,180> translate<-Lg/2.5,diam/2,-(diam/9.1)*1.5 > }
-                text {ttf global_fontfile_arial value 2,0  scale diam/9.1*3 rotate<-90,180,180> translate<-Lg/3.5,diam/2,-(diam/9.1)*1.5> }
+        cylinder { <-Lg/2,0,0> <+Lg/2,0,0> diam/2-0.1 }
+        union {
+                text { ttf global_fontfile_arial "+" 2,0 scale(Lg/20.8)*3  rotate<-90,180,180> translate<-Lg/2.5,diam/2,-(diam/9.1)*1.5 > }
+                text { ttf global_fontfile_arial value 2,0  scale diam/9.1*3 rotate<-90,180,180> translate<-Lg/3.5,diam/2,-(diam/9.1)*1.5> }
         }
         texture{col_black_marking}
         translate +0.01*y
@@ -419,29 +417,29 @@ CAP_DIS_CTS_GRND(9.1,20.8,3.2,12*2.54,30,0.6,value)
 //Axial-Elko Grundmakro   
 ********************************************************************************************************************************************/
 #macro CAP_DIS_ELKO_AXIAL_GRND(val_size,dis,dia,dia_b,value)
-union{
-    union{
+union {
+    union {
         
         //Elko Koerper
-        difference{
-            union{
-                cylinder{<0,dis/2-3.5,0><0,-(dis/2-3.5),0>dia}                            
+        difference {
+            union {
+                cylinder { <0,dis/2-3.5,0> <0,-(dis/2-3.5),0>dia}                            
                 //Elko Rundung oben
-                torus{dia-0.5,0.5 translate<0,-(dis/2-3.5),0>}                            
-                difference{
-                    cylinder{<0,-(dis/2-3.5),0><0,-(dis/2-3.0),0>dia-0.5}
-                    cylinder{<0,-(dis/2-3.5),0><0,-(dis/2-2.9),0>dia*0.8*pow(dia/16,0.11)}
+                torus {dia-0.5,0.5 translate<0,-(dis/2-3.5),0> }                            
+                difference {
+                    cylinder { <0,-(dis/2-3.5),0> <0,-(dis/2-3.0),0>dia-0.5}
+                    cylinder { <0,-(dis/2-3.5),0> <0,-(dis/2-2.9),0>dia*0.8*pow(dia/16,0.11)}
                 }
                 //Elko Rundung unten
-                torus{dia-0.5,0.5 translate<0,dis/2-3.5,0>}
-                difference{
-                    cylinder{<0,dis/2-3.5,0><0,dis/2-3.0,0>dia-0.5}
-                    cylinder{<0,dis/2-3.5,0><0,dis/2-2.9,0>dia*0.8*pow(dia/16,0.11)}
+                torus {dia-0.5,0.5 translate<0,dis/2-3.5,0> }
+                difference {
+                    cylinder { <0,dis/2-3.5,0> <0,dis/2-3.0,0>dia-0.5}
+                    cylinder { <0,dis/2-3.5,0> <0,dis/2-2.9,0>dia*0.8*pow(dia/16,0.11)}
                 }
             }
             
             //Aussparung unten
-            torus{dia+0.85,1 translate<0,dis/2-5,0>}                                    
+            torus {dia+0.85,1 translate<0,dis/2-5,0> }                                    
             
             //Textur fuer Minusmarkierung
             pigment{ tex_elko_axial                                                                   
@@ -451,35 +449,35 @@ union{
         }
         
         //Abdeckung oben
-        cylinder{<0,-(dis/2-3.6),0><0,-(dis/2-3.1),0>dia*0.8*pow(dia/16,0.11)           
+        cylinder { <0,-(dis/2-3.6),0> <0,-(dis/2-3.1),0>dia*0.8*pow(dia/16,0.11)           
             texture{col_silver}
         }
 
         //Abdeckung unten
-        cylinder{<0,dis/2-3.2,0><0,dis/2-3.5,0>dia-0.5 pigment{Black}}                  
+        cylinder { <0,dis/2-3.2,0> <0,dis/2-3.5,0>dia-0.5 pigment{Black}}                  
         
         //Kontakt
-        cylinder{<0,-(dis/2-3.2),0><0,-(dis/2-2),0> 1.5 texture{col_silver}}            
+        cylinder { <0,-(dis/2-3.2),0> <0,-(dis/2-2),0> 1.5 texture{col_silver}}            
         intersection{
-            cylinder{<0,dis/2,0><0,-dis/2 + val_size + 3.5,0>dia}
-            text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia>}
+            cylinder { <0,dis/2,0> <0,-dis/2 + val_size + 3.5,0>dia}
+            text { ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia> }
             rotate<0,10,0>
             translate<0,-val_size,-0.001>
-            pigment {rgb<0.4,0.6,1>}
+            pigment {rgb<0.4,0.6,1> }
         }
         intersection{
-            cylinder{<0,dis/2,0><0,-dis/2 + val_size + 3.5,0>dia}
-            text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia>}
+            cylinder { <0,dis/2,0> <0,-dis/2 + val_size + 3.5,0>dia}
+            text { ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia> }
             rotate<0,100,0>
             translate<-0.001,-val_size,0>
-            pigment {rgb<0.4,0.6,1>}
+            pigment {rgb<0.4,0.6,1> }
         }
         intersection{
-            cylinder{<0,dis/2,0><0,-dis/2 + val_size + 3.5,0>dia}
-            text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia>}
+            cylinder { <0,dis/2,0> <0,-dis/2 + val_size + 3.5,0>dia}
+            text { ttf besch_font value 0.2, 0 scale val_size rotate<0,0,-90> translate<0, dis/4,-dia> }
             rotate<0,190,0>
             translate<0,-val_size,0.001>
-            pigment {rgb<0.4,0.6,1>}
+            pigment {rgb<0.4,0.6,1> }
         }
         rotate<0,180,>
         rotate<0,0,90>
@@ -578,22 +576,22 @@ CAP_DIS_ELKO_AXIAL_GRND(5,55.88,30/2,1/2,value)
 //value         Beschriftungstext            
 ********************************************************************************************************************************************/
 #macro CAP_DIS_ELKO_GRND(tex_scale,val_size,dis,dia,hig,dia_b,value)
-union{
+union {
     //Elko Körper
-    difference{
-        union{            
-            cylinder{<0,0.5,0><0,hig-0.5,0>dia}                                  
+    difference {
+        union {            
+            cylinder { <0,0.5,0> <0,hig-0.5,0>dia}                                  
             //Elko Rundung oben
-            torus{dia-0.5,0.5 translate<0,hig-0.5,0>}                            
-            difference{
-                cylinder{<0,hig-0.5,0><0,hig,0>dia-0.5}
-                cylinder{<0,hig-0.5,0><0,hig+0.1,0>dia*0.8*pow(dia/16,0.11)}
+            torus {dia-0.5,0.5 translate<0,hig-0.5,0> }                            
+            difference {
+                cylinder { <0,hig-0.5,0> <0,hig,0>dia-0.5}
+                cylinder { <0,hig-0.5,0> <0,hig+0.1,0>dia*0.8*pow(dia/16,0.11)}
             }
             //Elko Rundung unten
-            torus{dia-0.5,0.5 translate<0,0.5,0>}                                
+            torus {dia-0.5,0.5 translate<0,0.5,0> }                                
         }
         //Aussparung unten
-        torus{dia+0.85,1 translate<0,2.5,0>}                                     
+        torus {dia+0.85,1 translate<0,2.5,0> }                                     
 
         //Textur für Minusmarkierung
         pigment { tex_elko scale tex_scale }                   
@@ -601,51 +599,51 @@ union{
     }
 
     //Abdeckung oben
-    difference{
-        cylinder{<0,hig-0.5,0><0,hig-0.1,0>dia*0.8*pow(dia/16,0.11)}            
-        box{<0,hig-0.35,-0.1><dia,hig,0.1>} 
-        box{<0,hig-0.35,-0.1><dia,hig,0.1> rotate<0,120,0>}
-        box{<0,hig-0.35,-0.1><dia,hig,0.1> rotate<0,240,0>} 
+    difference {
+        cylinder { <0,hig-0.5,0> <0,hig-0.1,0>dia*0.8*pow(dia/16,0.11)}            
+        box { <0,hig-0.35,-0.1> <dia,hig,0.1> } 
+        box { <0,hig-0.35,-0.1> <dia,hig,0.1> rotate<0,120,0> }
+        box { <0,hig-0.35,-0.1> <dia,hig,0.1> rotate<0,240,0> } 
         texture{col_silver}
     }
     
     //Abdeckung unten
-    cylinder{<0,0.2,0><0,0.5,0>dia-0.5 pigment{Black}}                            
-    union{
+    cylinder { <0,0.2,0> <0,0.5,0>dia-0.5 pigment{Black}}                            
+    union {
         #if(pin_short=off)
-            cylinder{<0,0,0><0,-14.5,0>dia_b translate<dis/2,0,0>}    //Beinchen rechts
-            cylinder{<0,0,0><0,-17.5,0>dia_b translate<-dis/2,0,0>}   //Beinchen links
+            cylinder { <0,0,0> <0,-14.5,0>dia_b translate<dis/2,0,0> }    //Beinchen rechts
+            cylinder { <0,0,0> <0,-17.5,0>dia_b translate<-dis/2,0,0> }   //Beinchen links
         #else
-            cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b translate<dis/2,0,0>}    //Beinchen rechts
-            cylinder{<0,0,0><0,-1*(pcb_height+pin_length)-0.2,0>dia_b translate<-dis/2,0,0>}   //Beinchen links
+            cylinder { <0,0,0> <0,-1*(pcb_height+pin_length)-0.2,0>dia_b translate<dis/2,0,0> }    //Beinchen rechts
+            cylinder { <0,0,0> <0,-1*(pcb_height+pin_length)-0.2,0>dia_b translate<-dis/2,0,0> }   //Beinchen links
         #end
         texture{col_silver}
     }
     
     //Beschriftung
     intersection{
-        cylinder{<0,0,0><0,hig,0>dia}
-        text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,90> translate<0,0,-dia>}
+        cylinder { <0,0,0> <0,hig,0>dia}
+        text { ttf besch_font value 0.2, 0 scale val_size rotate<0,0,90> translate<0,0,-dia> }
         rotate<0,0,180>
         rotate<0,10,0>
         translate<0,hig-val_size,-0.001>
-        pigment {rgb<0.4,0.6,1>}
+        pigment {rgb<0.4,0.6,1> }
     }
     intersection{
-        cylinder{<0,0,0><0,hig,0>dia }
-        text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,90> translate<0,0,-dia>}
+        cylinder { <0,0,0> <0,hig,0>dia }
+        text { ttf besch_font value 0.2, 0 scale val_size rotate<0,0,90> translate<0,0,-dia> }
         rotate<0,0,180>
         rotate<0,100,0>
         translate<-0.001,hig-val_size,0>
-        pigment {rgb<0.4,0.6,1>}
+        pigment {rgb<0.4,0.6,1> }
     }
     intersection{
-        cylinder{<0,0,0><0,hig,0>dia }
-        text {ttf besch_font value 0.2, 0 scale val_size rotate<0,0,90> translate<0,0,-dia>}
+        cylinder { <0,0,0> <0,hig,0>dia }
+        text { ttf besch_font value 0.2, 0 scale val_size rotate<0,0,90> translate<0,0,-dia> }
         rotate<0,0,180>
         rotate<0,190,0>
         translate<0,hig-val_size,0.001>
-        pigment {rgb<0.4,0.6,1>}
+        pigment {rgb<0.4,0.6,1> }
     }
     finish{F_MetalE ambient (0.1 * global_ambient_mul)}
     translate<0,0.2,0>
@@ -700,31 +698,31 @@ CAP_DIS_ELKO_GRND(<23,40,23>,4,7.5,18/2,35.5,0.8/2,value)
 //Tantalkondensator Grundmakro 2,5mm Pitch
 ********************************************************************************************************************************************/
 #macro CAP_DIS_TT_2MM5_GRND(obj_dia,obj_hgt,sca_txt)
-union{
+union {
     //Body
-    sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1> pigment{CoolCopper}}
+    sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1> pigment{CoolCopper}}
     
     //Leads
-    union{
+    union {
         #if(pin_short=off)
-            cylinder{<0,1,0><0,-16,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
-            cylinder{<0,1,0><0,-14,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
+            cylinder { <0,1,0> <0,-16,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
+            cylinder { <0,1,0> <0,-14,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
         #else
-            cylinder{<0,1,0><0,-1*(pcb_height+pin_length)-1.2,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
-            cylinder{<0,1,0><0,-1*(pcb_height+pin_length)-1.2,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
+            cylinder { <0,1,0> <0,-1*(pcb_height+pin_length)-1.2,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
+            cylinder { <0,1,0> <0,-1*(pcb_height+pin_length)-1.2,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
         #end
         texture{col_silver}
     }
     
     //Marking
-    union{
+    union {
         intersection{
-            sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0>}
-            text {ttf besch_font "+" obj_dia+0.4, 0 rotate<0,0,00> translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,-(obj_dia+0.4)/2>}
+            sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0> }
+            text { ttf besch_font "+" obj_dia+0.4, 0 rotate<0,0,00> translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,-(obj_dia+0.4)/2> }
         }
         intersection{
-            sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0>}
-            text {ttf besch_font value obj_dia+0.4,0  scale<sca_txt,1,1> rotate<0,0,90> translate<0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2>}
+            sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0> }
+            text { ttf besch_font value obj_dia+0.4,0  scale<sca_txt,1,1> rotate<0,0,90> translate<0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2> }
         }
         texture{col_black_marking}
     }
@@ -771,38 +769,38 @@ CAP_DIS_TT_2MM5_GRND(10,18,2)
 //Tantalkondensator Grundmakro 5mm Pitch
 ********************************************************************************************************************************************/
 #macro CAP_DIS_TT_5MM_GRND(obj_dia,obj_hgt,sca_txt)
-union{
+union {
     //Body
-    sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1> pigment{CoolCopper}}
+    sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1> pigment{CoolCopper}}
     
     //Leads
-    union{
-        cylinder{<0,1,0><0,-1,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
-        cylinder{<0,1,0><0,-1,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
-        cylinder{<0,0,0><-1.25,-1,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>}
-        cylinder{<0,0,0><1.25,-1,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>}
+    union {
+        cylinder { <0,1,0> <0,-1,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
+        cylinder { <0,1,0> <0,-1,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
+        cylinder { <0,0,0> <-1.25,-1,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0> }
+        cylinder { <0,0,0> <1.25,-1,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0> }
         #if(pin_short=off)
-            cylinder{<0,-14,0><0,-2,0>0.25 translate<-2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
-            cylinder{<0,-12,0><0,-2,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
+            cylinder { <0,-14,0> <0,-2,0>0.25 translate<-2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
+            cylinder { <0,-12,0> <0,-2,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
         #else
-            cylinder{<0,-1*(pcb_height+pin_length)-2.5,0><0,-2,0>0.25 translate<-2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
-            cylinder{<0,-1*(pcb_height+pin_length)-2.5,0><0,-2,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>}
+            cylinder { <0,-1*(pcb_height+pin_length)-2.5,0> <0,-2,0>0.25 translate<-2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
+            cylinder { <0,-1*(pcb_height+pin_length)-2.5,0> <0,-2,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0> }
         #end
-        sphere{<0,0,0>0.25 translate<-2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0>}
-        sphere{<0,0,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0>}
-        sphere{<0,0,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>}
-        sphere{<0,0,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>}
+        sphere { <0,0,0>0.25 translate<-2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0> }
+        sphere { <0,0,0>0.25 translate<2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0> }
+        sphere { <0,0,0>0.25 translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0> }
+        sphere { <0,0,0>0.25 translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0> }
         texture{col_silver}
     }
     //Marking
-    union{
+    union {
         intersection{
-            sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0>}
-            text {ttf besch_font "+" obj_dia+0.4, 0 rotate<0,0,00> translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,-(obj_dia+0.4)/2>}
+            sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0> }
+            text { ttf besch_font "+" obj_dia+0.4, 0 rotate<0,0,00> translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,-(obj_dia+0.4)/2> }
         }
         intersection{
-            sphere{<0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0>}
-            text {ttf besch_font value obj_dia+0.4,0  scale<sca_txt,1,1> rotate<0,0,90> translate<0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2>}
+            sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1.001> translate<0,0,0> }
+            text { ttf besch_font value obj_dia+0.4,0  scale<sca_txt,1,1> rotate<0,0,90> translate<0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2> }
         }
         texture{col_black_marking}
     }
@@ -852,28 +850,28 @@ CAP_DIS_TT_5MM_GRND(11,18,2)
 //Grundmacro - Breite=B , Tiefe = T, Hoehe = H, Raster = Ra
 ********************************************************************************************************************************************/
 #macro CAP_DIS_WIMA_GRND(B,T,H,Ra)
-union{
+union {
 
-    box{<-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0>} //Grundkörper
-    box{<-B/2,     0,    -T/2+0.2> <B/2,    H-0.2, T/2-0.2>  rotate<0,0,0> translate<0,0,0>} //Kleine Box innen
-    box{<-B/2+0.2, H-0.2,-T/2+0.2> <B/2-0.2,H    , T/2-0.2>  rotate<0,0,0> translate<0,0,0>} //Kleine Box oben
+    box { <-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0> } //Grundkörper
+    box { <-B/2,     0,    -T/2+0.2> <B/2,    H-0.2, T/2-0.2>  rotate<0,0,0> translate<0,0,0> } //Kleine Box innen
+    box { <-B/2+0.2, H-0.2,-T/2+0.2> <B/2-0.2,H    , T/2-0.2>  rotate<0,0,0> translate<0,0,0> } //Kleine Box oben
 
-    cylinder{<-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2>} //Rundungen rechts
-    cylinder{<-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,-T/2+0.2>} //Rundungen rechts
-    cylinder{< B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2>} //Rundungen links
-    cylinder{< B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0, -T/2+0.2>} //Rundungen links
+    cylinder { <-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2> } //Rundungen rechts
+    cylinder { <-B/2+0.2,0,0> <-B/2+0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,-T/2+0.2> } //Rundungen rechts
+    cylinder { < B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0,  T/2-0.2> } //Rundungen links
+    cylinder { < B/2-0.2,0,0> < B/2-0.2, H-0.2> 0.20  rotate<0,0,0> translate <0, 0, -T/2+0.2> } //Rundungen links
 
-    sphere{< B/2-0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
-    sphere{< B/2-0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
-    sphere{<-B/2+0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
-    sphere{<-B/2+0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0>}  //Rundungen oben
+    sphere { < B/2-0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
+    sphere { < B/2-0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
+    sphere { <-B/2+0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
+    sphere { <-B/2+0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  translate<0,0,0> }  //Rundungen oben
 
-    cylinder{<-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0, T/2-0.2>}   //Rundungen vorne
-    cylinder{<-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0,-T/2+0.2>}   //Rundungen hinten
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate <-B/2+0.2, 0, 0>}  //Rundungen rechts kurz
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate <-B/2+0.2, 0, 0>}  //Rundungen rechts kurz
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate < B/2-0.2, 0, 0>}  //Rundungen links kurz
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate < B/2-0.2, 0, 0>}  //Rundungen links kurz
+    cylinder { <-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0, T/2-0.2> }   //Rundungen vorne
+    cylinder { <-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 rotate<0,0,0> translate <0, 0,-T/2+0.2> }   //Rundungen hinten
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate <-B/2+0.2, 0, 0> }  //Rundungen rechts kurz
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate <-B/2+0.2, 0, 0> }  //Rundungen rechts kurz
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate < B/2-0.2, 0, 0> }  //Rundungen links kurz
+    cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate < B/2-0.2, 0, 0> }  //Rundungen links kurz
 
     //Drahtdurchmesser und Beschriftung an die Kondensatorgröße anpassen
 
@@ -884,59 +882,59 @@ union{
     #end
 
     #if (Ra=2.54)    //d=0.4mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.20 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.20 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<1.0,1.0,1.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-0.6, H-4.3, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<1.4,1.4,1.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-0.6, H-2.8, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.20 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.20 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<1.0,1.0,1.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-0.6, H-4.3, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<1.4,1.4,1.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-0.6, H-2.8, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=5.08)    //d=0.5mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.25 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.25 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<1.4,1.4,1.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.2, H-4.3, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<2.0,2.0,2.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.2, H-2.8, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.25 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.25 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<1.4,1.4,1.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.2, H-4.3, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<2.0,2.0,2.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.2, H-2.8, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=7.50)    //d=0.7mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<2.0,2.0,2.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.8, H-5.5, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<2.7,2.7,2.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.8, H-3.3, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<2.0,2.0,2.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.8, H-5.5, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<2.7,2.7,2.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-1.8, H-3.3, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=10.0)    //d=0.7mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<3.1,3.1,3.1> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-3.5, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.35 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<2.4,2.4,2.4> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-6.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<3.1,3.1,3.1> texture{col_black_marking} rotate<0,180,0> translate<B/2-2.5, H-3.5, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=15.0)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<3.7,3.7,3.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-4.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<3.0,3.0,3.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-7.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<3.7,3.7,3.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-4.0, H-4.0, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=22.5)    //d=0.8mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<4.2,4.2,4.2> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-6.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.40 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<3.5,3.5,3.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-9.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<4.2,4.2,4.2> texture{col_black_marking} rotate<0,180,0> translate<B/2-6.5, H-6.0, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=27.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<4.7,4.7,4.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H- 8.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<4.0,4.0,4.0> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H-12.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<4.7,4.7,4.7> texture{col_black_marking} rotate<0,180,0> translate<B/2-10.0, H- 8.0, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     #if (Ra=37.5)    //d=1.0mm
-        cylinder{<-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
-        cylinder{< Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
-        text {ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0>} //Beschriftung Value
-        text {ttf besch_font "WIMA"   0.1, 0 scale<5.2,5.2,5.2> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-10.0, T/2+0.1> rotate<0,0,0>} //Beschriftung WIMA
+        cylinder { <-Ra/2 ,0> <-Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht rechts senkrecht
+        cylinder { < Ra/2 ,0> < Ra/2,wima_pin_length,0> 0.50 texture{col_silver}}   // Draht links senkrecht
+        text { ttf besch_font  value   0.1, 0 scale<4.5,4.5,4.5> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-15.0, T/2+0.1> rotate<0,0,0> } //Beschriftung Value
+        text { ttf besch_font "WIMA"   0.1, 0 scale<5.2,5.2,5.2> texture{col_black_marking} rotate<0,180,0> translate<B/2-15.0, H-10.0, T/2+0.1> rotate<0,0,0> } //Beschriftung WIMA
     #end
 
     rotate<0,180,0>
@@ -1080,7 +1078,7 @@ CAP_DIS_WIMA_GRND(41.5,20.0,39.5,37.5)
 //(Tiefe, Breite, Hoehe, Breite Loetflaechen, Abstand Pin zu Pin, Anzahl Kondensatoren,Farbe des Körpers)
 ********************************************************************************************************************************************/
 #macro CAP_SMD_CHIP_ARRAY_GRND(b,l,h,blf,pitch,n)
-union{    
+union {    
     //Body
     object{
         Round_Box_Union(<0,0.05,0>, <l,h,b>, min(b,l,h)/6)
@@ -1091,11 +1089,11 @@ union{
     //Pins
     #local i = 0;
     #local x_pos = -(n-1)/2*pitch;        
-    union{    
+    union {    
         #while(i<n)
         
-            box{<-blf/2,0,b/2+0.01><blf/2,h,b/2-b/10> translate<x_pos,0,0>}
-            box{<-blf/2,0,-b/2-0.01><blf/2,h,-b/2+b/10> translate<x_pos,0,0>}
+            box { <-blf/2,0,b/2+0.01> <blf/2,h,b/2-b/10> translate<x_pos,0,0> }
+            box { <-blf/2,0,-b/2-0.01> <blf/2,h,-b/2+b/10> translate<x_pos,0,0> }
             
             #local i = i+1;
             #local x_pos = x_pos + pitch;
@@ -1116,14 +1114,14 @@ CAP_SMD_CHIP_ARRAY_GRND(1.60,3.20,0.8,0.4,0.8,4)
 //basiert auf Makro von Walter Mücke
 ********************************************************************************************************************************************/
 #macro CAP_SMD_CHIP_GRND(L,W,T,K)
-union{
+union {
     //Body
-    superellipsoid{<0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkörper braun
+    superellipsoid{ <0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkörper braun
     
     //Contacts
-    union{
-        superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <(L-K)/2,0,0>}
-        superellipsoid{<0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <-(L-K)/2,0,0>}
+    union {
+        superellipsoid{ <0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <(L-K)/2,0,0> }
+        superellipsoid{ <0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <-(L-K)/2,0,0> }
         texture{col_silver}
     }
     rotate<90,0,0>
@@ -1166,68 +1164,68 @@ CAP_SMD_CHIP_GRND(1.0,0.5,0.6,0.2)
 //basiert auf Makro von Walter Mücke
 ********************************************************************************************************************************************/
 #macro CAP_SMD_CHIP_TT_GRND(L,W,H,LT,WT,HT,P,value)
-union{
+union {
     
     //Body
-    box{<0,0,0><LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2>}            //Grundkörper braun
+    box { <0,0,0> <LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2> }            //Grundkörper braun
     
     //Marking
-    text{ttf besch_font value 0.1,0 scale L/8 rotate<90,0,0> translate<-LT/4,H+(L-LT)/2+0.01,0> pigment{DarkWood*0.7}}
+    text{ ttf besch_font value 0.1,0 scale L/8 rotate<90,0,0> translate<-LT/4,H+(L-LT)/2+0.01,0> pigment{DarkWood*0.7}}
     
     //
-    box{<0,0,0><(L-2*P)-0.3,(L-LT)/2,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-((L-2*P)-0.3)/2,0,-W/2>}
-    box{<0,0,0><0.4/exp(-LT/10),0.002,W> pigment{DarkWood*0.7} translate<-LT/2.1,H+(L-LT)/2,-W/2>}        //Markierung
+    box { <0,0,0> <(L-2*P)-0.3,(L-LT)/2,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-((L-2*P)-0.3)/2,0,-W/2> }
+    box { <0,0,0> <0.4/exp(-LT/10),0.002,W> pigment{DarkWood*0.7} translate<-LT/2.1,H+(L-LT)/2,-W/2> }        //Markierung
     
-    union{
+    union {
         //rechter Anschluss
-        difference{
-            box{<0,0,0><-P,HT,WT>}
-            box{<0,(L-LT)/2,-0.002><-P-0.002,HT-(L-LT)/2,WT+0.002> translate<-(L-LT)/2,0,0>}
-            cylinder{<0,HT,-0.002><0,HT,WT+0.002>(L-LT)/2}
-            cylinder{<0,0,-0.002><0,0,WT+0.002>(L-LT)/2}
+        difference {
+            box { <0,0,0> <-P,HT,WT> }
+            box { <0,(L-LT)/2,-0.002> <-P-0.002,HT-(L-LT)/2,WT+0.002> translate<-(L-LT)/2,0,0> }
+            cylinder { <0,HT,-0.002> <0,HT,WT+0.002>(L-LT)/2}
+            cylinder { <0,0,-0.002> <0,0,WT+0.002>(L-LT)/2}
             translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
         }
         //rechter Anschlus
-        difference{
-            cylinder{<-(L-LT)/2,HT-(L-LT)/2,><-(L-LT)/2,HT-(L-LT)/2,WT>(L-LT)/2}
-            cylinder{<-3*(L-LT)/4,HT-3*(L-LT)/4,-0.04><-3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
-            box{<-(L-LT)/2,HT-3*(L-LT)/4,-0.04><-(L-LT),HT-5,WT+0.002>}
-            box{<-3*(L-LT)/4,HT-(L-LT)/2,-0.04><-(L-LT),HT-5,WT+0.002>}
+        difference {
+            cylinder { <-(L-LT)/2,HT-(L-LT)/2,> <-(L-LT)/2,HT-(L-LT)/2,WT>(L-LT)/2}
+            cylinder { <-3*(L-LT)/4,HT-3*(L-LT)/4,-0.04> <-3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
+            box { <-(L-LT)/2,HT-3*(L-LT)/4,-0.04> <-(L-LT),HT-5,WT+0.002> }
+            box { <-3*(L-LT)/4,HT-(L-LT)/2,-0.04> <-(L-LT),HT-5,WT+0.002> }
             translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
         }
         //rechter Anschlus
-        difference{
-            cylinder{<-(L-LT)/2,(L-LT)/2,0><-(L-LT)/2,(L-LT)/2,WT>(L-LT)/2}
-            cylinder{<-3*(L-LT)/4,3*(L-LT)/4,-0.04><-3*(L-LT)/4,3*(L-LT)/4,WT+0.002>(L-LT)/4}
-            box{<(-L-LT)/2,3*(L-LT)/4,-0.04><-(L-LT),5,WT+0.002>}
-            box{<0,0,-0.04><(L-LT)/2,(L-LT)/2,WT+0.002> translate<-(L-LT),0.75*(L-LT),0>}
-            box{<(L-LT)/2,(L-LT)/2,-0.04><(L-LT),L-LT,WT+0.002> translate<-1.75*(L-LT),0,0>}
+        difference {
+            cylinder { <-(L-LT)/2,(L-LT)/2,0> <-(L-LT)/2,(L-LT)/2,WT>(L-LT)/2}
+            cylinder { <-3*(L-LT)/4,3*(L-LT)/4,-0.04> <-3*(L-LT)/4,3*(L-LT)/4,WT+0.002>(L-LT)/4}
+            box { <(-L-LT)/2,3*(L-LT)/4,-0.04> <-(L-LT),5,WT+0.002> }
+            box { <0,0,-0.04> <(L-LT)/2,(L-LT)/2,WT+0.002> translate<-(L-LT),0.75*(L-LT),0> }
+            box { <(L-LT)/2,(L-LT)/2,-0.04> <(L-LT),L-LT,WT+0.002> translate<-1.75*(L-LT),0,0> }
             translate<LT/2+(L-LT)/2+0.02,0,-WT/2>
         }
         //linker (positiver) Anschlus
-        difference{
-            box{<0,0,0><P,HT,WT>}
-            box{<(L-LT)/2,(L-LT)/2,-0.002><P+0.002,HT-(L-LT)/2,WT+0.002>}
-            cylinder{<0,HT,-0.002><0,HT,WT+0.002>(L-LT)/2}
-            cylinder{<0,0,-0.002><0,0,WT+0.002>(L-LT)/2}
-            box{<-0.002,HT/2,0><P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35>}
+        difference {
+            box { <0,0,0> <P,HT,WT> }
+            box { <(L-LT)/2,(L-LT)/2,-0.002> <P+0.002,HT-(L-LT)/2,WT+0.002> }
+            cylinder { <0,HT,-0.002> <0,HT,WT+0.002>(L-LT)/2}
+            cylinder { <0,0,-0.002> <0,0,WT+0.002>(L-LT)/2}
+            box { <-0.002,HT/2,0> <P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35> }
             translate<-L/2-0.02,0,-WT/2>
         }
         //linker (positiver) Anschlus
-        difference{
-            cylinder{<(L-LT)/2,HT-(L-LT)/2,-0.002><(L-LT)/2,HT-(L-LT)/2,WT+0.002>(L-LT)/2}
-            cylinder{<3*(L-LT)/4,HT-3*(L-LT)/4,-0.04><3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
-            box{<(L-LT)/2,HT-3*(L-LT)/4,-0.04><L-LT,HT-5,WT+0.002>}
-            box{<3*(L-LT)/4,HT-(L-LT)/2,-0.04><L-LT,HT-5,WT+0.002>}
-            box{<-0.002,HT/2,0><P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35>}
+        difference {
+            cylinder { <(L-LT)/2,HT-(L-LT)/2,-0.002> <(L-LT)/2,HT-(L-LT)/2,WT+0.002>(L-LT)/2}
+            cylinder { <3*(L-LT)/4,HT-3*(L-LT)/4,-0.04> <3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
+            box { <(L-LT)/2,HT-3*(L-LT)/4,-0.04> <L-LT,HT-5,WT+0.002> }
+            box { <3*(L-LT)/4,HT-(L-LT)/2,-0.04> <L-LT,HT-5,WT+0.002> }
+            box { <-0.002,HT/2,0> <P+0.002,HT+0.002,WT*0.3> translate<0,0,WT*0.35> }
             translate<-L/2-0.02,0,-WT/2>
         }
         //linker (positiver) Anschlus
-        difference{
-            cylinder{<(L-LT)/2,(L-LT)/2,-0.002><(L-LT)/2,(L-LT)/2,WT+0.002>(L-LT)/2}
-            cylinder{<3*(L-LT)/4,3*(L-LT)/4,-0.04><3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
-            box{<(L-LT)/2,3*(L-LT)/4,-0.04><L-LT,5,WT+0.002>}
-            box{<3*(L-LT)/4,(L-LT)/2,-0.04><L-LT,L-LT,WT+0.002>}
+        difference {
+            cylinder { <(L-LT)/2,(L-LT)/2,-0.002> <(L-LT)/2,(L-LT)/2,WT+0.002>(L-LT)/2}
+            cylinder { <3*(L-LT)/4,3*(L-LT)/4,-0.04> <3*(L-LT)/4,HT-3*(L-LT)/4,WT+0.002>(L-LT)/4}
+            box { <(L-LT)/2,3*(L-LT)/4,-0.04> <L-LT,5,WT+0.002> }
+            box { <3*(L-LT)/4,(L-LT)/2,-0.04> <L-LT,L-LT,WT+0.002> }
             translate<-L/2-0.02,0,-WT/2>
         }
         texture{col_silver}
@@ -1279,30 +1277,30 @@ CAP_SMD_CHIP_TT_GRND(2.0,1.6,1.0,1.9,1.2,0.6,0.5,value)
        }
 
     //Contacts
-    box{<-S/2,0,-B/2><-S/2-C,0.3,B/2>}
-    box{<S/2,0,-B/2><S/2+C,0.3,B/2>}
+    box { <-S/2,0,-B/2> <-S/2-C,0.3,B/2> }
+    box { <S/2,0,-B/2> <S/2+C,0.3,B/2> }
     //The base plastic
-    difference{
-        box{<-L/2,0.3,-W/2><L/2,2,W/2>}
-        box{<0,0,0><6,3,-5> rotate<0,-45,0> translate<L/2-L/4,0,-W/2>}
-        box{<0,0,0><6,3,5> rotate<0,45,0> translate<L/2-L/4,0,W/2>}
+    difference {
+        box { <-L/2,0.3,-W/2> <L/2,2,W/2> }
+        box { <0,0,0> <6,3,-5> rotate<0,-45,0> translate<L/2-L/4,0,-W/2> }
+        box { <0,0,0> <6,3,5> rotate<0,45,0> translate<L/2-L/4,0,W/2> }
         texture{col_smd_elko}
     }
     //Body
-    difference{
-        cylinder{<0,2,0><0,H-0.4,0>D/2}
-        torus{D/2+0.2,0.4 translate<0,3,0>}
+    difference {
+        cylinder { <0,2,0> <0,H-0.4,0>D/2}
+        torus {D/2+0.2,0.4 translate<0,3,0> }
     }
-    torus{D/2-0.4,0.4 translate<0,H-0.4,0>}
-    cylinder{<0,H-0.4,0><0,H,0>D/2-0.4}
+    torus {D/2-0.4,0.4 translate<0,H-0.4,0> }
+    cylinder { <0,H-0.4,0> <0,H,0>D/2-0.4}
 
     //Top marking
-    union{        
-        difference{
-            cylinder{<0,H-0.4,0><0,H+0.01,0>D/2-0.4}
-            box{<-D/6,H-0.5,-D/2><D/2,H+0.1,D/2>}            
+    union {        
+        difference {
+            cylinder { <0,H-0.4,0> <0,H+0.01,0>D/2-0.4}
+            box { <-D/6,H-0.5,-D/2> <D/2,H+0.1,D/2> }            
         }
-        text {ttf besch_font value 0.5,0 scale D/7 rotate<90,-90,0> translate<D/16,H+0.01,-D/2+D/8>}
+        text { ttf besch_font value 0.5,0 scale D/7 rotate<90,-90,0> translate<D/16,H+0.01,-D/2+D/8> }
         texture{col_black_marking}
     }
     rotate<0,180,0>
@@ -1366,7 +1364,7 @@ union {
   #else
      #local sc=1.3;
   #end
-  text {ttf besch_font value 0.5,0
+  text { ttf besch_font value 0.5,0
             scale sc rotate<90,180,0>
             translate<dx,H+0.01,0> pigment{Gray20}
        }
@@ -1398,174 +1396,4 @@ CAP_SMD_ELKO_PANASONIC_base(10.3,10.3,10.2,10.0,0.9,4.6,3.5)
 #end
 
 
-/********************************************************************************************************************************************
-//Macros for murata TZ03 type F capacitor trimmer
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.0 du 23/12/05
-********************************************************************************************************************************************/
-#macro CAP_TRIM_TZ03F_GRND(col,dot)
-union{
-    difference{
-        union{ 
-            difference{          
-                union{
-                    torus { 2.5, 0.5 translate 4.3*y}           //top round
-                    cylinder{<0,0,0><0,4.3,0> 3}                //main case   
-                    cylinder{<0,0,0><0,4.8,0> 2.5}              //top cover 
-                } 
-                union{    
-                    box{<0,-0.2,-3.2><+3.2,5.0,3.2>}            //delete back side (flat side)
-                }
-            } 
-            
-            cylinder{<2.5,0,+1.75><2.5,4.3,+1.75> 0.5}          //back bottom to top edges
-            cylinder{<2.5,0,-1.75><2.5,4.3,-1.75> 0.5}
-            sphere {<2.5,4.3,-1.75>, 0.5}                       //back top corners
-            sphere {<2.5,4.3,+1.75>, 0.5}           
-            cylinder{<2.5,4.3,+1.75><2.5,4.3,-1.75> 0.5}        //back top corner to corner edge
-            box{<-1.3,0,-0.25><+1.3,4.3,+0.25> rotate -16.7*y translate<1.3,0,-2.3709>}     //flanks
-            box{<-1.3,0,-0.25><+1.3,4.3,+0.25> rotate +16.7*y translate<1.3,0,+2.3709>}     //flanks
-                            
-            prism {0 4.8 4 <0, 2.5>, <2.5, 1.75>, <2.5, -1.75>, <0,-2.5>}  //top cover             
 
-            box{<0,0,+1.75><3,4.3,-1.75>}               //back
-            cylinder{<-1.35,4.3,0><+1.3,4.3,0> 0.5 rotate -16.7*y translate<1.3,0,-2.11>}   //back top corner to main case edges
-            cylinder{<-1.35,4.3,0><+1.3,4.3,0> 0.5 rotate +16.7*y translate<1.3,0,+2.11>}
-            
-            cylinder{<0,0,+2.5><0,4.3,+2.5> 0.5}        //back bottom to top edges
-            cylinder{<0,0,-2.5><0,4.3,-2.5> 0.5}
-            sphere {<0,4.3,-2.5>, 0.5}                  //main case junctions
-            sphere {<0,4.3,+2.5>, 0.5}
-            
-        }
-        union{
-            cylinder{<0,4,0><0,5,0> 1.25}                           //central hole
-            box{<+0.1,-1,-0.55><-0.1,6,+0.55> translate -2.9*x }    //front pin groove on round side
-            box{<+0.1,-1,-0.6><-0.1,1.1,0.6> translate +2.91*x}     //back pin groove on flat side
-        }
-         pigment{col}   
-    }
-    
-    union{        
-        difference{
-            cylinder{<0,4,0><0,4.5,0> 1.1}                  //metalic axe
-            union{
-                box{<+1.1,4.1,-0.25><-1.1,4.51,+0.25>}      //axe cross grooves
-                box{<-0.25,4.11,-1.1><+0.25,4.51,+1.1>}
-            }
-        }
-        
-        box{<+0.1,0,-0.5><-0.1,4.2,+0.5> translate -2.9*x}          //visible front pin allong the case
-        difference{
-            cylinder{<+0.1,0,0><-0.1,0,0> 0.5 rotate -15*z translate <-2.9,4.2,0>} //top front pin
-            box{<+0.1,0,-0.5><-0.1,4.2,+0.5> translate -3.1*x }    
-        }
-        box{<+0.1,0,-0.5><-0.1,1,+0.5> translate +2.91*x }          //visible back pin allong the case
-        
-        box{<+0.1,-3,-0.5><-0.1,4.3,+0.5> translate 2.54*x}        //flat side pin
-        box{<+0.125,-3,-0.5><-0.125,3.0,+0.5> translate -2.54*x}   //round side pin
-
-        box{<+0.1,-0.35355,-0.35355><-0.1,0.35355,+0.35355> rotate 45*x translate <2.54,-3,0>}         //flat side pin
-        box{<+0.125,-0.35355,-0.35355><-0.125,0.35355,+0.35355> rotate 45*x translate <-2.54,-3,0>}    //round side pin
-        texture{col_silver}
-    }
-    
-    #if(dot=1)
-        cylinder{<2.2,0,0><2.2,4.81,0> 0.4 pigment{White}} //White dot on the top
-    #end
-    
-    rotate 90*y
-}
-#end
-
-
-#macro CAP_TRIM_TZ03F_BLUE()
-CAP_TRIM_TZ03F_GRND(Blue,0)
-#end
-#macro CAP_TRIM_TZ03F_PINK()
-CAP_TRIM_TZ03F_GRND(Pink,0)
-#end
-#macro CAP_TRIM_TZ03F_WHITE()
-CAP_TRIM_TZ03F_GRND(White,0)
-#end
-#macro CAP_TRIM_TZ03F_GREEN()
-CAP_TRIM_TZ03F_GRND(Green,0)
-#end
-#macro CAP_TRIM_TZ03F_ORANGE()
-CAP_TRIM_TZ03F_GRND(Orange,0)
-#end
-#macro CAP_TRIM_TZ03F_RED()
-CAP_TRIM_TZ03F_GRND(Red,0)
-#end
-#macro CAP_TRIM_TZ03F_BROWN()
-CAP_TRIM_TZ03F_GRND(Brown,0)
-#end
-#macro CAP_TRIM_TZ03F_YELLOW()
-CAP_TRIM_TZ03F_GRND(Yellow,0)
-#end
-#macro CAP_TRIM_TZ03F_BLACK()
-CAP_TRIM_TZ03F_GRND(Gray15,0)
-#end
-#macro CAP_TRIM_TZ03F_BLACKDOT()
-CAP_TRIM_TZ03F_GRND(Gray15,1)
-#end
-
-
-/**********************************************************************
-Testing
-**********************************************************************/
-#ifndef(inc_testmode)
-          
-//Size of the Grid Plane (+/- span)
-#local XYZ_span=20;
-
-//Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
-
-// Useful GRIDS:
-#local XYZ_step= 1 ;          // axis increment
-#local XYZ_cnt = 0;           //  loop counter
-#local xyz_thick = 0.05;     // grid line thickness
-
-// GRID PLANES: Remove comment begin/end to activate & select PLANES:
-#while (XYZ_cnt <= XYZ_span)
-
-   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
-   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
-   
-   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
-   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
-   
-   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
-   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
-   
-   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
-   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
-
-   #local XYZ_cnt = XYZ_cnt+XYZ_step;
-#end
-
-camera
-{       
-   #local tt = 40;            //let's you change the distance easily
-   location <-tt,tt,-tt>
-   //location<0,5,-50>        //alternate location
-   look_at <0,0,0>            //best to select the approximate centre of the object
-   angle 30
-}
-
-light_source { <100, 100, -100> White}
-light_source { <-100, 100, -100> White }
-light_source { <-100, 100, 100> White }
-light_source { <100, 100, 100> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-background{Grey}
-
-#end
-
-#end
-//End of Macros

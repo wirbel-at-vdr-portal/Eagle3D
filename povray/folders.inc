@@ -12,6 +12,7 @@
 // add alphabetically.
 #include "BOARDS/folder.inc"
 #include "BUZZER/folder.inc"
+#include "CAPACITOR/folder.inc"
 #include "CONNECTOR/folder.inc"
 #include "CRYSTAL/folder.inc"
 #include "DCDC/folder.inc"
