@@ -12,25 +12,25 @@
 #macro TRIM_TZ03F_BASE(col,dot)
   union {
      difference {
-        union { 
-           difference {          
+        union {
+           difference {
               union {
                  torus { 2.5, 0.5 translate 4.3*y }  //top round
-                 cylinder { <0,0,0> <0,4.3,0> 3 }    //main case   
-                 cylinder { <0,0,0> <0,4.8,0> 2.5 }  //top cover 
-                 } 
-              union {    
+                 cylinder { <0,0,0> <0,4.3,0> 3 }    //main case
+                 cylinder { <0,0,0> <0,4.8,0> 2.5 }  //top cover
+                 }
+              union {
                  box { <0,-0.2,-3.2> <+3.2,5.0,3.2> } //delete back side (flat side)
                 }
-              } 
-           cylinder { <2.5,0,+1.75> <2.5,4.3,+1.75> 0.5 }       //back bottom to top edges
+              }
+           cylinder { <2.5,0,+1.75> <2.5,4.3,+1.75> 0.5 }  //back bottom to top edges
            cylinder { <2.5,0,-1.75> <2.5,4.3,-1.75> 0.5 }
-           sphere { <2.5,4.3,-1.75>, 0.5}                       //back top corners
-           sphere { <2.5,4.3,+1.75>, 0.5}           
-           cylinder { <2.5,4.3,+1.75> <2.5,4.3,-1.75> 0.5}      //back top corner to corner edge
+           sphere { <2.5,4.3,-1.75>, 0.5} //back top corners
+           sphere { <2.5,4.3,+1.75>, 0.5}
+           cylinder { <2.5,4.3,+1.75> <2.5,4.3,-1.75> 0.5} //back top corner to corner edge
            box { <-1.3,0,-0.25> <+1.3,4.3,+0.25> rotate -16.7*y translate<1.3,0,-2.3709>}     //flanks
            box { <-1.3,0,-0.25> <+1.3,4.3,+0.25> rotate +16.7*y translate<1.3,0,+2.3709>}     //flanks
-           prism {0 4.8 4 <0, 2.5>, <2.5, 1.75>, <2.5, -1.75>, <0,-2.5>}  //top cover             
+           prism {0 4.8 4 <0, 2.5>, <2.5, 1.75>, <2.5, -1.75>, <0,-2.5>}  //top cover
            box { <0,0,+1.75> <3,4.3,-1.75>}               //back
            cylinder { <-1.35,4.3,0> <+1.3,4.3,0> 0.5 rotate -16.7*y translate<1.3,0,-2.11>}   //back top corner to main case edges
            cylinder { <-1.35,4.3,0> <+1.3,4.3,0> 0.5 rotate +16.7*y translate<1.3,0,+2.11>}
@@ -44,9 +44,9 @@
            box { <+0.1,-1,-0.55> <-0.1,6,+0.55> translate -2.9*x }    //front pin groove on round side
            box { <+0.1,-1,-0.6> <-0.1,1.1,0.6> translate +2.91*x}     //back pin groove on flat side
            }
-        pigment{col}   
+        pigment{col}
         }
-     union {        
+     union {
         difference {
            cylinder { <0,4,0> <0,4.5,0> 1.1}                  //metalic axe
            union {
@@ -57,7 +57,7 @@
         box { <+0.1,0,-0.5> <-0.1,4.2,+0.5> translate -2.9*x}          //visible front pin allong the case
         difference {
            cylinder { <+0.1,0,0> <-0.1,0,0> 0.5 rotate -15*z translate <-2.9,4.2,0>} //top front pin
-           box { <+0.1,0,-0.5> <-0.1,4.2,+0.5> translate -3.1*x }    
+           box { <+0.1,0,-0.5> <-0.1,4.2,+0.5> translate -3.1*x }
            }
         box { <+0.1,0,-0.5> <-0.1,1,+0.5> translate +2.91*x }          //visible back pin allong the case
         box { <+0.1,-3,-0.5> <-0.1,4.3,+0.5> translate 2.54*x}        //flat side pin

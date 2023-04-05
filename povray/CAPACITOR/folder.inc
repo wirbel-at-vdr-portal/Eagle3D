@@ -4,5 +4,5 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
+#include "CAPACITOR/SMT/Panasonic.inc"
 #include "CAPACITOR/THT/Murata.inc"
-
