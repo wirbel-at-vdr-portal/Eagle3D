@@ -6,3 +6,4 @@
 
 #include "CAPACITOR/SMT/Panasonic.inc"
 #include "CAPACITOR/THT/Murata.inc"
+#include "CAPACITOR/THT/blocktypes.inc"
