@@ -19,7 +19,7 @@
 //height: height of button over case of button
 //color:  color of actual button
 ********************************************************************************************************************************************/
-#macro SWITCH_ALPS_SKHH_V_GRND(dia, height, c)
+#macro SWITCH_ALPS_SKHH_V_BASE(dia, height, c)
 union{
    box{<-3,0,-3><3,2.9,3> pigment{Black}}
    box{<-3,2.9,-3><3,3,3> pigment{Gray50}}
@@ -64,19 +64,19 @@ union{
 
 
 #macro SWITCH_B3F_10XX1()
-SWITCH_ALPS_SKHH_V_GRND(4,1,Black)
+SWITCH_ALPS_SKHH_V_BASE(4,1,Black)
 #end
 #macro SWITCH_SKHH_V_4_3MM_YELL()
-SWITCH_ALPS_SKHH_V_GRND(4,1.3,Yellow)
+SWITCH_ALPS_SKHH_V_BASE(4,1.3,Yellow)
 #end
 #macro SWITCH_SKHH_V_5MM_YELL()
-SWITCH_ALPS_SKHH_V_GRND(4,2,Yellow)
+SWITCH_ALPS_SKHH_V_BASE(4,2,Yellow)
 #end
 #macro SWITCH_SKHH_V_7MM_YELL()
-SWITCH_ALPS_SKHH_V_GRND(4,4,Yellow)
+SWITCH_ALPS_SKHH_V_BASE(4,4,Yellow)
 #end
 #macro SWITCH_SKHH_V_9_5MM_YELL()
-SWITCH_ALPS_SKHH_V_GRND(4,6.5,Yellow)
+SWITCH_ALPS_SKHH_V_BASE(4,6.5,Yellow)
 #end
 
 
@@ -84,7 +84,7 @@ SWITCH_ALPS_SKHH_V_GRND(4,6.5,Yellow)
 //Nigel Eke <nigel@eke.name>
 //Dipswitch
 ********************************************************************************************************************************************/
-#macro SWITCH_DIP_GRND(nrSwitches)
+#macro SWITCH_DIP_BASE(nrSwitches)
   #local pin   = cylinder { <0,-3,0> <0,0,0> .25 texture {T_Gold_5E} }
   #local well  = box { <0,3.7,2> <1,3.91,6> pigment { MediumWood } }
   #local housing = difference { box { <0,0,0> <2*nrSwitches+1,3.9,7.8> }
@@ -137,37 +137,37 @@ SWITCH_ALPS_SKHH_V_GRND(4,6.5,Yellow)
 #end
 
 #macro SWITCH_DIP01()
-SWITCH_DIP_GRND(1)
+SWITCH_DIP_BASE(1)
 #end
 #macro SWITCH_DIP02()
-SWITCH_DIP_GRND(2)
+SWITCH_DIP_BASE(2)
 #end
 #macro SWITCH_DIP03()
-SWITCH_DIP_GRND(3)
+SWITCH_DIP_BASE(3)
 #end
 #macro SWITCH_DIP04()
-SWITCH_DIP_GRND(4)
+SWITCH_DIP_BASE(4)
 #end
 #macro SWITCH_DIP05()
-SWITCH_DIP_GRND(5)
+SWITCH_DIP_BASE(5)
 #end
 #macro SWITCH_DIP06()
-SWITCH_DIP_GRND(6)
+SWITCH_DIP_BASE(6)
 #end
 #macro SWITCH_DIP07()
-SWITCH_DIP_GRND(7)
+SWITCH_DIP_BASE(7)
 #end
 #macro SWITCH_DIP08()
-SWITCH_DIP_GRND(8)
+SWITCH_DIP_BASE(8)
 #end
 #macro SWITCH_DIP09()
-SWITCH_DIP_GRND(9)
+SWITCH_DIP_BASE(9)
 #end
 #macro SWITCH_DIP10()
-SWITCH_DIP_GRND(10)
+SWITCH_DIP_BASE(10)
 #end
 #macro SWITCH_DIP12()
-SWITCH_DIP_GRND(12)
+SWITCH_DIP_BASE(12)
 #end
 
 
@@ -179,7 +179,7 @@ SWITCH_DIP_GRND(12)
 // pintyp=1  smd nach innen gewinkelt
 // pintyp=2  normal
 ********************************************************************************************************************************************/
-#macro SWITCH_DIP_SM_GRND(nrSwitches, pintyp, abmasse)
+#macro SWITCH_DIP_SM_BASE(nrSwitches, pintyp, abmasse)
 /********************************************************************************************************************************************
 // Pin Typ 0,  smd nach außen gewinkelt
 ********************************************************************************************************************************************/
@@ -376,139 +376,139 @@ difference {
 #end
 
 #macro SWITCH_DIP01_SM()
-SWITCH_DIP_SM_GRND(1,0, 0)
+SWITCH_DIP_SM_BASE(1,0, 0)
 #end
 #macro SWITCH_DIP02_SM()
-SWITCH_DIP_SM_GRND(2,0, 0)
+SWITCH_DIP_SM_BASE(2,0, 0)
 #end
 #macro SWITCH_DIP03_SM()
-SWITCH_DIP_SM_GRND(3,0, 0)
+SWITCH_DIP_SM_BASE(3,0, 0)
 #end
 #macro SWITCH_DIP04_SM()
-SWITCH_DIP_SM_GRND(4,0, 0)
+SWITCH_DIP_SM_BASE(4,0, 0)
 #end
 #macro SWITCH_DIP05_SM()
-SWITCH_DIP_SM_GRND(5,0, 0)
+SWITCH_DIP_SM_BASE(5,0, 0)
 #end
 #macro SWITCH_DIP06_SM()
-SWITCH_DIP_SM_GRND(6,0, 0)
+SWITCH_DIP_SM_BASE(6,0, 0)
 #end
 #macro SWITCH_DIP07_SM()
-SWITCH_DIP_SM_GRND(7,0, 0)
+SWITCH_DIP_SM_BASE(7,0, 0)
 #end
 #macro SWITCH_DIP08_SM()
-SWITCH_DIP_SM_GRND(8,0, 0)
+SWITCH_DIP_SM_BASE(8,0, 0)
 #end
 #macro SWITCH_DIP09_SM()
-SWITCH_DIP_SM_GRND(9,0, 0)
+SWITCH_DIP_SM_BASE(9,0, 0)
 #end
 #macro SWITCH_DIP10_SM()
-SWITCH_DIP_SM_GRND(10,0, 0)
+SWITCH_DIP_SM_BASE(10,0, 0)
 #end
 #macro SWITCH_DIP12_SM()
-SWITCH_DIP_SM_GRND(12,0, 0)
+SWITCH_DIP_SM_BASE(12,0, 0)
 #end
 #macro SWITCH_DIP01_SMJ()
-SWITCH_DIP_SM_GRND(1,1, 1)
+SWITCH_DIP_SM_BASE(1,1, 1)
 #end
 #macro SWITCH_DIP02_SMJ()
-SWITCH_DIP_SM_GRND(2,1, 1)
+SWITCH_DIP_SM_BASE(2,1, 1)
 #end
 #macro SWITCH_DIP03_SMJ()
-SWITCH_DIP_SM_GRND(3,1, 1)
+SWITCH_DIP_SM_BASE(3,1, 1)
 #end
 #macro SWITCH_DIP04_SMJ()
-SWITCH_DIP_SM_GRND(4,1, 1)
+SWITCH_DIP_SM_BASE(4,1, 1)
 #end
 #macro SWITCH_DIP05_SMJ()
-SWITCH_DIP_SM_GRND(5,1, 1)
+SWITCH_DIP_SM_BASE(5,1, 1)
 #end
 #macro SWITCH_DIP06_SMJ()
-SWITCH_DIP_SM_GRND(6,1, 1)
+SWITCH_DIP_SM_BASE(6,1, 1)
 #end
 #macro SWITCH_DIP07_SMJ()
-SWITCH_DIP_SM_GRND(7,1, 1)
+SWITCH_DIP_SM_BASE(7,1, 1)
 #end
 #macro SWITCH_DIP08_SMJ()
-SWITCH_DIP_SM_GRND(8,1, 1)
+SWITCH_DIP_SM_BASE(8,1, 1)
 #end
 #macro SWITCH_DIP09_SMJ()
-SWITCH_DIP_SM_GRND(9,1, 1)
+SWITCH_DIP_SM_BASE(9,1, 1)
 #end
 #macro SWITCH_DIP10_SMJ()
-SWITCH_DIP_SM_GRND(10,1, 1)
+SWITCH_DIP_SM_BASE(10,1, 1)
 #end
 #macro SWITCH_DIP12_SMJ()
-SWITCH_DIP_SM_GRND(12,1, 1)
+SWITCH_DIP_SM_BASE(12,1, 1)
 #end
 #macro SWITCH_DIP01_SMV()
-SWITCH_DIP_SM_GRND(1,2, 2)
+SWITCH_DIP_SM_BASE(1,2, 2)
 #end
 #macro SWITCH_DIP02_SMV()
-SWITCH_DIP_SM_GRND(2,2, 2)
+SWITCH_DIP_SM_BASE(2,2, 2)
 #end
 #macro SWITCH_DIP03_SMV()
-SWITCH_DIP_SM_GRND(3,2, 2)
+SWITCH_DIP_SM_BASE(3,2, 2)
 #end
 #macro SWITCH_DIP04_SMV()
-SWITCH_DIP_SM_GRND(4,2, 2)
+SWITCH_DIP_SM_BASE(4,2, 2)
 #end
 #macro SWITCH_DIP05_SMV()
-SWITCH_DIP_SM_GRND(5,2, 2)
+SWITCH_DIP_SM_BASE(5,2, 2)
 #end
 #macro SWITCH_DIP06_SMV()
-SWITCH_DIP_SM_GRND(6,2, 2)
+SWITCH_DIP_SM_BASE(6,2, 2)
 #end
 #macro SWITCH_DIP07_SMV()
-SWITCH_DIP_SM_GRND(7,2, 2)
+SWITCH_DIP_SM_BASE(7,2, 2)
 #end
 #macro SWITCH_DIP08_SMV()
-SWITCH_DIP_SM_GRND(8,2, 2)
+SWITCH_DIP_SM_BASE(8,2, 2)
 #end
 #macro SWITCH_DIP09_SMV()
-SWITCH_DIP_SM_GRND(9,2, 2)
+SWITCH_DIP_SM_BASE(9,2, 2)
 #end
 #macro SWITCH_DIP10_SMV()
-SWITCH_DIP_SM_GRND(10,2, 2)
+SWITCH_DIP_SM_BASE(10,2, 2)
 #end
 #macro SWITCH_DIP12_SMV()
-SWITCH_DIP_SM_GRND(12,2, 2)
+SWITCH_DIP_SM_BASE(12,2, 2)
 #end
 #macro SWITCH_DIP04_SMV1()
-SWITCH_DIP_SM_GRND(4,2, 3)
+SWITCH_DIP_SM_BASE(4,2, 3)
 #end
 #macro SWITCH_DIP08_SMV1()
-SWITCH_DIP_SM_GRND(8,2, 3)
+SWITCH_DIP_SM_BASE(8,2, 3)
 #end
 #macro SWITCH_DIP01_SMV2()
-SWITCH_DIP_SM_GRND(1,2, 4)
+SWITCH_DIP_SM_BASE(1,2, 4)
 #end
 #macro SWITCH_DIP02_SMV2()
-SWITCH_DIP_SM_GRND(2,2, 4)
+SWITCH_DIP_SM_BASE(2,2, 4)
 #end
 #macro SWITCH_DIP03_SMV2()
-SWITCH_DIP_SM_GRND(3,2, 4)
+SWITCH_DIP_SM_BASE(3,2, 4)
 #end
 #macro SWITCH_DIP04_SMV2()
-SWITCH_DIP_SM_GRND(4,2, 4)
+SWITCH_DIP_SM_BASE(4,2, 4)
 #end
 #macro SWITCH_DIP05_SMV2()
-SWITCH_DIP_SM_GRND(5,2, 4)
+SWITCH_DIP_SM_BASE(5,2, 4)
 #end
 #macro SWITCH_DIP06_SMV2()
-SWITCH_DIP_SM_GRND(6,2, 4)
+SWITCH_DIP_SM_BASE(6,2, 4)
 #end
 #macro SWITCH_DIP07_SMV2()
-SWITCH_DIP_SM_GRND(7,2, 4)
+SWITCH_DIP_SM_BASE(7,2, 4)
 #end
 #macro SWITCH_DIP08_SMV2()
-SWITCH_DIP_SM_GRND(8,2, 4)
+SWITCH_DIP_SM_BASE(8,2, 4)
 #end
 #macro SWITCH_DIP09_SMV2()
-SWITCH_DIP_SM_GRND(9,2, 4)
+SWITCH_DIP_SM_BASE(9,2, 4)
 #end
 #macro SWITCH_DIP10_SMV2()
-SWITCH_DIP_SM_GRND(10,2, 4)
+SWITCH_DIP_SM_BASE(10,2, 4)
 #end
 
 
@@ -529,7 +529,7 @@ SWITCH_DIP_SM_GRND(10,2, 4)
 // Circuit=1-3 ActuatorType=1-3 ActuatorPos=1-3 Bushing=1-3 T=1..20 Material=1-2 PAC=1-3
 // parameters are took in the same order than datasheet
 ********************************************************************************************************************************************/
-#macro SWITCH_ITTE_GRND(Circuit,ActuatorType,ActuatorPos,Bushing,T,Material,PAC)
+#macro SWITCH_ITTE_BASE(Circuit,ActuatorType,ActuatorPos,Bushing,T,Material,PAC)
 // Case
 #macro ITT_CASE(Circuit,Pos) // Pos=1 actuator on top Pos=2 actuator H  Pos=3 actuator V
     #if(Circuit=1)
@@ -967,375 +967,375 @@ union{
 #end
 // Fonction 1 circuit pos 1, Actuator M, Bushing D1
 #macro SWITCH_ITTE_E101MD1ABE()           
-SWITCH_ITTE_GRND(1,1,1,1,1,1,0)
+SWITCH_ITTE_BASE(1,1,1,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E101MD1AV2BE()
-SWITCH_ITTE_GRND(1,1,1,1,2,1,0)
+SWITCH_ITTE_BASE(1,1,1,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E101MD1CBE()
-SWITCH_ITTE_GRND(1,1,1,1,3,1,0)
+SWITCH_ITTE_BASE(1,1,1,1,3,1,0)
 #end
 // Fonction 2 circuits pos 1, Actuator M, Bushing D1
 #macro SWITCH_ITTE_E201MD1ABE()           
-SWITCH_ITTE_GRND(2,1,1,1,1,1,0)
+SWITCH_ITTE_BASE(2,1,1,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E201MD1AV2BE()
-SWITCH_ITTE_GRND(2,1,1,1,2,1,0)
+SWITCH_ITTE_BASE(2,1,1,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E201MD1CBE()
-SWITCH_ITTE_GRND(2,1,1,1,3,1,0)
+SWITCH_ITTE_BASE(2,1,1,1,3,1,0)
 #end
 // Fonction 3 circuits pos 1, Actuator M, Bushing D1
 #macro SWITCH_ITTE_E301MD1ABE()           
-SWITCH_ITTE_GRND(3,1,1,1,1,1,0)
+SWITCH_ITTE_BASE(3,1,1,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E301MD1AV2BE()
-SWITCH_ITTE_GRND(3,1,1,1,2,1,0)
+SWITCH_ITTE_BASE(3,1,1,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E301MD1CBE()
-SWITCH_ITTE_GRND(3,1,1,1,3,1,0)
+SWITCH_ITTE_BASE(3,1,1,1,3,1,0)
 #end
 // Fonction 1 circuit pos 1, Actuator M, Bushing D9
 #macro SWITCH_ITTE_E101MD9ABE()           
-SWITCH_ITTE_GRND(1,1,1,3,1,1,0)
+SWITCH_ITTE_BASE(1,1,1,3,1,1,0)
 #end
 #macro SWITCH_ITTE_E101MD9AV2BE()
-SWITCH_ITTE_GRND(1,1,1,3,2,1,0)
+SWITCH_ITTE_BASE(1,1,1,3,2,1,0)
 #end
 #macro SWITCH_ITTE_E101MD9CBE()
-SWITCH_ITTE_GRND(1,1,1,3,3,1,0)
+SWITCH_ITTE_BASE(1,1,1,3,3,1,0)
 #end
 // Fonction 2 circuits pos 1, Actuator M, Bushing D9
 #macro SWITCH_ITTE_E201MD9ABE()           
-SWITCH_ITTE_GRND(2,1,1,3,1,1,0)
+SWITCH_ITTE_BASE(2,1,1,3,1,1,0)
 #end
 #macro SWITCH_ITTE_E201MD9AV2BE()
-SWITCH_ITTE_GRND(2,1,1,3,2,1,0)
+SWITCH_ITTE_BASE(2,1,1,3,2,1,0)
 #end
 #macro SWITCH_ITTE_E201MD9CBE()
-SWITCH_ITTE_GRND(2,1,1,3,3,1,0)
+SWITCH_ITTE_BASE(2,1,1,3,3,1,0)
 #end
 // Fonction 1 circuit pos 1, Actuator M, Bushing Y
 #macro SWITCH_ITTE_E101MYCBE()           
-SWITCH_ITTE_GRND(1,1,1,4,3,1,0)
+SWITCH_ITTE_BASE(1,1,1,4,3,1,0)
 #end
 // Fonction 2 circuits pos 1, Actuator M, Bushing Y
 #macro SWITCH_ITTE_E201MYCBE()
-SWITCH_ITTE_GRND(2,1,1,4,3,1,0)
+SWITCH_ITTE_BASE(2,1,1,4,3,1,0)
 #end
 // Fonction 3 circuits pos 1, Actuator M, Bushing Y
 #macro SWITCH_ITTE_E301MYCBE()
-SWITCH_ITTE_GRND(3,1,1,4,3,1,0)
+SWITCH_ITTE_BASE(3,1,1,4,3,1,0)
 #end
 // Fonction 1 circuit pos 1, Actuator S, Bushing D1
 #macro SWITCH_ITTE_E101SD1ABE()           
-SWITCH_ITTE_GRND(1,2,1,1,1,1,0)
+SWITCH_ITTE_BASE(1,2,1,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E101SD1AV2BE()
-SWITCH_ITTE_GRND(1,2,1,1,2,1,0)
+SWITCH_ITTE_BASE(1,2,1,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E101SD1CBE()
-SWITCH_ITTE_GRND(1,2,1,1,3,1,0)
+SWITCH_ITTE_BASE(1,2,1,1,3,1,0)
 #end
 // Fonction 2 circuits pos 1, Actuator S, Bushing D1
 #macro SWITCH_ITTE_E201SD1ABE()           
-SWITCH_ITTE_GRND(2,2,1,1,1,1,0)
+SWITCH_ITTE_BASE(2,2,1,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E201SD1AV2BE()
-SWITCH_ITTE_GRND(2,2,1,1,2,1,0)
+SWITCH_ITTE_BASE(2,2,1,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E201SD1CBE()
-SWITCH_ITTE_GRND(2,2,1,1,3,1,0)
+SWITCH_ITTE_BASE(2,2,1,1,3,1,0)
 #end
 // Fonction 3 circuits pos 1, Actuator S, Bushing D1
 #macro SWITCH_ITTE_E301SD1ABE()           
-SWITCH_ITTE_GRND(3,2,1,1,1,1,0)
+SWITCH_ITTE_BASE(3,2,1,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E301SD1AV2BE()
-SWITCH_ITTE_GRND(3,2,1,1,2,1,0)
+SWITCH_ITTE_BASE(3,2,1,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E301SD1CBE()
-SWITCH_ITTE_GRND(3,2,1,1,3,1,0)
+SWITCH_ITTE_BASE(3,2,1,1,3,1,0)
 #end
 // Fonction 1 circuit pos 1, Actuator S, Bushing D9
 #macro SWITCH_ITTE_E101SD9ABE()           
-SWITCH_ITTE_GRND(1,2,1,3,1,1,0)
+SWITCH_ITTE_BASE(1,2,1,3,1,1,0)
 #end
 #macro SWITCH_ITTE_E101SD9AV2BE()
-SWITCH_ITTE_GRND(1,2,1,3,2,1,0)
+SWITCH_ITTE_BASE(1,2,1,3,2,1,0)
 #end
 #macro SWITCH_ITTE_E101SD9CBE()
-SWITCH_ITTE_GRND(1,2,1,3,3,1,0)
+SWITCH_ITTE_BASE(1,2,1,3,3,1,0)
 #end
 // Fonction 2 circuits pos 1, Actuator S, Bushing D9
 #macro SWITCH_ITTE_E201SD9ABE()           
-SWITCH_ITTE_GRND(2,2,1,3,1,1,0)
+SWITCH_ITTE_BASE(2,2,1,3,1,1,0)
 #end
 #macro SWITCH_ITTE_E201SD9AV2BE()
-SWITCH_ITTE_GRND(2,2,1,3,2,1,0)
+SWITCH_ITTE_BASE(2,2,1,3,2,1,0)
 #end
 #macro SWITCH_ITTE_E201SD9CBE()
-SWITCH_ITTE_GRND(2,2,1,3,3,1,0)
+SWITCH_ITTE_BASE(2,2,1,3,3,1,0)
 #end
 // Fonction 1 circuit pos 1, Actuator S, Bushing Y
 #macro SWITCH_ITTE_E101SYCBE()
-SWITCH_ITTE_GRND(1,2,1,4,3,1,0)
+SWITCH_ITTE_BASE(1,2,1,4,3,1,0)
 #end
 // Fonction 2 circuits pos 1, Actuator S, Bushing Y
 #macro SWITCH_ITTE_E201SYCBE()
-SWITCH_ITTE_GRND(2,2,1,4,3,1,0)
+SWITCH_ITTE_BASE(2,2,1,4,3,1,0)
 #end
 // Fonction 3 circuits pos 1, Actuator S, Bushing Y
 #macro SWITCH_ITTE_E301SYCBE()
-SWITCH_ITTE_GRND(3,2,1,4,3,1,3)
+SWITCH_ITTE_BASE(3,2,1,4,3,1,3)
 #end
 // Fonction 1 circuit pos 1, Actuator L3, Bushing D1
 #macro SWITCH_ITTE_E101L3D1ABE()           
-SWITCH_ITTE_GRND(1,3,1,1,1,1,3)
+SWITCH_ITTE_BASE(1,3,1,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E101L3D1AV2BE()
-SWITCH_ITTE_GRND(1,3,1,1,2,1,3)
+SWITCH_ITTE_BASE(1,3,1,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E101L3D1CBE()
-SWITCH_ITTE_GRND(1,3,1,1,3,1,3)
+SWITCH_ITTE_BASE(1,3,1,1,3,1,3)
 #end
 // Fonction 2 circuits pos 1, Actuator L3, Bushing D1
 #macro SWITCH_ITTE_E201L3D1ABE()           
-SWITCH_ITTE_GRND(2,3,1,1,1,1,3)
+SWITCH_ITTE_BASE(2,3,1,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E201L3D1AV2BE()
-SWITCH_ITTE_GRND(2,3,1,1,2,1,3)
+SWITCH_ITTE_BASE(2,3,1,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E201L3D1CBE()
-SWITCH_ITTE_GRND(2,3,1,1,3,1,3)
+SWITCH_ITTE_BASE(2,3,1,1,3,1,3)
 #end
 // Fonction 3 circuits pos 1, Actuator L3, Bushing D1
 #macro SWITCH_ITTE_E301L3D1ABE()           
-SWITCH_ITTE_GRND(3,3,1,1,1,1,3)
+SWITCH_ITTE_BASE(3,3,1,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E301L3D1AV2BE()
-SWITCH_ITTE_GRND(3,3,1,1,2,1,3)
+SWITCH_ITTE_BASE(3,3,1,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E301L3D1CBE()
-SWITCH_ITTE_GRND(3,3,1,1,3,1,3)
+SWITCH_ITTE_BASE(3,3,1,1,3,1,3)
 #end
 // Fonction 1 circuit pos 1, Actuator L3, Bushing D9
 #macro SWITCH_ITTE_E101L3D9ABE()           
-SWITCH_ITTE_GRND(1,3,1,3,1,1,3)
+SWITCH_ITTE_BASE(1,3,1,3,1,1,3)
 #end
 #macro SWITCH_ITTE_E101L3D9AV2BE()
-SWITCH_ITTE_GRND(1,3,1,3,2,1,3)
+SWITCH_ITTE_BASE(1,3,1,3,2,1,3)
 #end
 #macro SWITCH_ITTE_E101L3D9CBE()
-SWITCH_ITTE_GRND(1,3,1,3,3,1,3)
+SWITCH_ITTE_BASE(1,3,1,3,3,1,3)
 #end
 // Fonction 2 circuits pos 1, Actuator L3, Bushing D9
 #macro SWITCH_ITTE_E201L3D9ABE()           
-SWITCH_ITTE_GRND(2,3,1,3,1,1,3)
+SWITCH_ITTE_BASE(2,3,1,3,1,1,3)
 #end
 #macro SWITCH_ITTE_E201L3D9AV2BE()
-SWITCH_ITTE_GRND(2,3,1,3,2,1,3)
+SWITCH_ITTE_BASE(2,3,1,3,2,1,3)
 #end
 #macro SWITCH_ITTE_E201L3D9CBE()
-SWITCH_ITTE_GRND(2,3,1,3,3,1,3)
+SWITCH_ITTE_BASE(2,3,1,3,3,1,3)
 #end
 // Fonction 1 circuit pos 1, Actuator L3, Bushing Y
 #macro SWITCH_ITTE_E101L3YCBE()
-SWITCH_ITTE_GRND(1,3,1,4,3,1,3)
+SWITCH_ITTE_BASE(1,3,1,4,3,1,3)
 #end
 // Fonction 2 circuits pos 1, Actuator L3, Bushing Y
 #macro SWITCH_ITTE_E201L3YCBE()
-SWITCH_ITTE_GRND(2,3,1,4,3,1,3)
+SWITCH_ITTE_BASE(2,3,1,4,3,1,3)
 #end
 // Fonction 3 circuits pos 1, Actuator L3, Bushing Y
 #macro SWITCH_ITTE_E301L3YCBE()
-SWITCH_ITTE_GRND(3,3,1,4,3,1,3)
+SWITCH_ITTE_BASE(3,3,1,4,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator M, Bushing D1
 #macro SWITCH_ITTE_E105MD1ABE()           
-SWITCH_ITTE_GRND(1,1,2,1,1,1,0)
+SWITCH_ITTE_BASE(1,1,2,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E105MD1AV2BE()
-SWITCH_ITTE_GRND(1,1,2,1,2,1,0)
+SWITCH_ITTE_BASE(1,1,2,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E105MD1CBE()
-SWITCH_ITTE_GRND(1,1,2,1,3,1,0)
+SWITCH_ITTE_BASE(1,1,2,1,3,1,0)
 #end
 // Fonction 2 circuits pos 2, Actuator M, Bushing D1
 #macro SWITCH_ITTE_E205MD1ABE()           
-SWITCH_ITTE_GRND(2,1,2,1,1,1,0)
+SWITCH_ITTE_BASE(2,1,2,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E205MD1AV2BE()
-SWITCH_ITTE_GRND(2,1,2,1,2,1,0)
+SWITCH_ITTE_BASE(2,1,2,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E205MD1CBE()
-SWITCH_ITTE_GRND(2,1,2,1,3,1,0)
+SWITCH_ITTE_BASE(2,1,2,1,3,1,0)
 #end
 // Fonction 3 circuits pos 2, Actuator M, Bushing D1
 #macro SWITCH_ITTE_E305MD1ABE()           
-SWITCH_ITTE_GRND(3,1,2,1,1,1,3)
+SWITCH_ITTE_BASE(3,1,2,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E305MD1AV2BE()
-SWITCH_ITTE_GRND(3,1,2,1,2,1,3)
+SWITCH_ITTE_BASE(3,1,2,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E305MD1CBE()
-SWITCH_ITTE_GRND(3,1,2,1,3,1,3)
+SWITCH_ITTE_BASE(3,1,2,1,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator M, Bushing D9
 #macro SWITCH_ITTE_E105MD9ABE()           
-SWITCH_ITTE_GRND(1,1,2,3,1,1,3)
+SWITCH_ITTE_BASE(1,1,2,3,1,1,3)
 #end
 #macro SWITCH_ITTE_E105MD9AV2BE()
-SWITCH_ITTE_GRND(1,1,2,3,2,1,3)
+SWITCH_ITTE_BASE(1,1,2,3,2,1,3)
 #end
 #macro SWITCH_ITTE_E105MD9CBE()
-SWITCH_ITTE_GRND(1,1,2,3,3,1,3)
+SWITCH_ITTE_BASE(1,1,2,3,3,1,3)
 #end
 // Fonction 2 circuits pos 2, Actuator M, Bushing D9
 #macro SWITCH_ITTE_E205MD9ABE()           
-SWITCH_ITTE_GRND(2,1,2,3,1,1,3)
+SWITCH_ITTE_BASE(2,1,2,3,1,1,3)
 #end
 #macro SWITCH_ITTE_E205MD9AV2BE()
-SWITCH_ITTE_GRND(2,1,2,3,2,1,3)
+SWITCH_ITTE_BASE(2,1,2,3,2,1,3)
 #end
 #macro SWITCH_ITTE_E205MD9CBE()
-SWITCH_ITTE_GRND(2,1,2,3,3,1,3)
+SWITCH_ITTE_BASE(2,1,2,3,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator M, Bushing Y
 #macro SWITCH_ITTE_E105MYCBE()
-SWITCH_ITTE_GRND(1,1,2,4,3,1,0)
+SWITCH_ITTE_BASE(1,1,2,4,3,1,0)
 #end
 // Fonction 2 circuits pos 2, Actuator M, Bushing Y
 #macro SWITCH_ITTE_E205MYCBE()
-SWITCH_ITTE_GRND(2,1,2,4,3,1,0)
+SWITCH_ITTE_BASE(2,1,2,4,3,1,0)
 #end
 // Fonction 3 circuits pos 2, Actuator M, Bushing Y
 #macro SWITCH_ITTE_E305MYCBE()
-SWITCH_ITTE_GRND(3,1,2,4,3,1,3)
+SWITCH_ITTE_BASE(3,1,2,4,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator S, Bushing D1
 #macro SWITCH_ITTE_E105SD1ABE()           
-SWITCH_ITTE_GRND(1,2,2,1,1,1,0)
+SWITCH_ITTE_BASE(1,2,2,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E105SD1AV2BE()
-SWITCH_ITTE_GRND(1,2,2,1,2,1,0)
+SWITCH_ITTE_BASE(1,2,2,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E105SD1CBE()
-SWITCH_ITTE_GRND(1,2,2,1,3,1,0)
+SWITCH_ITTE_BASE(1,2,2,1,3,1,0)
 #end
 // Fonction 2 circuits pos 2, Actuator S, Bushing D1
 #macro SWITCH_ITTE_E205SD1ABE()           
-SWITCH_ITTE_GRND(2,2,2,1,1,1,0)
+SWITCH_ITTE_BASE(2,2,2,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E205SD1AV2BE()
-SWITCH_ITTE_GRND(2,2,2,1,2,1,0)
+SWITCH_ITTE_BASE(2,2,2,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E205SD1CBE()
-SWITCH_ITTE_GRND(2,2,2,1,3,1,0)
+SWITCH_ITTE_BASE(2,2,2,1,3,1,0)
 #end
 // Fonction 3 circuits pos 2, Actuator S, Bushing D1
 #macro SWITCH_ITTE_E305SD1ABE()           
-SWITCH_ITTE_GRND(3,2,2,1,1,1,0)
+SWITCH_ITTE_BASE(3,2,2,1,1,1,0)
 #end
 #macro SWITCH_ITTE_E305SD1AV2BE()
-SWITCH_ITTE_GRND(3,2,2,1,2,1,0)
+SWITCH_ITTE_BASE(3,2,2,1,2,1,0)
 #end
 #macro SWITCH_ITTE_E305SD1CBE()
-SWITCH_ITTE_GRND(3,2,2,1,3,1,0)
+SWITCH_ITTE_BASE(3,2,2,1,3,1,0)
 #end
 // Fonction 1 circuit pos 2, Actuator S, Bushing D9
 #macro SWITCH_ITTE_E105SD9ABE()           
-SWITCH_ITTE_GRND(1,2,2,3,1,1,0)
+SWITCH_ITTE_BASE(1,2,2,3,1,1,0)
 #end
 #macro SWITCH_ITTE_E105SD9AV2BE()
-SWITCH_ITTE_GRND(1,2,2,3,2,1,0)
+SWITCH_ITTE_BASE(1,2,2,3,2,1,0)
 #end
 #macro SWITCH_ITTE_E105SD9CBE()
-SWITCH_ITTE_GRND(1,2,2,3,3,1,0)
+SWITCH_ITTE_BASE(1,2,2,3,3,1,0)
 #end
 // Fonction 2 circuits pos 2, Actuator S, Bushing D9
 #macro SWITCH_ITTE_E205SD9ABE()           
-SWITCH_ITTE_GRND(2,2,2,3,1,1,0)
+SWITCH_ITTE_BASE(2,2,2,3,1,1,0)
 #end
 #macro SWITCH_ITTE_E205SD9AV2BE()
-SWITCH_ITTE_GRND(2,2,2,3,2,1,0)
+SWITCH_ITTE_BASE(2,2,2,3,2,1,0)
 #end
 #macro SWITCH_ITTE_E205SD9CBE()
-SWITCH_ITTE_GRND(2,2,2,3,3,1,0)
+SWITCH_ITTE_BASE(2,2,2,3,3,1,0)
 #end
 // Fonction 1 circuit pos 2, Actuator S, Bushing Y
 #macro SWITCH_ITTE_E105SYCBE()
-SWITCH_ITTE_GRND(1,2,2,4,3,1,0)
+SWITCH_ITTE_BASE(1,2,2,4,3,1,0)
 #end
 // Fonction 2 circuits pos 2, Actuator S, Bushing Y
 #macro SWITCH_ITTE_E205SYCBE()
-SWITCH_ITTE_GRND(2,2,2,4,3,1,0)
+SWITCH_ITTE_BASE(2,2,2,4,3,1,0)
 #end
 // Fonction 3 circuits pos 2, Actuator S, Bushing Y
 #macro SWITCH_ITTE_E305SYCBE()
-SWITCH_ITTE_GRND(3,2,2,4,3,1,3)
+SWITCH_ITTE_BASE(3,2,2,4,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator L3, Bushing D1
 #macro SWITCH_ITTE_E105L3D1ABE()           
-SWITCH_ITTE_GRND(1,3,2,1,1,1,3)
+SWITCH_ITTE_BASE(1,3,2,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E105L3D1AV2BE()
-SWITCH_ITTE_GRND(1,3,2,1,2,1,3)
+SWITCH_ITTE_BASE(1,3,2,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E105L3D1CBE()
-SWITCH_ITTE_GRND(1,3,2,1,3,1,3)
+SWITCH_ITTE_BASE(1,3,2,1,3,1,3)
 #end
 // Fonction 2 circuits pos 2, Actuator L3, Bushing D1
 #macro SWITCH_ITTE_E205L3D1ABE()           
-SWITCH_ITTE_GRND(2,3,2,1,1,1,3)
+SWITCH_ITTE_BASE(2,3,2,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E205L3D1AV2BE()
-SWITCH_ITTE_GRND(2,3,2,1,2,1,3)
+SWITCH_ITTE_BASE(2,3,2,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E205L3D1CBE()
-SWITCH_ITTE_GRND(2,3,2,1,3,1,3)
+SWITCH_ITTE_BASE(2,3,2,1,3,1,3)
 #end
 // Fonction 3 circuits pos 2, Actuator L3, Bushing D1
 #macro SWITCH_ITTE_E305L3D1ABE()           
-SWITCH_ITTE_GRND(3,3,2,1,1,1,3)
+SWITCH_ITTE_BASE(3,3,2,1,1,1,3)
 #end
 #macro SWITCH_ITTE_E305L3D1AV2BE()
-SWITCH_ITTE_GRND(3,3,2,1,2,1,3)
+SWITCH_ITTE_BASE(3,3,2,1,2,1,3)
 #end
 #macro SWITCH_ITTE_E305L3D1CBE()
-SWITCH_ITTE_GRND(3,3,2,1,3,1,3)
+SWITCH_ITTE_BASE(3,3,2,1,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator L3, Bushing D9
 #macro SWITCH_ITTE_E105L3D9ABE()           
-SWITCH_ITTE_GRND(1,3,2,3,1,1,3)
+SWITCH_ITTE_BASE(1,3,2,3,1,1,3)
 #end
 #macro SWITCH_ITTE_E105L3D9AV2BE()
-SWITCH_ITTE_GRND(1,3,2,3,2,1,3)
+SWITCH_ITTE_BASE(1,3,2,3,2,1,3)
 #end
 #macro SWITCH_ITTE_E105L3D9CBE()
-SWITCH_ITTE_GRND(1,3,2,3,3,1,3)
+SWITCH_ITTE_BASE(1,3,2,3,3,1,3)
 #end
 // Fonction 2 circuits pos 2, Actuator L3, Bushing D9
 #macro SWITCH_ITTE_E205L3D9ABE()           
-SWITCH_ITTE_GRND(2,3,2,3,1,1,3)
+SWITCH_ITTE_BASE(2,3,2,3,1,1,3)
 #end
 #macro SWITCH_ITTE_E205L3D9AV2BE()
-SWITCH_ITTE_GRND(2,3,2,3,2,1,3)
+SWITCH_ITTE_BASE(2,3,2,3,2,1,3)
 #end
 #macro SWITCH_ITTE_E205L3D9CBE()
-SWITCH_ITTE_GRND(2,3,2,3,3,1,3)
+SWITCH_ITTE_BASE(2,3,2,3,3,1,3)
 #end
 // Fonction 1 circuit pos 2, Actuator L3, Bushing Y
 #macro SWITCH_ITTE_E105L3YCBE()
-SWITCH_ITTE_GRND(1,3,2,4,3,1,3)
+SWITCH_ITTE_BASE(1,3,2,4,3,1,3)
 #end
 // Fonction 2 circuits pos 2, Actuator L3, Bushing Y
 #macro SWITCH_ITTE_E205L3YCBE()
-SWITCH_ITTE_GRND(2,3,2,4,3,1,3)
+SWITCH_ITTE_BASE(2,3,2,4,3,1,3)
 #end
 // Fonction 3 circuits pos 2, Actuator L3, Bushing Y
 #macro SWITCH_ITTE_E305L3YCBE()
-SWITCH_ITTE_GRND(3,3,2,4,3,1,3)
+SWITCH_ITTE_BASE(3,3,2,4,3,1,3)
 #end
 
 
@@ -1343,7 +1343,7 @@ SWITCH_ITTE_GRND(3,3,2,4,3,1,3)
 //Macro für Taster 6x6
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
-#macro SWITCH_PUSH_BUTTON_6X6_GRND(col)
+#macro SWITCH_PUSH_BUTTON_6X6_BASE(col)
 union{
  box {<-3,   0, -3>
       < 3, 3.4,  3>
@@ -1397,19 +1397,19 @@ union{
 #end
 
 #macro SWITCH_PUSH_BUTTON_6X6_RED()
-SWITCH_PUSH_BUTTON_6X6_GRND(Red)
+SWITCH_PUSH_BUTTON_6X6_BASE(Red)
 #end
 #macro SWITCH_PUSH_BUTTON_6X6_GREEN()
-SWITCH_PUSH_BUTTON_6X6_GRND(Green)
+SWITCH_PUSH_BUTTON_6X6_BASE(Green)
 #end
 #macro SWITCH_PUSH_BUTTON_6X6_BLUE()
-SWITCH_PUSH_BUTTON_6X6_GRND(Blue)
+SWITCH_PUSH_BUTTON_6X6_BASE(Blue)
 #end
 #macro SWITCH_PUSH_BUTTON_6X6_BLACK()
-SWITCH_PUSH_BUTTON_6X6_GRND(Black)
+SWITCH_PUSH_BUTTON_6X6_BASE(Black)
 #end
 #macro SWITCH_PUSH_BUTTON_6X6_WHITE()
-SWITCH_PUSH_BUTTON_6X6_GRND(White)
+SWITCH_PUSH_BUTTON_6X6_BASE(White)
 #end
 
 
@@ -1420,7 +1420,7 @@ SWITCH_PUSH_BUTTON_6X6_GRND(White)
 // dia_top = Durchmesser des Tasters am oberen Ende
 // Benutzt Makro "IC_SMD_PIN" aus "ic.inc"
 ********************************************************************************************************************************************/
-#macro SWITCH_PUSH_BUTTON_LSH_GRND(height,dia_top)
+#macro SWITCH_PUSH_BUTTON_LSH_BASE(height,dia_top)
 // Makro für LSH-Grundkörper (Quader mit abgerundeten senkrechten Kanten)
 // Erstellt von Oliver Saal (osaal@gmx.de) 22.09.2003
 // size_x = Länge
@@ -1461,27 +1461,27 @@ union
 
 // Schurter-Best-Nr. LSH 1301.9314, Reichelt-Best.Nr.: Taster 9314 Höhe 4,3mm
 #macro SWITCH_PUSH_BUTTON_LSH43()
-SWITCH_PUSH_BUTTON_LSH_GRND(4.3, 3.4)
+SWITCH_PUSH_BUTTON_LSH_BASE(4.3, 3.4)
 #end
 // Schurter-Best-Nr. LSH 1301.9315, Reichelt-Best.Nr.: Taster 9315 Höhe 5,0mm
 #macro SWITCH_PUSH_BUTTON_LSH50()
-SWITCH_PUSH_BUTTON_LSH_GRND(5.0, 3.4)
+SWITCH_PUSH_BUTTON_LSH_BASE(5.0, 3.4)
 #end
 // Schurter-Best-Nr. LSH 1301.9316, Reichelt-Best.Nr.: Taster 9316 Höhe 7,0mm
 #macro SWITCH_PUSH_BUTTON_LSH70()
-SWITCH_PUSH_BUTTON_LSH_GRND(7.0, 3.2)
+SWITCH_PUSH_BUTTON_LSH_BASE(7.0, 3.2)
 #end
 // Schurter-Best-Nr. LSH 1301.9318, Reichelt-Best.Nr.: Taster 9318 Höhe 8,0mm
 #macro SWITCH_PUSH_BUTTON_LSH80()
-SWITCH_PUSH_BUTTON_LSH_GRND(8.0, 3.2)
+SWITCH_PUSH_BUTTON_LSH_BASE(8.0, 3.2)
 #end
 // Schurter-Best-Nr. LSH 1301.9319, Reichelt-Best.Nr.: Taster 9319 Höhe 9,5mm
 #macro SWITCH_PUSH_BUTTON_LSH95()
-SWITCH_PUSH_BUTTON_LSH_GRND(9.5, 3.0)
+SWITCH_PUSH_BUTTON_LSH_BASE(9.5, 3.0)
 #end
 // Schurter-Best-Nr. LSH 1301.9320, Reichelt-Best.Nr.: Taster 9320 Höhe 12,5mm
 #macro SWITCH_PUSH_BUTTON_LSH125()
-SWITCH_PUSH_BUTTON_LSH_GRND(12.5, 3.0)
+SWITCH_PUSH_BUTTON_LSH_BASE(12.5, 3.0)
 #end
 
 
@@ -1489,7 +1489,7 @@ SWITCH_PUSH_BUTTON_LSH_GRND(12.5, 3.0)
 //Nigel Eke <nigel@eke.name>
 //Rotary-DIP
 ********************************************************************************************************************************************/
-#macro SWITCH_ROTARYDIP_GRND(nrPositions, V)
+#macro SWITCH_ROTARYDIP_BASE(nrPositions, V)
   #local pin   = cylinder { <0,-3,0> <0,0,0> .25 texture{col_gold} }
   #local dial  = cylinder { <0,3.75,0> <0,3.91,0> 1.5 pigment { NewTan } }
   #local arrow = union { box { <-.25,3.76,-1> <.25,4,.75> }
@@ -1562,23 +1562,23 @@ union {
 #end
 
 #macro SWITCH_ROTARYDIP10()
-SWITCH_ROTARYDIP_GRND(10, 0)
+SWITCH_ROTARYDIP_BASE(10, 0)
 #end
 #macro SWITCH_ROTARYDIP16()
-SWITCH_ROTARYDIP_GRND(16, 0)
+SWITCH_ROTARYDIP_BASE(16, 0)
 #end
 #macro SWITCH_ROTARYDIP10_1()
-SWITCH_ROTARYDIP_GRND(10, 1)
+SWITCH_ROTARYDIP_BASE(10, 1)
 #end
 #macro SWITCH_ROTARYDIP16_1()
-SWITCH_ROTARYDIP_GRND(16, 1)
+SWITCH_ROTARYDIP_BASE(16, 1)
 #end
 
 
 /********************************************************************************************************************************************
 //Rotary encoder EVQVX from Panasonic
 ********************************************************************************************************************************************/
-#macro SWITCH_ROTENC_PANASONIC_EVQVX_GRND(height)
+#macro SWITCH_ROTENC_PANASONIC_EVQVX_BASE(height)
 union{
    //Anschlusspins
    union{                                      
@@ -1679,10 +1679,10 @@ union{
 }
 #end
 #macro SWITCH_ROTENC_PANASONIC_EVQVX_9MM()
-SWITCH_ROTENC_PANASONIC_EVQVX_GRND(9.0)
+SWITCH_ROTENC_PANASONIC_EVQVX_BASE(9.0)
 #end
 #macro SWITCH_ROTENC_PANASONIC_EVQVX_11MM()
-SWITCH_ROTENC_PANASONIC_EVQVX_GRND(11.0)
+SWITCH_ROTENC_PANASONIC_EVQVX_BASE(11.0)
 #end
 
 
@@ -1691,7 +1691,7 @@ SWITCH_ROTENC_PANASONIC_EVQVX_GRND(11.0)
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.0  26/03/06
 ********************************************************************************************************************************************/
-#macro SWITCH_SECME_1K2_GRND(Cnx,Act,Au)
+#macro SWITCH_SECME_1K2_BASE(Cnx,Act,Au)
 union{
     union{
         difference{
@@ -1795,23 +1795,23 @@ union{
 
 // Straight connection - Low actuator
 #macro SWITCH_SECME_1K2_SL()
-SWITCH_SECME_1K2_GRND(0,0,0)
+SWITCH_SECME_1K2_BASE(0,0,0)
 #end
 // Straight connection - High actuator
 #macro SWITCH_SECME_1K2_SH()
-SWITCH_SECME_1K2_GRND(0,1,0)
+SWITCH_SECME_1K2_BASE(0,1,0)
 #end
 // Right-angled connection - Low actuator
 #macro SWITCH_SECME_1K2_RL()
-SWITCH_SECME_1K2_GRND(1,0,0)
+SWITCH_SECME_1K2_BASE(1,0,0)
 #end
 // Right-angled connection - High actuator
 #macro SWITCH_SECME_1K2_RH()
-SWITCH_SECME_1K2_GRND(1,1,0)
+SWITCH_SECME_1K2_BASE(1,1,0)
 #end
 // Straight connection - Low actuator
 #macro SWITCH_SECME_1K2_SLB()
-SWITCH_SECME_1K2_GRND(0,0,1)
+SWITCH_SECME_1K2_BASE(0,0,1)
 #end
 
 

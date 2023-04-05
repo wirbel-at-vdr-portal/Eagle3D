@@ -147,7 +147,7 @@ difference {
  *  - Multiwatt15V (value)  - for vertical MW15 package
  *  - Multiwatt15H (value)  - for horizontal MW15 package
  ******************************************************************************/
-#macro IC_MULTIWATT_GRND(value,H_V)
+#macro IC_MULTIWATT_BASE(value,H_V)
 union {
    union {
       object { MWHeatSink_() translate -0.001*y }
@@ -169,9 +169,9 @@ union {
  * produced packages
  ******************************************************************************/
 #macro IC_MULTIWATT15V(value)
-  IC_MULTIWATT_GRND(value,1)
+  IC_MULTIWATT_BASE(value,1)
 #end
 
 #macro IC_MULTIWATT15H(value) 
-  IC_MULTIWATT_GRND(value,0)
+  IC_MULTIWATT_BASE(value,0)
 #end

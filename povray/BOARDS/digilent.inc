@@ -87,8 +87,8 @@ union {
       texture{col_slk}
       }
    // two switch buttons.
-   object { SWITCH_ALPS_SKHH_V_GRND(4,1.3, color rgb <10/255, 51/255, 61/255>) scale 0.75 rotate<0,0,0> translate<0,0.0,27.8>}
-   object { SWITCH_ALPS_SKHH_V_GRND(4,1.3, color rgb <10/255, 51/255, 61/255>) scale 0.75 rotate<0,0,0> translate<0,0.0,21.7>}
+   object { SWITCH_ALPS_SKHH_V_BASE(4,1.3, color rgb <10/255, 51/255, 61/255>) scale 0.75 rotate<0,0,0> translate<0,0.0,27.8>}
+   object { SWITCH_ALPS_SKHH_V_BASE(4,1.3, color rgb <10/255, 51/255, 61/255>) scale 0.75 rotate<0,0,0> translate<0,0.0,21.7>}
    union {
       text {ttf global_fontfile_arial "BTN0" 0.18, 0 scale 1.5 rotate<90,180,0> translate<2,0.05,25.5>}
       text {ttf global_fontfile_arial "BTN1" 0.18, 0 scale 1.8 rotate<90,180,0> translate<2,0.05,19.5>}
@@ -339,8 +339,8 @@ union {
 
 
      // two switch buttons.
-     object { SWITCH_ALPS_SKHH_V_GRND(4,1.3, color rgb <10/255, 51/255, 61/255>) rotate<0,0,0> translate<0,0.0,29.8>}
-     object { SWITCH_ALPS_SKHH_V_GRND(4,1.3, color rgb <10/255, 51/255, 61/255>) rotate<0,0,0> translate<0,0.0,21.7>}
+     object { SWITCH_ALPS_SKHH_V_BASE(4,1.3, color rgb <10/255, 51/255, 61/255>) rotate<0,0,0> translate<0,0.0,29.8>}
+     object { SWITCH_ALPS_SKHH_V_BASE(4,1.3, color rgb <10/255, 51/255, 61/255>) rotate<0,0,0> translate<0,0.0,21.7>}
      union {
         text {ttf global_fontfile_arial "BTN0" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<6,0.05,19>}
         text {ttf global_fontfile_arial "BTN1" 0.2, 0 scale 1.8 rotate<90,-90,0> translate<6,0.05,27>}

@@ -59,7 +59,7 @@ texture{col_silver}}
 //kp1ab = Wenn nicht 0 wird keine Abschrägung an Pin1 erzeugt
 //logo  = Name of the logo
 ********************************************************************************************************************************************/
-#macro QFP_GRND(L,B,H,pin_l,pin_r,pin_o,pin_u,pitch,pin_br,pin_h,LK,BK,HKoP,KORW,kp1ab,logo)
+#macro QFP_BASE(L,B,H,pin_l,pin_r,pin_o,pin_u,pitch,pin_br,pin_h,LK,BK,HKoP,KORW,kp1ab,logo)
 union{
    difference{
       box{<-LK/2,HKoP,-BK/2><LK/2,HKoP+H,BK/2>}
@@ -211,70 +211,70 @@ union{
 #end
 //LQFP-64 aus DS80C390 Datasheet
 #macro QFP_LQFP_64_050MM(value,logo)
-QFP_GRND(12,12,1.4,16,16,16,16,0.5,0.22,0.15,10,10,0.1,0,0,logo)
+QFP_BASE(12,12,1.4,16,16,16,16,0.5,0.22,0.15,10,10,0.1,0,0,logo)
 #end
 //TQFP-32 Maße von www.altera.com
 #macro QFP_TQFP_32_080MM(value,logo)
-QFP_GRND(9,9,1.17,8,8,8,8,0.8,0.37,0.15,7,7,0.1,90,0,logo)
+QFP_BASE(9,9,1.17,8,8,8,8,0.8,0.37,0.15,7,7,0.1,90,0,logo)
 #end
 //TQFP-44 Maße von www.altera.com
 #macro QFP_TQFP_44_080MM(value,logo)
-QFP_GRND(12,12,1.17,11,11,11,11,0.8,0.37,0.15,10,10,0.1,90,0,logo)
+QFP_BASE(12,12,1.17,11,11,11,11,0.8,0.37,0.15,10,10,0.1,90,0,logo)
 #end
 //PQFP-48
 #macro QFP_PQFP_48_050MM(value,logo)
-QFP_GRND(9,9,3.4,12,12,12,12,0.5,0.22,0.1,7,7,0.22,90,0,logo)
+QFP_BASE(9,9,3.4,12,12,12,12,0.5,0.22,0.1,7,7,0.22,90,0,logo)
 #end
 //LQFP-48 aus FT2232 Datasheet                                       
 #macro QFP_LQFP_48_050MM(value,logo)
-QFP_GRND(9,9,1.1,12,12,12,12,0.5,0.22,0.1,7,7,0.22,90,0,logo)
+QFP_BASE(9,9,1.1,12,12,12,12,0.5,0.22,0.1,7,7,0.22,90,0,logo)
 #end
 #macro QFP_TQFP_64_080MM(value,logo)
-QFP_GRND(16,16,1.2,16,16,16,16,0.8,0.35,0.15,14,14,0.1,90,0,logo)
+QFP_BASE(16,16,1.2,16,16,16,16,0.8,0.35,0.15,14,14,0.1,90,0,logo)
 #end
 //TQFP-100 Maße von www.altera.com
 #macro QFP_TQFP_100_050MM(value,logo)
-QFP_GRND(16,16,1.17,25,25,25,25,0.5,0.22,0.15,14,14,0.1,90,0,logo)
+QFP_BASE(16,16,1.17,25,25,25,25,0.5,0.22,0.15,14,14,0.1,90,0,logo)
 #end
 //TQFP-144 Maße von www.altera.com
 #macro QFP_TQFP_144_050MM(value,logo)
-QFP_GRND(22,22,1.17,36,36,36,36,0.5,0.22,0.15,20,20,0.1,90,0,logo)
+QFP_BASE(22,22,1.17,36,36,36,36,0.5,0.22,0.15,20,20,0.1,90,0,logo)
 #end
 //PQFP-44 Maße von www.altera.com
 #macro QFP_PQFP_44_080MM(value,logo)
-QFP_GRND(13.2,13.2,2,11,11,11,11,0.8,0.37,0.1,10,10,0.2,90,0,logo)
+QFP_BASE(13.2,13.2,2,11,11,11,11,0.8,0.37,0.1,10,10,0.2,90,0,logo)
 #end
 //PQFP-100 Maße von www.altera.com
 #macro QFP_PQFP_100_065MM(value,logo)
-QFP_GRND(24.3,18.3,1.95,20,20,30,30,0.65,0.3,0.1,21,15,0.15,90,0,logo)
+QFP_BASE(24.3,18.3,1.95,20,20,30,30,0.65,0.3,0.1,21,15,0.15,90,0,logo)
 #end
 //PQFP-160 Maße von www.altera.com
 #macro QFP_PQFP_160_065MM(value,logo)
-QFP_GRND(31.2,31.1,3.4,40,40,40,40,0.65,0.3,0.1,28,28,0.32,90,0,logo)
+QFP_BASE(31.2,31.1,3.4,40,40,40,40,0.65,0.3,0.1,28,28,0.32,90,0,logo)
 #end
 //PQFP-208 Maße von www.altera.com
 #macro QFP_PQFP_208_050MM(value,logo)
-QFP_GRND(30.8,30.8,3.4,52,52,52,52,0.5,0.22,0.1,28,28,0.32,90,0,logo)
+QFP_BASE(30.8,30.8,3.4,52,52,52,52,0.5,0.22,0.1,28,28,0.32,90,0,logo)
 #end
 //PQFP-240 Maße von www.altera.com
 #macro QFP_PQFP_240_050MM(value,logo)
-QFP_GRND(34.5,34.5,3.4,60,60,60,60,0.5,0.22,0.1,32,32,0.32,90,0,logo)
+QFP_BASE(34.5,34.5,3.4,60,60,60,60,0.5,0.22,0.1,32,32,0.32,90,0,logo)
 #end
 //SQFP-R-14X20-100 Maße von M16C/62 Gehäuse QFP100-P-1420-0.65
 #macro QFP_SQFP_R_14X20_100_065MM(value,logo)
-QFP_GRND(22.8,16.8,2.8,20,20,30,30,0.65,0.3,0.15,20,14,0.1,0,1,logo)
+QFP_BASE(22.8,16.8,2.8,20,20,30,30,0.65,0.3,0.15,20,14,0.1,0,1,logo)
 #end
 // Philips LPC2148 SQFP-S-10X10-64
 #macro QFP_SQFP_S_10X10_64_050MM(value,logo)
-QFP_GRND(12.0,12.0,2.8,16,16,16,16,0.5,0.22,0.15,10,10,0.1,0,1,logo)
+QFP_BASE(12.0,12.0,2.8,16,16,16,16,0.5,0.22,0.15,10,10,0.1,0,1,logo)
 #end
 //PQFP-128 Maße von www.micrel.com
 #macro QFP_PQFP_128_050MM(value,logo)
-QFP_GRND(23.2,17.2,3.4,26,26,38,38,0.50,0.22,0.1,20,14,0.1,0,1,logo)
+QFP_BASE(23.2,17.2,3.4,26,26,38,38,0.50,0.22,0.1,20,14,0.1,0,1,logo)
 #end
 //TQFP-112
 #macro QFP_TQFP_112_065MM(value,logo)
-QFP_GRND(22,22,1.6,28,28,28,28,0.65,0.37,0.15,20,20,0.15,90,0,logo)
+QFP_BASE(22,22,1.6,28,28,28,28,0.65,0.37,0.15,20,20,0.15,90,0,logo)
 #end
 
 

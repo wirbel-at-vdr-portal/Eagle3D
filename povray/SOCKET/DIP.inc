@@ -19,7 +19,7 @@
  * a  : available pin positions, <= pin; modulo 4
  * w  : width (in grid)
  ******************************************************************************/
-#macro SOCKET_DIP_GRND(pin,a,w)
+#macro SOCKET_DIP_BASE(pin,a,w)
 union{
    difference {
       union {
@@ -99,133 +99,133 @@ union{
 #end
 
 #macro SOCKET_DIP8A4() // ok: DIP8 with 4 corner pin sockets
-  SOCKET_DIP_GRND(8,4,7.62)
+  SOCKET_DIP_BASE(8,4,7.62)
 #end
 
 #macro SOCKET_DIP14A4() // ok: DIP14 with 4 corner pin sockets
-  SOCKET_DIP_GRND(14,4,7.62)
+  SOCKET_DIP_BASE(14,4,7.62)
 #end
 
 #macro SOCKET_DIP14A8() // ok: DIP14 with 8 corner pin sockets
-  SOCKET_DIP_GRND(14,8,7.62)
+  SOCKET_DIP_BASE(14,8,7.62)
 #end
 
 #macro SOCKET_DIP16A4() // ok: DIP16 with 4 corner pin sockets
-  SOCKET_DIP_GRND(16,4,7.62)
+  SOCKET_DIP_BASE(16,4,7.62)
 #end
 
 #macro SOCKET_DIP16A8() // ok: DIP16 with 8 corner pin sockets
-  SOCKET_DIP_GRND(16,8,7.62)
+  SOCKET_DIP_BASE(16,8,7.62)
 #end
 
 #macro SOCKET_DIP24A12() // ok: DIP24 with 12 corner pin sockets
-  SOCKET_DIP_GRND(24,12,7.62)
+  SOCKET_DIP_BASE(24,12,7.62)
 #end
 
 #macro SOCKET_DIP2()
-  SOCKET_DIP_GRND(2,2,7.62)
+  SOCKET_DIP_BASE(2,2,7.62)
 #end
 
 #macro SOCKET_DIP4()
-  SOCKET_DIP_GRND(4,4,7.62)
+  SOCKET_DIP_BASE(4,4,7.62)
 #end
 
 #macro SOCKET_DIP6()
-  SOCKET_DIP_GRND(6,6,7.62)
+  SOCKET_DIP_BASE(6,6,7.62)
 #end
 
 #macro SOCKET_DIP6_4() // ok.
-  SOCKET_DIP_GRND(6,6,10.16)
+  SOCKET_DIP_BASE(6,6,10.16)
 #end
 
 #macro SOCKET_DIP8()
-  SOCKET_DIP_GRND(8,8,7.62)
+  SOCKET_DIP_BASE(8,8,7.62)
 #end
 
 #macro SOCKET_DIP14()
-  SOCKET_DIP_GRND(14,14,7.62)
+  SOCKET_DIP_BASE(14,14,7.62)
 #end
 
 #macro SOCKET_DIP16()
-  SOCKET_DIP_GRND(16,16,7.62)
+  SOCKET_DIP_BASE(16,16,7.62)
 #end
 
 #macro SOCKET_DIP18()
-  SOCKET_DIP_GRND(18,18,7.62)
+  SOCKET_DIP_BASE(18,18,7.62)
 #end
 
 #macro SOCKET_DIP20()
-  SOCKET_DIP_GRND(20,20,7.62)
+  SOCKET_DIP_BASE(20,20,7.62)
 #end
 
 #macro SOCKET_DIP22()
-  SOCKET_DIP_GRND(22,22,7.62)
+  SOCKET_DIP_BASE(22,22,7.62)
 #end
 
 #macro SOCKET_DIP22_4()
-  SOCKET_DIP_GRND(22,22,10.16)
+  SOCKET_DIP_BASE(22,22,10.16)
 #end
 
 #macro SOCKET_DIP24()
-  SOCKET_DIP_GRND(24,24,7.62)
+  SOCKET_DIP_BASE(24,24,7.62)
 #end
 
 #macro SOCKET_DIP24_4()
-  SOCKET_DIP_GRND(24,24,10.16)
+  SOCKET_DIP_BASE(24,24,10.16)
 #end
 
 #macro SOCKET_DIP24W()
-  SOCKET_DIP_GRND(24,24,15.24)
+  SOCKET_DIP_BASE(24,24,15.24)
 #end
 
 #macro SOCKET_DIP24_9()
-  SOCKET_DIP_GRND(24,24,22.86)
+  SOCKET_DIP_BASE(24,24,22.86)
 #end
 
 #macro SOCKET_DIP28()
-  SOCKET_DIP_GRND(28,28,7.62)
+  SOCKET_DIP_BASE(28,28,7.62)
 #end
 
 #macro SOCKET_DIP28_4()
-  SOCKET_DIP_GRND(28,28,10.16)
+  SOCKET_DIP_BASE(28,28,10.16)
 #end
 
 #macro SOCKET_DIP28W()
-  SOCKET_DIP_GRND(28,28,15.24)
+  SOCKET_DIP_BASE(28,28,15.24)
 #end
 
 #macro SOCKET_DIP32_3()
-  SOCKET_DIP_GRND(32,32,7.62)
+  SOCKET_DIP_BASE(32,32,7.62)
 #end
 
 #macro SOCKET_DIP32W()
-  SOCKET_DIP_GRND(32,32,15.24)
+  SOCKET_DIP_BASE(32,32,15.24)
 #end
 
 #macro SOCKET_DIP36W()
-  SOCKET_DIP_GRND(36,36,15.24)
+  SOCKET_DIP_BASE(36,36,15.24)
 #end
  
 #macro SOCKET_DIP40W()
-  SOCKET_DIP_GRND(40,40,15.24)
+  SOCKET_DIP_BASE(40,40,15.24)
 #end
 
 #macro SOCKET_DIP42W()
-  SOCKET_DIP_GRND(42,42,15.24)
+  SOCKET_DIP_BASE(42,42,15.24)
 #end
 
 #macro SOCKET_DIP48W()
-  SOCKET_DIP_GRND(48,48,15.24)
+  SOCKET_DIP_BASE(48,48,15.24)
 #end
 
 #macro SOCKET_DIP52W()
-  SOCKET_DIP_GRND(52,52,15.24)
+  SOCKET_DIP_BASE(52,52,15.24)
 #end
 
 #macro SOCKET_DIP64_9()
-  SOCKET_DIP_GRND(64,64,22.86)
+  SOCKET_DIP_BASE(64,64,22.86)
 #end
 
 #macro SOCKET_DIP68_9()
-  SOCKET_DIP_GRND(68,68,22.86)
+  SOCKET_DIP_BASE(68,68,22.86)
 #end

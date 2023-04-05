@@ -10,7 +10,7 @@
  * Author: Joerg Bredendiek <sprut(replace with at)sprut.de>
  *
  * - lever actuated zero insertion force mechanism,  con-3m.lbr
- * - based of SOCKET_DIP_GRND from Joseph Zeglinski
+ * - based of SOCKET_DIP_BASE from Joseph Zeglinski
  * Args:
  *   pin   : number of pins
  *   breite: interspace between the lines of pins in mm

@@ -10,7 +10,7 @@
  * Author: daniel cardona<dancardona50@hotmail.com>
  * Modified: Joerg Bredendiek <sprut(replace with at)sprut.de>
  ******************************************************************************/
-#macro TR_TO39_GRND(value, pins)
+#macro TR_TO39_BASE(value, pins)
   union {
      #if (pin_short=off)
          #local tr_to39_pin = 0;
@@ -52,10 +52,10 @@
 #end
 
 #macro TR_TO39(value)
-  TR_TO39_GRND(value, 3)
+  TR_TO39_BASE(value, 3)
 #end
 
 #macro TR_TO39_4(value)
-  TR_TO39_GRND(value, 4)
+  TR_TO39_BASE(value, 4)
 #end
 

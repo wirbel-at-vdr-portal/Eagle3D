@@ -202,7 +202,7 @@ difference{
 // POWER RESISTORS:   DALE COMPONENTS INC. RH-Series / CLAROSTAT MFGG. CO CMC-Series - ALUMINUM HOUSED WIREWOUND RESISTORS
 // PARAMETERS: (value, raster WATTS, A, B, C, D, E, F, G, H, J, K, L, M, N)   // Standard industry dimensions A - N (mm)
 ********************************************************************************************************************************************/
-#macro RES_DIS_ALUMINUM_POWER_GRND(value, raster, WATTS, A, B, C, D, E, F, G, H, J, K, L, M, N)
+#macro RES_DIS_ALUMINUM_POWER_BASE(value, raster, WATTS, A, B, C, D, E, F, G, H, J, K, L, M, N)
 union{
 
 #local Wirethickness = 1.024;      // AWG-18 (1.024 mm) is standard for all Aluminum-Housed Wirewound Resistors.
@@ -297,28 +297,28 @@ finish { phong 1  ambient (0.1 * global_ambient_mul) }
 
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH5_304MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value,  30.48,   5,  11.28, 12.45,  15.24,  28.58,  8.48, 16.41,  8.13, 1.65, 3.56, 1.98, 2.36, 1.98, 1.27)
+RES_DIS_ALUMINUM_POWER_BASE(value,  30.48,   5,  11.28, 12.45,  15.24,  28.58,  8.48, 16.41,  8.13, 1.65, 3.56, 1.98, 2.36, 1.98, 1.27)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH10_355MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value,  35.56,  10,  14.27, 15.88,  19.10,  34.93, 10.92, 20.30, 10.20, 1.91, 4.83, 2.40, 2.40, 2.59, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value,  35.56,  10,  14.27, 15.88,  19.10,  34.93, 10.92, 20.30, 10.20, 1.91, 4.83, 2.40, 2.40, 2.59, 2.18)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH25_508MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value,  50.80,  25,  18.26, 19.84,  26.97,  49.23, 13.46, 27.43, 14.22, 2.16, 6.60, 4.37, 3.18, 2.92, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value,  50.80,  25,  18.26, 19.84,  26.97,  49.23, 13.46, 27.43, 14.22, 2.16, 6.60, 4.37, 3.18, 2.92, 2.18)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH50_711MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value,  71.12,  50,  39.70, 21.44,  49.99,  70.64, 15.62, 28.96, 15.62, 2.16, 7.62, 4.97, 3.18, 2.71, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value,  71.12,  50,  39.70, 21.44,  49.99,  70.64, 15.62, 28.96, 15.62, 2.16, 7.62, 4.97, 3.18, 2.71, 2.18)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH75_939MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value,  93.98,  75,  39.70, 21.44,  72.40,  93.00, 15.62, 28.96, 15.62, 2.16, 7.62, 4.97, 3.18, 2.71, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value,  93.98,  75,  39.70, 21.44,  72.40,  93.00, 15.62, 28.96, 15.62, 2.16, 7.62, 4.97, 3.18, 2.71, 2.18)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH100_863MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value,  86.36, 100,  35.00, 37.00,  65.50,  85.90, 26.70, 46.70, 24.40, 3.50, 7.62, 4.97, 4.40, 2.71, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value,  86.36, 100,  35.00, 37.00,  65.50,  85.90, 26.70, 46.70, 24.40, 3.50, 7.62, 4.97, 4.40, 2.71, 2.18)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH100X_1397MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value, 139.70, 100,  69.85, 57.15,  88.90, 139.14, 46.00, 71.42, 44.45, 4.78, 7.62, 4.97, 4.78, 2.71, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value, 139.70, 100,  69.85, 57.15,  88.90, 139.14, 46.00, 71.42, 44.45, 4.78, 7.62, 4.97, 4.78, 2.71, 2.18)
 #end
 #macro RES_DIS_ALUMINIUM_POWER_RH250_1778MM(value)
-RES_DIS_ALUMINUM_POWER_GRND(value, 177.80, 250,  98.42, 63.50, 114.30, 177.80, 53.98, 76.20, 55.58, 6.35, 7.62, 4.97, 4.78, 2.71, 2.18)
+RES_DIS_ALUMINUM_POWER_BASE(value, 177.80, 250,  98.42, 63.50, 114.30, 177.80, 53.98, 76.20, 55.58, 6.35, 7.62, 4.97, 4.78, 2.71, 2.18)
 #end
 
 
@@ -327,7 +327,7 @@ RES_DIS_ALUMINUM_POWER_GRND(value, 177.80, 250,  98.42, 63.50, 114.30, 177.80, 5
 //Designed by Philippe Boucheny <philippe.boucheny(at)numericable.fr>
 //Rev. 1.0  12/05/06
 ********************************************************************************************************************************************/
-#macro RES_DIS_BPC_GRND(value,A,B,positionH,pRot,pTra)
+#macro RES_DIS_BPC_BASE(value,A,B,positionH,pRot,pTra)
 #local jc=6;
 #local GreenBPC = color red 0.55 green 0.53 blue 0.30;
 union{
@@ -393,28 +393,28 @@ union{
 }
 #end
 #macro RES_DIS_BPC3V(value)
-RES_DIS_BPC_GRND(value,10.16,5.08,off,0,0)
+RES_DIS_BPC_BASE(value,10.16,5.08,off,0,0)
 #end
 #macro RES_DIS_BPC5V(value)
-RES_DIS_BPC_GRND(value,12.70,5.08,off,0,0)
+RES_DIS_BPC_BASE(value,12.70,5.08,off,0,0)
 #end
 #macro RES_DIS_BPC7V(value)
-RES_DIS_BPC_GRND(value,19.05,12.70,off,0,0)
+RES_DIS_BPC_BASE(value,19.05,12.70,off,0,0)
 #end
 #macro RES_DIS_BPC10V(value)
-RES_DIS_BPC_GRND(value,25.40,20.32,off,0,0)
+RES_DIS_BPC_BASE(value,25.40,20.32,off,0,0)
 #end
 #macro RES_DIS_BPC3H(value)
-RES_DIS_BPC_GRND(value,10.16,5.08,on,90*x,-1.27*z)
+RES_DIS_BPC_BASE(value,10.16,5.08,on,90*x,-1.27*z)
 #end
 #macro RES_DIS_BPC5H(value)
-RES_DIS_BPC_GRND(value,12.70,5.08,on,90*x,-1.27*z)
+RES_DIS_BPC_BASE(value,12.70,5.08,on,90*x,-1.27*z)
 #end
 #macro RES_DIS_BPC7H(value)
-RES_DIS_BPC_GRND(value,19.05,12.70,on,90*x,-1.27*z)
+RES_DIS_BPC_BASE(value,19.05,12.70,on,90*x,-1.27*z)
 #end
 #macro RES_DIS_BPC10H(value)
-RES_DIS_BPC_GRND(value,25.40,20.32,on,90*x,-1.27*z)
+RES_DIS_BPC_BASE(value,25.40,20.32,on,90*x,-1.27*z)
 #end
 
 
@@ -422,7 +422,7 @@ RES_DIS_BPC_GRND(value,25.40,20.32,on,90*x,-1.27*z)
 // Auth: Joseph Zeglinski
 // This macro creates "CERAMIC" RECTANGULAR  HORIZONTAL mount POWER resisitors - (short ones can be mounted vertically)
 ********************************************************************************************************************************************/
-#macro RES_DIS_CERAMIC_AXIAL_GRND(value, Length, Width, Wirelength, Wirewidth,  raster,  H_V, WATTS)
+#macro RES_DIS_CERAMIC_AXIAL_BASE(value, Length, Width, Wirelength, Wirewidth,  raster,  H_V, WATTS)
 union {
 
 // ********************
@@ -533,34 +533,34 @@ finish { phong 1  ambient (0.1 * global_ambient_mul)}
 
 #end 
 #macro RES_DIS_CERAMIC_AXIAL_PW1_228MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 15.0, 6.4, 25.4,  0.7,  22.86, "H", 1 )
+RES_DIS_CERAMIC_AXIAL_BASE(value, 15.0, 6.4, 25.4,  0.7,  22.86, "H", 1 )
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW2_254MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 17.8, 6.8, 25.4,  0.7,  25.40, "H", 2 )
+RES_DIS_CERAMIC_AXIAL_BASE(value, 17.8, 6.8, 25.4,  0.7,  25.40, "H", 2 )
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW3_304MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 22.4, 7.9, 28.4,  0.8,  30.48, "H", 3 )
+RES_DIS_CERAMIC_AXIAL_BASE(value, 22.4, 7.9, 28.4,  0.8,  30.48, "H", 3 )
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW5_330MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 22.4, 9.7, 28.4,  0.8,  33.02, "H", 5 )
+RES_DIS_CERAMIC_AXIAL_BASE(value, 22.4, 9.7, 28.4,  0.8,  33.02, "H", 5 )
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW7_457MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 36.0, 9.7, 31.8,  0.8,  45.72, "H", 7 )
+RES_DIS_CERAMIC_AXIAL_BASE(value, 36.0, 9.7, 31.8,  0.8,  45.72, "H", 7 )
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW10_609MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 50.0, 9.7, 31.8,  0.8,  60.96, "H", 10)
+RES_DIS_CERAMIC_AXIAL_BASE(value, 50.0, 9.7, 31.8,  0.8,  60.96, "H", 10)
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW15_635MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 50.0, 12.7, 31.8,  0.8, 63.50, "H", 15)
+RES_DIS_CERAMIC_AXIAL_BASE(value, 50.0, 12.7, 31.8,  0.8, 63.50, "H", 15)
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW20_812MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 20)
+RES_DIS_CERAMIC_AXIAL_BASE(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 20)
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW22_812MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 22)
+RES_DIS_CERAMIC_AXIAL_BASE(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 22)
 #end
 #macro RES_DIS_CERAMIC_AXIAL_PW25_812MM_H(value)
-RES_DIS_CERAMIC_AXIAL_GRND(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 25)
+RES_DIS_CERAMIC_AXIAL_BASE(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 25)
 #end
 
 
@@ -568,7 +568,7 @@ RES_DIS_CERAMIC_AXIAL_GRND(value, 65.0, 14.2, 31.8,  0.8, 81.28, "H", 25)
 // Auth: Joseph Zeglinski
 // This macro creates "CERAMIC" RECTANGULAR shaped, VERTICAL mount POWER resisitors
 ********************************************************************************************************************************************/
-#macro RES_DIS_CERAMIC_RADIAL_GRND(value, Front_width, Front_height, Depth, Wire_Sep, Wirelength, Wirewidth, WATTS)
+#macro RES_DIS_CERAMIC_RADIAL_BASE(value, Front_width, Front_height, Depth, Wire_Sep, Wirelength, Wirewidth, WATTS)
 union   {
 
 // ********************
@@ -661,28 +661,28 @@ pigment{Gray50}
 finish { phong 1  ambient (0.1 * global_ambient_mul)}
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV2_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 11.0, 20.3,  7.6,  5.08,  3.81,  1.02,  2 )
+RES_DIS_CERAMIC_RADIAL_BASE(value, 11.0, 20.3,  7.6,  5.08,  3.81,  1.02,  2 )
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV2B_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 11.0, 20.3,  7.6,  5.08,  3.81,  1.02,  3 )
+RES_DIS_CERAMIC_RADIAL_BASE(value, 11.0, 20.3,  7.6,  5.08,  3.81,  1.02,  3 )
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV3_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 12.0, 24.9,  8.9,  5.08,  3.81,  1.02,  3 )
+RES_DIS_CERAMIC_RADIAL_BASE(value, 12.0, 24.9,  8.9,  5.08,  3.81,  1.02,  3 )
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV4_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 12.0, 24.9,  8.9,  5.08,  3.81,  1.02,  4 )
+RES_DIS_CERAMIC_RADIAL_BASE(value, 12.0, 24.9,  8.9,  5.08,  3.81,  1.02,  4 )
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV5_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 12.7, 25.4,  10.0, 5.08,  3.81,  1.02,  5 )
+RES_DIS_CERAMIC_RADIAL_BASE(value, 12.7, 25.4,  10.0, 5.08,  3.81,  1.02,  5 )
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV7_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 12.7, 38.6,  10.0, 5.08,  3.81,  1.02,  7 )
+RES_DIS_CERAMIC_RADIAL_BASE(value, 12.7, 38.6,  10.0, 5.08,  3.81,  1.02,  7 )
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV10_050MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 12.7, 51.2,  10.0, 5.08,  3.81,  1.02,  10)
+RES_DIS_CERAMIC_RADIAL_BASE(value, 12.7, 51.2,  10.0, 5.08,  3.81,  1.02,  10)
 #end
 #macro RES_DIS_CERAMIC_RADIAL_PV10S_076MM(value)
-RES_DIS_CERAMIC_RADIAL_GRND(value, 15.9, 35.0,  12.7, 7.62,  3.81,  1.02,  10)
+RES_DIS_CERAMIC_RADIAL_BASE(value, 15.9, 35.0,  12.7, 7.62,  3.81,  1.02,  10)
 #end
 
 
@@ -698,7 +698,7 @@ RES_DIS_CERAMIC_RADIAL_GRND(value, 15.9, 35.0,  12.7, 7.62,  3.81,  1.02,  10)
 //h:  "V"=vertikal, "H"=horizontal
 //w:  Leistung, wird benutzt um bei >=1W den Widerstand 1,5mm anzuheben
 ********************************************************************************************************************************************/
-#macro RES_DIS_GRND(l,d,c1,c2,c3,c4,r,lw,dw,op,h,w)
+#macro RES_DIS_BASE(l,d,c1,c2,c3,c4,r,lw,dw,op,h,w)
 union{
 
 #local res_col = array[4]
@@ -766,66 +766,66 @@ translate<0,seperation,0>
 #end
 //0402
 #macro RES_DIS_0204_054MM(c1,c2,c3,c4)
-RES_DIS_GRND(3.3,1.6,c1,c2,c3,c4,2.54*2,20,0.6,0,"H",0.2)
+RES_DIS_BASE(3.3,1.6,c1,c2,c3,c4,2.54*2,20,0.6,0,"H",0.2)
 #end
 #macro RES_DIS_0204_075MM(c1,c2,c3,c4)
-RES_DIS_GRND(3.3,1.6,c1,c2,c3,c4,2.54*3,20,0.6,0,"H",0.2)
+RES_DIS_BASE(3.3,1.6,c1,c2,c3,c4,2.54*3,20,0.6,0,"H",0.2)
 #end
 #macro RES_DIS_0204_025MMV(c1,c2,c3,c4)
-RES_DIS_GRND(3.3,1.6,c1,c2,c3,c4,2.54*1,20,0.6,0,"V",0.2)
+RES_DIS_BASE(3.3,1.6,c1,c2,c3,c4,2.54*1,20,0.6,0,"V",0.2)
 #end
 //0207
 #macro RES_DIS_0207_025MMV(c1,c2,c3,c4)
-RES_DIS_GRND(5.8,2.2,c1,c2,c3,c4,2.54,20,0.6,0,"V",0.3)
+RES_DIS_BASE(5.8,2.2,c1,c2,c3,c4,2.54,20,0.6,0,"V",0.3)
 #end
 #macro RES_DIS_0207_050MMV(c1,c2,c3,c4)
-RES_DIS_GRND(5.8,2.2,c1,c2,c3,c4,2.54*2,20,0.6,0,"V",0.3)
+RES_DIS_BASE(5.8,2.2,c1,c2,c3,c4,2.54*2,20,0.6,0,"V",0.3)
 #end
 #macro RES_DIS_0207_075MM(c1,c2,c3,c4)
-RES_DIS_GRND(5.8,2.2,c1,c2,c3,c4,2.54*3,20,0.6,0,"H",0.3)
+RES_DIS_BASE(5.8,2.2,c1,c2,c3,c4,2.54*3,20,0.6,0,"H",0.3)
 #end
 #macro RES_DIS_0207_10MM(c1,c2,c3,c4)
-RES_DIS_GRND(5.8,2.2,c1,c2,c3,c4,2.54*4,20,0.6,0,"H",0.3)
+RES_DIS_BASE(5.8,2.2,c1,c2,c3,c4,2.54*4,20,0.6,0,"H",0.3)
 #end
 #macro RES_DIS_0207_12MM(c1,c2,c3,c4)
-RES_DIS_GRND(5.8,2.2,c1,c2,c3,c4,2.54*5,20,0.6,0,"H",0.3)
+RES_DIS_BASE(5.8,2.2,c1,c2,c3,c4,2.54*5,20,0.6,0,"H",0.3)
 #end
 #macro RES_DIS_0207_15MM(c1,c2,c3,c4)
-RES_DIS_GRND(5.8,2.2,c1,c2,c3,c4,2.54*6,20,0.6,0,"H",0.3)
+RES_DIS_BASE(5.8,2.2,c1,c2,c3,c4,2.54*6,20,0.6,0,"H",0.3)
 #end
 //0309
 #macro RES_DIS_0309_10MM(c1,c2,c3,c4)
-RES_DIS_GRND(8,3,c1,c2,c3,c4,2.54*4,20,0.6,0,"H",0.35)
+RES_DIS_BASE(8,3,c1,c2,c3,c4,2.54*4,20,0.6,0,"H",0.35)
 #end
 #macro RES_DIS_0309_12MM(c1,c2,c3,c4)
-RES_DIS_GRND(8,3,c1,c2,c3,c4,2.54*5,20,0.6,0,"H",0.35)
+RES_DIS_BASE(8,3,c1,c2,c3,c4,2.54*5,20,0.6,0,"H",0.35)
 #end
 #macro RES_DIS_0309_025MMV(c1,c2,c3,c4)
-RES_DIS_GRND(8,3,c1,c2,c3,c4,2.54,20,0.6,0,"V",0.35)
+RES_DIS_BASE(8,3,c1,c2,c3,c4,2.54,20,0.6,0,"V",0.35)
 #end
 //0414
 #macro RES_DIS_0414_15MM(c1,c2,c3,c4)
-RES_DIS_GRND(11,3.9,c1,c2,c3,c4,2.54*6,20,0.8,0,"H",0.5)
+RES_DIS_BASE(11,3.9,c1,c2,c3,c4,2.54*6,20,0.8,0,"H",0.5)
 #end
 #macro RES_DIS_0414_050MMV(c1,c2,c3,c4)
-RES_DIS_GRND(11,3.9,c1,c2,c3,c4,2.54*2,20,0.8,0,"V",0.5)
+RES_DIS_BASE(11,3.9,c1,c2,c3,c4,2.54*2,20,0.8,0,"V",0.5)
 #end
 //0617
 #macro RES_DIS_0617_17MM(c1,c2,c3,c4)
-RES_DIS_GRND(15.5,5.8,c1,c2,c3,c4,2.54*7,20,0.8,0,"H",1.0)
+RES_DIS_BASE(15.5,5.8,c1,c2,c3,c4,2.54*7,20,0.8,0,"H",1.0)
 #end
 #macro RES_DIS_0617_22MM(c1,c2,c3,c4)
-RES_DIS_GRND(15.5,5.8,c1,c2,c3,c4,2.54*9,20,0.8,0,"H",1.0)
+RES_DIS_BASE(15.5,5.8,c1,c2,c3,c4,2.54*9,20,0.8,0,"H",1.0)
 #end
 #macro RES_DIS_0617_050MMV(c1,c2,c3,c4)
-RES_DIS_GRND(15.5,5.8,c1,c2,c3,c4,2.54*2,20,0.8,0,"V",1.0)
+RES_DIS_BASE(15.5,5.8,c1,c2,c3,c4,2.54*2,20,0.8,0,"V",1.0)
 #end
 //0922
 #macro RES_DIS_0922_22MM(c1,c2,c3,c4)
-RES_DIS_GRND(19,8.8,c1,c2,c3,c4,2.54*9,20,0.8,0,"H",1.3)
+RES_DIS_BASE(19,8.8,c1,c2,c3,c4,2.54*9,20,0.8,0,"H",1.3)
 #end
 #macro RES_DIS_0922_075MMV(c1,c2,c3,c4)
-RES_DIS_GRND(19,8.8,c1,c2,c3,c4,2.54*3,20,0.8,0,"V",1.3)
+RES_DIS_BASE(19,8.8,c1,c2,c3,c4,2.54*3,20,0.8,0,"V",1.3)
 #end
 
 
@@ -836,7 +836,7 @@ RES_DIS_GRND(19,8.8,c1,c2,c3,c4,2.54*3,20,0.8,0,"V",1.3)
 //-------------------------------------------------------------------------------------------------
 //l:Length d:Diameter r:Pitch lw:pins length dw:pins width op:extra height
 ********************************************************************************************************************************************/
-#macro RES_DIS_PR_GRND(Value,l,d,r,lw,dw,op)
+#macro RES_DIS_PR_BASE(Value,l,d,r,lw,dw,op)
 #local PR0DarkBrown = color red 0.233 green 0.130 blue 0.094;
 union{
 
@@ -885,115 +885,115 @@ translate<0,space,0>
 #end
 //PR01 12.50mm
 #macro RES_DIS_PR_01_12MM(value)
-RES_DIS_PR_GRND(value,6.5,2.5,5*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,6.5,2.5,5*2.54,20,0.8,0) 
 #end
 //PR01 15mm
 #macro RES_DIS_PR_01_15MM(value)
-RES_DIS_PR_GRND(value,6.5,2.5,6*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,6.5,2.5,6*2.54,20,0.8,0) 
 #end
 //PR01 17mm
 #macro RES_DIS_PR_01_17MM(value)
-RES_DIS_PR_GRND(value,6.5,2.5,7*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,6.5,2.5,7*2.54,20,0.8,0) 
 #end
 //PR01 20mm
 #macro RES_DIS_PR_01_20MM(value)
-RES_DIS_PR_GRND(value,6.5,2.5,8*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,6.5,2.5,8*2.54,20,0.8,0) 
 #end
 //PR02 12mm
 #macro RES_DIS_PR_02_12MM(value)
-RES_DIS_PR_GRND(value,10,3.9,5*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,10,3.9,5*2.54,20,0.8,0) 
 #end
 //PR02 15mm
 #macro RES_DIS_PR_02_15MM(value)
-RES_DIS_PR_GRND(value,10,3.9,6*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,10,3.9,6*2.54,20,0.8,0) 
 #end
 //PR02 17mm
 #macro RES_DIS_PR_02_17MM(value)
-RES_DIS_PR_GRND(value,10,3.9,7*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,10,3.9,7*2.54,20,0.8,0) 
 #end
 //PR02 20mm
 #macro RES_DIS_PR_02_20MM(value)
-RES_DIS_PR_GRND(value,10,3.9,8*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,10,3.9,8*2.54,20,0.8,0) 
 #end
 //PR02 22mm
 #macro RES_DIS_PR_02_22MM(value)
-RES_DIS_PR_GRND(value,10,3.9,9*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,10,3.9,9*2.54,20,0.8,0) 
 #end
 //PR02 25mm
 #macro RES_DIS_PR_02_25MM(value)
-RES_DIS_PR_GRND(value,10,3.9,10*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,10,3.9,10*2.54,20,0.8,0) 
 #end
 //PR03 22mm
 #macro RES_DIS_PR_03_22MM(value)
-RES_DIS_PR_GRND(value,16.7,5.2,9*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,16.7,5.2,9*2.54,20,0.8,0) 
 #end
 //PR03 25mm
 #macro RES_DIS_PR_03_25MM(value)
-RES_DIS_PR_GRND(value,16.7,5.2,10*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,16.7,5.2,10*2.54,20,0.8,0) 
 #end
 //PR03 28mm
 #macro RES_DIS_PR_03_28MM(value)
-RES_DIS_PR_GRND(value,16.7,5.2,11*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,16.7,5.2,11*2.54,20,0.8,0) 
 #end
 //PR03 30mm
 #macro RES_DIS_PR_03_30MM(value)
-RES_DIS_PR_GRND(value,16.7,5.2,12*2.54,20,0.8,0) 
+RES_DIS_PR_BASE(value,16.7,5.2,12*2.54,20,0.8,0) 
 #end
 //PR01 12.50mm
 #macro RES_DIS_PR_01_12MM_H(value)
-RES_DIS_PR_GRND(value,6.5,2.5,5*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,6.5,2.5,5*2.54,20,0.8,8) 
 #end
 //PR01 15mm
 #macro RES_DIS_PR_01_15MM_H(value)
-RES_DIS_PR_GRND(value,6.5,2.5,6*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,6.5,2.5,6*2.54,20,0.8,8) 
 #end
 //PR01 17mm
 #macro RES_DIS_PR_01_17MM_H(value)
-RES_DIS_PR_GRND(value,6.5,2.5,7*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,6.5,2.5,7*2.54,20,0.8,8) 
 #end
 //PR01 20mm
 #macro RES_DIS_PR_01_20MM_H(value)
-RES_DIS_PR_GRND(value,6.5,2.5,8*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,6.5,2.5,8*2.54,20,0.8,8) 
 #end
 //PR02 12mm
 #macro RES_DIS_PR_02_12MM_H(value)
-RES_DIS_PR_GRND(value,10,3.9,5*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,10,3.9,5*2.54,20,0.8,8) 
 #end
 //PR02 15mm
 #macro RES_DIS_PR_02_15MM_H(value)
-RES_DIS_PR_GRND(value,10,3.9,6*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,10,3.9,6*2.54,20,0.8,8) 
 #end
 //PR02 17mm
 #macro RES_DIS_PR_02_17MM_H(value)
-RES_DIS_PR_GRND(value,10,3.9,7*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,10,3.9,7*2.54,20,0.8,8) 
 #end
 //PR02 20mm
 #macro RES_DIS_PR_02_20MM_H(value)
-RES_DIS_PR_GRND(value,10,3.9,8*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,10,3.9,8*2.54,20,0.8,8) 
 #end
 //PR02 22mm
 #macro RES_DIS_PR_02_22MM_H(value)
-RES_DIS_PR_GRND(value,10,3.9,9*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,10,3.9,9*2.54,20,0.8,8) 
 #end
 //PR02 25mm
 #macro RES_DIS_PR_02_25MM_H(value)
-RES_DIS_PR_GRND(value,10,3.9,10*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,10,3.9,10*2.54,20,0.8,8) 
 #end
 //PR03 22mm
 #macro RES_DIS_PR_03_22MM_H(value)
-RES_DIS_PR_GRND(value,16.7,5.2,9*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,16.7,5.2,9*2.54,20,0.8,8) 
 #end
 //PR03 25mm
 #macro RES_DIS_PR_03_25MM_H(value)
-RES_DIS_PR_GRND(value,16.7,5.2,10*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,16.7,5.2,10*2.54,20,0.8,8) 
 #end
 //PR03 28mm
 #macro RES_DIS_PR_03_28MM_H(value)
-RES_DIS_PR_GRND(value,16.7,5.2,11*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,16.7,5.2,11*2.54,20,0.8,8) 
 #end
 //PR03 30mm
 #macro RES_DIS_PR_03_30MM_H(value)
-RES_DIS_PR_GRND(value,16.7,5.2,12*2.54,20,0.8,8) 
+RES_DIS_PR_BASE(value,16.7,5.2,12*2.54,20,0.8,8) 
 #end
 
 
@@ -1002,7 +1002,7 @@ RES_DIS_PR_GRND(value,16.7,5.2,12*2.54,20,0.8,8)
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.0  19/06/05
 ********************************************************************************************************************************************/
-#macro RES_DIS_PTC660_GRND(value,D,ep)
+#macro RES_DIS_PTC660_BASE(value,D,ep)
 
 #macro RTH_PIN (Rot,D)
     #local R=D*0.1;
@@ -1056,88 +1056,88 @@ RES_DIS_PR_GRND(value,16.7,5.2,12*2.54,20,0.8,8)
 #end    
 
 #macro RES_DIS_PTC660_5_3(value)
-RES_DIS_PTC660_GRND(value,5,3)
+RES_DIS_PTC660_BASE(value,5,3)
 #end
 #macro RES_DIS_PTC660_5_4(value)
-RES_DIS_PTC660_GRND(value,5,4)
+RES_DIS_PTC660_BASE(value,5,4)
 #end
 #macro RES_DIS_PTC660_5_5(value)
-RES_DIS_PTC660_GRND(value,5,5)
+RES_DIS_PTC660_BASE(value,5,5)
 #end
 #macro RES_DIS_PTC660_5_55(value)
-RES_DIS_PTC660_GRND(value,5,5.5)
+RES_DIS_PTC660_BASE(value,5,5.5)
 #end
 #macro RES_DIS_PTC660_7_3(value)
-RES_DIS_PTC660_GRND(value,7,3)
+RES_DIS_PTC660_BASE(value,7,3)
 #end
 #macro RES_DIS_PTC660_7_4(value)
-RES_DIS_PTC660_GRND(value,7,4)
+RES_DIS_PTC660_BASE(value,7,4)
 #end
 #macro RES_DIS_PTC660_7_5(value)
-RES_DIS_PTC660_GRND(value,7,5)
+RES_DIS_PTC660_BASE(value,7,5)
 #end
 #macro RES_DIS_PTC660_7_55(value)
-RES_DIS_PTC660_GRND(value,7,5.5)
+RES_DIS_PTC660_BASE(value,7,5.5)
 #end
 #macro RES_DIS_PTC660_85_3(value)
-RES_DIS_PTC660_GRND(value,8.5,3)
+RES_DIS_PTC660_BASE(value,8.5,3)
 #end
 #macro RES_DIS_PTC660_85_4(value)
-RES_DIS_PTC660_GRND(value,8.5,4)
+RES_DIS_PTC660_BASE(value,8.5,4)
 #end
 #macro RES_DIS_PTC660_85_5(value)
-RES_DIS_PTC660_GRND(value,8.5,5)
+RES_DIS_PTC660_BASE(value,8.5,5)
 #end
 #macro RES_DIS_PTC660_85_55(value)
-RES_DIS_PTC660_GRND(value,8.5,5.5)
+RES_DIS_PTC660_BASE(value,8.5,5.5)
 #end
 #macro RES_DIS_PTC660_105_3(value)
-RES_DIS_PTC660_GRND(value,10.5,3)
+RES_DIS_PTC660_BASE(value,10.5,3)
 #end
 #macro RES_DIS_PTC660_105_4(value)
-RES_DIS_PTC660_GRND(value,10.5,4)
+RES_DIS_PTC660_BASE(value,10.5,4)
 #end
 #macro RES_DIS_PTC660_105_5(value)
-RES_DIS_PTC660_GRND(value,10.5,5)
+RES_DIS_PTC660_BASE(value,10.5,5)
 #end
 #macro RES_DIS_PTC660_105_55(value)
-RES_DIS_PTC660_GRND(value,10.5,5.5)
+RES_DIS_PTC660_BASE(value,10.5,5.5)
 #end
 #macro RES_DIS_PTC660_125_3(value)
-RES_DIS_PTC660_GRND(value,12.5,3)
+RES_DIS_PTC660_BASE(value,12.5,3)
 #end
 #macro RES_DIS_PTC660_125_4(value)
-RES_DIS_PTC660_GRND(value,12.5,4)
+RES_DIS_PTC660_BASE(value,12.5,4)
 #end
 #macro RES_DIS_PTC660_125_5(value)
-RES_DIS_PTC660_GRND(value,12.5,5)
+RES_DIS_PTC660_BASE(value,12.5,5)
 #end
 #macro RES_DIS_PTC660_125_55(value)
-RES_DIS_PTC660_GRND(value,12.5,5.5)
+RES_DIS_PTC660_BASE(value,12.5,5.5)
 #end
 #macro RES_DIS_PTC660_165_3(value)
-RES_DIS_PTC660_GRND(value,16.5,3)
+RES_DIS_PTC660_BASE(value,16.5,3)
 #end
 #macro RES_DIS_PTC660_165_4(value)
-RES_DIS_PTC660_GRND(value,16.5,4)
+RES_DIS_PTC660_BASE(value,16.5,4)
 #end
 #macro RES_DIS_PTC660_165_5(value)
-RES_DIS_PTC660_GRND(value,16.5,5)
+RES_DIS_PTC660_BASE(value,16.5,5)
 #end
 #macro RES_DIS_PTC660_165_55(value)
-RES_DIS_PTC660_GRND(value,16.5,5.5)
+RES_DIS_PTC660_BASE(value,16.5,5.5)
 #end
 #macro RES_DIS_PTC660_205_3(value)
-RES_DIS_PTC660_GRND(value,20.5,3)
+RES_DIS_PTC660_BASE(value,20.5,3)
 #end
 #macro RES_DIS_PTC660_205_4(value)
-RES_DIS_PTC660_GRND(value,20.5,4)
+RES_DIS_PTC660_BASE(value,20.5,4)
 #end
 #macro RES_DIS_PTC660_205_5(value)
-RES_DIS_PTC660_GRND(value,20.5,5)
+RES_DIS_PTC660_BASE(value,20.5,5)
 #end
 #macro RES_DIS_PTC660_205_55(value)
-RES_DIS_PTC660_GRND(value,20.5,5.5)
+RES_DIS_PTC660_BASE(value,20.5,5.5)
 #end
 
 
@@ -1148,7 +1148,7 @@ RES_DIS_PTC660_GRND(value,20.5,5.5)
 //-------------------------------------------------------------------------------------------------
 //l:Length d:Diameter r:Pitch lw:pins length dw:pins width op:extra height
 ********************************************************************************************************************************************/
-#macro RES_DIS_RB_GRND(value,l,d,r,lw,dw,op)
+#macro RES_DIS_RB_BASE(value,l,d,r,lw,dw,op)
 #local RB_Green = color red 0.013 green 0.094 blue 0.030;
 union{
 
@@ -1221,30 +1221,30 @@ translate<0,space,0>
 #end
 //RB57 30.48mm
 #macro RES_DIS_RB_57_30MM_H(value)
-RES_DIS_RB_GRND(value,22.5,8,12*2.54,30,0.88,8)
+RES_DIS_RB_BASE(value,22.5,8,12*2.54,30,0.88,8)
 #end
 //RB58 55.88mm
 #macro RES_DIS_RB_58_55MM_H(value)
-RES_DIS_RB_GRND(value,47,11,22*2.54,30,0.88,8)
+RES_DIS_RB_BASE(value,47,11,22*2.54,30,0.88,8)
 #end
 //RB59 22.86mm
 #macro RES_DIS_RB_59_22MM_H(value)
-RES_DIS_RB_GRND(value,12.7,5.6,9*2.54,30,0.88,8)
+RES_DIS_RB_BASE(value,12.7,5.6,9*2.54,30,0.88,8)
 #end
 //RB60 45.72mm
 #macro RES_DIS_RB_60_45MM_H(value)
-RES_DIS_RB_GRND(value,36,10,18*2.54,30,0.88,8)
+RES_DIS_RB_BASE(value,36,10,18*2.54,30,0.88,8)
 #end
 //RB61 30.48mm
 #macro RES_DIS_RB_61_30MM_H(value)
-RES_DIS_RB_GRND(value,23,7,12*2.54,30,0.88,8)
+RES_DIS_RB_BASE(value,23,7,12*2.54,30,0.88,8)
 #end
 
 
 /********************************************************************************************************************************************
 //SIL-Netzwerk
 ********************************************************************************************************************************************/
-#macro RES_DIS_SIL_GRND(pin)
+#macro RES_DIS_SIL_BASE(pin)
 union{
     box{<-pin*1.27+0.5,0.5,-0.5><pin*1.27-0.5,3,0.5> pigment{rgb<1,0.83,0.61>}}
     sphere_sweep{
@@ -1273,37 +1273,37 @@ union{
 #end
 
 #macro RES_DIS_SIL_4(value)
-RES_DIS_SIL_GRND(4)
+RES_DIS_SIL_BASE(4)
 #end
 #macro RES_DIS_SIL_5(value)
-RES_DIS_SIL_GRND(5)
+RES_DIS_SIL_BASE(5)
 #end
 #macro RES_DIS_SIL_6(value)
-RES_DIS_SIL_GRND(6)
+RES_DIS_SIL_BASE(6)
 #end
 #macro RES_DIS_SIL_7(value)
-RES_DIS_SIL_GRND(7)
+RES_DIS_SIL_BASE(7)
 #end
 #macro RES_DIS_SIL_8(value)
-RES_DIS_SIL_GRND(8)
+RES_DIS_SIL_BASE(8)
 #end
 #macro RES_DIS_SIL_9(value)
-RES_DIS_SIL_GRND(9)
+RES_DIS_SIL_BASE(9)
 #end
 #macro RES_DIS_SIL_10(value)
-RES_DIS_SIL_GRND(10)
+RES_DIS_SIL_BASE(10)
 #end
 #macro RES_DIS_SIL_11(value)
-RES_DIS_SIL_GRND(11)
+RES_DIS_SIL_BASE(11)
 #end
 #macro RES_DIS_SIL_12(value)
-RES_DIS_SIL_GRND(12)
+RES_DIS_SIL_BASE(12)
 #end
 #macro RES_DIS_SIL_13(value)
-RES_DIS_SIL_GRND(13)
+RES_DIS_SIL_BASE(13)
 #end
 #macro RES_DIS_SIL_14(value)
-RES_DIS_SIL_GRND(14)
+RES_DIS_SIL_BASE(14)
 #end
 
 
@@ -1314,7 +1314,7 @@ RES_DIS_SIL_GRND(14)
 //e,a,b,s,h,l,d parameters, see epcos datasheet: Dimensions
 //To add a missing SIOV, just duplicate, rename a macro and copy parameters from EPCOS datasheet. They are in the same order.
 ********************************************************************************************************************************************/
-#macro RES_DIS_SIOV_GRND(value,e,a,b,s,h,l,d)
+#macro RES_DIS_SIOV_BASE(value,e,a,b,s,h,l,d)
     #local Siov = texture{
         pigment{color red 0.17 green 0.24 blue 0.88}
         finish {
@@ -1366,82 +1366,82 @@ RES_DIS_SIL_GRND(14)
 
 #end
 #macro RES_DIS_SIOV_05_11(value)
-RES_DIS_SIOV_GRND(value,5,1.2,7,3.3,8.5,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.2,7,3.3,8.5,30,0.6)
 #end
 #macro RES_DIS_SIOV_05_14(value)
-RES_DIS_SIOV_GRND(value,5,1.3,7,3.4,8.5,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.3,7,3.4,8.5,30,0.6)
 #end
 #macro RES_DIS_SIOV_05_75(value)
-RES_DIS_SIOV_GRND(value,5,1.3,7,3.4,8.5,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.3,7,3.4,8.5,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_14(value)
-RES_DIS_SIOV_GRND(value,5,1.3,9,3.5,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.3,9,3.5,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_20(value)
-RES_DIS_SIOV_GRND(value,5,1.2,9,3.6,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.2,9,3.6,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_30(value)
-RES_DIS_SIOV_GRND(value,5,1.5,9,3.7,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.5,9,3.7,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_60(value)
-RES_DIS_SIOV_GRND(value,5,1.2,9,3.3,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.2,9,3.3,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_75(value)
-RES_DIS_SIOV_GRND(value,5,1.3,9,3.6,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.3,9,3.6,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_95(value)
-RES_DIS_SIOV_GRND(value,5,1.3,9,3.4,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.3,9,3.4,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_250(value)
-RES_DIS_SIOV_GRND(value,5,1.8,9,4.2,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,1.8,9,4.2,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_07_275(value)
-RES_DIS_SIOV_GRND(value,5,2,9,4.4,11,30,0.6)
+RES_DIS_SIOV_BASE(value,5,2,9,4.4,11,30,0.6)
 #end
 #macro RES_DIS_SIOV_10_11(value)
-RES_DIS_SIOV_GRND(value,7.5,1.4,12,4,14.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.4,12,4,14.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_10_20(value)
-RES_DIS_SIOV_GRND(value,7.5,1.8,12,4.5,14.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.8,12,4.5,14.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_10_75(value)
-RES_DIS_SIOV_GRND(value,7.5,1.5,12,4.2,14.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.5,12,4.2,14.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_10_275(value)
-RES_DIS_SIOV_GRND(value,7.5,2.2,12,5,14.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,2.2,12,5,14.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_11(value)
-RES_DIS_SIOV_GRND(value,7.5,1.4,15.5,4,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.4,15.5,4,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_14(value)
-RES_DIS_SIOV_GRND(value,7.5,1.5,15.5,4.2,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.5,15.5,4.2,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_20(value)
-RES_DIS_SIOV_GRND(value,7.5,1.9,15.5,4.6,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.9,15.5,4.6,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_25(value)
-RES_DIS_SIOV_GRND(value,7.5,1.7,15.5,4.2,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.7,15.5,4.2,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_30(value)
-RES_DIS_SIOV_GRND(value,7.5,1.8,15.5,4.4,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.8,15.5,4.4,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_60(value)
-RES_DIS_SIOV_GRND(value,7.5,1.5,15.5,4,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,1.5,15.5,4,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_14_250(value)
-RES_DIS_SIOV_GRND(value,7.5,2,15.5,4.8,18.5,30,0.8)
+RES_DIS_SIOV_BASE(value,7.5,2,15.5,4.8,18.5,30,0.8)
 #end
 #macro RES_DIS_SIOV_20_20(value)
-RES_DIS_SIOV_GRND(value,10,2.1,21.5,5.1,25.5,30,1)
+RES_DIS_SIOV_BASE(value,10,2.1,21.5,5.1,25.5,30,1)
 #end
 #macro RES_DIS_SIOV_20_75(value)
-RES_DIS_SIOV_GRND(value,10,1.6,21.5,4.6,25.5,30,1)
+RES_DIS_SIOV_BASE(value,10,1.6,21.5,4.6,25.5,30,1)
 #end
 #macro RES_DIS_SIOV_20_275(value)
-RES_DIS_SIOV_GRND(value,10,2.3,21.5,5.4,25.5,30,1)
+RES_DIS_SIOV_BASE(value,10,2.3,21.5,5.4,25.5,30,1)
 #end
 #macro RES_DIS_SIOV_20_1000(value)
-RES_DIS_SIOV_GRND(value,10,6.9,21.5,11.4,28.5,30,1)
+RES_DIS_SIOV_BASE(value,10,6.9,21.5,11.4,28.5,30,1)
 #end
 
 
@@ -1450,7 +1450,7 @@ RES_DIS_SIOV_GRND(value,10,6.9,21.5,11.4,28.5,30,1)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.0 29/12/05
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_72_GRND(Value,Type)
+#macro RES_DIS_TRIM_72_BASE(Value,Type)
 union{
     difference{
         union{
@@ -1490,7 +1490,7 @@ union{
 }
 #end
 #macro RES_DIS_TRIM_72_PT(value)
-RES_DIS_TRIM_72_GRND(value,0)
+RES_DIS_TRIM_72_BASE(value,0)
 #end
 
 
@@ -1498,7 +1498,7 @@ RES_DIS_TRIM_72_GRND(value,0)
 // Piher-Potentiometer PT-10 Horizontal Rastermaß 10mm
 // Carsten Kögler <koegler@ftz-leipzig.de>
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_PT10_H_10_GRND(value)
+#macro RES_DIS_TRIM_PT10_H_10_BASE(value)
 union{
     object {RES_DIS_TRIM_PT10_BODY(value) translate<0,1.5,0.2>}
     // vorderer rechter pin
@@ -1529,14 +1529,14 @@ union{
 #end
 //PT10 Horizontal 10mm
 #macro RES_DIS_TRIM_PT10_H_10(value)
-RES_DIS_TRIM_PT10_H_10_GRND(value)
+RES_DIS_TRIM_PT10_H_10_BASE(value)
 #end
 
 
 /********************************************************************************************************************************************
 //Trimmer
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_SPECTROL1_GRND(B,T,H,Farbe,D_schraube,Rf)
+#macro RES_DIS_TRIM_SPECTROL1_BASE(B,T,H,Farbe,D_schraube,Rf)
 union {
     object{RES_DIS_TRIM_KOERPER(B,T,H,Farbe)}
     //Anschlußbeine zuordnen
@@ -1563,19 +1563,19 @@ union {
 #end
 //senkrecht
 #macro RES_DIS_TRIM_64W(value)
-RES_DIS_TRIM_SPECTROL1_GRND(9.52,4.83,9.52,Khaki,3.1,1.27) rotate <0,-90,0>
+RES_DIS_TRIM_SPECTROL1_BASE(9.52,4.83,9.52,Khaki,3.1,1.27) rotate <0,-90,0>
 #end
 #macro RES_DIS_TRIM_64Y(value)
-RES_DIS_TRIM_SPECTROL1_GRND(9.52,4.83,9.52,Khaki,-3.1,-1.27) rotate <0,-90,0>
+RES_DIS_TRIM_SPECTROL1_BASE(9.52,4.83,9.52,Khaki,-3.1,-1.27) rotate <0,-90,0>
 #end
 
 
 /********************************************************************************************************************************************
 //Grundmacro stehend - Breite=B , Tiefe = T, Hoehe = H, Raster = Ra?, Farbe
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_SPECTROL2_GRND(B,T,H,Ra,Farbe)
+#macro RES_DIS_TRIM_SPECTROL2_BASE(B,T,H,Ra,Farbe)
   union{
-    object{RES_DIS_TRIM_SPECTROL1_GRND(B,T,H,Farbe,-3.1,1.27)}
+    object{RES_DIS_TRIM_SPECTROL1_BASE(B,T,H,Farbe,-3.1,1.27)}
     sphere{<-B/2+4.75, H+5.85,T+.01>  2.5   scale<1.70,0.5,0.01> pigment{Farbe}
            translate<0,0,2.40>}  //Oval bei Spectrol Schrift
     text {ttf besch_font "Spectrol" 0.1,0 scale<1.5,1.5,1.5> pigment{Black}
@@ -1585,7 +1585,7 @@ RES_DIS_TRIM_SPECTROL1_GRND(9.52,4.83,9.52,Khaki,-3.1,-1.27) rotate <0,-90,0>
 #end
 // Raster 5.08
 #macro RES_DIS_TRIM_S64Y(value)
-RES_DIS_TRIM_SPECTROL2_GRND(9.52,4.83,9.52,5.08,OldGold)
+RES_DIS_TRIM_SPECTROL2_BASE(9.52,4.83,9.52,5.08,OldGold)
 #end
 
 
@@ -1594,7 +1594,7 @@ RES_DIS_TRIM_SPECTROL2_GRND(9.52,4.83,9.52,5.08,OldGold)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.0 29/12/05
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_T18_GRND(value)
+#macro RES_DIS_TRIM_T18_BASE(value)
 union{
 #local VishayBlue=color red 0.0 green 0.4453 blue 0.73;
     difference{
@@ -1630,7 +1630,7 @@ union{
 }
 #end
 #macro RES_DIS_TRIM_T18(value)
-RES_DIS_TRIM_T18_GRND(value)
+RES_DIS_TRIM_T18_BASE(value)
 #end
 
 
@@ -1639,7 +1639,7 @@ RES_DIS_TRIM_T18_GRND(value)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.1  25/12/05
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_T7_GRND(Type,Value)
+#macro RES_DIS_TRIM_T7_BASE(Type,Value)
 #local Bluetrim    = rgb <0, 0.2, 1>;
 #local Bluestamp    = rgb <0, 0, 0.5>;
 union{
@@ -1733,10 +1733,10 @@ union{
 }
 #end
 #macro RES_DIS_TRIM_T7_YA(value)
-RES_DIS_TRIM_T7_GRND(0,value)
+RES_DIS_TRIM_T7_BASE(0,value)
 #end
 #macro RES_DIS_TRIM_T7_YB(value)
-RES_DIS_TRIM_T7_GRND(1,value)
+RES_DIS_TRIM_T7_BASE(1,value)
 #end
 
 
@@ -1745,7 +1745,7 @@ RES_DIS_TRIM_T7_GRND(1,value)
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.0  12/04/06  
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_TS53_GRND (Type)
+#macro RES_DIS_TRIM_TS53_BASE (Type)
 union{
     difference{
         box { <-2.5, +0.4, -2.5>, <2.5, 2.7, 2.5> }
@@ -1792,10 +1792,10 @@ union{
 }
 #end
 #macro RES_DIS_TRIM_TS53_YL(value)
-RES_DIS_TRIM_TS53_GRND (0)
+RES_DIS_TRIM_TS53_BASE (0)
 #end
 #macro RES_DIS_TRIM_TS53_YJ(value)
-RES_DIS_TRIM_TS53_GRND (1)
+RES_DIS_TRIM_TS53_BASE (1)
 #end
 
 
@@ -1804,7 +1804,7 @@ RES_DIS_TRIM_TS53_GRND (1)
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.0  26/03/06
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_TSM_GRND(TrimType,Lg)
+#macro RES_DIS_TRIM_TSM_BASE(TrimType,Lg)
 union{
     difference{
         box{<-2.4,0.2,-1.75><+2.4,Lg+0.2,+1.75>}
@@ -1889,16 +1889,16 @@ union{
 #end
 
 #macro RES_DIS_TRIM_TSM_4YL(value)
-RES_DIS_TRIM_TSM_GRND(0,5.1)
+RES_DIS_TRIM_TSM_BASE(0,5.1)
 #end
 #macro RES_DIS_TRIM_TSM_4YJ(value)
-RES_DIS_TRIM_TSM_GRND(1,5.1)
+RES_DIS_TRIM_TSM_BASE(1,5.1)
 #end
 #macro RES_DIS_TRIM_TSM_4ZL(value)
-RES_DIS_TRIM_TSM_GRND(2,4.6)
+RES_DIS_TRIM_TSM_BASE(2,4.6)
 #end
 #macro RES_DIS_TRIM_TSM_4ZJ(value)
-RES_DIS_TRIM_TSM_GRND(3,4.6)
+RES_DIS_TRIM_TSM_BASE(3,4.6)
 #end
 
 
@@ -1906,7 +1906,7 @@ RES_DIS_TRIM_TSM_GRND(3,4.6)
 // Rf = 1.27 oder 0 (Dreieck oder Linie); D_schraube = Abstand der Schraube aus
 // der Mitte
 ********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_W_GRND(B,T,H,Farbe,D_schraube,Rf )
+#macro RES_DIS_TRIM_W_BASE(B,T,H,Farbe,D_schraube,Rf )
 union {
     object{RES_DIS_TRIM_KOERPER(B,T,H,Farbe)}
     //Anschlußbeine zuordnen
@@ -1932,17 +1932,17 @@ union {
 #end
 // waagerecht
 #macro RES_DIS_TRIM_B25X(value)
-RES_DIS_TRIM_W_GRND(7,6.6,4.83,NavyBlue,0,-1.27)
+RES_DIS_TRIM_W_BASE(7,6.6,4.83,NavyBlue,0,-1.27)
 #end
 #macro RES_DIS_TRIM_B25V(value)
-RES_DIS_TRIM_W_GRND(7,6.6,4.83,NavyBlue,0,1.27)
+RES_DIS_TRIM_W_BASE(7,6.6,4.83,NavyBlue,0,1.27)
 #end
 
 
 /********************************************************************************************************************************************
 //SR(Tiefe, Breite, Hoehe, Breite Loetflaechen, Abstand Pin zu Pin, Anzahl Widerstände, Schriftzug)
 ********************************************************************************************************************************************/
-#macro RES_SMD_CHIP_ARRAY_GRND(b,l,h,blf,pitch,n,value)
+#macro RES_SMD_CHIP_ARRAY_BASE(b,l,h,blf,pitch,n,value)
 union{
    
    //White body
@@ -1998,14 +1998,14 @@ union{
 
 
 #macro RES_SMD_CHIP_ARRAY_4X0603_0612(value)
-RES_SMD_CHIP_ARRAY_GRND(1.60,3.20,0.8,0.4,0.8,4,value)
+RES_SMD_CHIP_ARRAY_BASE(1.60,3.20,0.8,0.4,0.8,4,value)
 #end
 
 
 /********************************************************************************************************************************************
 //SR(Tiefe, Breite, Hoehe, Breite Lötfläche, Schriftzug)
 ********************************************************************************************************************************************/
-#macro RES_SMD_CHIP_GRND(b,l,h,blf,value)
+#macro RES_SMD_CHIP_BASE(b,l,h,blf,value)
 union{
    box{<0    ,0    ,0.01> <blf    ,h+0.05 ,b-0.01>}
    box{<l    ,0    ,0.01> <l-blf  ,h+0.05 ,b-0.01>}
@@ -2019,35 +2019,35 @@ union{
 }
 #end
 #macro RES_SMD_CHIP_2512(value)
-RES_SMD_CHIP_GRND(3.2,6.35,0.55,0.6,value)
+RES_SMD_CHIP_BASE(3.2,6.35,0.55,0.6,value)
 #end
 #macro RES_SMD_CHIP_2010(value)
-RES_SMD_CHIP_GRND(2.5,5.0,0.45,0.6,value)
+RES_SMD_CHIP_BASE(2.5,5.0,0.45,0.6,value)
 #end
 #macro RES_SMD_CHIP_1218(value)
-RES_SMD_CHIP_GRND(4.6,3.05,0.45,0.45,value)
+RES_SMD_CHIP_BASE(4.6,3.05,0.45,0.45,value)
 #end
 #macro RES_SMD_CHIP_1210(value)
-RES_SMD_CHIP_GRND(2.6,3.1,0.45,0.5,value)
+RES_SMD_CHIP_BASE(2.6,3.1,0.45,0.5,value)
 #end
 #macro RES_SMD_CHIP_1206(value)
-RES_SMD_CHIP_GRND(1.6,3.1,0.45,0.45,value)
+RES_SMD_CHIP_BASE(1.6,3.1,0.45,0.45,value)
 #end
 #macro RES_SMD_CHIP_0805(value)
-RES_SMD_CHIP_GRND(1.25,2.00,0.45,0.35,value)
+RES_SMD_CHIP_BASE(1.25,2.00,0.45,0.35,value)
 #end
 #macro RES_SMD_CHIP_0603(value)
-RES_SMD_CHIP_GRND(0.80,1.60,0.40,0.25,value)
+RES_SMD_CHIP_BASE(0.80,1.60,0.40,0.25,value)
 #end
 #macro RES_SMD_CHIP_0402(value)
-RES_SMD_CHIP_GRND(0.50,1.00,0.20,0.20,value)
+RES_SMD_CHIP_BASE(0.50,1.00,0.20,0.20,value)
 #end
 
 
 /********************************************************************************************************************************************
 //basiert auf Makro von Walter Mücke
 ********************************************************************************************************************************************/
-#macro RES_SMD_MELF_GRND(c1,c2,c3,c4)
+#macro RES_SMD_MELF_BASE(c1,c2,c3,c4)
 union { 
    object{Round_Cylinder_Union (<-1.75,0,0><-0.9,0>0.7,0.2)texture{col_silver}}
    object{Round_Cylinder_Union (<0.9,0><1.75,0,0>0.7,0.2)texture{col_silver}}
@@ -2063,15 +2063,15 @@ union {
 #end
 //Widerstand MICROMELF
 #macro RES_SMD_0102_MLF(c1,c2,c3,c4)
-RES_SMD_MELF_GRND(c1,c2,c3,c4) scale<0.6143,0.786,0.786> translate<0,0.55,0>
+RES_SMD_MELF_BASE(c1,c2,c3,c4) scale<0.6143,0.786,0.786> translate<0,0.55,0>
 #end
 //Widerstand MiniMELF
 #macro RES_SMD_0204_MLF(c1,c2,c3,c4)
-RES_SMD_MELF_GRND(c1,c2,c3,c4) scale<1,1,1> translate<0,0.7,0>
+RES_SMD_MELF_BASE(c1,c2,c3,c4) scale<1,1,1> translate<0,0.7,0>
 #end
 //Widerstand MELF
 #macro RES_SMD_0207_MLF(c1,c2,c3,c4)
-RES_SMD_MELF_GRND(c1,c2,c3,c4) scale<1.614,1.5715,1.5715> translate<0,1.1,0>
+RES_SMD_MELF_BASE(c1,c2,c3,c4) scale<1.614,1.5715,1.5715> translate<0,1.1,0>
 #end
 
 
@@ -2084,7 +2084,7 @@ RES_SMD_MELF_GRND(c1,c2,c3,c4) scale<1.614,1.5715,1.5715> translate<0,1.1,0>
 // *    12.12.2002
 // *
 ********************************************************************************************************************************************/
-#macro RES_SMD_TRIM_3202_GRND()
+#macro RES_SMD_TRIM_3202_BASE()
 object{
 
 #local PAD_KLEIN_R_TRIM_3202=
@@ -2184,7 +2184,7 @@ union{
 BAUTEIL_R_TRIM_3202 translate<-1.5,0,-1.6>}
 #end
 #macro RES_SMD_TRIM_3202()
-RES_SMD_TRIM_3202_GRND()
+RES_SMD_TRIM_3202_BASE()
 #end
 
 

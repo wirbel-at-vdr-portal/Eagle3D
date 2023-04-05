@@ -56,7 +56,7 @@ union {
  * h=höhe
  * n=Beschriftung
  ******************************************************************************/
-#macro IC_DIS_DIP_GRND(p,a,b,h,n,logo)
+#macro IC_DIS_DIP_BASE(p,a,b,h,n,logo)
 union{
     //Body
     difference{
@@ -143,140 +143,140 @@ union{
     }
     translate<0,0.25,0>
     texture{col_ic_body_1}
-   } // end: IC_DIS_DIP_GRND
+   } // end: IC_DIS_DIP_BASE
 #end
 
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP8A4(name,logo)  // DIP8 with 4 corner pins
-  IC_DIS_DIP_GRND(8,4,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(8,4,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP14A4(name,logo) // DIP14 with 4 corner pins
-  IC_DIS_DIP_GRND(14,4,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(14,4,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP14A8(name,logo) // DIP14 with 8 corner pins
-  IC_DIS_DIP_GRND(14,8,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(14,8,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP16A4(name,logo) // DIP16 with 4 corner pins
-  IC_DIS_DIP_GRND(16,4,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(16,4,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP16A8(name,logo) // DIP16 with 8 corner pins
-  IC_DIS_DIP_GRND(16,8,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(16,8,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP24A12(name,logo) // DIP24 with 12 corner pins
-  IC_DIS_DIP_GRND(24,12,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(24,12,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP2(name,logo) // DIP2
-  IC_DIS_DIP_GRND(2,2,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(2,2,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP4(name,logo) // DIP4
-  IC_DIS_DIP_GRND(4,4,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(4,4,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP6(name,logo) // DIP6
-  IC_DIS_DIP_GRND(6,6,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(6,6,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP6_4(name,logo) // DIP6-4
-  IC_DIS_DIP_GRND(6,6,4,3.2,name,logo)
+  IC_DIS_DIP_BASE(6,6,4,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP8(name,logo) // DIP8
-  IC_DIS_DIP_GRND(8,8,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(8,8,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP14(name,logo) // DIP14
-  IC_DIS_DIP_GRND(14,14,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(14,14,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP16(name,logo) // DIP16
-  IC_DIS_DIP_GRND(16,16,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(16,16,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP18(name,logo) // DIP18
-  IC_DIS_DIP_GRND(18,18,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(18,18,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP20(name,logo) // DIP20
-  IC_DIS_DIP_GRND(20,20,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(20,20,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP22(name,logo) // DIP22
-  IC_DIS_DIP_GRND(22,22,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(22,22,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP22_4(name,logo) // DIP22-4
-  IC_DIS_DIP_GRND(22,22,4,3.2,name,logo)
+  IC_DIS_DIP_BASE(22,22,4,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP24(name,logo) // DIP24
-  IC_DIS_DIP_GRND(24,24,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(24,24,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP24_4(name,logo) // DIP24-4
-  IC_DIS_DIP_GRND(24,24,4,3.2,name,logo)
+  IC_DIS_DIP_BASE(24,24,4,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP24_9(name,logo)
-  IC_DIS_DIP_GRND(24,24,9,3.2,name,logo)
+  IC_DIS_DIP_BASE(24,24,9,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP28(name,logo) // DIP28
-  IC_DIS_DIP_GRND(28,28,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(28,28,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP24_W(name,logo) // DIP24 600mil
-  IC_DIS_DIP_GRND(24,24,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(24,24,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP28_4(name,logo) // DIP28 400mil
-  IC_DIS_DIP_GRND(28,28,4,3.2,name,logo)
+  IC_DIS_DIP_BASE(28,28,4,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP28_W(name,logo) // DIP28 600mil
-  IC_DIS_DIP_GRND(28,28,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(28,28,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP32_3(name,logo) // DIP32 300mil
-  IC_DIS_DIP_GRND(32,32,3,3.2,name,logo)
+  IC_DIS_DIP_BASE(32,32,3,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP32_W(name,logo) // DIP32 600mil
-  IC_DIS_DIP_GRND(32,32,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(32,32,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP36_W(name,logo) // DIP36 600mil
-  IC_DIS_DIP_GRND(36,36,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(36,36,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP40_W(name,logo) // DIP40 600mil
-  IC_DIS_DIP_GRND(40,40,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(40,40,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP42_W(name,logo) // DIP42 600mil
-  IC_DIS_DIP_GRND(42,42,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(42,42,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP48_W(name,logo) // DIP48 600mil
-  IC_DIS_DIP_GRND(48,48,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(48,48,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP52_W(name,logo) // DIP52 600mil
-  IC_DIS_DIP_GRND(52,52,6,3.2,name,logo)
+  IC_DIS_DIP_BASE(52,52,6,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP64_9(name,logo) // DIP64 900mil
-  IC_DIS_DIP_GRND(64,64,9,3.2,name,logo)
+  IC_DIS_DIP_BASE(64,64,9,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 #macro IC_DIS_DIP68_9(name,logo) // DIP68 900mil
-  IC_DIS_DIP_GRND(68,68,9,3.2,name,logo)
+  IC_DIS_DIP_BASE(68,68,9,3.2,name,logo)
 #end
 //------------------------------------------------------------------------------
 

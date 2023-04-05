@@ -10,7 +10,7 @@
  * Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
  * Rev. 1.0 - 24/12/05
  *******************************************************************************/
-#macro SPC_VCONV_DIP_GRND(value,M,Lb,Tp,L,W,H,p1,p2,p3,p9,p10,p11,p12,p13,p14,p15,p16,p22,p23,p24,offsetX,pw,hpin)
+#macro SPC_VCONV_DIP_BASE(value,M,Lb,Tp,L,W,H,p1,p2,p3,p9,p10,p11,p12,p13,p14,p15,p16,p22,p23,p24,offsetX,pw,hpin)
 union{
     #if(M=0)  // Plastic
         #local inner = 1;
@@ -142,103 +142,103 @@ union{
 
 
 #macro SPC_DCDC_TYL(value)
-  SPC_VCONV_DIP_GRND(value,1,1,0,32.6,20.4,10.3,1,0,0,0,1,0,1,1,0,1,0,0,0,1,0,"1.5W",5)
+  SPC_VCONV_DIP_BASE(value,1,1,0,32.6,20.4,10.3,1,0,0,0,1,0,1,1,0,1,0,0,0,1,0,"1.5W",5)
 #end
 
 #macro SPC_DCDC_TEM2(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"2W",3.8)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"2W",3.8)
 #end
 
 #macro SPC_DCDC_TEL2(value)
-  SPC_VCONV_DIP_GRND(value,0,2,1,23.8,13.7,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"2W",4)
+  SPC_VCONV_DIP_BASE(value,0,2,1,23.8,13.7,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"2W",4)
 #end
 
 #macro SPC_DCDC_THI_S(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,0,0,0,0,1,1,0,0,0,0,1,1,0,"2W",4)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10,1,1,0,0,0,0,1,1,0,0,0,0,1,1,0,"2W",4)
 #end
 
 #macro SPC_DCDC_THI_D(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,0,0,1,1,0,1,0,0,0,0,1,1,0,"2W",4)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10,1,1,0,0,1,1,0,1,0,0,0,0,1,1,0,"2W",4)
 #end
 
 #macro SPC_DCDC_THP3_S(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,"2W",4)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,"2W",4)
 #end
 
 #macro SPC_DCDC_THP3_D(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,0,0,0,0,1,0,1,0,1,0,0,1,1,0,"2W",4)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10,1,0,0,0,0,1,0,1,0,1,0,0,1,1,0,"2W",4)
 #end
 
 #macro SPC_DCDC_TEM3(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"3W",3.8)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"3W",3.8)
 #end
 
 #macro SPC_DCDC_TEL3(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"3W",4.5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10.2,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,"3W",4.5)
 #end
 
 #macro SPC_DCDC_TEL3NP_S(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"3W",4.5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"3W",4.5)
 #end
 
 #macro SPC_DCDC_TEL3NP_D(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"3W",4.5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"3W",4.5)
 #end
 
 #macro SPC_DCDC_TEN3_S(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"3W",5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"3W",5)
 #end
 
 #macro SPC_DCDC_TEN3_D(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"3W",5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"3W",5)
 #end
 
 #macro SPC_DCDC_TEN4_S(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"4W",5)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"4W",5)
 #end
 
 #macro SPC_DCDC_TEN4_D(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"4W",5)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"4W",5)
 #end
 
 #macro SPC_DCDC_TVL(value)
-  SPC_VCONV_DIP_GRND(value,1,3,2,51.3,51.3,8,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",6)
+  SPC_VCONV_DIP_BASE(value,1,3,2,51.3,51.3,8,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",6)
 #end
 
 #macro SPC_DCDC_TEL5_S(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20.3,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20.3,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
 #macro SPC_DCDC_TEL5_D(value)
-  SPC_VCONV_DIP_GRND(value,0,0,0,32,20.3,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
+  SPC_VCONV_DIP_BASE(value,0,0,0,32,20.3,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
 #macro SPC_DCDC_TEN5_S(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
 #macro SPC_DCDC_TEN5_D(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",5)
 #end
 
 #macro SPC_DCDC_TEN5WI_S(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
 #macro SPC_DCDC_TEN5WI_D(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
 #macro SPC_DCDC_TEN6_S(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,0,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
 #macro SPC_DCDC_TEN6_D(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,0,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"5W",3.8)
 #end
 
 #macro SPC_DCDC_TEN8(value)
-  SPC_VCONV_DIP_GRND(value,1,0,0,32,20,10.2,1,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"8W",3.8)
+  SPC_VCONV_DIP_BASE(value,1,0,0,32,20,10.2,1,1,1,1,0,1,0,0,1,0,1,1,1,0,-1,"8W",3.8)
 #end
 
 
@@ -248,7 +248,7 @@ union{
  * Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
  * Rev. 1.0 - 21/12/05
  ******************************************************************************/
-#macro SPC_DCDC_GRND(value,s,Lg,lg1,lg,h,p1,p2,p3,p4,p5,p6,p7,p8,os,pl)
+#macro SPC_DCDC_BASE(value,s,Lg,lg1,lg,h,p1,p2,p3,p4,p5,p6,p7,p8,os,pl)
 union{
     #local s = -((5*1.27)+s);
     #local lg1 = lg1+0.125;
@@ -299,67 +299,67 @@ union{
 
 //TMA single/dual voltage, less or equal to 24V input voltage
 #macro SPC_DCDC_TMA_S(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
 #macro SPC_DCDC_TMA_D(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,6,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
 #macro SPC_DCDC_TMA_S_24V(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
 #macro SPC_DCDC_TMA_D_24V(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,7,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
 //TME less or equal to 24V input voltage
 #macro SPC_DCDC_TME(value)
-  SPC_DCDC_GRND(value,1.9,+11.5,4.2,6,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
+  SPC_DCDC_BASE(value,1.9,+11.5,4.2,6,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
 #end
 
 #macro SPC_DCDC_TME_24V(value)
-  SPC_DCDC_GRND(value,1.9,+11.5,5.2,7,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
+  SPC_DCDC_BASE(value,1.9,+11.5,5.2,7,10.2,1,1,1,1,0,0,0,0,-3.5,3.2)
 #end
 
 //TMV single/dual voltage, less or equal to 24V input voltage
 #macro SPC_DCDC_TMV_S(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
 #end
 
 #macro SPC_DCDC_TMV_D(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,6,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
 #end
 
 #macro SPC_DCDC_TMV_S_24V(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,0,1,0,0.5,3.2)
 #end
 
 #macro SPC_DCDC_TMV_D_24V(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,7,10.2,1,1,0,0,1,1,1,0,0.5,3.2)
 #end
 
 // TMVEN  single/dual voltage
 #macro SPC_DCDC_TMVEN_S(value)
-  SPC_DCDC_GRND(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,0,1,0,0.5,4)
+  SPC_DCDC_BASE(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,0,1,0,0.5,4)
 #end
 
 #macro SPC_DCDC_TMVEN_D(value)
-  SPC_DCDC_GRND(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,1,1,0,0.5,4)
+  SPC_DCDC_BASE(value,3.5,+22,1.75,7.5,12.5,1,1,0,0,1,1,1,0,0.5,4)
 #end
 
 // TMH  single/dual voltage
 #macro SPC_DCDC_TMH_S(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,0,1,0,0,0,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,0,1,0,0,0,3.2)
 #end
 
 #macro SPC_DCDC_TMH_D(value)
-  SPC_DCDC_GRND(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,1,1,0,0,0,3.2)
+  SPC_DCDC_BASE(value,2.3,+19.5,1.25,7.5,10.2,1,1,0,1,1,1,0,0,0,3.2)
 #end
 // TMR  single/dual voltage
 #macro SPC_DCDC_TMR(value)
-  SPC_DCDC_GRND(value,2,+21.8,3.2,9.2,11.1,1,1,0,0,0,1,1,1,1.5,4)
+  SPC_DCDC_BASE(value,2,+21.8,3.2,9.2,11.1,1,1,0,0,0,1,1,1,1.5,4)
 #end
 
 

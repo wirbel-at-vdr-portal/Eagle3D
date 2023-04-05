@@ -423,7 +423,7 @@ union
 /********************************************************************************************************************************************
 //AK-700 Klemme ohne Mittelanschluss RM 5.0 Uwe Lorenz <u.lorenz@er-dresden.net>
 ********************************************************************************************************************************************/
-#macro CON_AK700_3_5_GRND()
+#macro CON_AK700_3_5_BASE()
 union {
 //***** Loetstift
 cylinder{<-5,-4,0><-5,1.1,0>0.6 texture{col_silver}}
@@ -500,7 +500,7 @@ pigment{LimeGreen} translate<0,0.2,0>}
 #end
 
 #macro CON_AK700_3_5()
-CON_AK700_3_5_GRND()
+CON_AK700_3_5_BASE()
 #end
 
 
@@ -517,7 +517,7 @@ CON_AK700_3_5_GRND()
 //
 // a = Anzahl der Reihen
 ********************************************************************************************************************************************/
-#macro CON_AMPMT_S_GRND(n) 
+#macro CON_AMPMT_S_BASE(n) 
 
 
 union {
@@ -555,34 +555,34 @@ union {
   } 
 #end 
 #macro CON_AMPMT_S_2(value) 
-CON_AMPMT_S_GRND(2)
+CON_AMPMT_S_BASE(2)
 #end
 #macro CON_AMPMT_S_3(value)
-CON_AMPMT_S_GRND(3)
+CON_AMPMT_S_BASE(3)
 #end
 #macro CON_AMPMT_S_4(value)
-CON_AMPMT_S_GRND(4)
+CON_AMPMT_S_BASE(4)
 #end
 #macro CON_AMPMT_S_5(value) 
-CON_AMPMT_S_GRND(5)
+CON_AMPMT_S_BASE(5)
 #end
 #macro CON_AMPMT_S_6(value) 
-CON_AMPMT_S_GRND(6)
+CON_AMPMT_S_BASE(6)
 #end
 #macro CON_AMPMT_S_7(value) 
-CON_AMPMT_S_GRND(7)
+CON_AMPMT_S_BASE(7)
 #end
 #macro CON_AMPMT_S_8(value) 
-CON_AMPMT_S_GRND(8)
+CON_AMPMT_S_BASE(8)
 #end
 #macro CON_AMPMT_S_9(value) 
-CON_AMPMT_S_GRND(9)
+CON_AMPMT_S_BASE(9)
 #end
 #macro CON_AMPMT_S_10(value) 
-CON_AMPMT_S_GRND(10)
+CON_AMPMT_S_BASE(10)
 #end
 #macro CON_AMPMT_S_12(value) 
-CON_AMPMT_S_GRND(12)
+CON_AMPMT_S_BASE(12)
 #end
 
 
@@ -598,7 +598,7 @@ CON_AMPMT_S_GRND(12)
 // pin = pins pro Reihe
 // row = Reihen (1 oder 2)
 ********************************************************************************************************************************************/
-#macro CON_BLW_GRND(pin,row)
+#macro CON_BLW_BASE(pin,row)
 //Pin fuer 1- & 2-reihige Buchsenleiste abgewinkelt obere Reihe  ,     con-lsta.lib,    Joerg Bredendiek <sprut(replace with at)sprut.de>  
 // 
 // a=0 untere Reihe
@@ -695,86 +695,86 @@ union {
 
 
 #macro CON_BLW_1X2()
-CON_BLW_GRND(2,1)
+CON_BLW_BASE(2,1)
 #end
 #macro CON_BLW_1X5()
-CON_BLW_GRND(5,1)
+CON_BLW_BASE(5,1)
 #end
 #macro CON_BLW_1X6()
-CON_BLW_GRND(6,1)
+CON_BLW_BASE(6,1)
 #end
 #macro CON_BLW_1X7()
-CON_BLW_GRND(7,1)
+CON_BLW_BASE(7,1)
 #end
 #macro CON_BLW_1X8()
-CON_BLW_GRND(8,1)
+CON_BLW_BASE(8,1)
 #end
 #macro CON_BLW_1X9()
-CON_BLW_GRND(9,1)
+CON_BLW_BASE(9,1)
 #end
 #macro CON_BLW_1X10()
-CON_BLW_GRND(10,1)
+CON_BLW_BASE(10,1)
 #end
 #macro CON_BLW_1X12()
-CON_BLW_GRND(12,1)
+CON_BLW_BASE(12,1)
 #end
 #macro CON_BLW_1X13()
-CON_BLW_GRND(13,1)
+CON_BLW_BASE(13,1)
 #end
 #macro CON_BLW_1X15()
-CON_BLW_GRND(15,1)
+CON_BLW_BASE(15,1)
 #end
 #macro CON_BLW_1X17()
-CON_BLW_GRND(17,1)
+CON_BLW_BASE(17,1)
 #end
 #macro CON_BLW_1X18()
-CON_BLW_GRND(18,1)
+CON_BLW_BASE(18,1)
 #end
 #macro CON_BLW_1X20()
-CON_BLW_GRND(20,1)
+CON_BLW_BASE(20,1)
 #end
 #macro CON_BLW_2X5()
-CON_BLW_GRND(5,2)
+CON_BLW_BASE(5,2)
 #end
 #macro CON_BLW_2X6()
-CON_BLW_GRND(6,2)
+CON_BLW_BASE(6,2)
 #end
 #macro CON_BLW_2X7()
-CON_BLW_GRND(7,2)
+CON_BLW_BASE(7,2)
 #end
 #macro CON_BLW_2X8()
-CON_BLW_GRND(8,2)
+CON_BLW_BASE(8,2)
 #end
 #macro CON_BLW_2X9()
-CON_BLW_GRND(9,2)
+CON_BLW_BASE(9,2)
 #end
 #macro CON_BLW_2X10()
-CON_BLW_GRND(10,2)
+CON_BLW_BASE(10,2)
 #end
 #macro CON_BLW_2X12()
-CON_BLW_GRND(12,2)
+CON_BLW_BASE(12,2)
 #end
 #macro CON_BLW_2X13()
-CON_BLW_GRND(13,2)
+CON_BLW_BASE(13,2)
 #end
 #macro CON_BLW_2X15()
-CON_BLW_GRND(15,2)
+CON_BLW_BASE(15,2)
 #end
 #macro CON_BLW_2X17()
-CON_BLW_GRND(17,2)
+CON_BLW_BASE(17,2)
 #end
 #macro CON_BLW_2X18()
-CON_BLW_GRND(18,2)
+CON_BLW_BASE(18,2)
 #end
 #macro CON_BLW_2X20()
-CON_BLW_GRND(20,2)
+CON_BLW_BASE(20,2)
 #end
 
 
 /********************************************************************************************************************************************
 //Grundmakro fuer Buchsenleisten (flach)
 ********************************************************************************************************************************************/
-#macro CON_BL_F_GRND(pin,row)
+#macro CON_BL_F_BASE(pin,row)
 union {
 #local i=0;
 #while(i<pin)
@@ -792,83 +792,83 @@ translate<0,0,1.27>
 translate<pin*-1.27+1.27,0,0>}
 #end
 #macro CON_BL_F_1X5()
-CON_BL_F_GRND(5,1)
+CON_BL_F_BASE(5,1)
 #end
 #macro CON_BL_F_1X6()
-CON_BL_F_GRND(6,1)
+CON_BL_F_BASE(6,1)
 #end
 #macro CON_BL_F_1X7()
-CON_BL_F_GRND(7,1)
+CON_BL_F_BASE(7,1)
 #end
 #macro CON_BL_F_1X8()
-CON_BL_F_GRND(8,1)
+CON_BL_F_BASE(8,1)
 #end
 #macro CON_BL_F_1X9()
-CON_BL_F_GRND(9,1)
+CON_BL_F_BASE(9,1)
 #end
 #macro CON_BL_F_1X10()
-CON_BL_F_GRND(10,1)
+CON_BL_F_BASE(10,1)
 #end
 #macro CON_BL_F_1X12()
-CON_BL_F_GRND(12,1)
+CON_BL_F_BASE(12,1)
 #end
 #macro CON_BL_F_1X13()
-CON_BL_F_GRND(13,1)
+CON_BL_F_BASE(13,1)
 #end
 #macro CON_BL_F_1X15()
-CON_BL_F_GRND(15,1)
+CON_BL_F_BASE(15,1)
 #end
 #macro CON_BL_F_1X17()
-CON_BL_F_GRND(17,1)
+CON_BL_F_BASE(17,1)
 #end
 #macro CON_BL_F_1X18()
-CON_BL_F_GRND(18,1)
+CON_BL_F_BASE(18,1)
 #end
 #macro CON_BL_F_1X20()
-CON_BL_F_GRND(20,1)
+CON_BL_F_BASE(20,1)
 #end
 #macro CON_BL_F_2X5()
-CON_BL_F_GRND(5,2)
+CON_BL_F_BASE(5,2)
 #end
 #macro CON_BL_F_2X6()
-CON_BL_F_GRND(6,2)
+CON_BL_F_BASE(6,2)
 #end
 #macro CON_BL_F_2X7()
-CON_BL_F_GRND(7,2)
+CON_BL_F_BASE(7,2)
 #end
 #macro CON_BL_F_2X8()
-CON_BL_F_GRND(8,2)
+CON_BL_F_BASE(8,2)
 #end
 #macro CON_BL_F_2X9()
-CON_BL_F_GRND(9,2)
+CON_BL_F_BASE(9,2)
 #end
 #macro CON_BL_F_2X10()
-CON_BL_F_GRND(10,2)
+CON_BL_F_BASE(10,2)
 #end
 #macro CON_BL_F_2X12()
-CON_BL_F_GRND(12,2)
+CON_BL_F_BASE(12,2)
 #end
 #macro CON_BL_F_2X13()
-CON_BL_F_GRND(13,2)
+CON_BL_F_BASE(13,2)
 #end
 #macro CON_BL_F_2X15()
-CON_BL_F_GRND(15,2)
+CON_BL_F_BASE(15,2)
 #end
 #macro CON_BL_F_2X17()
-CON_BL_F_GRND(17,2)
+CON_BL_F_BASE(17,2)
 #end
 #macro CON_BL_F_2X18()
-CON_BL_F_GRND(18,2)
+CON_BL_F_BASE(18,2)
 #end
 #macro CON_BL_F_2X20()
-CON_BL_F_GRND(20,2)
+CON_BL_F_BASE(20,2)
 #end
 
 
 /********************************************************************************************************************************************
 //Grundmakro fuer Buchsenleisten
 ********************************************************************************************************************************************/
-#macro CON_BL_GRND(pin,row)
+#macro CON_BL_BASE(pin,row)
 union {
 #local i=0;
 #while(i<pin)
@@ -886,76 +886,76 @@ translate<0,0,1.27>
 translate<pin*-1.27+1.27,0,0>}
 #end
 #macro CON_BL_1X5()
-CON_BL_GRND(5,1)
+CON_BL_BASE(5,1)
 #end
 #macro CON_BL_1X6()
-CON_BL_GRND(6,1)
+CON_BL_BASE(6,1)
 #end
 #macro CON_BL_1X7()
-CON_BL_GRND(7,1)
+CON_BL_BASE(7,1)
 #end
 #macro CON_BL_1X8()
-CON_BL_GRND(8,1)
+CON_BL_BASE(8,1)
 #end
 #macro CON_BL_1X9()
-CON_BL_GRND(9,1)
+CON_BL_BASE(9,1)
 #end
 #macro CON_BL_1X10()
-CON_BL_GRND(10,1)
+CON_BL_BASE(10,1)
 #end
 #macro CON_BL_1X12()
-CON_BL_GRND(12,1)
+CON_BL_BASE(12,1)
 #end
 #macro CON_BL_1X13()
-CON_BL_GRND(13,1)
+CON_BL_BASE(13,1)
 #end
 #macro CON_BL_1X15()
-CON_BL_GRND(15,1)
+CON_BL_BASE(15,1)
 #end
 #macro CON_BL_1X17()
-CON_BL_GRND(17,1)
+CON_BL_BASE(17,1)
 #end
 #macro CON_BL_1X18()
-CON_BL_GRND(18,1)
+CON_BL_BASE(18,1)
 #end
 #macro CON_BL_1X20()
-CON_BL_GRND(20,1)
+CON_BL_BASE(20,1)
 #end
 #macro CON_BL_2X5()
-CON_BL_GRND(5,2)
+CON_BL_BASE(5,2)
 #end
 #macro CON_BL_2X6()
-CON_BL_GRND(6,2)
+CON_BL_BASE(6,2)
 #end
 #macro CON_BL_2X7()
-CON_BL_GRND(7,2)
+CON_BL_BASE(7,2)
 #end
 #macro CON_BL_2X8()
-CON_BL_GRND(8,2)
+CON_BL_BASE(8,2)
 #end
 #macro CON_BL_2X9()
-CON_BL_GRND(9,2)
+CON_BL_BASE(9,2)
 #end
 #macro CON_BL_2X10()
-CON_BL_GRND(10,2)
+CON_BL_BASE(10,2)
 #end
 #macro CON_BL_2X12()
-CON_BL_GRND(12,2)
+CON_BL_BASE(12,2)
 #end
 #macro CON_BL_2X13()
-CON_BL_GRND(13,2)
+CON_BL_BASE(13,2)
 #end
 #macro CON_BL_2X15()
-CON_BL_GRND(15,2)
+CON_BL_BASE(15,2)
 #end
 #macro CON_BL_2X17()
-CON_BL_GRND(17,2)
+CON_BL_BASE(17,2)
 #end
 #macro CON_BL_2X18()
-CON_BL_GRND(18,2)
+CON_BL_BASE(18,2)
 #end
 #macro CON_BL_2X20()
-CON_BL_GRND(20,2)
+CON_BL_BASE(20,2)
 #end
 
 
@@ -963,7 +963,7 @@ CON_BL_GRND(20,2)
 //Macro fuer Praezisions Buchsenleisten
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
-#macro CON_BL_PRECISION_GRND(pin,row)
+#macro CON_BL_PRECISION_BASE(pin,row)
 //Single Pin
 #macro CON_BL_PRECISION_PIN()
 union {
@@ -1010,86 +1010,86 @@ union {
 #end
 
 #macro CON_BL_PRECISION_1X1()
-CON_BL_PRECISION_GRND(1,1)
+CON_BL_PRECISION_BASE(1,1)
 #end
 #macro CON_BL_PRECISION_1X2()
-CON_BL_PRECISION_GRND(2,1)
+CON_BL_PRECISION_BASE(2,1)
 #end
 #macro CON_BL_PRECISION_1X3()
-CON_BL_PRECISION_GRND(3,1)
+CON_BL_PRECISION_BASE(3,1)
 #end
 #macro CON_BL_PRECISION_1X4()
-CON_BL_PRECISION_GRND(4,1)
+CON_BL_PRECISION_BASE(4,1)
 #end
 #macro CON_BL_PRECISION_1X5()
-CON_BL_PRECISION_GRND(5,1)
+CON_BL_PRECISION_BASE(5,1)
 #end
 #macro CON_BL_PRECISION_1X6()
-CON_BL_PRECISION_GRND(6,1)
+CON_BL_PRECISION_BASE(6,1)
 #end
 #macro CON_BL_PRECISION_1X7()
-CON_BL_PRECISION_GRND(7,1)
+CON_BL_PRECISION_BASE(7,1)
 #end
 #macro CON_BL_PRECISION_1X8()
-CON_BL_PRECISION_GRND(8,1)
+CON_BL_PRECISION_BASE(8,1)
 #end
 #macro CON_BL_PRECISION_1X9()
-CON_BL_PRECISION_GRND(9,1)
+CON_BL_PRECISION_BASE(9,1)
 #end
 #macro CON_BL_PRECISION_1X10()
-CON_BL_PRECISION_GRND(10,1)
+CON_BL_PRECISION_BASE(10,1)
 #end
 #macro CON_BL_PRECISION_1X11()
-CON_BL_PRECISION_GRND(11,1)
+CON_BL_PRECISION_BASE(11,1)
 #end
 #macro CON_BL_PRECISION_1X12()
-CON_BL_PRECISION_GRND(12,1)
+CON_BL_PRECISION_BASE(12,1)
 #end
 #macro CON_BL_PRECISION_1X13()
-CON_BL_PRECISION_GRND(13,1)
+CON_BL_PRECISION_BASE(13,1)
 #end
 #macro CON_BL_PRECISION_2X2()
-CON_BL_PRECISION_GRND(2,2)
+CON_BL_PRECISION_BASE(2,2)
 #end
 #macro CON_BL_PRECISION_2X3()
-CON_BL_PRECISION_GRND(3,2)
+CON_BL_PRECISION_BASE(3,2)
 #end
 #macro CON_BL_PRECISION_2X4()
-CON_BL_PRECISION_GRND(4,2)
+CON_BL_PRECISION_BASE(4,2)
 #end
 #macro CON_BL_PRECISION_2X5()
-CON_BL_PRECISION_GRND(5,2)
+CON_BL_PRECISION_BASE(5,2)
 #end
 #macro CON_BL_PRECISION_2X6()
-CON_BL_PRECISION_GRND(6,2)
+CON_BL_PRECISION_BASE(6,2)
 #end
 #macro CON_BL_PRECISION_2X7()
-CON_BL_PRECISION_GRND(7,2)
+CON_BL_PRECISION_BASE(7,2)
 #end
 #macro CON_BL_PRECISION_2X8()
-CON_BL_PRECISION_GRND(8,2)
+CON_BL_PRECISION_BASE(8,2)
 #end
 #macro CON_BL_PRECISION_2X9()
-CON_BL_PRECISION_GRND(9,2)
+CON_BL_PRECISION_BASE(9,2)
 #end
 #macro CON_BL_PRECISION_2X10()
-CON_BL_PRECISION_GRND(10,2)
+CON_BL_PRECISION_BASE(10,2)
 #end
 #macro CON_BL_PRECISION_2X11()
-CON_BL_PRECISION_GRND(11,2)
+CON_BL_PRECISION_BASE(11,2)
 #end
 #macro CON_BL_PRECISION_2X12()
-CON_BL_PRECISION_GRND(12,2)
+CON_BL_PRECISION_BASE(12,2)
 #end
 #macro CON_BL_PRECISION_2X13()
-CON_BL_PRECISION_GRND(13,2)
+CON_BL_PRECISION_BASE(13,2)
 #end
 
 
 /********************************************************************************************************************************************
 //Makro fuer BNC-Buchse, gewinckelt von Felix Schad <felix_schad@gmx.de>
 ********************************************************************************************************************************************/
-#macro CON_BNC_W_GRND()
+#macro CON_BNC_W_BASE()
   union {
         union { // Korpus
                 difference {
@@ -1296,7 +1296,7 @@ CON_BL_PRECISION_GRND(13,2)
   }
 #end
 #macro CON_BNC_W()
-CON_BNC_W_GRND()
+CON_BNC_W_BASE()
 #end
 
 
@@ -1312,7 +1312,7 @@ CON_BNC_W_GRND()
 //basiert auf DSUB von Andreas Fecht <info(replace with at)vetter-und-fecht.de>
 //modifiziert und erweitert von Duane Clark <dclark(replace with at)akamail.com>
 ********************************************************************************************************************************************/
-#macro CON_CENTRONICS_GRND(pin, female)
+#macro CON_CENTRONICS_BASE(pin, female)
   #local centcolor = color red 0.24 green 0.41 blue 0.81;   //blauer farbton fuer plastikkoerper  
                  
   #local j  = pin/2;      // number of pins in bottom row
@@ -1511,23 +1511,23 @@ union
 
 
 #macro CON_CENTRONICS_F14()
-CON_CENTRONICS_GRND(14, true)
+CON_CENTRONICS_BASE(14, true)
 #end
 #macro CON_CENTRONICS_F24()
-CON_CENTRONICS_GRND(24, true)
+CON_CENTRONICS_BASE(24, true)
 #end
 #macro CON_CENTRONICS_F36()
-CON_CENTRONICS_GRND(36, true)
+CON_CENTRONICS_BASE(36, true)
 #end
 #macro CON_CENTRONICS_F50()
-CON_CENTRONICS_GRND(50, true)
+CON_CENTRONICS_BASE(50, true)
 #end
 
 
 /********************************************************************************************************************************************
 // CF card+ holder
 ********************************************************************************************************************************************/
-#macro CON_CF_AND_CARD_GRND(value)
+#macro CON_CF_AND_CARD_BASE(value)
 union {
       union {
          box{<0,0,0><43,3.5,36.4> pigment{Gray10}} // Card
@@ -1572,14 +1572,14 @@ pigment{color red 0.847059 green 0.847059 blue 0.54902}
 translate<-23.15,0,-15>
 #end
 #macro CON_CF_AND_CARD(value)
-CON_CF_AND_CARD_GRND(value)
+CON_CF_AND_CARD_BASE(value)
 #end
 
 
 /********************************************************************************************************************************************
 //rogerlight@gmail.com
 ********************************************************************************************************************************************/
-#macro CON_COAX_B35N61_GRND()
+#macro CON_COAX_B35N61_BASE()
 union {
    cylinder { <0,0,0>, <0,-4.9,0>, 0.48 texture{col_gold}} // Centre contact
    cylinder { <-3.13, 0, -3.13>, <-3.13, -4.5, -3.13>, 0.58 texture{col_silver}}
@@ -1616,14 +1616,14 @@ union {
 }
 #end
 #macro CON_COAX_B35N61()
-CON_COAX_B35N61_GRND()
+CON_COAX_B35N61_BASE()
 #end
 
 
 /********************************************************************************************************************************************
 //DC-Power-Connector by Nigel Eke
 ********************************************************************************************************************************************/
-#macro CON_DCPOWERCONNECTOR_GRND()
+#macro CON_DCPOWERCONNECTOR_BASE()
   #local endcutaway = union { cylinder { <10,5,3> <11.01,5,3> 3.01 }
                               box { <10,1.99,-.01> <11.01,5,6.01> }
                               box { <10,-.01,2> <11.01,2.01,4> }
@@ -1663,7 +1663,7 @@ texture { Silver_Metal} } }
   scale 2.54/2
 #end
 #macro CON_DCPOWERCONNECTOR()
-CON_DCPOWERCONNECTOR_GRND()
+CON_DCPOWERCONNECTOR_BASE()
 #end
 
 /*******************************************************************************
@@ -1725,7 +1725,7 @@ CON_DCPOWERCONNECTOR_GRND()
 //Macro fuer Hohlstecker-Printeinbau (HEBO 13 - Reichelt.de)
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
-#macro CON_DC_JACK_HEBO_13_GRND()
+#macro CON_DC_JACK_HEBO_13_BASE()
 union { 
  //Stift 
  union {
@@ -1808,7 +1808,7 @@ union {
 #end
 
 #macro CON_DC_JACK_HEBO_13()
-CON_DC_JACK_HEBO_13_GRND()
+CON_DC_JACK_HEBO_13_BASE()
 #end
 
 
@@ -1817,7 +1817,7 @@ CON_DC_JACK_HEBO_13_GRND()
 // DIN-Buchse(n) Hirschmann MAx-XX
 // 10.02.2006 ... 21.02.2006
 ********************************************************************************************************************************************/
-#macro CON_DIN_MA_XX_GRND(MA_Typ, MA_Subtyp)
+#macro CON_DIN_MA_XX_BASE(MA_Typ, MA_Subtyp)
 
 #macro CON_DIN_MA_Inlet_Kontaktfeder(Oesenlaenge, Verschraenkungsart, VSchraenkungwinkel)
    // Oesenlaenge:        Laenge der Kontaktoese oder des Kontaktpins,
@@ -2593,48 +2593,48 @@ union {
    }
 #end
 #macro CON_DIN_MAB_3S()
-CON_DIN_MA_XX_GRND(30, 0)
+CON_DIN_MA_XX_BASE(30, 0)
 #end
 #macro CON_DIN_MAB_4()
-CON_DIN_MA_XX_GRND(40, 0)
+CON_DIN_MA_XX_BASE(40, 0)
 #end
 #macro CON_DIN_MAB_5()
-CON_DIN_MA_XX_GRND(52, 0)
+CON_DIN_MA_XX_BASE(52, 0)
 #end
 #macro CON_DIN_MAB_5S()
-CON_DIN_MA_XX_GRND(51, 0)
+CON_DIN_MA_XX_BASE(51, 0)
 #end
 #macro CON_DIN_MAB_6()
-CON_DIN_MA_XX_GRND(61, 0)
+CON_DIN_MA_XX_BASE(61, 0)
 #end
 #macro CON_DIN_MAB_7S()
-CON_DIN_MA_XX_GRND(72, 0)
+CON_DIN_MA_XX_BASE(72, 0)
 #end
 #macro CON_DIN_MAB_8S()
-CON_DIN_MA_XX_GRND(81, 0)
+CON_DIN_MA_XX_BASE(81, 0)
 #end
 #macro CON_DIN_MAB_8SN()
-CON_DIN_MA_XX_GRND(82, 0)
+CON_DIN_MA_XX_BASE(82, 0)
 #end
 // (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_5SV()   
-CON_DIN_MA_XX_GRND(51, 1)
+CON_DIN_MA_XX_BASE(51, 1)
 #end
 // (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_6V()    
-CON_DIN_MA_XX_GRND(62, 1)
+CON_DIN_MA_XX_BASE(62, 1)
 #end
 // (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_7SV()   
-CON_DIN_MA_XX_GRND(72, 1)
+CON_DIN_MA_XX_BASE(72, 1)
 #end
 // (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_8SV()   
-CON_DIN_MA_XX_GRND(81, 1)
+CON_DIN_MA_XX_BASE(81, 1)
 #end
 // (noch) keine richtigen Pinanschluesse
 #macro CON_DIN_MAB_8SNV()
-CON_DIN_MA_XX_GRND(82, 1)
+CON_DIN_MA_XX_BASE(82, 1)
 #end
 
 
@@ -2642,7 +2642,7 @@ CON_DIN_MA_XX_GRND(82, 1)
 // Grundmakro: Stiftleiste nach DIN41617.
 // J.Bartels@arcor.de, www.mec-krefeld.de
 ********************************************************************************************************************************************/
-#macro CON_DIS_DIN41617_GRND(Pins)
+#macro CON_DIS_DIN41617_BASE(Pins)
 // Grundmakro: Um 90° gebogener, runder Stift eines Steckverbinders nach DIN41617.
 // Parameter: Staerke ueber/unter PCB, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z), Farbe
 // J.Bartels@arcor.de, www.mec-krefeld.de
@@ -2707,13 +2707,13 @@ pigment{Gray80}
 #end
 
 #macro CON_DIS_DIN41617_13()
-CON_DIS_DIN41617_GRND(13)
+CON_DIS_DIN41617_BASE(13)
 #end
 #macro CON_DIS_DIN41617_21()
-CON_DIS_DIN41617_GRND(21)
+CON_DIS_DIN41617_BASE(21)
 #end
 #macro CON_DIS_DIN41617_31()
-CON_DIS_DIN41617_GRND(31)
+CON_DIS_DIN41617_BASE(31)
 #end
 
 
@@ -2722,7 +2722,7 @@ CON_DIS_DIN41617_GRND(31)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.0 31-12-05
 ********************************************************************************************************************************************/
-#macro CON_DIS_MATNLOK_9263_GRND(n,c)
+#macro CON_DIS_MATNLOK_9263_BASE(n,c)
 #switch(c)
 #case(1)
 #local col=Gray90;
@@ -2811,119 +2811,119 @@ union {
 #end
 // 2 pins Nature
 #macro CON_DIS_MATNLOK_9263_10_1() 
-CON_DIS_MATNLOK_9263_GRND(2,1)
+CON_DIS_MATNLOK_9263_BASE(2,1)
 #end
 // Black
 #macro CON_DIS_MATNLOK_9263_10_2() 
-CON_DIS_MATNLOK_9263_GRND(2,2)
+CON_DIS_MATNLOK_9263_BASE(2,2)
 #end
 // BrickRed
 #macro CON_DIS_MATNLOK_9263_10_3() 
-CON_DIS_MATNLOK_9263_GRND(2,3)
+CON_DIS_MATNLOK_9263_BASE(2,3)
 #end
 // White
 #macro CON_DIS_MATNLOK_9263_10_4() 
-CON_DIS_MATNLOK_9263_GRND(2,4)
+CON_DIS_MATNLOK_9263_BASE(2,4)
 #end
 // Orange
 #macro CON_DIS_MATNLOK_9263_10_5() 
-CON_DIS_MATNLOK_9263_GRND(2,5)
+CON_DIS_MATNLOK_9263_BASE(2,5)
 #end
 // 3 pins
 #macro CON_DIS_MATNLOK_9263_11_1()
-CON_DIS_MATNLOK_9263_GRND(3,1)
+CON_DIS_MATNLOK_9263_BASE(3,1)
 #end
 #macro CON_DIS_MATNLOK_9263_11_2()
-CON_DIS_MATNLOK_9263_GRND(3,2)
+CON_DIS_MATNLOK_9263_BASE(3,2)
 #end
 #macro CON_DIS_MATNLOK_9263_11_3()
-CON_DIS_MATNLOK_9263_GRND(3,3)
+CON_DIS_MATNLOK_9263_BASE(3,3)
 #end
 #macro CON_DIS_MATNLOK_9263_11_4()
-CON_DIS_MATNLOK_9263_GRND(3,4)
+CON_DIS_MATNLOK_9263_BASE(3,4)
 #end
 #macro CON_DIS_MATNLOK_9263_11_5()
-CON_DIS_MATNLOK_9263_GRND(3,5)
+CON_DIS_MATNLOK_9263_BASE(3,5)
 #end
 //4 pins
 #macro CON_DIS_MATNLOK_9263_12_1()
-CON_DIS_MATNLOK_9263_GRND(4,1)
+CON_DIS_MATNLOK_9263_BASE(4,1)
 #end
 #macro CON_DIS_MATNLOK_9263_12_2()
-CON_DIS_MATNLOK_9263_GRND(4,2)
+CON_DIS_MATNLOK_9263_BASE(4,2)
 #end
 #macro CON_DIS_MATNLOK_9263_12_3()
-CON_DIS_MATNLOK_9263_GRND(4,3)
+CON_DIS_MATNLOK_9263_BASE(4,3)
 #end
 #macro CON_DIS_MATNLOK_9263_12_4()
-CON_DIS_MATNLOK_9263_GRND(4,4)
+CON_DIS_MATNLOK_9263_BASE(4,4)
 #end
 #macro CON_DIS_MATNLOK_9263_12_5()
-CON_DIS_MATNLOK_9263_GRND(4,5)
+CON_DIS_MATNLOK_9263_BASE(4,5)
 #end
 // 5 pins
 #macro CON_DIS_MATNLOK_9263_13_1()
-CON_DIS_MATNLOK_9263_GRND(5,1)
+CON_DIS_MATNLOK_9263_BASE(5,1)
 #end
 #macro CON_DIS_MATNLOK_9263_13_2()
-CON_DIS_MATNLOK_9263_GRND(5,2)
+CON_DIS_MATNLOK_9263_BASE(5,2)
 #end
 #macro CON_DIS_MATNLOK_9263_13_3()
-CON_DIS_MATNLOK_9263_GRND(5,3)
+CON_DIS_MATNLOK_9263_BASE(5,3)
 #end
 #macro CON_DIS_MATNLOK_9263_13_4()
-CON_DIS_MATNLOK_9263_GRND(5,4)
+CON_DIS_MATNLOK_9263_BASE(5,4)
 #end
 #macro CON_DIS_MATNLOK_9263_13_5()
-CON_DIS_MATNLOK_9263_GRND(5,5)
+CON_DIS_MATNLOK_9263_BASE(5,5)
 #end
 // 6 pins
 #macro CON_DIS_MATNLOK_9263_14_1()
-CON_DIS_MATNLOK_9263_GRND(6,1)
+CON_DIS_MATNLOK_9263_BASE(6,1)
 #end
 #macro CON_DIS_MATNLOK_9263_14_2()
-CON_DIS_MATNLOK_9263_GRND(6,2)
+CON_DIS_MATNLOK_9263_BASE(6,2)
 #end
 #macro CON_DIS_MATNLOK_9263_14_3()
-CON_DIS_MATNLOK_9263_GRND(6,3)
+CON_DIS_MATNLOK_9263_BASE(6,3)
 #end
 #macro CON_DIS_MATNLOK_9263_14_4()
-CON_DIS_MATNLOK_9263_GRND(6,4)
+CON_DIS_MATNLOK_9263_BASE(6,4)
 #end
 #macro CON_DIS_MATNLOK_9263_14_5()
-CON_DIS_MATNLOK_9263_GRND(6,5)
+CON_DIS_MATNLOK_9263_BASE(6,5)
 #end
 // 8 pins
 #macro CON_DIS_MATNLOK_9263_15_1()
-CON_DIS_MATNLOK_9263_GRND(8,1)
+CON_DIS_MATNLOK_9263_BASE(8,1)
 #end
 #macro CON_DIS_MATNLOK_9263_15_2()
-CON_DIS_MATNLOK_9263_GRND(8,2)
+CON_DIS_MATNLOK_9263_BASE(8,2)
 #end
 #macro CON_DIS_MATNLOK_9263_15_3()
-CON_DIS_MATNLOK_9263_GRND(8,3)
+CON_DIS_MATNLOK_9263_BASE(8,3)
 #end
 #macro CON_DIS_MATNLOK_9263_15_4()
-CON_DIS_MATNLOK_9263_GRND(8,4)
+CON_DIS_MATNLOK_9263_BASE(8,4)
 #end
 #macro CON_DIS_MATNLOK_9263_15_5()
-CON_DIS_MATNLOK_9263_GRND(8,5)
+CON_DIS_MATNLOK_9263_BASE(8,5)
 #end
 // 10 pins
 #macro CON_DIS_MATNLOK_9263_16_1()
-CON_DIS_MATNLOK_9263_GRND(10,1)
+CON_DIS_MATNLOK_9263_BASE(10,1)
 #end
 #macro CON_DIS_MATNLOK_9263_16_2()
-CON_DIS_MATNLOK_9263_GRND(10,2)
+CON_DIS_MATNLOK_9263_BASE(10,2)
 #end
 #macro CON_DIS_MATNLOK_9263_16_3()
-CON_DIS_MATNLOK_9263_GRND(10,3)
+CON_DIS_MATNLOK_9263_BASE(10,3)
 #end
 #macro CON_DIS_MATNLOK_9263_16_4()
-CON_DIS_MATNLOK_9263_GRND(10,4)
+CON_DIS_MATNLOK_9263_BASE(10,4)
 #end
 #macro CON_DIS_MATNLOK_9263_16_5()
-CON_DIS_MATNLOK_9263_GRND(10,5)
+CON_DIS_MATNLOK_9263_BASE(10,5)
 #end
 
 
@@ -2934,7 +2934,7 @@ CON_DIS_MATNLOK_9263_GRND(10,5)
 //Modifikation zur exakten Ausrichtung auf halbe Platinenhoehe: Wolfgang Moser <womo (a) d81.de>
 //Erweitert fuer stehende print Montage von Stefan Seegel
 ********************************************************************************************************************************************/
-#macro CON_DSUBD_GRND(pin, female, print)
+#macro CON_DSUBD_BASE(pin, female, print)
 
 #macro DSHELLD(ps, vc)
   // the dshell offset is (body size - dshell size)/2 + radius
@@ -3163,52 +3163,52 @@ translate<bo+ps-so,vc,0> }
 #end
 
 #macro CON_DSUB_F9D()
-CON_DSUBD_GRND(9, true, false)
+CON_DSUBD_BASE(9, true, false)
 #end
 #macro CON_DSUB_F15D()
-CON_DSUBD_GRND(15, true, false)
+CON_DSUBD_BASE(15, true, false)
 #end
 #macro CON_DSUB_F25D()
-CON_DSUBD_GRND(25, true, false)
+CON_DSUBD_BASE(25, true, false)
 #end
 #macro CON_DSUB_F37D()
-CON_DSUBD_GRND(37, true, false)
+CON_DSUBD_BASE(37, true, false)
 #end
 #macro CON_DSUB_M9D()
-CON_DSUBD_GRND(9, false, false)
+CON_DSUBD_BASE(9, false, false)
 #end
 #macro CON_DSUB_M15D()
-CON_DSUBD_GRND(15, false, false)
+CON_DSUBD_BASE(15, false, false)
 #end
 #macro CON_DSUB_M25D()
-CON_DSUBD_GRND(25, false, false)
+CON_DSUBD_BASE(25, false, false)
 #end
 #macro CON_DSUB_M37D()
-CON_DSUBD_GRND(37, false, false)
+CON_DSUBD_BASE(37, false, false)
 #end
 #macro CON_DSUB_F9DV()
-CON_DSUBD_GRND(9,true,true)
+CON_DSUBD_BASE(9,true,true)
 #end
 #macro CON_DSUB_F15DV()
-CON_DSUBD_GRND(15,true,true)
+CON_DSUBD_BASE(15,true,true)
 #end
 #macro CON_DSUB_F25DV()
-CON_DSUBD_GRND(25,true,true)
+CON_DSUBD_BASE(25,true,true)
 #end
 #macro CON_DSUB_F37DV()
-CON_DSUBD_GRND(37,true,true)
+CON_DSUBD_BASE(37,true,true)
 #end
 #macro CON_DSUB_M9DV()
-CON_DSUBD_GRND(9,false,true)
+CON_DSUBD_BASE(9,false,true)
 #end
 #macro CON_DSUB_M15DV()
-CON_DSUBD_GRND(15,false,true)
+CON_DSUBD_BASE(15,false,true)
 #end
 #macro CON_DSUB_M25DV()
-CON_DSUBD_GRND(25,false,true)
+CON_DSUBD_BASE(25,false,true)
 #end
 #macro CON_DSUB_M37DV()
-CON_DSUBD_GRND(37,false,true)
+CON_DSUBD_BASE(37,false,true)
 #end
 
 
@@ -3216,7 +3216,7 @@ CON_DSUBD_GRND(37,false,true)
 //Makro fuer DSUB Andreas Fecht <info@vetter-und-fecht.de>
 //modifiziert und erweitert von Duane Clark <dclark@akamail.com>
 ********************************************************************************************************************************************/
-#macro CON_DSUB_GRND(pin, female)
+#macro CON_DSUB_BASE(pin, female)
 #macro DSHELL(ps, vc)
   // the dshell offset is (body size - dshell size)/2 + radius
   #local do = 8.33;    // dshell offset
@@ -3404,28 +3404,28 @@ union
 }
 #end
 #macro CON_DSUB_F9()
-CON_DSUB_GRND(9, true)
+CON_DSUB_BASE(9, true)
 #end
 #macro CON_DSUB_F15()
-CON_DSUB_GRND(15, true)
+CON_DSUB_BASE(15, true)
 #end
 #macro CON_DSUB_F25()
-CON_DSUB_GRND(25, true)
+CON_DSUB_BASE(25, true)
 #end
 #macro CON_DSUB_F37()
-CON_DSUB_GRND(37, true)
+CON_DSUB_BASE(37, true)
 #end
 #macro CON_DSUB_M9()
-CON_DSUB_GRND(9, false)
+CON_DSUB_BASE(9, false)
 #end
 #macro CON_DSUB_M15()
-CON_DSUB_GRND(15, false)
+CON_DSUB_BASE(15, false)
 #end
 #macro CON_DSUB_M25()
-CON_DSUB_GRND(25, false)
+CON_DSUB_BASE(25, false)
 #end
 #macro CON_DSUB_M37()
-CON_DSUB_GRND(37, false)
+CON_DSUB_BASE(37, false)
 #end
 
 
@@ -3433,7 +3433,7 @@ CON_DSUB_GRND(37, false)
 //Eurocard Verbinder
 //Duane Clark <dclark@akamail.com>
 ********************************************************************************************************************************************/
-#macro CON_EUROCARD_GRND(pins, rows)
+#macro CON_EUROCARD_BASE(pins, rows)
 union
 {
   #local j = pins/rows;   // number of pins in row
@@ -3539,10 +3539,10 @@ union
 }
 #end
 #macro CON_EUROCARD_96M_3_L()
-CON_EUROCARD_GRND(96,3)
+CON_EUROCARD_BASE(96,3)
 #end
 #macro CON_EUROCARD_64M_2_L()
-CON_EUROCARD_GRND(64,2)
+CON_EUROCARD_BASE(64,2)
 #end
 
 
@@ -3551,7 +3551,7 @@ CON_EUROCARD_GRND(64,2)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.1 du 09/01/06
 ********************************************************************************************************************************************/
-#macro CON_FASTON_GRND ()
+#macro CON_FASTON_BASE ()
 union {
     difference {
         union {
@@ -3581,7 +3581,7 @@ union {
 }
 #end
 #macro CON_FASTON_V()
-CON_FASTON_GRND ()
+CON_FASTON_BASE ()
 #end
 
 
@@ -3589,7 +3589,7 @@ CON_FASTON_GRND ()
 //FEMALE PRINT CONNECTOR DIN 45323 (34V/3A), ROKA, distributor Conrad
 // Friedrich Bleikamp <fbleikamp@web.de>
 ********************************************************************************************************************************************/
-#macro CON_FPCON65_GRND()
+#macro CON_FPCON65_BASE()
 union {
 //Kunstoff
 difference {
@@ -3697,7 +3697,7 @@ texture{col_silver}}
 }
 #end
 #macro CON_FPCON65()
-CON_FPCON65_GRND()
+CON_FPCON65_BASE()
 #end
 
 
@@ -3706,7 +3706,7 @@ CON_FPCON65_GRND()
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.1 du 04/01/06
 ********************************************************************************************************************************************/
-#macro CON_LMI_L115_GRND(n)
+#macro CON_LMI_L115_BASE(n)
 // Macro for pin
 #local CosseL115 =
 union {
@@ -3767,19 +3767,19 @@ union {
 }
 #end
 #macro CON_LMI_L115_2()
-CON_LMI_L115_GRND(2)
+CON_LMI_L115_BASE(2)
 #end
 #macro CON_LMI_L115_3()
-CON_LMI_L115_GRND(3)
+CON_LMI_L115_BASE(3)
 #end
 #macro CON_LMI_L115_5()
-CON_LMI_L115_GRND(5)
+CON_LMI_L115_BASE(5)
 #end
 #macro CON_LMI_L115_10()
-CON_LMI_L115_GRND(10)
+CON_LMI_L115_BASE(10)
 #end
 #macro CON_LMI_L115_20()
-CON_LMI_L115_GRND(20)
+CON_LMI_L115_BASE(20)
 #end
 
 
@@ -3788,7 +3788,7 @@ CON_LMI_L115_GRND(20)
 //Privat: <fbleikamp@web.de>
 //Loetoese 1.0mm Drill fuer Drahtanschluss oder Testklemme
 ********************************************************************************************************************************************/
-#macro CON_LSP_GRND(s)
+#macro CON_LSP_BASE(s)
 union {
    difference {
       box { <-0.8,0,-0.2>,<0.8,5,0.2> texture{col_silver} translate<0,0,0>}
@@ -3810,13 +3810,13 @@ union {
 }
 #end
 #macro CON_LSP_10()
-CON_LSP_GRND(10)
+CON_LSP_BASE(10)
 #end
 #macro CON_LSP_11()
-CON_LSP_GRND(11)
+CON_LSP_BASE(11)
 #end
 #macro CON_LSP_13()
-CON_LSP_GRND(13)
+CON_LSP_BASE(13)
 #end
 
 
@@ -3825,7 +3825,7 @@ CON_LSP_GRND(13)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
 //Rev. 1.1  16/12/07
 ********************************************************************************************************************************************/
-#macro CON_MICROMATCH_FEMALE_GRND(pin)
+#macro CON_MICROMATCH_FEMALE_BASE(pin)
 
 #local CON_MMTCH_PLASTIC_TEXTURE = texture {pigment{Red*0.6}};
 #local pitch=1.27;
@@ -3882,31 +3882,31 @@ union {
 
 
 #macro CON_MICROMATCH_FEMALE_4()
-CON_MICROMATCH_FEMALE_GRND(4)
+CON_MICROMATCH_FEMALE_BASE(4)
 #end
 #macro CON_MICROMATCH_FEMALE_6()
-CON_MICROMATCH_FEMALE_GRND(6)
+CON_MICROMATCH_FEMALE_BASE(6)
 #end
 #macro CON_MICROMATCH_FEMALE_8()
-CON_MICROMATCH_FEMALE_GRND(8)
+CON_MICROMATCH_FEMALE_BASE(8)
 #end
 #macro CON_MICROMATCH_FEMALE_10()
-CON_MICROMATCH_FEMALE_GRND(10)
+CON_MICROMATCH_FEMALE_BASE(10)
 #end
 #macro CON_MICROMATCH_FEMALE_12()
-CON_MICROMATCH_FEMALE_GRND(12)
+CON_MICROMATCH_FEMALE_BASE(12)
 #end
 #macro CON_MICROMATCH_FEMALE_14()
-CON_MICROMATCH_FEMALE_GRND(14)
+CON_MICROMATCH_FEMALE_BASE(14)
 #end
 #macro CON_MICROMATCH_FEMALE_16()
-CON_MICROMATCH_FEMALE_GRND(16)
+CON_MICROMATCH_FEMALE_BASE(16)
 #end
 #macro CON_MICROMATCH_FEMALE_18()
-CON_MICROMATCH_FEMALE_GRND(18)
+CON_MICROMATCH_FEMALE_BASE(18)
 #end
 #macro CON_MICROMATCH_FEMALE_20()
-CON_MICROMATCH_FEMALE_GRND(20)
+CON_MICROMATCH_FEMALE_BASE(20)
 #end
 
 
@@ -3916,7 +3916,7 @@ CON_MICROMATCH_FEMALE_GRND(20)
 // frm = 0 - smd, != 0 - Bedrahtet
 // everyone1@freenet.de
 ********************************************************************************************************************************************/
-#macro CON_MICROMATCH_GRND(pin, frm)
+#macro CON_MICROMATCH_BASE(pin, frm)
 
 #local CON_MMTCH_PLASTIC_TEXTURE = texture {pigment{Red*0.6} finish{ambient (0.1 * global_ambient_mul)}};
 #local pitch=1.27;
@@ -4011,31 +4011,31 @@ union   {
         
 #end
 #macro CON_MICROMATCH_4()
-CON_MICROMATCH_GRND(4,1)
+CON_MICROMATCH_BASE(4,1)
 #end
 #macro CON_MICROMATCH_6()
-CON_MICROMATCH_GRND(6,1)
+CON_MICROMATCH_BASE(6,1)
 #end
 #macro CON_MICROMATCH_8()
-CON_MICROMATCH_GRND(8,1)
+CON_MICROMATCH_BASE(8,1)
 #end
 #macro CON_MICROMATCH_10()
-CON_MICROMATCH_GRND(10,1)
+CON_MICROMATCH_BASE(10,1)
 #end
 #macro CON_MICROMATCH_12()
-CON_MICROMATCH_GRND(12,1)
+CON_MICROMATCH_BASE(12,1)
 #end
 #macro CON_MICROMATCH_14()
-CON_MICROMATCH_GRND(14,1)
+CON_MICROMATCH_BASE(14,1)
 #end
 #macro CON_MICROMATCH_16()
-CON_MICROMATCH_GRND(16,1)
+CON_MICROMATCH_BASE(16,1)
 #end
 #macro CON_MICROMATCH_18()
-CON_MICROMATCH_GRND(16,1)
+CON_MICROMATCH_BASE(16,1)
 #end
 #macro CON_MICROMATCH_20()
-CON_MICROMATCH_GRND(20,1)
+CON_MICROMATCH_BASE(20,1)
 #end
 
 
@@ -4044,7 +4044,7 @@ CON_MICROMATCH_GRND(20,1)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
 //Rev. 1.1  16/12/07
 ********************************************************************************************************************************************/
-#macro CON_MICROMATCH_MALE_GRND(pin)
+#macro CON_MICROMATCH_MALE_BASE(pin)
 
 #local CON_MMTCH_PLASTIC_TEXTURE = texture {pigment{Red*0.6}};
 #local pitch=1.27;
@@ -4118,31 +4118,31 @@ union {
 
 
 #macro CON_MICROMATCH_MALE_4()
-CON_MICROMATCH_MALE_GRND(4)
+CON_MICROMATCH_MALE_BASE(4)
 #end
 #macro CON_MICROMATCH_MALE_6()
-CON_MICROMATCH_MALE_GRND(6)
+CON_MICROMATCH_MALE_BASE(6)
 #end
 #macro CON_MICROMATCH_MALE_8()
-CON_MICROMATCH_MALE_GRND(8)
+CON_MICROMATCH_MALE_BASE(8)
 #end
 #macro CON_MICROMATCH_MALE_10()
-CON_MICROMATCH_MALE_GRND(10)
+CON_MICROMATCH_MALE_BASE(10)
 #end
 #macro CON_MICROMATCH_MALE_12()
-CON_MICROMATCH_MALE_GRND(12)
+CON_MICROMATCH_MALE_BASE(12)
 #end
 #macro CON_MICROMATCH_MALE_14()
-CON_MICROMATCH_MALE_GRND(14)
+CON_MICROMATCH_MALE_BASE(14)
 #end
 #macro CON_MICROMATCH_MALE_16()
-CON_MICROMATCH_MALE_GRND(16)
+CON_MICROMATCH_MALE_BASE(16)
 #end
 #macro CON_MICROMATCH_MALE_18()
-CON_MICROMATCH_MALE_GRND(18)
+CON_MICROMATCH_MALE_BASE(18)
 #end
 #macro CON_MICROMATCH_MALE_20()
-CON_MICROMATCH_MALE_GRND(20)
+CON_MICROMATCH_MALE_BASE(20)
 #end
 
 
@@ -4150,7 +4150,7 @@ CON_MICROMATCH_MALE_GRND(20)
 // Makro fuer AMP-tyco MicroMatch-Federleiste SMD-Ausfuehrung
 // pin  - Anzahl Kontakte
 ********************************************************************************************************************************************/
-#macro CON_MICROMATCH_SMD_GRND(pin)
+#macro CON_MICROMATCH_SMD_BASE(pin)
 #local CON_MMTCH_PLASTIC_TEXTURE = texture {pigment{Red*0.6} finish{ambient (0.1 * global_ambient_mul)}};
 #local pitch=1.27;
 #local plastic_z=5;
@@ -4201,31 +4201,31 @@ union   {
         
 #end
 #macro CON_MICROMATCH_SMD_4()
-CON_MICROMATCH_SMD_GRND(4)
+CON_MICROMATCH_SMD_BASE(4)
 #end
 #macro CON_MICROMATCH_SMD_6()
-CON_MICROMATCH_SMD_GRND(6)
+CON_MICROMATCH_SMD_BASE(6)
 #end
 #macro CON_MICROMATCH_SMD_8()
-CON_MICROMATCH_SMD_GRND(8)
+CON_MICROMATCH_SMD_BASE(8)
 #end
 #macro CON_MICROMATCH_SMD_10()
-CON_MICROMATCH_SMD_GRND(10)
+CON_MICROMATCH_SMD_BASE(10)
 #end
 #macro CON_MICROMATCH_SMD_12()
-CON_MICROMATCH_SMD_GRND(12)
+CON_MICROMATCH_SMD_BASE(12)
 #end
 #macro CON_MICROMATCH_SMD_14()
-CON_MICROMATCH_SMD_GRND(14)
+CON_MICROMATCH_SMD_BASE(14)
 #end
 #macro CON_MICROMATCH_SMD_16()
-CON_MICROMATCH_SMD_GRND(16)
+CON_MICROMATCH_SMD_BASE(16)
 #end
 #macro CON_MICROMATCH_SMD_18()
-CON_MICROMATCH_SMD_GRND(16)
+CON_MICROMATCH_SMD_BASE(16)
 #end
 #macro CON_MICROMATCH_SMD_20()
-CON_MICROMATCH_SMD_GRND(20)
+CON_MICROMATCH_SMD_BASE(20)
 #end
 
 
@@ -4242,7 +4242,7 @@ CON_MICROMATCH_SMD_GRND(20)
 // schirm = 0-kein, 1-voll, 2-teilweise  
 // stop   = 0-kein, 1-panel-stop
 ********************************************************************************************************************************************/
-#macro CON_MODULAR_GRND(pins,a,o,schirm,stop)
+#macro CON_MODULAR_BASE(pins,a,o,schirm,stop)
 #local tex_rj45_pastic1= texture { pigment{White*0.3} finish {specular 1 roughness 0.001 reflection 0.07 ambient (0.1 * global_ambient_mul)} } ;   //etwas glatter/glaenzender
 #local tex_rj45_pastic = texture { pigment{White*0.3} finish {specular 0.1 roughness 0.1 reflection 0.07 ambient (0.1 * global_ambient_mul)} } ;
 // Aussenabmasse 6 pins : 13.4  x  12.8  x  18.0 BHT   
@@ -4494,88 +4494,88 @@ union
 
 
 #macro CON_MODULAR_RJ45()
-CON_MODULAR_GRND(8, 11.43, 0, 0, 0)
+CON_MODULAR_BASE(8, 11.43, 0, 0, 0)
 #end
 #macro CON_MODULAR_RJ12()
-CON_MODULAR_GRND(6, 11.43, 0, 0, 0)
+CON_MODULAR_BASE(6, 11.43, 0, 0, 0)
 #end
 #macro CON_MODULAR_RJ11()
-CON_MODULAR_GRND(4, 11.43, 0, 0, 0)
+CON_MODULAR_BASE(4, 11.43, 0, 0, 0)
 #end
 #macro CON_MODULAR_RJ45_SCH()
-CON_MODULAR_GRND(8, 11.43, 0, 1, 0)
+CON_MODULAR_BASE(8, 11.43, 0, 1, 0)
 #end
 #macro CON_MODULAR_RJ12_SCH()
-CON_MODULAR_GRND(6, 11.43, 0, 1, 0)
+CON_MODULAR_BASE(6, 11.43, 0, 1, 0)
 #end
 #macro CON_MODULAR_RJ11_SCH()
-CON_MODULAR_GRND(4, 11.43, 0, 1, 0)
+CON_MODULAR_BASE(4, 11.43, 0, 1, 0)
 #end
 #macro CON_MODULAR_215875_3()
-CON_MODULAR_GRND(4, 6*1.27, 0, 0, 0)
+CON_MODULAR_BASE(4, 6*1.27, 0, 0, 0)
 #end
 #macro CON_MODULAR_215876_6()
-CON_MODULAR_GRND(4, 8*1.27, 0, 0, 0)
+CON_MODULAR_BASE(4, 8*1.27, 0, 0, 0)
 #end
 #macro CON_MODULAR_215876_7()
-CON_MODULAR_GRND(2, 8*1.27, 0, 0, 0)
+CON_MODULAR_BASE(2, 8*1.27, 0, 0, 0)
 #end
 #macro CON_MODULAR_215877_4()
-CON_MODULAR_GRND(8, 9*1.27, 0, 0, 0)
+CON_MODULAR_BASE(8, 9*1.27, 0, 0, 0)
 #end
 #macro CON_MODULAR_215877_7()
-CON_MODULAR_GRND(8, 9*1.27, 0, 0, 0)
+CON_MODULAR_BASE(8, 9*1.27, 0, 0, 0)
 #end
 #macro CON_MODULAR_215878_2()
-CON_MODULAR_GRND(8, 9*1.27, 0, 0, 0)
+CON_MODULAR_BASE(8, 9*1.27, 0, 0, 0)
 #end
 #macro CON_MODULAR_555164_1()
-CON_MODULAR_GRND(8, 9*1.27, 1.27, 0, 0)
+CON_MODULAR_BASE(8, 9*1.27, 1.27, 0, 0)
 #end
 #macro CON_MODULAR_555165_1()
-CON_MODULAR_GRND(6, 8*1.27, 1.27, 0, 0)
+CON_MODULAR_BASE(6, 8*1.27, 1.27, 0, 0)
 #end
 #macro CON_MODULAR_555165_2()
-CON_MODULAR_GRND(4, 8*1.27, 1.27, 0, 0)
+CON_MODULAR_BASE(4, 8*1.27, 1.27, 0, 0)
 #end
 #macro CON_MODULAR_555165_5()
-CON_MODULAR_GRND(2, 8*1.27, 1.27, 0, 0)
+CON_MODULAR_BASE(2, 8*1.27, 1.27, 0, 0)
 #end
 #macro CON_MODULAR_555166_1()
-CON_MODULAR_GRND(8, 9*1.27, 1.27, 0, 1)
+CON_MODULAR_BASE(8, 9*1.27, 1.27, 0, 1)
 #end
 #macro CON_MODULAR_555165_3()
-CON_MODULAR_GRND(4, 9*1.27, 1.27, 0, 1)
+CON_MODULAR_BASE(4, 9*1.27, 1.27, 0, 1)
 #end
 #macro CON_MODULAR_555167_1()
-CON_MODULAR_GRND(8, 9*1.27, 1.27, 0, 0)
+CON_MODULAR_BASE(8, 9*1.27, 1.27, 0, 0)
 #end
 #macro CON_MODULAR_555167_2()
-CON_MODULAR_GRND(6, 9*1.27, 1.27, 0, 0)
+CON_MODULAR_BASE(6, 9*1.27, 1.27, 0, 0)
 #end
 #macro CON_MODULAR_555162_1()
-CON_MODULAR_GRND(8, 9*1.27, 1.27, 0, 1)
+CON_MODULAR_BASE(8, 9*1.27, 1.27, 0, 1)
 #end
 #macro CON_MODULAR_555163_1()
-CON_MODULAR_GRND(6, 8*1.27, 1.27, 0, 1)
+CON_MODULAR_BASE(6, 8*1.27, 1.27, 0, 1)
 #end
 #macro CON_MODULAR_555163_2()
-CON_MODULAR_GRND(4, 8*1.27, 1.27, 0, 1)
+CON_MODULAR_BASE(4, 8*1.27, 1.27, 0, 1)
 #end
 #macro CON_MODULAR_555140_1()
-CON_MODULAR_GRND(6, 8*1.27, 0, 2, 1)
+CON_MODULAR_BASE(6, 8*1.27, 0, 2, 1)
 #end
 #macro CON_MODULAR_555140_2()
-CON_MODULAR_GRND(4, 8*1.27, 0, 2, 1)
+CON_MODULAR_BASE(4, 8*1.27, 0, 2, 1)
 #end
 #macro CON_MODULAR_555153_1()
-CON_MODULAR_GRND(8, 9*1.27, 0, 2, 1)
+CON_MODULAR_BASE(8, 9*1.27, 0, 2, 1)
 #end
 #macro CON_MODULAR_555154_1()
-CON_MODULAR_GRND(6, 8*1.27, 0, 2, 1)
+CON_MODULAR_BASE(6, 8*1.27, 0, 2, 1)
 #end
 #macro CON_MODULAR_555154_2()
-CON_MODULAR_GRND(4, 8*1.27, 0, 2, 1)
+CON_MODULAR_BASE(4, 8*1.27, 0, 2, 1)
 #end
 
 
@@ -4584,7 +4584,7 @@ CON_MODULAR_GRND(4, 8*1.27, 0, 2, 1)
 //antoine.drouin@free.fr
 //n      Number of Pins
 ********************************************************************************************************************************************/
-#macro CON_MOLEX_53047_GRND(n)
+#macro CON_MOLEX_53047_BASE(n)
 union {
   #local L = n * 1.25 + 1.75;
   #local l = 3.2;
@@ -4621,46 +4621,46 @@ union {
 #end
 
 #macro CON_MOLEX_53047_2()
-CON_MOLEX_53047_GRND(2)
+CON_MOLEX_53047_BASE(2)
 #end
 #macro CON_MOLEX_53047_3()
-CON_MOLEX_53047_GRND(3)
+CON_MOLEX_53047_BASE(3)
 #end
 #macro CON_MOLEX_53047_4()
-CON_MOLEX_53047_GRND(4)
+CON_MOLEX_53047_BASE(4)
 #end
 #macro CON_MOLEX_53047_5()
-CON_MOLEX_53047_GRND(5)
+CON_MOLEX_53047_BASE(5)
 #end
 #macro CON_MOLEX_53047_6()
-CON_MOLEX_53047_GRND(6)
+CON_MOLEX_53047_BASE(6)
 #end
 #macro CON_MOLEX_53047_7()
-CON_MOLEX_53047_GRND(7)
+CON_MOLEX_53047_BASE(7)
 #end
 #macro CON_MOLEX_53047_8()
-CON_MOLEX_53047_GRND(8)
+CON_MOLEX_53047_BASE(8)
 #end
 #macro CON_MOLEX_53047_9()
-CON_MOLEX_53047_GRND(9)
+CON_MOLEX_53047_BASE(9)
 #end
 #macro CON_MOLEX_53047_10()
-CON_MOLEX_53047_GRND(10)
+CON_MOLEX_53047_BASE(10)
 #end
 #macro CON_MOLEX_53047_11()
-CON_MOLEX_53047_GRND(11)
+CON_MOLEX_53047_BASE(11)
 #end
 #macro CON_MOLEX_53047_12()
-CON_MOLEX_53047_GRND(12)
+CON_MOLEX_53047_BASE(12)
 #end
 #macro CON_MOLEX_53047_13()
-CON_MOLEX_53047_GRND(13)
+CON_MOLEX_53047_BASE(13)
 #end
 #macro CON_MOLEX_53047_14()
-CON_MOLEX_53047_GRND(14)
+CON_MOLEX_53047_BASE(14)
 #end
 #macro CON_MOLEX_53047_15()
-CON_MOLEX_53047_GRND(15)
+CON_MOLEX_53047_BASE(15)
 #end
 
 
@@ -4669,7 +4669,7 @@ CON_MOLEX_53047_GRND(15)
 //antoine.drouin@free.fr
 //n      Number of Pins
 ********************************************************************************************************************************************/
-#macro CON_MOLEX_53048_GRND(n)
+#macro CON_MOLEX_53048_BASE(n)
 union {
   #local L = n * 1.25 + 1.75;
   #local l = 5.5;
@@ -4718,46 +4718,46 @@ union {
 #end
 
 #macro CON_MOLEX_53048_2()
-CON_MOLEX_53048_GRND(2)
+CON_MOLEX_53048_BASE(2)
 #end
 #macro CON_MOLEX_53048_3()
-CON_MOLEX_53048_GRND(3)
+CON_MOLEX_53048_BASE(3)
 #end
 #macro CON_MOLEX_53048_4()
-CON_MOLEX_53048_GRND(4)
+CON_MOLEX_53048_BASE(4)
 #end
 #macro CON_MOLEX_53048_5()
-CON_MOLEX_53048_GRND(5)
+CON_MOLEX_53048_BASE(5)
 #end
 #macro CON_MOLEX_53048_6()
-CON_MOLEX_53048_GRND(6)
+CON_MOLEX_53048_BASE(6)
 #end
 #macro CON_MOLEX_53048_7()
-CON_MOLEX_53048_GRND(7)
+CON_MOLEX_53048_BASE(7)
 #end
 #macro CON_MOLEX_53048_8()
-CON_MOLEX_53048_GRND(8)
+CON_MOLEX_53048_BASE(8)
 #end
 #macro CON_MOLEX_53048_9()
-CON_MOLEX_53048_GRND(9)
+CON_MOLEX_53048_BASE(9)
 #end
 #macro CON_MOLEX_53048_10()
-CON_MOLEX_53048_GRND(10)
+CON_MOLEX_53048_BASE(10)
 #end
 #macro CON_MOLEX_53048_11()
-CON_MOLEX_53048_GRND(11)
+CON_MOLEX_53048_BASE(11)
 #end
 #macro CON_MOLEX_53048_12()
-CON_MOLEX_53048_GRND(12)
+CON_MOLEX_53048_BASE(12)
 #end
 #macro CON_MOLEX_53048_13()
-CON_MOLEX_53048_GRND(13)
+CON_MOLEX_53048_BASE(13)
 #end
 #macro CON_MOLEX_53048_14()
-CON_MOLEX_53048_GRND(14)
+CON_MOLEX_53048_BASE(14)
 #end
 #macro CON_MOLEX_53048_15()
-CON_MOLEX_53048_GRND(15)
+CON_MOLEX_53048_BASE(15)
 #end
 
 
@@ -4770,7 +4770,7 @@ CON_MOLEX_53048_GRND(15)
 /********************************************************************************************************************************************
 // PC power connector male
 ********************************************************************************************************************************************/
-#macro CON_PCPWR514M_GRND()
+#macro CON_PCPWR514M_BASE()
 union {
         difference {
         box{<0,0,0><23.2,10,8.4> translate <-11.6,0.5,-4.20> }
@@ -4803,7 +4803,7 @@ union {
  
 #end
 #macro CON_PCPWR514M()
-CON_PCPWR514M_GRND()
+CON_PCPWR514M_BASE()
 #end
 
 
@@ -4811,7 +4811,7 @@ CON_PCPWR514M_GRND()
 //Stefan Seegel <post(replace with at)seegel-systeme.de
 //SMD Stiftleisten 2-reihig RM 2.0
 ********************************************************************************************************************************************/
-#macro CON_PH2SMD_2MM_GRND(Pins)
+#macro CON_PH2SMD_2MM_BASE(Pins)
 union
 {
    object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,0,0> translate<0,0.25,-2.75>}
@@ -4828,49 +4828,49 @@ union
 
 
 #macro CON_PHSMD_2MM_2X2()
-CON_PH2SMD_2MM_GRND(2)
+CON_PH2SMD_2MM_BASE(2)
 #end
 #macro CON_PHSMD_2MM_2X3()
-CON_PH2SMD_2MM_GRND(3)
+CON_PH2SMD_2MM_BASE(3)
 #end
 #macro CON_PHSMD_2MM_2X4()
-CON_PH2SMD_2MM_GRND(4)
+CON_PH2SMD_2MM_BASE(4)
 #end
 #macro CON_PHSMD_2MM_2X5()
-CON_PH2SMD_2MM_GRND(5)
+CON_PH2SMD_2MM_BASE(5)
 #end
 #macro CON_PHSMD_2MM_2X6()
-CON_PH2SMD_2MM_GRND(6)
+CON_PH2SMD_2MM_BASE(6)
 #end
 #macro CON_PHSMD_2MM_2X7()
-CON_PH2SMD_2MM_GRND(7)
+CON_PH2SMD_2MM_BASE(7)
 #end
 #macro CON_PHSMD_2MM_2X8()
-CON_PH2SMD_2MM_GRND(8)
+CON_PH2SMD_2MM_BASE(8)
 #end
 #macro CON_PHSMD_2MM_2X9()
-CON_PH2SMD_2MM_GRND(9)
+CON_PH2SMD_2MM_BASE(9)
 #end
 #macro CON_PHSMD_2MM_2X10()
-CON_PH2SMD_2MM_GRND(10)
+CON_PH2SMD_2MM_BASE(10)
 #end
 #macro CON_PHSMD_2MM_2X11()
-CON_PH2SMD_2MM_GRND(11)
+CON_PH2SMD_2MM_BASE(11)
 #end
 #macro CON_PHSMD_2MM_2X12()
-CON_PH2SMD_2MM_GRND(12)
+CON_PH2SMD_2MM_BASE(12)
 #end
 #macro CON_PHSMD_2MM_2X13()
-CON_PH2SMD_2MM_GRND(13)
+CON_PH2SMD_2MM_BASE(13)
 #end
 #macro CON_PHSMD_2MM_2X14()
-CON_PH2SMD_2MM_GRND(14)
+CON_PH2SMD_2MM_BASE(14)
 #end
 #macro CON_PHSMD_2MM_2X15()
-CON_PH2SMD_2MM_GRND(15)
+CON_PH2SMD_2MM_BASE(15)
 #end
 #macro CON_PHSMD_2MM_2X16()
-CON_PH2SMD_2MM_GRND(16)
+CON_PH2SMD_2MM_BASE(16)
 #end
 
 
@@ -4881,7 +4881,7 @@ CON_PH2SMD_2MM_GRND(16)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.1  06/01/06
 ********************************************************************************************************************************************/
-#macro CON_PHOENIX_508_GRND(n,vertical,a)
+#macro CON_PHOENIX_508_BASE(n,vertical,a)
 // n = pins ; Vertical = 1 if yes ; With border a = 1 / Whithout border a = 0
 union {
     difference {
@@ -4957,290 +4957,290 @@ union {
 #end
 // Vertical whithout border
 #macro CON_PHOENIX_508_MSTBV_2()
-CON_PHOENIX_508_GRND(2,1,0)
+CON_PHOENIX_508_BASE(2,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_3()
-CON_PHOENIX_508_GRND(3,1,0)
+CON_PHOENIX_508_BASE(3,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_4()
-CON_PHOENIX_508_GRND(4,1,0)
+CON_PHOENIX_508_BASE(4,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_5()
-CON_PHOENIX_508_GRND(5,1,0)
+CON_PHOENIX_508_BASE(5,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_6()
-CON_PHOENIX_508_GRND(6,1,0)
+CON_PHOENIX_508_BASE(6,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_7()
-CON_PHOENIX_508_GRND(7,1,0)
+CON_PHOENIX_508_BASE(7,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_8()
-CON_PHOENIX_508_GRND(8,1,0)
+CON_PHOENIX_508_BASE(8,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_9()
-CON_PHOENIX_508_GRND(9,1,0)
+CON_PHOENIX_508_BASE(9,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_10()
-CON_PHOENIX_508_GRND(10,1,0)
+CON_PHOENIX_508_BASE(10,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_11()
-CON_PHOENIX_508_GRND(11,1,0)
+CON_PHOENIX_508_BASE(11,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_12()
-CON_PHOENIX_508_GRND(12,1,0)
+CON_PHOENIX_508_BASE(12,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_13()
-CON_PHOENIX_508_GRND(13,1,0)
+CON_PHOENIX_508_BASE(13,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_14()
-CON_PHOENIX_508_GRND(14,1,0)
+CON_PHOENIX_508_BASE(14,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_15()
-CON_PHOENIX_508_GRND(15,1,0)
+CON_PHOENIX_508_BASE(15,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_16()
-CON_PHOENIX_508_GRND(16,1,0)
+CON_PHOENIX_508_BASE(16,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_17()
-CON_PHOENIX_508_GRND(17,1,0)
+CON_PHOENIX_508_BASE(17,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_18()
-CON_PHOENIX_508_GRND(18,1,0)
+CON_PHOENIX_508_BASE(18,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_19()
-CON_PHOENIX_508_GRND(19,1,0)
+CON_PHOENIX_508_BASE(19,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_20()
-CON_PHOENIX_508_GRND(20,1,0)
+CON_PHOENIX_508_BASE(20,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_21()
-CON_PHOENIX_508_GRND(21,1,0)
+CON_PHOENIX_508_BASE(21,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_22()
-CON_PHOENIX_508_GRND(22,1,0)
+CON_PHOENIX_508_BASE(22,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_23()
-CON_PHOENIX_508_GRND(23,1,0)
+CON_PHOENIX_508_BASE(23,1,0)
 #end
 #macro CON_PHOENIX_508_MSTBV_24()
-CON_PHOENIX_508_GRND(24,1,0)
+CON_PHOENIX_508_BASE(24,1,0)
 #end
 // Horizontal whithout border
 #macro CON_PHOENIX_508_MSTB_2()
-CON_PHOENIX_508_GRND(2,0,0)
+CON_PHOENIX_508_BASE(2,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_3()
-CON_PHOENIX_508_GRND(3,0,0)
+CON_PHOENIX_508_BASE(3,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_4()
-CON_PHOENIX_508_GRND(4,0,0)
+CON_PHOENIX_508_BASE(4,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_5()
-CON_PHOENIX_508_GRND(5,0,0)
+CON_PHOENIX_508_BASE(5,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_6()
-CON_PHOENIX_508_GRND(6,0,0)
+CON_PHOENIX_508_BASE(6,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_7()
-CON_PHOENIX_508_GRND(7,0,0)
+CON_PHOENIX_508_BASE(7,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_8()
-CON_PHOENIX_508_GRND(8,0,0)
+CON_PHOENIX_508_BASE(8,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_9()
-CON_PHOENIX_508_GRND(9,0,0)
+CON_PHOENIX_508_BASE(9,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_10()
-CON_PHOENIX_508_GRND(10,0,0)
+CON_PHOENIX_508_BASE(10,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_11()
-CON_PHOENIX_508_GRND(11,0,0)
+CON_PHOENIX_508_BASE(11,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_12()
-CON_PHOENIX_508_GRND(12,0,0)
+CON_PHOENIX_508_BASE(12,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_13()
-CON_PHOENIX_508_GRND(13,0,0)
+CON_PHOENIX_508_BASE(13,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_14()
-CON_PHOENIX_508_GRND(14,0,0)
+CON_PHOENIX_508_BASE(14,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_15()
-CON_PHOENIX_508_GRND(15,0,0)
+CON_PHOENIX_508_BASE(15,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_16()
-CON_PHOENIX_508_GRND(16,0,0)
+CON_PHOENIX_508_BASE(16,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_17()
-CON_PHOENIX_508_GRND(17,0,0)
+CON_PHOENIX_508_BASE(17,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_18()
-CON_PHOENIX_508_GRND(18,0,0)
+CON_PHOENIX_508_BASE(18,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_19()
-CON_PHOENIX_508_GRND(19,0,0)
+CON_PHOENIX_508_BASE(19,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_20()
-CON_PHOENIX_508_GRND(20,0,0)
+CON_PHOENIX_508_BASE(20,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_21()
-CON_PHOENIX_508_GRND(21,0,0)
+CON_PHOENIX_508_BASE(21,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_22()
-CON_PHOENIX_508_GRND(22,0,0)
+CON_PHOENIX_508_BASE(22,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_23()
-CON_PHOENIX_508_GRND(23,0,0)
+CON_PHOENIX_508_BASE(23,0,0)
 #end
 #macro CON_PHOENIX_508_MSTB_24()
-CON_PHOENIX_508_GRND(24,0,0)
+CON_PHOENIX_508_BASE(24,0,0)
 #end
 // Vertical whith border
 #macro CON_PHOENIX_508_MSTBVA_2()
-CON_PHOENIX_508_GRND(2,1,1)
+CON_PHOENIX_508_BASE(2,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_3()
-CON_PHOENIX_508_GRND(3,1,1)
+CON_PHOENIX_508_BASE(3,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_4()
-CON_PHOENIX_508_GRND(4,1,1)
+CON_PHOENIX_508_BASE(4,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_5()
-CON_PHOENIX_508_GRND(5,1,1)
+CON_PHOENIX_508_BASE(5,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_6()
-CON_PHOENIX_508_GRND(6,1,1)
+CON_PHOENIX_508_BASE(6,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_7()
-CON_PHOENIX_508_GRND(7,1,1)
+CON_PHOENIX_508_BASE(7,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_8()
-CON_PHOENIX_508_GRND(8,1,1)
+CON_PHOENIX_508_BASE(8,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_9()
-CON_PHOENIX_508_GRND(9,1,1)
+CON_PHOENIX_508_BASE(9,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_10()
-CON_PHOENIX_508_GRND(10,1,1)
+CON_PHOENIX_508_BASE(10,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_11()
-CON_PHOENIX_508_GRND(11,1,1)
+CON_PHOENIX_508_BASE(11,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_12()
-CON_PHOENIX_508_GRND(12,1,1)
+CON_PHOENIX_508_BASE(12,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_13()
-CON_PHOENIX_508_GRND(13,1,1)
+CON_PHOENIX_508_BASE(13,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_14()
-CON_PHOENIX_508_GRND(14,1,1)
+CON_PHOENIX_508_BASE(14,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_15()
-CON_PHOENIX_508_GRND(15,1,1)
+CON_PHOENIX_508_BASE(15,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_16()
-CON_PHOENIX_508_GRND(16,1,1)
+CON_PHOENIX_508_BASE(16,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_17()
-CON_PHOENIX_508_GRND(17,1,1)
+CON_PHOENIX_508_BASE(17,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_18()
-CON_PHOENIX_508_GRND(18,1,1)
+CON_PHOENIX_508_BASE(18,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_19()
-CON_PHOENIX_508_GRND(19,1,1)
+CON_PHOENIX_508_BASE(19,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_20()
-CON_PHOENIX_508_GRND(20,1,1)
+CON_PHOENIX_508_BASE(20,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_21()
-CON_PHOENIX_508_GRND(21,1,1)
+CON_PHOENIX_508_BASE(21,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_22()
-CON_PHOENIX_508_GRND(22,1,1)
+CON_PHOENIX_508_BASE(22,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_23()
-CON_PHOENIX_508_GRND(23,1,1)
+CON_PHOENIX_508_BASE(23,1,1)
 #end
 #macro CON_PHOENIX_508_MSTBVA_24()
-CON_PHOENIX_508_GRND(24,1,1)
+CON_PHOENIX_508_BASE(24,1,1)
 #end
 // Horizontal whith border
 #macro CON_PHOENIX_508_MSTBA_2()
-CON_PHOENIX_508_GRND(2,0,1)
+CON_PHOENIX_508_BASE(2,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_3()
-CON_PHOENIX_508_GRND(3,0,1)
+CON_PHOENIX_508_BASE(3,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_4()
-CON_PHOENIX_508_GRND(4,0,1)
+CON_PHOENIX_508_BASE(4,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_5()
-CON_PHOENIX_508_GRND(5,0,1)
+CON_PHOENIX_508_BASE(5,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_6()
-CON_PHOENIX_508_GRND(6,0,1)
+CON_PHOENIX_508_BASE(6,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_7()
-CON_PHOENIX_508_GRND(7,0,1)
+CON_PHOENIX_508_BASE(7,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_8()
-CON_PHOENIX_508_GRND(8,0,1)
+CON_PHOENIX_508_BASE(8,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_9()
-CON_PHOENIX_508_GRND(9,0,1)
+CON_PHOENIX_508_BASE(9,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_10()
-CON_PHOENIX_508_GRND(10,0,1)
+CON_PHOENIX_508_BASE(10,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_11()
-CON_PHOENIX_508_GRND(11,0,1)
+CON_PHOENIX_508_BASE(11,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_12()
-CON_PHOENIX_508_GRND(12,0,1)
+CON_PHOENIX_508_BASE(12,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_13()
-CON_PHOENIX_508_GRND(13,0,1)
+CON_PHOENIX_508_BASE(13,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_14()
-CON_PHOENIX_508_GRND(14,0,1)
+CON_PHOENIX_508_BASE(14,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_15()
-CON_PHOENIX_508_GRND(15,0,1)
+CON_PHOENIX_508_BASE(15,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_16()
-CON_PHOENIX_508_GRND(16,0,1)
+CON_PHOENIX_508_BASE(16,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_17()
-CON_PHOENIX_508_GRND(17,0,1)
+CON_PHOENIX_508_BASE(17,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_18()
-CON_PHOENIX_508_GRND(18,0,1)
+CON_PHOENIX_508_BASE(18,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_19()
-CON_PHOENIX_508_GRND(19,0,1)
+CON_PHOENIX_508_BASE(19,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_20()
-CON_PHOENIX_508_GRND(20,0,1)
+CON_PHOENIX_508_BASE(20,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_21()
-CON_PHOENIX_508_GRND(21,0,1)
+CON_PHOENIX_508_BASE(21,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_22()
-CON_PHOENIX_508_GRND(22,0,1)
+CON_PHOENIX_508_BASE(22,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_23()
-CON_PHOENIX_508_GRND(23,0,1)
+CON_PHOENIX_508_BASE(23,0,1)
 #end
 #macro CON_PHOENIX_508_MSTBA_24()
-CON_PHOENIX_508_GRND(24,0,1)
+CON_PHOENIX_508_BASE(24,0,1)
 #end
 
 
 /********************************************************************************************************************************************
 //ChristophGraf@web.de
 ********************************************************************************************************************************************/
-#macro CON_PHONE_JACK_GRND(value)
+#macro CON_PHONE_JACK_BASE(value)
 
 union {
         #if(pin_short=off)
@@ -5299,7 +5299,7 @@ union {
 #end
 
 #macro CON_PHONE_JACK(value)
-CON_PHONE_JACK_GRND(value)
+CON_PHONE_JACK_BASE(value)
 #end
 
 
@@ -5310,7 +5310,7 @@ CON_PHONE_JACK_GRND(value)
 //a = Reihen
 //b = Pins
 ********************************************************************************************************************************************/
-#macro CON_PHW_GRND(a,b)
+#macro CON_PHW_BASE(a,b)
 union {
 #if(a=1)
 #local i=0;
@@ -5331,182 +5331,182 @@ union {
 }
 #end
 #macro CON_PHW_1X1()
-CON_PHW_GRND(1,1)
+CON_PHW_BASE(1,1)
 #end
 #macro CON_PHW_1X2()
-CON_PHW_GRND(1,2)
+CON_PHW_BASE(1,2)
 #end
 #macro CON_PHW_1X3()
-CON_PHW_GRND(1,3)
+CON_PHW_BASE(1,3)
 #end
 #macro CON_PHW_1X4()
-CON_PHW_GRND(1,4)
+CON_PHW_BASE(1,4)
 #end
 #macro CON_PHW_1X5()
-CON_PHW_GRND(1,5)
+CON_PHW_BASE(1,5)
 #end
 #macro CON_PHW_1X6()
-CON_PHW_GRND(1,6)
+CON_PHW_BASE(1,6)
 #end
 #macro CON_PHW_1X7()
-CON_PHW_GRND(1,7)
+CON_PHW_BASE(1,7)
 #end
 #macro CON_PHW_1X8()
-CON_PHW_GRND(1,8)
+CON_PHW_BASE(1,8)
 #end
 #macro CON_PHW_1X9()
-CON_PHW_GRND(1,9)
+CON_PHW_BASE(1,9)
 #end
 #macro CON_PHW_1X10()
-CON_PHW_GRND(1,10)
+CON_PHW_BASE(1,10)
 #end
 #macro CON_PHW_1X11()
-CON_PHW_GRND(1,11)
+CON_PHW_BASE(1,11)
 #end
 #macro CON_PHW_1X12()
-CON_PHW_GRND(1,12)
+CON_PHW_BASE(1,12)
 #end
 #macro CON_PHW_1X13()
-CON_PHW_GRND(1,13)
+CON_PHW_BASE(1,13)
 #end
 #macro CON_PHW_1X14()
-CON_PHW_GRND(1,14)
+CON_PHW_BASE(1,14)
 #end
 #macro CON_PHW_1X15()
-CON_PHW_GRND(1,15)
+CON_PHW_BASE(1,15)
 #end
 #macro CON_PHW_1X16()
-CON_PHW_GRND(1,16)
+CON_PHW_BASE(1,16)
 #end
 #macro CON_PHW_1X17()
-CON_PHW_GRND(1,17)
+CON_PHW_BASE(1,17)
 #end
 #macro CON_PHW_1X18()
-CON_PHW_GRND(1,18)
+CON_PHW_BASE(1,18)
 #end
 #macro CON_PHW_1X19()
-CON_PHW_GRND(1,19)
+CON_PHW_BASE(1,19)
 #end
 #macro CON_PHW_1X20()
-CON_PHW_GRND(1,20)
+CON_PHW_BASE(1,20)
 #end
 #macro CON_PHW_1X21()
-CON_PHW_GRND(1,21)
+CON_PHW_BASE(1,21)
 #end
 #macro CON_PHW_1X22()
-CON_PHW_GRND(1,22)
+CON_PHW_BASE(1,22)
 #end
 #macro CON_PHW_1X23()
-CON_PHW_GRND(1,23)
+CON_PHW_BASE(1,23)
 #end
 #macro CON_PHW_1X24()
-CON_PHW_GRND(1,24)
+CON_PHW_BASE(1,24)
 #end
 #macro CON_PHW_1X25()
-CON_PHW_GRND(1,25)
+CON_PHW_BASE(1,25)
 #end
 #macro CON_PHW_1X26()
-CON_PHW_GRND(1,26)
+CON_PHW_BASE(1,26)
 #end
 #macro CON_PHW_1X27()
-CON_PHW_GRND(1,27)
+CON_PHW_BASE(1,27)
 #end
 #macro CON_PHW_1X28()
-CON_PHW_GRND(1,28)
+CON_PHW_BASE(1,28)
 #end
 #macro CON_PHW_1X29()
-CON_PHW_GRND(1,29)
+CON_PHW_BASE(1,29)
 #end
 #macro CON_PHW_1X30()
-CON_PHW_GRND(1,30)
+CON_PHW_BASE(1,30)
 #end
 //Zweireihige Stiftleisten Winkel
 #macro CON_PHW_2X2()
-CON_PHW_GRND(2,2)
+CON_PHW_BASE(2,2)
 #end
 #macro CON_PHW_2X3()
-CON_PHW_GRND(2,3)
+CON_PHW_BASE(2,3)
 #end
 #macro CON_PHW_2X4()
-CON_PHW_GRND(2,4)
+CON_PHW_BASE(2,4)
 #end
 #macro CON_PHW_2X5()
-CON_PHW_GRND(2,5)
+CON_PHW_BASE(2,5)
 #end
 #macro CON_PHW_2X6()
-CON_PHW_GRND(2,6)
+CON_PHW_BASE(2,6)
 #end
 #macro CON_PHW_2X7()
-CON_PHW_GRND(2,7)
+CON_PHW_BASE(2,7)
 #end
 #macro CON_PHW_2X8()
-CON_PHW_GRND(2,8)
+CON_PHW_BASE(2,8)
 #end
 #macro CON_PHW_2X9()
-CON_PHW_GRND(2,9)
+CON_PHW_BASE(2,9)
 #end
 #macro CON_PHW_2X10()
-CON_PHW_GRND(2,10)
+CON_PHW_BASE(2,10)
 #end
 #macro CON_PHW_2X11()
-CON_PHW_GRND(2,11)
+CON_PHW_BASE(2,11)
 #end
 #macro CON_PHW_2X12()
-CON_PHW_GRND(2,12)
+CON_PHW_BASE(2,12)
 #end
 #macro CON_PHW_2X13()
-CON_PHW_GRND(2,13)
+CON_PHW_BASE(2,13)
 #end
 #macro CON_PHW_2X14()
-CON_PHW_GRND(2,14)
+CON_PHW_BASE(2,14)
 #end
 #macro CON_PHW_2X15()
-CON_PHW_GRND(2,15)
+CON_PHW_BASE(2,15)
 #end
 #macro CON_PHW_2X16()
-CON_PHW_GRND(2,16)
+CON_PHW_BASE(2,16)
 #end
 #macro CON_PHW_2X17()
-CON_PHW_GRND(2,17)
+CON_PHW_BASE(2,17)
 #end
 #macro CON_PHW_2X18()
-CON_PHW_GRND(2,18)
+CON_PHW_BASE(2,18)
 #end
 #macro CON_PHW_2X19()
-CON_PHW_GRND(2,19)
+CON_PHW_BASE(2,19)
 #end
 #macro CON_PHW_2X20()
-CON_PHW_GRND(2,20)
+CON_PHW_BASE(2,20)
 #end
 #macro CON_PHW_2X21()
-CON_PHW_GRND(2,21)
+CON_PHW_BASE(2,21)
 #end
 #macro CON_PHW_2X22()
-CON_PHW_GRND(2,22)
+CON_PHW_BASE(2,22)
 #end
 #macro CON_PHW_2X23()
-CON_PHW_GRND(2,23)
+CON_PHW_BASE(2,23)
 #end
 #macro CON_PHW_2X24()
-CON_PHW_GRND(2,24)
+CON_PHW_BASE(2,24)
 #end
 #macro CON_PHW_2X25()
-CON_PHW_GRND(2,25)
+CON_PHW_BASE(2,25)
 #end
 #macro CON_PHW_2X26()
-CON_PHW_GRND(2,26)
+CON_PHW_BASE(2,26)
 #end
 #macro CON_PHW_2X27()
-CON_PHW_GRND(2,27)
+CON_PHW_BASE(2,27)
 #end
 #macro CON_PHW_2X28()
-CON_PHW_GRND(2,28)
+CON_PHW_BASE(2,28)
 #end
 #macro CON_PHW_2X29()
-CON_PHW_GRND(2,29)
+CON_PHW_BASE(2,29)
 #end
 #macro CON_PHW_2X30()
-CON_PHW_GRND(2,30)
+CON_PHW_BASE(2,30)
 #end
 
 
@@ -5517,7 +5517,7 @@ CON_PHW_GRND(2,30)
 //j = (0=no Jumper, 1=open, 2=closed)
 //pitch = The space between two pins
 ********************************************************************************************************************************************/
-#macro CON_PH_GRND(a,b,j,pitch)
+#macro CON_PH_BASE(a,b,j,pitch)
 #if((a>1)|(b>1))
 union {
 #else
@@ -5553,423 +5553,423 @@ scale (pitch/2.54)
 #end
 //Stiftleisten (2,54mm)
 #macro CON_PH_1X1()
-CON_PH_GRND(1,1,0,2.54)
+CON_PH_BASE(1,1,0,2.54)
 #end
 #macro CON_PH_1X2()
-CON_PH_GRND(1,2,0,2.54)
+CON_PH_BASE(1,2,0,2.54)
 #end
 #macro CON_PH_1X3()
-CON_PH_GRND(1,3,0,2.54)
+CON_PH_BASE(1,3,0,2.54)
 #end
 #macro CON_PH_1X4()
-CON_PH_GRND(1,4,0,2.54)
+CON_PH_BASE(1,4,0,2.54)
 #end
 #macro CON_PH_1X5()
-CON_PH_GRND(1,5,0,2.54)
+CON_PH_BASE(1,5,0,2.54)
 #end
 #macro CON_PH_1X6()
-CON_PH_GRND(1,6,0,2.54)
+CON_PH_BASE(1,6,0,2.54)
 #end
 #macro CON_PH_1X7()
-CON_PH_GRND(1,7,0,2.54)
+CON_PH_BASE(1,7,0,2.54)
 #end
 #macro CON_PH_1X8()
-CON_PH_GRND(1,8,0,2.54)
+CON_PH_BASE(1,8,0,2.54)
 #end
 #macro CON_PH_1X9()
-CON_PH_GRND(1,9,0,2.54)
+CON_PH_BASE(1,9,0,2.54)
 #end
 #macro CON_PH_1X10()
-CON_PH_GRND(1,10,0,2.54)
+CON_PH_BASE(1,10,0,2.54)
 #end
 #macro CON_PH_1X11()
-CON_PH_GRND(1,11,0,2.54)
+CON_PH_BASE(1,11,0,2.54)
 #end
 #macro CON_PH_1X12()
-CON_PH_GRND(1,12,0,2.54)
+CON_PH_BASE(1,12,0,2.54)
 #end
 #macro CON_PH_1X13()
-CON_PH_GRND(1,13,0,2.54)
+CON_PH_BASE(1,13,0,2.54)
 #end
 #macro CON_PH_1X14()
-CON_PH_GRND(1,14,0,2.54)
+CON_PH_BASE(1,14,0,2.54)
 #end
 #macro CON_PH_1X15()
-CON_PH_GRND(1,15,0,2.54)
+CON_PH_BASE(1,15,0,2.54)
 #end
 #macro CON_PH_1X16()
-CON_PH_GRND(1,16,0,2.54)
+CON_PH_BASE(1,16,0,2.54)
 #end
 #macro CON_PH_1X17()
-CON_PH_GRND(1,17,0,2.54)
+CON_PH_BASE(1,17,0,2.54)
 #end
 #macro CON_PH_1X18()
-CON_PH_GRND(1,18,0,2.54)
+CON_PH_BASE(1,18,0,2.54)
 #end
 #macro CON_PH_1X19()
-CON_PH_GRND(1,19,0,2.54)
+CON_PH_BASE(1,19,0,2.54)
 #end
 #macro CON_PH_1X20()
-CON_PH_GRND(1,20,0,2.54)
+CON_PH_BASE(1,20,0,2.54)
 #end
 #macro CON_PH_1X21()
-CON_PH_GRND(1,21,0,2.54)
+CON_PH_BASE(1,21,0,2.54)
 #end
 #macro CON_PH_1X22()
-CON_PH_GRND(1,22,0,2.54)
+CON_PH_BASE(1,22,0,2.54)
 #end
 #macro CON_PH_1X23()
-CON_PH_GRND(1,23,0,2.54)
+CON_PH_BASE(1,23,0,2.54)
 #end
 #macro CON_PH_1X24()
-CON_PH_GRND(1,24,0,2.54)
+CON_PH_BASE(1,24,0,2.54)
 #end
 #macro CON_PH_1X25()
-CON_PH_GRND(1,25,0,2.54)
+CON_PH_BASE(1,25,0,2.54)
 #end
 #macro CON_PH_1X26()
-CON_PH_GRND(1,26,0,2.54)
+CON_PH_BASE(1,26,0,2.54)
 #end
 #macro CON_PH_1X27()
-CON_PH_GRND(1,27,0,2.54)
+CON_PH_BASE(1,27,0,2.54)
 #end
 #macro CON_PH_1X28()
-CON_PH_GRND(1,28,0,2.54)
+CON_PH_BASE(1,28,0,2.54)
 #end
 #macro CON_PH_1X29()
-CON_PH_GRND(1,29,0,2.54)
+CON_PH_BASE(1,29,0,2.54)
 #end
 #macro CON_PH_1X30()
-CON_PH_GRND(1,30,0,2.54)
+CON_PH_BASE(1,30,0,2.54)
 #end
 //Zweireihige Stiftleisten (2,54mm)
 #macro CON_PH_2X2()
-CON_PH_GRND(2,2,0,2.54)
+CON_PH_BASE(2,2,0,2.54)
 #end
 #macro CON_PH_2X3()
-CON_PH_GRND(2,3,0,2.54)
+CON_PH_BASE(2,3,0,2.54)
 #end
 #macro CON_PH_2X4()
-CON_PH_GRND(2,4,0,2.54)
+CON_PH_BASE(2,4,0,2.54)
 #end
 #macro CON_PH_2X5()
-CON_PH_GRND(2,5,0,2.54)
+CON_PH_BASE(2,5,0,2.54)
 #end
 #macro CON_PH_2X6()
-CON_PH_GRND(2,6,0,2.54)
+CON_PH_BASE(2,6,0,2.54)
 #end
 #macro CON_PH_2X7()
-CON_PH_GRND(2,7,0,2.54)
+CON_PH_BASE(2,7,0,2.54)
 #end
 #macro CON_PH_2X8()
-CON_PH_GRND(2,8,0,2.54)
+CON_PH_BASE(2,8,0,2.54)
 #end
 #macro CON_PH_2X9()
-CON_PH_GRND(2,9,0,2.54)
+CON_PH_BASE(2,9,0,2.54)
 #end
 #macro CON_PH_2X10()
-CON_PH_GRND(2,10,0,2.54)
+CON_PH_BASE(2,10,0,2.54)
 #end
 #macro CON_PH_2X11()
-CON_PH_GRND(2,11,0,2.54)
+CON_PH_BASE(2,11,0,2.54)
 #end
 #macro CON_PH_2X12()
-CON_PH_GRND(2,12,0,2.54)
+CON_PH_BASE(2,12,0,2.54)
 #end
 #macro CON_PH_2X13()
-CON_PH_GRND(2,13,0,2.54)
+CON_PH_BASE(2,13,0,2.54)
 #end
 #macro CON_PH_2X14()
-CON_PH_GRND(2,14,0,2.54)
+CON_PH_BASE(2,14,0,2.54)
 #end
 #macro CON_PH_2X15()
-CON_PH_GRND(2,15,0,2.54)
+CON_PH_BASE(2,15,0,2.54)
 #end
 #macro CON_PH_2X16()
-CON_PH_GRND(2,16,0,2.54)
+CON_PH_BASE(2,16,0,2.54)
 #end
 #macro CON_PH_2X17()
-CON_PH_GRND(2,17,0,2.54)
+CON_PH_BASE(2,17,0,2.54)
 #end
 #macro CON_PH_2X18()
-CON_PH_GRND(2,18,0,2.54)
+CON_PH_BASE(2,18,0,2.54)
 #end
 #macro CON_PH_2X19()
-CON_PH_GRND(2,19,0,2.54)
+CON_PH_BASE(2,19,0,2.54)
 #end
 #macro CON_PH_2X20()
-CON_PH_GRND(2,20,0,2.54)
+CON_PH_BASE(2,20,0,2.54)
 #end
 #macro CON_PH_2X21()
-CON_PH_GRND(2,21,0,2.54)
+CON_PH_BASE(2,21,0,2.54)
 #end
 #macro CON_PH_2X22()
-CON_PH_GRND(2,22,0,2.54)
+CON_PH_BASE(2,22,0,2.54)
 #end
 #macro CON_PH_2X23()
-CON_PH_GRND(2,23,0,2.54)
+CON_PH_BASE(2,23,0,2.54)
 #end
 #macro CON_PH_2X24()
-CON_PH_GRND(2,24,0,2.54)
+CON_PH_BASE(2,24,0,2.54)
 #end
 #macro CON_PH_2X25()
-CON_PH_GRND(2,25,0,2.54)
+CON_PH_BASE(2,25,0,2.54)
 #end
 #macro CON_PH_2X26()
-CON_PH_GRND(2,26,0,2.54)
+CON_PH_BASE(2,26,0,2.54)
 #end
 #macro CON_PH_2X27()
-CON_PH_GRND(2,27,0,2.54)
+CON_PH_BASE(2,27,0,2.54)
 #end
 #macro CON_PH_2X28()
-CON_PH_GRND(2,28,0,2.54)
+CON_PH_BASE(2,28,0,2.54)
 #end
 #macro CON_PH_2X29()
-CON_PH_GRND(2,29,0,2.54)
+CON_PH_BASE(2,29,0,2.54)
 #end
 #macro CON_PH_2X30()
-CON_PH_GRND(2,30,0,2.54)
+CON_PH_BASE(2,30,0,2.54)
 #end
 //Zweireihige Stiftleisten (2,54) mit Jumper
 #macro CON_PH_2X1J(j)
-CON_PH_GRND(2,1,j,2.54)
+CON_PH_BASE(2,1,j,2.54)
 #end
 #macro CON_PH_2X2J(j)
-CON_PH_GRND(2,2,j,2.54)
+CON_PH_BASE(2,2,j,2.54)
 #end
 #macro CON_PH_2X3J(j)
-CON_PH_GRND(2,3,j,2.54)
+CON_PH_BASE(2,3,j,2.54)
 #end
 #macro CON_PH_2X4J(j)
-CON_PH_GRND(2,4,j,2.54)
+CON_PH_BASE(2,4,j,2.54)
 #end
 #macro CON_PH_2X5J(j)
-CON_PH_GRND(2,5,j,2.54)
+CON_PH_BASE(2,5,j,2.54)
 #end
 #macro CON_PH_2X6J(j)
-CON_PH_GRND(2,6,j,2.54)
+CON_PH_BASE(2,6,j,2.54)
 #end
 #macro CON_PH_2X7J(j)
-CON_PH_GRND(2,7,j,2.54)
+CON_PH_BASE(2,7,j,2.54)
 #end
 #macro CON_PH_2X8J(j)
-CON_PH_GRND(2,8,j,2.54)
+CON_PH_BASE(2,8,j,2.54)
 #end
 #macro CON_PH_2X9J(j)
-CON_PH_GRND(2,9,j,2.54)
+CON_PH_BASE(2,9,j,2.54)
 #end
 #macro CON_PH_2X10J(j)
-CON_PH_GRND(2,10,j,2.54)
+CON_PH_BASE(2,10,j,2.54)
 #end
 //one row pinheader (2mm)
 #macro CON_PH_2MM_1X1()
-CON_PH_GRND(1,1,0,2.00)
+CON_PH_BASE(1,1,0,2.00)
 #end
 #macro CON_PH_2MM_1X2()
-CON_PH_GRND(1,2,0,2.00)
+CON_PH_BASE(1,2,0,2.00)
 #end
 #macro CON_PH_2MM_1X3()
-CON_PH_GRND(1,3,0,2.00)
+CON_PH_BASE(1,3,0,2.00)
 #end
 #macro CON_PH_2MM_1X4()
-CON_PH_GRND(1,4,0,2.00)
+CON_PH_BASE(1,4,0,2.00)
 #end
 #macro CON_PH_2MM_1X5()
-CON_PH_GRND(1,5,0,2.00)
+CON_PH_BASE(1,5,0,2.00)
 #end
 #macro CON_PH_2MM_1X6()
-CON_PH_GRND(1,6,0,2.00)
+CON_PH_BASE(1,6,0,2.00)
 #end
 #macro CON_PH_2MM_1X7()
-CON_PH_GRND(1,7,0,2.00)
+CON_PH_BASE(1,7,0,2.00)
 #end
 #macro CON_PH_2MM_1X8()
-CON_PH_GRND(1,8,0,2.00)
+CON_PH_BASE(1,8,0,2.00)
 #end
 #macro CON_PH_2MM_1X9()
-CON_PH_GRND(1,9,0,2.00)
+CON_PH_BASE(1,9,0,2.00)
 #end
 #macro CON_PH_2MM_1X10()
-CON_PH_GRND(1,10,0,2.00)
+CON_PH_BASE(1,10,0,2.00)
 #end
 #macro CON_PH_2MM_1X11()
-CON_PH_GRND(1,11,0,2.00)
+CON_PH_BASE(1,11,0,2.00)
 #end
 #macro CON_PH_2MM_1X12()
-CON_PH_GRND(1,12,0,2.00)
+CON_PH_BASE(1,12,0,2.00)
 #end
 #macro CON_PH_2MM_1X13()
-CON_PH_GRND(1,13,0,2.00)
+CON_PH_BASE(1,13,0,2.00)
 #end
 #macro CON_PH_2MM_1X14()
-CON_PH_GRND(1,14,0,2.00)
+CON_PH_BASE(1,14,0,2.00)
 #end
 #macro CON_PH_2MM_1X15()
-CON_PH_GRND(1,15,0,2.00)
+CON_PH_BASE(1,15,0,2.00)
 #end
 #macro CON_PH_2MM_1X16()
-CON_PH_GRND(1,16,0,2.00)
+CON_PH_BASE(1,16,0,2.00)
 #end
 #macro CON_PH_2MM_1X17()
-CON_PH_GRND(1,17,0,2.00)
+CON_PH_BASE(1,17,0,2.00)
 #end
 #macro CON_PH_2MM_1X18()
-CON_PH_GRND(1,18,0,2.00)
+CON_PH_BASE(1,18,0,2.00)
 #end
 #macro CON_PH_2MM_1X19()
-CON_PH_GRND(1,19,0,2.00)
+CON_PH_BASE(1,19,0,2.00)
 #end
 #macro CON_PH_2MM_1X20()
-CON_PH_GRND(1,20,0,2.00)
+CON_PH_BASE(1,20,0,2.00)
 #end
 #macro CON_PH_2MM_1X21()
-CON_PH_GRND(1,21,0,2.00)
+CON_PH_BASE(1,21,0,2.00)
 #end
 #macro CON_PH_2MM_1X22()
-CON_PH_GRND(1,22,0,2.00)
+CON_PH_BASE(1,22,0,2.00)
 #end
 #macro CON_PH_2MM_1X23()
-CON_PH_GRND(1,23,0,2.00)
+CON_PH_BASE(1,23,0,2.00)
 #end
 #macro CON_PH_2MM_1X24()
-CON_PH_GRND(1,24,0,2.00)
+CON_PH_BASE(1,24,0,2.00)
 #end
 #macro CON_PH_2MM_1X25()
-CON_PH_GRND(1,25,0,2.00)
+CON_PH_BASE(1,25,0,2.00)
 #end
 #macro CON_PH_2MM_1X26()
-CON_PH_GRND(1,26,0,2.00)
+CON_PH_BASE(1,26,0,2.00)
 #end
 #macro CON_PH_2MM_1X27()
-CON_PH_GRND(1,27,0,2.00)
+CON_PH_BASE(1,27,0,2.00)
 #end
 #macro CON_PH_2MM_1X28()
-CON_PH_GRND(1,28,0,2.00)
+CON_PH_BASE(1,28,0,2.00)
 #end
 #macro CON_PH_2MM_1X29()
-CON_PH_GRND(1,29,0,2.00)
+CON_PH_BASE(1,29,0,2.00)
 #end
 #macro CON_PH_2MM_1X30()
-CON_PH_GRND(1,30,0,2.00)
+CON_PH_BASE(1,30,0,2.00)
 #end
 //two row pinheader (2mm)
 #macro CON_PH_2MM_2X2()
-CON_PH_GRND(2,2,0,2.00)
+CON_PH_BASE(2,2,0,2.00)
 #end
 #macro CON_PH_2MM_2X3()
-CON_PH_GRND(2,3,0,2.00)
+CON_PH_BASE(2,3,0,2.00)
 #end
 #macro CON_PH_2MM_2X4()
-CON_PH_GRND(2,4,0,2.00)
+CON_PH_BASE(2,4,0,2.00)
 #end
 #macro CON_PH_2MM_2X5()
-CON_PH_GRND(2,5,0,2.00)
+CON_PH_BASE(2,5,0,2.00)
 #end
 #macro CON_PH_2MM_2X6()
-CON_PH_GRND(2,6,0,2.00)
+CON_PH_BASE(2,6,0,2.00)
 #end
 #macro CON_PH_2MM_2X7()
-CON_PH_GRND(2,7,0,2.00)
+CON_PH_BASE(2,7,0,2.00)
 #end
 #macro CON_PH_2MM_2X8()
-CON_PH_GRND(2,8,0,2.00)
+CON_PH_BASE(2,8,0,2.00)
 #end
 #macro CON_PH_2MM_2X9()
-CON_PH_GRND(2,9,0,2.00)
+CON_PH_BASE(2,9,0,2.00)
 #end
 #macro CON_PH_2MM_2X10()
-CON_PH_GRND(2,10,0,2.00)
+CON_PH_BASE(2,10,0,2.00)
 #end
 #macro CON_PH_2MM_2X11()
-CON_PH_GRND(2,11,0,2.00)
+CON_PH_BASE(2,11,0,2.00)
 #end
 #macro CON_PH_2MM_2X12()
-CON_PH_GRND(2,12,0,2.00)
+CON_PH_BASE(2,12,0,2.00)
 #end
 #macro CON_PH_2MM_2X13()
-CON_PH_GRND(2,13,0,2.00)
+CON_PH_BASE(2,13,0,2.00)
 #end
 #macro CON_PH_2MM_2X14()
-CON_PH_GRND(2,14,0,2.00)
+CON_PH_BASE(2,14,0,2.00)
 #end
 #macro CON_PH_2MM_2X15()
-CON_PH_GRND(2,15,0,2.00)
+CON_PH_BASE(2,15,0,2.00)
 #end
 #macro CON_PH_2MM_2X16()
-CON_PH_GRND(2,16,0,2.00)
+CON_PH_BASE(2,16,0,2.00)
 #end
 #macro CON_PH_2MM_2X17()
-CON_PH_GRND(2,17,0,2.00)
+CON_PH_BASE(2,17,0,2.00)
 #end
 #macro CON_PH_2MM_2X18()
-CON_PH_GRND(2,18,0,2.00)
+CON_PH_BASE(2,18,0,2.00)
 #end
 #macro CON_PH_2MM_2X19()
-CON_PH_GRND(2,19,0,2.00)
+CON_PH_BASE(2,19,0,2.00)
 #end
 #macro CON_PH_2MM_2X20()
-CON_PH_GRND(2,20,0,2.00)
+CON_PH_BASE(2,20,0,2.00)
 #end
 #macro CON_PH_2MM_2X21()
-CON_PH_GRND(2,21,0,2.00)
+CON_PH_BASE(2,21,0,2.00)
 #end
 #macro CON_PH_2MM_2X22()
-CON_PH_GRND(2,22,0,2.00)
+CON_PH_BASE(2,22,0,2.00)
 #end
 #macro CON_PH_2MM_2X23()
-CON_PH_GRND(2,23,0,2.00)
+CON_PH_BASE(2,23,0,2.00)
 #end
 #macro CON_PH_2MM_2X24()
-CON_PH_GRND(2,24,0,2.00)
+CON_PH_BASE(2,24,0,2.00)
 #end
 #macro CON_PH_2MM_2X25()
-CON_PH_GRND(2,25,0,2.00)
+CON_PH_BASE(2,25,0,2.00)
 #end
 #macro CON_PH_2MM_2X26()
-CON_PH_GRND(2,26,0,2.00)
+CON_PH_BASE(2,26,0,2.00)
 #end
 #macro CON_PH_2MM_2X27()
-CON_PH_GRND(2,27,0,2.00)
+CON_PH_BASE(2,27,0,2.00)
 #end
 #macro CON_PH_2MM_2X28()
-CON_PH_GRND(2,28,0,2.00)
+CON_PH_BASE(2,28,0,2.00)
 #end
 #macro CON_PH_2MM_2X29()
-CON_PH_GRND(2,29,0,2.00)
+CON_PH_BASE(2,29,0,2.00)
 #end
 #macro CON_PH_2MM_2X30()
-CON_PH_GRND(2,30,0,2.00)
+CON_PH_BASE(2,30,0,2.00)
 #end
 //two row pinheader (2mm) with jumper
 #macro CON_PH_2MM_2X1J(j)
-CON_PH_GRND(2,1,j,2.00)
+CON_PH_BASE(2,1,j,2.00)
 #end
 #macro CON_PH_2MM_2X2J(j)
-CON_PH_GRND(2,2,j,2.00)
+CON_PH_BASE(2,2,j,2.00)
 #end
 #macro CON_PH_2MM_2X3J(j)
-CON_PH_GRND(2,3,j,2.00)
+CON_PH_BASE(2,3,j,2.00)
 #end
 #macro CON_PH_2MM_2X4J(j)
-CON_PH_GRND(2,4,j,2.00)
+CON_PH_BASE(2,4,j,2.00)
 #end
 #macro CON_PH_2MM_2X5J(j)
-CON_PH_GRND(2,5,j,2.00)
+CON_PH_BASE(2,5,j,2.00)
 #end
 #macro CON_PH_2MM_2X6J(j)
-CON_PH_GRND(2,6,j,2.00)
+CON_PH_BASE(2,6,j,2.00)
 #end
 #macro CON_PH_2MM_2X7J(j)
-CON_PH_GRND(2,7,j,2.00)
+CON_PH_BASE(2,7,j,2.00)
 #end
 #macro CON_PH_2MM_2X8J(j)
-CON_PH_GRND(2,8,j,2.00)
+CON_PH_BASE(2,8,j,2.00)
 #end
 #macro CON_PH_2MM_2X9J(j)
-CON_PH_GRND(2,9,j,2.00)
+CON_PH_BASE(2,9,j,2.00)
 #end
 #macro CON_PH_2MM_2X10J(j)
-CON_PH_GRND(2,10,j,2.00)
+CON_PH_BASE(2,10,j,2.00)
 #end
 
 
@@ -5978,7 +5978,7 @@ CON_PH_GRND(2,10,j,2.00)
 // Designed by Carsten Koegler, FTZ-Leipzig <koegler(replace with at)ftz-leipzig.de>
 // Vorlage: MEBP 8-8PG Reichelt Elektronik
 ********************************************************************************************************************************************/
-#macro CON_RJ45_GRND()
+#macro CON_RJ45_BASE()
 //#local tex_rj45_metal = texture { T_Chrome_3D } ;
 #local tex_rj45_metal = texture { T_Chrome_5B } ;
 #local tex_rj45_pastic = texture { pigment{White*0.3} finish {specular 1 roughness 0.001 reflection 0.07 ambient (0.1 * global_ambient_mul)} } ;
@@ -6188,7 +6188,7 @@ union
 }
 #end
 #macro CON_RJ45()
-CON_RJ45_GRND()
+CON_RJ45_BASE()
 #end
 
 
@@ -6197,7 +6197,7 @@ CON_RJ45_GRND()
 // col = Farbe der Karte (Kunststoff)
 // everyone1@freenet.de
 ********************************************************************************************************************************************/
-#macro CON_SD_CARD_GRND(col)
+#macro CON_SD_CARD_BASE(col)
 #local b  = 24.0;       // Breite        
 #local b1 = 22.5;       // Breite dicker Teil
 #local l  = 32.0;       // Laenge
@@ -6340,10 +6340,10 @@ union {
 
 
 #macro CON_SD_CARD_RED()
-CON_SD_CARD_GRND(rgb< 1.0, 0.0, 0.0>)
+CON_SD_CARD_BASE(rgb< 1.0, 0.0, 0.0>)
 #end
 #macro CON_SD_CARD_BLACK()
-CON_SD_CARD_GRND(rgb< 0.1, 0.1, 0.1>)
+CON_SD_CARD_BASE(rgb< 0.1, 0.1, 0.1>)
 #end
 
 
@@ -6351,7 +6351,7 @@ CON_SD_CARD_GRND(rgb< 0.1, 0.1, 0.1>)
 // SD- / MMC-Karten Slot YAMAICHI FPS-Series
 // card = 0 - Keine Karte im Slot, 1 - Karte im Slot, 2 - Karte Vor dem Slot
 ********************************************************************************************************************************************/
-#macro CON_SD_CONNECTOR_YAMAICHI_FPS_GRND(card)
+#macro CON_SD_CONNECTOR_YAMAICHI_FPS_BASE(card)
 #local ua = 0.01;
 #local h = 2.8;
 #local bl_d = 0.2;
@@ -6476,9 +6476,9 @@ union {
         
         #if (card>0)
                 #if (card=1)
-                        object{CON_SD_CARD_GRND(rgb< 0.0, 0.0, 0.2>)  rotate < 0,180, 180> translate<9.38, h-bl_d-0.1, 36.0> }
+                        object{CON_SD_CARD_BASE(rgb< 0.0, 0.0, 0.2>)  rotate < 0,180, 180> translate<9.38, h-bl_d-0.1, 36.0> }
                 #else
-                        object{CON_SD_CARD_GRND(rgb< 0.0, 0.0, 0.2>)  rotate < 0,200, 180> translate< -2, h-bl_d-0.1, 65.0> }
+                        object{CON_SD_CARD_BASE(rgb< 0.0, 0.0, 0.2>)  rotate < 0,200, 180> translate< -2, h-bl_d-0.1, 65.0> }
                 #end
         #end 
 
@@ -6487,20 +6487,20 @@ union {
 
 
 #macro CON_SD_CONNECTOR_YAMAICHI_FPS_CARD_EXTERNAL()
-CON_SD_CONNECTOR_YAMAICHI_FPS_GRND(2)
+CON_SD_CONNECTOR_YAMAICHI_FPS_BASE(2)
 #end
 #macro CON_SD_CONNECTOR_YAMAICHI_FPS_CARD()
-CON_SD_CONNECTOR_YAMAICHI_FPS_GRND(1)
+CON_SD_CONNECTOR_YAMAICHI_FPS_BASE(1)
 #end
 #macro CON_SD_CONNECTOR_YAMAICHI_FPS_NO_CARD()
-CON_SD_CONNECTOR_YAMAICHI_FPS_GRND(0)
+CON_SD_CONNECTOR_YAMAICHI_FPS_BASE(0)
 #end
 
 
 /********************************************************************************************************************************************
 //Duane Clark <dclark@akamail.com>
 ********************************************************************************************************************************************/
-#macro CON_SMA_JH_GRND()
+#macro CON_SMA_JH_BASE()
 union
 {
   union
@@ -6555,14 +6555,14 @@ union
 }
 #end
 #macro CON_SMA_JH()
-CON_SMA_JH_GRND()
+CON_SMA_JH_BASE()
 #end
 
 
 /********************************************************************************************************************************************
 //Duane Clark <dclark@akamail.com>
 ********************************************************************************************************************************************/
-#macro CON_SMA_JV_GRND()
+#macro CON_SMA_JV_BASE()
 union
 {
   object{
@@ -6591,7 +6591,7 @@ union
 }
 #end
 #macro CON_SMA_JV()
-CON_SMA_JV_GRND()
+CON_SMA_JV_BASE()
 #end
 
 
@@ -6599,7 +6599,7 @@ CON_SMA_JV_GRND()
 //AMP 147323
 //n      Number of Pins
 ********************************************************************************************************************************************/
-#macro CON_SMD_AMP_147323_GRND(n)
+#macro CON_SMD_AMP_147323_BASE(n)
 union {
 
    #local pin =
@@ -6649,31 +6649,31 @@ union {
 #end
 
 #macro CON_SMD_AMP_147323_2()
-CON_SMD_AMP_147323_GRND(2)
+CON_SMD_AMP_147323_BASE(2)
 #end
 #macro CON_SMD_AMP_147323_3()
-CON_SMD_AMP_147323_GRND(3)
+CON_SMD_AMP_147323_BASE(3)
 #end
 #macro CON_SMD_AMP_147323_4()
-CON_SMD_AMP_147323_GRND(4)
+CON_SMD_AMP_147323_BASE(4)
 #end
 #macro CON_SMD_AMP_147323_5()
-CON_SMD_AMP_147323_GRND(5)
+CON_SMD_AMP_147323_BASE(5)
 #end
 #macro CON_SMD_AMP_147323_6()
-CON_SMD_AMP_147323_GRND(6)
+CON_SMD_AMP_147323_BASE(6)
 #end
 #macro CON_SMD_AMP_147323_7()
-CON_SMD_AMP_147323_GRND(7)
+CON_SMD_AMP_147323_BASE(7)
 #end
 #macro CON_SMD_AMP_147323_8()
-CON_SMD_AMP_147323_GRND(8)
+CON_SMD_AMP_147323_BASE(8)
 #end
 #macro CON_SMD_AMP_147323_9()
-CON_SMD_AMP_147323_GRND(9)
+CON_SMD_AMP_147323_BASE(9)
 #end
 #macro CON_SMD_AMP_147323_10()
-CON_SMD_AMP_147323_GRND(10)
+CON_SMD_AMP_147323_BASE(10)
 #end
 
 
@@ -6681,7 +6681,7 @@ CON_SMD_AMP_147323_GRND(10)
 //Molex 53261
 //n      Number of Pins
 ********************************************************************************************************************************************/
-#macro CON_SMD_MOLEX_53261_GRND(n)
+#macro CON_SMD_MOLEX_53261_BASE(n)
 union {
 
    #local pin =
@@ -6729,53 +6729,53 @@ union {
 #end
 
 #macro CON_SMD_MOLEX_53261_2()
-CON_SMD_MOLEX_53261_GRND(2)
+CON_SMD_MOLEX_53261_BASE(2)
 #end
 #macro CON_SMD_MOLEX_53261_3()
-CON_SMD_MOLEX_53261_GRND(3)
+CON_SMD_MOLEX_53261_BASE(3)
 #end
 #macro CON_SMD_MOLEX_53261_4()
-CON_SMD_MOLEX_53261_GRND(4)
+CON_SMD_MOLEX_53261_BASE(4)
 #end
 #macro CON_SMD_MOLEX_53261_5()
-CON_SMD_MOLEX_53261_GRND(5)
+CON_SMD_MOLEX_53261_BASE(5)
 #end
 #macro CON_SMD_MOLEX_53261_6()
-CON_SMD_MOLEX_53261_GRND(6)
+CON_SMD_MOLEX_53261_BASE(6)
 #end
 #macro CON_SMD_MOLEX_53261_7()
-CON_SMD_MOLEX_53261_GRND(7)
+CON_SMD_MOLEX_53261_BASE(7)
 #end
 #macro CON_SMD_MOLEX_53261_8()
-CON_SMD_MOLEX_53261_GRND(8)
+CON_SMD_MOLEX_53261_BASE(8)
 #end
 #macro CON_SMD_MOLEX_53261_9()
-CON_SMD_MOLEX_53261_GRND(9)
+CON_SMD_MOLEX_53261_BASE(9)
 #end
 #macro CON_SMD_MOLEX_53261_10()
-CON_SMD_MOLEX_53261_GRND(10)
+CON_SMD_MOLEX_53261_BASE(10)
 #end
 #macro CON_SMD_MOLEX_53261_11()
-CON_SMD_MOLEX_53261_GRND(11)
+CON_SMD_MOLEX_53261_BASE(11)
 #end
 #macro CON_SMD_MOLEX_53261_12()
-CON_SMD_MOLEX_53261_GRND(12)
+CON_SMD_MOLEX_53261_BASE(12)
 #end
 #macro CON_SMD_MOLEX_53261_13()
-CON_SMD_MOLEX_53261_GRND(13)
+CON_SMD_MOLEX_53261_BASE(13)
 #end
 #macro CON_SMD_MOLEX_53261_14()
-CON_SMD_MOLEX_53261_GRND(14)
+CON_SMD_MOLEX_53261_BASE(14)
 #end
 #macro CON_SMD_MOLEX_53261_15()
-CON_SMD_MOLEX_53261_GRND(15)
+CON_SMD_MOLEX_53261_BASE(15)
 #end
 
 
 /********************************************************************************************************************************************
 // Small stereo 3.5mm
 ********************************************************************************************************************************************/
-#macro CON_STEREO_35MM_GRND()
+#macro CON_STEREO_35MM_BASE()
 union {
 difference {
 union {
@@ -6824,7 +6824,7 @@ translate <0,0,-8>
 
 
 #macro CON_STEREO_35MM()
-CON_STEREO_35MM_GRND()
+CON_STEREO_35MM_BASE()
 #end
 
 
@@ -6833,7 +6833,7 @@ CON_STEREO_35MM_GRND()
 //12.10.2004
 //Designed by hebel23 <hebel(replace with at)hebel23.de> 
 ********************************************************************************************************************************************/
-#macro CON_USB_A_001_GRND()
+#macro CON_USB_A_001_BASE()
 union {
         /* Blechgehaeuse  */               
         difference {
@@ -6941,7 +6941,7 @@ union {
 }
 #end
 #macro CON_USB_A_001()
-CON_USB_A_001_GRND()
+CON_USB_A_001_BASE()
 #end
 
 
@@ -6955,7 +6955,7 @@ CON_USB_A_001_GRND()
 // Loetpunkte 2   mm hinter Mittlepunkt
 // Befestigungspunkte seitlich je 6 mm von Mitte entfernt  
 ********************************************************************************************************************************************/
-#macro CON_USB_A_002_GRND()
+#macro CON_USB_A_002_BASE()
 #local tex_usb_metal = texture { T_Chrome_5B } ;
 union {                          
         #local a = -9;
@@ -7014,7 +7014,7 @@ union {
 #end
 
 #macro CON_USB_A_002()
-CON_USB_A_002_GRND()
+CON_USB_A_002_BASE()
 #end
 
 
@@ -7023,7 +7023,7 @@ CON_USB_A_002_GRND()
 // Date: 22.03.2004
 // Auth: Friedrich Bleikamp, <fbleikamp(replace with at)web.de>
 ********************************************************************************************************************************************/
-#macro CON_USB_B_001_GRND()
+#macro CON_USB_B_001_BASE()
 union {
 
 #macro SHELL_PIN_USB_B()
@@ -7100,7 +7100,7 @@ union {
 }     
 #end
 #macro CON_USB_B_001()
-CON_USB_B_001_GRND()
+CON_USB_B_001_BASE()
 #end
 
 
@@ -7109,7 +7109,7 @@ CON_USB_B_001_GRND()
 //Designed by hebel23 <hebel(replace with at)hebel23.de>
 //24.10.2004
 ********************************************************************************************************************************************/
-#macro CON_USB_B_002_GRND()
+#macro CON_USB_B_002_BASE()
 union {
     union {      
      // Blechgehaeuse                    
@@ -7197,7 +7197,7 @@ union {
 }
 #end
 #macro CON_USB_B_002()
-CON_USB_B_002_GRND()
+CON_USB_B_002_BASE()
 #end
 
 /*******************************************************************************
@@ -7206,7 +7206,7 @@ CON_USB_B_002_GRND()
  ******************************************************************************/
 #macro CON_USB_B_61729()
 union {
-  object { CON_USB_B_001_GRND() rotate<0,-90,0> translate<0,0,-10.3> }
+  object { CON_USB_B_001_BASE() rotate<0,-90,0> translate<0,0,-10.3> }
   box { <-11.6/2,10.8, 0> < 11.6/2, 11.3,16-10.3-0.3> } // top side
   box { <-12.4/2, 0.5,-8> <-11.6/2, 10.8,16-10.3-0.3> } // left side
   box { <+12.4/2, 0.5,-8> <+11.6/2, 10.8,16-10.3-0.3> } // right side
@@ -7224,7 +7224,7 @@ union {
 // Wago 733/734
 // Stefan Seegel <dahamm@gmx.net>
 ********************************************************************************************************************************************/
-#macro CON_WAGO73X_PINHEADER_GRND(pins, rm, wo, height, depth, h1, h2, h3, n1, n2, p1, p2, pw, ph)
+#macro CON_WAGO73X_PINHEADER_BASE(pins, rm, wo, height, depth, h1, h2, h3, n1, n2, p1, p2, pw, ph)
 
 #macro WAGOSTIFT(w, h)
 difference {
@@ -7292,76 +7292,76 @@ union {
 }
 #end
 #macro CON_WAGO_733_332()
-CON_WAGO73X_PINHEADER_GRND(2, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(2, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_333()
-CON_WAGO73X_PINHEADER_GRND(3, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(3, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_334()
-CON_WAGO73X_PINHEADER_GRND(4, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(4, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_335()
-CON_WAGO73X_PINHEADER_GRND(5, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(5, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_336()
-CON_WAGO73X_PINHEADER_GRND(6, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(6, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_337()
-CON_WAGO73X_PINHEADER_GRND(7, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(7, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_338()
-CON_WAGO73X_PINHEADER_GRND(8, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(8, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_340()
-CON_WAGO73X_PINHEADER_GRND(10, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(10, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_733_342()
-CON_WAGO73X_PINHEADER_GRND(12, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
+CON_WAGO73X_PINHEADER_BASE(12, 2.5, 2.5, 8.9, 7.8, 2, 0.7, 3, 2.4, 1.4, 2, 0.8, 0.6, 12.3)
 #end
 #macro CON_WAGO_734_132()
-CON_WAGO73X_PINHEADER_GRND(2, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(2, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_133()
-CON_WAGO73X_PINHEADER_GRND(3, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(3, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_134()
-CON_WAGO73X_PINHEADER_GRND(4, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(4, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_135()
-CON_WAGO73X_PINHEADER_GRND(5, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(5, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_136()
-CON_WAGO73X_PINHEADER_GRND(6, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(6, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_137()
-CON_WAGO73X_PINHEADER_GRND(7, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(7, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_138()
-CON_WAGO73X_PINHEADER_GRND(8, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(8, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_139()
-CON_WAGO73X_PINHEADER_GRND(9, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(9, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_140()
-CON_WAGO73X_PINHEADER_GRND(10, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(10, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_142()
-CON_WAGO73X_PINHEADER_GRND(12, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(12, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_143()
-CON_WAGO73X_PINHEADER_GRND(13, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(13, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_146()
-CON_WAGO73X_PINHEADER_GRND(16, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(16, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_148()
-CON_WAGO73X_PINHEADER_GRND(18, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(18, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_150()
-CON_WAGO73X_PINHEADER_GRND(20, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(20, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 #macro CON_WAGO_734_154()
-CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
+CON_WAGO73X_PINHEADER_BASE(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 1, 0.8, 13.6)
 #end
 
 
@@ -7378,7 +7378,7 @@ CON_WAGO73X_PINHEADER_GRND(24, 3.5, 2.4, 10.3, 8.5, 2.5, 1.0, 4, 2.6, 2.0, 2.6, 
 //
 // a = Anzahl der Reihen
 ********************************************************************************************************************************************/
-#macro CON_WAGO_233_GRND(a,typ)
+#macro CON_WAGO_233_BASE(a,typ)
 #local wagocolor1 = color red 0.6 green 0.6 blue 0.6;         //farbton fuer Plastikkoerper 2.5 mm grau
 #local wagocolor2 = color red 1 green 0.45 blue 0;         //farbton fuer Plastikkoerper 2.54 mm orange
 #local handcolor = color red 0.9 green 0.9 blue 0.9;           //farbton weissen Plastikhebel
@@ -7480,172 +7480,172 @@ object{
 #end
 
 #macro CON_WAGO_233_102()
-CON_WAGO_233_GRND(2,1)
+CON_WAGO_233_BASE(2,1)
 #end
 #macro CON_WAGO_233_103()
-CON_WAGO_233_GRND(3,1)
+CON_WAGO_233_BASE(3,1)
 #end
 #macro CON_WAGO_233_104()
-CON_WAGO_233_GRND(4,1)
+CON_WAGO_233_BASE(4,1)
 #end
 #macro CON_WAGO_233_105()
-CON_WAGO_233_GRND(5,1)
+CON_WAGO_233_BASE(5,1)
 #end
 #macro CON_WAGO_233_106()
-CON_WAGO_233_GRND(6,1)
+CON_WAGO_233_BASE(6,1)
 #end
 #macro CON_WAGO_233_107()
-CON_WAGO_233_GRND(7,1)
+CON_WAGO_233_BASE(7,1)
 #end
 #macro CON_WAGO_233_108()
-CON_WAGO_233_GRND(8,1)
+CON_WAGO_233_BASE(8,1)
 #end
 #macro CON_WAGO_233_109()
-CON_WAGO_233_GRND(9,1)
+CON_WAGO_233_BASE(9,1)
 #end
 #macro CON_WAGO_233_110()
-CON_WAGO_233_GRND(10,1)
+CON_WAGO_233_BASE(10,1)
 #end
 #macro CON_WAGO_233_112()
-CON_WAGO_233_GRND(12,1)
+CON_WAGO_233_BASE(12,1)
 #end
 #macro CON_WAGO_233_116()
-CON_WAGO_233_GRND(16,1)
+CON_WAGO_233_BASE(16,1)
 #end
 #macro CON_WAGO_233_124()
-CON_WAGO_233_GRND(24,1)
+CON_WAGO_233_BASE(24,1)
 #end
 #macro CON_WAGO_233_136()
-CON_WAGO_233_GRND(36,1)
+CON_WAGO_233_BASE(36,1)
 #end
 #macro CON_WAGO_233_148()
-CON_WAGO_233_GRND(48,1)
+CON_WAGO_233_BASE(48,1)
 #end
 #macro CON_WAGO_233_202()
-CON_WAGO_233_GRND(2,2)
+CON_WAGO_233_BASE(2,2)
 #end
 #macro CON_WAGO_233_203()
-CON_WAGO_233_GRND(3,2)
+CON_WAGO_233_BASE(3,2)
 #end
 #macro CON_WAGO_233_204()
-CON_WAGO_233_GRND(4,2)
+CON_WAGO_233_BASE(4,2)
 #end
 #macro CON_WAGO_233_205()
-CON_WAGO_233_GRND(5,2)
+CON_WAGO_233_BASE(5,2)
 #end
 #macro CON_WAGO_233_206()
-CON_WAGO_233_GRND(6,2)
+CON_WAGO_233_BASE(6,2)
 #end
 #macro CON_WAGO_233_207()
-CON_WAGO_233_GRND(7,2)
+CON_WAGO_233_BASE(7,2)
 #end
 #macro CON_WAGO_233_208()
-CON_WAGO_233_GRND(8,2)
+CON_WAGO_233_BASE(8,2)
 #end
 #macro CON_WAGO_233_209()
-CON_WAGO_233_GRND(9,2)
+CON_WAGO_233_BASE(9,2)
 #end
 #macro CON_WAGO_233_210()
-CON_WAGO_233_GRND(10,2)
+CON_WAGO_233_BASE(10,2)
 #end
 #macro CON_WAGO_233_212()
-CON_WAGO_233_GRND(12,2)
+CON_WAGO_233_BASE(12,2)
 #end
 #macro CON_WAGO_233_216()
-CON_WAGO_233_GRND(16,2)
+CON_WAGO_233_BASE(16,2)
 #end
 #macro CON_WAGO_233_224()
-CON_WAGO_233_GRND(24,2)
+CON_WAGO_233_BASE(24,2)
 #end
 #macro CON_WAGO_233_236()
-CON_WAGO_233_GRND(36,2)
+CON_WAGO_233_BASE(36,2)
 #end
 #macro CON_WAGO_233_248()
-CON_WAGO_233_GRND(48,2)
+CON_WAGO_233_BASE(48,2)
 #end
 #macro CON_WAGO_233_402()
-CON_WAGO_233_GRND(2,4)
+CON_WAGO_233_BASE(2,4)
 #end
 #macro CON_WAGO_233_403()
-CON_WAGO_233_GRND(3,4)
+CON_WAGO_233_BASE(3,4)
 #end
 #macro CON_WAGO_233_404()
-CON_WAGO_233_GRND(4,4)
+CON_WAGO_233_BASE(4,4)
 #end
 #macro CON_WAGO_233_405()
-CON_WAGO_233_GRND(5,4)
+CON_WAGO_233_BASE(5,4)
 #end
 #macro CON_WAGO_233_406()
-CON_WAGO_233_GRND(6,4)
+CON_WAGO_233_BASE(6,4)
 #end
 #macro CON_WAGO_233_407()
-CON_WAGO_233_GRND(7,4)
+CON_WAGO_233_BASE(7,4)
 #end
 #macro CON_WAGO_233_408()
-CON_WAGO_233_GRND(8,4)
+CON_WAGO_233_BASE(8,4)
 #end
 #macro CON_WAGO_233_409()
-CON_WAGO_233_GRND(9,4)
+CON_WAGO_233_BASE(9,4)
 #end
 #macro CON_WAGO_233_410()
-CON_WAGO_233_GRND(10,4)
+CON_WAGO_233_BASE(10,4)
 #end
 #macro CON_WAGO_233_412()
-CON_WAGO_233_GRND(12,4)
+CON_WAGO_233_BASE(12,4)
 #end
 #macro CON_WAGO_233_416()
-CON_WAGO_233_GRND(16,4)
+CON_WAGO_233_BASE(16,4)
 #end
 #macro CON_WAGO_233_424()
-CON_WAGO_233_GRND(24,4)
+CON_WAGO_233_BASE(24,4)
 #end
 #macro CON_WAGO_233_436()
-CON_WAGO_233_GRND(36,4)
+CON_WAGO_233_BASE(36,4)
 #end
 #macro CON_WAGO_233_448()
-CON_WAGO_233_GRND(48,4)
+CON_WAGO_233_BASE(48,4)
 #end
 #macro CON_WAGO_233_502()
-CON_WAGO_233_GRND(2,5)
+CON_WAGO_233_BASE(2,5)
 #end
 #macro CON_WAGO_233_503()
-CON_WAGO_233_GRND(3,5)
+CON_WAGO_233_BASE(3,5)
 #end
 #macro CON_WAGO_233_504()
-CON_WAGO_233_GRND(4,5)
+CON_WAGO_233_BASE(4,5)
 #end
 #macro CON_WAGO_233_505()
-CON_WAGO_233_GRND(5,5)
+CON_WAGO_233_BASE(5,5)
 #end
 #macro CON_WAGO_233_506()
-CON_WAGO_233_GRND(6,5)
+CON_WAGO_233_BASE(6,5)
 #end
 #macro CON_WAGO_233_507()
-CON_WAGO_233_GRND(7,5)
+CON_WAGO_233_BASE(7,5)
 #end
 #macro CON_WAGO_233_508()
-CON_WAGO_233_GRND(8,5)
+CON_WAGO_233_BASE(8,5)
 #end
 #macro CON_WAGO_233_509()
-CON_WAGO_233_GRND(9,5)
+CON_WAGO_233_BASE(9,5)
 #end
 #macro CON_WAGO_233_510()
-CON_WAGO_233_GRND(10,5)
+CON_WAGO_233_BASE(10,5)
 #end
 #macro CON_WAGO_233_512()
-CON_WAGO_233_GRND(12,5)
+CON_WAGO_233_BASE(12,5)
 #end
 #macro CON_WAGO_233_516()
-CON_WAGO_233_GRND(16,5)
+CON_WAGO_233_BASE(16,5)
 #end
 #macro CON_WAGO_233_524()
-CON_WAGO_233_GRND(24,5)
+CON_WAGO_233_BASE(24,5)
 #end
 #macro CON_WAGO_233_536()
-CON_WAGO_233_GRND(36,5)
+CON_WAGO_233_BASE(36,5)
 #end
 #macro CON_WAGO_233_548()
-CON_WAGO_233_GRND(48,5)
+CON_WAGO_233_BASE(48,5)
 #end
 
 
@@ -7654,41 +7654,41 @@ CON_WAGO_233_GRND(48,5)
 // gerade Pfostenwannen
 // Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberflaeche
 ********************************************************************************************************************************************/
-#macro CON_WS_XX_G_GRND(Pins)
+#macro CON_WS_XX_G_BASE(Pins)
 union {
 object{PFOSTENWANNE(7.62+Pins*1.27)}
 object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,-1.27>}
 object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,1.27>}}
 #end
 #macro CON_DIS_WS6G()
-CON_WS_XX_G_GRND(6)
+CON_WS_XX_G_BASE(6)
 #end
 #macro CON_DIS_WS10G()
-CON_WS_XX_G_GRND(10)
+CON_WS_XX_G_BASE(10)
 #end
 #macro CON_DIS_WS14G()
-CON_WS_XX_G_GRND(14)
+CON_WS_XX_G_BASE(14)
 #end
 #macro CON_DIS_WS16G()
-CON_WS_XX_G_GRND(16)
+CON_WS_XX_G_BASE(16)
 #end
 #macro CON_DIS_WS20G()
-CON_WS_XX_G_GRND(20)
+CON_WS_XX_G_BASE(20)
 #end
 #macro CON_DIS_WS26G()
-CON_WS_XX_G_GRND(26)
+CON_WS_XX_G_BASE(26)
 #end
 #macro CON_DIS_WS34G()
-CON_WS_XX_G_GRND(34)
+CON_WS_XX_G_BASE(34)
 #end
 #macro CON_DIS_WS40G()
-CON_WS_XX_G_GRND(40)
+CON_WS_XX_G_BASE(40)
 #end
 #macro CON_DIS_WS50G()
-CON_WS_XX_G_GRND(50)
+CON_WS_XX_G_BASE(50)
 #end
 #macro CON_DIS_WS64G()
-CON_WS_XX_G_GRND(64)
+CON_WS_XX_G_BASE(64)
 #end
 
 
@@ -7697,38 +7697,38 @@ CON_WS_XX_G_GRND(64)
 // abgewinkelte Pfostenwannen
 // Bezugspunkt: mittig, 5.08mm vor der unteren/inneren Pinreihe.
 ********************************************************************************************************************************************/
-#macro CON_WS_XX_W_GRND(Pins)
+#macro CON_WS_XX_W_BASE(Pins)
 union {
 object{PFOSTENWANNE(7.62+Pins*1.27) rotate<-90,0,0> translate<0,4.5,3.3>}
 object{PIN_BENDED_ROW (Pins/2,2.54,0.635,0.8,4.5-1.27,3,10.5,col_gold) translate<0,0,5.08>}
 object{PIN_BENDED_ROW (Pins/2,2.54,0.635,0.8,4.5+1.27,3,13.04,col_gold) translate<0,0,7.62>}}
 #end
 #macro CON_DIS_WS10W()
-CON_WS_XX_W_GRND(10)
+CON_WS_XX_W_BASE(10)
 #end
 #macro CON_DIS_WS14W()
-CON_WS_XX_W_GRND(14)
+CON_WS_XX_W_BASE(14)
 #end
 #macro CON_DIS_WS16W()
-CON_WS_XX_W_GRND(16)
+CON_WS_XX_W_BASE(16)
 #end
 #macro CON_DIS_WS20W()
-CON_WS_XX_W_GRND(20)
+CON_WS_XX_W_BASE(20)
 #end
 #macro CON_DIS_WS26W()
-CON_WS_XX_W_GRND(26)
+CON_WS_XX_W_BASE(26)
 #end
 #macro CON_DIS_WS34W()
-CON_WS_XX_W_GRND(34)
+CON_WS_XX_W_BASE(34)
 #end
 #macro CON_DIS_WS40W()
-CON_WS_XX_W_GRND(40)
+CON_WS_XX_W_BASE(40)
 #end
 #macro CON_DIS_WS50W()
-CON_WS_XX_W_GRND(50)
+CON_WS_XX_W_BASE(50)
 #end
 #macro CON_DIS_WS64W()
-CON_WS_XX_W_GRND(64)
+CON_WS_XX_W_BASE(64)
 #end
 
 

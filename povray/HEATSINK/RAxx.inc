@@ -9,7 +9,7 @@
  * Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
  * Rev. 1.1 - 01/01/06
  * *****************************************************************************/
-#macro SPC_HEATSINK_RAWA400_GRND(L1,D,Type)
+#macro SPC_HEATSINK_RAWA400_BASE(L1,D,Type)
   union {
      #local rawa_height=2;
      #local TO220_height=1.27;
@@ -93,15 +93,15 @@
 #end
 
 #macro SPC_HEATSINK_RAWA400_8P()
-  SPC_HEATSINK_RAWA400_GRND(13,3.8,0)
+  SPC_HEATSINK_RAWA400_BASE(13,3.8,0)
 #end
 
 #macro SPC_HEATSINK_RAWA400_9P()
-  SPC_HEATSINK_RAWA400_GRND(9,3.2,1)
+  SPC_HEATSINK_RAWA400_BASE(9,3.2,1)
 #end
 
 #macro SPC_HEATSINK_RAWA400_11P()
-  SPC_HEATSINK_RAWA400_GRND(9,3.2,2)
+  SPC_HEATSINK_RAWA400_BASE(9,3.2,2)
 #end
 
 

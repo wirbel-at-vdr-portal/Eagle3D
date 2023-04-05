@@ -20,7 +20,7 @@
 //            trafo_pin_laenge = Länge der Pins, pinabstand = Abstand der Pins von Primä zu Sekundär, pin_aus = Pinabstand von Mittellinie nach äußerster Pin, 
 //            pin_in = Pinabstand von Mittellinie zum inneren Pin, dia_schraube = Durchmesser der Schraube (M2.5, M3 oder M4)
 ********************************************************************************************************************************************/
-#macro TRAFO_ERA_EI_GRND(value, breite, tiefe, hoehe, abs_oben, abs_seite, druck_hoehe, druck_text, anz_laschen, la_laenge, la_breite, la_hoehe, la_lochabst, la_lochdurchm, trafo_pin_laenge, pinabstand, pin_aus, pin_in, dia_schraube)
+#macro TRAFO_ERA_EI_BASE(value, breite, tiefe, hoehe, abs_oben, abs_seite, druck_hoehe, druck_text, anz_laschen, la_laenge, la_breite, la_hoehe, la_lochabst, la_lochdurchm, trafo_pin_laenge, pinabstand, pin_aus, pin_in, dia_schraube)
 
 /********************************************************************************************************************************************
 // Makro: Abgerundeter Quader 
@@ -229,43 +229,43 @@ union {
 #end
 // Printtransformator era EI30/23 2,8VA 
 #macro TRAFO_ERA_EI_30_2(value)
-TRAFO_ERA_EI_GRND(value, 27.5, 32.5, 34.0, 4, 10, 3.0, "Typ EI 30/23", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 20.0, 10.0, 5.0, 4.0)
+TRAFO_ERA_EI_BASE(value, 27.5, 32.5, 34.0, 4, 10, 3.0, "Typ EI 30/23", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 20.0, 10.0, 5.0, 4.0)
 #end
 // Printtransformator era EI38/13,6 3,2VA  
 #macro TRAFO_ERA_EI_38_2(value)
-TRAFO_ERA_EI_GRND(value, 35.5, 42.0, 28.0, 5, 12, 3.0, "Typ EI 38/13,6", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 25.0, 10.0, 5.0, 4.0)
+TRAFO_ERA_EI_BASE(value, 35.5, 42.0, 28.0, 5, 12, 3.0, "Typ EI 38/13,6", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 25.0, 10.0, 5.0, 4.0)
 #end
 // Printtransformator era EI42/14,8 5VA  
 #macro TRAFO_ERA_EI_42_2(value)
-TRAFO_ERA_EI_GRND(value, 38.5, 45.5, 32.0, 6, 13, 3.5, "Typ EI 42/14,8", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 25.0, 12.5, 7.5, 4.0)
+TRAFO_ERA_EI_BASE(value, 38.5, 45.5, 32.0, 6, 13, 3.5, "Typ EI 42/14,8", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 25.0, 12.5, 7.5, 4.0)
 #end
 // Printtransformator era EI42/14,8 5VA mit Befestigungslasche    
 #macro TRAFO_ERA_EI_42_2B(value)
-TRAFO_ERA_EI_GRND(value, 38.5, 45.5, 32.0, 6, 13, 3.5, "Typ EI 42/14,8", 1, 64.0, 10.0, 2.0, 55.0, 4.2, 3.5, 25.0, 12.5, 7.5, 4.0)
+TRAFO_ERA_EI_BASE(value, 38.5, 45.5, 32.0, 6, 13, 3.5, "Typ EI 42/14,8", 1, 64.0, 10.0, 2.0, 55.0, 4.2, 3.5, 25.0, 12.5, 7.5, 4.0)
 #end
 // Printtransformator era EI48/15,8 10VA
 #macro TRAFO_ERA_EI_48_2(value)
-TRAFO_ERA_EI_GRND(value, 42.5, 50.5, 34.5, 6, 14, 4.0, "Typ EI 48/15,8", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 27.5, 12.5, 7.5, 4.0)
+TRAFO_ERA_EI_BASE(value, 42.5, 50.5, 34.5, 6, 14, 4.0, "Typ EI 48/15,8", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 27.5, 12.5, 7.5, 4.0)
 #end
 // Printtransformator era EI48/15,8 10VA mit Befestigungslaschen
 #macro TRAFO_ERA_EI_48_2B(value)
-TRAFO_ERA_EI_GRND(value, 42.5, 50.5, 34.5, 6, 14, 4.0, "Typ EI 48/15,8", 1, 69.0, 10.0, 2.0, 60.0, 4.2, 3.5, 27.5, 12.5, 7.5, 4.0)
+TRAFO_ERA_EI_BASE(value, 42.5, 50.5, 34.5, 6, 14, 4.0, "Typ EI 48/15,8", 1, 69.0, 10.0, 2.0, 60.0, 4.2, 3.5, 27.5, 12.5, 7.5, 4.0)
 #end
 // Printtransformator era EI54/18,8 16VA
 #macro TRAFO_ERA_EI_54_2(value)
-TRAFO_ERA_EI_GRND(value, 48.0, 57.0, 39.0, 7, 16, 4.0, "Typ EI 54/18,8", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 30.0, 15.0, 10.0, 4.0)
+TRAFO_ERA_EI_BASE(value, 48.0, 57.0, 39.0, 7, 16, 4.0, "Typ EI 54/18,8", 0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 30.0, 15.0, 10.0, 4.0)
 #end
 // Printtransformator era EI54/18,8 16VA mit Befestigungslaschen
 #macro TRAFO_ERA_EI_54_2B(value)
-TRAFO_ERA_EI_GRND(value, 48.0, 57.0, 39.0, 7, 16, 4.0, "Typ EI 54/18,8", 2, 75.3, 10.0, 2.0, 65.0, 4.2, 4.5, 30.0, 15.0, 10.0, 4.0)
+TRAFO_ERA_EI_BASE(value, 48.0, 57.0, 39.0, 7, 16, 4.0, "Typ EI 54/18,8", 2, 75.3, 10.0, 2.0, 65.0, 4.2, 4.5, 30.0, 15.0, 10.0, 4.0)
 #end
 // Printtransformator era EI60/25,5 25VA mit Befestigungslaschen
 #macro TRAFO_ERA_EI_60_2(value)
-TRAFO_ERA_EI_GRND(value, 55.0, 66.0, 49.2, 9, 21, 4.0, "Typ EI 60/23", 2, 81.5, 11.2, 2.0, 72.5, 4.2, 4.5, 32.5, 15.0, 10.0, 4.0)
+TRAFO_ERA_EI_BASE(value, 55.0, 66.0, 49.2, 9, 21, 4.0, "Typ EI 60/23", 2, 81.5, 11.2, 2.0, 72.5, 4.2, 4.5, 32.5, 15.0, 10.0, 4.0)
 #end
 // Printtransformator era EI66/23 36VA mit Befestigungslaschen
 #macro TRAFO_ERA_EI_66_2(value)
-TRAFO_ERA_EI_GRND(value, 61.0, 71.0, 48.5, 9, 21, 4.0, "Typ EI 66/23", 2, 87.2, 10.8, 2.0, 77.5, 4.2, 4.5, 35.0, 17.5, 12.5, 4.0)
+TRAFO_ERA_EI_BASE(value, 61.0, 71.0, 48.5, 9, 21, 4.0, "Typ EI 66/23", 2, 87.2, 10.8, 2.0, 77.5, 4.2, 4.5, 35.0, 17.5, 12.5, 4.0)
 #end
 
 
@@ -274,7 +274,7 @@ TRAFO_ERA_EI_GRND(value, 61.0, 71.0, 48.5, 9, 21, 4.0, "Typ EI 66/23", 2, 87.2, 
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.0 du 29/12/05
 ********************************************************************************************************************************************/
-#macro TRAFO_MYRRA_EI_GRND(L,W,H,L1,W1,H1,Lp,Wp,D,Sw,Fx,Pl,Lh)
+#macro TRAFO_MYRRA_EI_BASE(L,W,H,L1,W1,H1,Lp,Wp,D,Sw,Fx,Pl,Lh)
 
 #local MyrraBrown = color red 0.7 green 0.3 blue 0.164706;
 #local r = 0.4;     //pin ray
@@ -344,70 +344,70 @@ union{
 }
 #end
 #macro TRAFO_MYRRA_EI_30_1_005()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,15.8,0,0,11.5,20,20,0,1,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,15.8,0,0,11.5,20,20,0,1,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_2_005()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,15.8,0,0,11.5,20,20,0,2,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,15.8,0,0,11.5,20,20,0,2,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_1_105()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,22.2,0,0,18.4,20,20,0,1,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,22.2,0,0,18.4,20,20,0,1,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_2_105()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,22.2,0,0,18.4,20,20,0,2,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,22.2,0,0,18.4,20,20,0,2,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_1_125()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,24.5,0,0,20.5,20,20,0,1,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,24.5,0,0,20.5,20,20,0,1,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_2_125()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,24.5,0,0,20.5,20,20,0,2,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,24.5,0,0,20.5,20,20,0,2,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_1_155()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,27.3,0,0,23.5,20,20,0,1,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,27.3,0,0,23.5,20,20,0,1,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_2_155()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,27.3,0,0,23.5,20,20,0,2,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,27.3,0,0,23.5,20,20,0,2,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_1_180()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,29.8,0,0,26.0,20,20,0,1,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,29.8,0,0,26.0,20,20,0,1,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_30_2()
-TRAFO_MYRRA_EI_GRND(32.6,27.6,29.8,0,0,26.0,20,20,0,2,0,4.5,0)
+TRAFO_MYRRA_EI_BASE(32.6,27.6,29.8,0,0,26.0,20,20,0,2,0,4.5,0)
 #end
 #macro TRAFO_MYRRA_EI_38_1()
-TRAFO_MYRRA_EI_GRND(41.0,35.0,28.0,30.5,25.7,23.0,20,25,0,1,0,4,0)
+TRAFO_MYRRA_EI_BASE(41.0,35.0,28.0,30.5,25.7,23.0,20,25,0,1,0,4,0)
 #end
 #macro TRAFO_MYRRA_EI_38_2()
-TRAFO_MYRRA_EI_GRND(41.0,35.0,28.0,30.5,25.7,23.0,20,25,0,2,0,4,0)
+TRAFO_MYRRA_EI_BASE(41.0,35.0,28.0,30.5,25.7,23.0,20,25,0,2,0,4,0)
 #end
 #macro TRAFO_MYRRA_EI_42_1()
-TRAFO_MYRRA_EI_GRND(44.25,37.0,32.25,32.25,27.70,26.0,25,25,0,1,0,4,0)
+TRAFO_MYRRA_EI_BASE(44.25,37.0,32.25,32.25,27.70,26.0,25,25,0,1,0,4,0)
 #end
 #macro TRAFO_MYRRA_EI_42_2()
-TRAFO_MYRRA_EI_GRND(44.25,37.0,32.25,32.25,27.70,26.0,25,25,0,2,0,4,0)
+TRAFO_MYRRA_EI_BASE(44.25,37.0,32.25,32.25,27.70,26.0,25,25,0,2,0,4,0)
 #end
 #macro TRAFO_MYRRA_EI_48_1()
-TRAFO_MYRRA_EI_GRND(50.50,42.5,34.75,33.60,25.6,0,25,27.5,2.5,1,0,3.5,40)
+TRAFO_MYRRA_EI_BASE(50.50,42.5,34.75,33.60,25.6,0,25,27.5,2.5,1,0,3.5,40)
 #end
 #macro TRAFO_MYRRA_EI_48_2()
-TRAFO_MYRRA_EI_GRND(50.50,42.5,34.75,33.60,25.6,0,25,27.5,2.5,2,0,3.5,40)
+TRAFO_MYRRA_EI_BASE(50.50,42.5,34.75,33.60,25.6,0,25,27.5,2.5,2,0,3.5,40)
 #end
 #macro TRAFO_MYRRA_EI_54_1()
-TRAFO_MYRRA_EI_GRND(56.50,47.25,38.75,37.50,29.25,33,30,30,2.5,1,0,4,45)
+TRAFO_MYRRA_EI_BASE(56.50,47.25,38.75,37.50,29.25,33,30,30,2.5,1,0,4,45)
 #end
 #macro TRAFO_MYRRA_EI_54_2()
-TRAFO_MYRRA_EI_GRND(56.50,47.25,38.75,37.50,29.25,33,30,30,2.5,2,0,4,45)
+TRAFO_MYRRA_EI_BASE(56.50,47.25,38.75,37.50,29.25,33,30,30,2.5,2,0,4,45)
 #end
 #macro TRAFO_MYRRA_EI_60_1()
-TRAFO_MYRRA_EI_GRND(63.5,53.5,45.5,0,0,36.5,30,32.5,2.5,1,0,4,50)
+TRAFO_MYRRA_EI_BASE(63.5,53.5,45.5,0,0,36.5,30,32.5,2.5,1,0,4,50)
 #end
 #macro TRAFO_MYRRA_EI_60_2()
-TRAFO_MYRRA_EI_GRND(63.5,53.5,45.5,0,0,36.5,30,32.5,2.5,2,0,4,50)
+TRAFO_MYRRA_EI_BASE(63.5,53.5,45.5,0,0,36.5,30,32.5,2.5,2,0,4,50)
 #end
 #macro TRAFO_MYRRA_EI_66_1()
-TRAFO_MYRRA_EI_GRND(70,59,48.75,0,0,0,35,35,2.5,1,0,4.5,55)
+TRAFO_MYRRA_EI_BASE(70,59,48.75,0,0,0,35,35,2.5,1,0,4.5,55)
 #end
 #macro TRAFO_MYRRA_EI_66_2()
-TRAFO_MYRRA_EI_GRND(70,59,48.75,0,0,0,35,35,2.5,2,0,4.5,55)
+TRAFO_MYRRA_EI_BASE(70,59,48.75,0,0,0,35,35,2.5,2,0,4.5,55)
 #end
 
 
@@ -416,7 +416,7 @@ TRAFO_MYRRA_EI_GRND(70,59,48.75,0,0,0,35,35,2.5,2,0,4.5,55)
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.1  10/01/06
 ********************************************************************************************************************************************/
-#macro TRAFO_MYRRA_UI48_GRND(value,pw)
+#macro TRAFO_MYRRA_UI48_BASE(value,pw)
 
 #macro LABEL_R (L,W,R)
 #local e=0.005;
@@ -522,10 +522,10 @@ union{
 }
 #end
 #macro TRAFO_MYRRA_UI48_40(value)
-TRAFO_MYRRA_UI48_GRND(value,40)
+TRAFO_MYRRA_UI48_BASE(value,40)
 #end
 #macro TRAFO_MYRRA_UI48_60(value)
-TRAFO_MYRRA_UI48_GRND(value,60)
+TRAFO_MYRRA_UI48_BASE(value,60)
 #end
 
 
@@ -534,7 +534,7 @@ TRAFO_MYRRA_UI48_GRND(value,60)
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.1  12/04/06
 ********************************************************************************************************************************************/
-#macro TRAFO_SM_LP_GRND()
+#macro TRAFO_SM_LP_BASE()
 #macro TRAFO_SMD_PIN(H,B,T,S)
 union{
     box{<0,H,T/2><B/4,H-S,-T/2>}
@@ -571,7 +571,7 @@ union{
 #end
 
 #macro TRAFO_SM_LP_500X(value)
-TRAFO_SM_LP_GRND()
+TRAFO_SM_LP_BASE()
 #end
 
 
@@ -580,7 +580,7 @@ TRAFO_SM_LP_GRND()
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.0  13/04/06
 ********************************************************************************************************************************************/
-#macro TRAFO_SM_SL2_GRND ()
+#macro TRAFO_SM_SL2_BASE ()
 union{
     difference{
         superellipsoid { <0.05, 0.05> scale <4.6, 2.5,3> translate <0, 2.5, 0> }
@@ -613,7 +613,7 @@ union{
 #end
 
 #macro TRAFO_SM_SL2(value)
-TRAFO_SM_SL2_GRND ()
+TRAFO_SM_SL2_BASE ()
 #end
 
 

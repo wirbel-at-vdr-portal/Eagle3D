@@ -98,7 +98,7 @@ union{
 
 // Choose RASTER: (2.54, 5.08, 7.62, 10.16, 12.7, 15.24) millimetres
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_GRND(Length, Width, Wirelength, Wirewidth,  value, raster, H_V, Cathode_Down)
+#macro DIODE_DIS_BASE(Length, Width, Wirelength, Wirewidth,  value, raster, H_V, Cathode_Down)
 
 // ********************
 // PWB Assembly Pratice:  For Components drawing LESS than 1 watt, should be in contact with PCB.
@@ -195,190 +195,190 @@ union{
 
 //Horizontal from Eagle-Lib
 #macro DIODE_DIS_DO7_102MM_H(value)
-DIODE_DIS_GRND(7.62, 2.71, 38.10, 0.55, value,  10.16, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(7.62, 2.71, 38.10, 0.55, value,  10.16, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO15_127MM_H(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.88, value,  12.70, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.88, value,  12.70, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO27_152MM_H(value)
-DIODE_DIS_GRND(9.28, 5.20, 25.40, 1.30, value,  15.24, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(9.28, 5.20, 25.40, 1.30, value,  15.24, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO34_050MM_H(value)
-DIODE_DIS_GRND(2.20, 1.85, 25.40, 0.56, value,  05.08, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(2.20, 1.85, 25.40, 0.56, value,  05.08, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO34_076MM_H(value)
-DIODE_DIS_GRND(2.20, 1.85, 25.40, 0.56, value,  07.62, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(2.20, 1.85, 25.40, 0.56, value,  07.62, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO35_076MM_H(value)
-DIODE_DIS_GRND(3.85, 1.75, 13.00, 0.45, value,  07.62, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(3.85, 1.75, 13.00, 0.45, value,  07.62, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO35_102MM_H(value)
-DIODE_DIS_GRND(3.85, 1.75, 13.00, 0.45, value,  10.16, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(3.85, 1.75, 13.00, 0.45, value,  10.16, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO41_076MM_H(value)
-DIODE_DIS_GRND(5.20, 2.71, 25.40, 0.86, value,  07.62, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(5.20, 2.71, 25.40, 0.86, value,  07.62, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO41_102MM_H(value)
-DIODE_DIS_GRND(5.20, 2.71, 25.40, 0.86, value,  10.16, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(5.20, 2.71, 25.40, 0.86, value,  10.16, "H",  0) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO201_152MM_H(value)
-DIODE_DIS_GRND(9.50, 5.30, 25.40, 1.32, value,  15.24, "H",  0) pigment{Gray20}
+DIODE_DIS_BASE(9.50, 5.30, 25.40, 1.32, value,  15.24, "H",  0) pigment{Gray20}
 #end
 //Vertical from Eagle-Lib
 #macro DIODE_DIS_DO35_050MM_V(value)
-DIODE_DIS_GRND(3.85, 1.75, 13.00, 0.45, value,  05.08, "V",  1) pigment{Gray20}
+DIODE_DIS_BASE(3.85, 1.75, 13.00, 0.45, value,  05.08, "V",  1) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO16_025MM_V(value)
-DIODE_DIS_GRND(2.54, 1.27, 19.05, 0.33, value,  02.54, "V",  1) pigment{Gray20}
+DIODE_DIS_BASE(2.54, 1.27, 19.05, 0.33, value,  02.54, "V",  1) pigment{Gray20}
 #end
 #macro DIODE_DIS_DO41_050MM_V(value)
-DIODE_DIS_GRND(5.20, 2.71, 25.40, 0.86, value,  05.08, "V",  1) pigment{Gray20}
+DIODE_DIS_BASE(5.20, 2.71, 25.40, 0.86, value,  05.08, "V",  1) pigment{Gray20}
 #end
 // VERTICAL Macros:
 #macro DIODE_DIS_DO7_025MM_V(value)
-DIODE_DIS_GRND(7.62, 2.71, 38.10, 0.55, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 2.71, 38.10, 0.55, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO14_025MM_V(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.55, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.55, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO15_025MM_V(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.88, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.88, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO16_025MM_V(value)
-DIODE_DIS_GRND(2.54, 1.27, 19.05, 0.33, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(2.54, 1.27, 19.05, 0.33, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO34_025MM_V(value)
-DIODE_DIS_GRND(2.2,  1.85, 25.4,  0.56, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(2.2,  1.85, 25.4,  0.56, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO35_025MM_V(value)
-DIODE_DIS_GRND(3.85, 1.75, 13.0,  0.45, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(3.85, 1.75, 13.0,  0.45, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO39_025MM_V(value)
-DIODE_DIS_GRND(4.06, 3.81, 38.10, 0.914, value, 2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(4.06, 3.81, 38.10, 0.914, value, 2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO41_025MM_V(value)
-DIODE_DIS_GRND(5.2,  2.71, 25.4,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(5.2,  2.71, 25.4,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO41G_025MM_V(value)
-DIODE_DIS_GRND(4.1,  2.6,  28.0,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(4.1,  2.6,  28.0,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AC_025MM_V(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.88, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.88, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AL_025MM_V(value)
-DIODE_DIS_GRND(4.1,  2.6,  28.0,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(4.1,  2.6,  28.0,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_F126_025MM_V(value)
-DIODE_DIS_GRND(4.1,  2.6,  28.0,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(4.1,  2.6,  28.0,  0.86, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_R1_025MM_V(value)
-DIODE_DIS_GRND(3.2,  2.6,  20.0,  0.65, value,  2.54,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(3.2,  2.6,  20.0,  0.65, value,  2.54,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO27_050MM_V(value)
-DIODE_DIS_GRND(9.28, 5.2,  25.4,  1.3,  value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.28, 5.2,  25.4,  1.3,  value,  5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO32_050MM_V(value)
-DIODE_DIS_GRND(9.52, 6.35, 38.10, 0.812, value, 5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.52, 6.35, 38.10, 0.812, value, 5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO201AD_050MM_V(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.32, value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.32, value,  5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AP_050MM_V(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_1_5KA_050MM_V(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_1_5KE_050MM_V(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_GP20_050MM_V(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  5.08,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_P600_076MM_V(value)
-DIODE_DIS_GRND(9.1,  9.1,  25.4,  1.32, value,  7.62,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(9.1,  9.1,  25.4,  1.32, value,  7.62,  "V",  1) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AC_050MM_V(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.88, value,  5.08,  "V",  1) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.88, value,  5.08,  "V",  1) pigment{Gray45}
 #end
 // HORIZONTAL MACROS:
 #macro DIODE_DIS_DO7_102MM_H(value)
-DIODE_DIS_GRND(7.62, 2.71, 38.10, 0.55, value,  10.16, "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 2.71, 38.10, 0.55, value,  10.16, "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO14_102MM_H(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.55, value,  10.16, "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.55, value,  10.16, "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO15_102MM_H(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.88, value,  10.16, "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.88, value,  10.16, "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO16_050MM_H(value)
-DIODE_DIS_GRND(2.54, 1.27, 19.05, 0.33, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(2.54, 1.27, 19.05, 0.33, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO34_050MM_H(value)
-DIODE_DIS_GRND(2.2,  1.85, 25.4,  0.56, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(2.2,  1.85, 25.4,  0.56, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO35_050MM_H(value)
-DIODE_DIS_GRND(3.85, 1.75, 13.0,  0.45, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(3.85, 1.75, 13.0,  0.45, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO39_050MM_H(value)
-DIODE_DIS_GRND(4.06, 3.81, 38.10, 0.914, value, 5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(4.06, 3.81, 38.10, 0.914, value, 5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO41_076MM_H(value)
-DIODE_DIS_GRND(5.2,  2.71, 25.4,  0.86, value,  7.62,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(5.2,  2.71, 25.4,  0.86, value,  7.62,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO41G_050MM_H(value)
-DIODE_DIS_GRND(4.1,  2.6,  28.0,  0.86, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(4.1,  2.6,  28.0,  0.86, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AC_101MM_H(value)
-DIODE_DIS_GRND(7.62, 3.55, 38.10, 0.88, value,  10.16, "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(7.62, 3.55, 38.10, 0.88, value,  10.16, "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AL_050MM_H(value)
-DIODE_DIS_GRND(4.1,  2.6,  28.0,  0.86, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(4.1,  2.6,  28.0,  0.86, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_F126_050MM_H(value)
-DIODE_DIS_GRND(4.1,  2.6,  28.0,  0.86, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(4.1,  2.6,  28.0,  0.86, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_R1_050MM_H(value)
-DIODE_DIS_GRND(3.2,  2.6,  20.0,  0.65, value,  5.08,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(3.2,  2.6,  20.0,  0.65, value,  5.08,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO27_127MM_H(value)
-DIODE_DIS_GRND(9.28, 5.2,  25.4,  1.3,  value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.28, 5.2,  25.4,  1.3,  value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO32_127MM_H(value)
-DIODE_DIS_GRND(9.52, 6.35, 38.10, 0.812, value, 12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.52, 6.35, 38.10, 0.812, value, 12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO201AD_127MM_H(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.32, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.32, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_DO204AP_127MM_H(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_1_5KA_127MM_H(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_1_5KE_127MM_H(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_GP20_127MM_H(value)
-DIODE_DIS_GRND(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.3,  25.4,  1.07, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_P600_127MM_H(value)
-DIODE_DIS_GRND(9.1,  9.1,  25.4,  1.32, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.1,  9.1,  25.4,  1.32, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_CB417_127MM_H(value)
-DIODE_DIS_GRND(8.8,  3.6,  25.4,  1.00, value,  12.7,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(8.8,  3.6,  25.4,  1.00, value,  12.7,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_CB417_152MM_H(value)
-DIODE_DIS_GRND(8.8,  3.6,  25.4,  1.00, value,  15.24,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(8.8,  3.6,  25.4,  1.00, value,  15.24,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_CB429_178MM_H(value)
-DIODE_DIS_GRND(9.5,  5.0,  25.4,  1.00, value,  17.8,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.0,  25.4,  1.00, value,  17.8,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_CB429_152MM_H(value)
-DIODE_DIS_GRND(9.5,  5.0,  25.4,  1.00, value,  15.24,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.5,  5.0,  25.4,  1.00, value,  15.24,  "H",  0) pigment{Gray45}
 #end
 #macro DIODE_DIS_P600_152MM_H(value)
-DIODE_DIS_GRND(9.1,  9.1,  25.4,  1.32, value,  15.24,  "H",  0) pigment{Gray45}
+DIODE_DIS_BASE(9.1,  9.1,  25.4,  1.32, value,  15.24,  "H",  0) pigment{Gray45}
 #end
 
 
@@ -387,7 +387,7 @@ DIODE_DIS_GRND(9.1,  9.1,  25.4,  1.32, value,  15.24,  "H",  0) pigment{Gray45}
 //Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
 //Rev. 1.0  13/04/06   
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LASER_PDLD_PIGTAIL_GRND()
+#macro DIODE_DIS_LASER_PDLD_PIGTAIL_BASE()
 #macro DIODE_DIS_LASER_PDLD_PIGTAIL_PIN(L1,L2,Dx,Dy,Case)
 union{
     #declare bends=array[3] {<0, L1, 0>,  <-90, 0.5, 0>,  <0,L2,0>}
@@ -469,14 +469,14 @@ union{
 #end
 
 #macro DIODE_DIS_LASER_PDLD_PIGTAIL()
-DIODE_DIS_LASER_PDLD_PIGTAIL_GRND()
+DIODE_DIS_LASER_PDLD_PIGTAIL_BASE()
 #end
 
 
 /********************************************************************************************************************************************
 //LED 3mm
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_3MM_GRND(col,tra,height)
+#macro DIODE_DIS_LED_3MM_BASE(col,tra,height)
 union{
    merge{
       cylinder{<0,0.75,0><0,3,0>1.5}
@@ -527,14 +527,14 @@ union{
 }
 #end
 #macro DIODE_DIS_LED_3MM(col,tra,height)
-DIODE_DIS_LED_3MM_GRND(col,tra,height)
+DIODE_DIS_LED_3MM_BASE(col,tra,height)
 #end
 
 
 /********************************************************************************************************************************************
 //LED 5mm
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_5MM_GRND(col,tra,height)
+#macro DIODE_DIS_LED_5MM_BASE(col,tra,height)
 union{
    merge{
       cylinder{<0,0.75,0><0,6,0>2.5}
@@ -582,7 +582,7 @@ union{
 }
 #end
 #macro DIODE_DIS_LED_5MM(col,tra,height)
-DIODE_DIS_LED_5MM_GRND(col,tra,height)
+DIODE_DIS_LED_5MM_BASE(col,tra,height)
 #end
 
 
@@ -590,7 +590,7 @@ DIODE_DIS_LED_5MM_GRND(col,tra,height)
 //7 segment Grundmakro
 //BuFran <BuFran@hi-web.cz>
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_7SEG_GRND(value)
+#macro DIODE_DIS_LED_7SEG_BASE(value)
 union{
         #if(pin_short=off)
                 #local pp=7.0;
@@ -650,7 +650,7 @@ union{
 }
 #end
 #macro DIODE_DIS_LED_7SEG_2(value)
-DIODE_DIS_LED_7SEG_GRND(value)
+DIODE_DIS_LED_7SEG_BASE(value)
 #end
 
 
@@ -658,7 +658,7 @@ DIODE_DIS_LED_7SEG_GRND(value)
 //7 segment Grundmakro
 //ChristophGraf(replace with at)web.de
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_7SEG_HDSP_Q_GRND(value)
+#macro DIODE_DIS_LED_7SEG_HDSP_Q_BASE(value)
 
 #macro DIODE_DIS_LED_7SEG_20CM_EAGLE_SYMBOL()
 union{
@@ -749,7 +749,7 @@ union{
 
 
 #macro DIODE_DIS_LED_7SEG_20CM_EAGLE(value)
-DIODE_DIS_LED_7SEG_HDSP_Q_GRND(value)
+DIODE_DIS_LED_7SEG_HDSP_Q_BASE(value)
 #end
 
 
@@ -761,7 +761,7 @@ DIODE_DIS_LED_7SEG_HDSP_Q_GRND(value)
 //
 // Mittelpunkt in geometrischer Mitte
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_7SEG_TOT_GRND(value)
+#macro DIODE_DIS_LED_7SEG_TOT_BASE(value)
 #local tot_pastic= texture { pigment{Gray40} finish {specular 1 roughness 0.001 reflection 0.2 ambient (0.1 * global_ambient_mul)} } ;   //etwas glatter/glaenzender
 
 union{
@@ -822,7 +822,7 @@ union{
 
 
 #macro DIODE_DIS_LED_7SEG_TOT4301(value)
-DIODE_DIS_LED_7SEG_TOT_GRND(value)
+DIODE_DIS_LED_7SEG_TOT_BASE(value)
 #end
 
 
@@ -843,7 +843,7 @@ DIODE_DIS_LED_7SEG_TOT_GRND(value)
 //
 // Mittelpunkt in geometrischer Mitte
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_7SEG_VQE_GRND(value, col, tra, height)
+#macro DIODE_DIS_LED_7SEG_VQE_BASE(value, col, tra, height)
 #local vqe_col=col*0.3;        //Farbe abdunkeln
 #local tra=0.9;                //Transparenz fest einstellen
 #local vqe_pastic= texture { pigment{vqe_col filter tra} finish {roughness 0.5 diffuse 0.7 crand 0.1  ambient (0.1 * global_ambient_mul)} } ;   // rauh
@@ -923,7 +923,7 @@ union{
 #end
 
 #macro DIODE_DIS_LED_7SEG_VQE(value, col, tra, height)
-DIODE_DIS_LED_7SEG_VQE_GRND(value, col, tra, height)
+DIODE_DIS_LED_7SEG_VQE_BASE(value, col, tra, height)
 #end
 
 
@@ -937,7 +937,7 @@ DIODE_DIS_LED_7SEG_VQE_GRND(value, col, tra, height)
 // height         : The LED is lifted up 
 // w / h          : Width / height of LED
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_RECT_GRND(col,tra,height,w,h)
+#macro DIODE_DIS_LED_RECT_BASE(col,tra,height,w,h)
 union{
       box{<0,0,0><h,7,w> pigment { col filter tra}
          translate <-h/2,height-7,-w/2>
@@ -979,7 +979,7 @@ union{
 }
 #end
 #macro DIODE_DIS_LED_RECT_2_5MM(col,tra,height)
-DIODE_DIS_LED_RECT_GRND(col,tra,height,2.5,2.5)
+DIODE_DIS_LED_RECT_BASE(col,tra,height,2.5,2.5)
 #end
 
 
@@ -989,7 +989,7 @@ DIODE_DIS_LED_RECT_GRND(col,tra,height,2.5,2.5)
 //Privat: <fbleikamp@web.de>
 //a = Anzahl
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_ROW_2MM_GRND(a,col,tra,height)
+#macro DIODE_DIS_ROW_2MM_BASE(a,col,tra,height)
 #macro DRLED_2MM(col,tra,height)
 union{
    merge{
@@ -1056,19 +1056,19 @@ object{
 }
 #end
 #macro DIODE_DIS_ROW_2MM_1(col,tra,height)
-DIODE_DIS_ROW_2MM_GRND(1,col,tra,height)
+DIODE_DIS_ROW_2MM_BASE(1,col,tra,height)
 #end
 #macro DIODE_DIS_ROW_2MM_2(col,tra,height)
-DIODE_DIS_ROW_2MM_GRND(2,col,tra,height)
+DIODE_DIS_ROW_2MM_BASE(2,col,tra,height)
 #end
 #macro DIODE_DIS_ROW_2MM_3(col,tra,height)
-DIODE_DIS_ROW_2MM_GRND(3,col,tra,height)
+DIODE_DIS_ROW_2MM_BASE(3,col,tra,height)
 #end
 #macro DIODE_DIS_ROW_2MM_4(col,tra,height)
-DIODE_DIS_ROW_2MM_GRND(4,col,tra,height)
+DIODE_DIS_ROW_2MM_BASE(4,col,tra,height)
 #end
 #macro DIODE_DIS_ROW_2MM_5(col,tra,height)
-DIODE_DIS_ROW_2MM_GRND(5,col,tra,height)
+DIODE_DIS_ROW_2MM_BASE(5,col,tra,height)
 #end
 
 
@@ -1078,7 +1078,7 @@ DIODE_DIS_ROW_2MM_GRND(5,col,tra,height)
 //from Tobias Mueller's TO220 transistor package : TR_TO220_L2
 //Rev. 1.0  04/06/07
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_TO220_L2_GRND(value)
+#macro DIODE_DIS_TO220_L2_BASE(value)
 union{
 union{
 union{
@@ -1128,7 +1128,7 @@ texture{col_silver}}
 #end
 
 #macro DIODE_DIS_TO220_L2(value)
-DIODE_DIS_TO220_L2_GRND(value)
+DIODE_DIS_TO220_L2_BASE(value)
 #end
 
 
@@ -1138,7 +1138,7 @@ DIODE_DIS_TO220_L2_GRND(value)
 //from Tobias Mueller's TO220 transistor package : TR_TO220_L
 //Rev. 1.0  04/06/07
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_TO220_L_GRND(value)
+#macro DIODE_DIS_TO220_L_BASE(value)
 union{union{
 union{
 difference{
@@ -1180,7 +1180,7 @@ translate<0,0.6,-2.7>
 texture{col_silver}}
 #end
 #macro DIODE_DIS_TO220_L(value)
-DIODE_DIS_TO220_L_GRND(value)
+DIODE_DIS_TO220_L_BASE(value)
 #end
 
 
@@ -1190,7 +1190,7 @@ DIODE_DIS_TO220_L_GRND(value)
 //from Tobias Mueller's TO220 transistor package : TR_TO220_L
 //Rev. 1.0  04/06/07
 ********************************************************************************************************************************************/
-#macro DIODE_DIS_TO220_S_GRND(value)
+#macro DIODE_DIS_TO220_S_BASE(value)
 union{union{union{
 #if(pin_short=off)
 #local tr_to220_s_pin = 9.5;
@@ -1228,7 +1228,7 @@ translate<0,-9.5,-4.5>}
 #end
 
 #macro DIODE_DIS_TO220_S(value)
-DIODE_DIS_TO220_S_GRND(value)
+DIODE_DIS_TO220_S_BASE(value)
 #end
 
 
@@ -1239,7 +1239,7 @@ DIODE_DIS_TO220_S_GRND(value)
 // height = Höhe
 // everyone1@freenet.de
 ********************************************************************************************************************************************/
-#macro DIODE_LED_SMD_SIDE_GRND(col,tra,height)
+#macro DIODE_LED_SMD_SIDE_BASE(col,tra,height)
 
 union{
         difference{
@@ -1269,7 +1269,7 @@ union{
 }
 #end
 #macro DIODE_LED_SMD_SIDE(col,tra,height)
-DIODE_LED_SMD_SIDE_GRND(col,tra,height)
+DIODE_LED_SMD_SIDE_BASE(col,tra,height)
 #end
 
 
@@ -1293,7 +1293,7 @@ DIODE_LED_SMD_SIDE_GRND(col,tra,height)
 //GBU4:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_GBU4(:Gleichrichter:AC/DC-Converter
 // geht nicht, da pins immer auf der Z-Mitte liegen muessen
 ********************************************************************************************************************************************/
-#macro DIODE_REC_FB100_GRND(value1, value2, outer1, outer2, rad, tri, t1x, t2x, t3x, t4x)
+#macro DIODE_REC_FB100_BASE(value1, value2, outer1, outer2, rad, tri, t1x, t2x, t3x, t4x)
 #local inner1 = outer1 + <rad, rad, rad>;
   #local inner2 = outer2 - <rad, rad, rad>;
   #local outer_size = outer2 - outer1;
@@ -1477,31 +1477,31 @@ DIODE_LED_SMD_SIDE_GRND(col,tra,height)
 #end
 
 #macro DIODE_REC_FB100(value)
-DIODE_REC_FB100_GRND(value, "B40 C 5000/3300", <-6, +3, -3>, <+30, +20, +3>,   1, 5,   00.0000, 10.0076, 17.3656, 24.9836) 
+DIODE_REC_FB100_BASE(value, "B40 C 5000/3300", <-6, +3, -3>, <+30, +20, +3>,   1, 5,   00.0000, 10.0076, 17.3656, 24.9836) 
 #end
 #macro DIODE_REC_2KBP(value)
-DIODE_REC_FB100_GRND(value, "2KBP",     <-9.5, +3, -3.5>, <+9.5, +15, +3.5>,   1, 4,   05.7150, 01.9050, -1.9050, -5.7150) 
+DIODE_REC_FB100_BASE(value, "2KBP",     <-9.5, +3, -3.5>, <+9.5, +15, +3.5>,   1, 4,   05.7150, 01.9050, -1.9050, -5.7150) 
 #end
 #macro DIODE_REC_2KBB_R(value) 
-DIODE_REC_FB100_GRND(value, "2KBB-R",   <-9.5, +3, -3.5>, <+9.5, +15, +3.5>,   1, 3,   -7.6200, -2.5600,  2.5600,  7.6200) 
+DIODE_REC_FB100_BASE(value, "2KBB-R",   <-9.5, +3, -3.5>, <+9.5, +15, +3.5>,   1, 3,   -7.6200, -2.5600,  2.5600,  7.6200) 
 #end
 #macro DIODE_REC_2KBB(value) 
-DIODE_REC_FB100_GRND(value, "2KBB",     <-9.5, +3, -3.5>, <+9.5, +15, +3.5>,   1, 3,   -2.5600, -7.6200,  2.5600,  7.6200) 
+DIODE_REC_FB100_BASE(value, "2KBB",     <-9.5, +3, -3.5>, <+9.5, +15, +3.5>,   1, 3,   -2.5600, -7.6200,  2.5600,  7.6200) 
 #end
 #macro DIODE_REC_GBU4(value) 
-DIODE_REC_FB100_GRND(value, "GBU4",     <-11.5, +3, -4.4>, <+11.5, +17, +2.6>, 1, 5,    7.6200, -2.5600,  2.5600, -7.6200) 
+DIODE_REC_FB100_BASE(value, "GBU4",     <-11.5, +3, -4.4>, <+11.5, +17, +2.6>, 1, 5,    7.6200, -2.5600,  2.5600, -7.6200) 
 #end
 #macro DIODE_REC_SKBB(value) 
-DIODE_REC_FB100_GRND(value, "SKBB",     <-9.5, +3, -2.5>, <+9.5, +15, +2.5>,   1, 3.5, -2.5600,  2.5600, -7.6200,  7.6200) 
+DIODE_REC_FB100_BASE(value, "SKBB",     <-9.5, +3, -2.5>, <+9.5, +15, +2.5>,   1, 3.5, -2.5600,  2.5600, -7.6200,  7.6200) 
 #end
 #macro DIODE_REC_FB15A(value) 
-DIODE_REC_FB100_GRND(value, "FB15A",    <-11.7, +3, -2.5>, <+9.4, +15, +2.5>,  1, 3.5, -7.6200,  2.5600, -2.5600,  7.6200) 
+DIODE_REC_FB100_BASE(value, "FB15A",    <-11.7, +3, -2.5>, <+9.4, +15, +2.5>,  1, 3.5, -7.6200,  2.5600, -2.5600,  7.6200) 
 #end
 #macro DIODE_REC_FB15(value) 
-DIODE_REC_FB100_GRND(value, "FB15",     <-10, +3, -2.5>, <+10, +15, +2.5>,     1, 3.5, -7.6200,  2.5600, -2.5600,  7.6200) 
+DIODE_REC_FB100_BASE(value, "FB15",     <-10, +3, -2.5>, <+10, +15, +2.5>,     1, 3.5, -7.6200,  2.5600, -2.5600,  7.6200) 
 #end
 #macro DIODE_REC_FB32(value) 
-DIODE_REC_FB100_GRND(value, "FB32",     <-16, +3, -3>, <+16, +20, +3>,         1, 5,   -13.600, -3.5600,  3.2000, 11.4500) 
+DIODE_REC_FB100_BASE(value, "FB32",     <-16, +3, -3>, <+16, +20, +3>,         1, 5,   -13.600, -3.5600,  3.2000, 11.4500) 
 #end
 
 
@@ -1510,7 +1510,7 @@ DIODE_REC_FB100_GRND(value, "FB32",     <-16, +3, -3>, <+16, +20, +3>,         1
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.0 30/12/05
 ********************************************************************************************************************************************/
-#macro DIODE_REC_KBU_GRND(value)
+#macro DIODE_REC_KBU_BASE(value)
 union{
     difference{
         union{
@@ -1546,7 +1546,7 @@ union{
 }
 #end
 #macro DIODE_REC_KBU_4_6_8(value)
-DIODE_REC_KBU_GRND(value)
+DIODE_REC_KBU_BASE(value)
 #end
 
 
@@ -1554,7 +1554,7 @@ DIODE_REC_KBU_GRND(value)
 //Macro für Brückengleichrichter RUND
 //franz.riedmueller@web.de
 ********************************************************************************************************************************************/
-#macro DIODE_REC_RB1A_GRND(value)
+#macro DIODE_REC_RB1A_BASE(value)
 union {
  difference { 
   union {
@@ -1609,7 +1609,7 @@ union {
 
 
 #macro DIODE_REC_RB1A(value)
-DIODE_REC_RB1A_GRND(value)
+DIODE_REC_RB1A_BASE(value)
 #end
 
 
@@ -1618,7 +1618,7 @@ DIODE_REC_RB1A_GRND(value)
 // SMD-Diodengehäuse DO214, drei Varianten: -AA (SMB), -AB (SMC), -AC (SMA).
 // Parameter: Länge, Breite, Höhe des Kunststoffkörpers, Länge incl. Pins, Breite der Anschlüsse.
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_DO214_GRND(L,B,H,LG,BP,DP)
+#macro DIODE_SMD_DO214_BASE(L,B,H,LG,BP,DP)
 #macro SD_DO214_PIN(H,LP,BP,DP,R)
 union{
    difference{
@@ -1664,29 +1664,29 @@ pigment{Gray20}}
 #end
 
 #macro DIODE_SMD_DO214AC()
-DIODE_SMD_DO214_GRND(4.25,2.65,2.15,5.1,1.45,0.22)
+DIODE_SMD_DO214_BASE(4.25,2.65,2.15,5.1,1.45,0.22)
 #end
 #macro DIODE_SMD_DO214AA()
-DIODE_SMD_DO214_GRND(4.27,3.62,2.29,5.4,2.08,0.22)
+DIODE_SMD_DO214_BASE(4.27,3.62,2.29,5.4,2.08,0.22)
 #end
 #macro DIODE_SMD_DO214AB()
-DIODE_SMD_DO214_GRND(6.85,5.91,2.34,7.94,3.05,0.22)
+DIODE_SMD_DO214_BASE(6.85,5.91,2.34,7.94,3.05,0.22)
 #end
 #macro DIODE_SMD_SMA()
-DIODE_SMD_DO214_GRND(4.25,2.65,2.15,5.1,1.45,0.22)
+DIODE_SMD_DO214_BASE(4.25,2.65,2.15,5.1,1.45,0.22)
 #end
 #macro DIODE_SMD_SMB()
-DIODE_SMD_DO214_GRND(4.27,3.62,2.29,5.4,2.08,0.22)
+DIODE_SMD_DO214_BASE(4.27,3.62,2.29,5.4,2.08,0.22)
 #end
 #macro DIODE_SMD_SMC()
-DIODE_SMD_DO214_GRND(6.85,5.91,2.34,7.94,3.05,0.22)
+DIODE_SMD_DO214_BASE(6.85,5.91,2.34,7.94,3.05,0.22)
 #end
 
 
 /********************************************************************************************************************************************
 //LED 0805
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_LED_CHIP_GRND(s,col,tra)
+#macro DIODE_SMD_LED_CHIP_BASE(s,col,tra)
 union{
 //The light emitting part of the led
 box{
@@ -1716,20 +1716,20 @@ scale s
 }
 #end
 #macro DIODE_SMD_LED_CHIP_1206(col,tra,height)
-DIODE_SMD_LED_CHIP_GRND(<1.5,1.5,1.2>,col,tra)
+DIODE_SMD_LED_CHIP_BASE(<1.5,1.5,1.2>,col,tra)
 #end
 #macro DIODE_SMD_LED_CHIP_0805(col,tra,height)
-DIODE_SMD_LED_CHIP_GRND(<1.0,1.0,1.0>,col,tra)
+DIODE_SMD_LED_CHIP_BASE(<1.0,1.0,1.0>,col,tra)
 #end
 #macro DIODE_SMD_LED_CHIP_0603(col,tra,height)
-DIODE_SMD_LED_CHIP_GRND(<0.75,0.6,0.6>,col,tra)
+DIODE_SMD_LED_CHIP_BASE(<0.75,0.6,0.6>,col,tra)
 #end
 
 
 /********************************************************************************************************************************************
 //LED PLCC2
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_LED_PLCC2_GRND(typeOfCase)
+#macro DIODE_SMD_LED_PLCC2_BASE(typeOfCase)
 union{
 
    //default to PLCC2
@@ -1835,17 +1835,17 @@ union{
 }
 #end   
 #macro DIODE_SMD_LED_PLCC2()
-DIODE_SMD_LED_PLCC2_GRND("PLCC2")
+DIODE_SMD_LED_PLCC2_BASE("PLCC2")
 #end
 #macro DIODE_SMD_LED_MINITOPLED()
-DIODE_SMD_LED_PLCC2_GRND("MiniTopled")
+DIODE_SMD_LED_PLCC2_BASE("MiniTopled")
 #end
 
 
 /********************************************************************************************************************************************
 //MELF
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_MELF_GRND(value)
+#macro DIODE_SMD_MELF_BASE(value)
 union{                                                                                                               
 cylinder{<1.7,0,0><-1.6,0,0>1.25}                                                                                    
 torus{1.05,0.2 rotate<90,90,0> translate<1.7,0,0>}                                                                   
@@ -1867,14 +1867,14 @@ translate<0,1.25,0>
 }                                                                                                                    
 #end                                                                                                                 
 #macro DIODE_SMD_MELF(value)
-DIODE_SMD_MELF_GRND(value)
+DIODE_SMD_MELF_BASE(value)
 #end
 
 
 /********************************************************************************************************************************************
 //neu von Walter Mücke                                                                                             
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_MINIMELF_GRND(value, s)
+#macro DIODE_SMD_MINIMELF_BASE(value, s)
 union{                                                                                                             
 object{Round_Cylinder_Union(<-1.1,0,0><1.2,0,0>0.8,0.2)}                                                           
 cylinder{<-1.6,0,0><1.6,0,0>0.32 texture{col_silver}}                                                              
@@ -1895,10 +1895,10 @@ scale s
 }                                                                                                                  
 #end                                                                                                               
 #macro DIODE_SMD_MINIMELF(value)
-DIODE_SMD_MINIMELF_GRND(value, <1.0,1.0,1.0>)
+DIODE_SMD_MINIMELF_BASE(value, <1.0,1.0,1.0>)
 #end
 #macro DIODE_SMD_MICROMELF(value)
-DIODE_SMD_MINIMELF_GRND(value, <0.52,0.7,0.7>)
+DIODE_SMD_MINIMELF_BASE(value, <0.52,0.7,0.7>)
 #end
 
 
@@ -1907,7 +1907,7 @@ DIODE_SMD_MINIMELF_GRND(value, <0.52,0.7,0.7>)
 // SMD-Diodengehäuse SOD123/323/523
 // Parameter: Länge, Breite, Höhe des Kunststoffkörpers, Länge incl. Pins, Breite der Anschlüsse.Pindicke
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_SOD123_GRND(L,B,H,LG,BP,DP)
+#macro DIODE_SMD_SOD123_BASE(L,B,H,LG,BP,DP)
 union{
    difference{
       box{<-L/2,0.2,-B/2><L/2,H,B/2>}
@@ -1931,20 +1931,20 @@ union{
 #end
 
 #macro DIODE_SMD_SOD123_1()
-DIODE_SMD_SOD123_GRND(2.6, 1.6, 1.1, 3.5, 0.65, 0.2)
+DIODE_SMD_SOD123_BASE(2.6, 1.6, 1.1, 3.5, 0.65, 0.2)
 #end
 #macro DIODE_SMD_SOD123_3()
-DIODE_SMD_SOD123_GRND(1.7, 1.25, 1, 2.5, 0.35, 0.2)
+DIODE_SMD_SOD123_BASE(1.7, 1.25, 1, 2.5, 0.35, 0.2)
 #end
 #macro DIODE_SMD_SOD123_5()
-DIODE_SMD_SOD123_GRND(1.6, 1.8, 0.6, 1.6, 0.3, 0.15)
+DIODE_SMD_SOD123_BASE(1.6, 1.8, 0.6, 1.6, 0.3, 0.15)
 #end
 
 
 /********************************************************************************************************************************************
 //SOD80
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_SOD80_GRND(value)
+#macro DIODE_SMD_SOD80_BASE(value)
 union{
 cylinder{<-1.45,0,0><1.45,0,0>0.7}
 cylinder{<-1.45,0,0><-1.75,0,0>0.8 texture{col_silver}}
@@ -1959,14 +1959,14 @@ text {ttf besch_font value 0.4, 0 scale<0.4,0.4,0.4> translate<-1,-0.2,-0.75> ro
 rotate<0,180,0> translate<0,0.8,0> pigment{Gray30}}
 #end
 #macro DIODE_SMD_SOD80(value)
-DIODE_SMD_SOD80_GRND(value)
+DIODE_SMD_SOD80_BASE(value)
 #end
 
 
 /********************************************************************************************************************************************
 //SOD87
 ********************************************************************************************************************************************/
-#macro DIODE_SMD_SOD87_GRND(value)
+#macro DIODE_SMD_SOD87_BASE(value)
 union{
 cylinder{<-1.45,0,0><1.45,0,0>0.9}
 cylinder{<-1.45,0,0><-1.75,0,0>1.025 texture{col_silver}}
@@ -1981,7 +1981,7 @@ text {ttf besch_font value 0.4, 0 scale<0.4,0.4,0.4> translate<-1,-0.2,-0.95> ro
 rotate<0,180,0> translate<0,1.025,0> pigment{Gray30}}
 #end
 #macro DIODE_SMD_SOD87(value)
-DIODE_SMD_SOD87_GRND(value)
+DIODE_SMD_SOD87_BASE(value)
 #end
 
 
@@ -1989,7 +1989,7 @@ DIODE_SMD_SOD87_GRND(value)
 // Joerg Bredendiek <sprut(replace with at)sprut.de>   
 //SOD64 Gehäuse liegend 
 ********************************************************************************************************************************************/
-#macro DIODE_SOD64_GRND(value, L, BD, BL)
+#macro DIODE_SOD64_BASE(value, L, BD, BL)
 union{
 
    //Beschriftung
@@ -2036,28 +2036,28 @@ union{
 #end
 
 #macro DIODE_SOD64_1(value)
-DIODE_SOD64_GRND(value, 10.16, 4.5, 5)
+DIODE_SOD64_BASE(value, 10.16, 4.5, 5)
 #end
 #macro DIODE_SOD64_2(value)
-DIODE_SOD64_GRND(value, 12.7, 4.5, 5)
+DIODE_SOD64_BASE(value, 12.7, 4.5, 5)
 #end
 #macro DIODE_SOD57_3(value)
-DIODE_SOD64_GRND(value, 10.16, 3.8, 6.1)          
+DIODE_SOD64_BASE(value, 10.16, 3.8, 6.1)          
 #end
 #macro DIODE_SOD61_A(value)
-DIODE_SOD64_GRND(value, 10.16, 2.5, 5.5)   
+DIODE_SOD64_BASE(value, 10.16, 2.5, 5.5)   
 #end
 #macro DIODE_SOD61_B(value)
-DIODE_SOD64_GRND(value, 15.24, 2.5, 8.7)
+DIODE_SOD64_BASE(value, 15.24, 2.5, 8.7)
 #end
 #macro DIODE_SOD61_C(value)
-DIODE_SOD64_GRND(value, 17.78, 2.5, 11.5)
+DIODE_SOD64_BASE(value, 17.78, 2.5, 11.5)
 #end
 #macro DIODE_SOD61_D(value)
-DIODE_SOD64_GRND(value, 15.24, 2.5, 9.9)
+DIODE_SOD64_BASE(value, 15.24, 2.5, 9.9)
 #end
 #macro DIODE_SOD61_E(value)
-DIODE_SOD64_GRND(value, 20.32, 2.5, 13.5)
+DIODE_SOD64_BASE(value, 20.32, 2.5, 13.5)
 #end
 
 
@@ -2065,7 +2065,7 @@ DIODE_SOD64_GRND(value, 20.32, 2.5, 13.5)
 // Joerg Bredendiek <sprut(replace with at)sprut.de>   
 //SOD81 Gehäuse liegend 
 ********************************************************************************************************************************************/
-#macro DIODE_SOD81_GRND(value)
+#macro DIODE_SOD81_BASE(value)
 union{
    union{
 
@@ -2118,7 +2118,7 @@ union{
 #end
 
 #macro DIODE_SOD81_1(value)
-DIODE_SOD81_GRND(value)
+DIODE_SOD81_BASE(value)
 #end
 
 

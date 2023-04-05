@@ -14,8 +14,8 @@
  * used by:
  *  - DIODE_SMD_DFS
  *  - IC_SMD_BASE
- *  - IC_SMD_MB2S_GRND
- *  - IC_SMD_SOT143_GRND
+ *  - IC_SMD_MB2S_BASE
+ *  - IC_SMD_SOT143_BASE
  ******************************************************************************/
 #macro IC_SMD_PIN(H,B,T,S)
   union {

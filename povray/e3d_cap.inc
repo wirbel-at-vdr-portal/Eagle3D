@@ -13,7 +13,7 @@
 //based on WIMA-Cap-macro by Andreas Rebmann <A.Rebmann-Elektrotechnik@t-online.de>
 //Grundmacro - Breite=B , Tiefe = T, Hoehe = H, Raster = Ra
 ********************************************************************************************************************************************/
-#macro CAP_DIS_BLOCK_GRND(B,T,H,Ra)
+#macro CAP_DIS_BLOCK_BASE(B,T,H,Ra)
 union {
 
     box { <-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0> } //Grundkörper
@@ -98,13 +98,13 @@ union {
 //C102-064X133:  rcl.lbr:   CAPACITOR, ,  grid 10.2 mm, outline 6.4 x 13.3 mm
 //Raster 10
 #macro CAP_DIS_BLOCK_100_040_130_095(value)
-CAP_DIS_BLOCK_GRND(13.2, 4.2, 9.5, 10.16)
+CAP_DIS_BLOCK_BASE(13.2, 4.2, 9.5, 10.16)
 #end
 #macro CAP_DIS_BLOCK_100_050_130_110(value)
-CAP_DIS_BLOCK_GRND(13.2, 5.3, 11.0, 10.16)
+CAP_DIS_BLOCK_BASE(13.2, 5.3, 11.0, 10.16)
 #end
 #macro CAP_DIS_BLOCK_100_060_130_120(value)
-CAP_DIS_BLOCK_GRND(13.2, 6.3, 12.0, 10.16)
+CAP_DIS_BLOCK_BASE(13.2, 6.3, 12.0, 10.16)
 #end
 //
 //C150-054X183:  rcl.lbr:   CAPACITOR, ,  grid 15 mm, outline 5.4 x 18.3 mm
@@ -114,19 +114,19 @@ CAP_DIS_BLOCK_GRND(13.2, 6.3, 12.0, 10.16)
 //C150-091X182:  rcl.lbr:   CAPACITOR, ,  grid 15 mm, outline 9.1 x 18.2 mm
 //Raster 15
 #macro CAP_DIS_BLOCK_150_050_180_110(value)
-CAP_DIS_BLOCK_GRND(18.2,5.3,11.0,15.24)
+CAP_DIS_BLOCK_BASE(18.2,5.3,11.0,15.24)
 #end
 #macro CAP_DIS_BLOCK_150_060_180_125(value)
-CAP_DIS_BLOCK_GRND(18.2,6.3,12.5,15.24)
+CAP_DIS_BLOCK_BASE(18.2,6.3,12.5,15.24)
 #end
 #macro CAP_DIS_BLOCK_150_070_180_140(value)
-CAP_DIS_BLOCK_GRND(18.2,7.1,14.0,15.24)
+CAP_DIS_BLOCK_BASE(18.2,7.1,14.0,15.24)
 #end
 #macro CAP_DIS_BLOCK_150_080_180_150(value)
-CAP_DIS_BLOCK_GRND(18.2,8.3,15.0,15.24)
+CAP_DIS_BLOCK_BASE(18.2,8.3,15.0,15.24)
 #end
 #macro CAP_DIS_BLOCK_150_090_180_160(value)
-CAP_DIS_BLOCK_GRND(18.1,9.0,16.0,15.24)
+CAP_DIS_BLOCK_BASE(18.1,9.0,16.0,15.24)
 #end
 //
 //C225-062X268:  rcl.lbr:   CAPACITOR, ,  grid 22.5 mm, outline 6.2 x 26.8 mm
@@ -136,19 +136,19 @@ CAP_DIS_BLOCK_GRND(18.1,9.0,16.0,15.24)
 //C225-113X268:  rcl.lbr:   CAPACITOR, ,  grid 22.5 mm, outline 11.3 x 26.8 mm
 //Raster 22.5
 #macro CAP_DIS_BLOCK_225_060_265_150(value)
-CAP_DIS_BLOCK_GRND(26.7,6.1,15.0,22.5)
+CAP_DIS_BLOCK_BASE(26.7,6.1,15.0,22.5)
 #end
 #macro CAP_DIS_BLOCK_225_070_265_165(value)
-CAP_DIS_BLOCK_GRND(26.7,7.3,16.5,22.5)
+CAP_DIS_BLOCK_BASE(26.7,7.3,16.5,22.5)
 #end
 #macro CAP_DIS_BLOCK_225_085_265_185(value)
-CAP_DIS_BLOCK_GRND(26.7,8.6,18.5,22.5)
+CAP_DIS_BLOCK_BASE(26.7,8.6,18.5,22.5)
 #end
 #macro CAP_DIS_BLOCK_225_105_265_190(value)
-CAP_DIS_BLOCK_GRND(26.7,10.7,19.0,22.5)
+CAP_DIS_BLOCK_BASE(26.7,10.7,19.0,22.5)
 #end
 #macro CAP_DIS_BLOCK_225_110_265_210(value)
-CAP_DIS_BLOCK_GRND(26.7,11.2,21.0,22.5)
+CAP_DIS_BLOCK_BASE(26.7,11.2,21.0,22.5)
 #end
 //
 //C275-093X316:  rcl.lbr:   CAPACITOR, ,  grid 27.5 mm, outline 9.3 x 31.6 mm
@@ -159,22 +159,22 @@ CAP_DIS_BLOCK_GRND(26.7,11.2,21.0,22.5)
 //C275-205X316:  rcl.lbr:   CAPACITOR, ,  grid 27.5 mm, outline 20.5 x 31.6 mm
 //Raster 27.5
 #macro CAP_DIS_BLOCK_275_090_315_210(value)
-CAP_DIS_BLOCK_GRND(31.5,9.2,21.0,27.5)
+CAP_DIS_BLOCK_BASE(31.5,9.2,21.0,27.5)
 #end
 #macro CAP_DIS_BLOCK_275_110_315_210(value)
-CAP_DIS_BLOCK_GRND(31.5,11.2,21.0,27.5)
+CAP_DIS_BLOCK_BASE(31.5,11.2,21.0,27.5)
 #end
 #macro CAP_DIS_BLOCK_275_130_315_240(value)
-CAP_DIS_BLOCK_GRND(31.5,13.3,24.0,27.5)
+CAP_DIS_BLOCK_BASE(31.5,13.3,24.0,27.5)
 #end
 #macro CAP_DIS_BLOCK_275_150_315_260(value)
-CAP_DIS_BLOCK_GRND(31.5,15.1,26.0,27.5)
+CAP_DIS_BLOCK_BASE(31.5,15.1,26.0,27.5)
 #end
 #macro CAP_DIS_BLOCK_275_170_315_345(value)
-CAP_DIS_BLOCK_GRND(31.5,17.2,34.5,27.5)
+CAP_DIS_BLOCK_BASE(31.5,17.2,34.5,27.5)
 #end
 #macro CAP_DIS_BLOCK_275_200_315_395(value)
-CAP_DIS_BLOCK_GRND(31.5,20.4,39.5,27.5)
+CAP_DIS_BLOCK_BASE(31.5,20.4,39.5,27.5)
 #end
 //
 //C325-137X374:  rcl.lbr:   CAPACITOR, ,  grid 32.5 mm, outline 13.7 x 37.4 mm
@@ -182,13 +182,13 @@ CAP_DIS_BLOCK_GRND(31.5,20.4,39.5,27.5)
 //C325-182X374:  rcl.lbr:   CAPACITOR, ,  grid 32.5 mm, outline 18.2 x 37.4 mm
 //Raster 32.5
 #macro CAP_DIS_BLOCK_325_140_415_260(value)
-CAP_DIS_BLOCK_GRND(41.5,15.0,26.0,32.5)
+CAP_DIS_BLOCK_BASE(41.5,15.0,26.0,32.5)
 #end
 #macro CAP_DIS_BLOCK_325_160_415_320(value)
-CAP_DIS_BLOCK_GRND(41.5,19.0,32.0,32.5)
+CAP_DIS_BLOCK_BASE(41.5,19.0,32.0,32.5)
 #end
 #macro CAP_DIS_BLOCK_325_180_415_395(value)
-CAP_DIS_BLOCK_GRND(41.5,20.0,39.5,32.5)
+CAP_DIS_BLOCK_BASE(41.5,20.0,39.5,32.5)
 #end
 //
 //C375-155X418:  rcl.lbr:   CAPACITOR, ,  grid 37.5 mm, outline 15.5 x 41.8 mm
@@ -196,13 +196,13 @@ CAP_DIS_BLOCK_GRND(41.5,20.0,39.5,32.5)
 //C375-203X418:  rcl.lbr:   CAPACITOR, ,  grid 37.5 mm, outline 20.3 x 41.8 mm
 //Raster 37.5
 #macro CAP_DIS_BLOCK_375_150_415_260(value)
-CAP_DIS_BLOCK_GRND(41.7,15.4,26.0,37.5)
+CAP_DIS_BLOCK_BASE(41.7,15.4,26.0,37.5)
 #end
 #macro CAP_DIS_BLOCK_375_190_415_320(value)
-CAP_DIS_BLOCK_GRND(41.7,19.1,32.0,37.5)
+CAP_DIS_BLOCK_BASE(41.7,19.1,32.0,37.5)
 #end
 #macro CAP_DIS_BLOCK_375_200_415_395(value)
-CAP_DIS_BLOCK_GRND(41.7,20.2,39.5,37.5)
+CAP_DIS_BLOCK_BASE(41.7,20.2,39.5,37.5)
 #end
 
 
@@ -217,7 +217,7 @@ CAP_DIS_BLOCK_GRND(41.7,20.2,39.5,37.5)
 //   bcolour    = body colour
 //   tcolour    = text colour
 ********************************************************************************************************************************************/
-#macro CAP_DIS_CERAMIC_DISK_GRND(diam1, value, leadspc, bcolour, tcolour)
+#macro CAP_DIS_CERAMIC_DISK_BASE(diam1, value, leadspc, bcolour, tcolour)
     #local diam = diam1/2;
     #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } } 
     #local txt = text{ ttf besch_font ,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> } 
@@ -240,51 +240,51 @@ CAP_DIS_BLOCK_GRND(41.7,20.2,39.5,37.5)
 
 //6,4mm leadpsacing 5mm diameter
 #macro CAP_DIS_CERAMIC_DISK_64MM_50MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(5.0, value, 6.35, Brown, Black)
+CAP_DIS_CERAMIC_DISK_BASE(5.0, value, 6.35, Brown, Black)
 #end
 //6, 4mm leadpsacing 6, 5mm diameter
 #macro CAP_DIS_CERAMIC_DISK_64MM_65MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(6.5, value, 6.35, Red, Black)
+CAP_DIS_CERAMIC_DISK_BASE(6.5, value, 6.35, Red, Black)
 #end
 //6, 4mm leadpsacing 7, 4mm diameter
 #macro CAP_DIS_CERAMIC_DISK_64MM_74MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(7.37, value, 6.35, Orange, Black)
+CAP_DIS_CERAMIC_DISK_BASE(7.37, value, 6.35, Orange, Black)
 #end
 //6, 4mm leadpsacing 10mm diameter
 #macro CAP_DIS_CERAMIC_DISK_64MM_100MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(10.01, value, 6.35, Yellow, Black)
+CAP_DIS_CERAMIC_DISK_BASE(10.01, value, 6.35, Yellow, Black)
 #end
 //6, 4mm leadpsacing 12mm diameter
 #macro CAP_DIS_CERAMIC_DISK_64MM_120MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(11.99, value, 6.35, Green, Black)
+CAP_DIS_CERAMIC_DISK_BASE(11.99, value, 6.35, Green, Black)
 #end
 //5mm leadpsacing 6mm diameter
 #macro CAP_DIS_CERAMIC_DISK_05MM_06MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(6, value, 5.08, Brown, Black)
+CAP_DIS_CERAMIC_DISK_BASE(6, value, 5.08, Brown, Black)
 #end
 //5mm leadpsacing 8mm diameter
 #macro CAP_DIS_CERAMIC_DISK_05MM_08MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(8, value, 5.08, Red, Black)
+CAP_DIS_CERAMIC_DISK_BASE(8, value, 5.08, Red, Black)
 #end
 //5mm leadpsacing 10mm diameter
 #macro CAP_DIS_CERAMIC_DISK_05MM_10MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(10, value, 5.08, Orange, Black)
+CAP_DIS_CERAMIC_DISK_BASE(10, value, 5.08, Orange, Black)
 #end
 //5mm leadpsacing 13mm diameter
 #macro CAP_DIS_CERAMIC_DISK_05MM_13MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(13, value, 5.08, Yellow, Black)
+CAP_DIS_CERAMIC_DISK_BASE(13, value, 5.08, Yellow, Black)
 #end
 //10mm leadpsacing 13mm diameter
 #macro CAP_DIS_CERAMIC_DISK_10MM_13MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(13.5, value, 10.16, Green, Black)
+CAP_DIS_CERAMIC_DISK_BASE(13.5, value, 10.16, Green, Black)
 #end
 //10mm leadpsacing 18mm diameter
 #macro CAP_DIS_CERAMIC_DISK_10MM_18MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(18, value, 10.16, Blue, Black)
+CAP_DIS_CERAMIC_DISK_BASE(18, value, 10.16, Blue, Black)
 #end
 //10mm leadpsacing 25mm diameter
 #macro CAP_DIS_CERAMIC_DISK_10MM_25MM(value)
-CAP_DIS_CERAMIC_DISK_GRND(25, value, 10.16, Gray, Blue)
+CAP_DIS_CERAMIC_DISK_BASE(25, value, 10.16, Gray, Blue)
 #end
 
 
@@ -299,7 +299,7 @@ CAP_DIS_CERAMIC_DISK_GRND(25, value, 10.16, Gray, Blue)
 //   bcolour    = body colour
 //   tcolour    = text colour
 ********************************************************************************************************************************************/
-#macro CAP_DIS_CERAMIC_GRND(diam1,value,leadspc,bcolour,tcolour)
+#macro CAP_DIS_CERAMIC_BASE(diam1,value,leadspc,bcolour,tcolour)
  #local diam = diam1/2;
  #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } } 
  #local txt = text{ ttf besch_font,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> } 
@@ -320,31 +320,31 @@ CAP_DIS_CERAMIC_DISK_GRND(25, value, 10.16, Gray, Blue)
  } 
  #end    
 #macro CAP_DIS_CERAMIC_25MM_38MM(value)
-CAP_DIS_CERAMIC_GRND(3.81,value,2.54,Red,Black)
+CAP_DIS_CERAMIC_BASE(3.81,value,2.54,Red,Black)
 #end
 #macro CAP_DIS_CERAMIC_25MM_44MM(value)
-CAP_DIS_CERAMIC_GRND(4.4,value,2.54,Red,Black)
+CAP_DIS_CERAMIC_BASE(4.4,value,2.54,Red,Black)
 #end
 #macro CAP_DIS_CERAMIC_25MM_50MM(value)
-CAP_DIS_CERAMIC_GRND(5.08,value,2.54,Yellow,Black)
+CAP_DIS_CERAMIC_BASE(5.08,value,2.54,Yellow,Black)
 #end
 #macro CAP_DIS_CERAMIC_50MM_38MM(value)
-CAP_DIS_CERAMIC_GRND(3.81,value,5.08,Orange,Black)
+CAP_DIS_CERAMIC_BASE(3.81,value,5.08,Orange,Black)
 #end
 #macro CAP_DIS_CERAMIC_50MM_44MM(value)
-CAP_DIS_CERAMIC_GRND(4.40,value,5.08,Red,Black)
+CAP_DIS_CERAMIC_BASE(4.40,value,5.08,Red,Black)
 #end
 #macro CAP_DIS_CERAMIC_50MM_50MM(value)
-CAP_DIS_CERAMIC_GRND(5.08,value,5.08,Blue,Black)
+CAP_DIS_CERAMIC_BASE(5.08,value,5.08,Blue,Black)
 #end
 #macro CAP_DIS_CERAMIC_50MM_76MM(value)
-CAP_DIS_CERAMIC_GRND(7.62,value,5.08,Yellow,Black)
+CAP_DIS_CERAMIC_BASE(7.62,value,5.08,Yellow,Black)
 #end
 #macro CAP_DIS_CERAMIC_50MM_100MM(value)
-CAP_DIS_CERAMIC_GRND(10.16,value,5.08,Gray,Black) 
+CAP_DIS_CERAMIC_BASE(10.16,value,5.08,Gray,Black) 
 #end
 #macro CAP_DIS_CERAMIC_75MM_100MM(value)
-CAP_DIS_CERAMIC_GRND(10.16,value,7.62,Gray,Black)
+CAP_DIS_CERAMIC_BASE(10.16,value,7.62,Gray,Black)
 #end
 
 
@@ -360,7 +360,7 @@ CAP_DIS_CERAMIC_GRND(10.16,value,7.62,Gray,Black)
 //   lw         = pins length / Longeur des pattes
 //   dw         = pins width / Largeur des pattes
 ********************************************************************************************************************************************/
-#macro CAP_DIS_CTS_GRND(diam,Lg,Lt,r,lw,dw,value)
+#macro CAP_DIS_CTS_BASE(diam,Lg,Lt,r,lw,dw,value)
 union {
 
 #local rr=diam/2*0.7;
@@ -397,26 +397,26 @@ union {
 
 //CTS13 case A 15mm
 #macro CAP_DIS_CTS_A_15MM(value)
-CAP_DIS_CTS_GRND(3.6,8.1,2.1,6*2.54,30,0.5,value)
+CAP_DIS_CTS_BASE(3.6,8.1,2.1,6*2.54,30,0.5,value)
 #end
 //CTS13 case B 20mm
 #macro CAP_DIS_CTS_B_20MM(value)
-CAP_DIS_CTS_GRND(4.9,12.8,2.2,8*2.54,30,0.5,value)
+CAP_DIS_CTS_BASE(4.9,12.8,2.2,8*2.54,30,0.5,value)
 #end
 //CTS13 case C 25mm
 #macro CAP_DIS_CTS_C_25MM(value)
-CAP_DIS_CTS_GRND(7.5,18.2,2.3,10*2.54,30,0.6,value)
+CAP_DIS_CTS_BASE(7.5,18.2,2.3,10*2.54,30,0.6,value)
 #end
 //CTS13 case D 30mm
 #macro CAP_DIS_CTS_D_30MM(value)
-CAP_DIS_CTS_GRND(9.1,20.8,3.2,12*2.54,30,0.6,value)
+CAP_DIS_CTS_BASE(9.1,20.8,3.2,12*2.54,30,0.6,value)
 #end
 
 
 /********************************************************************************************************************************************
 //Axial-Elko Grundmakro   
 ********************************************************************************************************************************************/
-#macro CAP_DIS_ELKO_AXIAL_GRND(val_size,dis,dia,dia_b,value)
+#macro CAP_DIS_ELKO_AXIAL_BASE(val_size,dis,dia,dia_b,value)
 union {
     union {
         
@@ -491,76 +491,76 @@ union {
 #end
 
 #macro CAP_DIS_ELKO_AXIAL_15MM_5MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(2,15.24,5/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(2,15.24,5/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_15MM_6MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(2,15.24,6/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(2,15.24,6/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_15MM_9MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(2,15.24,9/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(2,15.24,9/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_22MM_6MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(2,22.86,6/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(2,22.86,6/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_22MM_9MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(2,22.86,9/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(2,22.86,9/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_22MM_10MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(2,22.86,10/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(2,22.86,10/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_25MM_9MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(3,25.4,9/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(3,25.4,9/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_25MM_10MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(3,25.4,10/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(3,25.4,10/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_30MM_10MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(3,30.48,10/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(3,30.48,10/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_30MM_12MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(3,30.48,12/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(3,30.48,12/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_30MM_16MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(3,30.48,16/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(3,30.48,16/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_35MM_12MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(4,35.56,12/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(4,35.56,12/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_35MM_14MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(4,35.56,14/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(4,35.56,14/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_35MM_16MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(4,35.56,16/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(4,35.56,16/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_35MM_18MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(4,35.56,18/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(4,35.56,18/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_45MM_16MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,45.72,16/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,45.72,16/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_45MM_18MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,45.72,18/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,45.72,18/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_45MM_21MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,45.72,21/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,45.72,21/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_45MM_22MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,45.72,22/2,0.8/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,45.72,22/2,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_45MM_25MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,45.72,25/2,1/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,45.72,25/2,1/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_50MM_25MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,50,25/2,1/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,50,25/2,1/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_50MM_30MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,50,30/2,1/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,50,30/2,1/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_55MM_25MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,55.88,25/2,1/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,55.88,25/2,1/2,value)
 #end
 #macro CAP_DIS_ELKO_AXIAL_55MM_30MM(value)
-CAP_DIS_ELKO_AXIAL_GRND(5,55.88,30/2,1/2,value)
+CAP_DIS_ELKO_AXIAL_BASE(5,55.88,30/2,1/2,value)
 #end
 
 
@@ -575,7 +575,7 @@ CAP_DIS_ELKO_AXIAL_GRND(5,55.88,30/2,1/2,value)
 //dia_b         Radius des Anschlußdrahtes
 //value         Beschriftungstext            
 ********************************************************************************************************************************************/
-#macro CAP_DIS_ELKO_GRND(tex_scale,val_size,dis,dia,hig,dia_b,value)
+#macro CAP_DIS_ELKO_BASE(tex_scale,val_size,dis,dia,hig,dia_b,value)
 union {
     //Elko Körper
     difference {
@@ -651,53 +651,53 @@ union {
 #end
 
 #macro CAP_DIS_ELKO_2MM_5MM(value)
-CAP_DIS_ELKO_GRND(<6.39,20,6.39>,1,2,5/2,11,0.5/2,value)
+CAP_DIS_ELKO_BASE(<6.39,20,6.39>,1,2,5/2,11,0.5/2,value)
 #end
 #macro CAP_DIS_ELKO_2MM5_5MM(value)
-CAP_DIS_ELKO_GRND(<6.39,20,6.39>,1,2.5,5/2,11.2,0.5/2,value)
+CAP_DIS_ELKO_BASE(<6.39,20,6.39>,1,2.5,5/2,11.2,0.5/2,value)
 #end
 #macro CAP_DIS_ELKO_2MM5_6MM3(value)
-CAP_DIS_ELKO_GRND(<8.04,22,8.04>,1,2.5,6.3/2,11.2,0.5/2,value)
+CAP_DIS_ELKO_BASE(<8.04,22,8.04>,1,2.5,6.3/2,11.2,0.5/2,value)
 #end
 #macro CAP_DIS_ELKO_3MM5_8MM(value)
-CAP_DIS_ELKO_GRND(<10.225,22,10.225>,1.1,3.5,8/2,11.5,0.6/2,value)
+CAP_DIS_ELKO_BASE(<10.225,22,10.225>,1.1,3.5,8/2,11.5,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_5MM_10MM(value)
-CAP_DIS_ELKO_GRND(<12.77,25,12.77>,1.8,5,10/2,13,0.6/2,value)
+CAP_DIS_ELKO_BASE(<12.77,25,12.77>,1.8,5,10/2,13,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_5MM_10MM(value)
-CAP_DIS_ELKO_GRND(<12.77,25,12.77>,1.8,5,10/2,16,0.6/2,value)
+CAP_DIS_ELKO_BASE(<12.77,25,12.77>,1.8,5,10/2,16,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_5MM_10MM_2(value)
-CAP_DIS_ELKO_GRND(<12.77,25,12.77>,1.8,5,10/2,25.5,0.6/2,value)
+CAP_DIS_ELKO_BASE(<12.77,25,12.77>,1.8,5,10/2,25.5,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_5MM_12MM5_2(value)
-CAP_DIS_ELKO_GRND(<15.95,30,15.95>,2.8,5,12.5/2,16.5,0.6/2,value)
+CAP_DIS_ELKO_BASE(<15.95,30,15.95>,2.8,5,12.5/2,16.5,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_5MM_12MM5(value)
-CAP_DIS_ELKO_GRND(<15.95,30,15.95>,2.8,5,12.5/2,22.5,0.6/2,value)
+CAP_DIS_ELKO_BASE(<15.95,30,15.95>,2.8,5,12.5/2,22.5,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_5MM_12MM5_3(value)
-CAP_DIS_ELKO_GRND(<15.95,30,15.95>,2.8,5,12.5/2,25.5,0.6/2,value)
+CAP_DIS_ELKO_BASE(<15.95,30,15.95>,2.8,5,12.5/2,25.5,0.6/2,value)
 #end
 #macro CAP_DIS_ELKO_7MM5_16MM_2(value)
-CAP_DIS_ELKO_GRND(<20.45,38,20.45>,3,7.5,16/2,16.5,0.8/2,value)
+CAP_DIS_ELKO_BASE(<20.45,38,20.45>,3,7.5,16/2,16.5,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_7MM5_16MM_3(value)
-CAP_DIS_ELKO_GRND(<20.45,38,20.45>,3,7.5,16/2,25.5,0.8/2,value)
+CAP_DIS_ELKO_BASE(<20.45,38,20.45>,3,7.5,16/2,25.5,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_7MM5_16MM(value)
-CAP_DIS_ELKO_GRND(<20.45,38,20.45>,3,7.5,16/2,28,0.8/2,value)
+CAP_DIS_ELKO_BASE(<20.45,38,20.45>,3,7.5,16/2,28,0.8/2,value)
 #end
 #macro CAP_DIS_ELKO_7MM5_18MM(value)
-CAP_DIS_ELKO_GRND(<23,40,23>,4,7.5,18/2,35.5,0.8/2,value)
+CAP_DIS_ELKO_BASE(<23,40,23>,4,7.5,18/2,35.5,0.8/2,value)
 #end
 
 
 /********************************************************************************************************************************************
 //Tantalkondensator Grundmakro 2,5mm Pitch
 ********************************************************************************************************************************************/
-#macro CAP_DIS_TT_2MM5_GRND(obj_dia,obj_hgt,sca_txt)
+#macro CAP_DIS_TT_2MM5_BASE(obj_dia,obj_hgt,sca_txt)
 union {
     //Body
     sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1> pigment{CoolCopper}}
@@ -731,44 +731,44 @@ union {
 #end
 
 #macro CAP_DIS_TT_2MM5_4MM(value)
-CAP_DIS_TT_2MM5_GRND(4,8.5,1)
+CAP_DIS_TT_2MM5_BASE(4,8.5,1)
 #end
 #macro CAP_DIS_TT_2MM5_4MM5(value)
-CAP_DIS_TT_2MM5_GRND(4.5,8.5,1)
+CAP_DIS_TT_2MM5_BASE(4.5,8.5,1)
 #end
 #macro CAP_DIS_TT_2MM5_5MM(value)
-CAP_DIS_TT_2MM5_GRND(5,10,1.2)
+CAP_DIS_TT_2MM5_BASE(5,10,1.2)
 #end
 #macro CAP_DIS_TT_2MM5_5MM5(value)
-CAP_DIS_TT_2MM5_GRND(5.5,10.5,1.3)
+CAP_DIS_TT_2MM5_BASE(5.5,10.5,1.3)
 #end
 #macro CAP_DIS_TT_2MM5_6MM(value)
-CAP_DIS_TT_2MM5_GRND(6,11.5,1.4)
+CAP_DIS_TT_2MM5_BASE(6,11.5,1.4)
 #end
 #macro CAP_DIS_TT_2MM5_6MM5(value)
-CAP_DIS_TT_2MM5_GRND(6.5,11.5,1.5)
+CAP_DIS_TT_2MM5_BASE(6.5,11.5,1.5)
 #end
 #macro CAP_DIS_TT_2MM5_7MM(value)
-CAP_DIS_TT_2MM5_GRND(7,12,1.6)
+CAP_DIS_TT_2MM5_BASE(7,12,1.6)
 #end
 #macro CAP_DIS_TT_2MM5_8MM(value)
-CAP_DIS_TT_2MM5_GRND(8,13,1.8)
+CAP_DIS_TT_2MM5_BASE(8,13,1.8)
 #end
 #macro CAP_DIS_TT_2MM5_8MM5(value)
-CAP_DIS_TT_2MM5_GRND(8.5,14,1.8)
+CAP_DIS_TT_2MM5_BASE(8.5,14,1.8)
 #end
 #macro CAP_DIS_TT_2MM5_9MM(value)
-CAP_DIS_TT_2MM5_GRND(9,15,2)
+CAP_DIS_TT_2MM5_BASE(9,15,2)
 #end
 #macro CAP_DIS_TT_2MM5_10MM(value)
-CAP_DIS_TT_2MM5_GRND(10,18,2)
+CAP_DIS_TT_2MM5_BASE(10,18,2)
 #end
 
 
 /********************************************************************************************************************************************
 //Tantalkondensator Grundmakro 5mm Pitch
 ********************************************************************************************************************************************/
-#macro CAP_DIS_TT_5MM_GRND(obj_dia,obj_hgt,sca_txt)
+#macro CAP_DIS_TT_5MM_BASE(obj_dia,obj_hgt,sca_txt)
 union {
     //Body
     sphere { <0,0,0>obj_dia/2 scale<1,obj_hgt/obj_dia,1> pigment{CoolCopper}}
@@ -810,37 +810,37 @@ union {
 
 
 #macro CAP_DIS_TT_5MM_4MM5(value)
-CAP_DIS_TT_5MM_GRND(4.5,8.5,1)
+CAP_DIS_TT_5MM_BASE(4.5,8.5,1)
 #end
 #macro CAP_DIS_TT_5MM_5MM(value)
-CAP_DIS_TT_5MM_GRND(5,10,1.2)
+CAP_DIS_TT_5MM_BASE(5,10,1.2)
 #end
 #macro CAP_DIS_TT_5MM_5MM5(value)
-CAP_DIS_TT_5MM_GRND(5.5,10.5,1.3)
+CAP_DIS_TT_5MM_BASE(5.5,10.5,1.3)
 #end
 #macro CAP_DIS_TT_5MM_6MM(value)
-CAP_DIS_TT_5MM_GRND(6,11.5,1.4)
+CAP_DIS_TT_5MM_BASE(6,11.5,1.4)
 #end
 #macro CAP_DIS_TT_5MM_6MM5(value)
-CAP_DIS_TT_5MM_GRND(6.5,11.5,1.5)
+CAP_DIS_TT_5MM_BASE(6.5,11.5,1.5)
 #end
 #macro CAP_DIS_TT_5MM_7MM(value)
-CAP_DIS_TT_5MM_GRND(7,12,1.6)
+CAP_DIS_TT_5MM_BASE(7,12,1.6)
 #end
 #macro CAP_DIS_TT_5MM_8MM(value)
-CAP_DIS_TT_5MM_GRND(8,13,1.8)
+CAP_DIS_TT_5MM_BASE(8,13,1.8)
 #end
 #macro CAP_DIS_TT_5MM_8MM5(value)
-CAP_DIS_TT_5MM_GRND(8.5,14,1.8)
+CAP_DIS_TT_5MM_BASE(8.5,14,1.8)
 #end
 #macro CAP_DIS_TT_5MM_9MM(value)
-CAP_DIS_TT_5MM_GRND(9,15,2)
+CAP_DIS_TT_5MM_BASE(9,15,2)
 #end
 #macro CAP_DIS_TT_5MM_10MM(value)
-CAP_DIS_TT_5MM_GRND(10,18,2)
+CAP_DIS_TT_5MM_BASE(10,18,2)
 #end
 #macro CAP_DIS_TT_5MM_11MM(value)
-CAP_DIS_TT_5MM_GRND(11,18,2)
+CAP_DIS_TT_5MM_BASE(11,18,2)
 #end
 
 
@@ -849,7 +849,7 @@ CAP_DIS_TT_5MM_GRND(11,18,2)
 //by Andreas Rebmann <A.Rebmann-Elektrotechnik@t-online.de>
 //Grundmacro - Breite=B , Tiefe = T, Hoehe = H, Raster = Ra
 ********************************************************************************************************************************************/
-#macro CAP_DIS_WIMA_GRND(B,T,H,Ra)
+#macro CAP_DIS_WIMA_BASE(B,T,H,Ra)
 union {
 
     box { <-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0> } //Grundkörper
@@ -949,135 +949,135 @@ union {
 
 // Raster 2.54
 #macro CAP_DIS_WIMA_25_025_046_075(value)
-CAP_DIS_WIMA_GRND(4.6,2.5,7.5,2.54,)
+CAP_DIS_WIMA_BASE(4.6,2.5,7.5,2.54,)
 #end
 #macro CAP_DIS_WIMA_25_030_046_075(value)
-CAP_DIS_WIMA_GRND(4.6,3.0,7.5,2.54,)
+CAP_DIS_WIMA_BASE(4.6,3.0,7.5,2.54,)
 #end
 #macro CAP_DIS_WIMA_25_040_046_090(value)
-CAP_DIS_WIMA_GRND(4.6,4.6,9.0,2.54,)
+CAP_DIS_WIMA_BASE(4.6,4.6,9.0,2.54,)
 #end
 #macro CAP_DIS_WIMA_25_050_046_100(value)
-CAP_DIS_WIMA_GRND(4.6,5.5,10.0,2.54,)
+CAP_DIS_WIMA_BASE(4.6,5.5,10.0,2.54,)
 #end
 #macro CAP_DIS_WIMA_25_060_046_100(value)
-CAP_DIS_WIMA_GRND(4.6,6.5,10.0,2.54,)
+CAP_DIS_WIMA_BASE(4.6,6.5,10.0,2.54,)
 #end
 //Raster 5.08
 #macro CAP_DIS_WIMA_5_025_072_065(value)
-CAP_DIS_WIMA_GRND(7.2,2.5,6.5,5.08,)
+CAP_DIS_WIMA_BASE(7.2,2.5,6.5,5.08,)
 #end
 #macro CAP_DIS_WIMA_5_030_072_075(value)
-CAP_DIS_WIMA_GRND(7.2,3.0,7.5,5.08,)
+CAP_DIS_WIMA_BASE(7.2,3.0,7.5,5.08,)
 #end
 #macro CAP_DIS_WIMA_5_035_072_085(value)
-CAP_DIS_WIMA_GRND(7.2,3.5,8.5,5.08,)
+CAP_DIS_WIMA_BASE(7.2,3.5,8.5,5.08,)
 #end
 #macro CAP_DIS_WIMA_5_045_072_095(value)
-CAP_DIS_WIMA_GRND(7.2,4.5,9.5,5.08)
+CAP_DIS_WIMA_BASE(7.2,4.5,9.5,5.08)
 #end
 #macro CAP_DIS_WIMA_5_050_072_100(value)
-CAP_DIS_WIMA_GRND(7.2,5.0,10.0,5.08)
+CAP_DIS_WIMA_BASE(7.2,5.0,10.0,5.08)
 #end
 #macro CAP_DIS_WIMA_5_055_072_115(value)
-CAP_DIS_WIMA_GRND(7.2,5.5,11.5,5.08)
+CAP_DIS_WIMA_BASE(7.2,5.5,11.5,5.08)
 #end
 #macro CAP_DIS_WIMA_5_072_072_130(value)
-CAP_DIS_WIMA_GRND(7.2,7.2,13.0,5.08)
+CAP_DIS_WIMA_BASE(7.2,7.2,13.0,5.08)
 #end
 #macro CAP_DIS_WIMA_5_085_072_140(value)
-CAP_DIS_WIMA_GRND(7.2,8.5,14.0,5.08)
+CAP_DIS_WIMA_BASE(7.2,8.5,14.0,5.08)
 #end
 //Raster 7.5
 #macro CAP_DIS_WIMA_75_030_100_085(value)
-CAP_DIS_WIMA_GRND(10.0,3.0,8.5,7.5)
+CAP_DIS_WIMA_BASE(10.0,3.0,8.5,7.5)
 #end
 #macro CAP_DIS_WIMA_75_040_100_090(value)
-CAP_DIS_WIMA_GRND(10.0,4.0,9.0,7.5)
+CAP_DIS_WIMA_BASE(10.0,4.0,9.0,7.5)
 #end
 #macro CAP_DIS_WIMA_75_050_103_105(value)
-CAP_DIS_WIMA_GRND(10.3,5.0,10.5,7.5)
+CAP_DIS_WIMA_BASE(10.3,5.0,10.5,7.5)
 #end
 #macro CAP_DIS_WIMA_75_057_100_125(value)
-CAP_DIS_WIMA_GRND(10.3,5.7,12.5,7.5)
+CAP_DIS_WIMA_BASE(10.3,5.7,12.5,7.5)
 #end
 //Raster 10
 #macro CAP_DIS_WIMA_100_040_130_095(value)
-CAP_DIS_WIMA_GRND(13.0,4.0,9.5,10.0)
+CAP_DIS_WIMA_BASE(13.0,4.0,9.5,10.0)
 #end
 #macro CAP_DIS_WIMA_100_050_130_110(value)
-CAP_DIS_WIMA_GRND(13.0,5.0,11.0,10.0)
+CAP_DIS_WIMA_BASE(13.0,5.0,11.0,10.0)
 #end
 #macro CAP_DIS_WIMA_100_060_130_120(value)
-CAP_DIS_WIMA_GRND(13.0,6.0,12.0,10.0)
+CAP_DIS_WIMA_BASE(13.0,6.0,12.0,10.0)
 #end
 //Raster 15
 #macro CAP_DIS_WIMA_150_050_180_110(value)
-CAP_DIS_WIMA_GRND(18.0,5.0,11.0,15.0)
+CAP_DIS_WIMA_BASE(18.0,5.0,11.0,15.0)
 #end
 #macro CAP_DIS_WIMA_150_060_180_125(value)
-CAP_DIS_WIMA_GRND(18.0,6.0,12.5,15.0)
+CAP_DIS_WIMA_BASE(18.0,6.0,12.5,15.0)
 #end
 #macro CAP_DIS_WIMA_150_070_180_140(value)
-CAP_DIS_WIMA_GRND(18.0,7.0,14.0,15.0)
+CAP_DIS_WIMA_BASE(18.0,7.0,14.0,15.0)
 #end
 #macro CAP_DIS_WIMA_150_080_180_150(value)
-CAP_DIS_WIMA_GRND(18.0,8.0,15.0,15.0)
+CAP_DIS_WIMA_BASE(18.0,8.0,15.0,15.0)
 #end
 #macro CAP_DIS_WIMA_150_090_180_160(value)
-CAP_DIS_WIMA_GRND(18.0,9.0,16.0,15.0)
+CAP_DIS_WIMA_BASE(18.0,9.0,16.0,15.0)
 #end
 //Raster 22.5
 #macro CAP_DIS_WIMA_225_060_265_150(value)
-CAP_DIS_WIMA_GRND(26.5,6.0,15.0,22.5)
+CAP_DIS_WIMA_BASE(26.5,6.0,15.0,22.5)
 #end
 #macro CAP_DIS_WIMA_225_070_265_165(value)
-CAP_DIS_WIMA_GRND(26.5,7.0,16.5,22.5)
+CAP_DIS_WIMA_BASE(26.5,7.0,16.5,22.5)
 #end
 #macro CAP_DIS_WIMA_225_085_265_185(value)
-CAP_DIS_WIMA_GRND(26.5,8.5,18.5,22.5)
+CAP_DIS_WIMA_BASE(26.5,8.5,18.5,22.5)
 #end
 #macro CAP_DIS_WIMA_225_105_265_190(value)
-CAP_DIS_WIMA_GRND(26.5,10.5,19.0,22.5)
+CAP_DIS_WIMA_BASE(26.5,10.5,19.0,22.5)
 #end
 #macro CAP_DIS_WIMA_225_110_265_210(value)
-CAP_DIS_WIMA_GRND(26.5,11.0,21.0,22.5)
+CAP_DIS_WIMA_BASE(26.5,11.0,21.0,22.5)
 #end
 //Raster 27.5
 #macro CAP_DIS_WIMA_275_090_315_210(value)
-CAP_DIS_WIMA_GRND(31.5,9.0,21.0,27.5)
+CAP_DIS_WIMA_BASE(31.5,9.0,21.0,27.5)
 #end
 #macro CAP_DIS_WIMA_275_110_315_210(value)
-CAP_DIS_WIMA_GRND(31.5,11.0,21.0,27.5)
+CAP_DIS_WIMA_BASE(31.5,11.0,21.0,27.5)
 #end
 #macro CAP_DIS_WIMA_275_130_315_240(value)
-CAP_DIS_WIMA_GRND(31.5,13.0,24.0,27.5)
+CAP_DIS_WIMA_BASE(31.5,13.0,24.0,27.5)
 #end
 #macro CAP_DIS_WIMA_275_150_315_260(value)
-CAP_DIS_WIMA_GRND(31.5,15.0,26.0,27.5)
+CAP_DIS_WIMA_BASE(31.5,15.0,26.0,27.5)
 #end
 #macro CAP_DIS_WIMA_275_170_315_345(value)
-CAP_DIS_WIMA_GRND(31.5,17.0,34.5,27.5)
+CAP_DIS_WIMA_BASE(31.5,17.0,34.5,27.5)
 #end
 #macro CAP_DIS_WIMA_275_200_315_395(value)
-CAP_DIS_WIMA_GRND(31.5,20.0,39.5,27.5)
+CAP_DIS_WIMA_BASE(31.5,20.0,39.5,27.5)
 #end
 //Raster 37.5
 #macro CAP_DIS_WIMA_375_150_415_260(value)
-CAP_DIS_WIMA_GRND(41.5,15.0,26.0,37.5)
+CAP_DIS_WIMA_BASE(41.5,15.0,26.0,37.5)
 #end
 #macro CAP_DIS_WIMA_375_190_415_320(value)
-CAP_DIS_WIMA_GRND(41.5,19.0,32.0,37.5)
+CAP_DIS_WIMA_BASE(41.5,19.0,32.0,37.5)
 #end
 #macro CAP_DIS_WIMA_375_200_415_395(value)
-CAP_DIS_WIMA_GRND(41.5,20.0,39.5,37.5)
+CAP_DIS_WIMA_BASE(41.5,20.0,39.5,37.5)
 #end
 
 
 /********************************************************************************************************************************************
 //(Tiefe, Breite, Hoehe, Breite Loetflaechen, Abstand Pin zu Pin, Anzahl Kondensatoren,Farbe des Körpers)
 ********************************************************************************************************************************************/
-#macro CAP_SMD_CHIP_ARRAY_GRND(b,l,h,blf,pitch,n)
+#macro CAP_SMD_CHIP_ARRAY_BASE(b,l,h,blf,pitch,n)
 union {    
     //Body
     object{
@@ -1105,7 +1105,7 @@ union {
 #end
 
 #macro CAP_SMD_CHIP_ARRAY_4X0603_0612()
-CAP_SMD_CHIP_ARRAY_GRND(1.60,3.20,0.8,0.4,0.8,4)
+CAP_SMD_CHIP_ARRAY_BASE(1.60,3.20,0.8,0.4,0.8,4)
 #end
 
 
@@ -1113,7 +1113,7 @@ CAP_SMD_CHIP_ARRAY_GRND(1.60,3.20,0.8,0.4,0.8,4)
 //Grundmakro für SMD-Keramik-Chip-Kondensator (neu Parameter K = Anschlussbreite)
 //basiert auf Makro von Walter Mücke
 ********************************************************************************************************************************************/
-#macro CAP_SMD_CHIP_GRND(L,W,T,K)
+#macro CAP_SMD_CHIP_BASE(L,W,T,K)
 union {
     //Body
     superellipsoid{ <0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkörper braun
@@ -1131,31 +1131,31 @@ union {
 
 //2220
 #macro CAP_SMD_CHIP_2220()
-CAP_SMD_CHIP_GRND(5.7,5.0,2.7,0.5)
+CAP_SMD_CHIP_BASE(5.7,5.0,2.7,0.5)
 #end
 //1825
 #macro CAP_SMD_CHIP_1825()
-CAP_SMD_CHIP_GRND(4.5,6.4,1.7,0.5)
+CAP_SMD_CHIP_BASE(4.5,6.4,1.7,0.5)
 #end
 //1812
 #macro CAP_SMD_CHIP_1812()
-CAP_SMD_CHIP_GRND(4.5,3.2,1.7,0.5)
+CAP_SMD_CHIP_BASE(4.5,3.2,1.7,0.5)
 #end
 //1210
 #macro CAP_SMD_CHIP_1210()
-CAP_SMD_CHIP_GRND(3.2,2.5,1.7,0.5)
+CAP_SMD_CHIP_BASE(3.2,2.5,1.7,0.5)
 #end
 #macro CAP_SMD_CHIP_1206()
-CAP_SMD_CHIP_GRND(3.2,1.6,1.5,0.5)
+CAP_SMD_CHIP_BASE(3.2,1.6,1.5,0.5)
 #end
 #macro CAP_SMD_CHIP_0805()
-CAP_SMD_CHIP_GRND(2.0,1.25,1.3,0.5)
+CAP_SMD_CHIP_BASE(2.0,1.25,1.3,0.5)
 #end
 #macro CAP_SMD_CHIP_0603()
-CAP_SMD_CHIP_GRND(1.6,0.8,0.9,0.3)
+CAP_SMD_CHIP_BASE(1.6,0.8,0.9,0.3)
 #end
 #macro CAP_SMD_CHIP_0402()
-CAP_SMD_CHIP_GRND(1.0,0.5,0.6,0.2)
+CAP_SMD_CHIP_BASE(1.0,0.5,0.6,0.2)
 #end
 
 
@@ -1163,7 +1163,7 @@ CAP_SMD_CHIP_GRND(1.0,0.5,0.6,0.2)
 //Grundmakro für SMD-Tantal-Chip-Kondensator
 //basiert auf Makro von Walter Mücke
 ********************************************************************************************************************************************/
-#macro CAP_SMD_CHIP_TT_GRND(L,W,H,LT,WT,HT,P,value)
+#macro CAP_SMD_CHIP_TT_BASE(L,W,H,LT,WT,HT,P,value)
 union {
     
     //Body
@@ -1236,22 +1236,22 @@ union {
 #end                                                                                                                 
 
 #macro CAP_SMD_CHIP_TT_SCT_A(value)
-CAP_SMD_CHIP_TT_GRND(3.2,1.6,1.6,3.0,1.2,1.0,0.8,value)
+CAP_SMD_CHIP_TT_BASE(3.2,1.6,1.6,3.0,1.2,1.0,0.8,value)
 #end
 #macro CAP_SMD_CHIP_TT_SCT_B(value)
-CAP_SMD_CHIP_TT_GRND(3.5,2.8,1.9,3.3,2.2,1.2,0.8,value)
+CAP_SMD_CHIP_TT_BASE(3.5,2.8,1.9,3.3,2.2,1.2,0.8,value)
 #end
 #macro CAP_SMD_CHIP_TT_SCT_C(value)
-CAP_SMD_CHIP_TT_GRND(6.0,3.2,2.5,5.8,2.2,1.5,1.3,value)
+CAP_SMD_CHIP_TT_BASE(6.0,3.2,2.5,5.8,2.2,1.5,1.3,value)
 #end
 #macro CAP_SMD_CHIP_TT_SCT_D(value)
-CAP_SMD_CHIP_TT_GRND(7.3,4.3,2.8,7.1,2.4,1.6,1.3,value)
+CAP_SMD_CHIP_TT_BASE(7.3,4.3,2.8,7.1,2.4,1.6,1.3,value)
 #end
 #macro CAP_SMD_CHIP_TT_SCT_E(value)
-CAP_SMD_CHIP_TT_GRND(7.3,4.3,4.1,7.1,2.4,1.6,1.3,value)
+CAP_SMD_CHIP_TT_BASE(7.3,4.3,4.1,7.1,2.4,1.6,1.3,value)
 #end
 #macro CAP_SMD_CHIP_TT_SCT_R(value)
-CAP_SMD_CHIP_TT_GRND(2.0,1.6,1.0,1.9,1.2,0.6,0.5,value)
+CAP_SMD_CHIP_TT_BASE(2.0,1.6,1.0,1.9,1.2,0.6,0.5,value)
 #end
 
 
@@ -1265,7 +1265,7 @@ CAP_SMD_CHIP_TT_GRND(2.0,1.6,1.0,1.9,1.2,0.6,0.5,value)
 //S = Abstand Anschlußpins unten
 //C = Länge Anschlußpins
 ********************************************************************************************************************************************/
-#macro CAP_SMD_ELKO_GRND(L,W,H,D,B,S,C)
+#macro CAP_SMD_ELKO_BASE(L,W,H,D,B,S,C)
   union {
     #local col_smd_elko = texture {
        pigment {
@@ -1309,37 +1309,37 @@ CAP_SMD_CHIP_TT_GRND(2.0,1.6,1.0,1.9,1.2,0.6,0.5,value)
 #end
 
 #macro CAP_SMD_ELKO_0405(value)
-CAP_SMD_ELKO_GRND(4.5,4.5,5.5,4.0,0.8,1.0,2.0)
+CAP_SMD_ELKO_BASE(4.5,4.5,5.5,4.0,0.8,1.0,2.0)
 #end
 #macro CAP_SMD_ELKO_0505(value)
-CAP_SMD_ELKO_GRND(5.5,5.5,5.5,5.0,0.8,1.4,2.3)
+CAP_SMD_ELKO_BASE(5.5,5.5,5.5,5.0,0.8,1.4,2.3)
 #end
 #macro CAP_SMD_ELKO_0605(value)
-CAP_SMD_ELKO_GRND(6.8,6.8,5.5,6.3,0.8,2.0,2.7)
+CAP_SMD_ELKO_BASE(6.8,6.8,5.5,6.3,0.8,2.0,2.7)
 #end
 #macro CAP_SMD_ELKO_0807(value)
-CAP_SMD_ELKO_GRND(8.6,8.6,6.8,8.0,0.8,2.3,3.4)
+CAP_SMD_ELKO_BASE(8.6,8.6,6.8,8.0,0.8,2.3,3.4)
 #end
 #macro CAP_SMD_ELKO_0808(value)
-CAP_SMD_ELKO_GRND(8.4,8.4,8.7,8,1,4.7,2.2)
+CAP_SMD_ELKO_BASE(8.4,8.4,8.7,8,1,4.7,2.2)
 #end
 #macro CAP_SMD_ELKO_0810(value)
-CAP_SMD_ELKO_GRND(8.6,8.6,10.5,8.0,1.1,3.1,3.0)
+CAP_SMD_ELKO_BASE(8.6,8.6,10.5,8.0,1.1,3.1,3.0)
 #end
 #macro CAP_SMD_ELKO_1010(value)
-CAP_SMD_ELKO_GRND(10.6,10.6,10.5,10.0,1.1,4.7,3.3)
+CAP_SMD_ELKO_BASE(10.6,10.6,10.5,10.0,1.1,4.7,3.3)
 #end
 #macro CAP_SMD_ELKO_1012(value)
-CAP_SMD_ELKO_GRND(10.6,10.6,12.3,10.0,1.2,4.5,3.9)
+CAP_SMD_ELKO_BASE(10.6,10.6,12.3,10.0,1.2,4.5,3.9)
 #end
 #macro CAP_SMD_ELKO_1014(value)
-CAP_SMD_ELKO_GRND(10.6,10.6,14.3,10.0,1.2,4.5,3.9)
+CAP_SMD_ELKO_BASE(10.6,10.6,14.3,10.0,1.2,4.5,3.9)
 #end
 #macro CAP_SMD_ELKO_1212(value)
-CAP_SMD_ELKO_GRND(12.8,12.8,12.5,12.5,1.2,4.7,4)
+CAP_SMD_ELKO_BASE(12.8,12.8,12.5,12.5,1.2,4.7,4)
 #end
 #macro CAP_SMD_ELKO_1214(value)
-CAP_SMD_ELKO_GRND(12.8,12.8,14.5,12.5,1.2,4.7,4)
+CAP_SMD_ELKO_BASE(12.8,12.8,14.5,12.5,1.2,4.7,4)
 #end
 
 #macro CAP_SMD_ELKO_PANASONIC_base(L,W,H,D,B,S,C)
@@ -1369,7 +1369,7 @@ union {
             translate<dx,H+0.01,0> pigment{Gray20}
        }
   #local value="";
-  CAP_SMD_ELKO_GRND(L,W,H,D,B,S,C) // no label.
+  CAP_SMD_ELKO_BASE(L,W,H,D,B,S,C) // no label.
   }
 #end
 
