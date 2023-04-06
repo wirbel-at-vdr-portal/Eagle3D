@@ -6,6 +6,7 @@
 #include "TOOLS/fonts.inc"
 #include "TOOLS/colors.inc"
 #include "TOOLS/color_presets.inc"
+#include "TOOLS/logos.inc"
 #include "TOOLS/textures.inc"
 
 #include "TOOLS/ARC.inc"
