@@ -5,7 +5,7 @@
  ******************************************************************************/
 
 /*******************************************************************************
- * axial CTS solid tantalum capacitor
+ * axial CTS solid tantalum capacitor (EXXELIA?)
  * Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
  * Rev. 1.0 du 06/01/06
  *   diam       = diameter of the main circumference
