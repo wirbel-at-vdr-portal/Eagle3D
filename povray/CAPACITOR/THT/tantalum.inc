@@ -94,6 +94,265 @@
 
 
 /*******************************************************************************
+ * Tantalum cap, 2.5mm pitch
+ ******************************************************************************/
+#macro CAP_DIS_TT_2MM5_BASE(obj_dia,obj_hgt,sca_txt)
+  union {
+     sphere { //Body
+        <0,0,0>obj_dia/2
+        scale<1,obj_hgt/obj_dia,1>
+        pigment { CoolCopper }
+        }
+     union { //Leads
+        #if(pin_short=off)
+           cylinder {
+              <0,1,0> <0,-16,0> 0.25
+              translate <-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+           cylinder {
+              <0,1,0> <0,-14,0> 0.25
+              translate <1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+        #else
+           cylinder {
+              <0,1,0> <0,-1*(pcb_height+pin_length)-1.2,0> 0.25
+              translate <-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+           cylinder {
+              <0,1,0> <0,-1*(pcb_height+pin_length)-1.2,0>0.25
+              translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+        #end
+        texture { col_silver}
+        }
+     union { //Marking
+        intersection {
+           sphere {
+              <0,0,0> obj_dia/2
+              scale<1,obj_hgt/obj_dia,1.001>
+              translate <0,0,0>
+              }
+           text {
+              ttf besch_font "+" obj_dia+0.4, 0
+              rotate <0,0,00>
+              translate <-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,-(obj_dia+0.4)/2>
+              }
+           }
+        intersection {
+           sphere {
+              <0,0,0>obj_dia/2
+              scale <1,obj_hgt/obj_dia,1.001>
+              translate <0,0,0>
+              }
+           text {
+              ttf besch_font value obj_dia+0.4,0
+              scale <sca_txt,1,1>
+              rotate <0,0,90>
+              translate <0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2>
+              }
+           }
+        texture {
+           col_black_marking
+           }
+        }
+     translate <0,((obj_hgt/obj_dia)*obj_dia)/2+0.2,0>
+     }
+#end
+
+#macro CAP_DIS_TT_2MM5_4MM(value)
+  CAP_DIS_TT_2MM5_BASE(4,8.5,1)
+#end
+
+#macro CAP_DIS_TT_2MM5_4MM5(value)
+  CAP_DIS_TT_2MM5_BASE(4.5,8.5,1)
+#end
+
+#macro CAP_DIS_TT_2MM5_5MM(value)
+  CAP_DIS_TT_2MM5_BASE(5,10,1.2)
+#end
+
+#macro CAP_DIS_TT_2MM5_5MM5(value)
+  CAP_DIS_TT_2MM5_BASE(5.5,10.5,1.3)
+#end
+
+#macro CAP_DIS_TT_2MM5_6MM(value)
+  CAP_DIS_TT_2MM5_BASE(6,11.5,1.4)
+#end
+
+#macro CAP_DIS_TT_2MM5_6MM5(value)
+  CAP_DIS_TT_2MM5_BASE(6.5,11.5,1.5)
+#end
+
+#macro CAP_DIS_TT_2MM5_7MM(value)
+  CAP_DIS_TT_2MM5_BASE(7,12,1.6)
+#end
+
+#macro CAP_DIS_TT_2MM5_8MM(value)
+  CAP_DIS_TT_2MM5_BASE(8,13,1.8)
+#end
+
+#macro CAP_DIS_TT_2MM5_8MM5(value)
+  CAP_DIS_TT_2MM5_BASE(8.5,14,1.8)
+#end
+
+#macro CAP_DIS_TT_2MM5_9MM(value)
+  CAP_DIS_TT_2MM5_BASE(9,15,2)
+#end
+
+#macro CAP_DIS_TT_2MM5_10MM(value)
+  CAP_DIS_TT_2MM5_BASE(10,18,2)
+#end
+
+
+/*******************************************************************************
+ * Tantalum cap, 5mm pitch
+ ******************************************************************************/
+#macro CAP_DIS_TT_5MM_BASE(obj_dia,obj_hgt,sca_txt)
+  union {
+     sphere { //Body
+        <0,0,0>obj_dia/2
+        scale <1,obj_hgt/obj_dia,1>
+        pigment { CoolCopper }
+        }
+     union { //Leads
+        cylinder {
+           <0,1,0> <0,-1,0>0.25
+           translate <-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+           }
+        cylinder {
+           <0,1,0> <0,-1,0>0.25
+           translate <1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+           }
+        cylinder {
+           <0,0,0> <-1.25,-1,0>0.25
+           translate <-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>
+           }
+        cylinder {
+           <0,0,0> <1.25,-1,0>0.25
+           translate <1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>
+           }
+        #if(pin_short=off)
+           cylinder {
+              <0,-14,0> <0,-2,0>0.25
+              translate <-2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+           cylinder {
+              <0,-12,0> <0,-2,0>0.25
+              translate <2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+        #else
+           cylinder {
+              <0,-1*(pcb_height+pin_length)-2.5,0> <0,-2,0>0.25
+              translate <-2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+           cylinder {
+              <0,-1*(pcb_height+pin_length)-2.5,0> <0,-2,0>0.25
+              translate <2.5,-((obj_hgt/obj_dia)*obj_dia)/2+1,0>
+              }
+        #end
+        sphere {
+           <0,0,0>0.25
+           translate <-2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0>
+           }
+        sphere {
+           <0,0,0>0.25
+           translate <2.5,-((obj_hgt/obj_dia)*obj_dia)/2-1,0>
+           }
+        sphere {
+           <0,0,0>0.25
+           translate <-1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>
+           }
+        sphere {
+           <0,0,0>0.25
+           translate<1.25,-((obj_hgt/obj_dia)*obj_dia)/2,0>
+           }
+        texture {
+           col_silver
+           }
+        }
+     //Marking
+     union {
+        intersection {
+           sphere {
+              <0,0,0>obj_dia/2
+              scale <1,obj_hgt/obj_dia,1.001>
+              translate <0,0,0>
+              }
+           text {
+              ttf besch_font "+" obj_dia+0.4, 0
+              rotate <0,0,0>
+              translate<-1.25,-((obj_hgt/obj_dia)*obj_dia)/2+1,-(obj_dia+0.4)/2>
+              }
+           }
+        intersection {
+           sphere {
+              <0,0,0> obj_dia/2
+              scale <1,obj_hgt/obj_dia,1.001>
+              translate <0,0,0>
+              }
+           text {
+              ttf besch_font value obj_dia+0.4,0
+              scale <sca_txt,1,1>
+              rotate <0,0,90>
+              translate <0.25,-((obj_hgt/obj_dia)*obj_dia)/2+1.5,-(obj_dia+0.4)/2>
+              }
+           }
+        texture {
+           col_black_marking
+           }
+        }
+     translate <0,((obj_hgt/obj_dia)*obj_dia)/2+1.5,0>
+     }
+#end
+
+
+#macro CAP_DIS_TT_5MM_4MM5(value)
+  CAP_DIS_TT_5MM_BASE(4.5,8.5,1)
+#end
+
+#macro CAP_DIS_TT_5MM_5MM(value)
+  CAP_DIS_TT_5MM_BASE(5,10,1.2)
+#end
+
+#macro CAP_DIS_TT_5MM_5MM5(value)
+  CAP_DIS_TT_5MM_BASE(5.5,10.5,1.3)
+#end
+
+#macro CAP_DIS_TT_5MM_6MM(value)
+  CAP_DIS_TT_5MM_BASE(6,11.5,1.4)
+#end
+
+#macro CAP_DIS_TT_5MM_6MM5(value)
+  CAP_DIS_TT_5MM_BASE(6.5,11.5,1.5)
+#end
+
+#macro CAP_DIS_TT_5MM_7MM(value)
+  CAP_DIS_TT_5MM_BASE(7,12,1.6)
+#end
+
+#macro CAP_DIS_TT_5MM_8MM(value)
+  CAP_DIS_TT_5MM_BASE(8,13,1.8)
+#end
+
+#macro CAP_DIS_TT_5MM_8MM5(value)
+  CAP_DIS_TT_5MM_BASE(8.5,14,1.8)
+#end
+
+#macro CAP_DIS_TT_5MM_9MM(value)
+  CAP_DIS_TT_5MM_BASE(9,15,2)
+#end
+
+#macro CAP_DIS_TT_5MM_10MM(value)
+  CAP_DIS_TT_5MM_BASE(10,18,2)
+#end
+
+#macro CAP_DIS_TT_5MM_11MM(value)
+  CAP_DIS_TT_5MM_BASE(11,18,2)
+#end
+
+
+
+/*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
@@ -101,4 +360,27 @@
 //=CAP_DIS_CTS_B_20MM(:Axial capacitor CTS case B grid 20mm
 //=CAP_DIS_CTS_C_25MM(:Axial capacitor CTS case C grid 25mm
 //=CAP_DIS_CTS_D_30MM(:Axial capacitor CTS case D grid 30mm
+//rcl:TT2D4=CAP_DIS_TT_2MM5_4MM(:tantalum cap 2.5mm pitch 4.5mm diameter
+//rcl:TT2D5=CAP_DIS_TT_2MM5_5MM(:tantalum cap 2.5mm pitch 5mm diameter
+//rcl:TT2D6=CAP_DIS_TT_2MM5_6MM(:tantalum cap 2.5mm pitch 6mm diameter
+//rcl:TT2D7=CAP_DIS_TT_2MM5_7MM(:tantalum cap 2.5mm pitch 7mm diameter
+//=CAP_DIS_TT_2MM5_4MM5(:tantalum cap 2.5mm pitch
+//=CAP_DIS_TT_2MM5_5MM5(:tantalum cap 2.5mm pitch
+//=CAP_DIS_TT_2MM5_6MM5(:tantalum cap 2.5mm pitch
+//=CAP_DIS_TT_2MM5_8MM(:tantalum cap 2.5mm pitch
+//=CAP_DIS_TT_2MM5_8MM5(:tantalum cap 2.5mm pitch
+//=CAP_DIS_TT_2MM5_9MM(:tantalum cap 2.5mm pitch
+//=CAP_DIS_TT_2MM5_10MM(:tantalum cap 2.5mm pitch
+//rcl:TT5D4=CAP_DIS_TT_5MM_4MM5(:tantalum cap 5mm pitch 4.5mm diameter
+//rcl:TT5D6=CAP_DIS_TT_5MM_6MM(:tantalum cap 5mm pitch 6mm diameter
+//rcl:TT5D7=CAP_DIS_TT_5MM_7MM(:tantalum cap 5mm pitch 7mm diameter
+//rcl:TT5D9=CAP_DIS_TT_5MM_9MM(:tantalum cap 5mm pitch 9mm diameter
+//rcl:TT5D10=CAP_DIS_TT_5MM_10MM(:tantalum cap 5mm pitch 10mm diameter
+//rcl:TT5D11=CAP_DIS_TT_5MM_11MM(:tantalum cap 5mm pitch 11mm diameter
+//=CAP_DIS_TT_5MM_4MM5(:tantalum cap 5mm pitch
+//=CAP_DIS_TT_5MM_5MM(:tantalum cap 5mm pitch
+//=CAP_DIS_TT_5MM_5MM5(:tantalum cap 5mm pitch
+//=CAP_DIS_TT_5MM_6MM5(:tantalum cap 5mm pitch
+//=CAP_DIS_TT_5MM_8MM(:tantalum cap 5mm pitch
+//=CAP_DIS_TT_5MM_8MM5(:tantalum cap 5mm pitch
 // end assignment
