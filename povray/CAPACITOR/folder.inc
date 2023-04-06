@@ -5,6 +5,8 @@
  ******************************************************************************/
 
 #include "CAPACITOR/SMT/Panasonic.inc"
+#include "CAPACITOR/SMT/array.inc"
+#include "CAPACITOR/SMT/ceramic.inc"
 #include "CAPACITOR/THT/Murata.inc"
 #include "CAPACITOR/THT/WIMA.inc"
 #include "CAPACITOR/THT/blocktypes.inc"

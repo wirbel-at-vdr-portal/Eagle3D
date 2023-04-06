@@ -15,54 +15,6 @@
 
 
 
-/********************************************************************************************************************************************
-//Grundmakro fuer SMD-Keramik-Chip-Kondensator (neu Parameter K = Anschlussbreite)
-//basiert auf Makro von Walter Muecke
-********************************************************************************************************************************************/
-#macro CAP_SMD_CHIP_BASE(L,W,T,K)
-union {
-    //Body
-    superellipsoid{ <0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkoerper braun
-    
-    //Contacts
-    union {
-        superellipsoid{ <0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <(L-K)/2,0,0> }
-        superellipsoid{ <0.25-(L+W)/200, 0.25-(L+W)/200> scale<(K+L/100)/2,W/2,T/2> translate <-(L-K)/2,0,0> }
-        texture{col_silver}
-    }
-    rotate<90,0,0>
-    translate<0,T/2,0>
-}
-#end
-
-//2220
-#macro CAP_SMD_CHIP_2220()
-CAP_SMD_CHIP_BASE(5.7,5.0,2.7,0.5)
-#end
-//1825
-#macro CAP_SMD_CHIP_1825()
-CAP_SMD_CHIP_BASE(4.5,6.4,1.7,0.5)
-#end
-//1812
-#macro CAP_SMD_CHIP_1812()
-CAP_SMD_CHIP_BASE(4.5,3.2,1.7,0.5)
-#end
-//1210
-#macro CAP_SMD_CHIP_1210()
-CAP_SMD_CHIP_BASE(3.2,2.5,1.7,0.5)
-#end
-#macro CAP_SMD_CHIP_1206()
-CAP_SMD_CHIP_BASE(3.2,1.6,1.5,0.5)
-#end
-#macro CAP_SMD_CHIP_0805()
-CAP_SMD_CHIP_BASE(2.0,1.25,1.3,0.5)
-#end
-#macro CAP_SMD_CHIP_0603()
-CAP_SMD_CHIP_BASE(1.6,0.8,0.9,0.3)
-#end
-#macro CAP_SMD_CHIP_0402()
-CAP_SMD_CHIP_BASE(1.0,0.5,0.6,0.2)
-#end
 
 
 /********************************************************************************************************************************************
