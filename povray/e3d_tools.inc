@@ -15,7 +15,6 @@
 #include "e3d_resistor.inc"
 #include "e3d_trafo.inc"
 #include "e3d_connector.inc"
-#include "e3d_cap.inc"
 #include "e3d_diode.inc"
 #include "e3d_qfp.inc"
 #include "e3d_switch.inc"
