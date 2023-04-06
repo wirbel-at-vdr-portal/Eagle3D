@@ -4,138 +4,9 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-
-
 #include "e3d_tools.inc"
 
 
-
-
-
-
-/********************************************************************************************************************************************
-// Auth: David Harris
-//
-// Ceramic capacitors
-// Macro Calling Arguments:  
-//   diam1      = diameter of the main circumference
-//   value      = Eagle "value" (capacitance etc.) - this is printed on the capacitors
-//   leadspc    = lead spacing
-//   bcolour    = body colour
-//   tcolour    = text colour
-********************************************************************************************************************************************/
-#macro CAP_DIS_CERAMIC_BASE(diam1,value,leadspc,bcolour,tcolour)
- #local diam = diam1/2;
- #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } } 
- #local txt = text{ ttf besch_font,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> } 
- #local leg = object{ cylinder {  <0,diam*0.2,0>,<0,-10.0>,0.25 texture{col_silver}}}  
- #local ls2 = leadspc/2 ;
- union { 
-  object{ intersection{ object{txt} object{cap} } translate <0,0,-0.05> pigment{tcolour} }
-  object {cap pigment{bcolour}}
-  difference {
-   torus { leadspc/2, 0.25 rotate -90*x  pigment{bcolour} }
-   box { <-leadspc,0,0.5>, <leadspc,-leadspc,-0.5> }
-   translate <0,diam*0.2,0>  
-  } 
-  object{ leg translate<-ls2,0,0> }
-  object{ leg translate< ls2,0,0> }
- pigment{bcolour}
- translate <0,0,0> 
- } 
- #end    
-#macro CAP_DIS_CERAMIC_25MM_38MM(value)
-CAP_DIS_CERAMIC_BASE(3.81,value,2.54,Red,Black)
-#end
-#macro CAP_DIS_CERAMIC_25MM_44MM(value)
-CAP_DIS_CERAMIC_BASE(4.4,value,2.54,Red,Black)
-#end
-#macro CAP_DIS_CERAMIC_25MM_50MM(value)
-CAP_DIS_CERAMIC_BASE(5.08,value,2.54,Yellow,Black)
-#end
-#macro CAP_DIS_CERAMIC_50MM_38MM(value)
-CAP_DIS_CERAMIC_BASE(3.81,value,5.08,Orange,Black)
-#end
-#macro CAP_DIS_CERAMIC_50MM_44MM(value)
-CAP_DIS_CERAMIC_BASE(4.40,value,5.08,Red,Black)
-#end
-#macro CAP_DIS_CERAMIC_50MM_50MM(value)
-CAP_DIS_CERAMIC_BASE(5.08,value,5.08,Blue,Black)
-#end
-#macro CAP_DIS_CERAMIC_50MM_76MM(value)
-CAP_DIS_CERAMIC_BASE(7.62,value,5.08,Yellow,Black)
-#end
-#macro CAP_DIS_CERAMIC_50MM_100MM(value)
-CAP_DIS_CERAMIC_BASE(10.16,value,5.08,Gray,Black) 
-#end
-#macro CAP_DIS_CERAMIC_75MM_100MM(value)
-CAP_DIS_CERAMIC_BASE(10.16,value,7.62,Gray,Black)
-#end
-
-
-/********************************************************************************************************************************************
-//Macros for axial CTS tantale capacitor
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.0 du 06/01/06
-// Macro Calling Arguments:  
-//   diam       = diameter of the main circumference
-//   Lg         = length
-//   value      = Eagle "value" (capacitance etc.) - this is printed on the capacitors
-//   r          = Pitch / Pas
-//   lw         = pins length / Longeur des pattes
-//   dw         = pins width / Largeur des pattes
-********************************************************************************************************************************************/
-#macro CAP_DIS_CTS_BASE(diam,Lg,Lt,r,lw,dw,value)
-union {
-
-#local rr=diam/2*0.7;
-#local rrr=0.8;
-
-    difference {
-        //Body
-        cylinder { <-Lg/2,0,0> <+Lg/2,0,0> diam/2-0.1 }
-        //Plus side
-        union {
-            torus { rr rrr rotate <90,90,0> translate<-Lg/2,0,0> }
-            cylinder { <-Lg/2-rrr,0,0> <-Lg/2+rrr,0,0> rr}
-        }
-        texture{col_silver}
-    }
-    //Plus pin
-    cylinder { <-Lg/2-Lt+rrr,0,0> <-Lg/2+1,0,0> dw*1.5 texture{Aluminum}}
-    //pins
-    object{TOOLS_WIRE_LEADS(Lg,diam,lw*2,dw,r,global_res_bend_radius,0,"H")}
-    //Text value
-    intersection{
-        cylinder { <-Lg/2,0,0> <+Lg/2,0,0> diam/2-0.1 }
-        union {
-                text { ttf global_fontfile_arial "+" 2,0 scale(Lg/20.8)*3  rotate<-90,180,180> translate<-Lg/2.5,diam/2,-(diam/9.1)*1.5 > }
-                text { ttf global_fontfile_arial value 2,0  scale diam/9.1*3 rotate<-90,180,180> translate<-Lg/3.5,diam/2,-(diam/9.1)*1.5> }
-        }
-        texture{col_black_marking}
-        translate +0.01*y
-    }
-    
-    translate diam/2*y
-}
-#end
-
-//CTS13 case A 15mm
-#macro CAP_DIS_CTS_A_15MM(value)
-CAP_DIS_CTS_BASE(3.6,8.1,2.1,6*2.54,30,0.5,value)
-#end
-//CTS13 case B 20mm
-#macro CAP_DIS_CTS_B_20MM(value)
-CAP_DIS_CTS_BASE(4.9,12.8,2.2,8*2.54,30,0.5,value)
-#end
-//CTS13 case C 25mm
-#macro CAP_DIS_CTS_C_25MM(value)
-CAP_DIS_CTS_BASE(7.5,18.2,2.3,10*2.54,30,0.6,value)
-#end
-//CTS13 case D 30mm
-#macro CAP_DIS_CTS_D_30MM(value)
-CAP_DIS_CTS_BASE(9.1,20.8,3.2,12*2.54,30,0.6,value)
-#end
 
 
 /********************************************************************************************************************************************
@@ -291,18 +162,18 @@ CAP_DIS_ELKO_AXIAL_BASE(5,55.88,30/2,1/2,value)
 
 /********************************************************************************************************************************************
 //Elko Grundmakro   
-//bearbeitet von Walter Mücke
+//bearbeitet von Walter Muecke
 //tex_scale     vector um die Textur zu strecken/stauchen
-//val_size      Größe der Beschriftung
+//val_size      Groesse der Beschriftung
 //dis           Abstand der Pins      
 //dia           Radius des Elkos 
-//hig           Höhe des Kondensator 
-//dia_b         Radius des Anschlußdrahtes
+//hig           Hoehe des Kondensator 
+//dia_b         Radius des Anschlussdrahtes
 //value         Beschriftungstext            
 ********************************************************************************************************************************************/
 #macro CAP_DIS_ELKO_BASE(tex_scale,val_size,dis,dia,hig,dia_b,value)
 union {
-    //Elko Körper
+    //Elko Koerper
     difference {
         union {            
             cylinder { <0,0.5,0> <0,hig-0.5,0>dia}                                  
@@ -318,7 +189,7 @@ union {
         //Aussparung unten
         torus {dia+0.85,1 translate<0,2.5,0> }                                     
 
-        //Textur für Minusmarkierung
+        //Textur fuer Minusmarkierung
         pigment { tex_elko scale tex_scale }                   
         finish{reflection { 0.03, 0.1}  phong 0.4 crand 0.05 ambient (0.1 * global_ambient_mul)}
     }
@@ -577,7 +448,7 @@ CAP_DIS_TT_5MM_BASE(11,18,2)
 #macro CAP_DIS_WIMA_BASE(B,T,H,Ra)
 union {
 
-    box { <-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0> } //Grundkörper
+    box { <-B/2+0.2, 0,     T/2>     <B/2-0.2,H-0.2,-T/2>      rotate<0,0,0> translate<0,0,0> } //Grundkoerper
     box { <-B/2,     0,    -T/2+0.2> <B/2,    H-0.2, T/2-0.2>  rotate<0,0,0> translate<0,0,0> } //Kleine Box innen
     box { <-B/2+0.2, H-0.2,-T/2+0.2> <B/2-0.2,H    , T/2-0.2>  rotate<0,0,0> translate<0,0,0> } //Kleine Box oben
 
@@ -598,7 +469,7 @@ union {
     cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0, 90,0> translate < B/2-0.2, 0, 0> }  //Rundungen links kurz
     cylinder { <-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 rotate<0,-90,0> translate < B/2-0.2, 0, 0> }  //Rundungen links kurz
 
-    //Drahtdurchmesser und Beschriftung an die Kondensatorgröße anpassen
+    //Drahtdurchmesser und Beschriftung an die Kondensatorgroesse anpassen
 
     #if(pin_short=on)
         #local wima_pin_length = -1*(pin_length+pcb_height);
@@ -800,7 +671,7 @@ CAP_DIS_WIMA_BASE(41.5,20.0,39.5,37.5)
 
 
 /********************************************************************************************************************************************
-//(Tiefe, Breite, Hoehe, Breite Loetflaechen, Abstand Pin zu Pin, Anzahl Kondensatoren,Farbe des Körpers)
+//(Tiefe, Breite, Hoehe, Breite Loetflaechen, Abstand Pin zu Pin, Anzahl Kondensatoren,Farbe des Koerpers)
 ********************************************************************************************************************************************/
 #macro CAP_SMD_CHIP_ARRAY_BASE(b,l,h,blf,pitch,n)
 union {    
@@ -835,13 +706,13 @@ CAP_SMD_CHIP_ARRAY_BASE(1.60,3.20,0.8,0.4,0.8,4)
 
 
 /********************************************************************************************************************************************
-//Grundmakro für SMD-Keramik-Chip-Kondensator (neu Parameter K = Anschlussbreite)
-//basiert auf Makro von Walter Mücke
+//Grundmakro fuer SMD-Keramik-Chip-Kondensator (neu Parameter K = Anschlussbreite)
+//basiert auf Makro von Walter Muecke
 ********************************************************************************************************************************************/
 #macro CAP_SMD_CHIP_BASE(L,W,T,K)
 union {
     //Body
-    superellipsoid{ <0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkörper braun
+    superellipsoid{ <0.25-(L+W)/150, 0.25-(L+W)/150> texture{col_ceramic_cap} scale<L/2,W/2,T/2> }     //Grundkoerper braun
     
     //Contacts
     union {
@@ -885,14 +756,14 @@ CAP_SMD_CHIP_BASE(1.0,0.5,0.6,0.2)
 
 
 /********************************************************************************************************************************************
-//Grundmakro für SMD-Tantal-Chip-Kondensator
-//basiert auf Makro von Walter Mücke
+//Grundmakro fuer SMD-Tantal-Chip-Kondensator
+//basiert auf Makro von Walter Muecke
 ********************************************************************************************************************************************/
 #macro CAP_SMD_CHIP_TT_BASE(L,W,H,LT,WT,HT,P,value)
 union {
     
     //Body
-    box { <0,0,0> <LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2> }            //Grundkörper braun
+    box { <0,0,0> <LT,H,W> pigment{rgb(<0.400, 0.320, 0.220>)*1.2} translate<-LT/2,(L-LT)/2,-W/2> }            //Grundkoerper braun
     
     //Marking
     text{ ttf besch_font value 0.1,0 scale L/8 rotate<90,0,0> translate<-LT/4,H+(L-LT)/2+0.01,0> pigment{DarkWood*0.7}}

@@ -5,7 +5,7 @@
  ******************************************************************************/
 
 /*******************************************************************************
- * Disk syle capacitors
+ * Disk style capacitors
  * David Harris
  *  diam1      = diam of the main circumference
  *  value      = text on the cap
@@ -15,23 +15,23 @@
  ******************************************************************************/
 #macro CAP_DIS_CERAMIC_DISK_BASE(diam1, value, leadspc, bcolour, tcolour)
   #local diam = diam1/2;
-  #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } } 
-  #local txt = text{ ttf besch_font ,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> } 
-  #local leg = object{ cylinder {  <0,diam*0.2,0>,<0,-10.0>,0.25 texture{col_silver}}}  
-  #local ls2 = leadspc/2 ;
-  union { 
+  #local cap = object {superellipsoid{ <1, 1>scale<diam,diam*0.25,diam>rotate <-90,-7.5,0>translate<0,diam*1.1,0> } }
+  #local txt = text{ ttf besch_font ,value,40,0 scale<diam/3,diam/3,diam/3> translate<-diam/1.5,diam,-20> }
+  #local leg = object{ cylinder {  <0,diam*0.2,0>,<0,-10.0>,0.25 texture{col_silver}}}
+  #local ls2 = leadspc/2;
+  union {
      object{ intersection{ object{txt} object{cap} } translate <0,0,-0.05> pigment{tcolour} }
      object {cap pigment{bcolour}}
      difference {
         torus { leadspc/2, 0.25 rotate -90*x  pigment{bcolour} }
         box { <-leadspc,0,0.5>, <leadspc,-leadspc,-0.5> }
-        translate <0,diam*0.2,0>  
-        } 
+        translate <0,diam*0.2,0>
+        }
      object{ leg translate<-ls2,0,0> }
      object{ leg translate< ls2,0,0> }
-     translate <0,0,0> 
+     translate <0,0,0>
      pigment{bcolour}
-     } 
+     }
 #end
 
 
@@ -81,6 +81,102 @@
 
 #macro CAP_DIS_CERAMIC_DISK_10MM_25MM(value)
   CAP_DIS_CERAMIC_DISK_BASE(25, value, 10.16, Gray, Blue)
+#end
+
+
+
+/*******************************************************************************
+ * Ceramic capacitors
+ * David Harris
+ *  diam1      = diam of the main circumference
+ *  value      = text on the cap
+ *  leadspc    = lead spacing
+ *  bcolour    = body colour
+ *  tcolour    = text colour
+ ******************************************************************************/
+#macro CAP_DIS_CERAMIC_BASE(diam1,value,leadspc,bcolour,tcolour)
+  #local diam = diam1/2;
+  #local cap = object {
+     superellipsoid {
+        <1, 1>
+        scale <diam, diam*0.25 ,diam>
+        rotate <-90,-7.5,0>
+        translate<0,diam*1.1,0>
+        }
+     }
+
+  #local txt = text {
+     ttf besch_font, value, 40, 0
+     scale <diam/3,diam/3,diam/3>
+     translate<-diam/1.5,diam,-20>
+     }
+
+  #local leg = object {
+     cylinder {
+        <0,diam*0.2,0>, <0,-10.0>, 0.25
+        texture { col_silver }
+        }
+     }
+
+  #local ls2 = leadspc/2;
+
+  union { 
+     object {
+        intersection {
+           object { txt }
+           object { cap }
+           }
+        translate <0,0,-0.05> pigment{tcolour}
+        }
+
+     object { cap pigment { bcolour } }
+     difference {
+        torus { leadspc/2, 0.25 rotate -90*x  pigment{bcolour} }
+        box { <-leadspc,0,0.5>, <leadspc,-leadspc,-0.5> }
+        translate <0,diam*0.2,0>  
+        }
+     object { leg translate<-ls2,0,0> }
+     object { leg translate< ls2,0,0> }
+     pigment { bcolour }
+     translate <0,0,0> 
+     }
+#end
+
+
+#macro CAP_DIS_CERAMIC_25MM_38MM(value)
+  CAP_DIS_CERAMIC_BASE(3.81,value,2.54,Red,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_25MM_44MM(value)
+  CAP_DIS_CERAMIC_BASE(4.4,value,2.54,Red,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_25MM_50MM(value)
+  CAP_DIS_CERAMIC_BASE(5.08,value,2.54,Yellow,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_50MM_38MM(value)
+  CAP_DIS_CERAMIC_BASE(3.81,value,5.08,Orange,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_50MM_44MM(value)
+  CAP_DIS_CERAMIC_BASE(4.40,value,5.08,Red,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_50MM_50MM(value)
+  CAP_DIS_CERAMIC_BASE(5.08,value,5.08,Blue,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_50MM_76MM(value)
+  CAP_DIS_CERAMIC_BASE(7.62,value,5.08,Yellow,Black)
+#end
+
+#macro CAP_DIS_CERAMIC_50MM_100MM(value)
+  CAP_DIS_CERAMIC_BASE(10.16,value,5.08,Gray,Black) 
+#end
+
+#macro CAP_DIS_CERAMIC_75MM_100MM(value)
+  CAP_DIS_CERAMIC_BASE(10.16,value,7.62,Gray,Black)
 #end
 
 
