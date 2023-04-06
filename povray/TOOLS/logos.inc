@@ -424,14 +424,13 @@
   #local Scale = min(XScale,YScale);
 
  union {
-    //#local tmp = vstr(2, <XScale,YScale>, ", ", 0,1);
-    //text{ttf global_fontfile_arial tmp 1,0 scale 0.2 rotate<0,0,0>  translate<1.5,0.03,0> pigment{Blue}}
-
-    text{ttf global_fontfile_eagle3d LOGO_INDEX 1,0
-       scale<Scale,Scale,1>
-       translate<-0.5*XLen*Scale,-0.5*YLen*Scale,0>
-       texture{col_bright_marking}
+    text {
+       ttf global_fontfile_eagle3d LOGO_INDEX 1,0
+       scale <Scale,Scale,1>
+       translate <-0.5*XLen*Scale,-0.5*YLen*Scale,0>
+       texture {
+          col_bright_marking
+          }
        }
     }
-  // end: Logo()
 #end
