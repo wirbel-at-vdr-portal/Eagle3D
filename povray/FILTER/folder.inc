@@ -6,3 +6,4 @@
  ******************************************************************************/
 
 #include "FILTER/Murata.inc"
+#include "FILTER/WuerthElektronik.inc"

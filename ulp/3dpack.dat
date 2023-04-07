@@ -880,8 +880,8 @@ EI66-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:TRAFO_MYRRA_E
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:TRAFO_MYRRA_UI48_40(:UI48 Transformer 40VA:
 UI48:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:TRAFO_MYRRA_UI48_60(:UI48 Transformer 60VA:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:TRAFO_SM_LP_500X(:Transfomer SM-LP-500X:
-WE-SL2:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:TRAFO_SM_SL2(:Common mode filter WE-SL2 WURTH:
-WE-SL2_74422...:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:TRAFO_SM_SL2(:Common mode filter WE-SL2 WURTH:
+WE-SL2:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:FILTER_WE_SL2(:Common mode filter Wuerth-Elektronik WE-SL2:
+WE-SL2_74422...:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:FILTER_WE_SL2(:Common mode filter Wuerth-Elektronik WE-SL2:
 C102-043X133:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CAP_DIS_BLOCK_100_040_130_095(:Kondensator Raster 10 (rcl.lib):Capacitor Grid 10 (rcl.lib)
 C102-054X133:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CAP_DIS_BLOCK_100_050_130_110(:Kondensator Raster 10 (rcl.lib):Capacitor Grid 10 (rcl.lib)
 C102-064X133:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CAP_DIS_BLOCK_100_060_130_120(:Kondensator Raster 10 (rcl.lib):Capacitor Grid 10 (rcl.lib)

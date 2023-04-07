@@ -7,7 +7,7 @@
 /*******************************************************************************
  * ERA print transformer, EI-core
  * Thomas Wiens <thomas.wiens at twiens.de>
- * 5.11.2004 
+ * 5.11.2004
  * value          = Beschriftungsdruck
  * breite         = Gesamtbreite des Gehaeuses
  * tiefe          = Gesamttiefe des Gehaeuses
