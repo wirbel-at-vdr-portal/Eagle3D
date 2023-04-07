@@ -9,7 +9,7 @@
  * Philippe Boucheny <philippe.boucheny(at)free.fr>
  * Rev. 1.0 13/04/06
  ******************************************************************************/
-#macro FILTER_WE_SL2()
+#macro FILTER_WE_SL2(value)
   union {
     difference {
        superellipsoid {

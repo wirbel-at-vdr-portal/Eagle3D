@@ -4,4 +4,6 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
+#include "TRANSFORMER/BOURNS.inc"
 #include "TRANSFORMER/ERA.inc"
+#include "TRANSFORMER/MYRRA.inc"

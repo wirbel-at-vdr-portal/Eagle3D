@@ -36,5 +36,4 @@
 #include "e3d_resistor.inc"
 #include "e3d_switch.inc"
 #include "e3d_tools.inc"
-#include "e3d_trafo.inc"
 #include "e3d_user.inc"
