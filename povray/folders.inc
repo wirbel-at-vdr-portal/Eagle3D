@@ -25,6 +25,7 @@
 #include "OPTO/folder.inc"
 #include "RELAY/folder.inc"
 #include "SOCKET/folder.inc"
+#include "TRANSFORMER/folder.inc"
 #include "TRANSISTOR/folder.inc"
 
 
