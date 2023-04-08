@@ -4,6 +4,7 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
+#include "CONNECTOR/AMP_227161.inc"
 #include "CONNECTOR/AMP_HE14.inc"
 #include "CONNECTOR/MOLEX_87832_series.inc"
 #include "CONNECTOR/MOLEX_PSL_series.inc"
