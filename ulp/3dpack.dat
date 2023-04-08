@@ -2504,7 +2504,7 @@ ML40L:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:-6.35:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_
 ML50L:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:-6.35:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_WS50W(:Wannenstecker liegend 50Pin:Shrouded Header bended 50Pin
 ML64L:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:-6.35:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_WS64W(:Wannenstecker liegend 64Pin:Shrouded Header bended 64Pin
 AMP_227161:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_227161(:BNC Buchse gewinckelt:BNC
-LEMO_EPA.00.250.NTN_L:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:LEMO_EPA_00_250_NTN_L(:LEMO EPA.00.250.NTN_L 90deg ellbow Jack:
+LEMO_EPA.00.250.NTN_L:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LEMO_EPA_00_250_NTN_L(:LEMO EPA.00.250.NTN_L 90deg ellbow Jack:
 SP19L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:R_POTI_SP19L(:Vishay T18 Resistor Trimmer:
 1210:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special
 1206:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special
