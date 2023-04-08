@@ -4,4 +4,4 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-#include "RESISTOR/POTI/SP19L.inc"
+#include "RESISTOR/POTI/VISHAY.inc"
