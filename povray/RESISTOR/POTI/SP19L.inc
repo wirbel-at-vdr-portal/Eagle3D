@@ -8,7 +8,7 @@
  * Vishay T18 Resistor Trimmer
  * wk
  ******************************************************************************/
-#macro SP19L(value)
+#macro R_POTI_SP19L(value)
   union {
   #local VishayBlue = color red 0.0 green 0.4453 blue 0.73;
 
