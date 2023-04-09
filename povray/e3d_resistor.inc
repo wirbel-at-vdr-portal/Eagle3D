@@ -1587,110 +1587,6 @@ RES_DIS_TRIM_SPECTROL2_BASE(9.52,4.83,9.52,5.08,OldGold)
 
 
 
-/********************************************************************************************************************************************
-//Macros for TRIMMER T7YA T7YB by VISHAY SFERNICE
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.1  25/12/05
-********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_T7_BASE(Type,Value)
-#local Bluetrim    = rgb <0, 0.2, 1>;
-#local Bluestamp    = rgb <0, 0, 0.5>;
-union{
-    union{  
-        union{
-            difference{
-                //body 
-                union{
-                    cylinder{<0,0,0> <0,5.86,0> 3.5 pigment{Bluetrim}}
-                    // Marking
-                    intersection{   
-                        cylinder{<0,0,0> <0,5.86,0> 3.5}
-                        #if(Type=0) 
-                            text {ttf global_fontfile_arial "T7YA" 1.5, 0 pigment{White} scale 1.5 rotate<0,0,90> translate<0.5,1.3,-4>}  // Marking 
-                        #else
-                            text {ttf global_fontfile_arial "T7YB" 1.5, 0 pigment{White} scale 1.5 rotate<0,0,90> translate<0.5,1.3,-4>}  // Marking 
-                        #end
-                        pigment{White}
-                    }
-                    intersection{   
-                        cylinder{<0,0,0> <0,5.86,0> 3.5}
-                        text {ttf global_fontfile_arial Value 1.5, 0 pigment{White} scale 1.5 rotate<0,0,90> translate<0.5,1.3,-4> rotate<0,-30,0>}  // Marking 
-                        pigment{White}
-                    }
-                }
-                //
-                union{
-                    //removal White central part
-                    cylinder{<0,3,0> <0,6,0> 2.3 }
-                    //grade stamps
-                    box{<-0.25,5.8,-2.5><+0.25,7,-3.3>}
-                    box{<-2.5,5.8,-0.25><-3.3,7,+0.25>}
-                    box{<+2.5,5.8,-0.25><+3.3,7,+0.25>}
-                    box{<-0.15,5.8,-2.5><+0.15,7,-3.3> rotate +30*y}
-                    box{<-0.15,5.8,-2.5><+0.15,7,-3.3> rotate +60*y}
-                    box{<-0.15,5.8,-2.5><+0.15,7,-3.3> rotate +120*y}
-                    box{<-0.25,5.8,-2.5><+0.25,7,-3.3> rotate +135*y}
-                    box{<-0.15,5.8,-2.5><+0.15,7,-3.3> rotate -30*y}
-                    box{<-0.15,5.8,-2.5><+0.15,7,-3.3> rotate -60*y}
-                    box{<-0.15,5.8,-2.5><+0.15,7,-3.3> rotate -120*y}
-                    box{<-0.25,5.8,-2.5><+0.25,7,-3.3> rotate -135*y}
-                    
-                    #local i=0; 
-                    #while (i<45)
-                        box{<-0.15,5.7999-(i*0.00001),-2.65><+0.15,7,-3.3> rotate (135+i*2)*y pigment{Blue}} 
-                    #local i=i+1; #end
-                    
-                    //Base
-                    cylinder{<0,-0.01,0> <0,0.4,0> 2.3 }
-                    #local i=0; 
-                    #while (i<3)
-                    box{<-0.6,-0.01,-0.6><-5,0.4,-4> rotate (120*i)*y}
-                    box{<+0.6,-0.01,-0.6><+5,0.4,-4> rotate (120*i)*y}
-                    #local i=i+1; #end
-                    
-                    pigment{Bluestamp} //stamping color
-                }
-            }
-            difference{                       
-                ////White central part with stamped arrow
-                cylinder{<0,3,0> <0,6,0> 2.3 }   
-                union{
-                    prism {5.8 7 4 <0.6, -0.5>, <0, -1.6>, <-0.6, -0.5>, <0.6, -0.5>}  
-                    box{<-0.25,5.801,-1><+0.25,7,1.5>}  
-                }
-                pigment{Gray80}                              
-            }
-            #if(Type=1)
-                rotate -45*y
-                translate<-0.3182,0,0.3182>
-            #end
-        }
-        #local hpin=4.5;
-        #if (Type=0)
-            //pins T7YA
-            box{<-0.25,0,-0.2><+0.25,-min(hpin,(pin_length+pcb_height)),+0.2> translate -2.54*z  texture{ Aluminum }}
-            box{<-0.25,0,-0.2><+0.25,-min(hpin,(pin_length+pcb_height)),+0.2> translate -2.54*x  texture{ Aluminum }}
-            box{<-0.25,0,-0.2><+0.25,-min(hpin,(pin_length+pcb_height)),+0.2> translate +2.54*x  texture{ Aluminum }}
-        #else
-            //pins T7YB  
-            union{
-            box{<-0.25,0,-0.2><+0.25,-min(hpin,(pin_length+pcb_height)),+0.2> texture{ Aluminum }}
-            box{<-0.25,0,-0.2><+0.25,-min(hpin,(pin_length+pcb_height)),+0.2> translate <-1.8,0,+1.8>  texture{ Aluminum }}
-            box{<-0.25,0,-0.2><+0.25,-min(hpin,(pin_length+pcb_height)),+0.2> translate <+1.8,0,+1.8>  texture{ Aluminum }}
-            rotate -45*y
-            }
-        #end
-
-    }
-
-}
-#end
-#macro RES_DIS_TRIM_T7_YA(value)
-RES_DIS_TRIM_T7_BASE(0,value)
-#end
-#macro RES_DIS_TRIM_T7_YB(value)
-RES_DIS_TRIM_T7_BASE(1,value)
-#end
 
 
 /********************************************************************************************************************************************
@@ -1700,6 +1596,7 @@ RES_DIS_TRIM_T7_BASE(1,value)
 ********************************************************************************************************************************************/
 #macro RES_DIS_TRIM_TS53_BASE (Type)
 union{
+
     difference{
         box { <-2.5, +0.4, -2.5>, <2.5, 2.7, 2.5> }
         box { <-2.3, +0.1, -2.6>, <2.3, 2.5, 2.6> }
@@ -1715,7 +1612,7 @@ union{
     text {ttf global_fontfile_arial "18" 0.01, 0 pigment{Black} scale 1 rotate<90,0,0> translate<+1.2,+2.701,+1.5>}  // Marking
 
     difference{
-        union{
+        union {
             box { <-2.3, +0.2, -2.5>, <2.3, 2.5, 2.5> }
             box { <-0.05, +1.4, -1.25>, <0.21, 2.5, 1.25>  translate -2.5*x}
             box { <-0.05, +1.4, -1.25>, <0.21, 2.5, 1.25>  translate +2.5*x}
