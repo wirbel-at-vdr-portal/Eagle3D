@@ -1852,46 +1852,6 @@ RES_SMD_CHIP_ARRAY_BASE(1.60,3.20,0.8,0.4,0.8,4,value)
 #end
 
 
-/********************************************************************************************************************************************
-//SR(Tiefe, Breite, Hoehe, Breite Lötfläche, Schriftzug)
-********************************************************************************************************************************************/
-#macro RES_SMD_CHIP_BASE(b,l,h,blf,value)
-union{
-   box{<0    ,0    ,0.01> <blf    ,h+0.05 ,b-0.01>}
-   box{<l    ,0    ,0.01> <l-blf  ,h+0.05 ,b-0.01>}
-   box{<0.05 ,0.05 ,0   > <l-0.05 ,h      ,b     > pigment{White}}
-   box{<blf  ,h    ,0   > <l-blf  ,h+0.07 ,b     > texture{pigment{Gray20} finish{phong 0.5  ambient (0.1 * global_ambient_mul)}}}
-   text {ttf besch_font value 0.1, 0
-      pigment{White} rotate<90,0,0> scale<l/3.5,1,b/1.5>
-      translate<l/3.8,h+0.08,b/3>}
-   texture{col_silver}
-   translate<-l/2,0,-b/2>
-}
-#end
-#macro RES_SMD_CHIP_2512(value)
-RES_SMD_CHIP_BASE(3.2,6.35,0.55,0.6,value)
-#end
-#macro RES_SMD_CHIP_2010(value)
-RES_SMD_CHIP_BASE(2.5,5.0,0.45,0.6,value)
-#end
-#macro RES_SMD_CHIP_1218(value)
-RES_SMD_CHIP_BASE(4.6,3.05,0.45,0.45,value)
-#end
-#macro RES_SMD_CHIP_1210(value)
-RES_SMD_CHIP_BASE(2.6,3.1,0.45,0.5,value)
-#end
-#macro RES_SMD_CHIP_1206(value)
-RES_SMD_CHIP_BASE(1.6,3.1,0.45,0.45,value)
-#end
-#macro RES_SMD_CHIP_0805(value)
-RES_SMD_CHIP_BASE(1.25,2.00,0.45,0.35,value)
-#end
-#macro RES_SMD_CHIP_0603(value)
-RES_SMD_CHIP_BASE(0.80,1.60,0.40,0.25,value)
-#end
-#macro RES_SMD_CHIP_0402(value)
-RES_SMD_CHIP_BASE(0.50,1.00,0.20,0.20,value)
-#end
 
 
 /********************************************************************************************************************************************
