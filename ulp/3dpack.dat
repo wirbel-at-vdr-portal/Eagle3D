@@ -1319,6 +1319,11 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_T
 B25X:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_B25X(:Trimmer-R von Spectrol:Trimmer Resistor from Spectrol
 B25V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_B25V(:Trimmer-R von Spectrol:Trimmer Resistor from Spectrol
 NOEAGLEPAC:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4X0603_0612(:SMD Widerstands array 4x0603 0612:
+
+CAT16:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+CAY16:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+CTS742C083:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+
 R01005:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_01005(:SMT chip resistor 01005:
 R0201:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_0201(:SMT chip resistor 0201:
 R0402:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_0402(:SMT chip resistor 0402:

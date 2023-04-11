@@ -5,4 +5,5 @@
  ******************************************************************************/
 
 #include "RESISTOR/POTI/VISHAY.inc"
+#include "RESISTOR/SMT/array.inc"
 #include "RESISTOR/SMT/chip-resistor.inc"
