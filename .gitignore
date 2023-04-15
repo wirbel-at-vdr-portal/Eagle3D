@@ -347,3 +347,4 @@ doc/devtools/PartTest.pov
 *.exe
 doc/devtools/*.dll
 doc/devtools/*.dll.a
+ulp/00_mytest.ulp

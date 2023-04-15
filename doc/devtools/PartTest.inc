@@ -30,8 +30,7 @@ global_settings{charset utf8}
 #declare global_pcb_layer_dis = array[16] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.535, }
 #declare global_pcb_real_hole = 2.000000;
 
-#include "e3d_tools.inc"
-#include "e3d_user.inc"
+#include "Eagle3D_main.inc"
 
 camera {
   #local cam_loc = <0,325,-122>;

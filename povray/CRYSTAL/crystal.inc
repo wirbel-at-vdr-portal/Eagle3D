@@ -159,7 +159,10 @@
         }
      text {
         ttf global_fontfile_arial value 0.1,0
-        rotate<90,0,0> scale<1.8,1,1.8> translate<-4, 4.61, 0> pigment {
+        rotate <90,0,0>
+        scale <1.8,1,1.8>
+        translate <-4, 4.61, 0>
+        pigment {
            Gray60
            }
         }
