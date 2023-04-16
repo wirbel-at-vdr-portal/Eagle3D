@@ -28,7 +28,7 @@
 #include "SOCKET/folder.inc"
 #include "TRANSFORMER/folder.inc"
 #include "TRANSISTOR/folder.inc"
-
+#include "VARISTOR/folder.inc"
 
 // deprecated includes
 #include "e3d_connector.inc"
