@@ -112,7 +112,6 @@ string conf_file;                                                               
 string lang_file;                                                                   //Dateiname der Sprachdatei
 string mpd_file;                                                                    //Dateiname der manuellen Package Definition
 string brd_file;                                                                    //Dateiname der BRD-Datei (inkl. Pfad)
-string color_t = "texture {T_Gold_5C finish{reflection 0.1}}";                      //Farbe des Widerstand-Toleranzrings
 string color_ukpack = "pigment{Red filter 0.2}";                                    //Farbe für die Markierung unbekannter Bauteile
 string pack_con[];                                                                  //Enthält die Datei 3dpack.dat
 string color_lgt[];                                                                 //Lichtfarben als Sprache
@@ -2087,9 +2086,9 @@ board(B)
                     sprintf(pov_pack,"%sobject {",pov_pack);
                     sprintf(pov_pack,"%s%s",pov_pack,pack_tra[31]);
                     if(pack_tra[1] == "1") sprintf(pov_pack,"%s\"%s\",",pov_pack,E.name);                                    //Name des Gehäuse ausgeben?
-                    if(pack_tra[2] == "1") sprintf(pov_pack,"%s\"%s\",",pov_pack,E.value);                                    //Value des Device ausgeben?
-                    if(pack_tra[3] == "1") sprintf(pov_pack,"%s%s,%s,",pov_pack,val2colors(E.value),color_t);                //Farbringe für Widerstand?
-                    if(pack_tra[5] == "1")                                                                                     //LED-Optionen
+                    if(pack_tra[2] == "1") sprintf(pov_pack,"%s\"%s\",",pov_pack,E.value);                                   //Value des Device ausgeben?
+                    if(pack_tra[3] == "1") sprintf(pov_pack,"%s%s, col_Rcode_gold,",pov_pack,val2colors(E.value));           //Farbringe für Widerstand?
+                    if(pack_tra[5] == "1")                                                                                   //LED-Optionen
                     {
                         real led_height=0;
 

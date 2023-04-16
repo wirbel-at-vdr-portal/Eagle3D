@@ -27,21 +27,20 @@ string val2colors(string val)
     int  mantissa = 0;                          // The mantissa of the value
     int  exponent = 0;                          // The exponent of the value
     int separator = 0;                          // A decimal separator was found
-    // The colors that encode a numeric value
-    string  col[] = {
-        "texture{T_Silver_5E finish{reflection 0.1 ambient (0.1 * global_ambient_mul)}}",            // 0.01
-        "texture{T_Gold_5C finish{reflection 0.1 ambient (0.1 * global_ambient_mul)}}",              // 0.1
-        "texture{pigment{Black}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",               // 0
-        "texture{pigment{DarkBrown}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",           // 1
-        "texture{pigment{Red*0.7}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",             // 2
-        "texture{pigment{Orange}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",              // 3
-        "texture{pigment{Yellow}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",              // 4
-        "texture{pigment{Green*0.7}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",           // 5
-        "texture{pigment{Blue}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",                // 6
-        "texture{pigment{Violet*1.2}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",          // 7
-        "texture{pigment{Gray45}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",              // 8
-        "texture{pigment{White}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}",               // 9
-        "texture{pigment{checker Black White}finish{phong 0.2 ambient (0.1 * global_ambient_mul)}}"  // wrong value
+    string  col[] = {                           // The colored rings on a resistor
+        "col_Rcode_silver",   // 0.01
+        "col_Rcode_gold",     // 0.1
+        "col_Rcode_black",    // 0
+        "col_Rcode_brown",    // 1
+        "col_Rcode_red",      // 2
+        "col_Rcode_orange",   // 3
+        "col_Rcode_yellow",   // 4
+        "col_Rcode_green",    // 5
+        "col_Rcode_blue",     // 6
+        "col_Rcode_violet",   // 7
+        "col_Rcode_grey",     // 8
+        "col_Rcode_white",    // 9
+        "col_Rcode_ERROR"     // wrong value
     };
 
     for ( int i = 0; strchr(tokens,val[i]) != -1; ++i )
@@ -226,17 +225,17 @@ string rval2color(string val)
         while(j>=10) j/=10;
         switch(j)
         {
-                case 0: sprintf(temp[0],"texture{pigment{Black}finish{phong 0.2}}"); break;
-                case 1: sprintf(temp[0],"texture{pigment{DarkBrown}finish{phong 0.2}}"); break;
-                case 2: sprintf(temp[0],"texture{pigment{Red*0.7}finish{phong 0.2}}"); break;
-                case 3: sprintf(temp[0],"texture{pigment{Orange}finish{phong 0.2}}"); break;
-                case 4: sprintf(temp[0],"texture{pigment{Yellow}finish{phong 0.2}}"); break;
-                case 5: sprintf(temp[0],"texture{pigment{Green*0.7}finish{phong 0.2}}"); break;
-                case 6: sprintf(temp[0],"texture{pigment{Blue}finish{phong 0.2}}"); break;
-                case 7: sprintf(temp[0],"texture{pigment{Violet*1.2}finish{phong 0.2}}"); break;
-                case 8: sprintf(temp[0],"texture{pigment{Gray45}finish{phong 0.2}}"); break;
-                case 9: sprintf(temp[0],"texture{pigment{White}finish{phong 0.2}}"); break;
-                default: sprintf(temp[0],"texture{pigment{checker Black White}finish{phong 0.2}}"); break;
+                case 0:  sprintf(temp[0],"col_Rcode_black" ); break;
+                case 1:  sprintf(temp[0],"col_Rcode_brown" ); break;
+                case 2:  sprintf(temp[0],"col_Rcode_red"   ); break;
+                case 3:  sprintf(temp[0],"col_Rcode_orange"); break;
+                case 4:  sprintf(temp[0],"col_Rcode_yellow"); break;
+                case 5:  sprintf(temp[0],"col_Rcode_green" ); break;
+                case 6:  sprintf(temp[0],"col_Rcode_blue"  ); break;
+                case 7:  sprintf(temp[0],"col_Rcode_violet"); break;
+                case 8:  sprintf(temp[0],"col_Rcode_grey"  ); break;
+                case 9:  sprintf(temp[0],"col_Rcode_white" ); break;
+                default: sprintf(temp[0],"col_Rcode_ERROR" ); break;
         }
 
         j=i;
@@ -244,40 +243,38 @@ string rval2color(string val)
         j%=10;
         switch(j)
         {
-                case 0: sprintf(temp[1],"texture{pigment{Black}finish{phong 0.2}}"); break;
-                case 1: sprintf(temp[1],"texture{pigment{DarkBrown}finish{phong 0.2}}"); break;
-                case 2: sprintf(temp[1],"texture{pigment{Red*0.7}finish{phong 0.2}}"); break;
-                case 3: sprintf(temp[1],"texture{pigment{Orange}finish{phong 0.2}}"); break;
-                case 4: sprintf(temp[1],"texture{pigment{Yellow}finish{phong 0.2}}"); break;
-                case 5: sprintf(temp[1],"texture{pigment{Green*0.7}finish{phong 0.2}}"); break;
-                case 6: sprintf(temp[1],"texture{pigment{Blue}finish{phong 0.2}}"); break;
-                case 7: sprintf(temp[1],"texture{pigment{Violet*1.2}finish{phong 0.2}}"); break;
-                case 8: sprintf(temp[1],"texture{pigment{Gray45}finish{phong 0.2}}"); break;
-                case 9: sprintf(temp[1],"texture{pigment{White}finish{phong 0.2}}"); break;
-                default: sprintf(temp[1],"texture{pigment{checker Black White}finish{phong 0.2}}"); break;
+                case 0:  sprintf(temp[1],"col_Rcode_black" ); break;
+                case 1:  sprintf(temp[1],"col_Rcode_brown" ); break;
+                case 2:  sprintf(temp[1],"col_Rcode_red"   ); break;
+                case 3:  sprintf(temp[1],"col_Rcode_orange"); break;
+                case 4:  sprintf(temp[1],"col_Rcode_yellow"); break;
+                case 5:  sprintf(temp[1],"col_Rcode_green" ); break;
+                case 6:  sprintf(temp[1],"col_Rcode_blue"  ); break;
+                case 7:  sprintf(temp[1],"col_Rcode_violet"); break;
+                case 8:  sprintf(temp[1],"col_Rcode_grey"  ); break;
+                case 9:  sprintf(temp[1],"col_Rcode_white" ); break;
+                default: sprintf(temp[1],"col_Rcode_ERROR" ); break;
         }
 
         l = real(i)/100;
         l*= pow(10,k);
 
-        if(l<1) sprintf(temp[2],"texture {T_Silver_5E finish{reflection 0.1}}");
-        else if(l<10) sprintf(temp[2],"texture {T_Gold_5C finish{reflection 0.1}}");
-        else if(l<100) sprintf(temp[2],"texture{pigment{Black}finish{phong 0.2}}");
-        else if(l<1000) sprintf(temp[2],"texture{pigment{DarkBrown}finish{phong 0.2}}");
-        else if(l<10000) sprintf(temp[2],"texture{pigment{Red*0.7}finish{phong 0.2}}");
-        else if(l<100000) sprintf(temp[2],"texture{pigment{Orange}finish{phong 0.2}}");
-        else if(l<1000000) sprintf(temp[2],"texture{pigment{Yellow}finish{phong 0.2}}");
-        else if(l<10000000) sprintf(temp[2],"texture{pigment{Green*0.7}finish{phong 0.2}}");
-        else if(l<100000000) sprintf(temp[2],"texture{pigment{Blue}finish{phong 0.2}}");
-        else if(l<1000000000) sprintf(temp[2],"texture{pigment{Violet*1.2}finish{phong 0.2}}");
-        else if(l<10000000000.0) sprintf(temp[2],"texture{pigment{Gray45}finish{phong 0.2}}");
-        else if(l<100000000000.0) sprintf(temp[2],"texture{pigment{White}finish{phong 0.2}}");
-        else if(l<1000000000000.0) sprintf(temp[2],"texture{pigment{checker Black White}finish{phong 0.2}}");
+        if(l<1)                    sprintf(temp[2],"col_Rcode_silver");
+        else if(l<10)              sprintf(temp[2],"col_Rcode_gold"  );
+        else if(l<100)             sprintf(temp[2],"col_Rcode_black" );
+        else if(l<1000)            sprintf(temp[2],"col_Rcode_brown" );
+        else if(l<10000)           sprintf(temp[2],"col_Rcode_red"   );
+        else if(l<100000)          sprintf(temp[2],"col_Rcode_orange");
+        else if(l<1000000)         sprintf(temp[2],"col_Rcode_yellow");
+        else if(l<10000000)        sprintf(temp[2],"col_Rcode_green" );
+        else if(l<100000000)       sprintf(temp[2],"col_Rcode_blue"  );
+        else if(l<1000000000)      sprintf(temp[2],"col_Rcode_violet");
+        else if(l<10000000000.0)   sprintf(temp[2],"col_Rcode_grey"  );
+        else if(l<100000000000.0)  sprintf(temp[2],"col_Rcode_white" );
+        else if(l<1000000000000.0) sprintf(temp[2],"col_Rcode_ERROR");
 
-        sprintf(out,"%s,%s,%s",temp[0],temp[1],temp[2]);
-
+        sprintf(out,"%s, %s, %s",temp[0],temp[1],temp[2]);
         return out;
-
 }
 
 
