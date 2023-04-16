@@ -1794,35 +1794,7 @@ RES_DIS_TRIM_W_BASE(7,6.6,4.83,NavyBlue,0,1.27)
 
 
 
-/********************************************************************************************************************************************
-//basiert auf Makro von Walter Mücke
-********************************************************************************************************************************************/
-#macro RES_SMD_MELF_BASE(c1,c2,c3,c4)
-union { 
-   object{Round_Cylinder_Union (<-1.75,0,0><-0.9,0>0.7,0.2)texture{col_silver}}
-   object{Round_Cylinder_Union (<0.9,0><1.75,0,0>0.7,0.2)texture{col_silver}}
-   cylinder{<-1.2,0,0><1.2,0,0>0.69 pigment{rgb<0.36,0.42,0.42>} finish{phong 0.5 ambient (0.1 * global_ambient_mul)}}
-   union{
-        torus{0.69,0.01 texture{c1} scale<1,12,1> rotate<90,90,0> translate<0.8,0,0>}
-      torus{0.69,0.01 texture{c2} scale<1,12,1> rotate<90,90,0> translate<0.35,0,0>}
-      torus{0.69,0.01 texture{c3} scale<1,12,1> rotate<90,90,0> translate<-0.1,0,0>}
-      torus{0.685,0.01 texture{c4} scale<1,18,1> rotate<90,90,0> translate<-0.7,0,0>}
-        finish{phong 1.0 ambient (0.1 * global_ambient_mul)}
-    }
-}
-#end
-//Widerstand MICROMELF
-#macro RES_SMD_0102_MLF(c1,c2,c3,c4)
-RES_SMD_MELF_BASE(c1,c2,c3,c4) scale<0.6143,0.786,0.786> translate<0,0.55,0>
-#end
-//Widerstand MiniMELF
-#macro RES_SMD_0204_MLF(c1,c2,c3,c4)
-RES_SMD_MELF_BASE(c1,c2,c3,c4) scale<1,1,1> translate<0,0.7,0>
-#end
-//Widerstand MELF
-#macro RES_SMD_0207_MLF(c1,c2,c3,c4)
-RES_SMD_MELF_BASE(c1,c2,c3,c4) scale<1.614,1.5715,1.5715> translate<0,1.1,0>
-#end
+
 
 
 /********************************************************************************************************************************************
