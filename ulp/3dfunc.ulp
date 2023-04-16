@@ -128,11 +128,11 @@ string val2colors(string val)
     if ( mantissa == 0 )
     {
         // There was an error...
-        out = col[12];
-        out += ",";
-        out += col[12];
-        out += ",";
-        out += col[12];
+        out = col[12];  // col_Rcode_ERROR, wrong value
+        out += ", ";
+        out += col[12]; // col_Rcode_ERROR, wrong value
+        out += ", ";
+        out += col[12]; // col_Rcode_ERROR, wrong value
     }
     else
     {
@@ -153,9 +153,9 @@ string val2colors(string val)
         }
         // Builds the result
         out = col[2+mantissa/10];
-        out += ",";
+        out += ", ";
         out += col[2+mantissa%10];
-        out += ",";
+        out += ", ";
         out += col[2+exponent];
     }
     return out;
