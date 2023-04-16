@@ -99,13 +99,51 @@
   RES_SMD_CHIP_ARRAY_BASE(3.20,1.60,0.55,0.40,0.30,0.80,0.00,0.30,0.10,"concave",value)
 #end
 
+// provide upscaled 4x0805 packages.
+#macro RES_SMD_CHIP_ARRAY_4x0805_convex(value)
+  RES_SMD_CHIP_ARRAY_4x0603_convex(value)  scale <5.08/3.20, 0.8/0.8, 2.20/1.60>
+#end
+
+#macro RES_SMD_CHIP_ARRAY_4x0805_concave(value)
+  RES_SMD_CHIP_ARRAY_4x0603_concave(value) scale <5.08/3.20, 0.8/0.8, 2.20/1.60>
+#end
+
+// provide downscaled 4x0402 packages.
+#macro RES_SMD_CHIP_ARRAY_4x0402_convex(value)
+  RES_SMD_CHIP_ARRAY_4x0603_convex(value)  scale <2.00/3.20, 0.5/0.8, 1.00/1.60>
+#end
+
+#macro RES_SMD_CHIP_ARRAY_4x0402_concave(value)
+  RES_SMD_CHIP_ARRAY_4x0603_concave(value) scale <2.00/3.20, 0.5/0.8, 1.00/1.60>
+#end
+
+
+// provide downscaled 4x0201 packages.
+#macro RES_SMD_CHIP_ARRAY_4x0201_convex(value)
+  RES_SMD_CHIP_ARRAY_4x0603_convex(value)  scale <1.40/3.20, 0.35/0.8, 0.60/1.60>
+#end
+
+#macro RES_SMD_CHIP_ARRAY_4x0201_concave(value)
+  RES_SMD_CHIP_ARRAY_4x0603_concave(value) scale <1.40/3.20, 0.35/0.8, 0.60/1.60>
+#end
+
 
 
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
+//resistor-dil:EXB18V=RES_SMD_CHIP_ARRAY_4x0201_convex(:SMD cap array 4x0201 convex
+//resistor-dil:EXB28V=RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex
+//resistor-dil:EXB38V=RES_SMD_CHIP_ARRAY_4x0603_convex(:SMD cap array 4x0603 convex
+//resistor-dil:EXBN8V=RES_SMD_CHIP_ARRAY_4x0402_concave(:SMD cap array 4x0402 concave
+//resistor-dil:EXBS8V=RES_SMD_CHIP_ARRAY_4x0805_concave(:SMD cap array 4x0805 concave
+//resistor-dil:EXBV8V=RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+//resistor-dil:YC124=RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex:
+//resistor-dil:4X0402ARV341=RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex
 //resistor-dil:CAT16=RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave
-//resistor-dil:CAY16=RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave
-//resistor-dil:CTS742C083=RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave
+//resistor-dil:CAY16=RES_SMD_CHIP_ARRAY_4x0603_convex(:SMD cap array 4x0603 convex
+//resistor-dil:0603-ARC=RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave
+//resistor-dil:0603-ARV=RES_SMD_CHIP_ARRAY_4x0603_convex(:SMD cap array 4x0603 convex
+//resistor-net:CTS742C083=RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave
 // end assignment

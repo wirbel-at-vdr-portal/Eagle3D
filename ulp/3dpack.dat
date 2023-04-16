@@ -1318,12 +1318,19 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_T
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TSM_4ZJ(:SMD Trimmer Multiturn Cermet Sealed from Vishay:
 B25X:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_B25X(:Trimmer-R von Spectrol:Trimmer Resistor from Spectrol
 B25V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_B25V(:Trimmer-R von Spectrol:Trimmer Resistor from Spectrol
-NOEAGLEPAC:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4X0603_0612(:SMD Widerstands array 4x0603 0612:
-
-CAT16:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
-CAY16:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
-CTS742C083:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
-
+4X0402ARV341:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex:
+CAT16:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+CAY16:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_convex(:SMD cap array 4x0603 convex:
+0603-ARC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+0603-ARV:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_convex(:SMD cap array 4x0603 convex:
+CTS742C083:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+EXB18V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0201_convex(:SMD cap array 4x0201 convex:
+EXB28V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex:
+EXB38V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_convex(:SMD cap array 4x0603 convex:
+EXBN8V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0402_concave(:SMD cap array 4x0402 concave:
+EXBS8V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0805_concave(:SMD cap array 4x0805 concave:
+EXBV8V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0603_concave(:SMD cap array 4x0603 concave:
+YC124:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex:
 R01005:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_01005(:SMT chip resistor 01005:
 R0201:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_0201(:SMT chip resistor 0201:
 R0402:0:0:0:1:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_0402(:SMT chip resistor 0402:
