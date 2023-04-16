@@ -8,3 +8,4 @@
 #include "RESISTOR/SMT/MELF.inc"
 #include "RESISTOR/SMT/array.inc"
 #include "RESISTOR/SMT/chip-resistor.inc"
+#include "RESISTOR/THT/wired.inc"

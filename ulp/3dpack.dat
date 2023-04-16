@@ -1170,25 +1170,32 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_C
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_CERAMIC_RADIAL_PV7_050MM(:resistor:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_CERAMIC_RADIAL_PV10_050MM(:resistor:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_CERAMIC_RADIAL_PV10S_076MM(:resistor:
-0204/5:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0204_054MM(:Diskreter Widerstand 0,15W 5,4MM Raster:Discrete Resistor 0,15W 5,4MM Grid
-0204/7:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0204_075MM(:Diskreter Widerstand 0,15W 7,5MM Raster:Discrete Resistor 0,15W 7,5MM Grid
-0204V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0204_025MMV(:Diskreter Widerstand 0,15W stehend 100mil:Discrete Resistor 0,15W Vertical 100mil
-0207/2V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0207_025MMV(:Diskreter Widerstand 0,25W stehend 100mil:Discrete Resistor 0,25W Vertical 100mil
-0207/5V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0207_050MMV(:Diskreter Widerstand 0,25W stehend 200mil:Discrete Resistor 0,25W Vertical 200mil
-0207/7:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0207_075MM(:Diskreter Widerstand 0,3W 7,5MM Raster:Discrete Resistor 0,3W 7,5MM Grid
-0207/10:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0207_10MM(:Diskreter Widerstand 0,3W 10MM Raster:Discrete Resistor 0,3W 10MM Grid
-0207/12:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0207_12MM(:Diskreter Widerstand 0,3W 12MM Raster:Discrete Resistor 0,3W 12MM Grid
-0207/15:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0207_15MM(:Diskreter Widerstand 0,3W 15MM Raster:Discrete Resistor 0,3W 15MM Grid
-0309/10:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0309_10MM(:Diskreter Widerstand 0,35W 400mil:Discrete Resistor 0,35W 400mil
-0309/12:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0309_12MM(:Diskreter Widerstand 0,35W 500mil:Discrete Resistor 0,35W 500mil
-0309V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0309_025MMV(:Diskreter Widerstand 0,35W stehend 100mil:Discrete Resistor 0,35W 100mil vertical
-0414/15:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0414_15MM(:Diskreter Widerstand 0,5W 600mil:Discrete Resistor 0,5W 600mil
-0414V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0414_050MMV(:Diskreter Widerstand 0,5W stehend 200mil:Discrete Resistor 0,5W 200mil vertical
-0617/17:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0617_17MM(:Diskreter Widerstand 1W 700mil:Discrete Resistor 1W 700mil
-0617/22:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0617_22MM(:Diskreter Widerstand 1W 900mil:Discrete Resistor 1W 900mil
-0617V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0617_050MMV(:Diskreter Widerstand 1W stehend 200mil:Discrete Resistor 1W 200mil vertical
-0922/22:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0922_22MM(:Diskreter Widerstand 1,3W 900mil:Discrete Resistor 1,3W 900mil
-0922V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:-1.27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_0922_075MMV(:Diskreter Widerstand 1,3W stehend 300mil:Discrete Resistor 1,3W vertical 300mil
+0204V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0204_025mm_vertical(:THT resistor 0204 vertical:
+0204/5:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0204_054mm(:THT resistor 0204:
+0204/7:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0204_075mm(:THT resistor 0204:
+0207/2V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0207_025mm_vertical(:THT resistor 0207 vertical:
+0207/5V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0207_050mm_vertical(:THT resistor 0207 vertical:
+0207/7:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0207_075mm(:THT resistor 0207:
+0207/10:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0207_10mm(:THT resistor 0207:
+0207/12:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0207_12mm(:THT resistor 0207:
+0207/15:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0207_15mm(:THT resistor 0207:
+0309/10:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0309_10mm(:THT resistor 0309:
+0309/12:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0309_12mm(:THT resistor 0309:
+0309V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0309_025mm_vertical(:THT resistor 0309 vertical:
+0411V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0411_037mm_vertical(:THT resistor 0411 vertical:
+0411/12:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0411_12mm(:THT resistor 0411:
+0411/15:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0411_15mm(:THT resistor 0411:
+0414/15:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0414_15mm(:THT resistor 0414:
+0414V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0414_050mm_vertical(:THT resistor 0414:
+P0613V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0613_050mm_vertical(:THT resistor 0613 vertical:
+P0613/15:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0613_15mm(:THT resistor 0613:
+0617/17:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0617_17mm(:THT resistor 0617:
+0617/22:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0617_22mm(:THT resistor 0617:
+0617V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0617_050mm_vertical(:THT resistor 0617 vertical:
+P0817V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0817_050mm_vertical(:THT resistor 0817 vertical:
+P0817/22:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0817_22mm(:THT resistor 0817:
+0922/22:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0922_22mm(:THT resistor 0922:
+0922V:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_0922_075mm_vertical(:THT resistor 0922 vertical:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_PR_01_12MM(:1W Res D2.5 x L8.5:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_PR_01_15MM(:1W Res D2.5 x L8.5:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_PR_01_17MM(:1W Res D2.5 x L8.5:
