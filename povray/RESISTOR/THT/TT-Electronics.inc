@@ -74,7 +74,7 @@
         pigment {
            DarkGreen
            }
-        }    
+        }
 
      text {
         ttf global_fontfile_arial_bold value 0.5,0
@@ -122,16 +122,15 @@
         scale <sx,2,0.1>
         translate <dx,8.5,-0.73>
         }
- 
      union {
-        #if(positionH=off)
+        #if(positionH = off)
            box {
               <-B/2-0.25,-3.175,-0.127> <-B/2+0.25,4,+0.127>
               }
            box {
               <+B/2+0.25,-3.175,-0.127> <+B/2-0.25,4,+0.127>
               }
-        #end        
+        #end
         difference{
            box {
               <-B/2-0.7,0,-0.127> <-B/2+0.7,4,+0.127>
@@ -146,8 +145,8 @@
               rotate -30*z
               translate <-B/2+0.83,-0,0>
               }
-           }        
-        difference{
+           }
+        difference {
            box {
               <+B/2+0.7,0,-0.127>
               <+B/2-0.7,4,+0.127>
@@ -163,7 +162,6 @@
               translate<+B/2+0.83,-0,0>
               }
            }
-        
         box {
            <-B/2-0.7,2.2-0.254,-0.127-0.6-0.254> <-B/2+0.7,4,+0.127-0.6-0.254>
            }
@@ -177,7 +175,6 @@
            col_silver
            }
         }
-    
      rotate pRot 
      translate pTra
      }
