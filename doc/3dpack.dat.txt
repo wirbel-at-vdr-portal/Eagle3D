@@ -1,7 +1,7 @@
 0  A  -                  Eagle part(s), ';' getrennt.
 1  B  - immer '0', 1:    Name des Gehäuse ausgeben?
 2  C  - 0,1              Value des Device ausgeben?
-3  D  -                  Farbringe für Widerstand?
+3  D  -                  Widerstands farbcodes als 4x textur parameter an Macro übergeben? 
 4  E  -                  1: SMD-Höhenoffset um Kupferhöhe in y
 5  F  -                  1: LED-Dialog, 2:LCD-Dialog ohne Backlight option, 3:LCD-Dialog mit Backlight option
 6  G  -                  1: Sockel Dialog (für ICs?)
