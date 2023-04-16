@@ -7,7 +7,7 @@
 
 #declare e3d_environment = off;   
 
-#include "e3d_tools.inc"    
+  
 
 
 

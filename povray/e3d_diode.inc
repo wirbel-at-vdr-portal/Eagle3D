@@ -8,7 +8,7 @@
 #ifndef(__diode_inc)
 #declare __diode_inc = true;
 
-#include "e3d_tools.inc"
+
 
 
 // ////////////////////////////////////////////////////////////

@@ -8,9 +8,6 @@
 #ifndef(__connector_inc)
 #declare __connector_inc = true;
 
-#include "e3d_tools.inc"
-
-
 
 
 
