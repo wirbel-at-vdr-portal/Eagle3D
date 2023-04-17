@@ -1423,7 +1423,7 @@ NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_THT_B72214S0102K101(:THT varistor EPSON SIOV series:
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_THT_B72220S0102K101(:THT varistor EPSON SIOV series:
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_72_PT(:Trimmer 72PT BI Technologies:
-PT-10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_PT10_H_10(:PT10:PT10
+PT-10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_PT10LV10(:PIHER PT-10 resistor trimmer PT10LV10:
 RTRIM64W:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_64Y(:Trimmer-R von Spectrol:Trimmer Resistor  from Spectrol
 RTRIM64Y:0:1:0:0:0:0:0:0:0:0:0:0:0:0:-1.27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_64W(:Trimmer-R von Spectrol:Trimmer Resistor  from Spectrol
 S64Y:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_S64Y(:Trimmer-R von Spectrol:Trimmer Resistor  from Spectrol
