@@ -10,4 +10,5 @@
 #include "RESISTOR/SMT/array.inc"
 #include "RESISTOR/SMT/chip-resistor.inc"
 #include "RESISTOR/THT/TT-Electronics.inc"
+#include "RESISTOR/THT/array.inc"
 #include "RESISTOR/THT/wired.inc"

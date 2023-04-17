@@ -1257,30 +1257,30 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_R
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_RB_57_30MM_H(:7W Resistor:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_RB_60_45MM_H(:8W Resistor:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_RB_61_30MM_H(:5W Resistor:
-RN-5:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_5(:SIL-Netzwerk 5Pin 4R:SIL-Network 5Pin 4R
-RN-6:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_6(:SIL-Netzwerk 6Pin 5R:SIL-Network 6Pin 5R
-RN-7:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_7(:SIL-Netzwerk 7Pin 6R:SIL-Network 7Pin 6R
-RN-8:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_8(:SIL-Netzwerk 8Pin 7R:SIL-Network 8Pin 7R
-RN-9:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_9(:SIL-Netzwerk 9Pin 8R:SIL-Network 9Pin 8R
-RN-10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_10(:SIL-Netzwerk 10Pin 9R:SIL-Network 10Pin 9R
-RN-11:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_11(:SIL-Netzwerk 11Pin 10R:SIL-Network 11Pin 10R
-SIL4:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_4(:SIL-Netzwerk 4Pin:SIL-Network 5Pin 4R
-SIL5:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_5(:SIL-Netzwerk 5Pin:SIL-Network 6Pin 5R
-SIL6:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_6(:SIL-Netzwerk 6Pin:SIL-Network 7Pin 6R
-SIL7:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_7(:SIL-Netzwerk 7Pin:SIL-Network 8Pin 7R
-SIL8:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_8(:SIL-Netzwerk 8Pin:SIL-Network 9Pin 8R
-SIL9:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_9(:SIL-Netzwerk 9Pin:SIL-Network 10Pin 9R
-SIL10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_10(:SIL-Netzwerk 10Pin:SIL-Network 11Pin 10R
-SIL11:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_11(:SIL-Netzwerk 11Pin:SIL-Network 12Pin 11R
-SIL12:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_12(:SIL-Netzwerk 12Pin:SIL-Network 13Pin 12R
-SIL13:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_13(:SIL-Netzwerk 13Pin:SIL-Network 14Pin 13R
-SIL14:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_14(:SIL-Netzwerk 14Pin:SIL-Network 15Pin 14R
-SIL05A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_5(:SIL-Netzwerk 5Pin:SIL-Network 6Pin 5D
-SIL05C:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_5(:SIL-Netzwerk 5Pin:SIL-Network 6Pin 5D                                                   
-SIL08A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_8(:SIL-Netzwerk 8Pin:SIL-Network 9Pin 8D
-SIL08C:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_8(:SIL-Netzwerk 8Pin:SIL-Network 9Pin 8D
-SIL09A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_9(:SIL-Netzwerk 9Pin:SIL-Network 10Pin 9D
-SIL09C:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_SIL_9(:SIL-Netzwerk 9Pin:SIL-Network 10Pin 9D
+RN-5:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL5(:THT SIL resistor network:
+RN-6:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL6(:THT SIL resistor network:
+RN-7:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL7(:THT SIL resistor network:
+RN-8:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL8(:THT SIL resistor network:
+RN-9:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL9(:THT SIL resistor network:
+RN-10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL10(:THT SIL resistor network:
+RN-11:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL11(:THT SIL resistor network:
+SIL4:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL4(:THT SIL resistor network:
+SIL5:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL5(:THT SIL resistor network:
+SIL6:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL6(:THT SIL resistor network:
+SIL7:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL7(:THT SIL resistor network:
+SIL8:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL8(:THT SIL resistor network:
+SIL9:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL9(:THT SIL resistor network:
+SIL10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL10(:THT SIL resistor network:
+SIL11:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL11(:THT SIL resistor network:
+SIL12:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL12(:THT SIL resistor network:
+SIL13:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL13(:THT SIL resistor network:
+SIL14:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL14(:THT SIL resistor network:
+SIL05A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL5(:THT SIL resistor network:
+SIL05C:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL5(:THT SIL resistor network:
+SIL08A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL8(:THT SIL resistor network:
+SIL08C:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL8(:THT SIL resistor network:
+SIL09A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL9(:THT SIL resistor network:
+SIL09C:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_ARRAY_SIL9(:THT SIL resistor network:
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_THT_B72205S0110K101(:THT varistor EPSON SIOV series:
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_THT_B72207S0110K101(:THT varistor EPSON SIOV series:
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_THT_B72210S0110K101(:THT varistor EPSON SIOV series:

@@ -693,70 +693,7 @@ RES_DIS_RB_BASE(value,23,7,12*2.54,30,0.88,8)
 #end
 
 
-/********************************************************************************************************************************************
-//SIL-Netzwerk
-********************************************************************************************************************************************/
-#macro RES_DIS_SIL_BASE(pin)
-union{
-    box{<-pin*1.27+0.5,0.5,-0.5><pin*1.27-0.5,3,0.5> pigment{rgb<1,0.83,0.61>}}
-    sphere_sweep{
-      linear_spline,5,
-      <-pin*1.27+0.5,0.5,0>, 0.5
-      <-pin*1.27+0.5,3,0>, 0.5
-      <pin*1.27-0.5,3,0>, 0.5
-      <pin*1.27-0.5,0.5,0>, 0.5
-      <-pin*1.27+0.5,0.5,0>, 0.5
-      pigment{rgb<1,0.83,0.61>}}
-  union{
-    #local i = 0;
-    #while(i<pin)
-      box{<-0.2,-4,-0.1><0.2,-1,0.1> translate<2.54*i,0,0>}
-      box{<-0.3,-1,-0.1><0.3,0,0.1> translate<2.54*i,0,0>}
-      #local i = i+1;
-    #end
-    translate<-(pin-1)/2*2.54,0,0>}
-    intersection{
-        box{<-pin*1.27+0.5,0.5,-0.501><pin*1.27-0.5,3,0.501>}
-        union{
-                text{ttf besch_font value 0.8, 0 scale<2,2,1> translate<-pin/2*2.54+2.5,1.2,-0.7>}
-                cylinder{<0,0,0><0,0,-2>0.4 translate<-(pin-1)*1.27,1.2,0>}}
-        pigment{Black}}
-  texture{col_silver} translate<0,1.2,0>}
-#end
 
-#macro RES_DIS_SIL_4(value)
-RES_DIS_SIL_BASE(4)
-#end
-#macro RES_DIS_SIL_5(value)
-RES_DIS_SIL_BASE(5)
-#end
-#macro RES_DIS_SIL_6(value)
-RES_DIS_SIL_BASE(6)
-#end
-#macro RES_DIS_SIL_7(value)
-RES_DIS_SIL_BASE(7)
-#end
-#macro RES_DIS_SIL_8(value)
-RES_DIS_SIL_BASE(8)
-#end
-#macro RES_DIS_SIL_9(value)
-RES_DIS_SIL_BASE(9)
-#end
-#macro RES_DIS_SIL_10(value)
-RES_DIS_SIL_BASE(10)
-#end
-#macro RES_DIS_SIL_11(value)
-RES_DIS_SIL_BASE(11)
-#end
-#macro RES_DIS_SIL_12(value)
-RES_DIS_SIL_BASE(12)
-#end
-#macro RES_DIS_SIL_13(value)
-RES_DIS_SIL_BASE(13)
-#end
-#macro RES_DIS_SIL_14(value)
-RES_DIS_SIL_BASE(14)
-#end
 
 
 
