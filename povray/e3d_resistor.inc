@@ -346,104 +346,13 @@ RES_DIS_TRIM_72_BASE(value,0)
 
 
 
-/********************************************************************************************************************************************
-//Macros for TS53Y serie, SMD Trimmer Single Turn Cermet Sealed from Vishay
-//Designed by Philippe Boucheny <philippe.boucheny(at)free.fr>
-//Rev. 1.0  12/04/06  
-********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_TS53_BASE (Type)
-union{
-
-    difference{
-        box { <-2.5, +0.4, -2.5>, <2.5, 2.7, 2.5> }
-        box { <-2.3, +0.1, -2.6>, <2.3, 2.5, 2.6> }
-        box { <-0.1, +1.4, -1.25>, <0.21, 2.8, 1.25>  translate -2.5*x}
-        box { <-0.1, +1.4, -1.25>, <0.21, 2.8, 1.25>  translate +2.5*x}
-        cylinder { <0, 2.4, 0>, <0, 2.8, 0>, 1.25 }
-        pigment{color red 0.758 green 0.694 blue 0.48}
-    }
-    
-    text {ttf global_fontfile_eagle3d "0" 0.01, 0 pigment{Black} scale 1 rotate<90,0,0> translate<+1,+2.701,-2.1>}      // Marking
-    text {ttf global_fontfile_arial value 0.05, 0 pigment{Black} scale 1 rotate<90,0,0> translate<-2.2,+2.701,-2.1>}  // Marking
-    text {ttf global_fontfile_arial "99" 0.01, 0 pigment{Black} scale 1 rotate<90,0,0> translate<-2.2,+2.701,+1.5>}  // Marking
-    text {ttf global_fontfile_arial "18" 0.01, 0 pigment{Black} scale 1 rotate<90,0,0> translate<+1.2,+2.701,+1.5>}  // Marking
-
-    difference{
-        union {
-            box { <-2.3, +0.2, -2.5>, <2.3, 2.5, 2.5> }
-            box { <-0.05, +1.4, -1.25>, <0.21, 2.5, 1.25>  translate -2.5*x}
-            box { <-0.05, +1.4, -1.25>, <0.21, 2.5, 1.25>  translate +2.5*x}
-        }
-        box { <-0.25, +2.2, -1>, <0.25, 2.7, 1> }
-        box { <-1, +2.2, -0.25>, <1, 2.7, 0.25> }
-        pigment{color red 0.937 green 0.878 blue 0.776}
-        finish {diffuse 0.5 specular 0.5  ambient (0.1 * global_ambient_mul)}
-    }
-    
-    union{
-        box{<-0.45, 0, -2.5> <+0.45, 1.4, -2.7> translate -1.15*x}
-        box{<-0.45, 0, -2.5> <+0.45, 1.4, -2.7> translate +1.15*x}
-        box{<-0.5, 0, +2.5> <+0.5, 1.4, +2.7>}
-        #if(Type=0)
-            box{<-0.45, 0, -2.5> <+0.45, 0.2, -3.2> translate -1.15*x}
-            box{<-0.45, 0, -2.5> <+0.45, 0.2, -3.2> translate +1.15*x}
-            box{<-0.5, 0, +2.5> <+0.5, 0.2, +3.2>}
-        #end
-        #if(Type=1)
-            box{<-0.45, 0, -2.7> <+0.45, 0.2, -1.2> translate -1.15*x}
-            box{<-0.45, 0, -2.7> <+0.45, 0.2, -1.2> translate +1.15*x}
-            box{<-0.5, 0, +2.7> <+0.5, 0.2, +1.2>}
-        #end
-        pigment{Silver}
-    }
-}
-#end
-#macro RES_DIS_TRIM_TS53_YL(value)
-RES_DIS_TRIM_TS53_BASE (0)
-#end
-#macro RES_DIS_TRIM_TS53_YJ(value)
-RES_DIS_TRIM_TS53_BASE (1)
-#end
 
 
 
 
 
-/********************************************************************************************************************************************
-// Rf = 1.27 oder 0 (Dreieck oder Linie); D_schraube = Abstand der Schraube aus
-// der Mitte
-********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_W_BASE(B,T,H,Farbe,D_schraube,Rf )
-union {
-    object{RES_DIS_TRIM_KOERPER(B,T,H,Farbe)}
-    //Anschlußbeine zuordnen
-    union {
-      cylinder{<-2.54,1,Rf-0.635> <-2.54,-3,Rf-0.635> 0.25}
-      cylinder{<2.54,1,Rf-0.635> <2.54,-3,Rf-0.635> 0.25}
-      cylinder{<0,1,1.27-0.635> <0,-3,1.27-0.635> 0.25}
-      texture{col_silver}
-    }
-    difference{
-      cylinder{<0,0,0> <0, 1.1> 1.015}
-      box     {<1.5,0.7,0.2> <-1.5,2.5,-0.2>}
-      texture{col_silver}
-      rotate<0,75,0>
-      rotate<90,0,0>
-      translate <D_schraube,H-1.3,T/2>
-    }
-    text {ttf besch_font  value     0.1,0 scale<1.4,1.4,1.4> pigment{Black}
-          rotate<-270,180,0> translate<B/2-1.0,  H+0.1, T/2-3.0>}
-    text {ttf besch_font "3  2  1"  0.1,0 scale<1.5,1.5,1.5> pigment{Black}
-          rotate<0   ,180,0> translate<B/2-1.75, 0.52, T/2+0.1>}
-  }
-#end
-// waagerecht
-#macro RES_DIS_TRIM_B25X(value)
-RES_DIS_TRIM_W_BASE(7,6.6,4.83,NavyBlue,0,-1.27)
-#end
-#macro RES_DIS_TRIM_B25V(value)
-RES_DIS_TRIM_W_BASE(7,6.6,4.83,NavyBlue,0,1.27)
-#end
+
+
 
 
 

@@ -6,8 +6,9 @@
 
 /*******************************************************************************
  * Trimmer VISHAY Spectrol Series 64
- * - sx screw pos in x
- * - pinY pin offset in y
+ * - col   colour variant
+ * - Type  type identifier, see below
+ * 19.04.2023, wk
  ******************************************************************************/
 #macro RES_DIS_TRIM_SPECTROL1_BASE(X,Y,Z,col,Type)
   union {
@@ -165,6 +166,9 @@
 
 /*******************************************************************************
  * Spectrol Series S64
+ * - col   colour variant
+ * - Type  type identifier, see below
+ * 20.04.2023, wk
  ******************************************************************************/
 #macro RES_DIS_TRIM_SPECTROL2_BASE(X,Y,Z,col,Type)
   union {
@@ -192,7 +196,6 @@
      }
 #end
 
-
 #macro RES_THT_TRIM_S64Y(value)
   RES_DIS_TRIM_SPECTROL2_BASE(9.52,4.83,9.52,OldGold,"S64Y")
 #end
@@ -201,6 +204,7 @@
   RES_DIS_TRIM_SPECTROL2_BASE(9.52,4.83,9.52,OldGold,"S64W")
   translate <0,0,1.27>
 #end
+
 
 
 /*******************************************************************************
@@ -504,6 +508,7 @@
 #end
 
 
+
 /*******************************************************************************
  * Vishay TSM4 series
  * 5 mm Square Surface Mount Miniature Trimmers Multi-Turn Cermet Sealed
@@ -712,6 +717,179 @@
   TSM4series_BASE("TSM4 ZJ",4.6)
 #end
 
+// same style of trimmers, by Nidec Copal.
+#macro RES_SMT_TRIM_SM42A(value)
+  TSM4series_BASE("TSM4 ZJ",4.6)
+  rotate <0,-90,0>
+#end
+
+#macro RES_SMT_TRIM_SM42B(value)
+  TSM4series_BASE("TSM4 ZL",4.6)
+  rotate <0,-90,0>
+#end
+
+#macro RES_SMT_TRIM_SM42W(value)
+  TSM4series_BASE("TSM4 YJ",5.1)
+#end
+
+#macro RES_SMT_TRIM_SM42X(value)
+  TSM4series_BASE("TSM4 YL",5.1)
+#end
+
+
+
+/*******************************************************************************
+ * Vishay 5mm Square Surface Mount Miniature Trimmers Single-Turn
+ * Philippe Boucheny <philippe.boucheny(at)free.fr>
+ * Rev. 1.0  12/04/06
+ ******************************************************************************/
+#macro TS53series_BASE (Type)
+  union {
+     difference {
+        box {
+           <-2.5, +0.4, -2.5>, <2.5, 2.7, 2.5>
+           }
+        box {
+           <-2.3, +0.1, -2.6>, <2.3, 2.5, 2.6>
+           }
+        box {
+           <-0.1, +1.4, -1.25>, <0.21, 2.8, 1.25>
+           translate -2.5*x
+           }
+        box {
+           <-0.1, +1.4, -1.25>, <0.21, 2.8, 1.25>
+           translate +2.5*x
+           }
+        cylinder {
+           <0, 2.4, 0>, <0, 2.8, 0>, 1.25
+           }
+        pigment {
+           color red 0.758 green 0.694 blue 0.48
+           }
+        }
+     text {
+        ttf global_fontfile_eagle3d "0" 0.01, 0
+        pigment {
+           Black
+           }
+        scale 1
+        rotate <90,0,0>
+        translate <+1,+2.701,-2.1>
+        }
+     // Marking
+     text {
+        ttf global_fontfile_arial value 0.05, 0
+        pigment {
+           Black
+           }
+        scale 1
+        rotate <90,0,0>
+        translate <-2.2,+2.701,-2.1>
+        }
+     // Marking
+     text {
+        ttf global_fontfile_arial "99" 0.01, 0
+        pigment {
+           Black
+           }
+        scale 1
+        rotate <90,0,0>
+        translate <-2.2,+2.701,+1.5>
+        }
+     // Marking
+     text {
+        ttf global_fontfile_arial "18" 0.01, 0
+        pigment {
+           Black
+           }
+        scale 1
+        rotate <90,0,0>
+        translate <+1.2,+2.701,+1.5>
+        }
+     // Marking
+     difference {
+        union {
+           box {
+              <-2.3, +0.2, -2.5>, <2.3, 2.5, 2.5>
+              }
+           box {
+              <-0.05, +1.4, -1.25>, <0.21, 2.5, 1.25>
+              translate -2.5*x
+              }
+           box {
+              <-0.05, +1.4, -1.25>, <0.21, 2.5, 1.25>
+              translate +2.5*x
+              }
+           }
+        box {
+           <-0.25, +2.2, -1>, <0.25, 2.7, 1>
+           }
+        box {
+           <-1, +2.2, -0.25>, <1, 2.7, 0.25>
+           }
+        pigment {
+           color red 0.937 green 0.878 blue 0.776
+           }
+        finish {
+           diffuse 0.5
+           specular 0.5
+           ambient (0.1 * global_ambient_mul)
+           }
+        }
+     union {
+        box {
+           <-0.45, 0, -2.5> <+0.45, 1.4, -2.7>
+           translate -1.15*x
+           }
+        box {
+           <-0.45, 0, -2.5> <+0.45, 1.4, -2.7>
+           translate +1.15*x
+           }
+        box {
+           <-0.5, 0, +2.5> <+0.5, 1.4, +2.7>
+           }
+        #if (Type = "TS53YL")
+           box {
+              <-0.45, 0, -2.5> <+0.45, 0.2, -3.2>
+              translate -1.15*x
+              }
+           box {
+              <-0.45, 0, -2.5> <+0.45, 0.2, -3.2>
+              translate +1.15*x
+              }
+           box {
+              <-0.5, 0, +2.5> <+0.5, 0.2, +3.2>
+              }
+        #end
+        #if (Type = "TS53YJ")
+           box {
+              <-0.45, 0, -2.7> <+0.45, 0.2, -1.2>
+              translate -1.15*x
+              }
+           box {
+              <-0.45, 0, -2.7> <+0.45, 0.2, -1.2>
+              translate +1.15*x
+              }
+           box {
+              <-0.5, 0, +2.7> <+0.5, 0.2, +1.2>
+              }
+        #end
+        pigment {
+           Silver
+           }
+        }
+     }
+#end
+
+#macro RES_SMT_TRIM_TS53YL(value)
+  TS53series_BASE("TS53YL")
+#end
+
+#macro RES_SMT_TRIM_TS53YJ(value)
+  TS53series_BASE("TS53YJ")
+#end
+
+
 
 
 /*******************************************************************************
@@ -733,4 +911,10 @@
 //=RES_SMT_TRIM_TSM4_YJ(:Vishay TSM4 series SMT trim resistor
 //=RES_SMT_TRIM_TSM4_ZL(:Vishay TSM4 series SMT trim resistor
 //rcl:RTRIM5X=RES_SMT_TRIM_TSM4_ZJ(:Vishay TSM4 series SMT trim resistor
-// end assignment
+//SM-42/43A=RES_SMT_TRIM_SM42A(:SMT trim resistor SM42/SM43:
+//SM-42/43B=RES_SMT_TRIM_SM42B(:SMT trim resistor SM42/SM43:
+//SM-42/43W=RES_SMT_TRIM_SM42W(:SMT trim resistor SM42/SM43:
+//SM-42/43X=RES_SMT_TRIM_SM42X(:SMT trim resistor SM42/SM43:
+//rcl:RTRIM4G/J=RES_SMT_TRIM_TS53YL(:Vishay TS53YL SMT trim resistor
+//=RES_SMT_TRIM_TS53YJ(:Vishay TS53YJ SMT trim resistor
+// end assignment 
