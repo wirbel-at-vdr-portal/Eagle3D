@@ -504,6 +504,215 @@
 #end
 
 
+/*******************************************************************************
+ * Vishay TSM4 series
+ * 5 mm Square Surface Mount Miniature Trimmers Multi-Turn Cermet Sealed
+ * Philippe Boucheny <philippe.boucheny(at)free.fr>
+ * Rev. 1.0  26/03/06
+ ******************************************************************************/
+#macro TSM4series_BASE(Type,Lg)
+  union {
+     difference {
+        box {
+           <-2.4,0.2,-1.75> <+2.4,Lg+0.2,+1.75>
+           }
+        cylinder {
+           <1.55,4,0.95> <1.55,Lg+0.3,0.95> 0.75
+           }
+        box {
+           <-2.1,0.5,0> <+2.1,Lg+0.2-0.3,-1.8>
+           }
+        pigment {
+           Gray70
+           }
+        finish {
+           diffuse 0.5
+           specular 0.5
+           ambient (0.1 * global_ambient_mul)
+           }
+        }
+     difference {
+        cylinder {
+           <1.55,4.4,0.95> <1.55,Lg+0.2,0.95> 0.73
+           }
+        box {
+           <1.55-0.2,4.5,-1.75> <1.55+0.2,Lg+0.3,+1.75>
+           }
+        texture {
+           col_gold
+           }
+        }
+     box {
+        <-2.1,0.5,0> <+2.1,Lg+0.2-0.3,-1.74>
+        texture {
+           pigment {
+              Brown
+              }
+           finish {
+              diffuse 0.5
+              specular 0.5
+              ambient (0.1 * global_ambient_mul)
+              }
+           normal {
+              waves 0.1 frequency 3000.0
+              scale 800.0
+              }
+           }
+        }
+     text {
+        ttf global_fontfile_eagle3d "0" 0.01, 0
+        pigment {
+           Black
+           }
+        scale 1.5
+        rotate <0,180,0>
+        translate <-0.6,+3.1,+1.76>
+        }
+     // Marking
+     text {
+        ttf global_fontfile_arial value 0.05, 0
+        pigment {
+           Black
+           }
+        scale 1.6
+        rotate <0,180,0>
+        translate <+2,3.1,+1.76>
+        }
+     // Marking
+     text {
+        ttf global_fontfile_arial "9941" 0.01, 0
+        pigment {
+           Black
+           }
+        scale 1.6
+        rotate <0,180,0>
+        translate <+2,1.3,+1.76>
+        }
+     // Marking
+     #if (Type = "TSM4 YL")
+        #local pin = union {
+           box {
+              <-0.3, 0, -0.75> <+0.3, 0.2, +0.75>
+              }
+           pigment {
+              Silver
+              }
+           }
+
+        object {
+           pin
+           translate <-1.25,0,-1.8>
+           }
+        object {
+           pin
+           translate <+1.25,0,-1.8>
+           }
+        object {
+           pin
+           translate <0,0,+1.8>
+           }
+     #end
+     #if (Type = "TSM4 YJ")
+        #local pin = union {
+           box {
+              <-0.3, 0, -0.3> <+0.3, 0.2, +0.3>
+              }
+           box {
+              <-0.3, 0, -0.15> <+0.3, 1, -0.3>
+              }
+           pigment {
+              Silver
+              }
+           }
+
+        object {
+           pin
+           translate <-1.25,0,-1.6>
+           }
+        object {
+           pin
+           translate <+1.25,0,-1.6>
+           }
+        object {
+           pin
+           rotate 180*y
+           translate <0,0,+1.6>
+           }
+     #end
+     #if (Type = "TSM4 ZL")
+        #local pin = union {
+           box {
+              <-0.3, -0.75,0> <+0.3, +0.75,0.2>
+              }
+           pigment {
+              Silver
+              }
+           }
+
+        object {
+           pin
+           translate <-1.25,0.05,-1.95>
+           }
+        object {
+           pin
+           translate <+1.25,0.05,-1.95>
+           }
+        object {
+           pin
+           translate <0,4.75,-1.95>
+           }
+        rotate <-90,180,0>
+        translate <0,1.95,-Lg/2-0.1>
+     #end
+     #if (Type = "TSM4 ZJ")
+        #local pin = union {
+           box {
+              <-0.3, 0, -0.3> <+0.3, 0.2, +0.3>
+              }
+           box {
+              <-0.3, 0, -0.15> <+0.3, 1, -0.3>
+              }
+           pigment {
+              Silver
+              }
+           }
+
+        object {
+           pin
+           translate <-1.25,0,-1.6>
+           }
+        object {
+           pin
+           translate <+1.25,0,-1.6>
+           }
+        object {
+           pin
+           rotate 180*z
+           translate <0,5,-1.6>
+           }
+        rotate <-90,180,0>
+        translate <0,1.95,-Lg/2-0.1>
+     #end
+     }
+#end
+
+#macro RES_SMT_TRIM_TSM4_YL(value)
+  TSM4series_BASE("TSM4 YL",5.1)
+#end
+
+#macro RES_SMT_TRIM_TSM4_YJ(value)
+  TSM4series_BASE("TSM4 YJ",5.1)
+#end
+
+#macro RES_SMT_TRIM_TSM4_ZL(value)
+  TSM4series_BASE("TSM4 ZL",4.6)
+#end
+
+#macro RES_SMT_TRIM_TSM4_ZJ(value)
+  TSM4series_BASE("TSM4 ZJ",4.6)
+#end
+
+
 
 /*******************************************************************************
  * no typos below please.
@@ -520,4 +729,8 @@
 //=RES_THT_TRIM_T7_YB(:Vishay trimmer T7YB
 //pot:SP19L=RES_THT_TRIM_SP19L(:Vishay SP19 Resistor Trimmer
 //rcl:RTRIMT18,RTRIM43P=RES_THT_TRIM_T18(:Vishay T18 Resistor Trimmer
+//=RES_SMT_TRIM_TSM4_YL(:Vishay TSM4 series SMT trim resistor
+//=RES_SMT_TRIM_TSM4_YJ(:Vishay TSM4 series SMT trim resistor
+//=RES_SMT_TRIM_TSM4_ZL(:Vishay TSM4 series SMT trim resistor
+//rcl:RTRIM5X=RES_SMT_TRIM_TSM4_ZJ(:Vishay TSM4 series SMT trim resistor
 // end assignment

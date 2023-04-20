@@ -1438,10 +1438,10 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_T
 RTRIM4G/J:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TS53_YL(:Trimmer TSM53YL:
 RTRIMTS53YL:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TS53_YL(:Trimmer TSM53YL:
 RTRIMTS53YJ:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TS53_YJ(:Trimmer TSM53YJ:
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TSM_4YL(:SMD Trimmer Multiturn Cermet Sealed from Vishay:
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TSM_4YJ(:SMD Trimmer Multiturn Cermet Sealed from Vishay:
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TSM_4ZL(:SMD Trimmer Multiturn Cermet Sealed from Vishay:
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TSM_4ZJ(:SMD Trimmer Multiturn Cermet Sealed from Vishay:
+NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMT_TRIM_TSM4_YL(:Vishay TSM4 series SMT trim resistor:
+NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMT_TRIM_TSM4_YJ(:Vishay TSM4 series SMT trim resistor:
+NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMT_TRIM_TSM4_ZL(:Vishay TSM4 series SMT trim resistor:
+RTRIM5X:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMT_TRIM_TSM4_ZJ(:Vishay TSM4 series SMT trim resistor:
 B25X:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_B25X(:Trimmer-R von Spectrol:Trimmer Resistor from Spectrol
 B25V:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_B25V(:Trimmer-R von Spectrol:Trimmer Resistor from Spectrol
 4X0402ARV341:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_SMD_CHIP_ARRAY_4x0402_convex(:SMD cap array 4x0402 convex:
