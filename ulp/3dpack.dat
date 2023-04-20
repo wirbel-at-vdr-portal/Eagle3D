@@ -1424,13 +1424,17 @@ NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:VARISTOR_THT_B72220S0102K101(:THT varistor EPSON SIOV series:
 NOEAGLEPAC:0:1:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_72_PT(:Trimmer 72PT BI Technologies:
 PT-10:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_PT10LV10(:PIHER PT-10 resistor trimmer PT10LV10:
-RTRIM64W:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_64Y(:Trimmer-R von Spectrol:Trimmer Resistor  from Spectrol
-RTRIM64Y:0:1:0:0:0:0:0:0:0:0:0:0:0:0:-1.27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_64W(:Trimmer-R von Spectrol:Trimmer Resistor  from Spectrol
-S64Y:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_S64Y(:Trimmer-R von Spectrol:Trimmer Resistor  from Spectrol
-RTRIM43P:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_T18(:T18 Resistor Trimmer by Vishay:
-RTRIMT18:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_T18(:T18 Resistor Trimmer by Vishay:
-RTRIM3339P:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_T7_YA(:Trimmer TY7A serie:
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_T7_YB(:Trimmer TY7B serie:
+RTRIM43P:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_T18(:T18 Resistor Trimmer by Vishay:
+RTRIMT18:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_T18(:T18 Resistor Trimmer by Vishay:
+RTRIM64W:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_64W(:Vishay Spectrol 64 series trim resistor:
+RTRIM64X:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_64X(:Vishay Spectrol 64 series trim resistor:
+RTRIM64Y:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_64Y(:Vishay Spectrol 64 series trim resistor:
+RTRIM64Z:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_64Z(:Vishay Spectrol 64 series trim resistor:
+RTRIM64P:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_64P(:Vishay Spectrol 64 series trim resistor:
+S64W:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_S64W(:Vishay Spectrol S64 series trim resistor:
+S64Y:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_S64Y(:Vishay Spectrol S64 series trim resistor:
+RTRIM3339P:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_T7_YA(:Vishay TY7A trim resistor:
+NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_T7_YB(:Vishay TY7B trim resistor:
 RTRIM4G/J:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TS53_YL(:Trimmer TSM53YL:
 RTRIMTS53YL:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TS53_YL(:Trimmer TSM53YL:
 RTRIMTS53YJ:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_DIS_TRIM_TS53_YJ(:Trimmer TSM53YJ:
@@ -2662,7 +2666,7 @@ ML50L:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:-6.35:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_
 ML64L:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:-6.35:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_WS64W(:Wannenstecker liegend 64Pin:Shrouded Header bended 64Pin
 AMP_227161:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_227161(:BNC Buchse gewinckelt:BNC
 LEMO_EPA.00.250.NTN_L:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LEMO_EPA_00_250_NTN_L(:LEMO EPA.00.250.NTN_L 90deg ellbow Jack:
-SP19L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:R_POTI_SP19L(:Vishay T18 Resistor Trimmer:
+SP19L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_SP19L(:Vishay T18 Resistor Trimmer:
 1210:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special
 1206:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special
 0805:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special

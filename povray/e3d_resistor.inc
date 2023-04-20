@@ -7,59 +7,6 @@
 
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_RES_DIS_TRIM_KOERPER.inc.src
-// Grundmakro für Spektrol-Potis
-// Andreas Rebmann <A.Rebmann-Elektrotechnik@t-online.de>
-// geteilt und modifiziert ich@ossiostborn.de alias CArt
-// Grundmacro des Quaders - Breite=B , Tiefe = T, Hoehe = H
-// Spektrol-Poti
-// //////////
-#macro RES_DIS_TRIM_KOERPER(B,T,H, Farbe)
-union {
-    // Grundkörper
-    box{<-B/2+0.2, 0.15 , T/2    > <B/2-0.2,H-0.2,-T/2>     pigment{Farbe}}
-    box{<-B/2,     0.15 ,-T/2+0.2> <B/2,    H-0.2, T/2-0.2> pigment{Farbe}}
-    box{<-B/2+0.2, H-0.2,-T/2+0.2> <B/2-0.2,H    , T/2-0.2> pigment{Farbe}}
-
-    // Rundungen
-    cylinder{<-B/2+0.2, 0.15, 0> <-B/2+0.2, H-0.2> 0.20  pigment{Farbe}
-             translate <0, 0, T/2-0.2>}
-    cylinder{<-B/2+0.2, 0.15, 0> <-B/2+0.2, H-0.2> 0.20  pigment{Farbe}
-             translate <0, 0,-T/2+0.2>}
-    cylinder{< B/2-0.2, 0.15, 0> < B/2-0.2, H-0.2> 0.20  pigment{Farbe}
-             translate <0, 0, T/2-0.2>}
-    cylinder{< B/2-0.2, 0.15, 0> < B/2-0.2, H-0.2> 0.20  pigment{Farbe}
-             translate <0, 0,-T/2+0.2>}
-
-    sphere{< B/2-0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  pigment{Farbe}}
-    sphere{< B/2-0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  pigment{Farbe}}
-    sphere{<-B/2+0.2, H-0.2, T/2-0.2> 0.2 scale <1,1,1>  pigment{Farbe}}
-    sphere{<-B/2+0.2, H-0.2,-T/2+0.2> 0.2 scale <1,1,1>  pigment{Farbe}}
-
-    cylinder{<-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 pigment{Farbe}
-             translate <0, 0, T/2-0.2>}
-    cylinder{<-B/2+0.2,  H-0.2> < B/2-0.2, H-0.2> 0.20 pigment{Farbe}
-             translate <0, 0,-T/2+0.2>}
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 pigment{Farbe} rotate<0, 90,0>
-             translate <-B/2+0.2, 0, 0>}
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 pigment{Farbe} rotate<0,-90,0>
-             translate <-B/2+0.2, 0, 0>}
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 pigment{Farbe} rotate<0, 90,0>
-             translate < B/2-0.2, 0, 0>}
-    cylinder{<-T/2+0.2,  H-0.2> < 0, H-0.2> 0.20 pigment{Farbe} rotate<0,-90,0>
-             translate < B/2-0.2, 0, 0>}
-
-    cylinder{<-T/2+0.2,  0.3> < 0, 0.3> 0.30 pigment{Farbe}
-             rotate<0, 90,0> translate <-B/2+0.3, 0, 0>}
-    cylinder{<-T/2+0.2,  0.3> < 0, 0.3> 0.30 pigment{Farbe}
-             rotate<0,-90,0> translate <-B/2+0.3, 0, 0>}
-    cylinder{<-T/2+0.2,  0.3> < 0, 0.3> 0.30 pigment{Farbe}
-             rotate<0, 90,0> translate < B/2-0.3, 0, 0>}
-    cylinder{<-T/2+0.2,  0.3> < 0, 0.3> 0.30 pigment{Farbe}
-             rotate<0,-90,0> translate < B/2-0.3, 0, 0>}
-  }
-#end
 
 
 
@@ -393,60 +340,6 @@ RES_DIS_TRIM_72_BASE(value,0)
 
 
 
-/********************************************************************************************************************************************
-//Trimmer
-********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_SPECTROL1_BASE(B,T,H,Farbe,D_schraube,Rf)
-union {
-    object{RES_DIS_TRIM_KOERPER(B,T,H,Farbe)}
-    //Anschlußbeine zuordnen
-    union{
-      cylinder{<-2.54,1,-1.27> <-2.54,-3,-1.27> 0.25}
-      cylinder{< 2.54,1,-1.27> < 2.54,-3,-1.27> 0.25}
-      cylinder{<  0,1,Rf> < 0,-3,Rf> 0.25}
-      texture{col_silver}
-    }
-    difference{
-      cylinder{<0,0,0> <0, 1.32> 1.015}
-      box     {<1.5,0.7,0.2> <-1.5,2.5,-0.2>}
-      texture{col_silver}
-      rotate<0,75,0>
-      translate <D_schraube,H,T/2-1.3>
-    }
-    text {ttf besch_font  value     0.1,0 scale<1.4,1.4,1.4> pigment{Black}
-          rotate<-270,180,0> translate<B/2-1.0,  H+0.1, T/2-3.0>}
-    text {ttf besch_font "64Y"      0.1,0 scale<1.4,1.4,1.4> pigment{Black}
-          rotate<-270,180,0> translate<B/2-6.5,  H+0.1, T/2-3.0>}
-    text {ttf besch_font "3  2  1"  0.1,0 scale<1.5,1.5,1.5> pigment{Black}
-          rotate<0   ,180,0> translate<B/2-1.75, 0.52, T/2+0.1>}
-  }
-#end
-//senkrecht
-#macro RES_DIS_TRIM_64W(value)
-RES_DIS_TRIM_SPECTROL1_BASE(9.52,4.83,9.52,Khaki,3.1,1.27) rotate <0,-90,0>
-#end
-#macro RES_DIS_TRIM_64Y(value)
-RES_DIS_TRIM_SPECTROL1_BASE(9.52,4.83,9.52,Khaki,-3.1,-1.27) rotate <0,-90,0>
-#end
-
-
-/********************************************************************************************************************************************
-//Grundmacro stehend - Breite=B , Tiefe = T, Hoehe = H, Raster = Ra?, Farbe
-********************************************************************************************************************************************/
-#macro RES_DIS_TRIM_SPECTROL2_BASE(B,T,H,Ra,Farbe)
-  union{
-    object{RES_DIS_TRIM_SPECTROL1_BASE(B,T,H,Farbe,-3.1,1.27)}
-    sphere{<-B/2+4.75, H+5.85,T+.01>  2.5   scale<1.70,0.5,0.01> pigment{Farbe}
-           translate<0,0,2.40>}  //Oval bei Spectrol Schrift
-    text {ttf besch_font "Spectrol" 0.1,0 scale<1.5,1.5,1.5> pigment{Black}
-          rotate<0   ,180,0> translate<B/2-1.2,  H-2.3, T/2+0.1>}
-    rotate<0,180,0>
-  }
-#end
-// Raster 5.08
-#macro RES_DIS_TRIM_S64Y(value)
-RES_DIS_TRIM_SPECTROL2_BASE(9.52,4.83,9.52,5.08,OldGold)
-#end
 
 
 
