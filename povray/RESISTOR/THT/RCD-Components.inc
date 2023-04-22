@@ -17,9 +17,9 @@
 
      union {
         difference {
-           Round_Box_Merge(<W,d,L> <-W,-d,-L> d/8)
-           Round_Box_Merge(<W-1,3*d,L-1> <-(W-1),(d-0.1),-(L-3.81-1)> d/8)
-           Round_Box_Merge(<W-1,-3*d,L-1> <-(W-1),-(d-0.1),-(L-3.81-1)> d/8)
+           Round_Box(<W,d,L> <-W,-d,-L> d/8 0)
+           Round_Box(<W-1,3*d,L-1> <-(W-1),(d-0.1),-(L-3.81-1)> d/8 0)
+           Round_Box(<W-1,-3*d,L-1> <-(W-1),-(d-0.1),-(L-3.81-1)> d/8 0)
            prism {
               -(d+0.01), (d+0.01), 4,
               <A/2-0.5, -0.01>
@@ -122,6 +122,123 @@
 #end
 
 
+
+/*******************************************************************************
+ * RCD components PW series general purpose 1W to 25W ceramic-encased resistors
+ * Joseph Zeglinski
+ * - A, B, E see datasheet
+ * - lw wire length
+ *******************************************************************************/
+#macro RES_PWSERIES_BASE(value, A, B, lw, E, grid, Type)
+  union {
+     union {
+        #local Stub = max(0.8, E);
+
+        union {
+           Round_Box(
+              <+A/2,+B/2,+B/2>
+              <-A/2,-B/2,-B/2>
+              B/16 0
+              )
+           box {
+              <-(A/2 - 1.0), -(B/2 + 0.005), -(B/2 - 1.0)>
+              <+(A/2 - 1.0), -B/2          , +(B/2 - 1.0)>
+              pigment {
+                 Gray65
+                 }
+              }
+           box {
+              <-(A/2 + 0.01), -(B/2 + 0.01), -E/2>
+              <+(A/2 + 0.01),             E, +E/2>
+              pigment {
+                 Gray65
+                 }
+              }
+           texture {
+              T_Grnt1
+              }
+           }
+        union {
+           text {
+              ttf besch_font Type 0.01, 0
+              scale 2
+              translate <-5,+(B/2 - 2)-1,-(B/2 + 0.01)>
+              rotate <270,0,180>
+              pigment {
+                 Black
+                 }
+              }
+           text {
+              ttf besch_font value 0.01, 0
+              scale 2
+              translate <-5,-(B/2 - 2)-1,-(B/2 + 0.01)>
+              rotate <270,0,180>
+              pigment {
+                 Black
+                 }
+              }
+           }
+        pigment {
+           Black
+           }
+        rotate <0,180,0>
+        }
+     object {
+        TOOLS_WIRE_LEADS(A, B, lw, E, grid, global_res_bend_radius, 1.5, "H")
+        }
+     translate <0, B/2 + 1.5, 0>
+     pigment {
+        Gray50
+        }
+     finish {
+        phong 1
+        ambient (0.1 * global_ambient_mul)
+        }
+     }
+#end 
+
+#macro RES_THT_PW1_228mm(value)
+  RES_PWSERIES_BASE(value, 15.8, 6.4, 25.4, 0.7, 22.86, "RCD PW1")
+#end
+
+#macro RES_THT_PW2_254mm(value)
+  RES_PWSERIES_BASE(value, 18.3, 6.8, 25.4, 0.7, 25.40, "RCD PW2")
+#end
+
+#macro RES_THT_PW3_304mm(value)
+  RES_PWSERIES_BASE(value, 23.1, 7.9, 28.4, 0.8, 30.48, "RCD PW3")
+#end
+
+#macro RES_THT_PW5_330mm(value)
+  RES_PWSERIES_BASE(value, 23.1, 9.7, 28.4, 0.8, 33.02, "RCD PW51")
+#end
+
+#macro RES_THT_PW7_457mm(value)
+  RES_PWSERIES_BASE(value, 36.0, 9.7, 31.8, 0.8, 45.72, "RCD PW7")
+#end
+
+#macro RES_THT_PW10_609mm(value)
+  RES_PWSERIES_BASE(value, 50.0, 9.7, 31.8, 0.8, 60.96, "RCD PW10")
+#end
+
+#macro RES_THT_PW15_635mm(value)
+  RES_PWSERIES_BASE(value, 50.0, 12.7, 31.8, 0.8, 63.50, "RCD PW15")
+#end
+
+#macro RES_THT_PW20_812mm(value)
+  RES_PWSERIES_BASE(value, 65.0, 14.7, 31.8, 0.8, 81.28, "RCD PW20")
+#end
+
+#macro RES_THT_PW22_812mm(value)
+  RES_PWSERIES_BASE(value, 65.0, 14.7, 31.8, 0.8, 81.28, "RCD PW22")
+#end
+
+#macro RES_THT_PW25_812mm(value)
+  RES_PWSERIES_BASE(value, 65.0, 14.7, 31.8, 0.8, 81.28, "RCD PW25")
+#end
+
+
+
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
@@ -133,4 +250,14 @@
 //=RES_THT_PV10(:vertical mount ceramic resistor
 //=RES_THT_PV10S(:vertical mount ceramic resistor
 //=RES_THT_PV10A(:vertical mount ceramic resistor
+//=RES_THT_PW1_228mm(:RCD components PW series resistor:
+//=RES_THT_PW2_254mm(:RCD components PW series resistor:
+//=RES_THT_PW3_304mm(:RCD components PW series resistor:
+//=RES_THT_PW5_330mm(:RCD components PW series resistor:
+//=RES_THT_PW7_457mm(:RCD components PW series resistor:
+//=RES_THT_PW10_609mm(:RCD components PW series resistor:
+//=RES_THT_PW15_635mm(:RCD components PW series resistor:
+//=RES_THT_PW20_812mm(:RCD components PW series resistor:
+//=RES_THT_PW22_812mm(:RCD components PW series resistor:
+//=RES_THT_PW25_812mm(:RCD components PW series resistor:
 // end assignment
