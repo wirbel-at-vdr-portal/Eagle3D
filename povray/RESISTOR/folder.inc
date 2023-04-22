@@ -6,7 +6,7 @@
 
 #include "RESISTOR/POTI/PIHER.inc"
 #include "RESISTOR/POTI/TRIM_3202.inc"
-#include "RESISTOR/POTI/TT-Electronics.inc"
+#include "RESISTOR/POTI/TRIM_3362.inc"
 #include "RESISTOR/POTI/VISHAY.inc"
 #include "RESISTOR/SMT/MELF.inc"
 #include "RESISTOR/SMT/array.inc"
