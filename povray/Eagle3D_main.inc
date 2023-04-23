@@ -4,6 +4,9 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
+global_settings { charset utf8 }
+global_settings { assumed_gamma 2.2 }
+
 //POVRay include files
 #include "arrays.inc"
 #include "chars.inc"
@@ -27,7 +30,5 @@
 #include "strings.inc"
 #include "textures.inc"
 #include "transforms.inc"
-
-global_settings{charset utf8}
 
 #include "Eagle3D/folders.inc"

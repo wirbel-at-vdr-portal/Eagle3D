@@ -32,7 +32,7 @@ int config_count = 15;
 
 //Includes und Standardeinstellungen
 string usrinc =
-    "#version 3.5;\n\n"
+    "#version 3.7;\n\n"
     "//Set to on if the file should be used as .inc\n"
     "#local use_file_as_inc = off;\n"
     "#if(use_file_as_inc=off)\n\n\n"
