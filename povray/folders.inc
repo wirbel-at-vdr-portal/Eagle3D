@@ -26,6 +26,7 @@
 #include "RELAY/folder.inc"
 #include "RESISTOR/folder.inc"
 #include "SOCKET/folder.inc"
+#include "SWITCH/folder.inc"
 #include "THERMISTOR/folder.inc"
 #include "TRANSFORMER/folder.inc"
 #include "TRANSISTOR/folder.inc"
