@@ -8,14 +8,14 @@
 /*******************************************************************************
  * female header 2.54mm, 1-row, 2-row, 3-row.
  ******************************************************************************/
-#macro MPE094_FEMALE(GRID,H)
+#macro MPE094_FEMALE(grid,H)
   union { 
      difference {
-        box{<-GRID/2,0,-GRID/2>
-            <+GRID/2,H,+GRID/2>}
-        object{ Pyramid_N(4, GRID, 0.0, GRID)
+        box{<-grid/2,0,-grid/2>
+            <+grid/2,H,+grid/2>}
+        object{ Pyramid_N(4, grid, 0.0, grid)
                 rotate <180,0,0>
-                translate <0,H+GRID/2,0>}
+                translate <0,H+grid/2,0>}
         box{<-1/2, -0.1,-1/2>
             <+1/2,H+0.1,+1/2>}
         }
@@ -37,17 +37,17 @@
 
 
 #macro CON_MPE094_FEMALE_254(X,Y)
-#local GRID = 2.54;
+#local grid = 2.54;
 union {
   // plastic housing
   difference {
-     GRID_BASE(MPE094_FEMALE(GRID,8.5),GRID,X,Y)
-     box {<-X/2*GRID -0.1,-0.1   ,-Y/2*GRID+GRID/3>
-          <+X/2*GRID +0.1,+GRID/3,+Y/2*GRID-GRID/3>}
+     GRID(MPE094_FEMALE(grid,8.5),grid,X,Y)
+     box {<-X/2*grid -0.1,-0.1   ,-Y/2*grid+grid/3>
+          <+X/2*grid +0.1,+grid/3,+Y/2*grid-grid/3>}
      pigment{Gray25}
      }
   // straight pin
-  GRID_BASE(MPE094_FEMALE_PIN(),GRID,X,Y)
+  GRID(MPE094_FEMALE_PIN(),grid,X,Y)
   }
 #end
 
@@ -556,14 +556,14 @@ union {
  * female header 2.00mm, 1-row, 2-row, 3-row.
  ******************************************************************************/
 
-#macro MPE156_FEMALE(GRID,H)
+#macro MPE156_FEMALE(grid,H)
   union { 
      difference {
-        box{<-GRID/2,0,-2.20/2>
-            <+GRID/2,H,+2.20/2>}
-        object{ Pyramid_N(4, GRID, 0.0, GRID)
+        box{<-grid/2,0,-2.20/2>
+            <+grid/2,H,+2.20/2>}
+        object{ Pyramid_N(4, grid, 0.0, grid)
                 rotate <180,0,0>
-                translate <0,H+GRID/2,0>}
+                translate <0,H+grid/2,0>}
         box{<-0.9/2, -0.1,-0.9/2>
             <+0.9/2,H+0.1,+0.9/2>}
         }
@@ -585,20 +585,20 @@ union {
 
 
 #macro CON_MPE156_FEMALE_200(X,Y)
-#local GRID = 2.00;
+#local grid = 2.00;
 union {
   // plastic housing
   union {
-     GRID_BASE(cylinder{<0,0.3,-0.75><0,0.3,0.75>0.3},GRID,X-1,Y)
+     GRID(cylinder{<0,0.3,-0.75><0,0.3,0.75>0.3},grid,X-1,Y)
      difference {
-        GRID_BASE(MPE156_FEMALE(GRID,4.3),GRID,X,Y)
-        box {<-X/2*GRID -0.1,-0.1,-Y/2*GRID-0.1>
-             <+X/2*GRID +0.1,+0.3,+Y/2*GRID+0.1>}
+        GRID(MPE156_FEMALE(grid,4.3),grid,X,Y)
+        box {<-X/2*grid -0.1,-0.1,-Y/2*grid-0.1>
+             <+X/2*grid +0.1,+0.3,+Y/2*grid+0.1>}
         }
      pigment{Gray25}
      }
   // straight pin
-  GRID_BASE(MPE156_FEMALE_PIN(),GRID,X,Y)
+  GRID(MPE156_FEMALE_PIN(),grid,X,Y)
   }
 #end
 

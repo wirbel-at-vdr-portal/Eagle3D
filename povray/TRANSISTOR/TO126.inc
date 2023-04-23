@@ -44,7 +44,7 @@
      #end
 
    //Pins
-   object { GRID_BASE(TO126_PIN_H(),2.54,3,1) texture{col_silver} }
+   object { GRID(TO126_PIN_H(),2.54,3,1) texture{col_silver} }
 
    //body
    union {
@@ -98,7 +98,7 @@
                };
 
            //Pins
-           object { GRID_BASE(obj,2.54,3,1) texture{col_silver} }
+           object { GRID(obj,2.54,3,1) texture{col_silver} }
            translate<-0.8/2,0,0.84>
            }//END union3
 

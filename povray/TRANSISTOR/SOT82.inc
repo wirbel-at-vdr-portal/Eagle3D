@@ -44,7 +44,7 @@
     #end
 
     //Pins
-    GRID_BASE(object{SOT82_PIN_H() texture{col_silver}}, 2.54, 3, 1)
+    GRID(object{SOT82_PIN_H() texture{col_silver}}, 2.54, 3, 1)
 
     //body
     union {
@@ -97,7 +97,7 @@ union {
             #local tr_SOT82_s_pin = 0-(pcb_height+pin_length);
          #end
 
-         GRID_BASE(object{SOT82_PIN_V() texture{col_silver}}, 2.54, 3, 1)
+         GRID(object{SOT82_PIN_V() texture{col_silver}}, 2.54, 3, 1)
          translate<-0.8/2,0,0.84>
          } //END union3
 

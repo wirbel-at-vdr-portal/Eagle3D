@@ -71,7 +71,7 @@
               box { <-0.9/2,1.6-0.5,-3.7-0.6/2> <+0.9/2,1.6    ,-3.7+0.6/2> }
               texture{col_silver}
               };
-           GRID_BASE(pin, grid, npins, 1)
+           GRID(pin, grid, npins, 1)
            }
         #if (centercut = 1)
             #local diff = box { <-pinwidth/2-0.3,-0.1,-7> <+pinwidth/2+0.3,2,-3.9> }

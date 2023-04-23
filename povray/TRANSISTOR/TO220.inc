@@ -167,14 +167,14 @@
     union {
        #switch (pins)
           #case(2)
-             GRID_BASE(TR_TO220_PIN(0), 2*2.54, pins, 1)
+             GRID(TR_TO220_PIN(0), 2*2.54, pins, 1)
              #break
           #case(3)
-             GRID_BASE(TR_TO220_PIN(0), 2.54, pins, 1)
+             GRID(TR_TO220_PIN(0), 2.54, pins, 1)
              #break
           #case(5)
-             GRID_BASE(TR_TO220_PIN(0)  , 2.54 , 2, 1)
-             GRID_BASE(TR_TO220_PIN(1.5), 3.556, 3, 1)
+             GRID(TR_TO220_PIN(0)  , 2.54 , 2, 1)
+             GRID(TR_TO220_PIN(1.5), 3.556, 3, 1)
              #break
           #end
        texture{col_silver}
@@ -265,7 +265,7 @@
                 }
              box{<0,0,0><1.5,3.7,0.6> translate<-0.375,9.8,0>}
              };
-           GRID_BASE(obj, 1.778, 5, 1)
+           GRID(obj, 1.778, 5, 1)
            translate<-0.75/2,0,1.6>
            }
         difference{

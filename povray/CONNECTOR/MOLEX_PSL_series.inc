@@ -28,7 +28,7 @@
      difference {
         box { <-2.54/2*PinCount,0,-2.5> <+2.54/2*PinCount,3,+3.0> }
         #local slot = box {<-1/2,-0.1,-3> <+1/2,+0.8,+4>};
-        GRID_BASE(slot,2.54,PinCount,1)
+        GRID(slot,2.54,PinCount,1)
         }
      box { <-2.54*(PinCount-1)/2,2,-2.5> <+2.54*(PinCount-1)/2,11.3,-1.7> }
      box { <-2.54*(PinCount-1)/2,5.8,-2> <+2.54*(PinCount-1)/2, 7.5,-1.4> }

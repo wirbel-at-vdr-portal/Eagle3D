@@ -70,11 +70,11 @@
               }
            intersection {
               union {
-                 object { GRID_BASE(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.75, 1,2) translate <0,-cd/2 + H + 2*(G-H)/10,0> }
-                 object { GRID_BASE(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.72, 1,2) translate <0,-cd/2 + H + 4*(G-H)/10,0> }
-                 object { GRID_BASE(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.68, 1,2) translate <0,-cd/2 + H + 6*(G-H)/10,0> }
-                 object { GRID_BASE(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.62, 1,2) translate <0,-cd/2 + H + 8*(G-H)/10,0> }
-                 object { GRID_BASE(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.52, 1,2) translate <0,-cd/2 + H + 10*(G-H)/10,0> }
+                 object { GRID(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.75, 1,2) translate <0,-cd/2 + H + 2*(G-H)/10,0> }
+                 object { GRID(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.72, 1,2) translate <0,-cd/2 + H + 4*(G-H)/10,0> }
+                 object { GRID(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.68, 1,2) translate <0,-cd/2 + H + 6*(G-H)/10,0> }
+                 object { GRID(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.62, 1,2) translate <0,-cd/2 + H + 8*(G-H)/10,0> }
+                 object { GRID(Round_Box(<-C/2-1,-cd/2,-cd> <+C/2+1,+cd/2,+cd>, 0.3, 0), E*0.52, 1,2) translate <0,-cd/2 + H + 10*(G-H)/10,0> }
                  }
               box {
                  <-C/2,    0,-E/2>

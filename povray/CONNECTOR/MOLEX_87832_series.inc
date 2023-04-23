@@ -55,28 +55,28 @@
 
   union {
     // pin rows
-    GRID_BASE(object {CON_MOLEX_87832_pin() rotate<0,180,0> translate<0,0,+2/2>}, 2, CircuitSize/2,1)
-    GRID_BASE(object {CON_MOLEX_87832_pin()                 translate<0,0,-2/2>}, 2, CircuitSize/2,1)
+    GRID(object {CON_MOLEX_87832_pin() rotate<0,180,0> translate<0,0,+2/2>}, 2, CircuitSize/2,1)
+    GRID(object {CON_MOLEX_87832_pin()                 translate<0,0,-2/2>}, 2, CircuitSize/2,1)
 
     union {
        #if (Pegs > 0)
-          GRID_BASE(cylinder{<0,+7.6-4.6,0>
-                             <0,      -1,0>
-                             0.85/2},E,2,1)
+          GRID(cylinder{<0,+7.6-4.6,0>
+                        <0,      -1,0>
+                        0.85/2},E,2,1)
        #end
        // Ribs inside.
-       GRID_BASE(box{<+0.7/2,+7.6    ,+1/2>
-                     <-0.7/2,+7.6-4.6,-1/2>
-                     translate<0,0,+5/2>
-                     }, 2, CircuitSize/2,1)
-       GRID_BASE(box{<+0.7/2,+7.6    ,+1/2>
-                     <-0.7/2,+7.6-4.6,-1/2>
-                     translate<0,0,+5/2>
-                     }, B, 2,1)
-       GRID_BASE(box{<+0.7/2,+7.6    ,+1/2>
-                     <-0.7/2,+7.6-4.6,-1/2>
-                     translate<0,0,-5/2>
-                     }, B, 2,1)
+       GRID(box{<+0.7/2,+7.6    ,+1/2>
+                <-0.7/2,+7.6-4.6,-1/2>
+                translate<0,0,+5/2>
+                }, 2, CircuitSize/2,1)
+       GRID(box{<+0.7/2,+7.6    ,+1/2>
+                <-0.7/2,+7.6-4.6,-1/2>
+                translate<0,0,+5/2>
+                }, B, 2,1)
+       GRID(box{<+0.7/2,+7.6    ,+1/2>
+                <-0.7/2,+7.6-4.6,-1/2>
+                translate<0,0,-5/2>
+                }, B, 2,1)
        // top part of housing
        difference {
           union {
@@ -103,7 +103,7 @@
           #end
 
           #if (DualLock > 0)
-             GRID_BASE(union {
+             GRID(union {
                 box{<+2.2/2,+7.6-2.5,-4.9/2>
                     <-2.2/2,+7.6-4.8,-7/2>
                    }
@@ -152,9 +152,9 @@
           box{<+F/2,+7.6-4.7,+4/2>
               <-F/2,    +1.2,-4/2>
              }
-          GRID_BASE(box {<+1.5/2,+1.2+0.6,+6.3/2>
-                         <-1.5/2,       0,-6.3/2>
-                        }, 2, CircuitSize/2,1)
+          GRID(box {<+1.5/2,+1.2+0.6,+6.3/2>
+                    <-1.5/2,       0,-6.3/2>
+                    }, 2, CircuitSize/2,1)
           } // end bot part of housing
 
        pigment{Gray50}//

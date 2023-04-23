@@ -6,17 +6,17 @@
 
 
 /*******************************************************************************
- * This macro repeats the povray object OBJ in a MxN grid with spacing GRID.
+ * This macro repeats the povray object OBJ in a MxN grid with spacing PITCH.
  * Author: 20220418, wk
  ******************************************************************************/
 
-#macro GRID_BASE(OBJ, GRID, M, N)
+#macro GRID(OBJ, PITCH, M, N)
 union {
    #for(X, 1, M)
        #for(Y, 1, N)
-           object { OBJ translate<X*GRID,0,Y*GRID> }
+           object { OBJ translate<X*PITCH,0,Y*PITCH> }
        #end
    #end
-   translate<-(1+M)/2*GRID,0,-(1+N)/2*GRID>
+   translate<-(1+M)/2*PITCH,0,-(1+N)/2*PITCH>
    }
 #end

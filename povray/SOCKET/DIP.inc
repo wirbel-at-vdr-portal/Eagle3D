@@ -9,7 +9,7 @@
  * precision style dip headers.
  * The following is a modified module section by Joseph Zeglinski,
  * Aug. 20, 2003
- * 20220421: rewrite to use GRID_BASE(), instead of local while loops. wk
+ * 20220421: rewrite to use GRID(), instead of local while loops. wk
  * -----------------------------------------------------------------------------
  * produces either a fully pin populated DIL SOCKET, or, a DIL SOCKET with
  * fewer "quads" of pins, ie. some IC's, FET's, Optoisolators and Crystal
@@ -32,16 +32,16 @@ union{
          #local pinhole = cylinder{<0,-0.1,0><0,8,0>0.51};
          union {
             // for any pin in the grid, drill a hole:
-            object {GRID_BASE(pinhole, 2.54, div(pin,2),1) translate<0,-7.15+2.9,+w/2>}
-            object {GRID_BASE(pinhole, 2.54, div(pin,2),1) translate<0,-7.15+2.9,-w/2>}
+            object {GRID(pinhole, 2.54, div(pin,2),1) translate<0,-7.15+2.9,+w/2>}
+            object {GRID(pinhole, 2.54, div(pin,2),1) translate<0,-7.15+2.9,-w/2>}
             }
          #if (a < pin)
              // but, for pins that are not available, *dont* drill a hole:
              #local no_pinhole = cylinder{<0,-0.1,0><0,8.1,0> 0.6};
              union {
                 #local fillpins = (pin - a);
-                object {GRID_BASE(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,+w/2> }
-                object {GRID_BASE(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,-w/2> }
+                object {GRID(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,+w/2> }
+                object {GRID(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,-w/2> }
                 }
          #end
          }
@@ -63,8 +63,8 @@ union{
 
       union {
          // for any pin in the grid, draw a pin:
-         object {GRID_BASE(dip_pin, 2.54, div(pin,2),1) translate<0,-7.15+2.9,+w/2>}
-         object {GRID_BASE(dip_pin, 2.54, div(pin,2),1) translate<0,-7.15+2.9,-w/2>}
+         object {GRID(dip_pin, 2.54, div(pin,2),1) translate<0,-7.15+2.9,+w/2>}
+         object {GRID(dip_pin, 2.54, div(pin,2),1) translate<0,-7.15+2.9,-w/2>}
          }
       union {
          #if (a < pin)
@@ -72,8 +72,8 @@ union{
              #local no_pinhole = cylinder{<0,-3,0><0,10,0> 0.9};
              union {
                 #local fillpins = (pin - a);
-                object {GRID_BASE(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,+w/2> }
-                object {GRID_BASE(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,-w/2> }
+                object {GRID(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,+w/2> }
+                object {GRID(no_pinhole, 2.54, div(pin-a,2),1)  translate<0,-7.15+2.9,-w/2> }
                 }
          #end
          }

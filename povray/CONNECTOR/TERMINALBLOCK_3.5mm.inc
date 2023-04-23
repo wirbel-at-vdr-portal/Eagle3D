@@ -11,7 +11,7 @@
  *            Carsten Koegler, FTZ-Leipzig <koegler@ftz-leipzig.de>
  *
  * 20220422 wk: renamed macro from CON_ARK_350MM (Anreihklemme) to
- *              CON_TERMINALBLOCK_3_5mm, converted to GRID_BASE()
+ *              CON_TERMINALBLOCK_3_5mm, converted to GRID()
  *              fix number label
  *
  * NOTE: available from multiple suppliers, ie. RIA AKL 059-xx
@@ -86,7 +86,7 @@
  ******************************************************************************/
 #macro CON_TERMINALBLOCK_3_5mm_base(j)
   union {
-     GRID_BASE(CON_TERMINALBLOCK_3_5mm_PIN(),3.5,j,1)
+     GRID(CON_TERMINALBLOCK_3_5mm_PIN(),3.5,j,1)
      union {
         #local i = 0;
         #while(i<j)

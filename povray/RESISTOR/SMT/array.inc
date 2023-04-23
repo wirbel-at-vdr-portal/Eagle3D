@@ -31,7 +31,7 @@
                     Black
                     }
                  }
-              object { GRID_BASE(box { <-L/2,0,-B/4-0.01> <+L/2,T+0.02,+B/4+0.01> },W-B/2,1,2)
+              object { GRID(box { <-L/2,0,-B/4-0.01> <+L/2,T+0.02,+B/4+0.01> },W-B/2,1,2)
                  texture {
                     col_silver
                     }
@@ -54,22 +54,22 @@
            #end
            }
         #if (termination = "convex")
-           object { GRID_BASE(GRID_BASE(box {<-C/2,-0.1,-B> <+C/2,T+0.1,+B>},P,3,1),W,1,2) }
+           object { GRID(GRID(box {<-C/2,-0.1,-B> <+C/2,T+0.1,+B>},P,3,1),W,1,2) }
         #else
-           object { GRID_BASE(GRID_BASE(cylinder {<0,-0.1,0> <0,T+0.1,0> (A-0.1)/2},P,4,1),W,1,2) }
+           object { GRID(GRID(cylinder {<0,-0.1,0> <0,T+0.1,0> (A-0.1)/2},P,4,1),W,1,2) }
         #end
         }
      union {
         #if (termination = "convex")
-           object { GRID_BASE(box {<-A/2,0,+W/2-B> <+A/2,T+0.01,+W/2>},P,4,1) }
-           object { GRID_BASE(box {<-A/2,0,-W/2+B> <+A/2,T+0.01,-W/2>},P,4,1) }
+           object { GRID(box {<-A/2,0,+W/2-B> <+A/2,T+0.01,+W/2>},P,4,1) }
+           object { GRID(box {<-A/2,0,-W/2+B> <+A/2,T+0.01,-W/2>},P,4,1) }
         #else
            #local contact = difference {
               box { <-A/2,0,-G/2> <+A/2,T+0.03,+G/2-0.02> }
               cylinder { <0,-0.1,+G/2> <0,T+0.2,+G/2> A/4 }
               }
-            object { GRID_BASE(contact,P,4,1) rotate <0,180,0> translate <0,0,-W/2+G/2> }
-            object { GRID_BASE(contact,P,4,1)                  translate <0,0,+W/2-G/2> }
+            object { GRID(contact,P,4,1) rotate <0,180,0> translate <0,0,-W/2+G/2> }
+            object { GRID(contact,P,4,1)                  translate <0,0,+W/2-G/2> }
         #end
 
         texture {

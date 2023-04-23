@@ -287,12 +287,12 @@ cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
 cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
 cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
 
-// Useful GRIDS:
+// Useful grids:
 #local XYZ_step= 1 ;          // axis increment
 #local XYZ_cnt = 0;           //  loop counter
 #local xyz_thick = 0.05;     // grid line thickness
 
-// GRID PLANES: Remove comment begin/end to activate & select PLANES:
+// grid planes: Remove comment begin/end to activate & select PLANES:
 #while (XYZ_cnt <= XYZ_span)
 
    cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines

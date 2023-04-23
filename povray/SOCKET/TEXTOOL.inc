@@ -84,8 +84,8 @@
         // Breite 1.4mm, Laenge 7mm=15,24/2.2 oder 3.5mm=7,62/2,2
         // Verschiebung breiter schlitze ist 2mm geringer
         #declare slot = box{<-0.7,-0,-breite/4.4> <+0.7,15,breite/4.4>};
-        object { GRID_BASE(slot, 2.54,div(pin,2),1) translate<0,0,+breite/2-ii> }
-        object { GRID_BASE(slot, 2.54,div(pin,2),1) translate<0,0,-breite/2+ii> }
+        object { GRID(slot, 2.54,div(pin,2),1) translate<0,0,+breite/2-ii> }
+        object { GRID(slot, 2.54,div(pin,2),1) translate<0,0,-breite/2+ii> }
         pigment{texcolor}
         } //difference fuer den gruenen plastik-koerper endet hier
 
@@ -112,13 +112,13 @@
             box{< 0.2,5,-breite/4.4><0.3,10,breite/4.4>}
             texture{col_silver}
             };
-     object { GRID_BASE(texsocket_cont, 2.54,div(pin,2),1) translate<0,0,+breite/2-ii> }
-     object { GRID_BASE(texsocket_cont, 2.54,div(pin,2),1) translate<0,0,-breite/2+ii> }
+     object { GRID(texsocket_cont, 2.54,div(pin,2),1) translate<0,0,+breite/2-ii> }
+     object { GRID(texsocket_cont, 2.54,div(pin,2),1) translate<0,0,-breite/2+ii> }
 
      // nun die pins, in Form flacher Blechstreifen
      #local texsocket_dip_pin =  box{<-0.2,0,-0.45><0.2,7,0.45> texture{col_silver}};
-     object { GRID_BASE(texsocket_dip_pin, 2.54,div(pin,2),1) translate<0,-7.15+2.9,+breite/2> }
-     object { GRID_BASE(texsocket_dip_pin, 2.54,div(pin,2),1) translate<0,-7.15+2.9,-breite/2> }
+     object { GRID(texsocket_dip_pin, 2.54,div(pin,2),1) translate<0,-7.15+2.9,+breite/2> }
+     object { GRID(texsocket_dip_pin, 2.54,div(pin,2),1) translate<0,-7.15+2.9,-breite/2> }
 
      translate<0,0.1,0>
      }

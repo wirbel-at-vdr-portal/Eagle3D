@@ -45,10 +45,10 @@ union {
         box      { <0,0,-b/2> <L,A3,+b/2> }
         texture{col_silver}
         }
-  object { GRID_BASE(object{ pin rotate<0,+90,0> }, e, Nx, 1) translate<0,0,-E/2+(L-b/2)> }
-  object { GRID_BASE(object{ pin rotate<0,-90,0> }, e, Nx, 1) translate<0,0,+E/2-(L-b/2)> }
-  object { GRID_BASE(object{ pin rotate<0,  0,0> }, e, 1, Ny) translate<+D/2-(L-b/2),0,0> }
-  object { GRID_BASE(object{ pin rotate<0,180,0> }, e, 1, Ny) translate<-D/2+(L-b/2),0,0> }
+  object { GRID(object{ pin rotate<0,+90,0> }, e, Nx, 1) translate<0,0,-E/2+(L-b/2)> }
+  object { GRID(object{ pin rotate<0,-90,0> }, e, Nx, 1) translate<0,0,+E/2-(L-b/2)> }
+  object { GRID(object{ pin rotate<0,  0,0> }, e, 1, Ny) translate<+D/2-(L-b/2),0,0> }
+  object { GRID(object{ pin rotate<0,180,0> }, e, 1, Ny) translate<-D/2+(L-b/2),0,0> }
 
 
   #if (D2 > 0)

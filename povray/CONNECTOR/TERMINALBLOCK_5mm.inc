@@ -10,7 +10,7 @@
  * Author: Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
  *
  * 20220422 wk: renamed macro from CON_ARK_5MM (Anreihklemme) to
- *              CON_TERMINALBLOCK_5mm, converted to GRID_BASE()
+ *              CON_TERMINALBLOCK_5mm, converted to GRID()
  *
  * NOTE: available from multiple suppliers, ie. CAMBLOCK CTB1202/BK
  ******************************************************************************/
@@ -48,7 +48,7 @@
  ******************************************************************************/
 #macro CON_TERMINALBLOCK_5mm_base(j)
   union {
-     GRID_BASE(CON_TERMINALBLOCK_PIN(),5.08,j,1)
+     GRID(CON_TERMINALBLOCK_PIN(),5.08,j,1)
      union {
         #local i = 0;
         #while(i<j)

@@ -94,9 +94,9 @@
 
      union {
         #if (pinsnb = 3)
-            GRID_BASE(TR_TO218_BENDED_PIN(pindir,14.5,Lh,1.1,0.5,cutpins),5.5,3,1)
+            GRID(TR_TO218_BENDED_PIN(pindir,14.5,Lh,1.1,0.5,cutpins),5.5,3,1)
         #else
-            GRID_BASE(TR_TO218_BENDED_PIN(pindir,14.5,Lh,1.1,0.5,cutpins),5.5,2,1)
+            GRID(TR_TO218_BENDED_PIN(pindir,14.5,Lh,1.1,0.5,cutpins),5.5,2,1)
         #end   
         }
      texture{col_silver}
