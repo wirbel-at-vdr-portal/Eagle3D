@@ -4,5 +4,6 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
+#include "SWITCH/SMT/LSH-series.inc"
 #include "SWITCH/THT/SECME.inc"
 #include "SWITCH/THT/rotary-dip-switch.inc"
