@@ -5,3 +5,4 @@
  ******************************************************************************/
 
 #include "SWITCH/THT/SECME.inc"
+#include "SWITCH/THT/rotary-dip-switch.inc"
