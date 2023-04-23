@@ -166,10 +166,12 @@
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//switch-dil:A1353BCD=SWITCH_THT_RDIP10(:Rotary-Dip BCD switch
-//switch-dil:A1353HEX=SWITCH_THT_RDIP16(:Rotary-Dip HEX switch
-//switch-dil:S20BCD=SWITCH_THT_RDIP10_1(:Rotary-Dip BCD switch
-//=SWITCH_THT_RDIP10_1(:Rotary-Dip BCD switch
-//switch-dil:S10HEX=SWITCH_THT_RDIP16_1(:Rotary-Dip HEX switch
-//switch-dil:DRS3016=SWITCH_THT_RDIP16_1(:Rotary-Dip HEX switch
+//switch-dil:A1353BCD=SWITCH_THT_RDIP10(:THT rotary DIP BCD switch
+//switch-dil:A1353HEX=SWITCH_THT_RDIP16(:THT rotary DIP HEX switch
+//switch-dil:S20BCD=SWITCH_THT_RDIP10_1(:THT rotary DIP BCD switch
+//=SWITCH_THT_RDIP10_1(:THT rotary DIP BCD switch
+//switch-dil:S10HEX=SWITCH_THT_RDIP16_1(:THT rotary DIP HEX switch
+//switch-dil:DRS3016=SWITCH_THT_RDIP16_1(:THT rotary DIP HEX switch
+//special:SW-C10=SWITCH_THT_RDIP10_1(:THT rotary DIP switch
+//special:SW-C16=SWITCH_THT_RDIP16_1(:THT rotary DIP HEX switch
 // end assignment
