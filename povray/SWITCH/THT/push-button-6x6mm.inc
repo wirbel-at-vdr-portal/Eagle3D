@@ -126,7 +126,7 @@
 
 /*******************************************************************************
  * THT Push Button Omron B3F-10xx
- * THT Push Button Alps Alpine SKHH Series
+ * THT Push Button Alps Alpine SKHH Series skhh.en.pdf
  * Tobias Mueller <Tobias_Mueller(replace with at)twam.info>
  * M. Weisser <mattias@matwei.de>
  *
@@ -154,7 +154,7 @@
            )
         texture {
            pigment {
-              Gray30 * 0.3
+              c
               }
            finish {
               phong 0.4 reflection {
@@ -259,22 +259,22 @@
 #end
 
 #macro SWITCH_THT_B3F10XX()
-  SW_SKHH_BASE(4,1,Black)
+  SW_SKHH_BASE(4,1,White*0.02)
 #end
 
-#macro SWITCH_SKHH_V_4_3MM_YELL()
+#macro SWITCH_THT_SKHH043VY()
   SW_SKHH_BASE(4,1.3,Yellow)
 #end
 
-#macro SWITCH_SKHH_V_5MM_YELL()
+#macro SWITCH_THT_SKHH050VY()
   SW_SKHH_BASE(4,2,Yellow)
 #end
 
-#macro SWITCH_SKHH_V_7MM_YELL()
+#macro SWITCH_THT_SKHH070VY()
   SW_SKHH_BASE(4,4,Yellow)
 #end
 
-#macro SWITCH_SKHH_V_9_5MM_YELL()
+#macro SWITCH_THT_SKHH095VY()
   SW_SKHH_BASE(4,6.5,Yellow)
 #end
 
