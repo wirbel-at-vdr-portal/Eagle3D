@@ -289,4 +289,4 @@
 //=SWITCH_THT_SKHH050VY(:THT Push Button 6mm x 6mm
 //=SWITCH_THT_SKHH070VY(:THT Push Button 6mm x 6mm
 //=SWITCH_THT_SKHH095VY(:THT Push Button 6mm x 6mm
-// end assignment 
+// end assignment
