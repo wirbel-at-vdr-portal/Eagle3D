@@ -5,5 +5,5 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-#include "DIODE/DFxxS-bridge.inc"
+#include "DIODE/SMT/DFxxS-bridge.inc"
 #include "DIODE/MBxS-bridge.inc"
