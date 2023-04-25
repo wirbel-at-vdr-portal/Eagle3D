@@ -6,4 +6,4 @@
  ******************************************************************************/
 
 #include "DIODE/SMT/DFxxS-bridge.inc"
-#include "DIODE/MBxS-bridge.inc"
+#include "DIODE/SMT/MBxS-bridge.inc"
