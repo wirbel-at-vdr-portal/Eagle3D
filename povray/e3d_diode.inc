@@ -1610,74 +1610,7 @@ DIODE_REC_RB1A_BASE(value)
 #end
 
 
-/********************************************************************************************************************************************
-// Tilmann Reh <tilmann.reh@autometer.de>
-// SMD-Diodengehäuse DO214, drei Varianten: -AA (SMB), -AB (SMC), -AC (SMA).
-// Parameter: Länge, Breite, Höhe des Kunststoffkörpers, Länge incl. Pins, Breite der Anschlüsse.
-********************************************************************************************************************************************/
-#macro DIODE_SMD_DO214_BASE(L,B,H,LG,BP,DP)
-#macro SD_DO214_PIN(H,LP,BP,DP,R)
-union{
-   difference{
-      cylinder{<0,-BP/2,0><0,BP/2,0> R+DP/2}
-      cylinder{<0,-BP,0><0,BP,0> R-DP/2}
-      box{<-R-DP,-BP,-R-DP><0,BP,R+DP>}
-      box{<-R-DP,-BP,-R-DP><R+DP,BP,0>}
-      rotate<0,0,90> 
-      translate<0,H-R,-R> 
-   }
-   difference{
-      cylinder{<0,-BP/2,0><0,BP/2,0> R+DP/2}
-      cylinder{<0,-BP,0><0,BP,0> R-DP/2}
-      box{<-R-DP,-BP,-R-DP><0,BP,R+DP>}
-      box{<-R-DP,-BP,-R-DP><R+DP,BP,0>}
-      rotate<0,0,90> 
-      rotate<90,0,0> 
-      translate<0,R+DP/2,-R> 
-   }
-   box{<-BP/2,R+DP/2,-DP/2><BP/2,H-R,DP/2>}
-   box{<-BP/2,0,-LP><BP/2,DP,-R>}
-   box{<-BP/2,H-DP/2,-LP><BP/2,H+DP/2,-R>}
-   texture{col_silver}
-}
-#end
-union{
-difference{
-box{<-L/2,0.2,-B/2><L/2,H,B/2>}
-box{<0,0,-B><H,H,B> rotate<0,0,10> translate<L/2,H/2+DP/2,0>}
-box{<0,0,-B><-H,H,B> rotate<0,0,-10> translate<-L/2,H/2+DP/2,0>}
-box{<0,0,-B><H,-H,B> rotate<0,0,-10> translate<L/2,H/2-DP/2,0>}
-box{<0,0,-B><-H,-H,B> rotate<0,0,10> translate<-L/2,H/2-DP/2,0>}
-box{<-L,0,0><L,H,H> rotate<-10,0,0> translate<0,H/2+DP/2,B/2>}
-box{<-L,0,0><L,H,-H> rotate<10,0,0> translate<0,H/2+DP/2,-B/2>}
-box{<-L,0,0><L,-H,H> rotate<10,0,0> translate<0,H/2-DP/2,B/2>}
-box{<-L,0,0><L,-H,-H> rotate<-10,0,0> translate<0,H/2-DP/2,-B/2>}
-box{<0,0,-B><1.2,1.5*DP,B> translate<-L/2,0,0>}
-box{<0,0,-B><-1.2,1.5*DP,B> translate<L/2,0,0>}}
-box{<-L/2+L/10,H,-B/2+B/10><-L/2+L/10+L/10,H+0.01,B/2-B/10> pigment{White}}
-object{SD_DO214_PIN (H/2,1.14,BP,DP,0.2) rotate<0,90,0> translate<LG/2-DP/2,0,0>}
-object{SD_DO214_PIN (H/2,1.14,BP,DP,0.2) rotate<0,-90,0> translate<-LG/2+DP/2,0,0>}
-pigment{Gray20}}
-#end
 
-#macro DIODE_SMD_DO214AC()
-DIODE_SMD_DO214_BASE(4.25,2.65,2.15,5.1,1.45,0.22)
-#end
-#macro DIODE_SMD_DO214AA()
-DIODE_SMD_DO214_BASE(4.27,3.62,2.29,5.4,2.08,0.22)
-#end
-#macro DIODE_SMD_DO214AB()
-DIODE_SMD_DO214_BASE(6.85,5.91,2.34,7.94,3.05,0.22)
-#end
-#macro DIODE_SMD_SMA()
-DIODE_SMD_DO214_BASE(4.25,2.65,2.15,5.1,1.45,0.22)
-#end
-#macro DIODE_SMD_SMB()
-DIODE_SMD_DO214_BASE(4.27,3.62,2.29,5.4,2.08,0.22)
-#end
-#macro DIODE_SMD_SMC()
-DIODE_SMD_DO214_BASE(6.85,5.91,2.34,7.94,3.05,0.22)
-#end
 
 
 /********************************************************************************************************************************************
