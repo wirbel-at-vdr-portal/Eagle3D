@@ -1839,64 +1839,7 @@ DIODE_SMD_LED_PLCC2_BASE("MiniTopled")
 #end
 
 
-/********************************************************************************************************************************************
-//MELF
-********************************************************************************************************************************************/
-#macro DIODE_SMD_MELF_BASE(value)
-union{                                                                                                               
-cylinder{<1.7,0,0><-1.6,0,0>1.25}                                                                                    
-torus{1.05,0.2 rotate<90,90,0> translate<1.7,0,0>}                                                                   
-torus{1.05,0.2 rotate<90,90,0> translate<-1.6,0,0>}                                                                  
-cylinder{<2,0,0><-2,0,0>1.05}                                                                                        
-cylinder{<2,0,0><2.5,0,0>1.25 texture{col_silver} finish{F_MetalC ambient (0.1 * global_ambient_mul)}}                                                  
-cylinder{<-2,0,0><-2.5,0,0>1.25 texture{col_silver} finish{F_MetalC ambient (0.1 * global_ambient_mul)}}                                                
-cylinder{<-1.4,0,0><-0.6,0,0>1.2501 pigment{Gray20} finish{F_MetalB ambient (0.1 * global_ambient_mul)}}                                                
-intersection{                                                                                                        
-  cylinder{<1.8,0,0><-1.6,0,0>1.2502 pigment{White}}                                                                 
-    union{                                                                                                           
-    text {ttf besch_font value 0.5, 0 scale<0.5,0.5,0.5> translate<-0.9,-0.2,-1.2501> rotate<0,0,0> pigment{White}}  
-    text {ttf besch_font value 0.5, 0 scale<0.5,0.5,0.5> translate<-0.9,-0.2,-1.2501> rotate<90,0,0> pigment{White}} 
-    text {ttf besch_font value 0.5, 0 scale<0.5,0.5,0.5> translate<-0.9,-0.2,-1.2501> rotate<180,0,0> pigment{White}}
-    }                                                                                                                
-  }                                                                                                                  
-pigment{P_Copper4} finish{F_MetalC ambient (0.1 * global_ambient_mul)}                                                                                  
-translate<0,1.25,0>                                                                                                  
-}                                                                                                                    
-#end                                                                                                                 
-#macro DIODE_SMD_MELF(value)
-DIODE_SMD_MELF_BASE(value)
-#end
 
-
-/********************************************************************************************************************************************
-//neu von Walter Mücke                                                                                             
-********************************************************************************************************************************************/
-#macro DIODE_SMD_MINIMELF_BASE(value, s)
-union{                                                                                                             
-object{Round_Cylinder_Union(<-1.1,0,0><1.2,0,0>0.8,0.2)}                                                           
-cylinder{<-1.6,0,0><1.6,0,0>0.32 texture{col_silver}}                                                              
-object{Round_Cylinder_Union(<1.25,0,0><1.7,0,0>0.8,0.2) texture{col_silver}}                                       
-object{Round_Cylinder_Union(<-1.7,0,0><-1.25,0,0>0.8,0.2) texture{col_silver}}                                     
-cylinder{<-0.95,0,0><-.350,0,0>0.8001 pigment{Gray20} finish{F_MetalC ambient (0.1 * global_ambient_mul)}}    //Markierung                            
-intersection{                                                                                                      
-  cylinder{<1.8,0,0><-1.6,0,0>0.8002 pigment{White}}                                                               
-  union{                                                                                                           
-    text {ttf besch_font value 0.5, 0 scale<0.3,0.3,0.3> translate<-0.45,-0.2,-0.9> rotate<0,0,0> pigment{White}}  
-    text {ttf besch_font value 0.5, 0 scale<0.3,0.3,0.3> translate<-0.45,-0.2,-0.9> rotate<90,0,0> pigment{White}} 
-    text {ttf besch_font value 0.5, 0 scale<0.3,0.3,0.5> translate<-0.45,-0.2,-0.9> rotate<180,0,0> pigment{White}}
-    }                                                                                                              
-  }                                                                                                                
-pigment{P_Copper4} finish{F_MetalC ambient (0.1 * global_ambient_mul)}                                                                                
-translate<0,0.8,0>                                                                                               
-scale s
-}                                                                                                                  
-#end                                                                                                               
-#macro DIODE_SMD_MINIMELF(value)
-DIODE_SMD_MINIMELF_BASE(value, <1.0,1.0,1.0>)
-#end
-#macro DIODE_SMD_MICROMELF(value)
-DIODE_SMD_MINIMELF_BASE(value, <0.52,0.7,0.7>)
-#end
 
 
 /********************************************************************************************************************************************
@@ -1938,26 +1881,7 @@ DIODE_SMD_SOD123_BASE(1.6, 1.8, 0.6, 1.6, 0.3, 0.15)
 #end
 
 
-/********************************************************************************************************************************************
-//SOD80
-********************************************************************************************************************************************/
-#macro DIODE_SMD_SOD80_BASE(value)
-union{
-cylinder{<-1.45,0,0><1.45,0,0>0.7}
-cylinder{<-1.45,0,0><-1.75,0,0>0.8 texture{col_silver}}
-cylinder{<1.45,0,0><1.75,0,0>0.8 texture{col_silver}}
-cylinder{<1.1,0,0><0.8,0,0>0.701 pigment{Gray80}}
-intersection{
-cylinder{<0.7,0,0><-1.5,0,0>0.7001 pigment{White}}
-union{
-text {ttf besch_font value 0.4, 0 scale<0.4,0.4,0.4> translate<-1,-0.2,-0.75> rotate<0,0,0> pigment{White}}
-text {ttf besch_font value 0.4, 0 scale<0.4,0.4,0.4> translate<-1,-0.2,-0.75> rotate<90,0,0> pigment{White}}
-text {ttf besch_font value 0.4, 0 scale<0.4,0.4,0.4> translate<-1,-0.2,-0.75> rotate<180,0,0> pigment{White}}}}
-rotate<0,180,0> translate<0,0.8,0> pigment{Gray30}}
-#end
-#macro DIODE_SMD_SOD80(value)
-DIODE_SMD_SOD80_BASE(value)
-#end
+
 
 
 /********************************************************************************************************************************************
