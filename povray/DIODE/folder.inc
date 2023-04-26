@@ -9,3 +9,4 @@
 #include "DIODE/SMT/DO-214.inc"
 #include "DIODE/SMT/MBxS-bridge.inc"
 #include "DIODE/SMT/MELF.inc"
+#include "DIODE/THT/KBU-bridge.inc"

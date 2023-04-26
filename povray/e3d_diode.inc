@@ -1502,49 +1502,7 @@ DIODE_REC_FB100_BASE(value, "FB32",     <-16, +3, -3>, <+16, +20, +3>,         1
 #end
 
 
-/********************************************************************************************************************************************
-//Macros for rectifier bridge KBU8A from General Semiconductor
-//Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
-//Rev. 1.0 30/12/05
-********************************************************************************************************************************************/
-#macro DIODE_REC_KBU_BASE(value)
-union{
-    difference{
-        union{
-            box{<-11,0,-3.19><11,+19.3,+3.81>} // case
-        }
-        union{
-            box{<-0,-5,-4><+5,+5,+6> rotate -60*z translate<-15,+22,0> }  // left corner
-            box{<-0,-5,-4><+5,+5,+6> rotate 45*z translate<+9,+17.3,0> }  // right corner
-            intersection{
-                cylinder{<0,10,-5><0,10,+5> 2.5}
-                box{<-2,5,-5><+2,15,+5>} 
-            }
-            box{<-8.9,-.1,-5><8.9,+1.5,+5>} // base
-            box{<-0,-5,-4><+5,+5,+6> rotate -30*z translate<-11.5,-2.8,0> }  
-            box{<-0,-5,-4><+5,+5,+6> rotate -30*z translate<-11.5,-2.8,0> rotate 180*y }  
-        }
-        pigment{Gray25}
-    }
-    //pins
-    cylinder{<-7.5,2,2.54><-7.5,-min(25,(pin_length+pcb_height)),2.54> .5 texture { pigment{P_Silver2} } }        
-    cylinder{<-2.5,2,2.54><-2.5,-min(25,(pin_length+pcb_height)),2.54> .5 texture { pigment{P_Silver2} } }        
-    cylinder{<+2.5,2,2.54><+2.5,-min(25,(pin_length+pcb_height)),2.54> .5 texture { pigment{P_Silver2} } }        
-    cylinder{<+7.5,2,2.54><+7.5,-min(30,(pin_length+pcb_height)),2.54> .5 texture { pigment{P_Silver2} } } 
-    // Marking
-    text {ttf global_fontfile_eagle3d "1" -0.05, 0 pigment{White} scale 5  translate<3,4,-2.95>}  // Marking
-    text {ttf global_fontfile_arial "+" -0.05, 0 pigment{White} scale 2  translate<7,2,-3.1>}  // Marking
-    text {ttf global_fontfile_arial "~" -0.05, 0 pigment{White} scale 2  translate<7-5,2,-3.1>}  // Marking
-    text {ttf global_fontfile_arial "~" -0.05, 0 pigment{White} scale 2  translate<7-10,2,-3.1>}  // Marking
-    text {ttf global_fontfile_arial "-" -0.05, 0 pigment{White} scale 2  translate<7-15,2,-3.1>}  // Marking
-    text {ttf global_fontfile_arial_bold value -0.05, 0 pigment{White} scale 2.5 translate<7-12,15,-3.1>}  // Marking
-  
-    //rotate 90*y     
-}
-#end
-#macro DIODE_REC_KBU_4_6_8(value)
-DIODE_REC_KBU_BASE(value)
-#end
+
 
 
 /********************************************************************************************************************************************
