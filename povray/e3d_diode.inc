@@ -1505,67 +1505,7 @@ DIODE_REC_FB100_BASE(value, "FB32",     <-16, +3, -3>, <+16, +20, +3>,         1
 
 
 
-/********************************************************************************************************************************************
-//Macro für Brückengleichrichter RUND
-//franz.riedmueller@web.de
-********************************************************************************************************************************************/
-#macro DIODE_REC_RB1A_BASE(value)
-union {
- difference { 
-  union {
-   cylinder {<0, 0, 0>,
-             <0, 4.8, 0>,  4.8
-             finish { ambient (0.15 * global_ambient_mul) diffuse 0.85 phong 1.0 phong_size 40}
-   }
-   cone {<0,4.8,0>, 4.8,
-         <0,5.0,0>, 4.8
-         finish { ambient (0.15 * global_ambient_mul) diffuse 0.85 phong 1.0 phong_size 40}
-   }
-  }
-  box {<-4.1, -0.1, 4.0>
-       < -20, 5.1,  -3.8>
-       finish { ambient (0.15 * global_ambient_mul) diffuse 0.85 reflection 0.05 phong 1.0 phong_size 40}
-  }
- }
- cylinder {<-2.55, 0, 2.55>
-           <-2.55, -8, 2.55>, 0.3
-           texture{col_silver}
- }
- cylinder {<2.55, 0, 2.55>
-           <2.55, -8, 2.55>, 0.3
-           texture{col_silver}
- }
- cylinder {<2.55, 0, -2.55>
-           <2.55, -8, -2.55>, 0.3
-           texture{col_silver}
- }
- cylinder {<-2.55, 0, -2.55>
-           <-2.55, -8, -2.55>, 0.3
-           texture{col_silver}
- }
- text {ttf besch_font "+        ~", 0.2, 0
-       pigment{Gray30}
-       rotate<90,0,0>
-       translate<-2.5,5.01,2.5>
- }
- text {ttf besch_font "~        -", 0.2, 0  
-       pigment{Gray30}
-       rotate<90,0,0>
-       translate<-2.5,5.01,-3>
- }
- text {ttf besch_font value, 0.2, 0  
-       pigment{Gray30}
-       rotate<90,0,0>
-       translate<-2.5,5.01,0>
- }
- translate<0,5,0>
-}
-#end
 
-
-#macro DIODE_REC_RB1A(value)
-DIODE_REC_RB1A_BASE(value)
-#end
 
 
 

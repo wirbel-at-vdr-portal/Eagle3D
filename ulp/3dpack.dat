@@ -588,7 +588,7 @@ FB15A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_FB15
 FB15:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_FB15(:Gleichrichter:AC/DC-Converter
 FB32:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_FB32(:Gleichrichter:AC/DC-Converter
 KBU:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_THT_BRIDGE_KBU(:THT full bridge rectifier:
-RB1A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_REC_RB1A(:Brueckengleichrichter 1A, rund:Rectifier 1A, Round
+RB1A:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_THT_BRIDGE_RB1A(:THT full bridge rectifier:
 DO214AC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMT_DO214AC(:SMT diode DO-214AC (SMA):
 DO214AA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMT_DO214AA(:SMT diode DO-214AA (SMB):
 DO214BA:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:DIODE_SMT_DO214BA(:SMT diode DO-214BA (GF1):

@@ -10,3 +10,4 @@
 #include "DIODE/SMT/MBxS-bridge.inc"
 #include "DIODE/SMT/MELF.inc"
 #include "DIODE/THT/KBU-bridge.inc"
+#include "DIODE/THT/RB1A-bridge.inc"
