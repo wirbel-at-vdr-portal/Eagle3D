@@ -11,5 +11,6 @@
 #include "DIODE/SMT/MELF.inc"
 #include "DIODE/THT/axial.inc"
 #include "DIODE/THT/DO-204.inc"
+#include "DIODE/THT/FBxx-bridge.inc"
 #include "DIODE/THT/KBU-bridge.inc"
 #include "DIODE/THT/RB1A-bridge.inc"

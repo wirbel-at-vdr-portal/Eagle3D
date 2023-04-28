@@ -142,5 +142,5 @@
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//rectifier:KBU=DIODE_THT_BRIDGE_KBU(:DIODE_THT_BRIDGE_KBU
+//rectifier:KBU=DIODE_THT_BRIDGE_KBU(:THT full bridge rectifier
 // end assignment
