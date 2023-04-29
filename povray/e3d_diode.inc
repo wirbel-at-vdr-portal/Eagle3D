@@ -486,55 +486,6 @@ DIODE_DIS_LED_7SEG_VQE_BASE(value, col, tra, height)
 
 
 
-
-/********************************************************************************************************************************************
-//Macros for horizontal TO220 diodes with bended pins
-//Modified by Philippe Boucheny <philippe.boucheny(at)numericable.fr>
-//from Tobias Mueller's TO220 transistor package : TR_TO220_L
-//Rev. 1.0  04/06/07
-********************************************************************************************************************************************/
-#macro DIODE_DIS_TO220_S_BASE(value)
-union{union{union{
-#if(pin_short=off)
-#local tr_to220_s_pin = 9.5;
-#else
-#local tr_to220_s_pin = 9.5-(pcb_height+pin_length);
-#end
-difference{
-box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-translate<-2.54,0,0>}
-difference{
-box{<0,tr_to220_s_pin,0><0.75,13.5,0.6>}
-box{<0,0,0><1,1,1> rotate<0,0,-25> translate<0.45,tr_to220_s_pin,-0.2>}
-box{<0,0,0><-1,1,1> rotate<0,0,25> translate<0.3,tr_to220_s_pin,-0.2>}
-translate<2.54,0,0>}
-box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<2.54,9.8,0>}
-box{<0,0,0><1.5,3.7,0.6> translate<-0.375,0,0> translate<-2.54,9.8,0>}
-translate<-0.75/2,0,1.6>}
-difference{
-box{<-5.1,22.6,4.5><5.1,29,4.5-1.27>}
-cylinder{<0,0,0><0,0,2>1.9 translate<0,26.2,2.6>}
-cylinder{<0,0,0><0,0,2>0.5 translate<+5.1,26.2,2.6>}
-cylinder{<0,0,0><0,0,2>0.5 translate<-5.1,26.2,2.6>}
-}
-box{<-4,22.6,4.5><4,16,4.501>}
-texture{col_silver}}
-difference{
-box{<-5.1,13.5,0><5.1,22.6,4.5>}
-box{<-5.5,0,0><5.5,3,-2> rotate<45,0,0> translate<0,22.6-1.8,0> }
-box{<-5.5,0,0><5.5,-1,2> rotate<-20,0,0> translate<0,13.5,3.7> }
-pigment{Gray30}}
-text{ttf besch_font value 0.5,0 pigment{White} scale<1.7,2,1.7> translate<-3.5,18,-0.01>}
-translate<0,-9.5,-4.5>}
-#end
-
-#macro DIODE_DIS_TO220_S(value)
-DIODE_DIS_TO220_S_BASE(value)
-#end
-
-
 /********************************************************************************************************************************************
 // SMD-LED die zur Seite leuchtet - EVERLIGHT 12-215SURC/S530-A2/TR8
 // col = Farbe
