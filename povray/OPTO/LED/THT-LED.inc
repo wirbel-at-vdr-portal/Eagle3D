@@ -435,10 +435,96 @@
 
 
 /*******************************************************************************
+ * THT LED, rectangular 2.5mm x 2.5mm
+ * BuFran <BuFran@hi-web.cz>
+ * 29.04.2023 - switched case to Round_Box(), wk
+ ******************************************************************************/
+#macro LED_THT_025x025(Color,Alpha,height)
+  union {
+     #local w = 2.5;
+     #local h = 2.5;
+     object {
+        Round_Box (
+           <0,0,0> <h,7,w>
+           0.05
+           1
+           )
+        pigment {
+           Color
+           filter Alpha
+           }
+        translate <-h/2,height-7,-w/2>
+        }
+     #if (pin_short = off)
+        #local pp = -30.0 + height;
+     #else
+        #local pp = -pcb_height - pin_length - 8;
+     #end
+     box {
+        <0.24,height+3,0.24> <-0.24,pp,-0.24>
+        translate <-1.27,-7,0>
+        }
+     box {
+        <0.24,height+3,0.24> <-0.24,pp,-0.24>
+        translate <1.27,-7,0>
+        }
+     box {
+        <-0.34,0,-0.24> <0.34,1,0.24>
+        translate <-1.27,height-9,0>
+        }
+     box {
+        <-0.34,0,-0.24> <0.34,1,0.24>
+        translate <1.27,height-9,0>
+        }
+     prism {
+        linear_spline
+        -0.24 0.24
+        7
+        <0,0>
+        <0,6>
+        <5,6>
+        <3,1>
+        <1,1>
+        <1,0>
+        <0,0>
+        scale <0.48,1,0.48>
+        rotate <-90,0,0>
+        translate <-1.51,height-6,0>
+        }
+     prism {
+        linear_spline
+        -0.24 0.24
+        7
+        <0,0>
+        <0,6>
+        <-0.5,6>
+        <-2.5,1>
+        <-1,1>
+        <-1,0>
+        <0,0>
+        scale <0.48,1,0.48>
+        rotate <-90,0,0>
+        translate <1.51,height-6,0>
+        }
+     cone {
+        <0,-0.8,0>, 0,
+        <0,0,0>, 0.6
+        translate <0,height-3.1,0>
+        }
+     pigment {
+        Silver
+        }
+     translate <0,8,0>
+     }
+#end
+
+
+/*******************************************************************************
 *  no typos below please.
  * *****************************************************************************/
 // begin assignment
 //led:LED3MM=LED_THT_3mm(:THT LED 3mm
 //led:LED5MM=LED_THT_5mm(:THT LED 5mm
 //led:LED10MM=LED_THT_10mm(:THT LED 10mm
+//led:LD260=LED_THT_025x025(:THT LED 2.5mm x 2.5mm
 // end assignment

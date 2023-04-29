@@ -485,60 +485,7 @@ DIODE_DIS_LED_7SEG_VQE_BASE(value, col, tra, height)
 #end
 
 
-/********************************************************************************************************************************************
-// Rectangular led
-// 
-// By BuFran <BuFran@hi-web.cz>
-//
-// col            : The color of led
-// tra            : Transparence of LED
-// height         : The LED is lifted up 
-// w / h          : Width / height of LED
-********************************************************************************************************************************************/
-#macro DIODE_DIS_LED_RECT_BASE(col,tra,height,w,h)
-union{
-      box{<0,0,0><h,7,w> pigment { col filter tra}
-         translate <-h/2,height-7,-w/2>
-        }
-        
-        #if(pin_short=off)
-                #local pp=-30.0+height;
-        #else
-                #local pp=-pcb_height-pin_length-8;
-        #end
-        
-        box {<0.24,height+3,0.24><-0.24,pp,-0.24> translate <-1.27,-7,0>}
-        box {<0.24,height+3,0.24><-0.24,pp,-0.24> translate <1.27,-7,0>}
-        
-        box {<-0.34,0,-0.24><0.34,1,0.24> translate <-1.27,height-9,0>} 
-        box {<-0.34,0,-0.24><0.34,1,0.24> translate <1.27,height-9,0>}
-        
-        prism{                                                          // inner box
-                linear_spline -0.24 0.24 7
-                <0,0><0,6><5,6><3,1><1,1><1,0><0,0>
-                scale <0.48,1,0.48>
-                rotate <-90,0,0>
-                translate <-1.51,height-6,0>
-        }
-        prism{
-                linear_spline -0.24 0.24 7
-                <0,0><0,6><-0.5,6><-2.5,1><-1,1><-1,0><0,0>
-                scale <0.48,1,0.48>
-                rotate <-90,0,0>
-                translate <1.51,height-6,0>
-        
-        }
-        
-        cone{<0,-0.8,0>,0,<0,0,0>,0.6 translate <0,height-3.1,0>}
-        
-        pigment{Silver}
-        
-        translate<0,8,0>
-}
-#end
-#macro DIODE_DIS_LED_RECT_2_5MM(col,tra,height)
-DIODE_DIS_LED_RECT_BASE(col,tra,height,2.5,2.5)
-#end
+
 
 
 /********************************************************************************************************************************************
