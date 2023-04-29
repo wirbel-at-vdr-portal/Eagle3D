@@ -7,3 +7,4 @@
 #include "OPTO/Avago.inc"
 #include "OPTO/Toshiba.inc"
 #include "OPTO/lightpipe.inc"
+#include "OPTO/LED/THT-LED.inc"
