@@ -3,7 +3,6 @@
  *
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
-//#include "DIODE/THT/axial.inc"
 
 /*******************************************************************************
  * DO-204xx THT diode family
