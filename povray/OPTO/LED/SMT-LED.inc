@@ -324,15 +324,15 @@
  ******************************************************************************/
 // begin assignment
 //=LED_SMT_SIDE_021x060(:SMT side LED 2.1mm x 0.6mm
-//led:CHIPLED_0603=LED_SMT_0603_concave_rotate(:SMT LED 0603:
-//led:CHIPLED-0603-TTW=LED_SMT_0603_concave_rotate(:SMT LED 0603:
-//led:CHIPLED_0805=LED_SMT_0805_concave_rotate(:SMT LED 0805:
-//led:CHIPLED_1206=LED_SMT_1206_concave_rotate(:SMT LED 1206:
-//led:LED0805=LED_SMT_0805_concave_rotate(:SMT LED 0805:
-//led:SMARTLED-TTW=LED_SMT_0603_convex_rotate(:SMT LED 0603:
-//led:CHIP-LED0603=LED_SMT_0603_convex_rotate(:SMT LED 0603:
-//led:CHIP-LED0805=LED_SMT_0805_convex_rotate(:SMT LED 0805:
-//led:SML0603=LED_SMT_0603_concave(:SMT LED 0603:
-//led:SML0805=LED_SMT_0805_concave(:SMT LED 0805:
-//led:SML1206=LED_SMT_1206_concave(:SMT LED 1206:
+//led:CHIPLED_0603=LED_SMT_0603_concave_rotate(:SMT LED 0603
+//led:CHIPLED-0603-TTW=LED_SMT_0603_concave_rotate(:SMT LED 0603
+//led:CHIPLED_0805=LED_SMT_0805_concave_rotate(:SMT LED 0805
+//led:CHIPLED_1206=LED_SMT_1206_concave_rotate(:SMT LED 1206
+//led:LED0805=LED_SMT_0805_concave_rotate(:SMT LED 0805
+//led:SMARTLED-TTW=LED_SMT_0603_convex_rotate(:SMT LED 0603
+//led:CHIP-LED0603=LED_SMT_0603_convex_rotate(:SMT LED 0603
+//led:CHIP-LED0805=LED_SMT_0805_convex_rotate(:SMT LED 0805
+//led:SML0603=LED_SMT_0603_concave(:SMT LED 0603
+//led:SML0805=LED_SMT_0805_concave(:SMT LED 0805
+//led:SML1206=LED_SMT_1206_concave(:SMT LED 1206
 // end assignment
