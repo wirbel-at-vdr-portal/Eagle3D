@@ -23,6 +23,8 @@
  *  - SOD-80C (Nexperia)
  * MicroMELF Synonyms:
  *  - none known
+ * SOD-87
+ *  - as MELF, but thicker.
  ******************************************************************************/
 
 #macro MELF_BASE(value, Type)
@@ -41,6 +43,12 @@
      #local A = 1.90;
      #local B = 1.15;
      #local C = 0.20;
+  #end
+
+  #if (Type = "SOD-87")
+     #local A = 3.50;
+     #local B = 2.10;
+     #local C = 0.30;
   #end
 
   union {
@@ -117,6 +125,11 @@
   MELF_BASE(value, "MicroMELF")
 #end
 
+#macro DIODE_SMT_SOD87(value)
+  MELF_BASE(value, "SOD-87")
+#end
+
+
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
@@ -132,4 +145,7 @@
 //diode:SOD80C=DIODE_SMT_MINIMELF(:SMT diode MiniMELF
 //diode:MICROMELF-R=DIODE_SMT_MICROMELF(:SMT diode MicroMELF
 //diode:MICROMELF-W=DIODE_SMT_MICROMELF(:SMT diode MicroMELF
+//diode:SOD87=DIODE_SMT_SOD87:SMT diode SOD-87
+//diode:SOD87-R=DIODE_SMT_SOD87:SMT diode SOD-87
+//diode:SOD87-W=DIODE_SMT_SOD87:SMT diode SOD-87
 // end assignment
