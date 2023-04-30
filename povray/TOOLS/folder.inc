@@ -21,6 +21,7 @@
 #include "TOOLS/ROUNDED_BAR.inc"
 #include "TOOLS/SCREW.inc"
 #include "TOOLS/TORUS_SPLINE.inc"
+#include "TOOLS/TRAPEZOIDAL.inc"
 #include "TOOLS/WASHER.inc"
 #include "TOOLS/WIRE_LEADS.inc"
 
