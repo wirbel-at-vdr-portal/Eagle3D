@@ -128,7 +128,7 @@
      #end
 
      union {
-        Round_Cylinder_Union (
+        Round_Cylinder_Merge (
            <-B/2,D/2,0>
            <+B/2,D/2,0>
            D/2
