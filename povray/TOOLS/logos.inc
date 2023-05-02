@@ -89,7 +89,7 @@
       #declare LOGO_INDEX = "0"
   #end
 
-  #if (S = "GENERAL SEMICONDUCTOR") // 31 e3d_diode.inc:1559, NOTE: General Semiconductor is VISHAY.
+  #if (S = "GENERAL SEMICONDUCTOR") // 31 NOTE: General Semiconductor is VISHAY.
       #declare LOGO_INDEX = "1"
   #end
 
