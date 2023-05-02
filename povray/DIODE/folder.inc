@@ -9,6 +9,7 @@
 #include "DIODE/SMT/DO-214.inc"
 #include "DIODE/SMT/MBxS-bridge.inc"
 #include "DIODE/SMT/MELF.inc"
+#include "DIODE/SMT/SOD-x23.inc"
 #include "DIODE/THT/axial.inc"
 #include "DIODE/THT/DO-204.inc"
 #include "DIODE/THT/FBxx-bridge.inc"
