@@ -1,8 +1,8 @@
 /*******************************************************************************
-*  Eagle3D - generates 3d images from Eagle PCB board files.
-*
-*  See the README file for copyright information and how to reach the author.
- * *****************************************************************************/
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
 
 /*******************************************************************************
  * full bridge rectifier
@@ -306,8 +306,8 @@
 
 
 /*******************************************************************************
-*  no typos below please.
- * *****************************************************************************/
+ * no typos below please.
+ ******************************************************************************/
 // begin assignment
 //rectifier:FB15=DIODE_THT_BRIDGE_FB15(:THT full bridge rectifier
 //rectifier:FB15A=DIODE_THT_BRIDGE_FB15A(:THT full bridge rectifier
