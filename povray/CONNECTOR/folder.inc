@@ -6,6 +6,7 @@
 
 #include "CONNECTOR/AMP_227161.inc"
 #include "CONNECTOR/AMP_HE14.inc"
+#include "CONNECTOR/CENTRONICS.inc"
 #include "CONNECTOR/LEMO.inc"
 #include "CONNECTOR/MOLEX_87832_series.inc"
 #include "CONNECTOR/MOLEX_PSL_series.inc"
