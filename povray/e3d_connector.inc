@@ -5,14 +5,7 @@
  ******************************************************************************/
 
 
-#ifndef(__connector_inc)
-#declare __connector_inc = true;
-
-
-
-
 // ////////////////////////////////////////////////////////////
-// Original file: ./1_CON_PBL_F.inc.src
 // Pin fuer Buchsenleiste (flache Bauform), hinzugefuegt von B.Redemann www.b-redemann.de
 // //////////
 #macro CON_PBL_F()
@@ -316,14 +309,11 @@ difference
       #local i = i+1;
     #end
   }
-
-  // trim the left end
   difference
   {
     cylinder{<0,0,-1.1*pitch><0,0,td*0.99> 1.1*od/2}
     cone{<0,0,0> id/2 <0,0,td> id/1.99+td}
   }
-  // trim the right end
   difference
   {
     cylinder{<0,0,len-0.99*td><0,0,len+pitch*2> 1.1*od/2}
@@ -417,81 +407,75 @@ union
   texture{col_gold}
 }
 #end
+
 /********************************************************************************************************************************************
 //AK-700 Klemme ohne Mittelanschluss RM 5.0 Uwe Lorenz <u.lorenz@er-dresden.net>
 ********************************************************************************************************************************************/
 #macro CON_AK700_3_5_BASE()
 union {
-//***** Loetstift
 cylinder{<-5,-4,0><-5,1.1,0>0.6 texture{col_silver}}
 cylinder{<5,-4,0><5,1.1,0>0.6 texture{col_silver}}
-//***** Ende Loetstifte
-//
-//***** Grundkoerper
+//  Grundkoerper
 difference {
 box{<-7.5,0,-5><7.5,19,5>}
-//*****mittlerer Anschluss
+// mittlerer Anschluss
 box{<-2,3.9,-5.01><2,9.5,3.5>}
-//*****linker Anschluss
+// linker Anschluss
 box{<-6.5,3.9,-5.01><-2.5,9.5,3.5>}
-//*****rechter Anschluss
+// rechter Anschluss
 box{<2.5,3.9,-5.01><6.5,9.5,3.5>}
-//***** vordere Schraege
+//  vordere Schraege
 box{<-7.6,9,-6.0><7.6,25,-1.1> rotate<20,0,0> translate<0,0,-8.7>}
-//box{<-7.6,12,-5.1><7.6,12.5,-4.6>}
-//***** hintere Kante
+//  hintere Kante
 box{<-7.6,10,3><7.6,19.1,5.1> }
-//***** Aussparungen hinten
+//  Aussparungen hinten
 box{<-1.4,6,3.4><1.4,10.1,5.1> }
 box{<-6.2,6,3.4><-3.1,10.1,5.1> }
 box{<3.1,6,3.4><6.2,10.1,5.1> }
-//***** mittleres Borhloch
+//  mittleres Borhloch
 cylinder{<0,15.9,0><0,19.1,0>1.8}
-//cone{<0,18,0>1.5<0,19.1,0>1.8}
-//***** linkes Borhloch
+//  linkes Borhloch
 cylinder{<-5,15.9,0><-5,19.1,0>1.8}
-//cone{<-5,18,0>1.5<-5,19.1,0>1.8}
-//***** rechtes Borhloch
+//  rechtes Borhloch
 cylinder{<5,15.9,0><5,19.1,0>1.8}
-//cone{<5,18,0>1.5<5,19.1,0>1.8}
-//***** Nut an der rechten Seite
+//  Nut an der rechten Seite
 box{<7.0,0.0,-3.4><7.6,13.0,-4.0> }
 }
-//***** Ende Grundkoerper
+//  Ende Grundkoerper
 //
-//***** Steg an der linken Seite
+//  Steg an der linken Seite
 box{<-7.4,1.0,-3.4><-8.0,13.0,-4.0> }
-//***** Silberfahnen hinten
+//  Silberfahnen hinten
 box{<-6.0,6,3.8><-3.4,9.1,4.5> texture{col_silver} }
 box{<3.4,6,3.8><6.0,9.1,4.5> texture{col_silver} }
 //Silberknubbeln an den Silberfahnen
 box{<-5.4,6.3,3.8><-4.0,7.3,4.8> texture{col_silver} }
 box{<4.0,6.3,3.8><5.4,7.3,4.8> texture{col_silver} }
-//***** Ende hintere Silberfahnen
+//  Ende hintere Silberfahnen
 //
-//***** rechter Schraubenkopf
+//  rechter Schraubenkopf
 difference {
 superellipsoid{<1,0.1> rotate<90,0,0> scale<1.5,0.5,1.5> texture{col_silver} translate<-5,18.2,0>}
 box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> texture{col_silver} translate<-5,18.2,0>}}
-//***** linker Schraubenkopf
+//  linker Schraubenkopf
 difference {
 superellipsoid{<1,0.1> rotate<90,0,0> scale<1.5,0.5,1.5> texture{col_silver} translate<5,18.2,0>}
 box{<0.25,0,-2><-0.25,1,2>rotate<0,30,0> texture{col_silver} translate<5,18.2,0>}}
-//***** Ende Schraubenkoepfe
+//  Ende Schraubenkoepfe
 //
-//***** linke Zugbuegelklemme
+//  linke Zugbuegelklemme
 difference {
 box{<-6.4,4.1,-3.5><-2.6,9.4,2.5>}
 box{<-6.2,4.2,-3.6><-2.8,9.4,2.6>}
 texture{col_silver}}
 cylinder{<-5.8,9.0,-3.3><-3.1,9.0,-3.3>1.0 texture{col_silver}}
-//***** rechte Zugbuegelklemme
+//  rechte Zugbuegelklemme
 difference {
 box{<2.6,4.1,-3.5><6.4,9.4,2.5>}
 box{<2.8,4.2,-3.6><6.2,9.4,2.6>}
 texture{col_silver}}
 cylinder{<3.2,9.0,-3.3><5.8,9.0,-3.3>1.0 texture{col_silver}}
-//***** Ende Zugbuegelklemme
+//  Ende Zugbuegelklemme
 //
 pigment{LimeGreen} translate<0,0.2,0>}
 #end
@@ -691,91 +675,67 @@ union {
 
 
 
-#macro CON_BLW_1X2()
-CON_BLW_BASE(2,1)
-#end
-#macro CON_BLW_1X5()
-CON_BLW_BASE(5,1)
-#end
-#macro CON_BLW_1X6()
-CON_BLW_BASE(6,1)
-#end
-#macro CON_BLW_1X7()
-CON_BLW_BASE(7,1)
-#end
-#macro CON_BLW_1X8()
-CON_BLW_BASE(8,1)
-#end
-#macro CON_BLW_1X9()
-CON_BLW_BASE(9,1)
-#end
-#macro CON_BLW_1X10()
-CON_BLW_BASE(10,1)
-#end
-#macro CON_BLW_1X12()
-CON_BLW_BASE(12,1)
-#end
-#macro CON_BLW_1X13()
-CON_BLW_BASE(13,1)
-#end
-#macro CON_BLW_1X15()
-CON_BLW_BASE(15,1)
-#end
-#macro CON_BLW_1X17()
-CON_BLW_BASE(17,1)
-#end
-#macro CON_BLW_1X18()
-CON_BLW_BASE(18,1)
-#end
-#macro CON_BLW_1X20()
-CON_BLW_BASE(20,1)
-#end
-#macro CON_BLW_2X5()
-CON_BLW_BASE(5,2)
-#end
-#macro CON_BLW_2X6()
-CON_BLW_BASE(6,2)
-#end
-#macro CON_BLW_2X7()
-CON_BLW_BASE(7,2)
-#end
-#macro CON_BLW_2X8()
-CON_BLW_BASE(8,2)
-#end
-#macro CON_BLW_2X9()
-CON_BLW_BASE(9,2)
-#end
-#macro CON_BLW_2X10()
-CON_BLW_BASE(10,2)
-#end
-#macro CON_BLW_2X12()
-CON_BLW_BASE(12,2)
-#end
-#macro CON_BLW_2X13()
-CON_BLW_BASE(13,2)
-#end
-#macro CON_BLW_2X15()
-CON_BLW_BASE(15,2)
-#end
-#macro CON_BLW_2X17()
-CON_BLW_BASE(17,2)
-#end
-#macro CON_BLW_2X18()
-CON_BLW_BASE(18,2)
-#end
-#macro CON_BLW_2X20()
-CON_BLW_BASE(20,2)
-#end
+#macro CON_BLW_1X2()  CON_BLW_BASE(2,1)  #end
+#macro CON_BLW_1X5()  CON_BLW_BASE(5,1)  #end
+#macro CON_BLW_1X6()  CON_BLW_BASE(6,1)  #end
+#macro CON_BLW_1X7()  CON_BLW_BASE(7,1)  #end
+#macro CON_BLW_1X8()  CON_BLW_BASE(8,1)  #end
+#macro CON_BLW_1X9()  CON_BLW_BASE(9,1)  #end
+#macro CON_BLW_1X10() CON_BLW_BASE(10,1) #end
+#macro CON_BLW_1X12() CON_BLW_BASE(12,1) #end
+#macro CON_BLW_1X13() CON_BLW_BASE(13,1) #end
+#macro CON_BLW_1X15() CON_BLW_BASE(15,1) #end
+#macro CON_BLW_1X17() CON_BLW_BASE(17,1) #end
+#macro CON_BLW_1X18() CON_BLW_BASE(18,1) #end
+#macro CON_BLW_1X20() CON_BLW_BASE(20,1) #end
+#macro CON_BLW_2X5()  CON_BLW_BASE(5,2)  #end
+#macro CON_BLW_2X6()  CON_BLW_BASE(6,2)  #end
+#macro CON_BLW_2X7()  CON_BLW_BASE(7,2)  #end
+#macro CON_BLW_2X8()  CON_BLW_BASE(8,2)  #end
+#macro CON_BLW_2X9()  CON_BLW_BASE(9,2)  #end
+#macro CON_BLW_2X10() CON_BLW_BASE(10,2) #end
+#macro CON_BLW_2X12() CON_BLW_BASE(12,2) #end
+#macro CON_BLW_2X13() CON_BLW_BASE(13,2) #end
+#macro CON_BLW_2X15() CON_BLW_BASE(15,2) #end
+#macro CON_BLW_2X17() CON_BLW_BASE(17,2) #end
+#macro CON_BLW_2X18() CON_BLW_BASE(18,2) #end
+#macro CON_BLW_2X20() CON_BLW_BASE(20,2) #end
 
 
 /********************************************************************************************************************************************
 //Grundmakro fuer Buchsenleisten (flach)
 ********************************************************************************************************************************************/
-#macro CON_BL_F_BASE(pin,row)
+#macro PIN()
 union {
+difference {
+   box{<0,0,0><0.5,3,0.3> translate<-0.25,-3,-0.15>}
+   box{<0,0,-0.5><0.5,0.5,0.5> rotate<0,0,-30> translate<0.1,-3,0>}
+   box{<0,0,-0.5><-0.5,0.5,0.5> rotate<0,0,30> translate<-0.1,-3,0>}
+   box{<-0.5,0,0><0.5,0.5,0.5> rotate<30,0,0> translate<0,-3,0.05>}
+   box{<-0.5,0,0><0.5,0.5,-0.5> rotate<-30,0,0> translate<0,-3,-0.05>}
+   texture{col_gold}
+   }
+difference {
+   cylinder{<0,2.5,0><0,3.03,0>1.0}
+   cylinder{<0,1.9,0><0,3.2,0>0.9}
+   texture{col_silver}
+}
+
+difference {
+   cylinder{<0,0.5,0><0,2.55,0>0.9}
+   cylinder{<0,0.4,0><0,2.6,0>0.7}
+   texture{col_gold}
+}
+}
+#end 
+
+#macro CON_BL_F_BASE(pin,row)
+
+union {
+
 #local i=0;
 #while(i<pin)
-object{CON_PBL_F() translate<i*2.54,0,0>}
+object{/*CON_PBL_F*/PIN() translate<i*2.54,0,0>}
 #local i=i+1;
 #end
 #if(row=2)
@@ -788,78 +748,31 @@ translate<0,0,1.27>
 #end
 translate<pin*-1.27+1.27,0,0>}
 #end
-#macro CON_BL_F_1X5()
-CON_BL_F_BASE(5,1)
-#end
-#macro CON_BL_F_1X6()
-CON_BL_F_BASE(6,1)
-#end
-#macro CON_BL_F_1X7()
-CON_BL_F_BASE(7,1)
-#end
-#macro CON_BL_F_1X8()
-CON_BL_F_BASE(8,1)
-#end
-#macro CON_BL_F_1X9()
-CON_BL_F_BASE(9,1)
-#end
-#macro CON_BL_F_1X10()
-CON_BL_F_BASE(10,1)
-#end
-#macro CON_BL_F_1X12()
-CON_BL_F_BASE(12,1)
-#end
-#macro CON_BL_F_1X13()
-CON_BL_F_BASE(13,1)
-#end
-#macro CON_BL_F_1X15()
-CON_BL_F_BASE(15,1)
-#end
-#macro CON_BL_F_1X17()
-CON_BL_F_BASE(17,1)
-#end
-#macro CON_BL_F_1X18()
-CON_BL_F_BASE(18,1)
-#end
-#macro CON_BL_F_1X20()
-CON_BL_F_BASE(20,1)
-#end
-#macro CON_BL_F_2X5()
-CON_BL_F_BASE(5,2)
-#end
-#macro CON_BL_F_2X6()
-CON_BL_F_BASE(6,2)
-#end
-#macro CON_BL_F_2X7()
-CON_BL_F_BASE(7,2)
-#end
-#macro CON_BL_F_2X8()
-CON_BL_F_BASE(8,2)
-#end
-#macro CON_BL_F_2X9()
-CON_BL_F_BASE(9,2)
-#end
-#macro CON_BL_F_2X10()
-CON_BL_F_BASE(10,2)
-#end
-#macro CON_BL_F_2X12()
-CON_BL_F_BASE(12,2)
-#end
-#macro CON_BL_F_2X13()
-CON_BL_F_BASE(13,2)
-#end
-#macro CON_BL_F_2X15()
-CON_BL_F_BASE(15,2)
-#end
-#macro CON_BL_F_2X17()
-CON_BL_F_BASE(17,2)
-#end
-#macro CON_BL_F_2X18()
-CON_BL_F_BASE(18,2)
-#end
-#macro CON_BL_F_2X20()
-CON_BL_F_BASE(20,2)
-#end
+
+#macro CON_BL_F_1X5()  CON_BL_F_BASE(5,1)  #end
+#macro CON_BL_F_1X6()  CON_BL_F_BASE(6,1)  #end
+#macro CON_BL_F_1X7()  CON_BL_F_BASE(7,1)  #end
+#macro CON_BL_F_1X8()  CON_BL_F_BASE(8,1)  #end
+#macro CON_BL_F_1X9()  CON_BL_F_BASE(9,1)  #end
+#macro CON_BL_F_1X10() CON_BL_F_BASE(10,1) #end
+#macro CON_BL_F_1X12() CON_BL_F_BASE(12,1) #end
+#macro CON_BL_F_1X13() CON_BL_F_BASE(13,1) #end
+#macro CON_BL_F_1X15() CON_BL_F_BASE(15,1) #end
+#macro CON_BL_F_1X17() CON_BL_F_BASE(17,1) #end
+#macro CON_BL_F_1X18() CON_BL_F_BASE(18,1) #end
+#macro CON_BL_F_1X20() CON_BL_F_BASE(20,1) #end
+#macro CON_BL_F_2X5()  CON_BL_F_BASE(5,2)  #end
+#macro CON_BL_F_2X6()  CON_BL_F_BASE(6,2)  #end
+#macro CON_BL_F_2X7()  CON_BL_F_BASE(7,2)  #end
+#macro CON_BL_F_2X8()  CON_BL_F_BASE(8,2)  #end
+#macro CON_BL_F_2X9()  CON_BL_F_BASE(9,2)  #end
+#macro CON_BL_F_2X10() CON_BL_F_BASE(10,2) #end
+#macro CON_BL_F_2X12() CON_BL_F_BASE(12,2) #end
+#macro CON_BL_F_2X13() CON_BL_F_BASE(13,2) #end
+#macro CON_BL_F_2X15() CON_BL_F_BASE(15,2) #end
+#macro CON_BL_F_2X17() CON_BL_F_BASE(17,2) #end
+#macro CON_BL_F_2X18() CON_BL_F_BASE(18,2) #end
+#macro CON_BL_F_2X20() CON_BL_F_BASE(20,2) #end
 
 
 /********************************************************************************************************************************************
@@ -882,78 +795,31 @@ translate<0,0,1.27>
 #end
 translate<pin*-1.27+1.27,0,0>}
 #end
-#macro CON_BL_1X5()
-CON_BL_BASE(5,1)
-#end
-#macro CON_BL_1X6()
-CON_BL_BASE(6,1)
-#end
-#macro CON_BL_1X7()
-CON_BL_BASE(7,1)
-#end
-#macro CON_BL_1X8()
-CON_BL_BASE(8,1)
-#end
-#macro CON_BL_1X9()
-CON_BL_BASE(9,1)
-#end
-#macro CON_BL_1X10()
-CON_BL_BASE(10,1)
-#end
-#macro CON_BL_1X12()
-CON_BL_BASE(12,1)
-#end
-#macro CON_BL_1X13()
-CON_BL_BASE(13,1)
-#end
-#macro CON_BL_1X15()
-CON_BL_BASE(15,1)
-#end
-#macro CON_BL_1X17()
-CON_BL_BASE(17,1)
-#end
-#macro CON_BL_1X18()
-CON_BL_BASE(18,1)
-#end
-#macro CON_BL_1X20()
-CON_BL_BASE(20,1)
-#end
-#macro CON_BL_2X5()
-CON_BL_BASE(5,2)
-#end
-#macro CON_BL_2X6()
-CON_BL_BASE(6,2)
-#end
-#macro CON_BL_2X7()
-CON_BL_BASE(7,2)
-#end
-#macro CON_BL_2X8()
-CON_BL_BASE(8,2)
-#end
-#macro CON_BL_2X9()
-CON_BL_BASE(9,2)
-#end
-#macro CON_BL_2X10()
-CON_BL_BASE(10,2)
-#end
-#macro CON_BL_2X12()
-CON_BL_BASE(12,2)
-#end
-#macro CON_BL_2X13()
-CON_BL_BASE(13,2)
-#end
-#macro CON_BL_2X15()
-CON_BL_BASE(15,2)
-#end
-#macro CON_BL_2X17()
-CON_BL_BASE(17,2)
-#end
-#macro CON_BL_2X18()
-CON_BL_BASE(18,2)
-#end
-#macro CON_BL_2X20()
-CON_BL_BASE(20,2)
-#end
+
+#macro CON_BL_1X5()  CON_BL_BASE(5,1)  #end
+#macro CON_BL_1X6()  CON_BL_BASE(6,1)  #end
+#macro CON_BL_1X7()  CON_BL_BASE(7,1)  #end
+#macro CON_BL_1X8()  CON_BL_BASE(8,1)  #end
+#macro CON_BL_1X9()  CON_BL_BASE(9,1)  #end
+#macro CON_BL_1X10() CON_BL_BASE(10,1) #end
+#macro CON_BL_1X12() CON_BL_BASE(12,1) #end
+#macro CON_BL_1X13() CON_BL_BASE(13,1) #end
+#macro CON_BL_1X15() CON_BL_BASE(15,1) #end
+#macro CON_BL_1X17() CON_BL_BASE(17,1) #end
+#macro CON_BL_1X18() CON_BL_BASE(18,1) #end
+#macro CON_BL_1X20() CON_BL_BASE(20,1) #end
+#macro CON_BL_2X5()  CON_BL_BASE(5,2)  #end
+#macro CON_BL_2X6()  CON_BL_BASE(6,2)  #end
+#macro CON_BL_2X7()  CON_BL_BASE(7,2)  #end
+#macro CON_BL_2X8()  CON_BL_BASE(8,2)  #end
+#macro CON_BL_2X9()  CON_BL_BASE(9,2)  #end
+#macro CON_BL_2X10() CON_BL_BASE(10,2) #end
+#macro CON_BL_2X12() CON_BL_BASE(12,2) #end
+#macro CON_BL_2X13() CON_BL_BASE(13,2) #end
+#macro CON_BL_2X15() CON_BL_BASE(15,2) #end
+#macro CON_BL_2X17() CON_BL_BASE(17,2) #end
+#macro CON_BL_2X18() CON_BL_BASE(18,2) #end
+#macro CON_BL_2X20() CON_BL_BASE(20,2) #end
 
 
 /********************************************************************************************************************************************
@@ -975,14 +841,18 @@ union {
   }
   
  difference {
-  union {
+    union {
         cylinder{<0,0,0><0,2.95,0>0.25}
         sphere{<0,0,0>0.25}
         cone{<0,2.95,0>0.25<0,3.45,0>0.6}
         cylinder{<0,3.45,0><0,7.15,0>0.6}
-        cylinder{<0,6.4,0><0,7.15,0>0.85}}
-        cylinder{<0,4,0><0,7.16,0>0.5}
-        texture{col_silver}
+        cylinder{<0,6.3,0><0,7.15,0>0.85}
+        }
+    cylinder{<0,4,0><0,7.16,0>0.5}
+    Round_Cylinder (
+       <0,6.5,0> <0,7.5,0> 0.70 0.3 0
+       )
+    texture { T_Silver_5E finish { reflection 0.5 ambient (0.1 * global_ambient_mul) } }
   }
   translate<0,-2.95,0>
  } 
@@ -1006,519 +876,33 @@ union {
    translate<pin*-1.27+1.27,0,0>}
 #end
 
-#macro CON_BL_PRECISION_1X1()
-CON_BL_PRECISION_BASE(1,1)
-#end
-#macro CON_BL_PRECISION_1X2()
-CON_BL_PRECISION_BASE(2,1)
-#end
-#macro CON_BL_PRECISION_1X3()
-CON_BL_PRECISION_BASE(3,1)
-#end
-#macro CON_BL_PRECISION_1X4()
-CON_BL_PRECISION_BASE(4,1)
-#end
-#macro CON_BL_PRECISION_1X5()
-CON_BL_PRECISION_BASE(5,1)
-#end
-#macro CON_BL_PRECISION_1X6()
-CON_BL_PRECISION_BASE(6,1)
-#end
-#macro CON_BL_PRECISION_1X7()
-CON_BL_PRECISION_BASE(7,1)
-#end
-#macro CON_BL_PRECISION_1X8()
-CON_BL_PRECISION_BASE(8,1)
-#end
-#macro CON_BL_PRECISION_1X9()
-CON_BL_PRECISION_BASE(9,1)
-#end
-#macro CON_BL_PRECISION_1X10()
-CON_BL_PRECISION_BASE(10,1)
-#end
-#macro CON_BL_PRECISION_1X11()
-CON_BL_PRECISION_BASE(11,1)
-#end
-#macro CON_BL_PRECISION_1X12()
-CON_BL_PRECISION_BASE(12,1)
-#end
-#macro CON_BL_PRECISION_1X13()
-CON_BL_PRECISION_BASE(13,1)
-#end
-#macro CON_BL_PRECISION_2X2()
-CON_BL_PRECISION_BASE(2,2)
-#end
-#macro CON_BL_PRECISION_2X3()
-CON_BL_PRECISION_BASE(3,2)
-#end
-#macro CON_BL_PRECISION_2X4()
-CON_BL_PRECISION_BASE(4,2)
-#end
-#macro CON_BL_PRECISION_2X5()
-CON_BL_PRECISION_BASE(5,2)
-#end
-#macro CON_BL_PRECISION_2X6()
-CON_BL_PRECISION_BASE(6,2)
-#end
-#macro CON_BL_PRECISION_2X7()
-CON_BL_PRECISION_BASE(7,2)
-#end
-#macro CON_BL_PRECISION_2X8()
-CON_BL_PRECISION_BASE(8,2)
-#end
-#macro CON_BL_PRECISION_2X9()
-CON_BL_PRECISION_BASE(9,2)
-#end
-#macro CON_BL_PRECISION_2X10()
-CON_BL_PRECISION_BASE(10,2)
-#end
-#macro CON_BL_PRECISION_2X11()
-CON_BL_PRECISION_BASE(11,2)
-#end
-#macro CON_BL_PRECISION_2X12()
-CON_BL_PRECISION_BASE(12,2)
-#end
-#macro CON_BL_PRECISION_2X13()
-CON_BL_PRECISION_BASE(13,2)
-#end
+#macro CON_BL_PRECISION_1X1()  CON_BL_PRECISION_BASE(1,1)  #end
+#macro CON_BL_PRECISION_1X2()  CON_BL_PRECISION_BASE(2,1)  #end
+#macro CON_BL_PRECISION_1X3()  CON_BL_PRECISION_BASE(3,1)  #end
+#macro CON_BL_PRECISION_1X4()  CON_BL_PRECISION_BASE(4,1)  #end
+#macro CON_BL_PRECISION_1X5()  CON_BL_PRECISION_BASE(5,1)  #end
+#macro CON_BL_PRECISION_1X6()  CON_BL_PRECISION_BASE(6,1)  #end
+#macro CON_BL_PRECISION_1X7()  CON_BL_PRECISION_BASE(7,1)  #end
+#macro CON_BL_PRECISION_1X8()  CON_BL_PRECISION_BASE(8,1)  #end
+#macro CON_BL_PRECISION_1X9()  CON_BL_PRECISION_BASE(9,1)  #end
+#macro CON_BL_PRECISION_1X10() CON_BL_PRECISION_BASE(10,1) #end
+#macro CON_BL_PRECISION_1X11() CON_BL_PRECISION_BASE(11,1) #end
+#macro CON_BL_PRECISION_1X12() CON_BL_PRECISION_BASE(12,1) #end
+#macro CON_BL_PRECISION_1X13() CON_BL_PRECISION_BASE(13,1) #end
+#macro CON_BL_PRECISION_2X2()  CON_BL_PRECISION_BASE(2,2)  #end
+#macro CON_BL_PRECISION_2X3()  CON_BL_PRECISION_BASE(3,2)  #end
+#macro CON_BL_PRECISION_2X4()  CON_BL_PRECISION_BASE(4,2)  #end
+#macro CON_BL_PRECISION_2X5()  CON_BL_PRECISION_BASE(5,2)  #end
+#macro CON_BL_PRECISION_2X6()  CON_BL_PRECISION_BASE(6,2)  #end
+#macro CON_BL_PRECISION_2X7()  CON_BL_PRECISION_BASE(7,2)  #end
+#macro CON_BL_PRECISION_2X8()  CON_BL_PRECISION_BASE(8,2)  #end
+#macro CON_BL_PRECISION_2X9()  CON_BL_PRECISION_BASE(9,2)  #end
+#macro CON_BL_PRECISION_2X10() CON_BL_PRECISION_BASE(10,2) #end
+#macro CON_BL_PRECISION_2X11() CON_BL_PRECISION_BASE(11,2) #end
+#macro CON_BL_PRECISION_2X12() CON_BL_PRECISION_BASE(12,2) #end
+#macro CON_BL_PRECISION_2X13() CON_BL_PRECISION_BASE(13,2) #end
 
 
-/********************************************************************************************************************************************
-//Makro fuer BNC-Buchse, gewinckelt von Felix Schad <felix_schad@gmx.de>
-********************************************************************************************************************************************/
-#macro CON_BNC_W_BASE()
-  union {
-        union { // Korpus
-                difference {
-                        box {
-                                <0,0,0><14.5,12.5,14>
-                                pigment{Gray70}
-                                clipped_by {
-                                        plane { <1,0,0>,0 rotate<0,0,45> translate<0,25,0> }
-                                        plane { <-1,0,0>,0 rotate<0,0,-45>translate<0,10.5,0>}
-                                }
-                        }
-
-                        cylinder { // Mittlerer Ausschnitt fuer Anschlusspins
-                                <0,0,0>,<0,2,0>,3
-                                open
-                                rotate<90,0,0>
-                                translate <7.5,6.25,0>
-                                pigment{Gray50}
-                        }
-                        box { // unterer Aussschnitt fuer Anschlusspins
-                                <0,0,-1><5,3.8,2>
-                                translate <4.75,0,0>
-                                pigment{Gray70}
-                        }
-
-                }
-
-
-                // freigeschnittene Aussenbereiche der Box fuellen
-                box {
-                        <0,0,0><4,2.9,14>
-                        rotate<0,0,45>
-                        translate<11.65,7.65,0>
-                        pigment{Gray70}
-                }
-
-                box {
-                        <0,0,0><4,2.9,14>
-                        rotate<0,0,-45>
-                        translate<0,10.4,0>
-                        pigment{Gray70}
-                }
-
-                // freigeschnittenen Innenbereich der Box fuellen
-                box{ <0,0,0><5,3.8,2> translate <4.75,0,0.5> pigment{Gray70}}
-
-
-                disc {
-                        <0,0,0>, <0,0,-1>, 3
-                        translate <7.5,6.25,2>
-                        texture{T_Silver_1A}
-
-                }
-
-                cylinder {
-                        <0,0,0>,<0,2,0>,1.6
-                        rotate<90,0,0>
-                        translate <7.5,6.25,1.8>
-                        pigment{Gray70}
-                }
-
-        } // Ende Korpus
-
-        //TOOLS_RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
-        object { // Massepin
-                TOOLS_RECT_BOGEN(1,90,0.8,0.8,7,1)
-                rotate<90,0,-90>
-                translate<5.2,6.5,-0.5>
-                texture { col_silver finish { phong 1 ambient (0.1 * global_ambient_mul) }}
-        }
-        #include "metals.inc"
-        object { // Signalpin
-                TOOLS_RECT_BOGEN(1,90,0.8,0.8,7,1)
-                rotate<90,0,-90>
-                translate<5.2+2.54,6.5,-0.5>
-                texture{col_gold}
-
-
-        }
-
-        union { // Haltebolzen 1
-                cylinder {
-                        <0,1,0><0,-4,0>,1
-                        translate<2.75,0,4.45>
-                }
-                sphere {
-                        <0,0,0>,1
-                        translate<2.75,-3.5,4.45>
-
-                }
-                texture{T_Silver_1A finish {phong 1.0 ambient (0.1 * global_ambient_mul)}}
-        }
-
-        union { // Haltebolzen 2
-                cylinder {
-                        <0,1,0><0,-4,0>,1
-                        translate<2.75+10.2,0,4.45>
-                }
-                sphere {
-                        <0,0,0>,1
-                        translate<2.75+10.2,-3.5,4.45>
-
-        }
-        texture{T_Silver_1A finish {phong 1.0 ambient (0.1 * global_ambient_mul)}}
-}
-
-
-        difference {
-                union {
-                        cylinder { // Verschraubung
-                                <0,0,0>,<0,0,9>,5.5
-                                translate<7.25,6.25,14>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,16>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,17>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,18>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,19>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,20>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,21>
-                        }
-
-                        cylinder { // 'Schraubenlinien'
-                                <0,0,0>,<0,0,0.2>,5.7
-                                translate<7.25,6.25,22>
-                        }
-                        pigment{Gray70}
-
-                } // end inner union
-
-                box {
-                        <0,0,0>,<16,3.3,9>
-                        translate<2.25,11.5,14>
-                        pigment{Gray70}
-                }
-        } // end difference
-
-
-        cylinder { // aeusserer Anschluss
-                <0,0,0>,<0,0,12>,4.7
-                open
-                translate<7.25,6.25,5.5+14>
-                texture{T_Silver_1A finish { phong 1 ambient (0.1 * global_ambient_mul)}}
-        }
-
-        difference {
-                cylinder { // innerer Anschluss A
-                        <0,0,0>,<0,0,1>,3.8
-                        translate<7.25,6.25,29>
-                        pigment{Gray70}
-                }
-
-                cylinder { // innerer Anschluss B
-                        <0,0,0>,<0,0,1>,1
-                        translate<7.25,6.25,29.1>
-                        texture{col_gold}
-                }
-
-                cylinder { // innerer Anschluss C
-                        <0,0,0>,<0,0,1>,0.5
-                        translate<7.25,6.25,29>
-                        pigment{Black}
-                }
-        }
-        cylinder { // Einrastpunkt 1
-                <0,0,0>,<0,0,1>,1
-                rotate<90,0,0>
-                translate<7.25,12,29>
-                texture { col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}
-        }
-
-        cylinder { // Einrastpunkt 2
-                <0,0,0>,<0,0,1>,1
-                rotate<90,0,0>
-                translate<7.25,1.5,29>
-                texture { col_silver finish { phong 1  ambient (0.1 * global_ambient_mul)}}
-        }
-
-
-  translate <-7.25,0,-7>
-  rotate <0,180,0>
-  }
-#end
-#macro CON_BNC_W()
-CON_BNC_W_BASE()
-#end
-
-
-/********************************************************************************************************************************************
-//Makro fuer CENTRONICS_Steckverbinder, female, Printmontage,    con-amp-champ.lib,      Joerg Bredendiek <sprut(replace with at)sprut.de>         
-// eine male-Version fuer Printmontage existiert nicht
-//         
-// pinraster 2,159 mm                                                               
-// Nullpunkt linke Ecke des auesseren Plastikkoerpers
-// Plastikkoerperbreite = ps + 29
-// Dshellbreite = ps+10
-//
-//basiert auf DSUB von Andreas Fecht <info(replace with at)vetter-und-fecht.de>
-//modifiziert und erweitert von Duane Clark <dclark(replace with at)akamail.com>
-********************************************************************************************************************************************/
-#macro CON_CENTRONICS_BASE(pin, female)
-  #local centcolor = color red 0.24 green 0.41 blue 0.81;   //blauer farbton fuer plastikkoerper  
-                 
-  #local j  = pin/2;      // number of pins in bottom row
-  #local hs = 2.159;      // horizontal pin spacing
-  #local hc = 9.525;      // horizontal centerline
-  #local vs = 2*hs;       // vertical pin spacing
-  #local vc = 7.5;        // vertical centerline
-  #local ps = (j-1)*hs;   // total pin spacing
-  #local bo = 31.3;       // body offset = body size - ps   
-  #local po = bo/2;       // offset to first pin 
-  #local so = 4.064;      // screwlock offset from body sides
-    
-
-#macro DSHELL(ps, vc)
-  // 
-  #local do = 12.5;       // dshell offset,   the dshell offset is (body size - dshell size)/2 + radius
-  #local ds = do+6.3;     // do + dshell size - ps - (radius*2)     12.5 + ps+12.3 -ps -6
-  union
-  {
-    cylinder{<do,     vc+3, 0> <do,     vc+3, -9> 3 } //oben  links
-    cylinder{<ds+ps,  vc+3, 0> <ds+ps,  vc+3, -9> 3 } //oben  rechts
-    cylinder{<do+1,   vc-3, 0> <do+1,   vc-3, -9> 3 } //unten links
-    cylinder{<ds+ps-1,vc-3, 0> <ds+ps-1,vc-3, -9> 3 } //unten rechts
-
-    box{<do,  vc-0.1  ,  0> <ds+ps,  vc+6, -9>}                         // oben
-    box{<do+1,vc  ,  0> <ds+ps-1,vc-6, -9>}                          // unten
-    box{<-2,   vc+3, 0> <3.5,    vc-3, -9> rotate<0,0,-9.62> translate<ds+ps-2.20,0,0> }  // links
-    box{<-2,   vc+3, 0> <3.5,    vc-3, -9> rotate<0,0, 9.62> translate<do+0.65,   0,0> }  // rechts
-  }
-#end 
-                                        
-                                        
-//Metalloese in Frontplatte fuer den Buegel        
-#macro OESE(ho,vo)
-  difference {
-        cylinder{<ho,vo-1.5,-1><ho,vo+1.5,-1>1.8 texture{col_silver} }
-        cylinder{<ho,vo-1.6,-1><ho,vo+1.6,-1>1.2 texture{col_silver} }       
-        texture{T_Chrome_5B} 
-  }          
-#end      
-                     
-
-//Buegel an Frontplatte                     
-#macro BUEGEL() 
-    #local bends=array[15] {
-    // <angle, radius, 0> or <0, distance, 0> for straight pipe
-    // negative angles bend left, positive bend right.
-    <0, 3, 0>,  <-90, 1, 0>,  <0,10,0>,  <-45,1,0>,  <0, 6, 0>,  <90, 1, 0>, <0,9,0>, <90, 1, 0>, <0,9,0>,<90, 1, 0>, <0,6,0>, <-45,1,0>, <0,10,0>, <-90,1,0>, <0,3,0>
-    }
-    // this pipe has a radius of 0.4, starts at the origin, and initially goes in the x direction
-    TOOLS_BENTPIPE( 0.4, <0,0,0>, y, bends )
-#end
-    
-
-//los gehts    
-union
-{                 
-      // the D shaped shell
-      difference
-      {
-                object
-                {
-                        DSHELL(ps, vc)
-                        translate<-0.5,-0.25,0>
-                        scale<1.04-(0.0015*j),1.04,1>
-                        texture{T_Chrome_5B}
-                }
-
-                object
-                {
-                        DSHELL(ps, vc)
-                        scale<1,1,1.1>
-                        texture{T_Chrome_5B}
-                }
-        }
-
-        #if (female)
-        // gefuellt mit blauer plastik
-           difference {
-              DSHELL(ps, vc)               
-              box{<po-2.5, vc-vs/2, -2> <po+ps+2.5, vc+vs/2, -9.2>pigment{centcolor} }   //mit einem 5 mm breitem schacht in der Mitte, 5mm breiter als pinspacing     
-              // loecher ueber/unter den Pins 
-                        #local i = 0;
-                        #while(i<j)   
-                                box{<po+hs*i-0.5, vc+vs/2+0.5, -2><po+hs*i+0.5, vc+vs/2+1.5, -9.2>}
-                                box{<po+hs*i-0.5, vc-vs/2-0.5, -2><po+hs*i+0.5, vc-vs/2-1.5, -9.2>}
-                                #local i = i+1;
-                        #end                            
-                        pigment{centcolor} 
-           }
-                // buchsenpins
-                #local i = 0;
-                #while(i<j)
-                        cylinder{<po+hs*i, vc+vs/2, -2> <po+hs*i, vc+vs/2    , -7.5> 0.5 texture{col_gold} }   
-                        sphere{                         <po+hs*i, vc+vs/2    , -7.5> 0.5 texture{col_gold} }
-                        sphere{                         <po+hs*i, vc+vs/2+0.5, -8  > 0.5 texture{col_gold} }
-                        cylinder{<po+hs*i, vc-vs/2, -2> <po+hs*i, vc-vs/2    , -7.5> 0.5 texture{col_gold} }  
-                        sphere{                         <po+hs*i, vc-vs/2    , -7.5> 0.5 texture{col_gold} }  
-                        sphere{                         <po+hs*i, vc-vs/2-0.5, -8  > 0.5 texture{col_gold} }                        
-                        #local i = i+1;
-                #end 
-        #else
-        // dshell pins male   
-                box{<po-1.5, vc-vs/2, -0.5> <po+ps+1.5, vc+vs/2, -7>}   // 4 mm breiter Steg in der Mitte , 3mm breiter asl pinspacing
-                pigment{centcolor}
-
-                union
-                {
-                        #local i = 0;
-                        #while(i<j)
-                        cylinder{<po+hs*i,vc+vs/2,-0.5> <po+hs*i, vc+vs/2, -7> 0.5 texture{col_gold} } 
-                        sphere{                         <po+hs*i, vc+vs/2, -7> 0.5 texture{col_gold} }
-                        cylinder{<po+hs*i,vc-vs/2,-0.5> <po+hs*i, vc-vs/2, -7> 0.5 texture{col_gold} } 
-                        sphere{                         <po+hs*i, vc-vs/2, -7> 0.5 texture{col_gold} }                         
-                        #local i = i+1;
-                        #end
-                }
-      #end
-
-      // board pins
-      union
-      {
-        #local i = 0;
-        #while(i<j)
-        cylinder{<po+hs*i,0,hc+vs/2><po+hs*i,-3,hc+vs/2> 0.3 texture{col_gold} }
-        cylinder{<po+hs*i,0,hc-vs/2><po+hs*i,-3,hc-vs/2> 0.3 texture{col_gold} }
-        #local i = i+1;
-    #end
-  }
-
-  // screwlock backplates
-  box{<bo+ps-so+2.5,3,4><bo+ps-so+2.5,9.5,4.5> texture{T_Chrome_5B} }
-  box{<so-2.5,3,4><so+2.5,9.5,4.5> texture{T_Chrome_5B} }
-  // lower plates
-  box{<bo+ps-so-1.5,3,4><bo+ps-so+1.5,3.25,hc+0.5> texture{T_Chrome_5B} }
-  box{<so-1.5,3,4><so+1.5,3.25,hc+0.5> texture{T_Chrome_5B} }
-  // mounting tabs
-  box{<bo+ps-so-1.5,-4,hc-0.5><bo+ps-so-0.5,3.25,hc+0.5> texture{col_silver} }
-  box{<so-1.5,-4,hc-0.5><so-0.5,3.25,hc+0.5> texture{col_silver} }
-
-  box{<bo+ps-so+1.5,-4,hc-0.5><bo+ps-so+0.5,3.25,hc+0.5> texture{col_silver} }
-  box{<so+1.5,-4,hc-0.5><so+0.5,3.25,hc+0.5> texture{col_silver} }
-                            
-                            
-  // the main plastic body
-  difference
-  {
-    box{< 0,      0, 0> <bo+ps,    13.5, 15>}                 //alles          
-    box{<bo-7+ps, 3, 4> <bo+0.1+ps,13.6, 15.1>}               // 1. ecke ab
-    box{<-0.1,    3, 4> <7,        13.6, 15.1>}               // 2. ecke ab 
-    cylinder{<bo-7+ps, 13, 4>  <bo-7+ps, 13, 15.1> 1}         // seitliche obere kanten ausbohren
-    cylinder{<7,       13, 4>  <7,       13, 15.1> 1}    
-    
-    cylinder{<bo-so+ps, 3.1,  hc> <bo-so+ps, -0.1, hc>   1.7}     // vertikale 3.4 mm Loecher fuer Platinenbefestigung
-    cylinder{<so,       3.1,  hc> <so,       -0.1, hc>   1.7}
-  }                                          
-
-  // seitliche obere ausgebohrte Kanten abrunden
-  cylinder{<bo-8+ps,12.5,4><bo-8+ps,12.5,15> 1} 
-  cylinder{<8,12.5,4><8,12.5,15> 1}
-
-  // duenne plastik-Lage hinter Frontplatte  oberhalb des main body, mit runden ecken, 2mm dick
-  box{<1.5,13,0><bo+ps-1.5,15,2>}
-  cylinder{<bo-1.5+ps,13.5,0><bo-1.5+ps,13.5,2> 1.5}
-  cylinder{<1.5,13.5,0><1.5,13.5,2> 1.5}
-
-  // Blech hinter der D shell , 1 mm dick, Rundungsradius 1,5 mm an allen ecken
-  box{<0,1.5,0><bo+ps,13.5,-1>  texture{T_Chrome_5B} }
-  box{<1.5,13.5,0><bo+ps-1.5,15,-1> texture{T_Chrome_5B} }
-  cylinder{<bo+ps-1.5,13.5,0><bo+ps-1.5,13.5,-1> 1.5 texture{T_Chrome_5B} }
-  cylinder{<1.5,13.5,0><1.5,13.5,-1> 1.5 texture{T_Chrome_5B} }
-  box{<1.5,0,0><bo+ps-1.5,1.5,-1> texture{T_Chrome_5B} }
-  cylinder{<bo+ps-1.5,1.5,0><bo+ps-1.5,1.5,-1> 1.5 texture{T_Chrome_5B} }
-  cylinder{<1.5,1.5,0><1.5,1.5,-1> 1.5 texture{T_Chrome_5B} }
-                                        
-  //Schrauben                  
-  object{TOOLS_SCREW (2.5,7,1,centcolor) rotate<-90,0,0> translate<so      ,vc,-1> texture{col_silver} }
-  object{TOOLS_SCREW (2.5,7,1,centcolor) rotate<-90,0,0> translate<bo+ps-so,vc,-1> texture{col_silver} }          
-  
-  //Oesen 
-  object{OESE(so+2      , vc-4.5) texture{T_Chrome_5B} }  
-  object{OESE(so+2      , vc+4.5) texture{T_Chrome_5B} }
-  object{OESE(bo+ps-so-2, vc-4.5) texture{T_Chrome_5B} }
-  object{OESE(bo+ps-so-2, vc+4.5) texture{T_Chrome_5B} }  
-  
-  //Buegel
-  object{BUEGEL() rotate<0,-30,0> translate<so+2      , vc-6.5,-1.5> texture{T_Chrome_5B} }  
-  object{BUEGEL() rotate<0,210,0> translate<bo+ps-so-2, vc-6.5,-1.5> texture{T_Chrome_5B} } 
-                     
-  translate<0-po-ps/2,0,0-hc>
-  rotate<0,180,0>
-  pigment{centcolor} 
-}
-#end
-
-
-
-#macro CON_CENTRONICS_F14()
-CON_CENTRONICS_BASE(14, true)
-#end
-#macro CON_CENTRONICS_F24()
-CON_CENTRONICS_BASE(24, true)
-#end
-#macro CON_CENTRONICS_F36()
-CON_CENTRONICS_BASE(36, true)
-#end
-#macro CON_CENTRONICS_F50()
-CON_CENTRONICS_BASE(50, true)
-#end
 
 
 /********************************************************************************************************************************************
@@ -1709,8 +1093,6 @@ CON_DCPOWERCONNECTOR_BASE()
               cylinder { <4.8-0.5/2,-4.1-2.5/2,3.2> <4.8+0.5/2,-4.1-2.5/2,3.2> 2.5/2 }
               }
            cylinder { <4.8-0.5,-4.1-2.5/2,3.2> <4.8+0.5,-4.1-2.5/2,3.2> 1.2/2 }
-         //  translate<0,0,-2.8>
-         //  rotate<0,90,0>
            }
         texture { Silver_Metal }
         }
@@ -1799,7 +1181,6 @@ union {
            rotate<0,180,90>
            translate<-5.45,4.5,0>
  }
- //translate<0,3.6,0>
  translate<0,0.2,0>
 }
 #end
@@ -1890,8 +1271,6 @@ union {
          #break
          #case(1) // Abwinkelung
             rotate <-VSchraenkungwinkel,0,0>
-            // translate<0,0, 11.85>
-         // #break   // fall through and execute the  #else  following
          #else
             translate<0,0, 11.85>
       #end
@@ -2141,7 +1520,6 @@ union {
       #break
 
          // Teile zur Konstruktion der geraden Randboegen vom Tiefziehen
-         // intersection{ 1 object{2 inverse} 3 }
       #case(1) // Zylinder als Blechkante fuer Montagefluegel
          cylinder{
             <0,1,-1>, <ZielLaenge,1,  -1  > 1.0
@@ -2171,7 +1549,7 @@ union {
       #break
 
       #else
-      // #case(4) // Box zum Ausfuellen mit Blechdicke bis zur Biegekante
+       // Box zum Ausfuellen mit Blechdicke bis zur Biegekante
          box {
             <0,0,-7.5>, <ZielLaenge,0.4,-1>
    #end
@@ -2589,50 +1967,21 @@ union {
       }
    }
 #end
-#macro CON_DIN_MAB_3S()
-CON_DIN_MA_XX_BASE(30, 0)
-#end
-#macro CON_DIN_MAB_4()
-CON_DIN_MA_XX_BASE(40, 0)
-#end
-#macro CON_DIN_MAB_5()
-CON_DIN_MA_XX_BASE(52, 0)
-#end
-#macro CON_DIN_MAB_5S()
-CON_DIN_MA_XX_BASE(51, 0)
-#end
-#macro CON_DIN_MAB_6()
-CON_DIN_MA_XX_BASE(61, 0)
-#end
-#macro CON_DIN_MAB_7S()
-CON_DIN_MA_XX_BASE(72, 0)
-#end
-#macro CON_DIN_MAB_8S()
-CON_DIN_MA_XX_BASE(81, 0)
-#end
-#macro CON_DIN_MAB_8SN()
-CON_DIN_MA_XX_BASE(82, 0)
-#end
-// (noch) keine richtigen Pinanschluesse
-#macro CON_DIN_MAB_5SV()   
-CON_DIN_MA_XX_BASE(51, 1)
-#end
-// (noch) keine richtigen Pinanschluesse
-#macro CON_DIN_MAB_6V()    
-CON_DIN_MA_XX_BASE(62, 1)
-#end
-// (noch) keine richtigen Pinanschluesse
-#macro CON_DIN_MAB_7SV()   
-CON_DIN_MA_XX_BASE(72, 1)
-#end
-// (noch) keine richtigen Pinanschluesse
-#macro CON_DIN_MAB_8SV()   
-CON_DIN_MA_XX_BASE(81, 1)
-#end
-// (noch) keine richtigen Pinanschluesse
-#macro CON_DIN_MAB_8SNV()
-CON_DIN_MA_XX_BASE(82, 1)
-#end
+
+
+#macro CON_DIN_MAB_3S()   CON_DIN_MA_XX_BASE(30, 0) #end
+#macro CON_DIN_MAB_4()    CON_DIN_MA_XX_BASE(40, 0) #end
+#macro CON_DIN_MAB_5()    CON_DIN_MA_XX_BASE(52, 0) #end
+#macro CON_DIN_MAB_5S()   CON_DIN_MA_XX_BASE(51, 0) #end
+#macro CON_DIN_MAB_6()    CON_DIN_MA_XX_BASE(61, 0) #end
+#macro CON_DIN_MAB_7S()   CON_DIN_MA_XX_BASE(72, 0) #end
+#macro CON_DIN_MAB_8S()   CON_DIN_MA_XX_BASE(81, 0) #end
+#macro CON_DIN_MAB_8SN()  CON_DIN_MA_XX_BASE(82, 0) #end
+#macro CON_DIN_MAB_5SV()  CON_DIN_MA_XX_BASE(51, 1) #end
+#macro CON_DIN_MAB_6V()   CON_DIN_MA_XX_BASE(62, 1) #end
+#macro CON_DIN_MAB_7SV()  CON_DIN_MA_XX_BASE(72, 1) #end
+#macro CON_DIN_MAB_8SV()  CON_DIN_MA_XX_BASE(81, 1) #end
+#macro CON_DIN_MAB_8SNV() CON_DIN_MA_XX_BASE(82, 1) #end
 
 
 /********************************************************************************************************************************************
@@ -2703,15 +2052,9 @@ pigment{Gray80}
 }
 #end
 
-#macro CON_DIS_DIN41617_13()
-CON_DIS_DIN41617_BASE(13)
-#end
-#macro CON_DIS_DIN41617_21()
-CON_DIS_DIN41617_BASE(21)
-#end
-#macro CON_DIS_DIN41617_31()
-CON_DIS_DIN41617_BASE(31)
-#end
+#macro CON_DIS_DIN41617_13() CON_DIS_DIN41617_BASE(13) #end
+#macro CON_DIS_DIN41617_21() CON_DIS_DIN41617_BASE(21) #end
+#macro CON_DIS_DIN41617_31() CON_DIS_DIN41617_BASE(31) #end
 
 
 /********************************************************************************************************************************************
@@ -2803,125 +2146,45 @@ union {
         }
     #local i=i+1; #end
     rotate <-90, 180,0>
-       
 }
 #end
-// 2 pins Nature
-#macro CON_DIS_MATNLOK_9263_10_1() 
-CON_DIS_MATNLOK_9263_BASE(2,1)
-#end
-// Black
-#macro CON_DIS_MATNLOK_9263_10_2() 
-CON_DIS_MATNLOK_9263_BASE(2,2)
-#end
-// BrickRed
-#macro CON_DIS_MATNLOK_9263_10_3() 
-CON_DIS_MATNLOK_9263_BASE(2,3)
-#end
-// White
-#macro CON_DIS_MATNLOK_9263_10_4() 
-CON_DIS_MATNLOK_9263_BASE(2,4)
-#end
-// Orange
-#macro CON_DIS_MATNLOK_9263_10_5() 
-CON_DIS_MATNLOK_9263_BASE(2,5)
-#end
-// 3 pins
-#macro CON_DIS_MATNLOK_9263_11_1()
-CON_DIS_MATNLOK_9263_BASE(3,1)
-#end
-#macro CON_DIS_MATNLOK_9263_11_2()
-CON_DIS_MATNLOK_9263_BASE(3,2)
-#end
-#macro CON_DIS_MATNLOK_9263_11_3()
-CON_DIS_MATNLOK_9263_BASE(3,3)
-#end
-#macro CON_DIS_MATNLOK_9263_11_4()
-CON_DIS_MATNLOK_9263_BASE(3,4)
-#end
-#macro CON_DIS_MATNLOK_9263_11_5()
-CON_DIS_MATNLOK_9263_BASE(3,5)
-#end
-//4 pins
-#macro CON_DIS_MATNLOK_9263_12_1()
-CON_DIS_MATNLOK_9263_BASE(4,1)
-#end
-#macro CON_DIS_MATNLOK_9263_12_2()
-CON_DIS_MATNLOK_9263_BASE(4,2)
-#end
-#macro CON_DIS_MATNLOK_9263_12_3()
-CON_DIS_MATNLOK_9263_BASE(4,3)
-#end
-#macro CON_DIS_MATNLOK_9263_12_4()
-CON_DIS_MATNLOK_9263_BASE(4,4)
-#end
-#macro CON_DIS_MATNLOK_9263_12_5()
-CON_DIS_MATNLOK_9263_BASE(4,5)
-#end
-// 5 pins
-#macro CON_DIS_MATNLOK_9263_13_1()
-CON_DIS_MATNLOK_9263_BASE(5,1)
-#end
-#macro CON_DIS_MATNLOK_9263_13_2()
-CON_DIS_MATNLOK_9263_BASE(5,2)
-#end
-#macro CON_DIS_MATNLOK_9263_13_3()
-CON_DIS_MATNLOK_9263_BASE(5,3)
-#end
-#macro CON_DIS_MATNLOK_9263_13_4()
-CON_DIS_MATNLOK_9263_BASE(5,4)
-#end
-#macro CON_DIS_MATNLOK_9263_13_5()
-CON_DIS_MATNLOK_9263_BASE(5,5)
-#end
-// 6 pins
-#macro CON_DIS_MATNLOK_9263_14_1()
-CON_DIS_MATNLOK_9263_BASE(6,1)
-#end
-#macro CON_DIS_MATNLOK_9263_14_2()
-CON_DIS_MATNLOK_9263_BASE(6,2)
-#end
-#macro CON_DIS_MATNLOK_9263_14_3()
-CON_DIS_MATNLOK_9263_BASE(6,3)
-#end
-#macro CON_DIS_MATNLOK_9263_14_4()
-CON_DIS_MATNLOK_9263_BASE(6,4)
-#end
-#macro CON_DIS_MATNLOK_9263_14_5()
-CON_DIS_MATNLOK_9263_BASE(6,5)
-#end
-// 8 pins
-#macro CON_DIS_MATNLOK_9263_15_1()
-CON_DIS_MATNLOK_9263_BASE(8,1)
-#end
-#macro CON_DIS_MATNLOK_9263_15_2()
-CON_DIS_MATNLOK_9263_BASE(8,2)
-#end
-#macro CON_DIS_MATNLOK_9263_15_3()
-CON_DIS_MATNLOK_9263_BASE(8,3)
-#end
-#macro CON_DIS_MATNLOK_9263_15_4()
-CON_DIS_MATNLOK_9263_BASE(8,4)
-#end
-#macro CON_DIS_MATNLOK_9263_15_5()
-CON_DIS_MATNLOK_9263_BASE(8,5)
-#end
-// 10 pins
-#macro CON_DIS_MATNLOK_9263_16_1()
-CON_DIS_MATNLOK_9263_BASE(10,1)
-#end
-#macro CON_DIS_MATNLOK_9263_16_2()
-CON_DIS_MATNLOK_9263_BASE(10,2)
-#end
-#macro CON_DIS_MATNLOK_9263_16_3()
-CON_DIS_MATNLOK_9263_BASE(10,3)
-#end
-#macro CON_DIS_MATNLOK_9263_16_4()
-CON_DIS_MATNLOK_9263_BASE(10,4)
-#end
-#macro CON_DIS_MATNLOK_9263_16_5()
-CON_DIS_MATNLOK_9263_BASE(10,5)
-#end
+
+
+#macro CON_DIS_MATNLOK_9263_10_1() CON_DIS_MATNLOK_9263_BASE(2,1)  #end
+#macro CON_DIS_MATNLOK_9263_10_2() CON_DIS_MATNLOK_9263_BASE(2,2)  #end
+#macro CON_DIS_MATNLOK_9263_10_3() CON_DIS_MATNLOK_9263_BASE(2,3)  #end
+#macro CON_DIS_MATNLOK_9263_10_4() CON_DIS_MATNLOK_9263_BASE(2,4)  #end
+#macro CON_DIS_MATNLOK_9263_10_5() CON_DIS_MATNLOK_9263_BASE(2,5)  #end
+#macro CON_DIS_MATNLOK_9263_11_1() CON_DIS_MATNLOK_9263_BASE(3,1)  #end
+#macro CON_DIS_MATNLOK_9263_11_2() CON_DIS_MATNLOK_9263_BASE(3,2)  #end
+#macro CON_DIS_MATNLOK_9263_11_3() CON_DIS_MATNLOK_9263_BASE(3,3)  #end
+#macro CON_DIS_MATNLOK_9263_11_4() CON_DIS_MATNLOK_9263_BASE(3,4)  #end
+#macro CON_DIS_MATNLOK_9263_11_5() CON_DIS_MATNLOK_9263_BASE(3,5)  #end
+#macro CON_DIS_MATNLOK_9263_12_1() CON_DIS_MATNLOK_9263_BASE(4,1)  #end
+#macro CON_DIS_MATNLOK_9263_12_2() CON_DIS_MATNLOK_9263_BASE(4,2)  #end
+#macro CON_DIS_MATNLOK_9263_12_3() CON_DIS_MATNLOK_9263_BASE(4,3)  #end
+#macro CON_DIS_MATNLOK_9263_12_4() CON_DIS_MATNLOK_9263_BASE(4,4)  #end
+#macro CON_DIS_MATNLOK_9263_12_5() CON_DIS_MATNLOK_9263_BASE(4,5)  #end
+#macro CON_DIS_MATNLOK_9263_13_1() CON_DIS_MATNLOK_9263_BASE(5,1)  #end
+#macro CON_DIS_MATNLOK_9263_13_2() CON_DIS_MATNLOK_9263_BASE(5,2)  #end
+#macro CON_DIS_MATNLOK_9263_13_3() CON_DIS_MATNLOK_9263_BASE(5,3)  #end
+#macro CON_DIS_MATNLOK_9263_13_4() CON_DIS_MATNLOK_9263_BASE(5,4)  #end
+#macro CON_DIS_MATNLOK_9263_13_5() CON_DIS_MATNLOK_9263_BASE(5,5)  #end
+#macro CON_DIS_MATNLOK_9263_14_1() CON_DIS_MATNLOK_9263_BASE(6,1)  #end
+#macro CON_DIS_MATNLOK_9263_14_2() CON_DIS_MATNLOK_9263_BASE(6,2)  #end
+#macro CON_DIS_MATNLOK_9263_14_3() CON_DIS_MATNLOK_9263_BASE(6,3)  #end
+#macro CON_DIS_MATNLOK_9263_14_4() CON_DIS_MATNLOK_9263_BASE(6,4)  #end
+#macro CON_DIS_MATNLOK_9263_14_5() CON_DIS_MATNLOK_9263_BASE(6,5)  #end
+#macro CON_DIS_MATNLOK_9263_15_1() CON_DIS_MATNLOK_9263_BASE(8,1)  #end
+#macro CON_DIS_MATNLOK_9263_15_2() CON_DIS_MATNLOK_9263_BASE(8,2)  #end
+#macro CON_DIS_MATNLOK_9263_15_3() CON_DIS_MATNLOK_9263_BASE(8,3)  #end
+#macro CON_DIS_MATNLOK_9263_15_4() CON_DIS_MATNLOK_9263_BASE(8,4)  #end
+#macro CON_DIS_MATNLOK_9263_15_5() CON_DIS_MATNLOK_9263_BASE(8,5)  #end
+#macro CON_DIS_MATNLOK_9263_16_1() CON_DIS_MATNLOK_9263_BASE(10,1) #end
+#macro CON_DIS_MATNLOK_9263_16_2() CON_DIS_MATNLOK_9263_BASE(10,2) #end
+#macro CON_DIS_MATNLOK_9263_16_3() CON_DIS_MATNLOK_9263_BASE(10,3) #end
+#macro CON_DIS_MATNLOK_9263_16_4() CON_DIS_MATNLOK_9263_BASE(10,4) #end
+#macro CON_DIS_MATNLOK_9263_16_5() CON_DIS_MATNLOK_9263_BASE(10,5) #end
 
 
 /********************************************************************************************************************************************
@@ -2988,7 +2251,6 @@ union
     object
     {
       DSHELLD(ps, vc)
-      //DSHELLD(ps, vc)
       translate<-0.5,-0.25,0>
       scale<1.04-(0.0015*j),1.04,1>
       texture{col_silver}
@@ -2997,7 +2259,6 @@ union
     object
     {
       DSHELLD(ps, vc)
-      //DSHELLD(ps, vc)
       scale<1,1,1.1>
       texture{col_silver}
     }
@@ -3008,7 +2269,6 @@ union
     object
     {
       DSHELL(ps, vc)
-      //DSHELLD(ps, vc)
       translate<-0.5,-0.25,0>
       scale<1.04-(0.0015*j),1.04,1>
       texture{col_silver}
@@ -3017,7 +2277,6 @@ union
     object
     {
       DSHELL(ps, vc)
-      //DSHELLD(ps, vc)
       scale<1,1,1.1>
       texture{col_silver}
     }
@@ -3159,54 +2418,22 @@ translate<bo+ps-so,vc,0> }
 }
 #end
 
-#macro CON_DSUB_F9D()
-CON_DSUBD_BASE(9, true, false)
-#end
-#macro CON_DSUB_F15D()
-CON_DSUBD_BASE(15, true, false)
-#end
-#macro CON_DSUB_F25D()
-CON_DSUBD_BASE(25, true, false)
-#end
-#macro CON_DSUB_F37D()
-CON_DSUBD_BASE(37, true, false)
-#end
-#macro CON_DSUB_M9D()
-CON_DSUBD_BASE(9, false, false)
-#end
-#macro CON_DSUB_M15D()
-CON_DSUBD_BASE(15, false, false)
-#end
-#macro CON_DSUB_M25D()
-CON_DSUBD_BASE(25, false, false)
-#end
-#macro CON_DSUB_M37D()
-CON_DSUBD_BASE(37, false, false)
-#end
-#macro CON_DSUB_F9DV()
-CON_DSUBD_BASE(9,true,true)
-#end
-#macro CON_DSUB_F15DV()
-CON_DSUBD_BASE(15,true,true)
-#end
-#macro CON_DSUB_F25DV()
-CON_DSUBD_BASE(25,true,true)
-#end
-#macro CON_DSUB_F37DV()
-CON_DSUBD_BASE(37,true,true)
-#end
-#macro CON_DSUB_M9DV()
-CON_DSUBD_BASE(9,false,true)
-#end
-#macro CON_DSUB_M15DV()
-CON_DSUBD_BASE(15,false,true)
-#end
-#macro CON_DSUB_M25DV()
-CON_DSUBD_BASE(25,false,true)
-#end
-#macro CON_DSUB_M37DV()
-CON_DSUBD_BASE(37,false,true)
-#end
+#macro CON_DSUB_F9D()   CON_DSUBD_BASE(9, true, false)   #end
+#macro CON_DSUB_F15D()  CON_DSUBD_BASE(15, true, false)  #end
+#macro CON_DSUB_F25D()  CON_DSUBD_BASE(25, true, false)  #end
+#macro CON_DSUB_F37D()  CON_DSUBD_BASE(37, true, false)  #end
+#macro CON_DSUB_M9D()   CON_DSUBD_BASE(9, false, false)  #end
+#macro CON_DSUB_M15D()  CON_DSUBD_BASE(15, false, false) #end
+#macro CON_DSUB_M25D()  CON_DSUBD_BASE(25, false, false) #end
+#macro CON_DSUB_M37D()  CON_DSUBD_BASE(37, false, false) #end
+#macro CON_DSUB_F9DV()  CON_DSUBD_BASE(9,true,true)      #end
+#macro CON_DSUB_F15DV() CON_DSUBD_BASE(15,true,true)     #end
+#macro CON_DSUB_F25DV() CON_DSUBD_BASE(25,true,true)     #end
+#macro CON_DSUB_F37DV() CON_DSUBD_BASE(37,true,true)     #end
+#macro CON_DSUB_M9DV()  CON_DSUBD_BASE(9,false,true)     #end
+#macro CON_DSUB_M15DV() CON_DSUBD_BASE(15,false,true)    #end
+#macro CON_DSUB_M25DV() CON_DSUBD_BASE(25,false,true)    #end
+#macro CON_DSUB_M37DV() CON_DSUBD_BASE(37,false,true)    #end
 
 
 /********************************************************************************************************************************************
@@ -3400,30 +2627,15 @@ union
   pigment{Gray30}
 }
 #end
-#macro CON_DSUB_F9()
-CON_DSUB_BASE(9, true)
-#end
-#macro CON_DSUB_F15()
-CON_DSUB_BASE(15, true)
-#end
-#macro CON_DSUB_F25()
-CON_DSUB_BASE(25, true)
-#end
-#macro CON_DSUB_F37()
-CON_DSUB_BASE(37, true)
-#end
-#macro CON_DSUB_M9()
-CON_DSUB_BASE(9, false)
-#end
-#macro CON_DSUB_M15()
-CON_DSUB_BASE(15, false)
-#end
-#macro CON_DSUB_M25()
-CON_DSUB_BASE(25, false)
-#end
-#macro CON_DSUB_M37()
-CON_DSUB_BASE(37, false)
-#end
+
+#macro CON_DSUB_F9()  CON_DSUB_BASE(9, true)   #end
+#macro CON_DSUB_F15() CON_DSUB_BASE(15, true)  #end
+#macro CON_DSUB_F25() CON_DSUB_BASE(25, true)  #end
+#macro CON_DSUB_F37() CON_DSUB_BASE(37, true)  #end
+#macro CON_DSUB_M9()  CON_DSUB_BASE(9, false)  #end
+#macro CON_DSUB_M15() CON_DSUB_BASE(15, false) #end
+#macro CON_DSUB_M25() CON_DSUB_BASE(25, false) #end
+#macro CON_DSUB_M37() CON_DSUB_BASE(37, false) #end
 
 
 /********************************************************************************************************************************************
@@ -3636,7 +2848,6 @@ difference {
 merge {
 cylinder{<14,6.5,0><14.5,6.5,0>4}
 box {<14,2.5,-4>,<14.5,6.5,4>}
-//#macro TOOLS_RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
 object {TOOLS_RECT_BOGEN(0.2,90,0.5,2,0.8,13.25) rotate <90,90,180> translate<14.25,3.5,5.25>}
 cylinder{<0.5,3.5,5><0.5,3.5,5.5>1 }
 box {<1.25,0,5>,<3.75,2.5,5.5> }
@@ -3653,7 +2864,6 @@ texture{col_silver} }
 difference {
 merge {
 cylinder{<10.5,6.5,0><11.0,6.5,0>4 }
-//#macro TOOLS_RECT_BOGEN(i_radius,winkel,dicke,breite,laenge1,laenge2)
 object {TOOLS_RECT_BOGEN(0.3,85,0.5,4,3,5) rotate <0,180,90> translate<10.75,11.75,0>}
 sphere { <6.5, 11.6, 0>, 0.5 translate<0,0,0>}
 object {TOOLS_RECT_BOGEN(0.3,125,0.5,3,3,2.2) rotate <0,0.0,90> translate<10.75,1.8,0>}
@@ -4069,7 +3279,7 @@ union {
         box{<-plastic_x/2-0.65,-0.1,-0.65><plastic_x/2+0.65,0.4,+0.65>}//Base hollowing out
         texture{CON_MMTCH_PLASTIC_TEXTURE}
     }
-    difference {//Détrompeur
+    difference {//Detrompeur
         union {
             box{<-plastic_x/2,3.6,-1.16><-plastic_x/2+0.65,7.1,1.16> } //top part
             box{<-plastic_x/2,3.6,-1.16-0.3><-plastic_x/2+0.65,3.6+0.3,1.16+0.3> } //down part        
@@ -4362,10 +3572,7 @@ union
                 box{<-sb/2+0.5, bh, -8 > < -sb/2+2.5, bh+0.5 ,  -2  > texture{T_Chrome_5B}}                // oben links
                 box{< sb/2-2.5, bh, -8 > <  sb/2-0.5, bh+0.5 ,  -2  > texture{T_Chrome_5B}}                // oben rechts      
                 
-                box{<sb/2-2.7, -0.50, 0><-sb/2+2.7, 0, 6> rotate<-15,0,0> translate<0, bh+0.5, -8.3> texture{T_Chrome_5B} }
-                
-             //   box{< sb/2-2.7, bh, -8 > < -sb/2+2.7, bh+0.5 ,  -2  > rotate<-30,0,0> texture{T_Chrome_5B} }           // oben Mitte           
-                
+                box{<sb/2-2.7, -0.50, 0><-sb/2+2.7, 0, 6> rotate<-15,0,0> translate<0, bh+0.5, -8.3> texture{T_Chrome_5B} }                
         }               
         #end
         
@@ -4421,7 +3628,6 @@ union
            object { pin_channel  translate<+5.08,0,0>}
            object { pin_channel  translate<+1.27-5.08,0,0>}
                 #end
-      //texture{tex_rj45_pastic}
    }       
        
    //Panel-stops 
@@ -4816,7 +4022,6 @@ union
    difference
    {
       box{<-Pins, 0.6, -2><Pins,2.6, 2> pigment{Gray30} translate<0,0,0>}
-      //box{<0,-1.27,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
       box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<45,0,0> translate<0,1.5,1.5>}
       box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<-45,0,0> translate<0,1.5,-1.5>}
    }
@@ -6392,7 +5597,6 @@ CON_SD_CARD_BASE(rgb< 0.1, 0.1, 0.1>)
 
 union {
         // Metallkoerper
-//        box{ <-4.98, 0, 0> < 23.02, h, 29.0> }
         difference {
                 prism{ 0, h, 25
                         <-4.98, 1.0>, <-3.98, 1.0>, <-3.98, 0>, <-1.5, 0>, <-1.5, 0.5>, < 5.5, 0.5>, < 5.5, 2.0>, < 7.5, 2.0>,
@@ -6832,7 +6036,7 @@ CON_STEREO_35MM_BASE()
 ********************************************************************************************************************************************/
 #macro CON_USB_A_001_BASE()
 union {
-        /* Blechgehaeuse  */               
+        // Blechgehaeuse
         difference {
                 box { <-7,2,0>,<7,8,14>} // Aussenhuelle
                 box { <-6.5, 2.5, -1>, <6.5, 7.5, 14> } // Aussparung in der Mitte
@@ -6877,7 +6081,7 @@ union {
                 union {TOOLS_RECT_BOGEN(0.5,90,0.5,4,0,0)rotate<90,0,270>translate<3.5,2.25,-0.5>}
                 texture{col_silver}
                }
-        /* weisser Kontakttraeger */
+        // weisser Kontakttraeger
         difference {
                 box { <-5,4,1>,<5,6,12>} // Quader in der Mitte
                 union {
@@ -6890,7 +6094,7 @@ union {
                      }
                  texture{pigment{color White}}
                 }  
-        /* Kontakte */
+        // Kontakte
         difference {    
                   union {
                         box { <-3.8,3.5,3>,<-3,4,8>} // Kontakt 1
@@ -6911,7 +6115,7 @@ union {
                 box { <3.2,-2,12.5>,<3.8,5,13>} // Kontakt 4 hinten
                 texture{col_gold}
              }
-        /* weisser Sockel */
+        // weisser Sockel
         union {      
                 difference {
                         box { <-6,0,2>,<6,2,12>} // Sockel links
@@ -6956,7 +6160,7 @@ CON_USB_A_001_BASE()
 #local tex_usb_metal = texture { T_Chrome_5B } ;
 union {                          
         #local a = -9;
-        /* Blechgehaeuse  0.3mm dickes Blech*/               
+        // Blechgehaeuse  0.3mm dickes Blech               
         difference {                                                                   
                 union {
                         box{<-5.7, 4.2, 1><+5.7, 4.5, a-8.65>}            //oben
@@ -7691,7 +6895,7 @@ CON_WS_XX_G_BASE(64)
 
 /********************************************************************************************************************************************
 // Tilmann Reh <tilmann.reh@autometer.de>
-// abgewinkelte Pfostenwannen
+// abgewinkelte Pfostenwannen 2.54mm, ie. Reichelt "WSL 16W"
 // Bezugspunkt: mittig, 5.08mm vor der unteren/inneren Pinreihe.
 ********************************************************************************************************************************************/
 #macro CON_WS_XX_W_BASE(Pins)
@@ -7728,62 +6932,3 @@ CON_WS_XX_W_BASE(50)
 CON_WS_XX_W_BASE(64)
 #end
 
-
-/**********************************************************************
-Testing
-**********************************************************************/
-#ifndef(inc_testmode)
-          
-//Size of the Grid Plane (+/- span)
-#local XYZ_span=20;
-
-//Orientation axes
-cylinder{<-XYZ_span,0,0><XYZ_span,0,0>0.1 pigment{Blue}} //X
-cylinder{<0,-XYZ_span,0><0,XYZ_span,0>0.1 pigment{Red}}     //Y
-cylinder{<0,0,-XYZ_span><0,0,XYZ_span>0.1 pigment{Yellow}}  //Z
-
-// Useful grids:
-#local XYZ_step= 1 ;          // axis increment
-#local XYZ_cnt = 0;           //  loop counter
-#local xyz_thick = 0.05;     // grid line thickness
-
-// grid planes: Remove comment begin/end to activate & select PLANES:
-#while (XYZ_cnt <= XYZ_span)
-
-   cylinder{<-XYZ_span,0,XYZ_cnt><XYZ_span,0,XYZ_cnt>xyz_thick pigment{Blue}}    // Positive Z-Lines
-   cylinder{<-XYZ_span,0,-XYZ_cnt><XYZ_span,0,-XYZ_cnt>xyz_thick pigment{Blue}}  // Negative Z-Lines
-   
-   //cylinder{<0,XYZ_cnt,-XYZ_span><0,XYZ_cnt,XYZ_span>xyz_thick pigment{Red}}      // Positive Y-Z Plane Lines
-   //cylinder{<0,-XYZ_cnt,-XYZ_span><0,-XYZ_cnt,XYZ_span>xyz_thick pigment{Red}} // Negative Y-Z Plane Lines
-   
-   //cylinder{<-XYZ_span,XYZ_cnt,0><XYZ_span,XYZ_cnt,0>xyz_thick pigment{Red}}      // Positive Y-X Plane Lines
-   //cylinder{<-XYZ_span,-XYZ_cnt,0><XYZ_span,-XYZ_cnt,0>xyz_thick pigment{Red}} // Negative Y-X Plane Lines
-   
-   cylinder{<XYZ_cnt,0,-XYZ_span><XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}  // Positive X-Lines
-   cylinder{<-XYZ_cnt,0,-XYZ_span><-XYZ_cnt,0,XYZ_span>xyz_thick pigment{Yellow}}   // Negative X-Lines
-
-   #local XYZ_cnt = XYZ_cnt+XYZ_step;
-#end
-
-camera
-{       
-   #local tt = 40;            //let's you change the distance easily
-   location <-tt,tt,-tt>
-   //location<0,5,-50>        //alternate location
-   look_at <0,0,0>            //best to select the approximate centre of the object
-   angle 30
-}
-
-light_source { <100, 100, -100> White}
-light_source { <-100, 100, -100> White }
-light_source { <-100, 100, 100> White }
-light_source { <100, 100, 100> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-//light_source { <-tt,tt,-tt> White }
-background{Grey}
-
-#end
-
-#end
-//End of Macros
