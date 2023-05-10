@@ -25,7 +25,7 @@ size_t NextKeyword(std::string& s, size_t p = 0) {
      "ambient","absorption","diffuse","reflection","specular","roughness","phong_size","phong","metallic",
      "alpha","aperture","brightness","brilliance","colour",
      "material_map","material",
-     "translate","rotate","scale","transform","while"
+     "translate","rotate","scale","transform","while",
     };
 
   size_t n = sizeof(keywords)/sizeof(keywords[0]);
@@ -164,6 +164,10 @@ int main(int n, char** args) {
      ReplaceAll(line, "Ä", "Ae");
      ReplaceAll(line, "Ö", "Oe");
      ReplaceAll(line, "Ü", "Ue");
+     ReplaceAll(line, "scale<", "scale <");
+     ReplaceAll(line, "rotate<", "rotate <");
+     ReplaceAll(line, "translate<", "translate <");
+     ReplaceAll(line, "><", "> <");
 
      for(size_t i=0; i<line.size(); i++) {
         if (line[i] == '{')
