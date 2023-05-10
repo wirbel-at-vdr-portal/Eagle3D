@@ -72,7 +72,7 @@
            }
         } // Ende Korpus
      object { // Massepin
-        TOOLS_RECT_BOGEN(1,90,0.8,0.8,7,1)
+        TOOLS_RECT_BOGEN(1,90,0.8,0.8,8,1)
         rotate <90,0,-90>
         translate <4.75,6.5,2>
         texture {
@@ -84,7 +84,7 @@
            }
         }
      object { // Signalpin
-        TOOLS_RECT_BOGEN(1,90,0.8,0.8,7,1)
+        TOOLS_RECT_BOGEN(1,90,0.8,0.8,8,1)
         rotate <90,0,-90>
         translate <4.75+2.54,6.5,2>
         texture {
@@ -107,7 +107,7 @@
               ambient (0.1 * global_ambient_mul)
               }
            }
-           translate <-0.5,2.5,2.8>
+           translate <-0.6,2.5,2.5>
         }
      union { // Haltebolzen 2
         cylinder {
@@ -125,7 +125,7 @@
               ambient (0.1 * global_ambient_mul)
               }
            }
-           translate <-0.5,2.5,2.8>
+           translate <-0.6,2.5,2.5>
         }
      difference {
         union {
