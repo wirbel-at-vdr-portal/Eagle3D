@@ -496,12 +496,14 @@ PQFP44:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_MQFP44
 
 
 PQFP80:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_PQFP128_080_24x16(:TQFP-128:
+MQFP80-2:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_PQFP128_080_24x16(:TQFP-128:
 
 TQFP48:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP48_050_R90(:TQFP-48:
 TQFP48_7X7:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP48_050(:TQFP-48:
 
 
 TQFP100:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP100_050_R90(:TQFP-100:
+TQFP100:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP100_050(:TQFP-100 (maxim.lbr):
 TQFP100-14X14:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP100_050_R90(:TQFP-100:
 SQFP-S-20X20-144:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP144_050(:TQFP-144:
 TQFP144:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP144_050_R90(:TQFP-144:
@@ -519,7 +521,9 @@ VQFP32:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP32
 
 TQFP44:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP44_080_R90(:TQFP-44:
 SQFP-S-10X10-44:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP44_080_R90(:TQFP-44:
+SQFP-S-10X10-44:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP44_080(:TQFP-44 (micro-cyrod):
 TQFP64:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP64_080_R90(:TQFP-64:
+TQFP64L-10X10X2.0MM:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMT_TQFP64_080_R90(:TQFP-64:
 
 
 MLF44;MLF44-TH:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:IC_SMD_QFP44_050MM(:QFP44 Package 0.5mm pitch:
@@ -1962,68 +1966,54 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_M
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_MATNLOK_9263_14_5(:Connector MATE-N-LOK Vertical 6 pins:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_MATNLOK_9263_15_5(:Connector MATE-N-LOK Vertical 8 pins:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_MATNLOK_9263_16_5(:Connector MATE-N-LOK Vertical 10 pins:
-
-
-F09D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9D(:Sub-D connector 9-pin PCB-mount female:
-F15D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15D(:Sub-D connector 15-pin PCB-mount female:
-F25D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25D(:Sub-D connector 25-pin PCB-mount female:
-F37D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37D(:Sub-D connector 37-pin PCB-mount female:
-M09D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9D(:Sub-D connector 9-pin PCB-mount male:
-M15D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15D(:Sub-D connector 15-pin PCB-mount male:
-M25D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25D(:Sub-D connector 25-pin PCB-mount male:
-M37D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37D(:Sub-D connector 37-pin PCB-mount male:
-
-F09V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9V(:SUB-D 9polig weiblich print:SUB-D 9 Pins female print
-F15V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15V(:SUB-D 15polig weiblich print:SUB-D 15 Pins female print
-F25V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25V(:SUB-D 25polig weiblich print:SUB-D 25 Pins female print
-F37V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37V(:SUB-D 37polig weiblich print:SUB-D 37 Pins female print
-M09V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9V(:SUB-D 9polig maennlich print:SUB-D 9 Pins male print
-M15V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15V(:SUB-D 15polig maennlich print:SUB-D 15 Pins male print
-M25V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25V(:SUB-D 25polig maennlich print:SUB-D 25 Pins male print
-M37V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37V(:SUB-D 37polig maennlich print:SUB-D 37 Pins male print
-
-F09VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9VB(:SUB-D 9polig weiblich print:SUB-D 9 Pins female print
-F15VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15VB(:SUB-D 15polig weiblich print:SUB-D 15 Pins female print
-F25VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25VB(:SUB-D 25polig weiblich print:SUB-D 25 Pins female print
-F37VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37VB(:SUB-D 37polig weiblich print:SUB-D 37 Pins female print
-M09VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9VB(:SUB-D 9polig maennlich print:SUB-D 9 Pins male print
-M15VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15VB(:SUB-D 15polig maennlich print:SUB-D 15 Pins male print
-M25VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25VB(:SUB-D 25polig maennlich print:SUB-D 25 Pins male print
-M37VB:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37VB(:SUB-D 37polig maennlich print:SUB-D 37 Pins male print
-
-F09VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9VP(:SUB-D 9polig weiblich print:SUB-D 9 Pins female print
-F15VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15VP(:SUB-D 15polig weiblich print:SUB-D 15 Pins female print
-F25VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25VP(:SUB-D 25polig weiblich print:SUB-D 25 Pins female print
-F37VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37VP(:SUB-D 37polig weiblich print:SUB-D 37 Pins female print
-M09VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9VP(:SUB-D 9polig maennlich print:SUB-D 9 Pins male print
-M15VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15VP(:SUB-D 15polig maennlich print:SUB-D 15 Pins male print
-M25VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25VP(:SUB-D 25polig maennlich print:SUB-D 25 Pins male print
-M37VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37VP(:SUB-D 37polig maennlich print:SUB-D 37 Pins male print
-
-
-F09H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9H(:SUB-D 9polig 90 Grad weiblich:SUB-D 9 Pins 90deg female
-F15H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15H(:SUB-D 15polig 90 Grad weiblich:SUB-D 15 Pins 90deg female
-F25H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25H(:SUB-D 25polig 90 Grad weiblich:SUB-D 25 Pins 90deg female
-F37H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37H(:SUB-D 37polig 90 Grad weiblich:SUB-D 37 Pins 90deg female
-M09H:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9H(:SUB-D 9polig 90 Grad maennlich:SUB-D 9 Pins 90deg male
-M15H:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15H(:SUB-D 15polig 90 Grad maennlich:SUB-D 15 Pins 90deg male
-M25H:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25H(:SUB-D 25polig 90 Grad maennlich:SUB-D 25 Pins 90deg male
-M37H:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37H(:SUB-D 37polig 90 Grad maennlich:SUB-D 37 Pins 90deg male
-
-
-F09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9HP(:SUB-D 9polig 90 Grad weiblich:SUB-D 9 Pins 90deg female
-F15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15HP(:SUB-D 15polig 90 Grad weiblich:SUB-D 15 Pins 90deg female
-F25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25HP(:SUB-D 25polig 90 Grad weiblich:SUB-D 25 Pins 90deg female
-F37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37HP(:SUB-D 37polig 90 Grad weiblich:SUB-D 37 Pins 90deg female
-M09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9HP(:SUB-D 9polig 90 Grad maennlich:SUB-D 9 Pins 90deg male
-M15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15HP(:SUB-D 15polig 90 Grad maennlich:SUB-D 15 Pins 90deg male
-M25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25HP(:SUB-D 25polig 90 Grad maennlich:SUB-D 25 Pins 90deg male
-M37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37HP(:SUB-D 37polig 90 Grad maennlich:SUB-D 37 Pins 90deg male
-
-
-HDF15H:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9HP(:SUB-D 15polig 90 Grad maennlich:SUB-D 15 Pins 90deg female
-
-
+F09D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9D(:Sub-D connector 9-pin female:
+F15D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15D(:Sub-D connector 15-pin female:
+F25D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25D(:Sub-D connector 25-pin female:
+F37D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37D(:Sub-D connector 37-pin female:
+M09D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9D(:Sub-D connector 9-pin male:
+M15D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15D(:Sub-D connector 15-pin male:
+M25D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25D(:Sub-D connector 25-pin male:
+M37D:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37D(:Sub-D connector 37-pin male:
+F09V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9V(:Sub-D connector 9-pin female:
+F15V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15V(:Sub-D connector 15-pin female:
+F25V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25V(:Sub-D connector 25-pin female:
+F37V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37V(:Sub-D connector 37-pin female:
+M09V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9V(:Sub-D connector 9-pin male:
+M15V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15V(:Sub-D connector 15-pin male:
+M25V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25V(:Sub-D connector 25-pin male:
+M37V:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37V(:Sub-D connector 37-pin male:
+F09VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9VB(:Sub-D connector 9-pin female:
+F15VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15VB(:Sub-D connector 15-pin female:
+F25VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25VB(:Sub-D connector 25-pin female:
+F37VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37VB(:Sub-D connector 37-pin female:
+M09VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9VB(:Sub-D connector 9-pin male:
+M15VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15VB(:Sub-D connector 15-pin male:
+M25VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25VB(:Sub-D connector 25-pin male:
+M37VB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37VB(:Sub-D connector 37-pin male:
+F09VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9VP(:Sub-D connector 9-pin female:
+F15VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15VP(:Sub-D connector 15-pin female:
+F25VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25VP(:Sub-D connector 25-pin female:
+F37VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37VP(:Sub-D connector 37-pin female:
+M09VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9VP(:Sub-D connector 9-pin male:
+M15VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15VP(:Sub-D connector 15-pin male:
+M25VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25VP(:Sub-D connector 25-pin male:
+M37VP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37VP(:Sub-D connector 37-pin male:
+F09H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9H(:Sub-D connector 9-pin weiblich:
+F15H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15H(:Sub-D connector 15-pin female:
+F25H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25H(:Sub-D connector 25-pin female:
+F37H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37H(:Sub-D connector 37-pin female:
+M09H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9H(:Sub-D connector 9-pin male:
+M15H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15H(:Sub-D connector 15-pin male:
+M25H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25H(:Sub-D connector 25-pin male:
+M37H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37H(:Sub-D connector 37-pin male:
+F09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9HP(:Sub-D connector 9-pin female:
+F15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15HP(:Sub-D connector 15-pin female:
+F25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25HP(:Sub-D connector 25-pin female:
+F37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37HP(:Sub-D connector 37-pin female:
+M09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9HP(:Sub-D connector 9-pin male:
+M15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15HP(:Sub-D connector 15-pin male:
+M25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25HP(:Sub-D connector 25-pin male:
+M37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37HP(:Sub-D connector 37-pin male:
 MABC96L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_EUROCARD_96M_3_L(:Eurocard Connector:
 MAC64L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_EUROCARD_64M_2_L(:Eurocard Connector:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_FASTON_V(:Faston vertical 6.35 terminal:
