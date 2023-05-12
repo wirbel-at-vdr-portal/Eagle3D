@@ -2193,8 +2193,8 @@ union {
 //etwas missbraucht zur Kantenmontage durch USER_Ma(China)
 //Modifikation zur exakten Ausrichtung auf halbe Platinenhoehe: Wolfgang Moser <womo (a) d81.de>
 //Erweitert fuer stehende print Montage von Stefan Seegel
-********************************************************************************************************************************************/
-#macro CON_DSUBD_BASE(pin, female, print)
+********************************************************************************************************************************************
+#macro SUBD_BASE(pin, female, print)
 
 #macro DSHELLD(ps, vc)
   // the dshell offset is (body size - dshell size)/2 + radius
@@ -2416,24 +2416,11 @@ translate<bo+ps-so,vc,0> }
   rotate<0,180,0>
   pigment{Gray30}
 }
-#end
+#end*/
 
-#macro CON_DSUB_F9D()   CON_DSUBD_BASE(9, true, false)   #end
-#macro CON_DSUB_F15D()  CON_DSUBD_BASE(15, true, false)  #end
-#macro CON_DSUB_F25D()  CON_DSUBD_BASE(25, true, false)  #end
-#macro CON_DSUB_F37D()  CON_DSUBD_BASE(37, true, false)  #end
-#macro CON_DSUB_M9D()   CON_DSUBD_BASE(9, false, false)  #end
-#macro CON_DSUB_M15D()  CON_DSUBD_BASE(15, false, false) #end
-#macro CON_DSUB_M25D()  CON_DSUBD_BASE(25, false, false) #end
-#macro CON_DSUB_M37D()  CON_DSUBD_BASE(37, false, false) #end
-#macro CON_DSUB_F9DV()  CON_DSUBD_BASE(9,true,true)      #end
-#macro CON_DSUB_F15DV() CON_DSUBD_BASE(15,true,true)     #end
-#macro CON_DSUB_F25DV() CON_DSUBD_BASE(25,true,true)     #end
-#macro CON_DSUB_F37DV() CON_DSUBD_BASE(37,true,true)     #end
-#macro CON_DSUB_M9DV()  CON_DSUBD_BASE(9,false,true)     #end
-#macro CON_DSUB_M15DV() CON_DSUBD_BASE(15,false,true)    #end
-#macro CON_DSUB_M25DV() CON_DSUBD_BASE(25,false,true)    #end
-#macro CON_DSUB_M37DV() CON_DSUBD_BASE(37,false,true)    #end
+
+
+
 
 
 /********************************************************************************************************************************************
@@ -2628,15 +2615,16 @@ union
 }
 #end
 
-#macro CON_DSUB_F9()  CON_DSUB_BASE(9, true)   #end
-#macro CON_DSUB_F15() CON_DSUB_BASE(15, true)  #end
-#macro CON_DSUB_F25() CON_DSUB_BASE(25, true)  #end
-#macro CON_DSUB_F37() CON_DSUB_BASE(37, true)  #end
-#macro CON_DSUB_M9()  CON_DSUB_BASE(9, false)  #end
-#macro CON_DSUB_M15() CON_DSUB_BASE(15, false) #end
-#macro CON_DSUB_M25() CON_DSUB_BASE(25, false) #end
-#macro CON_DSUB_M37() CON_DSUB_BASE(37, false) #end
-
+/*
+#macro CON_SUBD_F9()  CON_DSUB_BASE(9, true)   #end
+#macro CON_SUBD_F15() CON_DSUB_BASE(15, true)  #end
+#macro CON_SUBD_F25() CON_DSUB_BASE(25, true)  #end
+#macro CON_SUBD_F37() CON_DSUB_BASE(37, true)  #end
+#macro CON_SUBD_M9()  CON_DSUB_BASE(9, false)  #end
+#macro CON_SUBD_M15() CON_DSUB_BASE(15, false) #end
+#macro CON_SUBD_M25() CON_DSUB_BASE(25, false) #end
+#macro CON_SUBD_M37() CON_DSUB_BASE(37, false) #end
+*/
 
 /********************************************************************************************************************************************
 //Eurocard Verbinder

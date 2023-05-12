@@ -12,6 +12,7 @@
 #include "CONNECTOR/MOLEX_PSL_series.inc"
 #include "CONNECTOR/PHOENIX_MINI_COMBICON_3.81mm.inc"
 #include "CONNECTOR/pinheader.inc"
+#include "CONNECTOR/SUBD.inc"
 #include "CONNECTOR/TERMINALBLOCK_3.5mm.inc"
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
 #include "CONNECTOR/wirejumper.inc"
