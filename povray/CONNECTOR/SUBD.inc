@@ -709,6 +709,17 @@
 #macro CON_SUBD_M37HP()  SubD_horizontal_clip(37, "male"  ) #end
 
 
+#macro CON_SUBD_M9H_R180()    CON_SUBD_M9H()   rotate y*180 #end
+#macro CON_SUBD_M15H_R180()   CON_SUBD_M15H()  rotate y*180 #end
+#macro CON_SUBD_M25H_R180()   CON_SUBD_M25H()  rotate y*180 #end
+#macro CON_SUBD_M37H_R180()   CON_SUBD_M37H()  rotate y*180 #end
+#macro CON_SUBD_M9HP_R180()   CON_SUBD_M9HP()  rotate y*180 #end
+#macro CON_SUBD_M15HP_R180()  CON_SUBD_M15HP() rotate y*180 #end
+#macro CON_SUBD_M25HP_R180()  CON_SUBD_M25HP() rotate y*180 #end
+#macro CON_SUBD_M37HP_R180()  CON_SUBD_M37HP() rotate y*180 #end
+
+
+
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
@@ -749,16 +760,16 @@
 //con-subd:F15H=CON_SUBD_F15H(:Sub-D connector 15-pin female
 //con-subd:F25H=CON_SUBD_F25H(:Sub-D connector 25-pin female
 //con-subd:F37H=CON_SUBD_F37H(:Sub-D connector 37-pin female
-//con-subd:M09H=CON_SUBD_M9H(:Sub-D connector 9-pin male
-//con-subd:M15H=CON_SUBD_M15H(:Sub-D connector 15-pin male
-//con-subd:M25H=CON_SUBD_M25H(:Sub-D connector 25-pin male
-//con-subd:M37H=CON_SUBD_M37H(:Sub-D connector 37-pin male
+//con-subd:M09H=CON_SUBD_M9H_R180(:Sub-D connector 9-pin male
+//con-subd:M15H=CON_SUBD_M15H_R180(:Sub-D connector 15-pin male
+//con-subd:M25H=CON_SUBD_M25H_R180(:Sub-D connector 25-pin male
+//con-subd:M37H=CON_SUBD_M37H_R180(:Sub-D connector 37-pin male
 //con-subd:F09HP=CON_SUBD_F9HP(:Sub-D connector 9-pin female
 //con-subd:F15HP=CON_SUBD_F15HP(:Sub-D connector 15-pin female
 //con-subd:F25HP=CON_SUBD_F25HP(:Sub-D connector 25-pin female
 //con-subd:F37HP=CON_SUBD_F37HP(:Sub-D connector 37-pin female
-//con-subd:M09HP=CON_SUBD_M9HP(:Sub-D connector 9-pin male
-//con-subd:M15HP=CON_SUBD_M15HP(:Sub-D connector 15-pin male
-//con-subd:M25HP=CON_SUBD_M25HP(:Sub-D connector 25-pin male
-//con-subd:M37HP=CON_SUBD_M37HP(:Sub-D connector 37-pin male
+//con-subd:M09HP=CON_SUBD_M9HP_R180(:Sub-D connector 9-pin male
+//con-subd:M15HP=CON_SUBD_M15HP_R180(:Sub-D connector 15-pin male
+//con-subd:M25HP=CON_SUBD_M25HP_R180(:Sub-D connector 25-pin male
+//con-subd:M37HP=CON_SUBD_M37HP_R180(:Sub-D connector 37-pin male
 // end assignment

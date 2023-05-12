@@ -2002,18 +2002,18 @@ F09H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9H(:S
 F15H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15H(:Sub-D connector 15-pin female:
 F25H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25H(:Sub-D connector 25-pin female:
 F37H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37H(:Sub-D connector 37-pin female:
-M09H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9H(:Sub-D connector 9-pin male:
-M15H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15H(:Sub-D connector 15-pin male:
-M25H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25H(:Sub-D connector 25-pin male:
-M37H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37H(:Sub-D connector 37-pin male:
+M09H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9H_R180(:Sub-D connector 9-pin male:
+M15H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15H_R180(:Sub-D connector 15-pin male:
+M25H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25H_R180(:Sub-D connector 25-pin male:
+M37H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37H_R180(:Sub-D connector 37-pin male:
 F09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F9HP(:Sub-D connector 9-pin female:
 F15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F15HP(:Sub-D connector 15-pin female:
 F25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F25HP(:Sub-D connector 25-pin female:
 F37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_F37HP(:Sub-D connector 37-pin female:
-M09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9HP(:Sub-D connector 9-pin male:
-M15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15HP(:Sub-D connector 15-pin male:
-M25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25HP(:Sub-D connector 25-pin male:
-M37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37HP(:Sub-D connector 37-pin male:
+M09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9HP_R180(:Sub-D connector 9-pin male:
+M15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15HP_R180(:Sub-D connector 15-pin male:
+M25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25HP_R180(:Sub-D connector 25-pin male:
+M37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37HP_R180(:Sub-D connector 37-pin male:
 MABC96L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_EUROCARD_96M_3_L(:Eurocard Connector:
 MAC64L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_EUROCARD_64M_2_L(:Eurocard Connector:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_FASTON_V(:Faston vertical 6.35 terminal:
