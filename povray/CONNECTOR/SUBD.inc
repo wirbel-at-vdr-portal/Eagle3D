@@ -464,16 +464,38 @@
      object {
         SUBD_BASE(pins, gender)
         }
-     #local len = 8;     // Pin length (from plate)
-     #local D = 0.6;       // Pin diameter
+     #local len1 = 8;      // Pin length (from plate)
+     #local len2 = 8;      // Pin length (from PCB)
+
+     #local D1 = 1.2;      // Pin thick part
+     #local D  = 0.6;      // Pin diameter
      #local hs = 2.758;    // horizontal pin spacing
      #local vs = 2.845;    // vertical pin spacing
      #local vc = 6.274;    // vertical centerline
      union {
         #local Pin1 = union {
             cylinder {
-               <0,vc,0.5> <0,vc,len-D/2> D/2
+               <0,vc,0.5> <0,vc,len1> D1/2
                }
+            cylinder {
+               <0,-2.6,0.5> <0,len2,len1> D1/2
+               }
+
+//--------------------------------------------------------------------------
+#include "shapes3.inc"
+//--------------------------------------------------------------------------
+object{ Segment_of_Torus ( 1.10, // radius major, 
+                           0.25, // radius minor, 
+                           -270  // segment angle (in degrees)
+                         ) //-----------------------------------
+        texture { pigment{ color rgb<1,0.7,0>}  
+                  finish { phong 1}
+                } // end of texture
+        scale <1,1,1> rotate<0,0,0> translate<0,0,0>
+      } // end of Torus_Segment(...) ---------------------------              
+//--------------------------------------------------------------------------
+
+
 
             texture {
                col_gold
@@ -493,7 +515,6 @@
         translate <0,-7.0,0>
         }
      translate <0,7.5,10>
-     
      }
 #end
 
