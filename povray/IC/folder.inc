@@ -9,6 +9,7 @@
 #include "IC/SMT/PLCC.inc"
 #include "IC/SMT/PSO.inc"
 #include "IC/SMT/QFN.inc"
+#include "IC/SMT/QFP.inc"
 #include "IC/SMT/QSOP.inc"
 #include "IC/SMT/SO.inc"
 #include "IC/SMT/SOT223.inc"
