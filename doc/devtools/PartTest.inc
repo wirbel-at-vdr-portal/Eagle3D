@@ -1,4 +1,4 @@
-#version 3.5;
+#version 3.7;
 global_settings{charset utf8}
 
 #declare global_res_shape = 1;                              //changes the apperance of resistors (1 Blob / 0 real)

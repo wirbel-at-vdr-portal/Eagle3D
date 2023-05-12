@@ -11,10 +11,8 @@
  * Wolfgang Moser <womo (a) d81.de>
  * Stefan Seegel
  *
- * rewritten: 05/2023, wk
+ * completly rewritten: 05/2023, wk
  * *****************************************************************************/
-
-
 #macro SUBD_BASE(pin, gender)
   #macro DSHELLD(ps, vc)
      union {
@@ -464,10 +462,10 @@
      object {
         SUBD_BASE(pins, gender)
         }
-     #local len1 = 8;      // Pin length (from plate)
-     #local len2 = 8;      // Pin length (from PCB)
+     #local len1 = 7.5;      // Pin length (from plate)
+     #local len2 = 2.5;      // Pin length (from PCB)
 
-     #local D1 = 1.2;      // Pin thick part
+     #local D1 = 1.0;      // Pin thick part
      #local D  = 0.6;      // Pin diameter
      #local hs = 2.758;    // horizontal pin spacing
      #local vs = 2.845;    // vertical pin spacing
@@ -478,35 +476,58 @@
                <0,vc,0.5> <0,vc,len1> D1/2
                }
             cylinder {
-               <0,-2.6,0.5> <0,len2,len1> D1/2
+               <0,-1.6,11.25> <0,len2,11.25> D1/2
                }
-
-//--------------------------------------------------------------------------
-#include "shapes3.inc"
-//--------------------------------------------------------------------------
-object{ Segment_of_Torus ( 1.10, // radius major, 
-                           0.25, // radius minor, 
-                           -270  // segment angle (in degrees)
-                         ) //-----------------------------------
-        texture { pigment{ color rgb<1,0.7,0>}  
-                  finish { phong 1}
-                } // end of texture
-        scale <1,1,1> rotate<0,0,0> translate<0,0,0>
-      } // end of Torus_Segment(...) ---------------------------              
-//--------------------------------------------------------------------------
-
-
-
+            cylinder {
+               <0,-2.0,11.25> <0,-4.2,11.25> D/2
+               }
+            object {
+               Segment_of_Torus(
+                  4,
+                  D1/2,
+                  90
+                  )
+               rotate <0,-90,90>
+               translate <0,2.30,7.25>
+               }
             texture {
                col_gold
                }
             };
+
+
+        #local Pin2 = union {
+            cylinder {
+               <0,vc,0.5> <0,vc,len1-0.40> D1/2
+               }
+            cylinder {
+               <0,-1.6+2.84,11.25-2.84> <0,len2+2.24,11.25-2.84> D1/2
+               }
+            cylinder {
+               <0,-2.0+2.84,11.25-2.84> <0,-4.2+2.84,11.25-2.84> D/2
+               }
+            object {
+               Segment_of_Torus(
+                  1.6,
+                  D1/2,
+                  90
+                  )
+               rotate <0,-90,90>
+               translate <0,4.70,6.80>
+               }
+            texture {
+               col_gold
+               }
+            };
+
+
+
         object {
            GRID(Pin1, hs, (pins-1)/2 + 1,1)
            translate <0,+vs/2,0>
            }
         object {
-           GRID(Pin1, hs, (pins-1)/2,1)
+           GRID(Pin2, hs, (pins-1)/2,1)
            translate <0,-vs/2,0>
            }
 
@@ -531,16 +552,27 @@ object{ Segment_of_Torus ( 1.10, // radius major,
          #case (25) #local A = 53.42; #break
          #case (37) #local A = 69.70; #break
      #end
-/*
+
      #local mount = union {
          difference {
-            cylinder {
-               <0,0,0> <0,7.4,0> 4.5/2
+            union {
+               Round_Box_Union(
+                  <-6/2,0  ,-3.00>
+                  <+6/2,1.5,+11.0>
+                  0.25
+                  )
+               Round_Box_Union(
+                  <-6/2,0 ,+9.50>
+                  <+6/2,10,+11.0>
+                  0.25
+                  )
                }
             object {
                TOOLS_SCREW(3,5,1,Silver)
-               translate <0,10,0>
+               rotate <90,0,0>
+               translate <0,6.6,12>
                }
+
             }
          object {
             TOOLS_SCREW(3,5,1,Silver)
@@ -551,11 +583,75 @@ object{ Segment_of_Torus ( 1.10, // radius major,
             col_silver
             }
          };
-     GRID(mount,A-2*3,2,1)*/
+     GRID(mount,A-2*3,2,1)
      }
 #end
 
+#macro SubD_horizontal_clip(pins,gender)
+  union {
+     object {
+        SubD_horizontal(pins, gender)
+        }
+     #local A = 31.19;
+     #switch(pins)
+         #case (9)  #local A = 31.19; #break
+         #case (15) #local A = 39.52; #break
+         #case (25) #local A = 53.42; #break
+         #case (37) #local A = 69.70; #break
+     #end
 
+     #local mount = union {
+         difference {
+            union {
+               Round_Box_Union(
+                  <-6/2,0  ,-3.00>
+                  <+6/2,1.5,+11.0>
+                  0.25
+                  )
+               Round_Box_Union(
+                  <-6/2,0 ,+9.50>
+                  <+6/2,10,+11.0>
+                  0.25
+                  )
+               }
+            object {
+               TOOLS_SCREW(3,5,1,Silver)
+               rotate <90,0,0>
+               translate <0,6.6,12>
+               }
+            }
+         difference {
+            lathe {
+               linear_spline
+               7,
+               < 0.00/2,-3.50>,
+               < 2.90/2,-3.50>,
+               < 3.50/2,-1.60>,
+               < 2.90/2, 0.00>,
+               < 4.50/2, 0.00>,
+               < 4.50/2, 4.00>,
+               < 0.00/2, 4.00>
+               }
+            box {
+               <-3,-4.0,-0.6/2>
+               <+3,+1.6,+0.6/2>
+               }
+            box {
+               <-0.6/2,-4.0,-3>
+               <+0.6/2,+1.6,+3>
+               }
+
+
+
+            translate <0,-1.6,0>
+            }
+         texture {
+            col_silver
+            }
+         };
+     GRID(mount,A-2*3,2,1)
+     }
+#end
 
 #macro CON_SUBD_F9D()    SubD_wired( 9, "female") #end
 #macro CON_SUBD_F15D()   SubD_wired(15, "female") #end
@@ -603,97 +699,66 @@ object{ Segment_of_Torus ( 1.10, // radius major,
 #macro CON_SUBD_M37H()   SubD_horizontal_screw(37, "male"  ) #end
 
 
-#macro CON_SUBD_F9HP()   SubD_horizontal_screw( 9, "female") #end
-#macro CON_SUBD_F15HP()  SubD_horizontal_screw(15, "female") #end
-#macro CON_SUBD_F25HP()  SubD_horizontal_screw(25, "female") #end
-#macro CON_SUBD_F37HP()  SubD_horizontal_screw(37, "female") #end
-#macro CON_SUBD_M9HP()   SubD_horizontal_screw(9,  "male"  ) #end
-#macro CON_SUBD_M15HP()  SubD_horizontal_screw(15, "male"  ) #end
-#macro CON_SUBD_M25HP()  SubD_horizontal_screw(25, "male"  ) #end
-#macro CON_SUBD_M37HP()  SubD_horizontal_screw(37, "male"  ) #end
-
-
-
-
-
-
-
-
-#macro CON_SUBD_F9DV_R180()   CON_SUBD_F9DV()  rotate z*180 #end
-#macro CON_SUBD_F15DV_R180()  CON_SUBD_F15DV() rotate z*180 #end
-#macro CON_SUBD_F25DV_R180()  CON_SUBD_F25DV() rotate z*180 #end
-#macro CON_SUBD_F37DV_R180()  CON_SUBD_F37DV() rotate z*180 #end
-#macro CON_SUBD_M9DV()        CON_SUBD_M9DV()  rotate z*180 #end
-#macro CON_SUBD_M9DV_R180()   CON_SUBD_M9DV()  rotate z*180 #end
-#macro CON_SUBD_M15DV_R180()  CON_SUBD_M15DV() rotate z*180 #end
-#macro CON_SUBD_M25DV_R180()  CON_SUBD_M25DV() rotate z*180 #end
-#macro CON_SUBD_M37DV_R180()  CON_SUBD_M37DV() rotate z*180 #end
-#macro CON_SUBD_M9_R180()     CON_SUBD_M9()    rotate z*180 #end
-#macro CON_SUBD_M15_R180()    CON_SUBD_M15()   rotate z*180 #end
-#macro CON_SUBD_M25_R180()    CON_SUBD_M25()   rotate z*180 #end
-#macro CON_SUBD_M37_R180()    CON_SUBD_M37()   rotate z*180 #end
-#macro CON_SUBD_F9_R180()     CON_SUBD_F9()    rotate z*180 #end
-#macro CON_SUBD_M9_R180()     CON_SUBD_M9()    rotate z*180 #end
-#macro CON_SUBD_M15_R180()    CON_SUBD_M15()   rotate z*180 #end
-#macro CON_SUBD_M25_R180()    CON_SUBD_M25()   rotate z*180 #end
-#macro CON_SUBD_M37_R180()    CON_SUBD_M37()   rotate z*180 #end
+#macro CON_SUBD_F9HP()   SubD_horizontal_clip( 9, "female") #end
+#macro CON_SUBD_F15HP()  SubD_horizontal_clip(15, "female") #end
+#macro CON_SUBD_F25HP()  SubD_horizontal_clip(25, "female") #end
+#macro CON_SUBD_F37HP()  SubD_horizontal_clip(37, "female") #end
+#macro CON_SUBD_M9HP()   SubD_horizontal_clip(9,  "male"  ) #end
+#macro CON_SUBD_M15HP()  SubD_horizontal_clip(15, "male"  ) #end
+#macro CON_SUBD_M25HP()  SubD_horizontal_clip(25, "male"  ) #end
+#macro CON_SUBD_M37HP()  SubD_horizontal_clip(37, "male"  ) #end
 
 
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//con-subd:F09D=CON_SUBD_F9D(:Sub-D connector 9-pin PCB-mount female
-//con-subd:F15D=CON_SUBD_F15D(:Sub-D connector 15-pin PCB-mount female
-//con-subd:F25D=CON_SUBD_F25D(:Sub-D connector 25-pin PCB-mount female
-//con-subd:F37D=CON_SUBD_F37D(:Sub-D connector 37-pin PCB-mount female
-//con-subd:M09D=CON_SUBD_M9D(:Sub-D connector 9-pin PCB-mount male
-//con-subd:M15D=CON_SUBD_M15D(:Sub-D connector 15-pin PCB-mount male
-//con-subd:M25D=CON_SUBD_M25D(:Sub-D connector 25-pin PCB-mount male
-//con-subd:M37D=CON_SUBD_M37D(:Sub-D connector 37-pin PCB-mount male
-
-//con-subd:F09V=CON_SUBD_F9DV(:Sub-D connector 9-pin female print
-
-
-
-//con-subd:F09VB=CON_SUBD_F9DV_R180(:Sub-D connector 9-pin female print
-//con-subd:F09VP=CON_SUBD_F9DV(:Sub-D connector 9-pin female print
-//con-subd:F15V=CON_SUBD_F15DV(:Sub-D connector 15-pin female print
-//con-subd:F15VB=CON_SUBD_F15DV_R180(:Sub-D connector 15-pin female print
-//con-subd:F15VP=CON_SUBD_F15DV(:Sub-D connector 15-pin female print
-//con-subd:F25V=CON_SUBD_F25DV(:Sub-D connector 25-pin female print
-//con-subd:F25VB=CON_SUBD_F25DV_R180(:Sub-D connector 25-pin female print
-//con-subd:F25VP=CON_SUBD_F25DV(:Sub-D connector 25-pin female print
-//con-subd:F37V=CON_SUBD_F37DV(:Sub-D connector 37-pin female print
-//con-subd:F37VB=CON_SUBD_F37DV_R180(:Sub-D connector 37-pin female print
-//con-subd:F37VP=CON_SUBD_F37DV(:Sub-D connector 37-pin female print
-//con-subd:M09V=CON_SUBD_M9DV(:Sub-D connector 9-pin male print
-//con-subd:M09VB=CON_SUBD_M9DV_R180(:Sub-D connector 9-pin male print
-//con-subd:M09VP=CON_SUBD_M9DV(:Sub-D connector 9-pin male print
-//con-subd:M15V=CON_SUBD_M15DV(:Sub-D connector 15-pin male print
-//con-subd:M15VB=CON_SUBD_M15DV_R180(:Sub-D connector 15-pin male print
-//con-subd:M15VP=CON_SUBD_M15DV(:Sub-D connector 15-pin male print
-//con-subd:M25V=CON_SUBD_M25DV(:Sub-D connector 25-pin male print
-//con-subd:M25VB=CON_SUBD_M25DV_R180(:Sub-D connector 25-pin male print
-//con-subd:M25VP=CON_SUBD_M25DV(:Sub-D connector 25-pin male print
-//con-subd:M37V=CON_SUBD_M37DV(:Sub-D connector 37-pin male print
-//con-subd:M37VB=CON_SUBD_M37DV_R180(:Sub-D connector 37-pin male print
-//con-subd:M37VP=CON_SUBD_M37DV(:Sub-D connector 37-pin male print
-//con-subd:F09H=CON_SUBD_F9(:Sub-D connector 9-pin 90deg female
-//con-subd:F15H=CON_SUBD_F15(:Sub-D connector 15-pin 90deg female
-//con-subd:F25H=CON_SUBD_F25(:Sub-D connector 25-pin 90deg female
-//con-subd:F37H=CON_SUBD_F37(:Sub-D connector 37-pin 90deg female
-//con-subd:M09H=CON_SUBD_M9_R180(:Sub-D connector 9-pin 90deg male
-//con-subd:M15H=CON_SUBD_M15_R180(:Sub-D connector 15-pin 90deg male
-//con-subd:M25H=CON_SUBD_M25_R180(:Sub-D connector 25-pin 90deg male
-//con-subd:M37H=CON_SUBD_M37_R180(:Sub-D connector 37-pin 90deg male
-//con-subd:F09HP=CON_SUBD_F9(:Sub-D connector 9-pin 90deg female
-//con-subd:HDF15H=CON_SUBD_F9_R180(:Sub-D connector 15-pin 90deg male
-//con-subd:F15HP=CON_SUBD_F15(:Sub-D connector 15-pin 90deg female
-//con-subd:F25HP=CON_SUBD_F25(:Sub-D connector 25-pin 90deg female
-//con-subd:F37HP=CON_SUBD_F37(:Sub-D connector 37-pin 90deg female
-//con-subd:M09HP=CON_SUBD_M9_R180(:Sub-D connector 9-pin 90deg male
-//con-subd:M15HP=CON_SUBD_M15_R180(:Sub-D connector 15-pin 90deg male
-//con-subd:M25HP=CON_SUBD_M25_R180(:Sub-D connector 25-pin 90deg male
-//con-subd:M37HP=CON_SUBD_M37_R180(:Sub-D connector 37-pin 90deg male
+//con-subd:F09D=CON_SUBD_F9D(:Sub-D connector 9-pin female
+//con-subd:F15D=CON_SUBD_F15D(:Sub-D connector 15-pin female
+//con-subd:F25D=CON_SUBD_F25D(:Sub-D connector 25-pin female
+//con-subd:F37D=CON_SUBD_F37D(:Sub-D connector 37-pin female
+//con-subd:M09D=CON_SUBD_M9D(:Sub-D connector 9-pin male
+//con-subd:M15D=CON_SUBD_M15D(:Sub-D connector 15-pin male
+//con-subd:M25D=CON_SUBD_M25D(:Sub-D connector 25-pin male
+//con-subd:M37D=CON_SUBD_M37D(:Sub-D connector 37-pin male
+//con-subd:F09V=CON_SUBD_F9V(:Sub-D connector 9-pin female
+//con-subd:F15V=CON_SUBD_F15V(:Sub-D connector 15-pin female
+//con-subd:F25V=CON_SUBD_F25V(:Sub-D connector 25-pin female
+//con-subd:F37V=CON_SUBD_F37V(:Sub-D connector 37-pin female
+//con-subd:M09V=CON_SUBD_M9V(:Sub-D connector 9-pin male
+//con-subd:M15V=CON_SUBD_M15V(:Sub-D connector 15-pin male
+//con-subd:M25V=CON_SUBD_M25V(:Sub-D connector 25-pin male
+//con-subd:M37V=CON_SUBD_M37V(:Sub-D connector 37-pin male
+//con-subd:F09VB=CON_SUBD_F9VB(:Sub-D connector 9-pin female
+//con-subd:F15VB=CON_SUBD_F15VB(:Sub-D connector 15-pin female
+//con-subd:F25VB=CON_SUBD_F25VB(:Sub-D connector 25-pin female
+//con-subd:F37VB=CON_SUBD_F37VB(:Sub-D connector 37-pin female
+//con-subd:M09VB=CON_SUBD_M9VB(:Sub-D connector 9-pin male
+//con-subd:M15VB=CON_SUBD_M15VB(:Sub-D connector 15-pin male
+//con-subd:M25VB=CON_SUBD_M25VB(:Sub-D connector 25-pin male
+//con-subd:M37VB=CON_SUBD_M37VB(:Sub-D connector 37-pin male
+//con-subd:F09VP=CON_SUBD_F9VP(:Sub-D connector 9-pin female
+//con-subd:F15VP=CON_SUBD_F15VP(:Sub-D connector 15-pin female
+//con-subd:F25VP=CON_SUBD_F25VP(:Sub-D connector 25-pin female
+//con-subd:F37VP=CON_SUBD_F37VP(:Sub-D connector 37-pin female
+//con-subd:M09VP=CON_SUBD_M9VP(:Sub-D connector 9-pin male
+//con-subd:M15VP=CON_SUBD_M15VP(:Sub-D connector 15-pin male
+//con-subd:M25VP=CON_SUBD_M25VP(:Sub-D connector 25-pin male
+//con-subd:M37VP=CON_SUBD_M37VP(:Sub-D connector 37-pin male
+//con-subd:F09H=CON_SUBD_F9H(:Sub-D connector 9-pin weiblich:
+//con-subd:F15H=CON_SUBD_F15H(:Sub-D connector 15-pin female
+//con-subd:F25H=CON_SUBD_F25H(:Sub-D connector 25-pin female
+//con-subd:F37H=CON_SUBD_F37H(:Sub-D connector 37-pin female
+//con-subd:M09H=CON_SUBD_M9H(:Sub-D connector 9-pin male
+//con-subd:M15H=CON_SUBD_M15H(:Sub-D connector 15-pin male
+//con-subd:M25H=CON_SUBD_M25H(:Sub-D connector 25-pin male
+//con-subd:M37H=CON_SUBD_M37H(:Sub-D connector 37-pin male
+//con-subd:F09HP=CON_SUBD_F9HP(:Sub-D connector 9-pin female
+//con-subd:F15HP=CON_SUBD_F15HP(:Sub-D connector 15-pin female
+//con-subd:F25HP=CON_SUBD_F25HP(:Sub-D connector 25-pin female
+//con-subd:F37HP=CON_SUBD_F37HP(:Sub-D connector 37-pin female
+//con-subd:M09HP=CON_SUBD_M9HP(:Sub-D connector 9-pin male
+//con-subd:M15HP=CON_SUBD_M15HP(:Sub-D connector 15-pin male
+//con-subd:M25HP=CON_SUBD_M25HP(:Sub-D connector 25-pin male
+//con-subd:M37HP=CON_SUBD_M37HP(:Sub-D connector 37-pin male
 // end assignment
