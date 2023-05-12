@@ -242,3 +242,72 @@ union{
     texture{col_ic_body_1}
 }
 #end
+
+
+/*******************************************************************************
+ * QFP base macro
+ * 06.05.2023, wk.
+ *
+ * A  - height w. pins
+ * A1 - distance pcb to case
+ * A2 - height of case
+ * D  - X or width, with pins
+ * D1 - X or width, wo pins 
+ * E  - Y or length, with pins
+ * E1 - Y or length, wo pins
+ * e  - pitch
+ * L  - len pin on pad
+ * b  - pin width
+ * c  - pin height
+ * nx - number of pins in x axis
+ * ny - number of pins in y axis
+ ******************************************************************************/
+#macro QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+  union {
+     difference {
+        intersection {
+           #local EdgeCut = 0.35;//(D-D1)/6;
+           IC_SMD_BASE(E1,D1,A2,E,0,0,e,e,b,b,c,A1,0,0,0,0,0.0001,0,"")
+           #if (abs(E1-D1) > 1.0)
+              #local EdgeCut = 0;
+           #end
+           #if (EdgeCut > 0)
+              box {
+                 <-(D1*sqrt(2))/2 +EdgeCut, -0.1, -(E1*sqrt(2))/2 +EdgeCut>
+                 <+(D1*sqrt(2))/2 -EdgeCut,A+0.1, +(E1*sqrt(2))/2 -EdgeCut>
+                 rotate <0,45,0>
+                 }
+           #end
+           texture {
+              col_ic_body_1
+              }
+           }
+        cylinder {
+          <-((nx-2)/2)*e, A2+A1-0.10,-((ny-2)/2)*e>
+          <-((nx-2)/2)*e, A+0.10    ,-((ny-2)/2)*e>
+          e
+          }
+        texture {
+           col_ic_body_1
+           }
+        }
+     text {
+        ttf besch_font value 0.2,0
+        rotate <90,0,0>
+        scale 1*(E/9)
+        translate <-E/4,A+0.02,-D/8>
+        texture {
+           col_bright_marking
+           }
+        }
+     #local dX = (E - E1)/2;
+     #local dY = (D - D1)/2;
+     object { GRID(object { IC_SMD_PIN(A1+A2/2,dX,b,c) rotate <0,+90,0> },e,nx,1)translate <0,0,-D1/2> }
+     object { GRID(object { IC_SMD_PIN(A1+A2/2,dX,b,c) rotate <0,-90,0> },e,nx,1)translate <0,0,+D1/2> }
+     object { GRID(object { IC_SMD_PIN(A1+A2/2,dY,b,c) rotate <0,180,0> },e,1,ny)translate <-E1/2,0,0> }
+     object { GRID(object { IC_SMD_PIN(A1+A2/2,dY,b,c) rotate <0,  0,0> },e,1,ny)translate <+E1/2,0,0> }
+     texture {
+        col_silver
+        }
+     }
+#end
