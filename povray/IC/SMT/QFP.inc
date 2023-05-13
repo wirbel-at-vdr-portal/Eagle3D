@@ -5,8 +5,36 @@
  ******************************************************************************/
 
 /*******************************************************************************
+ * Quad Flat Packages (QFP), square and rectangular.
+ * For rectangular packages, check dimensions twice!
+ *
+ * written from scratch, replaces old e3d_qfp.inc
+ * 04/2023-05/2023, wk
+ ******************************************************************************/
+
+
+
+/*******************************************************************************
  * LQFP
  ******************************************************************************/
+#macro IC_SMT_LQFP256_040(value)
+  #local A  =  1.60;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 1.35 +  1.45)/2; // package height
+  #local D  = (29.80 + 30.20)/2; // Y, or, package length w. pins
+  #local D1 = (27.80 + 28.20)/2; // Y, or, package length w/o. pins
+  #local E  = (29.80 + 30.20)/2; // X, or, package width w. pins
+  #local E1 = (27.80 + 28.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.40;              // pitch
+  #local L  = ( 0.45 +  0.75)/2; // len pin on pad
+  #local b  = (0.175 + 0.185)/2; // pin width
+  #local c  = (0.135 + 0.145)/2; // pin height
+  #local nx = 64;                // number of pins in x axis
+  #local ny = 64;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
 #macro IC_SMT_LQFP48_050(value)
   #local A  =  1.60;             // seated height
   #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
@@ -111,6 +139,24 @@
   #local c  = ( 0.09 +  0.16)/2; // pin height
   #local nx = 38;                // number of pins in x axis
   #local ny = 26;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
+#macro IC_SMT_LQFP176_050(value)
+  #local A  =  1.60;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 1.35 +  1.45)/2; // package height
+  #local D  = (25.80 + 26.20)/2; // Y, or, package length w. pins
+  #local D1 = (23.80 + 24.20)/2; // Y, or, package length w/o. pins
+  #local E  = (25.80 + 26.20)/2; // X, or, package width w. pins
+  #local E1 = (23.80 + 24.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.50;              // pitch
+  #local L  = ( 0.45 +  0.75)/2; // len pin on pad
+  #local b  = ( 0.17 +  0.27)/2; // pin width
+  #local c  = ( 0.09 +  0.20)/2; // pin height
+  #local nx = 44;                // number of pins in x axis
+  #local ny = 44;                // number of pins in y axis
 
   QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
 #end
@@ -584,9 +630,11 @@
 /*******************************************************************************
  * versions rotated by +90 deg
  ******************************************************************************/
+#macro IC_SMT_LQFP256_040_R90(value)       IC_SMT_LQFP256_040(value)       rotate <0,90,0> #end
 #macro IC_SMT_LQFP64_050_R90(value)        IC_SMT_LQFP64_050(value)        rotate <0,90,0> #end
 #macro IC_SMT_LQFP80_050_R90(value)        IC_SMT_LQFP80_050(value)        rotate <0,90,0> #end
 #macro IC_SMT_LQFP100_050_R90(value)       IC_SMT_LQFP100_050(value)       rotate <0,90,0> #end
+#macro IC_SMT_LQFP176_050_R90(value)       IC_SMT_LQFP176_050(value)       rotate <0,90,0> #end
 #macro IC_SMT_LQFP208_050_R90(value)       IC_SMT_LQFP208_050(value)       rotate <0,90,0> #end
 #macro IC_SMT_LQFP32_080_R90(value)        IC_SMT_LQFP32_080(value)        rotate <0,90,0> #end
 #macro IC_SMT_PQFP52_065_R90(value)        IC_SMT_PQFP52_065(value)        rotate <0,90,0> #end
