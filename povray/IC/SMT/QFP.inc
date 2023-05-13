@@ -17,6 +17,24 @@
 /*******************************************************************************
  * LQFP
  ******************************************************************************/
+#macro IC_SMT_LQFP100_040(value)
+  #local A  =  1.60;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 1.35 +  1.45)/2; // package height
+  #local D  = (13.80 + 14.20)/2; // Y, or, package length w. pins
+  #local D1 = (11.80 + 12.20)/2; // Y, or, package length w/o. pins
+  #local E  = (13.80 + 14.20)/2; // X, or, package width w. pins
+  #local E1 = (11.80 + 12.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.40;              // pitch
+  #local L  = ( 0.45 +  0.75)/2; // len pin on pad
+  #local b  = (0.157 + 0.167)/2; // pin width
+  #local c  = (0.080 + 0.080)/2; // pin height
+  #local nx = 25;                // number of pins in x axis
+  #local ny = 25;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
 #macro IC_SMT_LQFP256_040(value)
   #local A  =  1.60;             // seated height
   #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
@@ -493,6 +511,24 @@
 /*******************************************************************************
  * TQFP
  ******************************************************************************/
+#macro IC_SMT_TQFP100_040(value)
+  #local A  =  1.20;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 0.95 +  1.05)/2; // package height
+  #local D  = (13.80 + 14.20)/2; // Y, or, package length w. pins
+  #local D1 = (11.80 + 12.20)/2; // Y, or, package length w/o. pins
+  #local E  = (13.80 + 14.20)/2; // X, or, package width w. pins
+  #local E1 = (11.80 + 12.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.40;              // pitch
+  #local L  = ( 0.45 +  0.75)/2; // len pin on pad
+  #local b  = (0.130 + 0.230)/2; // pin width
+  #local c  =  (0.09 + 0.20)/2;  // pin height
+  #local nx = 25;                // number of pins in x axis
+  #local ny = 25;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
 #macro IC_SMT_TQFP48_050(value)
   #local A  =  1.20;             // seated height
   #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
@@ -507,6 +543,42 @@
   #local c  = ( 0.09 +  0.20)/2; // pin height
   #local nx = 12;                // number of pins in x axis
   #local ny = 12;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
+#macro IC_SMT_TQFP64_050(value)
+  #local A  =  1.20;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 0.95 +  1.05)/2; // package height
+  #local D  = (11.80 + 12.20)/2; // Y, or, package length w. pins
+  #local D1 = ( 9.80 + 10.20)/2; // Y, or, package length w/o. pins
+  #local E  = (11.80 + 12.20)/2; // X, or, package width w. pins
+  #local E1 = ( 9.80 + 10.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.50;              // pitch
+  #local L  = ( 0.45 +  0.75)/2; // len pin on pad
+  #local b  = ( 0.17 +  0.27)/2; // pin width
+  #local c  = ( 0.09 +  0.20)/2; // pin height
+  #local nx = 16;                // number of pins in x axis
+  #local ny = 16;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
+#macro IC_SMT_TQFP80_050(value)
+  #local A  =  1.20;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 0.95 +  1.05)/2; // package height
+  #local D  = (13.80 + 14.20)/2; // Y, or, package length w. pins
+  #local D1 = (11.80 + 12.20)/2; // Y, or, package length w/o. pins
+  #local E  = (13.80 + 12.20)/2; // X, or, package width w. pins
+  #local E1 = (11.80 + 10.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.50;              // pitch
+  #local L  = ( 0.45 +  0.75)/2; // len pin on pad
+  #local b  = ( 0.17 +  0.27)/2; // pin width
+  #local c  = ( 0.09 +  0.20)/2; // pin height
+  #local nx = 20;                // number of pins in x axis
+  #local ny = 20;                // number of pins in y axis
 
   QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
 #end
@@ -547,7 +619,7 @@
   QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
 #end
 
-#macro IC_SMT_TQFP128_050_30x20(value)
+#macro IC_SMT_TQFP128_050_38x26(value)
   #local A  =  1.40;             // seated height
   #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
   #local A2 = ( 1.25 +  1.35)/2; // package height
@@ -756,7 +828,10 @@
 #macro IC_SMT_RQFP304_050_R90(value)       IC_SMT_RQFP304_050(value)       rotate <0,90,0> #end
 #macro IC_SMT_MQFP52_065_R90(value)        IC_SMT_MQFP52_065(value)        rotate <0,90,0> #end
 #macro IC_SMT_MQFP44_080_R90(value)        IC_SMT_MQFP44_080(value)        rotate <0,90,0> #end
+#macro IC_SMT_TQFP100_040_R90(value)       IC_SMT_TQFP100_040(value)       rotate <0,90,0> #end
 #macro IC_SMT_TQFP48_050_R90(value)        IC_SMT_TQFP48_050(value)        rotate <0,90,0> #end
+#macro IC_SMT_TQFP64_050_R90(value)        IC_SMT_TQFP64_050(value)        rotate <0,90,0> #end
+#macro IC_SMT_TQFP80_050_R90(value)        IC_SMT_TQFP80_050(value)        rotate <0,90,0> #end
 #macro IC_SMT_TQFP100_050_R90(value)       IC_SMT_TQFP100_050(value)       rotate <0,90,0> #end
 #macro IC_SMT_TQFP144_050_R90(value)       IC_SMT_TQFP144_050(value)       rotate <0,90,0> #end
 #macro IC_SMT_TQFP160_050_R90(value)       IC_SMT_TQFP160_050(value)       rotate <0,90,0> #end
