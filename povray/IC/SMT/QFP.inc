@@ -435,6 +435,24 @@
   QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
 #end
 
+#macro IC_SMT_PQFP80_080_24x16(value)
+  #local A  =  3.30;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 2.57 +  2.87)/2; // package height
+  #local D  = (17.60 + 18.20)/2; // Y, or, package length w. pins
+  #local D1 = (13.90 + 14.10)/2; // Y, or, package length w/o. pins
+  #local E  = (23.60 + 24.20)/2; // X, or, package width w. pins
+  #local E1 = (19.90 + 20.10)/2; // X, or, package width w/o. pins
+  #local e  = 0.80;              // pitch
+  #local L  = ( 0.60 +  1.00)/2; // len pin on pad
+  #local b  = ( 0.30 +  0.45)/2; // pin width
+  #local c  = ( 0.13 +  0.25)/2; // pin height
+  #local nx = 24;                // number of pins in x axis
+  #local ny = 16;                // number of pins in y axis
+
+  QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+#end
+
 #macro IC_SMT_PQFP64_100(value)
   #local A  =  3.35;             // seated height
   #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
@@ -667,6 +685,7 @@
  * versions rotated by +90 deg
  ******************************************************************************/
 #macro IC_SMT_LQFP256_040_R90(value)       IC_SMT_LQFP256_040(value)       rotate <0,90,0> #end
+#macro IC_SMT_LQFP48_050_R90(value)        IC_SMT_LQFP48_050(value)        rotate <0,90,0> #end
 #macro IC_SMT_LQFP64_050_R90(value)        IC_SMT_LQFP64_050(value)        rotate <0,90,0> #end
 #macro IC_SMT_LQFP80_050_R90(value)        IC_SMT_LQFP80_050(value)        rotate <0,90,0> #end
 #macro IC_SMT_LQFP100_050_R90(value)       IC_SMT_LQFP100_050(value)       rotate <0,90,0> #end
@@ -697,4 +716,5 @@
 /*******************************************************************************
  * versions translated by dX,dY
  ******************************************************************************/
-#macro IC_SMT_MQFP52_065_T035(value)   IC_SMT_MQFP52_065(value)   translate <0.35,0,-0.35> #end
+#macro IC_SMT_MQFP52_065_T035(value)       IC_SMT_MQFP52_065(value)       translate < 0.35,0,-0.35> #end
+#macro IC_SMT_PQFP80_080_24x16_T040(value) IC_SMT_PQFP80_080_24x16(value) translate < 0.40,0, 0.47> #end
