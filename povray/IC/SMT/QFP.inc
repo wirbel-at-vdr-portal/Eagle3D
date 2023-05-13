@@ -453,7 +453,7 @@
   QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
 #end
 
-#macro IC_SMT_PQFP64_100(value)
+#macro IC_SMT_PQFP64_100_14x20(value)
   #local A  =  3.35;             // seated height
   #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
   #local A2 = ( 3.15 +  3.25)/2; // package height
