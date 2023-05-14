@@ -1,0 +1,25 @@
+maxim                            TQFP100 ist R0, aber gleicher name 'TQFP100' existiert schon als R90.
+
+micro-cyrod                      SQFP-S-10X10-44 ist R0, aber gleicher name 'SQFP-S-10X10-44' existiert schon als R90.
+
+micro-intel                      QFP44 hat ist R90, aber gleicher name 'QFP44' existiert schon als R0.
+
+micro-mc68000                    MQFP132 vom MC68020FE ist non-standard. Entfällt.
+
+micro-motorola                   SQFP-S-10X10-44 ist R0, aber gleicher name 'SQFP-S-10X10-44' existiert schon als R90.
+
+micro-philips                    QFP80 hat duplicate Name 'QFP80', aber meint nicht IC_SMT_TQFP80_065_R90 sondern IC_SMT_PQFP80_080_24x16_T040
+
+micro-siemens                    TQFP100 ist R0, aber gleicher name 'TQFP100' existiert schon als R90.
+
+microchip                        TQFP100-14X14 ist R0, aber gleicher name 'TQFP100-14X14' existiert schon als R90.
+
+national-semiconductor           LQFP48 ist R90, aber gleicher name 'LQFP48' existiert schon als R0.
+
+plxtech                          TQFP64 ist R0, aber gleicher name 'TQFP64' existiert schon als R90. 
+
+texas                            PQFP meint hier nicht 'IC_SMT_PQFP144_065_R90', sondern 'IC_SMT_PQFP144_050_R90'
+
+xilinx-xc18v                     SQFP-S-10X10-44 ist R0, aber gleicher name 'SQFP-S-10X10-44' existiert schon als R90.
+
+xilinx-xc9                       SQFP-S-10X10-44 ist R0, aber gleicher name 'SQFP-S-10X10-44' existiert schon als R90.
