@@ -14,7 +14,8 @@
  *              CON_TERMINALBLOCK_3_5mm, converted to GRID()
  *              fix number label
  *
- * NOTE: available from multiple suppliers, ie. RIA AKL 059-xx
+ * NOTE: available from multiple suppliers,
+ * ie. RIA AKL 059-xx (Reichelt AKL 059-02)
  ******************************************************************************/
 
 
@@ -98,46 +99,31 @@
      }
 #end
 
-#macro CON_TERMINALBLOCK_3_5mm_2()
-  CON_TERMINALBLOCK_3_5mm_base(2)
-#end
+#macro CON_TERMINALBLOCK_3_5mm_2()  CON_TERMINALBLOCK_3_5mm_base(2)  #end
+#macro CON_TERMINALBLOCK_3_5mm_3()  CON_TERMINALBLOCK_3_5mm_base(3)  #end
+#macro CON_TERMINALBLOCK_3_5mm_4()  CON_TERMINALBLOCK_3_5mm_base(4)  #end
+#macro CON_TERMINALBLOCK_3_5mm_5()  CON_TERMINALBLOCK_3_5mm_base(5)  #end
+#macro CON_TERMINALBLOCK_3_5mm_6()  CON_TERMINALBLOCK_3_5mm_base(6)  #end
+#macro CON_TERMINALBLOCK_3_5mm_7()  CON_TERMINALBLOCK_3_5mm_base(7)  #end
+#macro CON_TERMINALBLOCK_3_5mm_8()  CON_TERMINALBLOCK_3_5mm_base(8)  #end
+#macro CON_TERMINALBLOCK_3_5mm_9()  CON_TERMINALBLOCK_3_5mm_base(9)  #end
+#macro CON_TERMINALBLOCK_3_5mm_10() CON_TERMINALBLOCK_3_5mm_base(10) #end
+#macro CON_TERMINALBLOCK_3_5mm_11() CON_TERMINALBLOCK_3_5mm_base(11) #end
+#macro CON_TERMINALBLOCK_3_5mm_12() CON_TERMINALBLOCK_3_5mm_base(12) #end
 
-#macro CON_TERMINALBLOCK_3_5mm_3()
-  CON_TERMINALBLOCK_3_5mm_base(3)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_4()
-  CON_TERMINALBLOCK_3_5mm_base(4)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_5()
-  CON_TERMINALBLOCK_3_5mm_base(5)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_6()
-  CON_TERMINALBLOCK_3_5mm_base(6)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_7()
-  CON_TERMINALBLOCK_3_5mm_base(7)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_8()
-  CON_TERMINALBLOCK_3_5mm_base(8)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_9()
-  CON_TERMINALBLOCK_3_5mm_base(9)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_10()
-  CON_TERMINALBLOCK_3_5mm_base(10)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_11()
-  CON_TERMINALBLOCK_3_5mm_base(11)
-#end
-
-#macro CON_TERMINALBLOCK_3_5mm_12()
-  CON_TERMINALBLOCK_3_5mm_base(12)
-#end
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+// begin assignment
+//=CON_TERMINALBLOCK_3_5mm_2(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_3(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_4(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_5(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_6(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_7(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_8(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_9(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_10(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_11(:terminal block 3.5mm
+//=CON_TERMINALBLOCK_3_5mm_12(:terminal block 3.5mm
+// end assignment
