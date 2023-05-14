@@ -979,7 +979,34 @@
   QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
 #end
 
-
+/*******************************************************************************
+ * unusual QFPs
+ ******************************************************************************/
+#macro IC_SMT_PQFP67_080(value)
+  #local A  =  2.30;             // seated height
+  #local A1 = ( 0.05 +  0.15)/2; // distance pcb to case
+  #local A2 = ( 1.95 +  2.10)/2; // package height
+  #local D  = (17.70 + 20.50)/2; // Y, or, package length w. pins
+  #local D1 = (13.80 + 14.20)/2; // Y, or, package length w/o. pins
+  #local E  = (23.70 + 24.50)/2; // X, or, package width w. pins
+  #local E1 = (19.80 + 20.20)/2; // X, or, package width w/o. pins
+  #local e  = 0.80;              // pitch
+  #local L  = ( 0.15 +  1.55)/2; // len pin on pad
+  #local b  = ( 0.20 +  0.40)/2; // pin width
+  #local c  = ( 0.15 +  0.30)/2; // pin height
+  #local nx = 23;                // number of pins in x axis
+  #local ny = 13;                // number of pins in y axis
+  difference {
+     QFP_BASE(A,A1,A2,D,D1,E,E1,e,L,b,c,nx,ny,value)
+     union {
+        box { <+E1/2 ,-1,4.5*e> <+E/2+2 , A,+6.5*e> }
+        box { <-E/2  ,-1,+D1/2> <-10.5*e, A,+D/2+1> }
+        box { <-E/2  ,-1,-D1/2> <-10.5*e, A,-D/2-1> }
+        box { <+E/2  ,-1,-D1/2> <+10.5*e, A,-D/2-1> }
+        texture { col_ic_body_1 }
+        }
+     }
+#end
 
 
 
