@@ -6363,42 +6363,4 @@ CON_WS_XX_G_BASE(64)
 #end
 
 
-/********************************************************************************************************************************************
-// Tilmann Reh <tilmann.reh@autometer.de>
-// abgewinkelte Pfostenwannen 2.54mm, ie. Reichelt "WSL 16W"
-// Bezugspunkt: mittig, 5.08mm vor der unteren/inneren Pinreihe.
-********************************************************************************************************************************************/
-#macro CON_WS_XX_W_BASE(Pins)
-union {
-object{PFOSTENWANNE(7.62+Pins*1.27) rotate<-90,0,0> translate<0,4.5,3.3>}
-object{PIN_BENDED_ROW (Pins/2,2.54,0.635,0.8,4.5-1.27,3,10.5,col_gold) translate<0,0,5.08>}
-object{PIN_BENDED_ROW (Pins/2,2.54,0.635,0.8,4.5+1.27,3,13.04,col_gold) translate<0,0,7.62>}}
-#end
-#macro CON_DIS_WS10W()
-CON_WS_XX_W_BASE(10)
-#end
-#macro CON_DIS_WS14W()
-CON_WS_XX_W_BASE(14)
-#end
-#macro CON_DIS_WS16W()
-CON_WS_XX_W_BASE(16)
-#end
-#macro CON_DIS_WS20W()
-CON_WS_XX_W_BASE(20)
-#end
-#macro CON_DIS_WS26W()
-CON_WS_XX_W_BASE(26)
-#end
-#macro CON_DIS_WS34W()
-CON_WS_XX_W_BASE(34)
-#end
-#macro CON_DIS_WS40W()
-CON_WS_XX_W_BASE(40)
-#end
-#macro CON_DIS_WS50W()
-CON_WS_XX_W_BASE(50)
-#end
-#macro CON_DIS_WS64W()
-CON_WS_XX_W_BASE(64)
-#end
 

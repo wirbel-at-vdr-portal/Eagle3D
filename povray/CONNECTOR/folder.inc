@@ -16,3 +16,4 @@
 #include "CONNECTOR/TERMINALBLOCK_3.5mm.inc"
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
 #include "CONNECTOR/wirejumper.inc"
+#include "CONNECTOR/THT/WSLxxW.inc"
