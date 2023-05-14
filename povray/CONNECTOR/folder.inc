@@ -4,9 +4,7 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-#include "CONNECTOR/AMP_227161.inc"
 #include "CONNECTOR/AMP_HE14.inc"
-#include "CONNECTOR/CENTRONICS.inc"
 #include "CONNECTOR/LEMO.inc"
 #include "CONNECTOR/MOLEX_87832_series.inc"
 #include "CONNECTOR/MOLEX_PSL_series.inc"
@@ -17,4 +15,5 @@
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
 #include "CONNECTOR/wirejumper.inc"
 #include "CONNECTOR/THT/BNC_AMP_227161.inc"
+#include "CONNECTOR/THT/CENTRONICS.inc"
 #include "CONNECTOR/THT/WSLxxW.inc"
