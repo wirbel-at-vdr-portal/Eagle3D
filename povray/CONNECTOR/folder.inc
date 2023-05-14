@@ -5,7 +5,6 @@
  ******************************************************************************/
 
 #include "CONNECTOR/AMP_HE14.inc"
-#include "CONNECTOR/LEMO.inc"
 #include "CONNECTOR/MOLEX_87832_series.inc"
 #include "CONNECTOR/MOLEX_PSL_series.inc"
 #include "CONNECTOR/PHOENIX_MINI_COMBICON_3.81mm.inc"
@@ -13,7 +12,8 @@
 #include "CONNECTOR/TERMINALBLOCK_3.5mm.inc"
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
 #include "CONNECTOR/wirejumper.inc"
+#include "CONNECTOR/THT/coax-subd.inc"
+#include "CONNECTOR/THT/coax_LEMO.inc"
 #include "CONNECTOR/THT/BNC_AMP_227161.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
-#include "CONNECTOR/THT/coax-subd.inc"
 #include "CONNECTOR/THT/WSLxxW.inc"
