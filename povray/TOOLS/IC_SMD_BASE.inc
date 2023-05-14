@@ -291,13 +291,19 @@ union{
            col_ic_body_1
            }
         }
-     text {
-        ttf besch_font value 0.2,0
-        rotate <90,0,0>
-        scale 1*(E/9)
-        translate <-E/4,A+0.02,-D/8>
-        texture {
-           col_bright_marking
+     intersection {
+        text {
+           ttf besch_font value 0.2,0
+           rotate <90,0,0>
+           scale 1*(E/9)
+           translate <-E/4,A+0.02,-D/8>
+           texture {
+              col_bright_marking
+              }
+           }
+        box {
+           <-E1/2,    0,-D1/2>
+           <+E1/2,A+0.5,+D1/2>
            }
         }
      #local dX = (E - E1)/2;
