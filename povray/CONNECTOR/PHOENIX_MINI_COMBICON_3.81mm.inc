@@ -282,303 +282,83 @@
 
 
 
-/******************************************************************************
+/*******************************************************************************
  * produced parts here:
  ******************************************************************************/
-#macro CON_PHOENIX_381_MC_2G()
-  CON_PHOENIX_381_PHGGHWS_base(2)
-#end
-
-#macro CON_PHOENIX_381_MC_3G()
-  CON_PHOENIX_381_PHGGHWS_base(3)
-#end
-
-#macro CON_PHOENIX_381_MC_4G()
-  CON_PHOENIX_381_PHGGHWS_base(4)
-#end
-
-#macro CON_PHOENIX_381_MC_5G()
-  CON_PHOENIX_381_PHGGHWS_base(5)
-#end
-
-#macro CON_PHOENIX_381_MC_6G()
-  CON_PHOENIX_381_PHGGHWS_base(6)
-#end
-
-#macro CON_PHOENIX_381_MC_7G()
-  CON_PHOENIX_381_PHGGHWS_base(7)
-#end
-
-#macro CON_PHOENIX_381_MC_8G()
-  CON_PHOENIX_381_PHGGHWS_base(8)
-#end
-
-#macro CON_PHOENIX_381_MC_9G()
-  CON_PHOENIX_381_PHGGHWS_base(9)
-#end
-
-#macro CON_PHOENIX_381_MC_10G()
-  CON_PHOENIX_381_PHGGHWS_base(10)
-#end
-
-#macro CON_PHOENIX_381_MC_11G()
-  CON_PHOENIX_381_PHGGHWS_base(11)
-#end
-
-#macro CON_PHOENIX_381_MC_12G()
-  CON_PHOENIX_381_PHGGHWS_base(12)
-#end
-
-#macro CON_PHOENIX_381_MC_13G()
-  CON_PHOENIX_381_PHGGHWS_base(13)
-#end
-
+#macro CON_PHOENIX_381_MC_2G()   CON_PHOENIX_381_PHGGHWS_base(2)    #end
+#macro CON_PHOENIX_381_MC_3G()   CON_PHOENIX_381_PHGGHWS_base(3)    #end
+#macro CON_PHOENIX_381_MC_4G()   CON_PHOENIX_381_PHGGHWS_base(4)    #end
+#macro CON_PHOENIX_381_MC_5G()   CON_PHOENIX_381_PHGGHWS_base(5)    #end
+#macro CON_PHOENIX_381_MC_6G()   CON_PHOENIX_381_PHGGHWS_base(6)    #end
+#macro CON_PHOENIX_381_MC_7G()   CON_PHOENIX_381_PHGGHWS_base(7)    #end
+#macro CON_PHOENIX_381_MC_8G()   CON_PHOENIX_381_PHGGHWS_base(8)    #end
+#macro CON_PHOENIX_381_MC_9G()   CON_PHOENIX_381_PHGGHWS_base(9)    #end
+#macro CON_PHOENIX_381_MC_10G()  CON_PHOENIX_381_PHGGHWS_base(10)   #end
+#macro CON_PHOENIX_381_MC_11G()  CON_PHOENIX_381_PHGGHWS_base(11)   #end
+#macro CON_PHOENIX_381_MC_12G()  CON_PHOENIX_381_PHGGHWS_base(12)   #end
+#macro CON_PHOENIX_381_MC_13G()  CON_PHOENIX_381_PHGGHWS_base(13)   #end
 //---
-
-#macro CON_PHOENIX_381_MC_2()
-  CON_PHOENIX_381_PHGGHW_base(2)
-#end
-
-#macro CON_PHOENIX_381_MC_3()
-  CON_PHOENIX_381_PHGGHW_base(3)
-#end
-
-#macro CON_PHOENIX_381_MC_4()
-  CON_PHOENIX_381_PHGGHW_base(4)
-#end
-
-#macro CON_PHOENIX_381_MC_5()
-  CON_PHOENIX_381_PHGGHW_base(5)
-#end
-
-#macro CON_PHOENIX_381_MC_6()
-  CON_PHOENIX_381_PHGGHW_base(6)
-#end
-
-#macro CON_PHOENIX_381_MC_7()
-  CON_PHOENIX_381_PHGGHW_base(7)
-#end
-
-#macro CON_PHOENIX_381_MC_8()
-  CON_PHOENIX_381_PHGGHW_base(8)
-#end
-
-#macro CON_PHOENIX_381_MC_9()
-  CON_PHOENIX_381_PHGGHW_base(9)
-#end
-
-#macro CON_PHOENIX_381_MC_10()
-  CON_PHOENIX_381_PHGGHW_base(10)
-#end
-
-#macro CON_PHOENIX_381_MC_11()
-  CON_PHOENIX_381_PHGGHW_base(11)
-#end
-
-#macro CON_PHOENIX_381_MC_12()
-  CON_PHOENIX_381_PHGGHW_base(12)
-#end
-
-#macro CON_PHOENIX_381_MC_13()
-  CON_PHOENIX_381_PHGGHW_base(13)
-#end
-
+#macro CON_PHOENIX_381_MC_2()    CON_PHOENIX_381_PHGGHW_base(2)     #end
+#macro CON_PHOENIX_381_MC_3()    CON_PHOENIX_381_PHGGHW_base(3)     #end
+#macro CON_PHOENIX_381_MC_4()    CON_PHOENIX_381_PHGGHW_base(4)     #end
+#macro CON_PHOENIX_381_MC_5()    CON_PHOENIX_381_PHGGHW_base(5)     #end
+#macro CON_PHOENIX_381_MC_6()    CON_PHOENIX_381_PHGGHW_base(6)     #end
+#macro CON_PHOENIX_381_MC_7()    CON_PHOENIX_381_PHGGHW_base(7)     #end
+#macro CON_PHOENIX_381_MC_8()    CON_PHOENIX_381_PHGGHW_base(8)     #end
+#macro CON_PHOENIX_381_MC_9()    CON_PHOENIX_381_PHGGHW_base(9)     #end
+#macro CON_PHOENIX_381_MC_10()   CON_PHOENIX_381_PHGGHW_base(10)    #end
+#macro CON_PHOENIX_381_MC_11()   CON_PHOENIX_381_PHGGHW_base(11)    #end
+#macro CON_PHOENIX_381_MC_12()   CON_PHOENIX_381_PHGGHW_base(12)    #end
+#macro CON_PHOENIX_381_MC_13()   CON_PHOENIX_381_PHGGHW_base(13)    #end
 //---
-
-#macro CON_PHOENIX_381_MCV_2()
-  CON_PHOENIX_381_PHGGH_base(2)
-#end
-
-#macro CON_PHOENIX_381_MCV_3()
-  CON_PHOENIX_381_PHGGH_base(3)
-#end
-
-#macro CON_PHOENIX_381_MCV_4()
-  CON_PHOENIX_381_PHGGH_base(4)
-#end
-
-#macro CON_PHOENIX_381_MCV_5()
-  CON_PHOENIX_381_PHGGH_base(5)
-#end
-
-#macro CON_PHOENIX_381_MCV_6()
-  CON_PHOENIX_381_PHGGH_base(6)
-#end
-
-#macro CON_PHOENIX_381_MCV_7()
-  CON_PHOENIX_381_PHGGH_base(7)
-#end
-
-#macro CON_PHOENIX_381_MCV_8()
-  CON_PHOENIX_381_PHGGH_base(8)
-#end
-
-#macro CON_PHOENIX_381_MCV_9()
-  CON_PHOENIX_381_PHGGH_base(9)
-#end
-
-#macro CON_PHOENIX_381_MCV_10()
-  CON_PHOENIX_381_PHGGH_base(10)
-#end
-
-#macro CON_PHOENIX_381_MCV_11()
-  CON_PHOENIX_381_PHGGH_base(11)
-#end
-
-#macro CON_PHOENIX_381_MCV_12()
-  CON_PHOENIX_381_PHGGH_base(12)
-#end
-
-#macro CON_PHOENIX_381_MCV_13()
-  CON_PHOENIX_381_PHGGH_base(13)
-#end
-
-//---
-
+#macro CON_PHOENIX_381_MCV_2()   CON_PHOENIX_381_PHGGH_base(2)      #end
+#macro CON_PHOENIX_381_MCV_3()   CON_PHOENIX_381_PHGGH_base(3)      #end
+#macro CON_PHOENIX_381_MCV_4()   CON_PHOENIX_381_PHGGH_base(4)      #end
+#macro CON_PHOENIX_381_MCV_5()   CON_PHOENIX_381_PHGGH_base(5)      #end
+#macro CON_PHOENIX_381_MCV_6()   CON_PHOENIX_381_PHGGH_base(6)      #end
+#macro CON_PHOENIX_381_MCV_7()   CON_PHOENIX_381_PHGGH_base(7)      #end
+#macro CON_PHOENIX_381_MCV_8()   CON_PHOENIX_381_PHGGH_base(8)      #end
+#macro CON_PHOENIX_381_MCV_9()   CON_PHOENIX_381_PHGGH_base(9)      #end
+#macro CON_PHOENIX_381_MCV_10()  CON_PHOENIX_381_PHGGH_base(10)     #end
+#macro CON_PHOENIX_381_MCV_11()  CON_PHOENIX_381_PHGGH_base(11)     #end
+#macro CON_PHOENIX_381_MCV_12()  CON_PHOENIX_381_PHGGH_base(12)     #end
+#macro CON_PHOENIX_381_MCV_13()  CON_PHOENIX_381_PHGGH_base(13)     #end
 //Phoenix Mini-Combicon 3.81mm Gegenstecker MCVW 1,5/xx-ST-381
-#macro CON_PHOENIX_381_MCVW_2()
-  CON_PHOENIX_381_PHMCVRW_base(2,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_3()
-  CON_PHOENIX_381_PHMCVRW_base(3,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_4()
-  CON_PHOENIX_381_PHMCVRW_base(4,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_5()
-  CON_PHOENIX_381_PHMCVRW_base(5,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_6()
-  CON_PHOENIX_381_PHMCVRW_base(6,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_7()
-  CON_PHOENIX_381_PHMCVRW_base(7,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_8()
-  CON_PHOENIX_381_PHMCVRW_base(8,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_9()
-  CON_PHOENIX_381_PHMCVRW_base(9,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_10()
-  CON_PHOENIX_381_PHMCVRW_base(10,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_11()
-  CON_PHOENIX_381_PHMCVRW_base(11,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_12()
-  CON_PHOENIX_381_PHMCVRW_base(12,0)
-#end
-
-#macro CON_PHOENIX_381_MCVW_13()
-  CON_PHOENIX_381_PHMCVRW_base(13,0)
-#end
-
+#macro CON_PHOENIX_381_MCVW_2()  CON_PHOENIX_381_PHMCVRW_base(2,0)  #end
+#macro CON_PHOENIX_381_MCVW_3()  CON_PHOENIX_381_PHMCVRW_base(3,0)  #end
+#macro CON_PHOENIX_381_MCVW_4()  CON_PHOENIX_381_PHMCVRW_base(4,0)  #end
+#macro CON_PHOENIX_381_MCVW_5()  CON_PHOENIX_381_PHMCVRW_base(5,0)  #end
+#macro CON_PHOENIX_381_MCVW_6()  CON_PHOENIX_381_PHMCVRW_base(6,0)  #end
+#macro CON_PHOENIX_381_MCVW_7()  CON_PHOENIX_381_PHMCVRW_base(7,0)  #end
+#macro CON_PHOENIX_381_MCVW_8()  CON_PHOENIX_381_PHMCVRW_base(8,0)  #end
+#macro CON_PHOENIX_381_MCVW_9()  CON_PHOENIX_381_PHMCVRW_base(9,0)  #end
+#macro CON_PHOENIX_381_MCVW_10() CON_PHOENIX_381_PHMCVRW_base(10,0) #end
+#macro CON_PHOENIX_381_MCVW_11() CON_PHOENIX_381_PHMCVRW_base(11,0) #end
+#macro CON_PHOENIX_381_MCVW_12() CON_PHOENIX_381_PHMCVRW_base(12,0) #end
+#macro CON_PHOENIX_381_MCVW_13() CON_PHOENIX_381_PHMCVRW_base(13,0) #end
 //Phoenix Mini-Combicon 3.81mm Gegenstecker MCVR 1,5/xx-ST-381
-#macro CON_PHOENIX_381_MCVR_2()
-  CON_PHOENIX_381_PHMCVRW_base(2,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_3()
-  CON_PHOENIX_381_PHMCVRW_base(3,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_4()
-  CON_PHOENIX_381_PHMCVRW_base(4,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_5()
-  CON_PHOENIX_381_PHMCVRW_base(5,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_6()
-  CON_PHOENIX_381_PHMCVRW_base(6,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_7()
-  CON_PHOENIX_381_PHMCVRW_base(7,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_8()
-  CON_PHOENIX_381_PHMCVRW_base(8,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_9()
-  CON_PHOENIX_381_PHMCVRW_base(9,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_10()
-  CON_PHOENIX_381_PHMCVRW_base(10,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_11()
-  CON_PHOENIX_381_PHMCVRW_base(11,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_12()
-  CON_PHOENIX_381_PHMCVRW_base(12,1)
-#end
-
-#macro CON_PHOENIX_381_MCVR_13()
-  CON_PHOENIX_381_PHMCVRW_base(13,1)
-#end
-
+#macro CON_PHOENIX_381_MCVR_2()  CON_PHOENIX_381_PHMCVRW_base(2,1)  #end
+#macro CON_PHOENIX_381_MCVR_3()  CON_PHOENIX_381_PHMCVRW_base(3,1)  #end
+#macro CON_PHOENIX_381_MCVR_4()  CON_PHOENIX_381_PHMCVRW_base(4,1)  #end
+#macro CON_PHOENIX_381_MCVR_5()  CON_PHOENIX_381_PHMCVRW_base(5,1)  #end
+#macro CON_PHOENIX_381_MCVR_6()  CON_PHOENIX_381_PHMCVRW_base(6,1)  #end
+#macro CON_PHOENIX_381_MCVR_7()  CON_PHOENIX_381_PHMCVRW_base(7,1)  #end
+#macro CON_PHOENIX_381_MCVR_8()  CON_PHOENIX_381_PHMCVRW_base(8,1)  #end
+#macro CON_PHOENIX_381_MCVR_9()  CON_PHOENIX_381_PHMCVRW_base(9,1)  #end
+#macro CON_PHOENIX_381_MCVR_10() CON_PHOENIX_381_PHMCVRW_base(10,1) #end
+#macro CON_PHOENIX_381_MCVR_11() CON_PHOENIX_381_PHMCVRW_base(11,1) #end
+#macro CON_PHOENIX_381_MCVR_12() CON_PHOENIX_381_PHMCVRW_base(12,1) #end
+#macro CON_PHOENIX_381_MCVR_13() CON_PHOENIX_381_PHMCVRW_base(13,1) #end
 //---
-
-#macro CON_PHOENIX_381_MC_2ST()
-  CON_PHOENIX_381_PHWS_base(2)
-#end
-
-#macro CON_PHOENIX_381_MC_3ST()
-  CON_PHOENIX_381_PHWS_base(3)
-#end
-
-#macro CON_PHOENIX_381_MC_4ST()
-  CON_PHOENIX_381_PHWS_base(4)
-#end
-
-#macro CON_PHOENIX_381_MC_5ST()
-  CON_PHOENIX_381_PHWS_base(5)
-#end
-
-#macro CON_PHOENIX_381_MC_6ST()
-  CON_PHOENIX_381_PHWS_base(6)
-#end
-
-#macro CON_PHOENIX_381_MC_7ST()
-  CON_PHOENIX_381_PHWS_base(7)
-#end
-
-#macro CON_PHOENIX_381_MC_8ST()
-  CON_PHOENIX_381_PHWS_base(8)
-#end
-
-#macro CON_PHOENIX_381_MC_9ST()
-  CON_PHOENIX_381_PHWS_base(9)
-#end
-
-#macro CON_PHOENIX_381_MC_10ST()
-  CON_PHOENIX_381_PHWS_base(10)
-#end
-
-#macro CON_PHOENIX_381_MC_11ST()
-  CON_PHOENIX_381_PHWS_base(11)
-#end
-
-#macro CON_PHOENIX_381_MC_12ST()
-  CON_PHOENIX_381_PHWS_base(12)
-#end
-
-#macro CON_PHOENIX_381_MC_13ST()
-  CON_PHOENIX_381_PHWS_base(13)
-#end
+#macro CON_PHOENIX_381_MC_2ST()  CON_PHOENIX_381_PHWS_base(2)       #end
+#macro CON_PHOENIX_381_MC_3ST()  CON_PHOENIX_381_PHWS_base(3)       #end
+#macro CON_PHOENIX_381_MC_4ST()  CON_PHOENIX_381_PHWS_base(4)       #end
+#macro CON_PHOENIX_381_MC_5ST()  CON_PHOENIX_381_PHWS_base(5)       #end
+#macro CON_PHOENIX_381_MC_6ST()  CON_PHOENIX_381_PHWS_base(6)       #end
+#macro CON_PHOENIX_381_MC_7ST()  CON_PHOENIX_381_PHWS_base(7)       #end
+#macro CON_PHOENIX_381_MC_8ST()  CON_PHOENIX_381_PHWS_base(8)       #end
+#macro CON_PHOENIX_381_MC_9ST()  CON_PHOENIX_381_PHWS_base(9)       #end
+#macro CON_PHOENIX_381_MC_10ST() CON_PHOENIX_381_PHWS_base(10)      #end
+#macro CON_PHOENIX_381_MC_11ST() CON_PHOENIX_381_PHWS_base(11)      #end
+#macro CON_PHOENIX_381_MC_12ST() CON_PHOENIX_381_PHWS_base(12)      #end
+#macro CON_PHOENIX_381_MC_13ST() CON_PHOENIX_381_PHWS_base(13)      #end
