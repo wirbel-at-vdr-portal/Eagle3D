@@ -16,4 +16,5 @@
 #include "CONNECTOR/THT/coax_LEMO.inc"
 #include "CONNECTOR/THT/BNC_AMP_227161.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
+#include "CONNECTOR/THT/PHOENIX_MKDS1.inc"
 #include "CONNECTOR/THT/WSLxxW.inc"
