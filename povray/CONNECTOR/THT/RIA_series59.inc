@@ -15,7 +15,7 @@
  *              fix number label
  *
  * NOTE: available from multiple suppliers,
- *       ie. RIA AKL 059-xx (Reichelt AKL 059-02)
+ *       ie. RIA AKL 059-xx (Reichelt AKL 059-02, AKL059#RIA.pdf)
  *
  * NOTE: not assigned to any eagle .lbr, but nicely done,
  *       so may be create some library later for it.
