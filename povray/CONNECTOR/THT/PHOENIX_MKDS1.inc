@@ -6,19 +6,23 @@
 
 /*******************************************************************************
  * PCB terminal block 3.5mm pitch
- * Phoenix Contact MKDS 1/<num>-3,5
+ * Phoenix Contact MKDS 1/<num>-<pitch>
  * with num = (2..16)
- *   part numbers: 1751248, 1751251, 1751264, 1751277, 1751280
- *                 1751293, 1751303, 1751316, 1751329, 1751332
- *                 1751345, 1751358, 1751361, 1751374, 1751387
+ * with pitch = (3,5 ; 3,81)
+ *   part numbers: 1751248, 1751251, 1751264, 1751277, 1751280,
+ *                 1751293, 1751303, 1751316, 1751329, 1751332,
+ *                 1751345, 1751358, 1751361, 1751374, 1751387,
+ *                 1727010, 1727023, 1727036, 1727049, 1727052,
+ *                 1727065, 1727078, 1727081, 1727094, 1727104,
+ *                 1727117, 1931754
  * con-phoenix-350.lbr
+ * con-phoenix-3.81.lbr
  * 15.05.2023, wk
  ******************************************************************************/
 
-#macro MKDS1_35(pins)
+#macro MKDS1(pitch,pins)
   union {
      #local LightGreen = rgb <0.427,0.643,0.419>;
-     #local pitch = 3.50;
      #local a = (pins - 1) * pitch;
      difference {
         #local W = a + 3.80;
@@ -119,23 +123,42 @@
            }
         #local number = number + 1;
      #end
-     #switch(pins)
-        #case (2)  #local partNo = "1751248"; #break
-        #case (3)  #local partNo = "1751251"; #break
-        #case (4)  #local partNo = "1751264"; #break
-        #case (5)  #local partNo = "1751277"; #break
-        #case (6)  #local partNo = "1751280"; #break
-        #case (7)  #local partNo = "1751293"; #break
-        #case (8)  #local partNo = "1751303"; #break
-        #case (9)  #local partNo = "1751316"; #break
-        #case (10) #local partNo = "1751329"; #break
-        #case (11) #local partNo = "1751332"; #break
-        #case (12) #local partNo = "1751345"; #break
-        #case (13) #local partNo = "1751358"; #break
-        #case (14) #local partNo = "1751361"; #break
-        #case (15) #local partNo = "1751374"; #break
-        #case (16) #local partNo = "1751387"; #break
-        #else #local partNo = "part no?";
+     #if (pitch = 3.50)
+         #switch(pins)
+            #case (2)  #local partNo = "1751248"; #break
+            #case (3)  #local partNo = "1751251"; #break
+            #case (4)  #local partNo = "1751264"; #break
+            #case (5)  #local partNo = "1751277"; #break
+            #case (6)  #local partNo = "1751280"; #break
+            #case (7)  #local partNo = "1751293"; #break
+            #case (8)  #local partNo = "1751303"; #break
+            #case (9)  #local partNo = "1751316"; #break
+            #case (10) #local partNo = "1751329"; #break
+            #case (11) #local partNo = "1751332"; #break
+            #case (12) #local partNo = "1751345"; #break
+            #case (13) #local partNo = "1751358"; #break
+            #case (14) #local partNo = "1751361"; #break
+            #case (15) #local partNo = "1751374"; #break
+            #case (16) #local partNo = "1751387"; #break
+            #else #local partNo = "part no?";     #break
+         #end
+     #end
+     #if (pitch = 3.81)
+         #switch(pins)
+            #case (2)  #local partNo = "1727010"; #break
+            #case (3)  #local partNo = "1727023"; #break
+            #case (4)  #local partNo = "1727036"; #break
+            #case (5)  #local partNo = "1727049"; #break
+            #case (6)  #local partNo = "1727052"; #break
+            #case (7)  #local partNo = "1727065"; #break
+            #case (8)  #local partNo = "1727078"; #break
+            #case (9)  #local partNo = "1727081"; #break
+            #case (10) #local partNo = "1727094"; #break
+            #case (11) #local partNo = "1727104"; #break
+            #case (12) #local partNo = "1727117"; #break
+            #case (13) #local partNo = "1931754"; #break
+            #else #local partNo = "part no?";     #break
+         #end
      #end
      text {
         ttf besch_font partNo 0.2,0
@@ -149,21 +172,35 @@
      }
 #end
 
-#macro CON_THT_PHOENIX_MKDS1_2_35()  MKDS1_35(2)  #end
-#macro CON_THT_PHOENIX_MKDS1_3_35()  MKDS1_35(3)  #end
-#macro CON_THT_PHOENIX_MKDS1_4_35()  MKDS1_35(4)  #end
-#macro CON_THT_PHOENIX_MKDS1_5_35()  MKDS1_35(5)  #end
-#macro CON_THT_PHOENIX_MKDS1_6_35()  MKDS1_35(6)  #end
-#macro CON_THT_PHOENIX_MKDS1_7_35()  MKDS1_35(7)  #end
-#macro CON_THT_PHOENIX_MKDS1_8_35()  MKDS1_35(8)  #end
-#macro CON_THT_PHOENIX_MKDS1_9_35()  MKDS1_35(9)  #end
-#macro CON_THT_PHOENIX_MKDS1_10_35() MKDS1_35(10) #end
-#macro CON_THT_PHOENIX_MKDS1_11_35() MKDS1_35(11) #end
-#macro CON_THT_PHOENIX_MKDS1_12_35() MKDS1_35(12) #end
-#macro CON_THT_PHOENIX_MKDS1_13_35() MKDS1_35(13) #end
-#macro CON_THT_PHOENIX_MKDS1_14_35() MKDS1_35(14) #end
-#macro CON_THT_PHOENIX_MKDS1_15_35() MKDS1_35(15) #end
-#macro CON_THT_PHOENIX_MKDS1_16_35() MKDS1_35(16) #end
+#macro CON_THT_PHOENIX_MKDS1_2_35()   MKDS1(3.50,2)  #end
+#macro CON_THT_PHOENIX_MKDS1_3_35()   MKDS1(3.50,3)  #end
+#macro CON_THT_PHOENIX_MKDS1_4_35()   MKDS1(3.50,4)  #end
+#macro CON_THT_PHOENIX_MKDS1_5_35()   MKDS1(3.50,5)  #end
+#macro CON_THT_PHOENIX_MKDS1_6_35()   MKDS1(3.50,6)  #end
+#macro CON_THT_PHOENIX_MKDS1_7_35()   MKDS1(3.50,7)  #end
+#macro CON_THT_PHOENIX_MKDS1_8_35()   MKDS1(3.50,8)  #end
+#macro CON_THT_PHOENIX_MKDS1_9_35()   MKDS1(3.50,9)  #end
+#macro CON_THT_PHOENIX_MKDS1_10_35()  MKDS1(3.50,10) #end
+#macro CON_THT_PHOENIX_MKDS1_11_35()  MKDS1(3.50,11) #end
+#macro CON_THT_PHOENIX_MKDS1_12_35()  MKDS1(3.50,12) #end
+#macro CON_THT_PHOENIX_MKDS1_13_35()  MKDS1(3.50,13) #end
+#macro CON_THT_PHOENIX_MKDS1_14_35()  MKDS1(3.50,14) #end
+#macro CON_THT_PHOENIX_MKDS1_15_35()  MKDS1(3.50,15) #end
+#macro CON_THT_PHOENIX_MKDS1_16_35()  MKDS1(3.50,16) #end
+#macro CON_THT_PHOENIX_MKDS1_2_381()  MKDS1(3.81,2)  #end
+#macro CON_THT_PHOENIX_MKDS1_3_381()  MKDS1(3.81,3)  #end
+#macro CON_THT_PHOENIX_MKDS1_4_381()  MKDS1(3.81,4)  #end
+#macro CON_THT_PHOENIX_MKDS1_5_381()  MKDS1(3.81,5)  #end
+#macro CON_THT_PHOENIX_MKDS1_6_381()  MKDS1(3.81,6)  #end
+#macro CON_THT_PHOENIX_MKDS1_7_381()  MKDS1(3.81,7)  #end
+#macro CON_THT_PHOENIX_MKDS1_8_381()  MKDS1(3.81,8)  #end
+#macro CON_THT_PHOENIX_MKDS1_9_381()  MKDS1(3.81,9)  #end
+#macro CON_THT_PHOENIX_MKDS1_10_381() MKDS1(3.81,10) #end
+#macro CON_THT_PHOENIX_MKDS1_11_381() MKDS1(3.81,11) #end
+#macro CON_THT_PHOENIX_MKDS1_12_381() MKDS1(3.81,12) #end
+#macro CON_THT_PHOENIX_MKDS1_13_381() MKDS1(3.81,13) #end
+
+
 
 /*******************************************************************************
  * no typos below please.
@@ -184,4 +221,16 @@
 //con-phoenix-350:1751361=CON_THT_PHOENIX_MKDS1_14_35(:Phoenix-Contact PCB terminal block 3.5mm
 //con-phoenix-350:1751374=CON_THT_PHOENIX_MKDS1_15_35(:Phoenix-Contact PCB terminal block 3.5mm
 //con-phoenix-350:1751387=CON_THT_PHOENIX_MKDS1_16_35(:Phoenix-Contact PCB terminal block 3.5mm
+//con-phoenix-3.81:1727010=CON_THT_PHOENIX_MKDS1_2_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727023=CON_THT_PHOENIX_MKDS1_3_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727036=CON_THT_PHOENIX_MKDS1_4_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727049=CON_THT_PHOENIX_MKDS1_5_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727052=CON_THT_PHOENIX_MKDS1_6_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727065=CON_THT_PHOENIX_MKDS1_7_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727078=CON_THT_PHOENIX_MKDS1_8_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727081=CON_THT_PHOENIX_MKDS1_9_381(:Phoenix-Contact PCB terminal block 3.81mm 
+//con-phoenix-3.81:1727094=CON_THT_PHOENIX_MKDS1_10_381(:Phoenix-Contact PCB terminal block 3.81mm
+//con-phoenix-3.81:1727104=CON_THT_PHOENIX_MKDS1_11_381(:Phoenix-Contact PCB terminal block 3.81mm
+//con-phoenix-3.81:1727117=CON_THT_PHOENIX_MKDS1_12_381(:Phoenix-Contact PCB terminal block 3.81mm
+//con-phoenix-3.81:1931754=CON_THT_PHOENIX_MKDS1_13_381(:Phoenix-Contact PCB terminal block 3.81mm
 // end assignment
