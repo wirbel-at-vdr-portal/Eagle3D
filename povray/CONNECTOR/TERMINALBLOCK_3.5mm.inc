@@ -11,15 +11,17 @@
  *            Carsten Koegler, FTZ-Leipzig <koegler@ftz-leipzig.de>
  *
  * 20220422 wk: renamed macro from CON_ARK_350MM (Anreihklemme) to
- *              CON_TERMINALBLOCK_3_5mm, converted to GRID()
+ *              CON_THT_RIA59_<N>, converted to GRID()
  *              fix number label
  *
  * NOTE: available from multiple suppliers,
- * ie. RIA AKL 059-xx (Reichelt AKL 059-02)
+ *       ie. RIA AKL 059-xx (Reichelt AKL 059-02)
+ *
+ * NOTE: not assigned to any eagle .lbr, but nicely done,
+ *       so may be create some library later for it.
  ******************************************************************************/
 
-
-#macro CON_TERMINALBLOCK_3_5mm_PIN()
+#macro RIA_series59_single()
   union {
      // Einloetstift
      cylinder{<0,-3.0,0><0,1.0,0>0.45 texture{col_silver}}
@@ -85,45 +87,53 @@
 /*******************************************************************************
  * Grundmakro fuer Anreihklemme 3.5mm
  ******************************************************************************/
-#macro CON_TERMINALBLOCK_3_5mm_base(j)
+#macro RIA_series59(j)
   union {
-     GRID(CON_TERMINALBLOCK_3_5mm_PIN(),3.5,j,1)
+     GRID(RIA_series59_single(),3.5,j,1)
      union {
         #local i = 0;
         #while(i<j)
-           text {ttf besch_font str(j-i,0,0) 0.2,0  scale<2,2,2> rotate<30,0,0> translate<-i*3.5-1,6.6,-2.9> pigment{Black}}
+           text {
+              ttf besch_font str(j-i,0,0) 0.2,0
+              scale <2,2,2>
+              rotate <30,0,0>
+              translate <-i*3.5-1,6.6,-2.9>
+              pigment {
+                 Black
+                 }
+              }
            #local i=i+1;
         #end
-        translate<(i-1)*3.5-j*1.75+1.75,0,0>
+        translate <(i-1)*3.5-j*1.75+1.75,0,0>
         }
      }
 #end
 
-#macro CON_TERMINALBLOCK_3_5mm_2()  CON_TERMINALBLOCK_3_5mm_base(2)  #end
-#macro CON_TERMINALBLOCK_3_5mm_3()  CON_TERMINALBLOCK_3_5mm_base(3)  #end
-#macro CON_TERMINALBLOCK_3_5mm_4()  CON_TERMINALBLOCK_3_5mm_base(4)  #end
-#macro CON_TERMINALBLOCK_3_5mm_5()  CON_TERMINALBLOCK_3_5mm_base(5)  #end
-#macro CON_TERMINALBLOCK_3_5mm_6()  CON_TERMINALBLOCK_3_5mm_base(6)  #end
-#macro CON_TERMINALBLOCK_3_5mm_7()  CON_TERMINALBLOCK_3_5mm_base(7)  #end
-#macro CON_TERMINALBLOCK_3_5mm_8()  CON_TERMINALBLOCK_3_5mm_base(8)  #end
-#macro CON_TERMINALBLOCK_3_5mm_9()  CON_TERMINALBLOCK_3_5mm_base(9)  #end
-#macro CON_TERMINALBLOCK_3_5mm_10() CON_TERMINALBLOCK_3_5mm_base(10) #end
-#macro CON_TERMINALBLOCK_3_5mm_11() CON_TERMINALBLOCK_3_5mm_base(11) #end
-#macro CON_TERMINALBLOCK_3_5mm_12() CON_TERMINALBLOCK_3_5mm_base(12) #end
+#macro CON_THT_RIA59_2()  RIA_series59(2)  #end
+#macro CON_THT_RIA59_3()  RIA_series59(3)  #end
+#macro CON_THT_RIA59_4()  RIA_series59(4)  #end
+#macro CON_THT_RIA59_5()  RIA_series59(5)  #end
+#macro CON_THT_RIA59_6()  RIA_series59(6)  #end
+#macro CON_THT_RIA59_7()  RIA_series59(7)  #end
+#macro CON_THT_RIA59_8()  RIA_series59(8)  #end
+#macro CON_THT_RIA59_9()  RIA_series59(9)  #end
+#macro CON_THT_RIA59_10() RIA_series59(10) #end
+#macro CON_THT_RIA59_11() RIA_series59(11) #end
+#macro CON_THT_RIA59_12() RIA_series59(12) #end
 
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//=CON_TERMINALBLOCK_3_5mm_2(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_3(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_4(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_5(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_6(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_7(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_8(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_9(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_10(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_11(:terminal block 3.5mm
-//=CON_TERMINALBLOCK_3_5mm_12(:terminal block 3.5mm
+//=CON_THT_RIA59_2(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_3(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_4(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_5(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_6(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_7(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_8(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_9(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_10(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_11(:PCB terminal block 3.5mm
+//=CON_THT_RIA59_12(:PCB terminal block 3.5mm
 // end assignment
