@@ -292,27 +292,17 @@ NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_RELAY
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_RELAY_G90_1B_2(:30A Relay Type ZD form 1B - 2 common:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_RELAY_G90_1C_2(:30A Relay Type Zd form 1C - 2 common:
 NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_RELAY_RY2(:Schrack Relay RY2:Schrack Relay RY2
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_5MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_7MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_10MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_12MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_15MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_17MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_20MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_22MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_25MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_27MM(:Drahtbruecke:Wire jumper
-NOEAGLEPAC:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_JUMPER_WIRE_30MM(:Drahtbruecke:Wire jumper
-05:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_05MM(:Wire jumper, 5MM:Wire jumper, 5MM
-05C:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_05MM(:Wire jumper, 5MM:Wire jumper, 5MM
-07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_07MM(:Wire jumper, 7MM:Wire jumper, 7MM
-10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_10MM(:Wire jumper, 10MM:Wire jumper, 10MM
-10E:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_10MM(:Wire jumper, 10MM:Wire jumper, 10MM
-12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_12MM(:Wire jumper, 12MM:Wire jumper, 12MM
-15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_15MM(:Wire jumper, 15MM:Wire jumper, 15MM
-20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_20MM(:Wire jumper, 20MM:Wire jumper, 20MM
-25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_25MM(:Wire jumper, 25MM:Wire jumper, 25MM
-30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_SIMPLE_WIRE_JUMPER_30MM(:Wire jumper, 30MM:Wire jumper, 30MM
+04C:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_04mm(:Wire jumper 4mm:
+05:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_05mm(:Wire jumper 5mm:
+05C:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_05mm(:Wire jumper 5mm:
+07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_07mm(:Wire jumper 7mm:
+10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_10mm(:Wire jumper 10mm:
+10E:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_10mm(:Wire jumper 10mm:
+12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_12mm(:Wire jumper 12mm:
+15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_15mm(:Wire jumper 15mm:
+20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_20mm(:Wire jumper 20mm:
+25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_25mm(:Wire jumper 25mm:
+30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WIRE_JUMPER_30mm(:Wire jumper 30mm:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_OPTO_TOTX173(:Laser transmitter:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_OPTO_TORX173(:Laser receiver:
 HFBR-X41XT:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:SPC_OPTO_HFBR_x4x4(:Avago HFBR-x4x4TZ transmitter/receiver with ST connector:
