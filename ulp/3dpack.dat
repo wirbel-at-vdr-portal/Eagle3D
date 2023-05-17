@@ -2158,58 +2158,58 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_53048_13(:Molex 53048:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_53048_14(:Molex 53048:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_53048_15(:Molex 53048:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0460(:Molex 87832 series connector
-87832-04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0410(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0660(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0612(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0613(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0624(:Molex 87832 series connector
-87832-06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0610(:Molex 87832 series connector (con-molex)
-87832-08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0860(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0812(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0824(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_0810(:Molex 87832 series connector
-87832-10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1060(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1012(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1024(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1010(:Molex 87832 series connector
-87832-12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1260(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1224(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1210(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1212(:Molex 87832 series connector
-87832-14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1460(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1412(:Molex 87832 series connector
-MOLEX_87832-1420_0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1420(:Molex 87832 series connector (Molex - 87832-1420)
-87832-16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1660(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1612(:Molex 87832 series connector
-87832-18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1860(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_1812(:Molex 87832 series connector
-87832-20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2060(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2012(:Molex 87832 series connector
-87832-22:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2260(:Molex 87832 series connector (con-molex)
-87832-24:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2460(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2412(:Molex 87832 series connector
-87832-26:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2660(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2612(:Molex 87832 series connector
-87832-28:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2860(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_2816(:Molex 87832 series connector
-87832-30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3060(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3012(:Molex 87832 series connector
-87832-32:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3260(:Molex 87832 series connector (con-molex)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3460(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3412(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3660(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_3860(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4060(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4012(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4260(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4460(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4412(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4660(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4612(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_4860(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_5060(:Molex 87832 series connector
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_MOLEX_87832_5012(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0460(:Molex 87832 series connector
+87832-04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0410(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0660(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0612(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0613(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0624(:Molex 87832 series connector
+87832-06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0610(:Molex 87832 series connector (con-molex)
+87832-08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0860(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0812(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0824(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_0810(:Molex 87832 series connector
+87832-10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1060(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1012(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1024(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1010(:Molex 87832 series connector
+87832-12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1260(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1224(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1210(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1212(:Molex 87832 series connector
+87832-14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1460(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1412(:Molex 87832 series connector
+MOLEX_87832-1420_0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1420(:Molex 87832 series connector (Molex - 87832-1420)
+87832-16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1660(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1612(:Molex 87832 series connector
+87832-18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1860(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_1812(:Molex 87832 series connector
+87832-20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2060(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2012(:Molex 87832 series connector
+87832-22:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2260(:Molex 87832 series connector (con-molex)
+87832-24:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2460(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2412(:Molex 87832 series connector
+87832-26:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2660(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2612(:Molex 87832 series connector
+87832-28:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2860(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_2816(:Molex 87832 series connector
+87832-30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3060(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3012(:Molex 87832 series connector
+87832-32:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3260(:Molex 87832 series connector (con-molex)
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3460(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3412(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3660(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_3860(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4060(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4012(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4260(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4460(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4412(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4660(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4612(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_4860(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_5060(:Molex 87832 series connector
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SMT_MOLEX_87832_5012(:Molex 87832 series connector
 22-23-2021:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_MOLEX_0022232021(:Molex series 6373 header with friction lock:
 22-23-2031:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_MOLEX_0022232031(:Molex series 6373 header with friction lock:
 22-23-2041:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_MOLEX_0022232041(:Molex series 6373 header with friction lock:
