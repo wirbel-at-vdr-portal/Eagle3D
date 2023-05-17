@@ -5,10 +5,10 @@
  ******************************************************************************/
 
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
-#include "CONNECTOR/wirejumper.inc"
 #include "CONNECTOR/SMT/MOLEX_87832_series.inc"
 #include "CONNECTOR/THT/coax-subd.inc"
 #include "CONNECTOR/THT/coax_LEMO.inc"
+#include "CONNECTOR/THT/wirejumper.inc"
 #include "CONNECTOR/THT/BNC_AMP_227161.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
 #include "CONNECTOR/THT/MOLEX_KK254_series.inc"
