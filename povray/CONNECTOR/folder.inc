@@ -4,10 +4,10 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-#include "CONNECTOR/MOLEX_87832_series.inc"
 #include "CONNECTOR/pinheader.inc"
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
 #include "CONNECTOR/wirejumper.inc"
+#include "CONNECTOR/SMT/MOLEX_87832_series.inc"
 #include "CONNECTOR/THT/coax-subd.inc"
 #include "CONNECTOR/THT/coax_LEMO.inc"
 #include "CONNECTOR/THT/BNC_AMP_227161.inc"

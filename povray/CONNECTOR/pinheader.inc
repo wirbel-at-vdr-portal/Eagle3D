@@ -22,21 +22,20 @@
      }
 #end
 
-
 #macro MPE094_FEMALE_PIN()
   intersection {
      box{<-0.65/2, 2.0,-0.4/2>
          <+0.65/2,-3.1,+0.4/2>}
      box{<-8/2,-8/2,-0.5/2>
          <+8/2,+8/2,+0.5/2>
-        rotate <0,0,45> translate <0,2.4,0>
+        rotate <0,0,45>
+        translate <0,2.4,0>
         }     
      texture{col_gold}
      }
 #end
 
-
-#macro CON_MPE094_FEMALE_254(X,Y)
+#macro MPE_094(X,Y)
 #local grid = 2.54;
 union {
   // plastic housing
@@ -52,8 +51,6 @@ union {
 #end
 
 
-
-
 /*******************************************************************************
  * female header 2.54mm, 1-row, 2-row, 3-row.
  * - https://www.mpe-connector.de/de/produkte/
@@ -63,499 +60,134 @@ union {
  * - https://docs.rs-online.com/ed68/0900766b80da4106.pdf p.277,p.279
  *     Assmann A-BL-254-E G-x xx D (1-row)
  *     Assmann A-BL-254-D G-x xx D (2-row)
+ *     see also: samtec ssw-th.pdf
  ******************************************************************************/
-#macro CON_MPE094_FEMALE_254_1_1()
-  CON_MPE094_FEMALE_254(1,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_2_1()
-  CON_MPE094_FEMALE_254(2,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_3_1()
-  CON_MPE094_FEMALE_254(3,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_4_1()
-  CON_MPE094_FEMALE_254(4,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_5_1()
-  CON_MPE094_FEMALE_254(5,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_6_1()
-  CON_MPE094_FEMALE_254(6,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_7_1()
-  CON_MPE094_FEMALE_254(7,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_8_1()
-  CON_MPE094_FEMALE_254(8,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_9_1()
-  CON_MPE094_FEMALE_254(9,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_10_1()
-  CON_MPE094_FEMALE_254(10,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_11_1()
-  CON_MPE094_FEMALE_254(11,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_12_1()
-  CON_MPE094_FEMALE_254(12,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_13_1()
-  CON_MPE094_FEMALE_254(13,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_14_1()
-  CON_MPE094_FEMALE_254(14,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_15_1()
-  CON_MPE094_FEMALE_254(15,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_16_1()
-  CON_MPE094_FEMALE_254(16,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_17_1()
-  CON_MPE094_FEMALE_254(17,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_18_1()
-  CON_MPE094_FEMALE_254(18,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_19_1()
-  CON_MPE094_FEMALE_254(19,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_20_1()
-  CON_MPE094_FEMALE_254(20,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_21_1()
-  CON_MPE094_FEMALE_254(21,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_22_1()
-  CON_MPE094_FEMALE_254(22,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_23_1()
-  CON_MPE094_FEMALE_254(23,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_24_1()
-  CON_MPE094_FEMALE_254(24,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_25_1()
-  CON_MPE094_FEMALE_254(25,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_26_1()
-  CON_MPE094_FEMALE_254(26,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_27_1()
-  CON_MPE094_FEMALE_254(27,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_28_1()
-  CON_MPE094_FEMALE_254(28,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_29_1()
-  CON_MPE094_FEMALE_254(29,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_30_1()
-  CON_MPE094_FEMALE_254(30,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_31_1()
-  CON_MPE094_FEMALE_254(31,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_32_1()
-  CON_MPE094_FEMALE_254(32,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_33_1()
-  CON_MPE094_FEMALE_254(33,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_34_1()
-  CON_MPE094_FEMALE_254(34,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_35_1()
-  CON_MPE094_FEMALE_254(35,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_36_1()
-  CON_MPE094_FEMALE_254(36,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_37_1()
-  CON_MPE094_FEMALE_254(37,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_38_1()
-  CON_MPE094_FEMALE_254(38,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_39_1()
-  CON_MPE094_FEMALE_254(39,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_40_1()
-  CON_MPE094_FEMALE_254(40,1)
-#end
-
-#macro CON_MPE094_FEMALE_254_1_2()
-  CON_MPE094_FEMALE_254(1,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_2_2()
-  CON_MPE094_FEMALE_254(2,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_3_2()
-  CON_MPE094_FEMALE_254(3,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_4_2()
-  CON_MPE094_FEMALE_254(4,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_5_2()
-  CON_MPE094_FEMALE_254(5,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_6_2()
-  CON_MPE094_FEMALE_254(6,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_7_2()
-  CON_MPE094_FEMALE_254(7,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_8_2()
-  CON_MPE094_FEMALE_254(8,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_9_2()
-  CON_MPE094_FEMALE_254(9,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_10_2()
-  CON_MPE094_FEMALE_254(10,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_11_2()
-  CON_MPE094_FEMALE_254(11,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_12_2()
-  CON_MPE094_FEMALE_254(12,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_13_2()
-  CON_MPE094_FEMALE_254(13,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_14_2()
-  CON_MPE094_FEMALE_254(14,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_15_2()
-  CON_MPE094_FEMALE_254(15,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_16_2()
-  CON_MPE094_FEMALE_254(16,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_17_2()
-  CON_MPE094_FEMALE_254(17,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_18_2()
-  CON_MPE094_FEMALE_254(18,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_19_2()
-  CON_MPE094_FEMALE_254(19,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_20_2()
-  CON_MPE094_FEMALE_254(20,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_21_2()
-  CON_MPE094_FEMALE_254(21,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_22_2()
-  CON_MPE094_FEMALE_254(22,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_23_2()
-  CON_MPE094_FEMALE_254(23,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_24_2()
-  CON_MPE094_FEMALE_254(24,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_25_2()
-  CON_MPE094_FEMALE_254(25,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_26_2()
-  CON_MPE094_FEMALE_254(26,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_27_2()
-  CON_MPE094_FEMALE_254(27,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_28_2()
-  CON_MPE094_FEMALE_254(28,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_29_2()
-  CON_MPE094_FEMALE_254(29,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_30_2()
-  CON_MPE094_FEMALE_254(30,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_31_2()
-  CON_MPE094_FEMALE_254(31,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_32_2()
-  CON_MPE094_FEMALE_254(32,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_33_2()
-  CON_MPE094_FEMALE_254(33,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_34_2()
-  CON_MPE094_FEMALE_254(34,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_35_2()
-  CON_MPE094_FEMALE_254(35,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_36_2()
-  CON_MPE094_FEMALE_254(36,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_37_2()
-  CON_MPE094_FEMALE_254(37,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_38_2()
-  CON_MPE094_FEMALE_254(38,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_39_2()
-  CON_MPE094_FEMALE_254(39,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_40_2()
-  CON_MPE094_FEMALE_254(40,2)
-#end
-
-#macro CON_MPE094_FEMALE_254_1_3()
-  CON_MPE094_FEMALE_254(1,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_2_3()
-  CON_MPE094_FEMALE_254(2,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_3_3()
-  CON_MPE094_FEMALE_254(3,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_4_3()
-  CON_MPE094_FEMALE_254(4,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_5_3()
-  CON_MPE094_FEMALE_254(5,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_6_3()
-  CON_MPE094_FEMALE_254(6,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_7_3()
-  CON_MPE094_FEMALE_254(7,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_8_3()
-  CON_MPE094_FEMALE_254(8,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_9_3()
-  CON_MPE094_FEMALE_254(9,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_10_3()
-  CON_MPE094_FEMALE_254(10,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_11_3()
-  CON_MPE094_FEMALE_254(11,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_12_3()
-  CON_MPE094_FEMALE_254(12,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_13_3()
-  CON_MPE094_FEMALE_254(13,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_14_3()
-  CON_MPE094_FEMALE_254(14,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_15_3()
-  CON_MPE094_FEMALE_254(15,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_16_3()
-  CON_MPE094_FEMALE_254(16,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_17_3()
-  CON_MPE094_FEMALE_254(17,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_18_3()
-  CON_MPE094_FEMALE_254(18,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_19_3()
-  CON_MPE094_FEMALE_254(19,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_20_3()
-  CON_MPE094_FEMALE_254(20,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_21_3()
-  CON_MPE094_FEMALE_254(21,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_22_3()
-  CON_MPE094_FEMALE_254(22,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_23_3()
-  CON_MPE094_FEMALE_254(23,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_24_3()
-  CON_MPE094_FEMALE_254(24,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_25_3()
-  CON_MPE094_FEMALE_254(25,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_26_3()
-  CON_MPE094_FEMALE_254(26,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_27_3()
-  CON_MPE094_FEMALE_254(27,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_28_3()
-  CON_MPE094_FEMALE_254(28,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_29_3()
-  CON_MPE094_FEMALE_254(29,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_30_3()
-  CON_MPE094_FEMALE_254(30,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_31_3()
-  CON_MPE094_FEMALE_254(31,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_32_3()
-  CON_MPE094_FEMALE_254(32,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_33_3()
-  CON_MPE094_FEMALE_254(33,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_34_3()
-  CON_MPE094_FEMALE_254(34,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_35_3()
-  CON_MPE094_FEMALE_254(35,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_36_3()
-  CON_MPE094_FEMALE_254(36,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_37_3()
-  CON_MPE094_FEMALE_254(37,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_38_3()
-  CON_MPE094_FEMALE_254(38,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_39_3()
-  CON_MPE094_FEMALE_254(39,3)
-#end
-
-#macro CON_MPE094_FEMALE_254_40_3()
-  CON_MPE094_FEMALE_254(40,3)
-#end
-
-
-
-
-
-
+#macro CON_THT_MPE094_1x1()  MPE_094(1,1)  #end
+#macro CON_THT_MPE094_2x1()  MPE_094(2,1)  #end
+#macro CON_THT_MPE094_3x1()  MPE_094(3,1)  #end
+#macro CON_THT_MPE094_4x1()  MPE_094(4,1)  #end
+#macro CON_THT_MPE094_5x1()  MPE_094(5,1)  #end
+#macro CON_THT_MPE094_6x1()  MPE_094(6,1)  #end
+#macro CON_THT_MPE094_7x1()  MPE_094(7,1)  #end
+#macro CON_THT_MPE094_8x1()  MPE_094(8,1)  #end
+#macro CON_THT_MPE094_9x1()  MPE_094(9,1)  #end
+#macro CON_THT_MPE094_10x1() MPE_094(10,1) #end
+#macro CON_THT_MPE094_11x1() MPE_094(11,1) #end
+#macro CON_THT_MPE094_12x1() MPE_094(12,1) #end
+#macro CON_THT_MPE094_13x1() MPE_094(13,1) #end
+#macro CON_THT_MPE094_14x1() MPE_094(14,1) #end
+#macro CON_THT_MPE094_15x1() MPE_094(15,1) #end
+#macro CON_THT_MPE094_16x1() MPE_094(16,1) #end
+#macro CON_THT_MPE094_17x1() MPE_094(17,1) #end
+#macro CON_THT_MPE094_18x1() MPE_094(18,1) #end
+#macro CON_THT_MPE094_19x1() MPE_094(19,1) #end
+#macro CON_THT_MPE094_20x1() MPE_094(20,1) #end
+#macro CON_THT_MPE094_21x1() MPE_094(21,1) #end
+#macro CON_THT_MPE094_22x1() MPE_094(22,1) #end
+#macro CON_THT_MPE094_23x1() MPE_094(23,1) #end
+#macro CON_THT_MPE094_24x1() MPE_094(24,1) #end
+#macro CON_THT_MPE094_25x1() MPE_094(25,1) #end
+#macro CON_THT_MPE094_26x1() MPE_094(26,1) #end
+#macro CON_THT_MPE094_27x1() MPE_094(27,1) #end
+#macro CON_THT_MPE094_28x1() MPE_094(28,1) #end
+#macro CON_THT_MPE094_29x1() MPE_094(29,1) #end
+#macro CON_THT_MPE094_30x1() MPE_094(30,1) #end
+#macro CON_THT_MPE094_31x1() MPE_094(31,1) #end
+#macro CON_THT_MPE094_32x1() MPE_094(32,1) #end
+#macro CON_THT_MPE094_33x1() MPE_094(33,1) #end
+#macro CON_THT_MPE094_34x1() MPE_094(34,1) #end
+#macro CON_THT_MPE094_35x1() MPE_094(35,1) #end
+#macro CON_THT_MPE094_36x1() MPE_094(36,1) #end
+#macro CON_THT_MPE094_37x1() MPE_094(37,1) #end
+#macro CON_THT_MPE094_38x1() MPE_094(38,1) #end
+#macro CON_THT_MPE094_39x1() MPE_094(39,1) #end
+#macro CON_THT_MPE094_40x1() MPE_094(40,1) #end
+#macro CON_THT_MPE094_1x2()  MPE_094(1,2)  #end
+#macro CON_THT_MPE094_2x2()  MPE_094(2,2)  #end
+#macro CON_THT_MPE094_3x2()  MPE_094(3,2)  #end
+#macro CON_THT_MPE094_4x2()  MPE_094(4,2)  #end
+#macro CON_THT_MPE094_5x2()  MPE_094(5,2)  #end
+#macro CON_THT_MPE094_6x2()  MPE_094(6,2)  #end
+#macro CON_THT_MPE094_7x2()  MPE_094(7,2)  #end
+#macro CON_THT_MPE094_8x2()  MPE_094(8,2)  #end
+#macro CON_THT_MPE094_9x2()  MPE_094(9,2)  #end
+#macro CON_THT_MPE094_10x2() MPE_094(10,2) #end
+#macro CON_THT_MPE094_11x2() MPE_094(11,2) #end
+#macro CON_THT_MPE094_12x2() MPE_094(12,2) #end
+#macro CON_THT_MPE094_13x2() MPE_094(13,2) #end
+#macro CON_THT_MPE094_14x2() MPE_094(14,2) #end
+#macro CON_THT_MPE094_15x2() MPE_094(15,2) #end
+#macro CON_THT_MPE094_16x2() MPE_094(16,2) #end
+#macro CON_THT_MPE094_17x2() MPE_094(17,2) #end
+#macro CON_THT_MPE094_18x2() MPE_094(18,2) #end
+#macro CON_THT_MPE094_19x2() MPE_094(19,2) #end
+#macro CON_THT_MPE094_20x2() MPE_094(20,2) #end
+#macro CON_THT_MPE094_21x2() MPE_094(21,2) #end
+#macro CON_THT_MPE094_22x2() MPE_094(22,2) #end
+#macro CON_THT_MPE094_23x2() MPE_094(23,2) #end
+#macro CON_THT_MPE094_24x2() MPE_094(24,2) #end
+#macro CON_THT_MPE094_25x2() MPE_094(25,2) #end
+#macro CON_THT_MPE094_26x2() MPE_094(26,2) #end
+#macro CON_THT_MPE094_27x2() MPE_094(27,2) #end
+#macro CON_THT_MPE094_28x2() MPE_094(28,2) #end
+#macro CON_THT_MPE094_29x2() MPE_094(29,2) #end
+#macro CON_THT_MPE094_30x2() MPE_094(30,2) #end
+#macro CON_THT_MPE094_31x2() MPE_094(31,2) #end
+#macro CON_THT_MPE094_32x2() MPE_094(32,2) #end
+#macro CON_THT_MPE094_33x2() MPE_094(33,2) #end
+#macro CON_THT_MPE094_34x2() MPE_094(34,2) #end
+#macro CON_THT_MPE094_35x2() MPE_094(35,2) #end
+#macro CON_THT_MPE094_36x2() MPE_094(36,2) #end
+#macro CON_THT_MPE094_37x2() MPE_094(37,2) #end
+#macro CON_THT_MPE094_38x2() MPE_094(38,2) #end
+#macro CON_THT_MPE094_39x2() MPE_094(39,2) #end
+#macro CON_THT_MPE094_40x2() MPE_094(40,2) #end
+#macro CON_THT_MPE094_1x3()  MPE_094(1,3)  #end
+#macro CON_THT_MPE094_2x3()  MPE_094(2,3)  #end
+#macro CON_THT_MPE094_3x3()  MPE_094(3,3)  #end
+#macro CON_THT_MPE094_4x3()  MPE_094(4,3)  #end
+#macro CON_THT_MPE094_5x3()  MPE_094(5,3)  #end
+#macro CON_THT_MPE094_6x3()  MPE_094(6,3)  #end
+#macro CON_THT_MPE094_7x3()  MPE_094(7,3)  #end
+#macro CON_THT_MPE094_8x3()  MPE_094(8,3)  #end
+#macro CON_THT_MPE094_9x3()  MPE_094(9,3)  #end
+#macro CON_THT_MPE094_10x3() MPE_094(10,3) #end
+#macro CON_THT_MPE094_11x3() MPE_094(11,3) #end
+#macro CON_THT_MPE094_12x3() MPE_094(12,3) #end
+#macro CON_THT_MPE094_13x3() MPE_094(13,3) #end
+#macro CON_THT_MPE094_14x3() MPE_094(14,3) #end
+#macro CON_THT_MPE094_15x3() MPE_094(15,3) #end
+#macro CON_THT_MPE094_16x3() MPE_094(16,3) #end
+#macro CON_THT_MPE094_17x3() MPE_094(17,3) #end
+#macro CON_THT_MPE094_18x3() MPE_094(18,3) #end
+#macro CON_THT_MPE094_19x3() MPE_094(19,3) #end
+#macro CON_THT_MPE094_20x3() MPE_094(20,3) #end
+#macro CON_THT_MPE094_21x3() MPE_094(21,3) #end
+#macro CON_THT_MPE094_22x3() MPE_094(22,3) #end
+#macro CON_THT_MPE094_23x3() MPE_094(23,3) #end
+#macro CON_THT_MPE094_24x3() MPE_094(24,3) #end
+#macro CON_THT_MPE094_25x3() MPE_094(25,3) #end
+#macro CON_THT_MPE094_26x3() MPE_094(26,3) #end
+#macro CON_THT_MPE094_27x3() MPE_094(27,3) #end
+#macro CON_THT_MPE094_28x3() MPE_094(28,3) #end
+#macro CON_THT_MPE094_29x3() MPE_094(29,3) #end
+#macro CON_THT_MPE094_30x3() MPE_094(30,3) #end
+#macro CON_THT_MPE094_31x3() MPE_094(31,3) #end
+#macro CON_THT_MPE094_32x3() MPE_094(32,3) #end
+#macro CON_THT_MPE094_33x3() MPE_094(33,3) #end
+#macro CON_THT_MPE094_34x3() MPE_094(34,3) #end
+#macro CON_THT_MPE094_35x3() MPE_094(35,3) #end
+#macro CON_THT_MPE094_36x3() MPE_094(36,3) #end
+#macro CON_THT_MPE094_37x3() MPE_094(37,3) #end
+#macro CON_THT_MPE094_38x3() MPE_094(38,3) #end
+#macro CON_THT_MPE094_39x3() MPE_094(39,3) #end
+#macro CON_THT_MPE094_40x3() MPE_094(40,3) #end
 
 
 
 /*******************************************************************************
  * female header 2.00mm, 1-row, 2-row, 3-row.
  ******************************************************************************/
-
 #macro MPE156_FEMALE(grid,H)
   union { 
      difference {
@@ -570,7 +202,6 @@ union {
      }
 #end
 
-
 #macro MPE156_FEMALE_PIN()
   intersection {
      box{<-0.45/2, 2.0,-0.2/2>
@@ -584,7 +215,7 @@ union {
 #end
 
 
-#macro CON_MPE156_FEMALE_200(X,Y)
+#macro MPE_156(X,Y)
 #local grid = 2.00;
 union {
   // plastic housing
@@ -612,482 +243,370 @@ union {
  *     Assmann A-BL-200-E G-x xx D (1-row)
  *     Assmann A-BL-200-D G-x xx D (2-row)
  ******************************************************************************/
-#macro CON_MPE156_FEMALE_200_1_1()
-  CON_MPE156_FEMALE_200(1,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_2_1()
-  CON_MPE156_FEMALE_200(2,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_3_1()
-  CON_MPE156_FEMALE_200(3,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_4_1()
-  CON_MPE156_FEMALE_200(4,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_5_1()
-  CON_MPE156_FEMALE_200(5,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_6_1()
-  CON_MPE156_FEMALE_200(6,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_7_1()
-  CON_MPE156_FEMALE_200(7,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_8_1()
-  CON_MPE156_FEMALE_200(8,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_9_1()
-  CON_MPE156_FEMALE_200(9,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_10_1()
-  CON_MPE156_FEMALE_200(10,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_11_1()
-  CON_MPE156_FEMALE_200(11,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_12_1()
-  CON_MPE156_FEMALE_200(12,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_13_1()
-  CON_MPE156_FEMALE_200(13,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_14_1()
-  CON_MPE156_FEMALE_200(14,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_15_1()
-  CON_MPE156_FEMALE_200(15,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_16_1()
-  CON_MPE156_FEMALE_200(16,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_17_1()
-  CON_MPE156_FEMALE_200(17,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_18_1()
-  CON_MPE156_FEMALE_200(18,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_19_1()
-  CON_MPE156_FEMALE_200(19,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_20_1()
-  CON_MPE156_FEMALE_200(20,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_21_1()
-  CON_MPE156_FEMALE_200(21,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_22_1()
-  CON_MPE156_FEMALE_200(22,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_23_1()
-  CON_MPE156_FEMALE_200(23,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_24_1()
-  CON_MPE156_FEMALE_200(24,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_25_1()
-  CON_MPE156_FEMALE_200(25,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_26_1()
-  CON_MPE156_FEMALE_200(26,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_27_1()
-  CON_MPE156_FEMALE_200(27,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_28_1()
-  CON_MPE156_FEMALE_200(28,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_29_1()
-  CON_MPE156_FEMALE_200(29,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_30_1()
-  CON_MPE156_FEMALE_200(30,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_31_1()
-  CON_MPE156_FEMALE_200(31,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_32_1()
-  CON_MPE156_FEMALE_200(32,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_33_1()
-  CON_MPE156_FEMALE_200(33,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_34_1()
-  CON_MPE156_FEMALE_200(34,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_35_1()
-  CON_MPE156_FEMALE_200(35,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_36_1()
-  CON_MPE156_FEMALE_200(36,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_37_1()
-  CON_MPE156_FEMALE_200(37,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_38_1()
-  CON_MPE156_FEMALE_200(38,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_39_1()
-  CON_MPE156_FEMALE_200(39,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_40_1()
-  CON_MPE156_FEMALE_200(40,1)
-#end
-
-#macro CON_MPE156_FEMALE_200_1_2()
-  CON_MPE156_FEMALE_200(1,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_2_2()
-  CON_MPE156_FEMALE_200(2,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_3_2()
-  CON_MPE156_FEMALE_200(3,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_4_2()
-  CON_MPE156_FEMALE_200(4,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_5_2()
-  CON_MPE156_FEMALE_200(5,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_6_2()
-  CON_MPE156_FEMALE_200(6,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_7_2()
-  CON_MPE156_FEMALE_200(7,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_8_2()
-  CON_MPE156_FEMALE_200(8,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_9_2()
-  CON_MPE156_FEMALE_200(9,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_10_2()
-  CON_MPE156_FEMALE_200(10,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_11_2()
-  CON_MPE156_FEMALE_200(11,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_12_2()
-  CON_MPE156_FEMALE_200(12,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_13_2()
-  CON_MPE156_FEMALE_200(13,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_14_2()
-  CON_MPE156_FEMALE_200(14,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_15_2()
-  CON_MPE156_FEMALE_200(15,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_16_2()
-  CON_MPE156_FEMALE_200(16,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_17_2()
-  CON_MPE156_FEMALE_200(17,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_18_2()
-  CON_MPE156_FEMALE_200(18,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_19_2()
-  CON_MPE156_FEMALE_200(19,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_20_2()
-  CON_MPE156_FEMALE_200(20,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_21_2()
-  CON_MPE156_FEMALE_200(21,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_22_2()
-  CON_MPE156_FEMALE_200(22,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_23_2()
-  CON_MPE156_FEMALE_200(23,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_24_2()
-  CON_MPE156_FEMALE_200(24,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_25_2()
-  CON_MPE156_FEMALE_200(25,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_26_2()
-  CON_MPE156_FEMALE_200(26,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_27_2()
-  CON_MPE156_FEMALE_200(27,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_28_2()
-  CON_MPE156_FEMALE_200(28,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_29_2()
-  CON_MPE156_FEMALE_200(29,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_30_2()
-  CON_MPE156_FEMALE_200(30,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_31_2()
-  CON_MPE156_FEMALE_200(31,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_32_2()
-  CON_MPE156_FEMALE_200(32,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_33_2()
-  CON_MPE156_FEMALE_200(33,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_34_2()
-  CON_MPE156_FEMALE_200(34,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_35_2()
-  CON_MPE156_FEMALE_200(35,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_36_2()
-  CON_MPE156_FEMALE_200(36,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_37_2()
-  CON_MPE156_FEMALE_200(37,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_38_2()
-  CON_MPE156_FEMALE_200(38,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_39_2()
-  CON_MPE156_FEMALE_200(39,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_40_2()
-  CON_MPE156_FEMALE_200(40,2)
-#end
-
-#macro CON_MPE156_FEMALE_200_1_3()
-  CON_MPE156_FEMALE_200(1,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_2_3()
-  CON_MPE156_FEMALE_200(2,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_3_3()
-  CON_MPE156_FEMALE_200(3,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_4_3()
-  CON_MPE156_FEMALE_200(4,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_5_3()
-  CON_MPE156_FEMALE_200(5,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_6_3()
-  CON_MPE156_FEMALE_200(6,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_7_3()
-  CON_MPE156_FEMALE_200(7,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_8_3()
-  CON_MPE156_FEMALE_200(8,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_9_3()
-  CON_MPE156_FEMALE_200(9,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_10_3()
-  CON_MPE156_FEMALE_200(10,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_11_3()
-  CON_MPE156_FEMALE_200(11,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_12_3()
-  CON_MPE156_FEMALE_200(12,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_13_3()
-  CON_MPE156_FEMALE_200(13,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_14_3()
-  CON_MPE156_FEMALE_200(14,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_15_3()
-  CON_MPE156_FEMALE_200(15,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_16_3()
-  CON_MPE156_FEMALE_200(16,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_17_3()
-  CON_MPE156_FEMALE_200(17,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_18_3()
-  CON_MPE156_FEMALE_200(18,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_19_3()
-  CON_MPE156_FEMALE_200(19,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_20_3()
-  CON_MPE156_FEMALE_200(20,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_21_3()
-  CON_MPE156_FEMALE_200(21,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_22_3()
-  CON_MPE156_FEMALE_200(22,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_23_3()
-  CON_MPE156_FEMALE_200(23,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_24_3()
-  CON_MPE156_FEMALE_200(24,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_25_3()
-  CON_MPE156_FEMALE_200(25,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_26_3()
-  CON_MPE156_FEMALE_200(26,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_27_3()
-  CON_MPE156_FEMALE_200(27,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_28_3()
-  CON_MPE156_FEMALE_200(28,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_29_3()
-  CON_MPE156_FEMALE_200(29,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_30_3()
-  CON_MPE156_FEMALE_200(30,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_31_3()
-  CON_MPE156_FEMALE_200(31,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_32_3()
-  CON_MPE156_FEMALE_200(32,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_33_3()
-  CON_MPE156_FEMALE_200(33,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_34_3()
-  CON_MPE156_FEMALE_200(34,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_35_3()
-  CON_MPE156_FEMALE_200(35,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_36_3()
-  CON_MPE156_FEMALE_200(36,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_37_3()
-  CON_MPE156_FEMALE_200(37,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_38_3()
-  CON_MPE156_FEMALE_200(38,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_39_3()
-  CON_MPE156_FEMALE_200(39,3)
-#end
-
-#macro CON_MPE156_FEMALE_200_40_3()
-  CON_MPE156_FEMALE_200(40,3)
-#end
+#macro CON_THT_MPE156_1x1()  MPE_156(1,1)  #end
+#macro CON_THT_MPE156_2x1()  MPE_156(2,1)  #end
+#macro CON_THT_MPE156_3x1()  MPE_156(3,1)  #end
+#macro CON_THT_MPE156_4x1()  MPE_156(4,1)  #end
+#macro CON_THT_MPE156_5x1()  MPE_156(5,1)  #end
+#macro CON_THT_MPE156_6x1()  MPE_156(6,1)  #end
+#macro CON_THT_MPE156_7x1()  MPE_156(7,1)  #end
+#macro CON_THT_MPE156_8x1()  MPE_156(8,1)  #end
+#macro CON_THT_MPE156_9x1()  MPE_156(9,1)  #end
+#macro CON_THT_MPE156_10x1() MPE_156(10,1) #end
+#macro CON_THT_MPE156_11x1() MPE_156(11,1) #end
+#macro CON_THT_MPE156_12x1() MPE_156(12,1) #end
+#macro CON_THT_MPE156_13x1() MPE_156(13,1) #end
+#macro CON_THT_MPE156_14x1() MPE_156(14,1) #end
+#macro CON_THT_MPE156_15x1() MPE_156(15,1) #end
+#macro CON_THT_MPE156_16x1() MPE_156(16,1) #end
+#macro CON_THT_MPE156_17x1() MPE_156(17,1) #end
+#macro CON_THT_MPE156_18x1() MPE_156(18,1) #end
+#macro CON_THT_MPE156_19x1() MPE_156(19,1) #end
+#macro CON_THT_MPE156_20x1() MPE_156(20,1) #end
+#macro CON_THT_MPE156_21x1() MPE_156(21,1) #end
+#macro CON_THT_MPE156_22x1() MPE_156(22,1) #end
+#macro CON_THT_MPE156_23x1() MPE_156(23,1) #end
+#macro CON_THT_MPE156_24x1() MPE_156(24,1) #end
+#macro CON_THT_MPE156_25x1() MPE_156(25,1) #end
+#macro CON_THT_MPE156_26x1() MPE_156(26,1) #end
+#macro CON_THT_MPE156_27x1() MPE_156(27,1) #end
+#macro CON_THT_MPE156_28x1() MPE_156(28,1) #end
+#macro CON_THT_MPE156_29x1() MPE_156(29,1) #end
+#macro CON_THT_MPE156_30x1() MPE_156(30,1) #end
+#macro CON_THT_MPE156_31x1() MPE_156(31,1) #end
+#macro CON_THT_MPE156_32x1() MPE_156(32,1) #end
+#macro CON_THT_MPE156_33x1() MPE_156(33,1) #end
+#macro CON_THT_MPE156_34x1() MPE_156(34,1) #end
+#macro CON_THT_MPE156_35x1() MPE_156(35,1) #end
+#macro CON_THT_MPE156_36x1() MPE_156(36,1) #end
+#macro CON_THT_MPE156_37x1() MPE_156(37,1) #end
+#macro CON_THT_MPE156_38x1() MPE_156(38,1) #end
+#macro CON_THT_MPE156_39x1() MPE_156(39,1) #end
+#macro CON_THT_MPE156_40x1() MPE_156(40,1) #end
+#macro CON_THT_MPE156_1x2()  MPE_156(1,2)  #end
+#macro CON_THT_MPE156_2x2()  MPE_156(2,2)  #end
+#macro CON_THT_MPE156_3x2()  MPE_156(3,2)  #end
+#macro CON_THT_MPE156_4x2()  MPE_156(4,2)  #end
+#macro CON_THT_MPE156_5x2()  MPE_156(5,2)  #end
+#macro CON_THT_MPE156_6x2()  MPE_156(6,2)  #end
+#macro CON_THT_MPE156_7x2()  MPE_156(7,2)  #end
+#macro CON_THT_MPE156_8x2()  MPE_156(8,2)  #end
+#macro CON_THT_MPE156_9x2()  MPE_156(9,2)  #end
+#macro CON_THT_MPE156_10x2() MPE_156(10,2) #end
+#macro CON_THT_MPE156_11x2() MPE_156(11,2) #end
+#macro CON_THT_MPE156_12x2() MPE_156(12,2) #end
+#macro CON_THT_MPE156_13x2() MPE_156(13,2) #end
+#macro CON_THT_MPE156_14x2() MPE_156(14,2) #end
+#macro CON_THT_MPE156_15x2() MPE_156(15,2) #end
+#macro CON_THT_MPE156_16x2() MPE_156(16,2) #end
+#macro CON_THT_MPE156_17x2() MPE_156(17,2) #end
+#macro CON_THT_MPE156_18x2() MPE_156(18,2) #end
+#macro CON_THT_MPE156_19x2() MPE_156(19,2) #end
+#macro CON_THT_MPE156_20x2() MPE_156(20,2) #end
+#macro CON_THT_MPE156_21x2() MPE_156(21,2) #end
+#macro CON_THT_MPE156_22x2() MPE_156(22,2) #end
+#macro CON_THT_MPE156_23x2() MPE_156(23,2) #end
+#macro CON_THT_MPE156_24x2() MPE_156(24,2) #end
+#macro CON_THT_MPE156_25x2() MPE_156(25,2) #end
+#macro CON_THT_MPE156_26x2() MPE_156(26,2) #end
+#macro CON_THT_MPE156_27x2() MPE_156(27,2) #end
+#macro CON_THT_MPE156_28x2() MPE_156(28,2) #end
+#macro CON_THT_MPE156_29x2() MPE_156(29,2) #end
+#macro CON_THT_MPE156_30x2() MPE_156(30,2) #end
+#macro CON_THT_MPE156_31x2() MPE_156(31,2) #end
+#macro CON_THT_MPE156_32x2() MPE_156(32,2) #end
+#macro CON_THT_MPE156_33x2() MPE_156(33,2) #end
+#macro CON_THT_MPE156_34x2() MPE_156(34,2) #end
+#macro CON_THT_MPE156_35x2() MPE_156(35,2) #end
+#macro CON_THT_MPE156_36x2() MPE_156(36,2) #end
+#macro CON_THT_MPE156_37x2() MPE_156(37,2) #end
+#macro CON_THT_MPE156_38x2() MPE_156(38,2) #end
+#macro CON_THT_MPE156_39x2() MPE_156(39,2) #end
+#macro CON_THT_MPE156_40x2() MPE_156(40,2) #end
+#macro CON_THT_MPE156_1x3()  MPE_156(1,3)  #end
+#macro CON_THT_MPE156_2x3()  MPE_156(2,3)  #end
+#macro CON_THT_MPE156_3x3()  MPE_156(3,3)  #end
+#macro CON_THT_MPE156_4x3()  MPE_156(4,3)  #end
+#macro CON_THT_MPE156_5x3()  MPE_156(5,3)  #end
+#macro CON_THT_MPE156_6x3()  MPE_156(6,3)  #end
+#macro CON_THT_MPE156_7x3()  MPE_156(7,3)  #end
+#macro CON_THT_MPE156_8x3()  MPE_156(8,3)  #end
+#macro CON_THT_MPE156_9x3()  MPE_156(9,3)  #end
+#macro CON_THT_MPE156_10x3() MPE_156(10,3) #end
+#macro CON_THT_MPE156_11x3() MPE_156(11,3) #end
+#macro CON_THT_MPE156_12x3() MPE_156(12,3) #end
+#macro CON_THT_MPE156_13x3() MPE_156(13,3) #end
+#macro CON_THT_MPE156_14x3() MPE_156(14,3) #end
+#macro CON_THT_MPE156_15x3() MPE_156(15,3) #end
+#macro CON_THT_MPE156_16x3() MPE_156(16,3) #end
+#macro CON_THT_MPE156_17x3() MPE_156(17,3) #end
+#macro CON_THT_MPE156_18x3() MPE_156(18,3) #end
+#macro CON_THT_MPE156_19x3() MPE_156(19,3) #end
+#macro CON_THT_MPE156_20x3() MPE_156(20,3) #end
+#macro CON_THT_MPE156_21x3() MPE_156(21,3) #end
+#macro CON_THT_MPE156_22x3() MPE_156(22,3) #end
+#macro CON_THT_MPE156_23x3() MPE_156(23,3) #end
+#macro CON_THT_MPE156_24x3() MPE_156(24,3) #end
+#macro CON_THT_MPE156_25x3() MPE_156(25,3) #end
+#macro CON_THT_MPE156_26x3() MPE_156(26,3) #end
+#macro CON_THT_MPE156_27x3() MPE_156(27,3) #end
+#macro CON_THT_MPE156_28x3() MPE_156(28,3) #end
+#macro CON_THT_MPE156_29x3() MPE_156(29,3) #end
+#macro CON_THT_MPE156_30x3() MPE_156(30,3) #end
+#macro CON_THT_MPE156_31x3() MPE_156(31,3) #end
+#macro CON_THT_MPE156_32x3() MPE_156(32,3) #end
+#macro CON_THT_MPE156_33x3() MPE_156(33,3) #end
+#macro CON_THT_MPE156_34x3() MPE_156(34,3) #end
+#macro CON_THT_MPE156_35x3() MPE_156(35,3) #end
+#macro CON_THT_MPE156_36x3() MPE_156(36,3) #end
+#macro CON_THT_MPE156_37x3() MPE_156(37,3) #end
+#macro CON_THT_MPE156_38x3() MPE_156(38,3) #end
+#macro CON_THT_MPE156_39x3() MPE_156(39,3) #end
+#macro CON_THT_MPE156_40x3() MPE_156(40,3) #end
+
+
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+// begin assignment
+//con-samtec:SSW-101-02-S-S=CON_THT_MPE094_1x1(:2.54mm grid socket terminal
+//con-samtec:SSW-102-02-S-S=CON_THT_MPE094_2x1(:2.54mm grid socket terminal
+//con-samtec:SSW-103-02-S-S=CON_THT_MPE094_3x1(:2.54mm grid socket terminal
+//con-samtec:SSW-104-02-S-S=CON_THT_MPE094_4x1(:2.54mm grid socket terminal
+//con-samtec:SSW-105-02-S-S=CON_THT_MPE094_5x1(:2.54mm grid socket terminal
+//con-samtec:SSW-106-02-S-S=CON_THT_MPE094_6x1(:2.54mm grid socket terminal
+//con-samtec:SSW-107-02-S-S=CON_THT_MPE094_7x1(:2.54mm grid socket terminal
+//con-samtec:SSW-108-02-S-S=CON_THT_MPE094_8x1(:2.54mm grid socket terminal
+//con-samtec:SSW-109-02-S-S=CON_THT_MPE094_9x1(:2.54mm grid socket terminal
+//con-samtec:SSW-110-02-S-S=CON_THT_MPE094_10x1(:2.54mm grid socket terminal
+//con-samtec:SSW-111-02-S-S=CON_THT_MPE094_11x1(:2.54mm grid socket terminal
+//con-samtec:SSW-112-02-S-S=CON_THT_MPE094_12x1(:2.54mm grid socket terminal
+//con-samtec:SSW-113-02-S-S=CON_THT_MPE094_13x1(:2.54mm grid socket terminal
+//con-samtec:SSW-114-02-S-S=CON_THT_MPE094_14x1(:2.54mm grid socket terminal
+//con-samtec:SSW-115-02-S-S=CON_THT_MPE094_15x1(:2.54mm grid socket terminal
+//con-samtec:SSW-116-02-S-S=CON_THT_MPE094_16x1(:2.54mm grid socket terminal
+//con-samtec:SSW-117-02-S-S=CON_THT_MPE094_17x1(:2.54mm grid socket terminal
+//con-samtec:SSW-118-02-S-S=CON_THT_MPE094_18x1(:2.54mm grid socket terminal
+//con-samtec:SSW-119-02-S-S=CON_THT_MPE094_19x1(:2.54mm grid socket terminal
+//con-samtec:SSW-120-02-S-S=CON_THT_MPE094_20x1(:2.54mm grid socket terminal
+//con-samtec:SSW-121-02-S-S=CON_THT_MPE094_21x1(:2.54mm grid socket terminal
+//con-samtec:SSW-122-02-S-S=CON_THT_MPE094_22x1(:2.54mm grid socket terminal
+//con-samtec:SSW-123-02-S-S=CON_THT_MPE094_23x1(:2.54mm grid socket terminal
+//con-samtec:SSW-124-02-S-S=CON_THT_MPE094_24x1(:2.54mm grid socket terminal
+//con-samtec:SSW-125-02-S-S=CON_THT_MPE094_25x1(:2.54mm grid socket terminal
+//con-samtec:SSW-126-02-S-S=CON_THT_MPE094_26x1(:2.54mm grid socket terminal
+//con-samtec:SSW-127-02-S-S=CON_THT_MPE094_27x1(:2.54mm grid socket terminal
+//con-samtec:SSW-128-02-S-S=CON_THT_MPE094_28x1(:2.54mm grid socket terminal
+//con-samtec:SSW-129-02-S-S=CON_THT_MPE094_29x1(:2.54mm grid socket terminal
+//con-samtec:SSW-130-02-S-S=CON_THT_MPE094_30x1(:2.54mm grid socket terminal
+//con-samtec:SSW-131-02-S-S=CON_THT_MPE094_31x1(:2.54mm grid socket terminal
+//con-samtec:SSW-132-02-S-S=CON_THT_MPE094_32x1(:2.54mm grid socket terminal
+//con-samtec:SSW-133-02-S-S=CON_THT_MPE094_33x1(:2.54mm grid socket terminal
+//con-samtec:SSW-134-02-S-S=CON_THT_MPE094_34x1(:2.54mm grid socket terminal
+//con-samtec:SSW-135-02-S-S=CON_THT_MPE094_35x1(:2.54mm grid socket terminal
+//con-samtec:SSW-136-02-S-S=CON_THT_MPE094_36x1(:2.54mm grid socket terminal
+//con-samtec:SSW-137-02-S-S=CON_THT_MPE094_37x1(:2.54mm grid socket terminal
+//con-samtec:SSW-138-02-S-S=CON_THT_MPE094_38x1(:2.54mm grid socket terminal
+//con-samtec:SSW-139-02-S-S=CON_THT_MPE094_39x1(:2.54mm grid socket terminal
+//con-samtec:SSW-140-02-S-S=CON_THT_MPE094_40x1(:2.54mm grid socket terminal
+//con-samtec:SSW-101-02-S-D=CON_THT_MPE094_1x2(:2.54mm grid socket terminal
+//con-samtec:SSW-102-02-S-D=CON_THT_MPE094_2x2(:2.54mm grid socket terminal
+//con-samtec:SSW-103-02-S-D=CON_THT_MPE094_3x2(:2.54mm grid socket terminal
+//con-samtec:SSW-104-02-S-D=CON_THT_MPE094_4x2(:2.54mm grid socket terminal
+//con-samtec:SSW-105-02-S-D=CON_THT_MPE094_5x2(:2.54mm grid socket terminal
+//con-samtec:SSW-106-02-S-D=CON_THT_MPE094_6x2(:2.54mm grid socket terminal
+//con-samtec:SSW-107-02-S-D=CON_THT_MPE094_7x2(:2.54mm grid socket terminal
+//con-samtec:SSW-108-02-S-D=CON_THT_MPE094_8x2(:2.54mm grid socket terminal
+//con-samtec:SSW-109-02-S-D=CON_THT_MPE094_9x2(:2.54mm grid socket terminal
+//con-samtec:SSW-110-02-S-D=CON_THT_MPE094_10x2(:2.54mm grid socket terminal
+//con-samtec:SSW-111-02-S-D=CON_THT_MPE094_11x2(:2.54mm grid socket terminal
+//con-samtec:SSW-112-02-S-D=CON_THT_MPE094_12x2(:2.54mm grid socket terminal
+//con-samtec:SSW-113-02-S-D=CON_THT_MPE094_13x2(:2.54mm grid socket terminal
+//con-samtec:SSW-114-02-S-D=CON_THT_MPE094_14x2(:2.54mm grid socket terminal
+//con-samtec:SSW-115-02-S-D=CON_THT_MPE094_15x2(:2.54mm grid socket terminal
+//con-samtec:SSW-116-02-S-D=CON_THT_MPE094_16x2(:2.54mm grid socket terminal
+//con-samtec:SSW-117-02-S-D=CON_THT_MPE094_17x2(:2.54mm grid socket terminal
+//con-samtec:SSW-118-02-S-D=CON_THT_MPE094_18x2(:2.54mm grid socket terminal
+//con-samtec:SSW-119-02-S-D=CON_THT_MPE094_19x2(:2.54mm grid socket terminal
+//con-samtec:SSW-120-02-S-D=CON_THT_MPE094_20x2(:2.54mm grid socket terminal
+//con-samtec:SSW-121-02-S-D=CON_THT_MPE094_21x2(:2.54mm grid socket terminal
+//con-samtec:SSW-122-02-S-D=CON_THT_MPE094_22x2(:2.54mm grid socket terminal
+//con-samtec:SSW-123-02-S-D=CON_THT_MPE094_23x2(:2.54mm grid socket terminal
+//con-samtec:SSW-124-02-S-D=CON_THT_MPE094_24x2(:2.54mm grid socket terminal
+//con-samtec:SSW-125-02-S-D=CON_THT_MPE094_25x2(:2.54mm grid socket terminal
+//con-samtec:SSW-126-02-S-D=CON_THT_MPE094_26x2(:2.54mm grid socket terminal
+//con-samtec:SSW-127-02-S-D=CON_THT_MPE094_27x2(:2.54mm grid socket terminal
+//con-samtec:SSW-128-02-S-D=CON_THT_MPE094_28x2(:2.54mm grid socket terminal
+//con-samtec:SSW-129-02-S-D=CON_THT_MPE094_29x2(:2.54mm grid socket terminal
+//con-samtec:SSW-130-02-S-D=CON_THT_MPE094_30x2(:2.54mm grid socket terminal
+//con-samtec:SSW-131-02-S-D=CON_THT_MPE094_31x2(:2.54mm grid socket terminal
+//con-samtec:SSW-132-02-S-D=CON_THT_MPE094_32x2(:2.54mm grid socket terminal
+//con-samtec:SSW-133-02-S-D=CON_THT_MPE094_33x2(:2.54mm grid socket terminal
+//con-samtec:SSW-134-02-S-D=CON_THT_MPE094_34x2(:2.54mm grid socket terminal
+//con-samtec:SSW-135-02-S-D=CON_THT_MPE094_35x2(:2.54mm grid socket terminal
+//con-samtec:SSW-136-02-S-D=CON_THT_MPE094_36x2(:2.54mm grid socket terminal
+//con-samtec:SSW-137-02-S-D=CON_THT_MPE094_37x2(:2.54mm grid socket terminal
+//con-samtec:SSW-138-02-S-D=CON_THT_MPE094_38x2(:2.54mm grid socket terminal
+//con-samtec:SSW-139-02-S-D=CON_THT_MPE094_39x2(:2.54mm grid socket terminal
+//con-samtec:SSW-140-02-S-D=CON_THT_MPE094_40x2(:2.54mm grid socket terminal
+//con-samtec:SSW-101-02-S-T=CON_THT_MPE094_1x3(:2.54mm grid socket terminal
+//con-samtec:SSW-102-02-S-T=CON_THT_MPE094_2x3(:2.54mm grid socket terminal
+//con-samtec:SSW-103-02-S-T=CON_THT_MPE094_3x3(:2.54mm grid socket terminal
+//con-samtec:SSW-104-02-S-T=CON_THT_MPE094_4x3(:2.54mm grid socket terminal
+//con-samtec:SSW-105-02-S-T=CON_THT_MPE094_5x3(:2.54mm grid socket terminal
+//con-samtec:SSW-106-02-S-T=CON_THT_MPE094_6x3(:2.54mm grid socket terminal
+//con-samtec:SSW-107-02-S-T=CON_THT_MPE094_7x3(:2.54mm grid socket terminal
+//con-samtec:SSW-108-02-S-T=CON_THT_MPE094_8x3(:2.54mm grid socket terminal
+//con-samtec:SSW-109-02-S-T=CON_THT_MPE094_9x3(:2.54mm grid socket terminal
+//con-samtec:SSW-110-02-S-T=CON_THT_MPE094_10x3(:2.54mm grid socket terminal
+//con-samtec:SSW-111-02-S-T=CON_THT_MPE094_11x3(:2.54mm grid socket terminal
+//con-samtec:SSW-112-02-S-T=CON_THT_MPE094_12x3(:2.54mm grid socket terminal
+//con-samtec:SSW-113-02-S-T=CON_THT_MPE094_13x3(:2.54mm grid socket terminal
+//con-samtec:SSW-114-02-S-T=CON_THT_MPE094_14x3(:2.54mm grid socket terminal
+//con-samtec:SSW-115-02-S-T=CON_THT_MPE094_15x3(:2.54mm grid socket terminal
+//con-samtec:SSW-116-02-S-T=CON_THT_MPE094_16x3(:2.54mm grid socket terminal
+//con-samtec:SSW-117-02-S-T=CON_THT_MPE094_17x3(:2.54mm grid socket terminal
+//con-samtec:SSW-118-02-S-T=CON_THT_MPE094_18x3(:2.54mm grid socket terminal
+//con-samtec:SSW-119-02-S-T=CON_THT_MPE094_19x3(:2.54mm grid socket terminal
+//con-samtec:SSW-120-02-S-T=CON_THT_MPE094_20x3(:2.54mm grid socket terminal
+//con-samtec:SSW-121-02-S-T=CON_THT_MPE094_21x3(:2.54mm grid socket terminal
+//con-samtec:SSW-122-02-S-T=CON_THT_MPE094_22x3(:2.54mm grid socket terminal
+//con-samtec:SSW-123-02-S-T=CON_THT_MPE094_23x3(:2.54mm grid socket terminal
+//con-samtec:SSW-124-02-S-T=CON_THT_MPE094_24x3(:2.54mm grid socket terminal
+//con-samtec:SSW-125-02-S-T=CON_THT_MPE094_25x3(:2.54mm grid socket terminal
+//con-samtec:SSW-126-02-S-T=CON_THT_MPE094_26x3(:2.54mm grid socket terminal
+//con-samtec:SSW-127-02-S-T=CON_THT_MPE094_27x3(:2.54mm grid socket terminal
+//con-samtec:SSW-128-02-S-T=CON_THT_MPE094_28x3(:2.54mm grid socket terminal
+//con-samtec:SSW-129-02-S-T=CON_THT_MPE094_29x3(:2.54mm grid socket terminal
+//con-samtec:SSW-130-02-S-T=CON_THT_MPE094_30x3(:2.54mm grid socket terminal
+//con-samtec:SSW-131-02-S-T=CON_THT_MPE094_31x3(:2.54mm grid socket terminal
+//con-samtec:SSW-132-02-S-T=CON_THT_MPE094_32x3(:2.54mm grid socket terminal
+//con-samtec:SSW-133-02-S-T=CON_THT_MPE094_33x3(:2.54mm grid socket terminal
+//con-samtec:SSW-134-02-S-T=CON_THT_MPE094_34x3(:2.54mm grid socket terminal
+//con-samtec:SSW-135-02-S-T=CON_THT_MPE094_35x3(:2.54mm grid socket terminal
+//con-samtec:SSW-136-02-S-T=CON_THT_MPE094_36x3(:2.54mm grid socket terminal
+//con-samtec:SSW-137-02-S-T=CON_THT_MPE094_37x3(:2.54mm grid socket terminal
+//con-samtec:SSW-138-02-S-T=CON_THT_MPE094_38x3(:2.54mm grid socket terminal
+//con-samtec:SSW-139-02-S-T=CON_THT_MPE094_39x3(:2.54mm grid socket terminal
+//con-samtec:SSW-140-02-S-T=CON_THT_MPE094_40x3(:2.54mm grid socket terminal
+//=CON_THT_MPE156_1x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_2x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_3x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_4x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_5x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_6x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_7x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_8x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_9x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_10x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_11x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_12x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_13x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_14x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_15x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_16x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_17x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_18x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_19x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_20x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_21x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_22x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_23x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_24x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_25x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_26x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_27x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_28x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_29x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_30x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_31x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_32x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_33x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_34x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_35x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_36x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_37x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_38x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_39x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_40x1(:2.00mm grid socket terminal
+//=CON_THT_MPE156_1x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_2x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_3x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_4x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_5x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_6x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_7x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_8x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_9x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_10x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_11x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_12x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_13x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_14x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_15x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_16x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_17x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_18x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_19x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_20x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_21x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_22x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_23x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_24x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_25x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_26x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_27x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_28x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_29x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_30x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_31x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_32x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_33x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_34x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_35x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_36x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_37x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_38x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_39x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_40x2(:2.00mm grid socket terminal
+//=CON_THT_MPE156_1x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_2x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_3x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_4x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_5x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_6x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_7x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_8x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_9x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_10x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_11x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_12x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_13x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_14x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_15x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_16x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_17x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_18x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_19x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_20x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_21x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_22x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_23x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_24x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_25x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_26x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_27x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_28x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_29x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_30x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_31x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_32x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_33x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_34x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_35x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_36x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_37x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_38x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_39x3(:2.00mm grid socket terminal
+//=CON_THT_MPE156_40x3(:2.00mm grid socket terminal
+// end assignment
