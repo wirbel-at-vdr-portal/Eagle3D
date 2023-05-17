@@ -4,7 +4,6 @@
  * See the README file for copyright information and how to reach the author.
  ******************************************************************************/
 
-
 /*******************************************************************************
  * HE14 serie Right-Angle and Straight, Single-Row
  * Author: Philippe Boucheny <philippe.boucheny(replace with at)numericable.fr>
@@ -71,77 +70,45 @@
 #end
 
 
-#macro CON_AMP_HE14_1R_02()
-CON_AMP_HE14_1R_base(2)
-#end
+#macro CON_THT_TEConnectivity_HE14_1R_02() CON_AMP_HE14_1R_base(2)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_03() CON_AMP_HE14_1R_base(3)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_04() CON_AMP_HE14_1R_base(4)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_05() CON_AMP_HE14_1R_base(5)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_06() CON_AMP_HE14_1R_base(6)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_07() CON_AMP_HE14_1R_base(7)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_08() CON_AMP_HE14_1R_base(8)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_09() CON_AMP_HE14_1R_base(9)  #end
+#macro CON_THT_TEConnectivity_HE14_1R_10() CON_AMP_HE14_1R_base(10) #end
+#macro CON_THT_TEConnectivity_HE14_1S_02() CON_AMP_HE14_1S_base(2)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_03() CON_AMP_HE14_1S_base(3)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_04() CON_AMP_HE14_1S_base(4)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_05() CON_AMP_HE14_1S_base(5)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_06() CON_AMP_HE14_1S_base(6)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_07() CON_AMP_HE14_1S_base(7)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_08() CON_AMP_HE14_1S_base(8)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_09() CON_AMP_HE14_1S_base(9)  #end
+#macro CON_THT_TEConnectivity_HE14_1S_10() CON_AMP_HE14_1S_base(10) #end
 
-#macro CON_AMP_HE14_1R_03()
-CON_AMP_HE14_1R_base(3)
-#end
-
-#macro CON_AMP_HE14_1R_04()
-CON_AMP_HE14_1R_base(4)
-#end
-
-#macro CON_AMP_HE14_1R_05()
-CON_AMP_HE14_1R_base(5)
-#end
-
-#macro CON_AMP_HE14_1R_06()
-CON_AMP_HE14_1R_base(6)
-#end
-
-#macro CON_AMP_HE14_1R_07()
-CON_AMP_HE14_1R_base(7)
-#end
-
-#macro CON_AMP_HE14_1R_08()
-CON_AMP_HE14_1R_base(8)
-#end
-
-#macro CON_AMP_HE14_1R_09()
-CON_AMP_HE14_1R_base(9)
-#end
-
-#macro CON_AMP_HE14_1R_10()
-CON_AMP_HE14_1R_base(10)
-#end
-
-
-
-
-#macro CON_AMP_HE14_1S_02()
-CON_AMP_HE14_1S_base(2)
-#end
-
-#macro CON_AMP_HE14_1S_03()
-CON_AMP_HE14_1S_base(3)
-#end
-
-#macro CON_AMP_HE14_1S_04()
-CON_AMP_HE14_1S_base(4)
-#end
-
-#macro CON_AMP_HE14_1S_05()
-CON_AMP_HE14_1S_base(5)
-#end
-
-#macro CON_AMP_HE14_1S_06()
-CON_AMP_HE14_1S_base(6)
-#end
-
-#macro CON_AMP_HE14_1S_07()
-CON_AMP_HE14_1S_base(7)
-#end
-
-#macro CON_AMP_HE14_1S_08()
-CON_AMP_HE14_1S_base(8)
-#end
-
-#macro CON_AMP_HE14_1S_09()
-CON_AMP_HE14_1S_base(9)
-#end
-
-#macro CON_AMP_HE14_1S_10()
-CON_AMP_HE14_1S_base(10)
-#end
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+// begin assignment
+//=CON_THT_TEConnectivity_HE14_1R_02(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_03(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_04(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_05(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_06(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_07(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_08(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_09(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1R_10(:HE14 Straight Single Row
+//=CON_THT_TEConnectivity_HE14_1S_02(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_03(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_04(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_05(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_06(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_07(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_08(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_09(:HE14 Right Angle Single Row
+//=CON_THT_TEConnectivity_HE14_1S_10(:HE14 Right Angle Single Row
+// end assignment
