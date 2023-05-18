@@ -19,14 +19,14 @@
  * *****************************************************************************/
 #macro WAGO_233(Type,pins)
   union {
-    #if ((Type = 4) | (Type = 5)) 
+    #if ((Type = 4) | (Type = 5))
        #local CaseColor = color red 1 green 0.45 blue 0;
     #else
        #local CaseColor = color red 0.6 green 0.6 blue 0.6;
     #end
 
-    #if ((Type = 1) | (Type = 2)) 
-       #local pitch = 2.50; 
+    #if ((Type = 1) | (Type = 2))
+       #local pitch = 2.50;
     #else
        #local pitch = 2.54;
     #end
@@ -36,7 +36,7 @@
     #else
        #local WithHandle = off;
     #end
-  
+
     #local Slice =
        union {
           difference {
@@ -67,7 +67,7 @@
                 }
              }
           };
-  
+
     #local Clamp =
        union {
           difference {
@@ -185,7 +185,7 @@
           pigment {
              CaseColor
              }
-          }; 
+          };
     GRID(Clamp,pitch,pins,1)
     object {
        Slice
