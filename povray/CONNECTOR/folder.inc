@@ -16,4 +16,5 @@
 #include "CONNECTOR/THT/PHOENIX_MKDS1.inc"
 #include "CONNECTOR/THT/RIA_series59.inc"
 #include "CONNECTOR/THT/TEConnectivity_HE14.inc"
+#include "CONNECTOR/THT/WAGO-233-series.inc"
 #include "CONNECTOR/THT/WSLxxW.inc"
