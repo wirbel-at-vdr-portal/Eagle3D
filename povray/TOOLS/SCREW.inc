@@ -9,11 +9,19 @@
  * Macros for Screws :
  * Author: Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
  * 19.05.2023: added default screw, calculated from diameter -wk
+ * 19.05.2023: added metal like finish -wk
+ * 19.05.2023: make a real thread, instead of parallel ring cuts. -wk
  *
- * SCREWSIZE  : {2,2.5,3,4,5} for M2 M2.5 M3 M4 M5
+ * SCREWSIZE: number, read as follows
+ *         2   = M2
+ *         2.5 = M2.5
+ *         3   = M3
+ *         4   = M4
+ *         5   = M5
  * LENGTH     : length
  * SCREWCOLOR : color
  * HEAD       : head style, as table
+ *         -1 = no head
  *         0  = PAN
  *         1  = PHILIPS-ROUND-PAN
  *         10 = SLOTTED HEXA
@@ -29,11 +37,11 @@
  * NOTE: zero is under head for #0 to #21 headed screws and on top for all
  *       counter sunk headed screws
  ******************************************************************************/
-#macro TOOLS_SCREW (SCREWSIZE,LENGTH,HEAD,SCREWCOLOR)
+#macro TOOLS_SCREW(SCREWSIZE,LENGTH,HEAD,SCREWCOLOR)
   union {
      #switch (SCREWSIZE)
         #case(2)
-           #local R = 1.6;  //4 0.8
+           #local R = 1.6;  // Kernloch
            #local r = 0.4;
            #local ep = 1.3;
            #local r1 = 0.65;
@@ -41,7 +49,7 @@
            #local delta = 1.12;
            #local B = 1.2;
            #local H = 1.5;
-           #local T = 0.4;
+           #local T = 0.4; // Steigung
            #local S = 1.3;
            #break
         #case(2.5)
@@ -238,20 +246,70 @@
       #local N=0;
   #end
 
-  // body
-  difference {
-     union {
-        cylinder { <0,-B1,0>, <0,-LENGTH+r,0>, SCREWSIZE/2 }
-        cone { <0,-LENGTH+r,0>, SCREWSIZE/2, <0,-LENGTH,0>, SCREWSIZE/3 }
+  // body/thread
+  union {
+     #local HTRI = sqrt(3/4);
+     #local fn_Screw = function(x, y, z, P0_Dmajor, P1_Thread_count) {
+        f_sphere(
+           x,0,z,
+           P0_Dmajor/2 - (1 - cos(y*2*pi*P1_Thread_count + atan2(x, z)))*0.3125*HTRI/P1_Thread_count
+           )
         }
-     union {
-        #while (N < (LENGTH/T+1))
-            torus { SCREWSIZE/1.95, T/2.6 translate (-B1-N*T) * y}
-            #local N = N + 1;
-        #end
+
+     #if (N > 0)
+        cylinder {
+           <0,-B1    ,0>
+           <0,-B1-N*T,0>
+           SCREWSIZE/2
+           }
+     #end
+
+     intersection {
+        isosurface {
+           function {
+              fn_Screw(x,y,z,SCREWSIZE-2,1/T)
+              }
+           contained_by {
+              box { (LENGTH)/2, -(LENGTH)/2 }
+              }
+           threshold 1
+           accuracy 0.01
+           max_gradient 4
+           translate <0,-LENGTH/2,0>
+           }
+        union {
+           cylinder {
+              <0,-B1      ,0>
+              <0,-LENGTH+r,0>
+              SCREWSIZE/2
+              }
+           cone {
+              <0,-LENGTH+r,0> SCREWSIZE/2
+              <0,-LENGTH  ,0> SCREWSIZE/3
+              }
+           }
         }
      }
-
-  pigment { SCREWCOLOR }
+  texture {
+     pigment {
+        SCREWCOLOR
+        }
+     normal {
+        bumps 0.1
+        scale 0.01
+        }
+     finish {
+        ambient 0.05
+        diffuse 0.2
+        specular 0.8
+        roughness 0.02
+        reflection {
+           0.3,0.6 falloff 3
+           metallic 1
+           exponent 1.5
+           }
+        brilliance 2
+        }
+     }
   }
 #end
