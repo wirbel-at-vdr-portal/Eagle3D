@@ -8,7 +8,7 @@
 /*******************************************************************************
  * Macros for Screws :
  * Author: Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
- * Rev. 1.1 - 04/01/06
+ * 19.05.2023: added default screw, calculated from diameter -wk
  *
  * SCREWSIZE  : {2,2.5,3,4,5} for M2 M2.5 M3 M4 M5
  * LENGTH     : length
@@ -92,6 +92,18 @@
            #local T = 0.8;
            #local S = 2.92;
            #break
+        #else
+           // estimate from screw size
+           #local R = 0.8*SCREWSIZE;
+           #local r = 0.2*SCREWSIZE;
+           #local ep = 0.66*SCREWSIZE;
+           #local r1 = 0.33*SCREWSIZE;
+           #local A = 0.775+1.45*SCREWSIZE;
+           #local delta = 0.55+0.31*SCREWSIZE;
+           #local B = 0.37+0.44*SCREWSIZE;
+           #local H = 0.8*SCREWSIZE;
+           #local T = 0.1+0.14*SCREWSIZE;
+           #local S = 0.27+0.54*SCREWSIZE;
         #end
 
      #if (HEAD >= 0)
