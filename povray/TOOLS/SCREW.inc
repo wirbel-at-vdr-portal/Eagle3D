@@ -11,6 +11,8 @@
  * 19.05.2023: added default screw, calculated from diameter -wk
  * 19.05.2023: added metal like finish -wk
  * 19.05.2023: make a real thread, instead of parallel ring cuts. -wk
+ * 20.05.2023: add 0.250-36UNS-2A (quarter inch outer d, 36revs per inch)
+ *             for SMA threads -wk
  *
  * SCREWSIZE: number, read as follows
  *         2   = M2
@@ -18,6 +20,11 @@
  *         3   = M3
  *         4   = M4
  *         5   = M5
+ *       6.35   = 0.250-36UNS-2A
+ *         any other number is metric, but less precise;
+ *            ie. 1.2 = M1.2
+ *                8   = M8
+ *
  * LENGTH     : length
  * SCREWCOLOR : color
  * HEAD       : head style, as table
@@ -99,6 +106,19 @@
            #local H = 4;
            #local T = 0.8;
            #local S = 2.92;
+           #break
+        #case(6.35) // 0.250-36UNS-2A
+           #local inch = 25.4;
+           #local T = inch/36;
+           #local r = 0.2*SCREWSIZE;
+           #local R = 0.212 * inch;
+           #local r1 = 0.33*SCREWSIZE;
+           #local ep = 0.66*SCREWSIZE;
+           #local A = 0.775+1.45*SCREWSIZE;
+           #local delta = 0.55+0.31*SCREWSIZE;
+           #local B = 0.37+0.44*SCREWSIZE;
+           #local H = 0.8*SCREWSIZE;
+           #local S = 0.27+0.54*SCREWSIZE;
            #break
         #else
            // estimate from screw size
