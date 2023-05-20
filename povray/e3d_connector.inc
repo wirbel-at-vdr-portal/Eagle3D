@@ -283,44 +283,7 @@ texture{col}}
 #end
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_SMA_THREADS.inc.src
-//Threads for SMA
-//Duane Clark <dclark@akamail.com>
-// //////////
-#macro SMA_THREADS(od,id,pitch,len)
-difference
-{
-  #local ParAMin = id/2;
-  #local ParAMax = od/2;
-  #local ParBMin = 0;
-  #local ParBMax = 2*pi;
-  #local ParCMin = 0;
-  #local ParCMax = 1;
-  #local td = ParAMax-ParAMin; // thread depth
-  #local threads = len/pitch;
 
-  union
-  {
-    #local i = 0;
-    #while(i<threads)
-      cone{<0,0,i*pitch> id/2 <0,0,(i+0.5)*pitch> od/2}
-      cone{<0,0,(i+0.5)*pitch> od/2 <0,0,(i+1)*pitch> id/2}
-      #local i = i+1;
-    #end
-  }
-  difference
-  {
-    cylinder{<0,0,-1.1*pitch><0,0,td*0.99> 1.1*od/2}
-    cone{<0,0,0> id/2 <0,0,td> id/1.99+td}
-  }
-  difference
-  {
-    cylinder{<0,0,len-0.99*td><0,0,len+pitch*2> 1.1*od/2}
-    cone{<0,0,len-td> id/1.99+td <0,0,len> id/2}
-  }
-}
-#end
 
 
 // ////////////////////////////////////////////////////////////
@@ -374,39 +337,7 @@ translate<-(Pins-1)*Pitch/2,0,0>}
 #end
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./2_SMA_JACK.inc.src
-// SMA
-// Duane Clark <dclark@akamail.com>
-// //////////
-#macro SMA_JACK(l)
-union
-{
-  difference
-  {
-    union
-    {
-      object{SMA_THREADS(6.35,5.38,0.71,3.56)
-        rotate<0,0,-90>
-        translate<0,0,0.76>
-      }
-      cylinder{<0,0,0> <0,0,l> 2.69 }
-    }
-    cylinder{<0,0,-0.1> <0,0,l+0.1> 2.3 }
-  }
-  difference
-  {
-    cylinder{<0,0,1.93> <0,0,4> 2.3 pigment{White}}
-    cylinder{<0,0,1.9> <0,0,3.9> 0.92 pigment{White}}
-  }
-  difference
-  {
-    cylinder{<0,0,1.95> <0,0,3.6> 0.90}
-    cylinder{<0,0,1.9> <0,0,3.5> 0.70}
-  }
-  texture{col_gold}
-}
-#end
+
 
 /********************************************************************************************************************************************
 //AK-700 Klemme ohne Mittelanschluss RM 5.0 Uwe Lorenz <u.lorenz@er-dresden.net>
@@ -5168,102 +5099,10 @@ CON_SD_CONNECTOR_YAMAICHI_FPS_BASE(0)
 #end
 
 
-/********************************************************************************************************************************************
-//Duane Clark <dclark@akamail.com>
-********************************************************************************************************************************************/
-#macro CON_SMA_JH_BASE()
-union
-{
-  union
-  {
-    object{
-      SMA_JACK(8.25) 
-      rotate<0,180,0> 
-      translate<0,0,11.68>
-    }
-    cone{<0,0,3.43> 3.19 <0,0,3.93> 2.68 }
-    translate<0,6.35,0>
-  }
-  
-  // the body piece
-  object
-  {
-    intersection
-    {
-      box{<-3.43,-3.43,4.75><3.43,3.43,13.47> }
-      sphere{<0,0,9.2>,5.85 }
-      cylinder{<0,0,4> <0,0,14> 4.7 }
-      cylinder{<-4,0,9.11> <4,0,9.11> 5.35 }
-      cylinder{<0,-4,9.11> <0,4,9.11> 5.35 }
-    }
-    translate<0,0,-2.79>
-    rotate<-90,0,0>
-  }
-  
-  // the base piece
-  union
-  {
-    difference {
-      cylinder{<0,0,2.79> <0,0,4.25> 4.10 }
-      cylinder{<0,0,2.7> <0,0,3.3> 3.08 }
-      box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<4.6,0,1.3>}
-      box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<0,4.6,1.3>}
-      box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<-4.6,0,1.3>}
-      box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<0,-4.6,1.3>}
-    }
-    box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<2.54,2.54,0> }
-    box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<-2.54,2.54,0> }
-    box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<2.54,-2.54,0> }
-    box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<-2.54,-2.54,0> }
-    cylinder{<0,0,0.25> <0,0,4.25> 0.635 }
-    cone{<0,0,0> 0.5 <0,0,0.25> 0.635 }
-    cone{<0,0,4.25> 4.10 <0,0,4.75> 3.60 }
-    translate<0,0,-2.79>
-    rotate<-90,0,0>
-  }
-  texture{col_gold}
-  rotate<0,90,0>
-}
-#end
-#macro CON_SMA_JH()
-CON_SMA_JH_BASE()
-#end
 
 
-/********************************************************************************************************************************************
-//Duane Clark <dclark@akamail.com>
-********************************************************************************************************************************************/
-#macro CON_SMA_JV_BASE()
-union
-{
-  object{
-    SMA_JACK(8.06) 
-    rotate<0,180,0> 
-    translate<0,0,12.31>
-  }
-  cone{<0,0,4.24> 3.19 <0,0,4.75> 2.68 }
-  difference {
-    cylinder{<0,0,2.79> <0,0,4.25> 4.10 }
-    cylinder{<0,0,2.7> <0,0,3.3> 3.08 }
-    box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<4.6,0,1.3>}
-    box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<0,4.6,1.3> }
-    box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<-4.6,0,1.3>}
-    box{<-2,-2,-2><2,2,2> rotate<0,0,45> translate<0,-4.6,1.3>}
-  }
-  box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<2.54,2.54,0>}
-  box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<-2.54,2.54,0>}
-  box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<2.54,-2.54,0>}
-  box{<-0.51,-0.51,0><0.51,0.51,2.79> rotate<0,0,45> translate<-2.54,-2.54,0>}
-  cylinder{<0,0,0.25> <0,0,4.25> 0.635}
-  cone{<0,0,0> 0.5 <0,0,0.25> 0.635}
-  translate<0,0,-2.79>
-  texture{col_gold}
-  rotate<-90,0,0>
-}
-#end
-#macro CON_SMA_JV()
-CON_SMA_JV_BASE()
-#end
+
+
 
 
 /********************************************************************************************************************************************
