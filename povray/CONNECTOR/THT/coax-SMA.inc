@@ -430,7 +430,63 @@
      }
 #end
 
-
+/*******************************************************************************
+ * SMA jack (female), print, straight
+ * 21.05.2023, wk
+ ******************************************************************************/
+#macro CON_SMT_SMA_STRAIGHT()
+  union {
+     intersection {
+        object {
+           SMA_female(off)
+           rotate <90,0,0>
+           translate <0,-2.76,0>
+           }
+        cylinder {
+           <0,  0,0>
+           <0,9.0,0>
+           7/2
+           }
+        }
+     box {
+        <-6.35/2,    +1.27,-6.35/2>
+        <+6.35/2,8.84-6.55,+6.35/2>
+        }
+     GRID(
+        box {
+           <-1.59/2,   0,-1.59/2>
+           <+1.59/2,1.27,+1.59/2>
+           }
+        6.35-1.59,2,2
+        )
+     cylinder {
+        <0,   0,0>
+        <0,1.27,0>
+        1.27/2
+        }
+     texture {
+        pigment {
+           Gold
+           }
+        normal {
+           bumps 0.001
+           scale 0.01
+           }
+        finish {
+           ambient 0.7
+           diffuse 0.02
+           specular 0.3
+           roughness 0.01
+           reflection {
+              0.3,0.6 falloff 3
+              metallic 1
+              exponent 1.5
+              }
+           brilliance 2
+           }
+        }
+     }
+#end
 
 
 
