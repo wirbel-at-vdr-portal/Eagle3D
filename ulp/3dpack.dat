@@ -2999,7 +2999,7 @@ ML34L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL34W
 ML40L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL40W(:Shrouded Header bended 40Pin:
 ML50L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL50W(:Shrouded Header bended 50Pin:
 ML64L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL64W(:Shrouded Header bended 64Pin:
-AMP_227161:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_AMP_227161(:BNC right angle jack:
+AMP_227161:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_AMP_227161(:BNC right angle jack:
 LEMO_EPA.00.250.NTN_L:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LEMO_EPA_00_250_NTN_L(:LEMO EPA.00.250.NTN_L 90deg ellbow Jack:
 SP19L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_SP19L(:Vishay T18 Resistor Trimmer:
 1210:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special

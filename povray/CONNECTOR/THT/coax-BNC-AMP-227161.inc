@@ -8,7 +8,7 @@
  * BNC Buchse liegend isoliert weiss
  * wk
  ******************************************************************************/
-#macro CON_AMP_227161()
+#macro CON_THT_AMP_227161()
   union {
      union { // Korpus
         difference {
@@ -236,5 +236,5 @@
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//con-coax:AMP_227161=CON_AMP_227161(:BNC right angle jack
+//con-coax:AMP_227161=CON_THT_AMP_227161(:BNC right angle jack
 // end assignment
