@@ -1,25 +1,34 @@
+/*******************************************************************************
+ * Eagle3D - generates 3d images from Eagle PCB board files.
+ *
+ * See the README file for copyright information and how to reach the author.
+ ******************************************************************************/
 
+/*******************************************************************************
+ * BNC socket straight, 17.5mm x 17.5mm, 12.7mm grid
+ * 21.05.2023, -wk
+ ******************************************************************************/
 #macro CON_THT_AMP_112536()
   union {
      union {
         difference {
            union {
               cylinder { // aeusserer Anschluss
-                 <0,0,-3>,<0,0,12>,4.7
+                 <0,0,-3>,<0,0,12>,9.65/2
                  open
                  }
               difference {
                  cylinder {
-                    <0,0,10.5>,<0,0,12>,4.7
+                    <0,0,10.5>,<0,0,12>,9.65/2
                     }
                  cylinder {
-                    <0,0,8>,<0,0,12.1>,4.4
+                    <0,0,8>,<0,0,12.1>,8.4/2
                     }
                  }
               translate <7.25,6.25,5.5+14>
               }
            torus {
-              6.0 2
+              6.5 2.1
               rotate <90,0,0>
               translate <7.25,6.25,5.0+22.5>
               }
@@ -35,8 +44,10 @@
               }
            }
         difference {
-           cylinder { // innerer Anschluss A
-              <0,0,-5>,<0,0,1>,2.5
+           object { // innerer Anschluss A
+              Round_Cylinder (
+                 <0,0,-5> <0,0,1> 2.5 0.2 0
+                 )
               translate <7.25,6.25,29>
               pigment { White * 0.75 }//Gray70 }
               }
@@ -79,10 +90,6 @@
         rotate <-90,0,0>
         translate <-1.3,4.4,6.2>     
         }
-
-
-
-
      intersection {
         Round_Box (
            <-17.5/2,-4,-17.5/2>
@@ -92,6 +99,14 @@
         box {
            <-18.5/2,    0,-18.5/2>
            <+18.5/2,+2.36,+18.5/2>
+           }
+        }
+     cylinder {
+        <0,   0,0>
+        <0,-0.1,0>
+        2.5
+        pigment {
+           White * 0.98
            }
         }
      cylinder {
@@ -120,5 +135,13 @@
            ambient (0.1 * global_ambient_mul)
            }
         }
+     rotate <0,90,0>
      }
 #end
+
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+// begin assignment
+//con-coax:B35N57=CON_THT_AMP_112536(:BNC socket straight
+// end assignment

@@ -1943,7 +1943,9 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PR
 36HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F36(:Centronics 36polig 90 Grad weiblich:Centronics 36 Pins 90deg female (con-amp-champ.lib)
 50H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F50(:Centronics 50polig 90 Grad weiblich:Centronics 50 Pins 90deg female (con-amp-champ.lib)
 50HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F50(:Centronics 50polig 90 Grad weiblich:Centronics 50 Pins 90deg female (con-amp-champ.lib)
-B35N61:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_COAX_B35N61(:BNC socket (con-coax.lib):
+AMP_227161:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_AMP_227161(:BNC right angle jack:
+B35N57:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_AMP_112536(:BNC socket straight:
+R141426:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_R141426161(:BNC socket straight:
 733989-5:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DCPOWERCONNECTOR(:DC power connector:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DC_JACK_HEBO_13(:Hohlstecker-Printeinbaubuchse, gewinkelt (Reichelt.de HEBO 13):DC-Jack, Print (Reichelt.de HEBO 13)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_3S(:Hirschmann DIN-Buchse MAB_3S, Frontplattenmontage, Anschluss ueber Kabel:
@@ -2999,7 +3001,6 @@ ML34L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL34W
 ML40L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL40W(:Shrouded Header bended 40Pin:
 ML50L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL50W(:Shrouded Header bended 50Pin:
 ML64L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_WSL64W(:Shrouded Header bended 64Pin:
-AMP_227161:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_AMP_227161(:BNC right angle jack:
 LEMO_EPA.00.250.NTN_L:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LEMO_EPA_00_250_NTN_L(:LEMO EPA.00.250.NTN_L 90deg ellbow Jack:
 SP19L:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:RES_THT_TRIM_SP19L(:Vishay T18 Resistor Trimmer:
 1210:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:0:NOMACRO:Nicht benutzen!!!! Spezial:Do not use!!!! special

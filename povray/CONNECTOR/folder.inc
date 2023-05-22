@@ -8,6 +8,7 @@
 #include "CONNECTOR/SMT/MOLEX_87832_series.inc"
 #include "CONNECTOR/THT/coax-BNC-AMP-112536.inc"
 #include "CONNECTOR/THT/coax-BNC-AMP-227161.inc"
+#include "CONNECTOR/THT/coax-BNC-RADIALL_R141426161.inc"
 #include "CONNECTOR/THT/coax_LEMO.inc"
 #include "CONNECTOR/THT/coax-SMA.inc"
 #include "CONNECTOR/THT/generic_jack_socket_035_stereo.inc"
