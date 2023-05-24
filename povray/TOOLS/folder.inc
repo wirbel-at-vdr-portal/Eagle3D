@@ -26,3 +26,5 @@
 #include "TOOLS/WASHER.inc"
 #include "TOOLS/WIRE_LEADS.inc"
 
+
+#include "TOOLS/BENT_PLANE.inc" // dependency to TOOLS/RECT_BOGEN.inc
