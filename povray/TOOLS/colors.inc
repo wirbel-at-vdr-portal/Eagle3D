@@ -11,6 +11,7 @@
 
 #declare col_gold           = texture { T_Gold_5E             finish { F_MetalA ambient(0.35 * global_ambient_mul) } }
 #declare col_silver         = texture { T_Silver_5A           finish { F_MetalA ambient(0.35 * global_ambient_mul) } }
+#declare col_tin            = texture { pigment { Gray70 }    normal { bumps 0.01 scale 0.001 } finish { F_MetalB ambient (0.3 * global_ambient_mul) } }
 #declare col_bright_marking = texture { pigment { Gray60 }    finish {          ambient(0.10 * global_ambient_mul) } }
 #declare col_black_marking  = texture { pigment { Black }     finish {          ambient(0.10 * global_ambient_mul) } }
 #declare col_ic_body_1      = texture { pigment { Gray20 }    finish {          ambient(0.10 * global_ambient_mul) } }

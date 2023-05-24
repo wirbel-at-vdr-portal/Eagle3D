@@ -66,8 +66,6 @@
 #end
 
 
-
-
 /*******************************************************************************
  * Faston 0.187 dual stake terminal
  * TE Connectivity Series 187 part 062221-1
@@ -134,7 +132,7 @@
         0.185*inch-Thickness,1,2
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -172,7 +170,7 @@
         PinGrid,2,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -213,7 +211,7 @@
         PinGrid,2,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -246,7 +244,7 @@
         PinGrid,2,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -284,7 +282,7 @@
         PinGrid,3,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -330,7 +328,7 @@
         PinGrid,2,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -380,7 +378,7 @@
         PinGrid,2,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -444,7 +442,7 @@
         translate <-4.2/2-0.81,0.81,5/2>
         }
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -484,7 +482,7 @@
         PinGrid,2,1
         )
      texture {
-        col_silver
+        col_tin
         }
      }
 #end
@@ -494,5 +492,14 @@
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//=CON_THT_FASTON_V(:Faston vertical 6.35 terminal
+//con-faston:62221=CON_THT_FASTON187_62221(:Faston dual stake 4.75 terminal
+//con-faston:62409-1=CON_THT_FASTON250_62409(:Faston 6.35 terminal
+//con-faston:F061.040=CON_THT_FASTON250_default(:Faston 6.35 terminal
+//con-faston:F061.060=CON_THT_FASTON250_default(:Faston 6.35 terminal
+//con-faston:F061.080=CON_THT_FASTON250_3866G68(:Faston 6.35 terminal
+//con-faston:F061.100=CON_THT_FASTON250_3866B68(:Faston 6.35 terminal
+//con-faston:F061.120=CON_THT_FASTON250_216843(:Faston 6.35 terminal
+//con-faston:F061.200=CON_THT_FASTON250_3867B68(:Faston 6.35 terminal
+//con-faston:F061.220=CON_THT_FASTON250_3868Y68(:Faston 6.35 terminal
+//con-faston:F061.250=CON_THT_FASTON250_72890(:Faston 6.35 terminal
 // end assignment
