@@ -69,7 +69,8 @@
 
 
 /*******************************************************************************
- * Faston TE Connectivity Series 187 dual stake
+ * Faston 0.187 dual stake terminal
+ * TE Connectivity Series 187 part 062221-1
  * 23.05.2023, -wk
  ******************************************************************************/
 #macro CON_THT_FASTON187_62221()
@@ -138,7 +139,49 @@
      }
 #end
 
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * TE Connectivity Series 250 part 62409-1
+ * 24.05.2023, -wk
+ ******************************************************************************/
+#macro CON_THT_FASTON250_62409()
+  union {
+     #local Thickness = 0.032 * inch;
+     #local T = 0.295 * inch;
+     #local H = (15.8-3.18)-8.50;
+     #local h = 5.0;
+     #local PinWidth = 0.046 * inch;
+     #local PinGrid = 0.200 * inch;
+     object {
+        Faston_Tab(250)
+        translate <0,H,0>
+        }
+     box {
+        <-2, h,-0.3/2>
+        <+2,10,+0.3/2>
+        }
+     box {
+        <-T/2,0,-Thickness/2>
+        <+T/2,h,+Thickness/2>
+        }
+     GRID (
+        box {
+           <-PinWidth/2, 0,-Thickness/2>
+           <+PinWidth/2,-4,+Thickness/2>
+           }
+        PinGrid,2,1
+        )
+     texture {
+        col_silver
+        }
+     }
+#end
 
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * Vogt Verbindungstechnik 3866G.68
+ * 23.05.2023, -wk
+ ******************************************************************************/
 #macro CON_THT_FASTON250_3866G68()
   union {
      #local Thickness = 0.032 * inch;
@@ -175,7 +218,11 @@
      }
 #end
 
-
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * Vogt Verbindungstechnik 3866B.68
+ * 23.05.2023, -wk
+ ******************************************************************************/
 #macro CON_THT_FASTON250_3866B68()
   union {
      #local Thickness = 0.032 * inch;
@@ -204,6 +251,11 @@
      }
 #end
 
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * TE Connectivity Series 250 part 216843-3
+ * 23.05.2023, -wk
+ ******************************************************************************/
 #macro CON_THT_FASTON250_216843()
   union {
      #local Thickness = 0.032 * inch;
@@ -237,6 +289,11 @@
      }
 #end
 
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * Vogt Verbindungstechnik 3867B.68
+ * 23.05.2023, -wk
+ ******************************************************************************/
 #macro CON_THT_FASTON250_3867B68()
   union {
      #local Thickness = 0.032 * inch;
@@ -278,6 +335,11 @@
      }
 #end
 
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * Vogt Verbindungstechnik 3868Y.68
+ * 23.05.2023, -wk
+ ******************************************************************************/
 #macro CON_THT_FASTON250_3868Y68()
   union {
      #local Thickness = 0.032 * inch;
@@ -322,6 +384,115 @@
         }
      }
 #end
+
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * Buerklin 07F255, vendor unknown, vendor part-no 72890
+ * 24.05.2023, -wk
+ ******************************************************************************/
+#macro CON_THT_FASTON250_72890()
+  union {
+     object {
+        Faston_Tab(250)
+        translate <0,2,-3+0.81/2>
+        }
+     difference {
+        object {
+           BENT_PLANE_OUTER(9.0,2.0,8.3,0.81,0.1,90)
+           rotate <0,-90,0>
+           translate <0,0,-3>
+           }
+        box {
+           <+4.2/2,-0.1,-1.0>
+           <+8.4/2,+0.9,+6.1>
+           }
+        box {
+           <-4.2/2,-0.1,-1.0>
+           <-8.4/2,+0.9,+6.1>
+           }
+        box {
+           <-1.5,-0.1,-1.5>
+           <+1.5,+0.9,+1.5>
+           rotate <0,+30,0>
+           translate <+4.2,0,-0.5>
+           }
+        box {
+           <-1.5,-0.1,-1.5>
+           <+1.5,+0.9,+1.5>
+           rotate <0,-30,0>
+           translate <-4.2,0,-0.5>
+           }
+        }
+     object {
+        GRID (
+           object {
+              BENT_PLANE_OUTER(1.0,4.5,1.0,0.81,0.1,90)
+              rotate <0,0,180>
+              },
+           5.0,1,2
+           )
+        translate <+4.2/2+0.81,0.81,5/2>
+        }
+     object {
+        GRID (
+           object {
+              BENT_PLANE_OUTER(1.0,4.5,1.0,0.81,0.1,90)
+              rotate <0,180,180>
+              },
+           5.0,1,2
+           )
+        translate <-4.2/2-0.81,0.81,5/2>
+        }
+     texture {
+        col_silver
+        }
+     }
+#end
+
+/*******************************************************************************
+ * Faston 0.250 terminal
+ * For packages F061.040 and F061.060, no datasheets. Draw a default terminal.
+ *
+ * Grid = 5.3, D = 1.0
+ * 24.05.2023, -wk
+ ******************************************************************************/
+#macro CON_THT_FASTON250_default()
+  union {
+     #local Thickness = 0.032 * inch;
+     #local T = 0.295 * inch;
+     #local H = (15.8-3.18)-8.50;
+     #local h = 5.0;
+     #local PinWidth = 1.0;
+     #local PinGrid = 5.3;
+     object {
+        Faston_Tab(250)
+        translate <0,H,0>
+        }
+     box {
+        <-2, h,-0.3/2>
+        <+2,10,+0.3/2>
+        }
+     box {
+        <-T/2,0,-Thickness/2>
+        <+T/2,h,+Thickness/2>
+        }
+     GRID (
+        box {
+           <-PinWidth/2, 0,-Thickness/2>
+           <+PinWidth/2,-4,+Thickness/2>
+           }
+        PinGrid,2,1
+        )
+     texture {
+        col_silver
+        }
+     }
+#end
+
+
+
+
+
 
 
 /*******************************************************************************
