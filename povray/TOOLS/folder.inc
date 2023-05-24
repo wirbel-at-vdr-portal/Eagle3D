@@ -8,6 +8,7 @@
 #include "TOOLS/color_presets.inc"
 #include "TOOLS/logos.inc"
 #include "TOOLS/textures.inc"
+#include "TOOLS/units.inc"
 
 #include "TOOLS/ARC.inc"
 #include "TOOLS/BENTPIPE.inc"

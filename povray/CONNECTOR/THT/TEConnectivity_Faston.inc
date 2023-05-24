@@ -7,8 +7,6 @@
 
 #macro Faston_Tab(Series)
   difference {
-     #local inch = 25.40;
-
      #switch(Series)
         #case(187) // 4.75mm
            #local W = 0.187 * inch;        
@@ -76,7 +74,6 @@
  ******************************************************************************/
 #macro CON_THT_FASTON187_62221()
   union {
-     #local inch = 25.40;
      #local Thickness = 0.020 * inch;
      #local T = 0.303 * inch;
      #local W = 0.250 * inch;
@@ -144,7 +141,6 @@
 
 #macro CON_THT_FASTON250_3866G68()
   union {
-     #local inch = 25.40;
      #local Thickness = 0.032 * inch;
      #local T = 8.0;
      #local H = 2.3;
@@ -182,7 +178,6 @@
 
 #macro CON_THT_FASTON250_3866B68()
   union {
-     #local inch = 25.40;
      #local Thickness = 0.032 * inch;
      #local T = 0.250 * inch;
      #local H = 2.4+1.0;
@@ -211,7 +206,6 @@
 
 #macro CON_THT_FASTON250_216843()
   union {
-     #local inch = 25.40;
      #local Thickness = 0.032 * inch;
      #local T = 8.0;
      #local H = 2.75;
@@ -245,7 +239,6 @@
 
 #macro CON_THT_FASTON250_3867B68()
   union {
-     #local inch = 25.40;
      #local Thickness = 0.032 * inch;
      #local B1 = 8.0;
      #local H = 9.0;
@@ -287,7 +280,6 @@
 
 #macro CON_THT_FASTON250_3868Y68()
   union {
-     #local inch = 25.40;
      #local Thickness = 0.032 * inch;
      #local B1 = 8.0;
      #local H = 10.0;
