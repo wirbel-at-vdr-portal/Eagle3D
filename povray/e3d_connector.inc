@@ -17,180 +17,25 @@
 
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_PFOSTENWANNE.inc.src
-// //////////
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Kunststoffkoerper von Pfostenwannen.
-// Verwendung fuer gerade und abgewinkelte Bauform jeweils in Verbindung mit entspr. Pinreihen.
-// Parameter: Breite. (Hoehe/Tiefe sind konstant fuer alle Groessen.)
-// Bezugspunkt: Mitte der Auflageflaeche (gerade Ausfuehrung).
-// Kunststoffkoerper von Pfostenwannen
-#macro PFOSTENWANNE(B)
-union {
-difference {
-box{<-B/2,0.3,-4.2><B/2,9,4.5>}
-box{<-B/2+1,2.5,-3.2><B/2-1,10,3.5>}
-box{<-2.2,2,2.5><2.2,10,5>}
-box{<B/2-1.1,0,-1.75><B/2+0.1,6.5,1.75>}
-box{<-B/2+1.1,0,-1.75><-B/2-0.1,6.5,1.75>}}
-difference {
-box{<B/2-6.08,6,4><B/2-4.08,8,4.6>}
-box{<0,0,0><2,3,0.7> rotate<0,0,-30> translate<B/2-5.08,6,4>}
-box{<0,0,0><-2,3,0.7> rotate<0,0,30> translate<B/2-5.08,6,4>}}
-cylinder{<0,0.3,-4.2><0,8.5,-4.2> 0.3}
-sphere{<0,0.3,-3.2> 0.3}
-sphere{<0,0.3,3.2> 0.3}
-#local xc=7.62;
-#while (xc<B/2-1)
-cylinder{<xc,0.3,-4.2><xc,8.5,-4.2> 0.3}
-cylinder{<-xc,0.3,-4.2><-xc,8.5,-4.2> 0.3}
-sphere{<xc,0.3,-3.2> 0.3}
-sphere{<xc,0.3,3.2> 0.3}
-sphere{<-xc,0.3,-3.2> 0.3}
-sphere{<-xc,0.3,3.2> 0.3}
-#local xc=xc+7.62;
-#end
 
-  
-texture{pigment { Gray70 }
-     finish { ambient(0.10 * global_ambient_mul) }}
-}
-#end
+
+
+
+
+
+
+
+
 
 
 // ////////////////////////////////////////////////////////////
-// Original file: ./1_PHW2.inc.src
-// Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
-// Privat: <fbleikamp@web.de>
-// Pin fuer Stiftleisten Winkel obere Reihe
-// //////////
-#macro PHW2()
-union {
-//PIN Loetseite
-difference {
-box{<0,0,0><0.6,5.54,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-30> translate<0.1,0,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,30> translate<-0.1,0,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<30,0,0> translate<0,0,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-30,0,0> translate<0,0,-0.1>}
-translate<0,-2.22,0>}
-//PIN Steckseite
-difference {
-box{<0,0,0><0.6,11.54,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-60> translate<0.1,11.54,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,60> translate<-0.1,11.54,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<60,0,0> translate<0,11.54,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-60,0,0> translate<0,11.54,-0.1>}
-rotate<0,0,-90> translate<0.5,3.81,0>}
-//PIN Bogen
-difference {
-box{<0,0,0><0.6,0.4,0.4> texture{col_gold} translate<0,0.0,0.0>}
-cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_gold} translate<0,0.0,0.0>}
-rotate<0,-90,0> translate<0.5,3.31,-0.3>}
-difference {
-cylinder{<0,0,0><0.6,0,0>0.8 texture{col_gold} translate<0,0,0> }
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,0,-0.1>}
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,-1.8,0.4>}
-rotate<0,-90,0> translate<0.5,3.31,-0.3>}
-//Kunststoff
-difference {
-box{<0,-2,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
-box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,1.76>}
-box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,-1.76>}
-translate<4.04,3.81,0>}
-rotate<0,-90,0>
-}
-#end
-
-
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_PHW.inc.src
-// Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
-// Privat: <fbleikamp@web.de>
-// Pin fuer Stiftleisten Winkel
-// //////////
-#macro PHW()
-union {
-//PIN Loetseite
-difference {
-box{<0,0,0><0.6,3,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-30> translate<0.1,0,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,30> translate<-0.1,0,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<30,0,0> translate<0,0,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-30,0,0> translate<0,0,-0.1>}
-translate<0,-2.22,0>}
-//PIN Steckseite
-difference {
-box{<0,0,0><0.6,9,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-60> translate<0.1,9,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,60> translate<-0.1,9,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<60,0,0> translate<0,9,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-60,0,0> translate<0,9,-0.1>}
-rotate<0,0,-90> translate<0.5,1.27,0>}
-//PIN Bogen
-difference {
-box{<0,0,0><0.6,0.4,0.4> texture{col_gold} translate<0,0.0,0.0>}
-cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_gold} translate<0,0.0,0.0>}
-rotate<0,-90,0> translate<0.5,0.77,-0.3>}
-difference {
-cylinder{<0,0,0><0.6,0,0>0.8 texture{col_gold} translate<0,0,0> }
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,0,-0.1>}
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,-1.8,0.4>}
-rotate<0,-90,0> translate<0.5,0.77,-0.3>}
-//Kunststoff
-difference {
-box{<0,-1.27,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
-box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,1.76>}
-box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,1.76,-1.76>}
-box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,-1.76,-1.76>}
-box{<-0.5,-1,-1><2.5,1,1> pigment{Gray30} rotate<45,0,0> translate<0,-1.76,1.76>}
-translate<1.5,1.27,0>}
-rotate<0,-90,0>
-}
-#end
-
-
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_PIN_BENDED.inc.src
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Um 90° gebogener, quadratischer Stift eines Steckverbinders.
-// Verwendung fuer abgewinkelte Pfostenwannen sowie z.B. Wago-Steckerleisten.
-// Parameter: Staerke, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z), Farbe
-// //////////
-#macro PIN_BENDED(D,R,HO,HU,L,col)
-union {
-difference {
-cylinder{<0,-D/2,0><0,D/2,0> R+D/2}
-cylinder{<0,-D,0><0,D,0> R-D/2}
-box{<-R-D,-D,-R-D><0,D,R+D>}
-box{<-R-D,-D,-R-D><R+D,D,0>}
-rotate<0,0,90> translate<0,HO-R,-R>}
-difference {
-box{<-D/2,-HU,-D/2><D/2,HO-R,D/2>}
-box{<0,0,-0.6*D><0.6*D,0.6*D,0.6*D> rotate<0,0,-45> translate<D/4,-HU,0>}
-box{<0,0,-0.6*D><-0.6*D,0.6*D,0.6*D> rotate<0,0,45> translate<-D/4,-HU,0>}
-box{<-0.6*D,0,0><0.6*D,0.6*D,0.6*D> rotate<45,0,0> translate<0,-HU,D/4>}
-box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<-45,0,0> translate<0,-HU,-D/4>}}
-difference {
-box{<-D/2,HO-D/2,-L><D/2,HO+D/2,-R>}
-box{<0,-0.6*D,0><0.6*D,0.6*D,0.6*D> rotate<0,45,0> translate<D/4,HO,-L>}
-box{<0,-0.6*D,0><-0.6*D,0.6*D,0.6*D> rotate<0,-45,0> translate<-D/4,HO,-L>}
-box{<-0.6*D,0,0><0.6*D,-0.6*D,-0.6*D> rotate<-45,0,0> translate<0,HO-D/4,-L>}
-box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<45,0,0> translate<0,HO+D/4,-L>}}
-texture{col}}
-#end
-
-
-// ////////////////////////////////////////////////////////////
-// Original file: ./1_PIN_STRAIGHT.inc.src
 // Tilmann Reh <tilmann.reh@autometer.de>
 // Grundmakro: Gerader, quadratischer Stift eines Steckverbinders.
 // Verwendung fuer gerade Pfostenwannen sowie z.B. Wago-Steckerleisten.
 // Parameter: Staerke, Hoehe ueber/unter PCB-Oberkante, Farbe
 // Gerader, quadratischer Stift eines Steckverbinders
 // //////////
-#macro PIN_STRAIGHT(D,HO,HU,col)
+#macro PIN_STRAIGHT(D,HO,HU)
 difference {
 box{<-D/2,-HU,-D/2><D/2,HO,D/2>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,0.6*D> rotate<45,0,0> translate<0,HO,D/4>}
@@ -201,7 +46,7 @@ box{<0,0,-0.6*D><0.6*D,0.6*D,0.6*D> rotate<0,0,-45> translate<D/4,-HU,0>}
 box{<0,0,-0.6*D><-0.6*D,0.6*D,0.6*D> rotate<0,0,45> translate<-D/4,-HU,0>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,0.6*D> rotate<45,0,0> translate<0,-HU,D/4>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<-45,0,0> translate<0,-HU,-D/4>}
-texture{col}}
+}
 #end
 
 
@@ -214,7 +59,7 @@ texture{col}}
 // //////////
 #macro PH()
 union {
-object{PIN_STRAIGHT(0.5,9,3,col_gold)}
+object{PIN_STRAIGHT(0.5,9,3) texture {col_gold} }
 difference {
 box{<0,0,0><2.54,2,2.54> pigment{Gray30} translate<-1.27,0,-1.27>}
 box{<0,-0.5,0><1,2.5,1> pigment{Gray30} rotate<0,45,0> translate<0.635,0,1.27>}
@@ -227,36 +72,9 @@ box{<-1.3,-0.1,-0.635><1.3,0.5,0.635> pigment{Gray30} rotate<0,0,0> translate<0,
 #end
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./2_PIN_BENDED_ROW.inc.src
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Reihe gebogener quadratischer Stifte z.B. fuer Pfostenwannen oder Wago-Stecker.
-// Parameter: Anzahl Pins, Pitch, Staerke, Radius, Hoehen ueber/unter PCB, Laenge, Farbe.
-// Bezugspunkt: Mitte der Pinreihe.
-// Reihe gebogener quadratischer Stifte
-// //////////
-#macro PIN_BENDED_ROW(Pins,Pitch,D,R,HO,HU,L,col)
-union {
-#local i=0;
-#while(i<Pins) object{PIN_BENDED (D,R,HO,HU,L,col) translate<i*Pitch,0,0>} #local i=i+1; #end
-translate<-(Pins-1)*Pitch/2,0,0>}
-#end
 
 
-// ////////////////////////////////////////////////////////////
-// Original file: ./2_PIN_STRAIGHT_ROW.inc.src
-// //////////
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Reihe gerader quadratischer Stifte z.B. fuer Pfostenwannen oder Wago-Stecker.
-// Parameter: Anzahl Pins, Pitch, Staerke, Hoehen ueber/unter PCB, Farbe.
-// Bezugspunkt: Mitte der Pinreihe.
-// Reihe gerader quadratischer Stifte
-#macro PIN_STRAIGHT_ROW(Pins,Pitch,D,HO,HU,col)
-union {
-#local i=0;
-#while(i<Pins) object{PIN_STRAIGHT (D,HO,HU,col) translate<i*Pitch,0,0>} #local i=i+1; #end
-translate<-(Pins-1)*Pitch/2,0,0>}
-#end
+
 
 
 
@@ -3117,70 +2935,6 @@ CON_PCPWR514M_BASE()
 #end
 
 
-/********************************************************************************************************************************************
-//Stefan Seegel <post(replace with at)seegel-systeme.de
-//SMD Stiftleisten 2-reihig RM 2.0
-********************************************************************************************************************************************/
-#macro CON_PH2SMD_2MM_BASE(Pins)
-union
-{
-   object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,0,0> translate<0,0.25,-2.75>}
-   object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,180,0> translate<0,0.25,2.75>}
-   difference
-   {
-      box{<-Pins, 0.6, -2><Pins,2.6, 2> pigment{Gray30} translate<0,0,0>}
-      box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<45,0,0> translate<0,1.5,1.5>}
-      box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<-45,0,0> translate<0,1.5,-1.5>}
-   }
-}
-#end
-
-
-#macro CON_PHSMD_2MM_2X2()
-CON_PH2SMD_2MM_BASE(2)
-#end
-#macro CON_PHSMD_2MM_2X3()
-CON_PH2SMD_2MM_BASE(3)
-#end
-#macro CON_PHSMD_2MM_2X4()
-CON_PH2SMD_2MM_BASE(4)
-#end
-#macro CON_PHSMD_2MM_2X5()
-CON_PH2SMD_2MM_BASE(5)
-#end
-#macro CON_PHSMD_2MM_2X6()
-CON_PH2SMD_2MM_BASE(6)
-#end
-#macro CON_PHSMD_2MM_2X7()
-CON_PH2SMD_2MM_BASE(7)
-#end
-#macro CON_PHSMD_2MM_2X8()
-CON_PH2SMD_2MM_BASE(8)
-#end
-#macro CON_PHSMD_2MM_2X9()
-CON_PH2SMD_2MM_BASE(9)
-#end
-#macro CON_PHSMD_2MM_2X10()
-CON_PH2SMD_2MM_BASE(10)
-#end
-#macro CON_PHSMD_2MM_2X11()
-CON_PH2SMD_2MM_BASE(11)
-#end
-#macro CON_PHSMD_2MM_2X12()
-CON_PH2SMD_2MM_BASE(12)
-#end
-#macro CON_PHSMD_2MM_2X13()
-CON_PH2SMD_2MM_BASE(13)
-#end
-#macro CON_PHSMD_2MM_2X14()
-CON_PH2SMD_2MM_BASE(14)
-#end
-#macro CON_PHSMD_2MM_2X15()
-CON_PH2SMD_2MM_BASE(15)
-#end
-#macro CON_PHSMD_2MM_2X16()
-CON_PH2SMD_2MM_BASE(16)
-#end
 
 
 
@@ -3612,211 +3366,6 @@ CON_PHONE_JACK_BASE(value)
 #end
 
 
-/********************************************************************************************************************************************
-//Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
-//Privat: <fbleikamp@web.de>
-//Grundmakro Stiftleisten Winkel (Macro aus connector.inc abgewandelt)
-//a = Reihen
-//b = Pins
-********************************************************************************************************************************************/
-#macro CON_PHW_BASE(a,b)
-union {
-#if(a=1)
-#local i=0;
-        #while(i<b)
-                object{PHW() translate<i*2.54,0,0>}
-                #local i=i+1;
-        #end
-        translate<-(b-1)*1.27,0,0>
-#else
-        #local i=0;
-        #while(i<b)
-                object{PHW() translate<i*2.54,0,1.27>}
-                object{PHW2() translate<i*2.54,0,-1.27>}
-                #local i=i+1;
-        #end
-        translate<-(b-1)*1.27,0,0>
-#end
-}
-#end
-#macro CON_PHW_1X1()
-CON_PHW_BASE(1,1)
-#end
-#macro CON_PHW_1X2()
-CON_PHW_BASE(1,2)
-#end
-#macro CON_PHW_1X3()
-CON_PHW_BASE(1,3)
-#end
-#macro CON_PHW_1X4()
-CON_PHW_BASE(1,4)
-#end
-#macro CON_PHW_1X5()
-CON_PHW_BASE(1,5)
-#end
-#macro CON_PHW_1X6()
-CON_PHW_BASE(1,6)
-#end
-#macro CON_PHW_1X7()
-CON_PHW_BASE(1,7)
-#end
-#macro CON_PHW_1X8()
-CON_PHW_BASE(1,8)
-#end
-#macro CON_PHW_1X9()
-CON_PHW_BASE(1,9)
-#end
-#macro CON_PHW_1X10()
-CON_PHW_BASE(1,10)
-#end
-#macro CON_PHW_1X11()
-CON_PHW_BASE(1,11)
-#end
-#macro CON_PHW_1X12()
-CON_PHW_BASE(1,12)
-#end
-#macro CON_PHW_1X13()
-CON_PHW_BASE(1,13)
-#end
-#macro CON_PHW_1X14()
-CON_PHW_BASE(1,14)
-#end
-#macro CON_PHW_1X15()
-CON_PHW_BASE(1,15)
-#end
-#macro CON_PHW_1X16()
-CON_PHW_BASE(1,16)
-#end
-#macro CON_PHW_1X17()
-CON_PHW_BASE(1,17)
-#end
-#macro CON_PHW_1X18()
-CON_PHW_BASE(1,18)
-#end
-#macro CON_PHW_1X19()
-CON_PHW_BASE(1,19)
-#end
-#macro CON_PHW_1X20()
-CON_PHW_BASE(1,20)
-#end
-#macro CON_PHW_1X21()
-CON_PHW_BASE(1,21)
-#end
-#macro CON_PHW_1X22()
-CON_PHW_BASE(1,22)
-#end
-#macro CON_PHW_1X23()
-CON_PHW_BASE(1,23)
-#end
-#macro CON_PHW_1X24()
-CON_PHW_BASE(1,24)
-#end
-#macro CON_PHW_1X25()
-CON_PHW_BASE(1,25)
-#end
-#macro CON_PHW_1X26()
-CON_PHW_BASE(1,26)
-#end
-#macro CON_PHW_1X27()
-CON_PHW_BASE(1,27)
-#end
-#macro CON_PHW_1X28()
-CON_PHW_BASE(1,28)
-#end
-#macro CON_PHW_1X29()
-CON_PHW_BASE(1,29)
-#end
-#macro CON_PHW_1X30()
-CON_PHW_BASE(1,30)
-#end
-//Zweireihige Stiftleisten Winkel
-#macro CON_PHW_2X2()
-CON_PHW_BASE(2,2)
-#end
-#macro CON_PHW_2X3()
-CON_PHW_BASE(2,3)
-#end
-#macro CON_PHW_2X4()
-CON_PHW_BASE(2,4)
-#end
-#macro CON_PHW_2X5()
-CON_PHW_BASE(2,5)
-#end
-#macro CON_PHW_2X6()
-CON_PHW_BASE(2,6)
-#end
-#macro CON_PHW_2X7()
-CON_PHW_BASE(2,7)
-#end
-#macro CON_PHW_2X8()
-CON_PHW_BASE(2,8)
-#end
-#macro CON_PHW_2X9()
-CON_PHW_BASE(2,9)
-#end
-#macro CON_PHW_2X10()
-CON_PHW_BASE(2,10)
-#end
-#macro CON_PHW_2X11()
-CON_PHW_BASE(2,11)
-#end
-#macro CON_PHW_2X12()
-CON_PHW_BASE(2,12)
-#end
-#macro CON_PHW_2X13()
-CON_PHW_BASE(2,13)
-#end
-#macro CON_PHW_2X14()
-CON_PHW_BASE(2,14)
-#end
-#macro CON_PHW_2X15()
-CON_PHW_BASE(2,15)
-#end
-#macro CON_PHW_2X16()
-CON_PHW_BASE(2,16)
-#end
-#macro CON_PHW_2X17()
-CON_PHW_BASE(2,17)
-#end
-#macro CON_PHW_2X18()
-CON_PHW_BASE(2,18)
-#end
-#macro CON_PHW_2X19()
-CON_PHW_BASE(2,19)
-#end
-#macro CON_PHW_2X20()
-CON_PHW_BASE(2,20)
-#end
-#macro CON_PHW_2X21()
-CON_PHW_BASE(2,21)
-#end
-#macro CON_PHW_2X22()
-CON_PHW_BASE(2,22)
-#end
-#macro CON_PHW_2X23()
-CON_PHW_BASE(2,23)
-#end
-#macro CON_PHW_2X24()
-CON_PHW_BASE(2,24)
-#end
-#macro CON_PHW_2X25()
-CON_PHW_BASE(2,25)
-#end
-#macro CON_PHW_2X26()
-CON_PHW_BASE(2,26)
-#end
-#macro CON_PHW_2X27()
-CON_PHW_BASE(2,27)
-#end
-#macro CON_PHW_2X28()
-CON_PHW_BASE(2,28)
-#end
-#macro CON_PHW_2X29()
-CON_PHW_BASE(2,29)
-#end
-#macro CON_PHW_2X30()
-CON_PHW_BASE(2,30)
-#end
 
 
 /********************************************************************************************************************************************
@@ -4894,49 +4443,11 @@ union {
 #end
 
 
-/********************************************************************************************************************************************
-// Tilmann Reh <tilmann.reh@autometer.de>
-// gerade Pfostenwannen
-// Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberflaeche
-********************************************************************************************************************************************/
-#macro CON_WS_XX_G_BASE(Pins)
-union {
-object{PFOSTENWANNE(7.62+Pins*1.27)}
-object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,-1.27>}
-object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,1.27>}}
-#end
-#macro CON_DIS_WS6G()
-CON_WS_XX_G_BASE(6)
-#end
-#macro CON_DIS_WS10G()
-CON_WS_XX_G_BASE(10)
-#end
-#macro CON_DIS_WS14G()
-CON_WS_XX_G_BASE(14)
-#end
-#macro CON_DIS_WS16G()
-CON_WS_XX_G_BASE(16)
-#end
-#macro CON_DIS_WS20G()
-CON_WS_XX_G_BASE(20)
-#end
-#macro CON_DIS_WS26G()
-CON_WS_XX_G_BASE(26)
-#end
-#macro CON_DIS_WS34G()
-CON_WS_XX_G_BASE(34)
-#end
-#macro CON_DIS_WS40G()
-CON_WS_XX_G_BASE(40)
-#end
-#macro CON_DIS_WS50G()
-CON_WS_XX_G_BASE(50)
-#end
-#macro CON_DIS_WS64G()
-CON_WS_XX_G_BASE(64)
-#end
 
 
 
 #include "CONNECTOR/_Buchsenleiste_Praezision_long.inc"
 #include "CONNECTOR/_Buchsenleiste_Praezison_short.inc"
+#include "CONNECTOR/_Pfostenwanne_THT.inc"
+#include "CONNECTOR/_Pinheader_200_SMT.inc"
+#include "CONNECTOR/_Pinheader_254_90deg.inc"
