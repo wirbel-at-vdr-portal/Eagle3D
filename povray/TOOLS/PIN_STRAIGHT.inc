@@ -10,7 +10,9 @@
  * Tilmann Reh <tilmann.reh@autometer.de>
  *
  * Verwendung fuer gerade Pfostenwannen sowie z.B. Wago-Steckerleisten.
- * Parameter: Staerke, Hoehe ueber/unter PCB-Oberkante, Farbe
+ *   Thickness - pin thickness
+ *   Top       - height above PCB
+ *   Bottom    - height below PCB
  ******************************************************************************/
 #macro PIN_STRAIGHT(Thickness,Top,Bottom)
   difference {
