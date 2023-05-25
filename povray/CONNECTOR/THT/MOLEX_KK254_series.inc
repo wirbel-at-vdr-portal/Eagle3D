@@ -29,10 +29,6 @@
  ******************************************************************************/
 #macro KK254_case(pins,Width,height)
   union {
-     #local Nylon = texture {
-         pigment {Wheat}
-         finish { ambient(0.1 * global_ambient_mul)}
-         };
      #local y1 = -(Width-3.10);
      difference {
         box {
@@ -72,7 +68,7 @@
            }
         }
      texture {
-        Nylon
+        col_nylon
         }
      }
 #end

@@ -5,7 +5,8 @@
  ******************************************************************************/
 
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
-#include "CONNECTOR/SMT/MOLEX_87832_series.inc"
+#include "CONNECTOR/SMT/MOLEX-53261-series.inc"
+#include "CONNECTOR/SMT/MOLEX-87832-series.inc"
 #include "CONNECTOR/THT/coax-BNC-AMP-112536.inc"
 #include "CONNECTOR/THT/coax-BNC-AMP-227161.inc"
 #include "CONNECTOR/THT/coax-BNC-RADIALL_R141426161.inc"
