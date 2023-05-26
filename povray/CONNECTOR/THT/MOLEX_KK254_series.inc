@@ -119,9 +119,13 @@
         #end
         rotate <0,0,0>
         }
-     object{
-        PIN_STRAIGHT_ROW(pins,2.54,0.635,11,3,col_silver)
-        }
+     #local pin = object {
+        PIN_STRAIGHT(0.635,11,3)
+        texture {
+           col_silver
+           }
+        };
+     GRID(pin,2.54,pins,1)
      }
 #end
 
@@ -148,9 +152,13 @@
               }
         #end
         }
-     object{
-        PIN_STRAIGHT_ROW(pins,2.54,0.635,11,3,col_silver)
-        }
+     #local pin = object {
+        PIN_STRAIGHT(0.635,11,3)
+        texture {
+           col_silver
+           }
+        };
+     GRID(pin,2.54,pins,1)
      }
 #end
 
