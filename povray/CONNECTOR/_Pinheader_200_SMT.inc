@@ -6,7 +6,7 @@
 // Verwendung fuer abgewinkelte Pfostenwannen sowie z.B. Wago-Steckerleisten.
 // Parameter: Staerke, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z)
 // //////////
-#macro PIN_BENDED(D,R,HO,HU,L)
+#macro PIN_90deg(D,R,HO,HU,L)
 union {
 difference {
 cylinder{<0,-D/2,0><0,D/2,0> R+D/2}
@@ -39,7 +39,7 @@ box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<45,0,0> translate<0,HO+D/4,-L>}}
 #macro CON_PH2SMD_2MM_BASE(Pins)
   union {
      #local row = object {
-         GRID(PIN_BENDED(0.5, 0.8, 1.75, 0, 6.77),2.00,Pins,1)
+         GRID(PIN_90deg(0.5, 0.8, 1.75, 0, 6.77),2.00,Pins,1)
          rotate <90,180,0>
          translate <0,0.25,2.75>
          };

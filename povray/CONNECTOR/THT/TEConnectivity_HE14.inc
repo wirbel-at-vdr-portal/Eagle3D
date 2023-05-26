@@ -63,7 +63,7 @@
         rotate <90,180,0>
         translate <0,2.54,-1.2>
         }
-     GRID(PIN_BENDED(0.63,0.8,2.5,3,12.5),2.54,Pins,1)
+     GRID(PIN_90deg(0.63,0.8,2.5,3,12.5),2.54,Pins,1)
      rotate 180*y
      texture {
         col_silver

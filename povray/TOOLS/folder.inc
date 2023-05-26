@@ -18,6 +18,7 @@
 #include "TOOLS/NUT.inc"
 #include "TOOLS/PCB_SMD.inc"
 #include "TOOLS/PCB_VIA.inc"
+#include "TOOLS/PIN_90deg.inc"
 #include "TOOLS/PIN_STRAIGHT.inc"
 #include "TOOLS/RECT_BOGEN.inc"
 #include "TOOLS/ROTATE.inc"

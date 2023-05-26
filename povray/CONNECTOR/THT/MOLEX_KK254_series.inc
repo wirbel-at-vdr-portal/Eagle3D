@@ -188,7 +188,7 @@
         translate <0,2.5,-1.8>
         }
      object {
-        GRID(PIN_BENDED(0.635,0.8,2.5,3,12.5),2.54,pins,1)
+        GRID(PIN_90deg(0.635,0.8,2.5,3,12.5),2.54,pins,1)
         texture {
            col_silver
            }

@@ -18,11 +18,11 @@ union {
      translate<0,4.5,3.3>
      }
   object {
-     GRID(PIN_BENDED(0.635,0.8,4.5-1.27,3,10.5),2.54,Pins/2,1)
+     GRID(PIN_90deg(0.635,0.8,4.5-1.27,3,10.5),2.54,Pins/2,1)
      translate <0,0,5.08>
      }
   object {
-     GRID(PIN_BENDED(0.635,0.8,4.5+1.27,3,13.04),2.54,Pins/2,1)
+     GRID(PIN_90deg(0.635,0.8,4.5+1.27,3,13.04),2.54,Pins/2,1)
      translate <0,0,7.62>
      }
   rotate <0,180,0>

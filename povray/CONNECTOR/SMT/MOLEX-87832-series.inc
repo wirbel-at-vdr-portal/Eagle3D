@@ -40,7 +40,7 @@
   union {
     // pin rows
     #local pin = object {
-       PIN_BENDED(0.5,        // pin width
+       PIN_90deg(0.5,        // pin width
                   0.5,        // bending radius
                   6.3,        // top
                   0,          // bot
