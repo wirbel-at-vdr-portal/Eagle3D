@@ -46,19 +46,6 @@ texture{pigment { Gray70 }
 
 
 
-// //////////
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Reihe gerader quadratischer Stifte z.B. fuer Pfostenwannen oder Wago-Stecker.
-// Parameter: Anzahl Pins, Pitch, Staerke, Hoehen ueber/unter PCB, Farbe.
-// Bezugspunkt: Mitte der Pinreihe.
-// Reihe gerader quadratischer Stifte
-#macro PIN_STRAIGHT_ROW(Pins,Pitch,D,HO,HU,col)
-union {
-#local i=0;
-#while(i<Pins) object{PIN_STRAIGHT (D,HO,HU) translate<i*Pitch,0,0> texture { col }} #local i=i+1; #end
-translate<-(Pins-1)*Pitch/2,0,0>}
-#end
-
 
 /********************************************************************************************************************************************
 // Tilmann Reh <tilmann.reh@autometer.de>
@@ -66,10 +53,12 @@ translate<-(Pins-1)*Pitch/2,0,0>}
 // Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberflaeche
 ********************************************************************************************************************************************/
 #macro CON_WS_XX_G_BASE(Pins)
-union {
-object{PFOSTENWANNE(7.62+Pins*1.27)}
-object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,-1.27>}
-object{PIN_STRAIGHT_ROW (Pins/2,2.54,0.635,8.5,3,col_gold) translate<0,0,1.27>}}
+  union {
+     object{
+        PFOSTENWANNE(7.62+Pins*1.27)
+        }
+     GRID(object { PIN_STRAIGHT(0.635,8.5,3) texture { col_gold } },2.54,Pins/2,2)
+     }
 #end
 
 

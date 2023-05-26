@@ -65,8 +65,11 @@
 
 #macro CON_AMP_HE14_1S_base(Pins)
   union {
-     object{AMP_HE14_1S(Pins)}
-     object{PIN_STRAIGHT_ROW (Pins,2.54,0.635,11,3,col_silver)}}
+     object {
+        AMP_HE14_1S(Pins)
+        }
+     GRID(object { PIN_STRAIGHT(0.635,11,3) texture { col_silver } },2.54,Pins,1)
+     }
 #end
 
 
