@@ -30,36 +30,30 @@ box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<45,0,0> translate<0,HO+D/4,-L>}}
 #end
 
 
-// ////////////////////////////////////////////////////////////
-// Tilmann Reh <tilmann.reh@autometer.de>
-// Grundmakro: Reihe gebogener quadratischer Stifte z.B. fuer Pfostenwannen oder Wago-Stecker.
-// Parameter: Anzahl Pins, Pitch, Staerke, Radius, Hoehen ueber/unter PCB, Laenge, Farbe.
-// Bezugspunkt: Mitte der Pinreihe.
-// Reihe gebogener quadratischer Stifte
-// //////////
-#macro PIN_BENDED_ROW(Pins,Pitch,D,R,HO,HU,L,col)
-union {
-#local i=0;
-#while(i<Pins) object{PIN_BENDED (D,R,HO,HU,L) texture { col } translate<i*Pitch,0,0>} #local i=i+1; #end
-translate<-(Pins-1)*Pitch/2,0,0>}
-#end
+
 
 /********************************************************************************************************************************************
 //Stefan Seegel <post(replace with at)seegel-systeme.de
 //SMD Stiftleisten 2-reihig RM 2.0
 ********************************************************************************************************************************************/
 #macro CON_PH2SMD_2MM_BASE(Pins)
-union
-{
-   object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,0,0> translate<0,0.25,-2.75>}
-   object{PIN_BENDED_ROW (Pins, 2.00, 0.5, 0.8, 1.75, 0, 6.77, col_gold) rotate<90,180,0> translate<0,0.25,2.75>}
-   difference
-   {
-      box{<-Pins, 0.6, -2><Pins,2.6, 2> pigment{Gray30} translate<0,0,0>}
-      box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<45,0,0> translate<0,1.5,1.5>}
-      box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<-45,0,0> translate<0,1.5,-1.5>}
-   }
-}
+  union {
+     #local row = object {
+         GRID(PIN_BENDED(0.5, 0.8, 1.75, 0, 6.77),2.00,Pins,1)
+         rotate <90,180,0>
+         translate <0,0.25,2.75>
+         };
+     ROTATE(row,2,180)
+
+     difference {
+        box{<-Pins, 0.6, -2><Pins,2.6, 2> pigment{Gray30} translate<0,0,0>}
+        box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<45,0,0> translate<0,1.5,1.5>}
+        box{<-Pins-0.5,0.9,-1.7><Pins + 0.5, 2.3,1.7> pigment{Gray30} rotate<-45,0,0> translate<0,1.5,-1.5>}
+        }
+     texture {
+        col_gold
+        }
+     }
 #end
 
 

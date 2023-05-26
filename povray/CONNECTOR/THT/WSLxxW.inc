@@ -18,15 +18,18 @@ union {
      translate<0,4.5,3.3>
      }
   object {
-     PIN_BENDED_ROW(Pins/2,2.54,0.635,0.8,4.5-1.27,3,10.5,col_gold)
+     GRID(PIN_BENDED(0.635,0.8,4.5-1.27,3,10.5),2.54,Pins/2,1)
      translate <0,0,5.08>
      }
   object {
-     PIN_BENDED_ROW(Pins/2,2.54,0.635,0.8,4.5+1.27,3,13.04,col_gold)
+     GRID(PIN_BENDED(0.635,0.8,4.5+1.27,3,13.04),2.54,Pins/2,1)
      translate <0,0,7.62>
      }
   rotate <0,180,0>
   translate <0,0,+6.35>
+  texture {
+     col_gold
+     }
   }
 #end
 

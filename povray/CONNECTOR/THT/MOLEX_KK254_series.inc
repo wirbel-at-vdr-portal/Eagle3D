@@ -188,8 +188,10 @@
         translate <0,2.5,-1.8>
         }
      object {
-        PIN_BENDED_ROW(pins,2.54,0.635,0.8,2.5,3,12.5,col_silver)
-        translate <0,0,0>
+        GRID(PIN_BENDED(0.635,0.8,2.5,3,12.5),2.54,pins,1)
+        texture {
+           col_silver
+           }
         }
      }
 #end
