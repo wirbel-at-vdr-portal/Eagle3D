@@ -5,33 +5,14 @@
 // Pin fuer Stiftleisten Winkel
 // //////////
 #macro PHW()
-union {
-//PIN Loetseite
-difference {
-box{<0,0,0><0.6,3,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-30> translate<0.1,0,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,30> translate<-0.1,0,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<30,0,0> translate<0,0,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-30,0,0> translate<0,0,-0.1>}
-translate<0,-2.22,0>}
-//PIN Steckseite
-difference {
-box{<0,0,0><0.6,9,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-60> translate<0.1,9,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,60> translate<-0.1,9,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<60,0,0> translate<0,9,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-60,0,0> translate<0,9,-0.1>}
-rotate<0,0,-90> translate<0.5,1.27,0>}
-//PIN Bogen
-difference {
-box{<0,0,0><0.6,0.4,0.4> texture{col_gold} translate<0,0.0,0.0>}
-cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_gold} translate<0,0.0,0.0>}
-rotate<0,-90,0> translate<0.5,0.77,-0.3>}
-difference {
-cylinder{<0,0,0><0.6,0,0>0.8 texture{col_gold} translate<0,0,0> }
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,0,-0.1>}
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,-1.8,0.4>}
-rotate<0,-90,0> translate<0.5,0.77,-0.3>}
+  union {
+     object {
+        PIN_90deg(0.6,0.4,1.27,2.2,9.5)
+        rotate <0,-90,0>
+        texture {
+           col_gold
+           }
+        }
 //Kunststoff
 difference {
 box{<0,-1.27,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
@@ -52,33 +33,14 @@ rotate<0,-90,0>
 // Pin fuer Stiftleisten Winkel obere Reihe
 // //////////
 #macro PHW2()
-union {
-//PIN Loetseite
-difference {
-box{<0,0,0><0.6,5.54,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-30> translate<0.1,0,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,30> translate<-0.1,0,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<30,0,0> translate<0,0,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-30,0,0> translate<0,0,-0.1>}
-translate<0,-2.22,0>}
-//PIN Steckseite
-difference {
-box{<0,0,0><0.6,11.54,0.6> texture{col_gold} translate<-0.3,0,-0.3>}
-box{<0,0,-0.5><0.5,0.5,0.5> texture{col_gold} rotate<0,0,-60> translate<0.1,11.54,0>}
-box{<0,0,-0.5><-0.5,0.5,0.5> texture{col_gold} rotate<0,0,60> translate<-0.1,11.54,0>}
-box{<-0.5,0,0><0.5,0.5,0.5> texture{col_gold} rotate<60,0,0> translate<0,11.54,0.1>}
-box{<-0.5,0,0><0.5,0.5,-0.5> texture{col_gold} rotate<-60,0,0> translate<0,11.54,-0.1>}
-rotate<0,0,-90> translate<0.5,3.81,0>}
-//PIN Bogen
-difference {
-box{<0,0,0><0.6,0.4,0.4> texture{col_gold} translate<0,0.0,0.0>}
-cylinder{<-0.1,0,0><0.8,0,0>0.2 texture{col_gold} translate<0,0.0,0.0>}
-rotate<0,-90,0> translate<0.5,3.31,-0.3>}
-difference {
-cylinder{<0,0,0><0.6,0,0>0.8 texture{col_gold} translate<0,0,0> }
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,0,-0.1>}
-box{<0,0,0><2,2.2,-2> texture{col_gold} translate<-0.1,-1.8,0.4>}
-rotate<0,-90,0> translate<0.5,3.31,-0.3>}
+  union {
+     object {
+        PIN_90deg(0.6,0.4,3.8,2.2,12.04)
+        rotate <0,-90,0>
+        texture {
+           col_gold
+           }
+        }
 //Kunststoff
 difference {
 box{<0,-2,-1.27><2,1.27,1.27> pigment{Gray30} translate<0,0,0>}
@@ -108,7 +70,7 @@ union {
 #else
         #local i=0;
         #while(i<b)
-                object{PHW() translate<i*2.54,0,1.27>}
+                object{PHW()  translate<i*2.54,0,+1.27>}
                 object{PHW2() translate<i*2.54,0,-1.27>}
                 #local i=i+1;
         #end
