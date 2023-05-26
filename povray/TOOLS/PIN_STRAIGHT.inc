@@ -9,6 +9,8 @@
  * Gerader, quadratischer Stift eines Steckverbinders.
  * Tilmann Reh <tilmann.reh@autometer.de>
  *
+ * rewritten and simplified: 26.05.2023, -wk
+ *
  * Verwendung fuer gerade Pfostenwannen sowie z.B. Wago-Steckerleisten.
  *   Thickness - pin thickness
  *   Top       - height above PCB
@@ -20,53 +22,12 @@
         <-Thickness/2, -Bottom, -Thickness/2>
         <+Thickness/2, +Top   , +Thickness/2>
         }
-     box {
-        <-0.6*Thickness, 0            , 0            >
-        <+0.6*Thickness, 0.6*Thickness, 0.6*Thickness>
-        rotate <+45,0,0>
-        translate <0,Top,Thickness/4>
-        }
-     box {
-        <-0.6*Thickness, 0            , 0             >
-        <+0.6*Thickness, 0.6*Thickness, -0.6*Thickness>
-        rotate <-45,0,0>
-        translate <0,Top,-Thickness/4>
-        }
-     box {
-        <0            , 0            , -0.6*Thickness>
-        <0.6*Thickness, 0.6*Thickness, +0.6*Thickness>
-        rotate <0,0,-45>
-        translate <Thickness/4,Top,0>
-        }
-     box {
-        <0             ,             0, -0.6*Thickness>
-        <-0.6*Thickness, 0.6*Thickness, +0.6*Thickness>
-        rotate <0,0,+45>
-        translate <-Thickness/4,Top,0>
-        }
-     box {
-        <0            ,             0, -0.6*Thickness>
-        <0.6*Thickness, 0.6*Thickness, +0.6*Thickness>
-        rotate <0,0,-45>
-        translate <Thickness/4,-Bottom,0>
-        }
-     box {
-        <0             , 0            , -0.6*Thickness>
-        <-0.6*Thickness, 0.6*Thickness, +0.6*Thickness>
-        rotate <0,0,45>
-        translate <-Thickness/4,-Bottom,0>
-        }
-     box {
-        <-0.6*Thickness, 0            ,             0>
-        <+0.6*Thickness, 0.6*Thickness, 0.6*Thickness>
-        rotate <45,0,0>
-        translate <0,-Bottom,Thickness/4>
-        }
-     box {
-        <-0.6*Thickness, 0            , 0             >
-        <+0.6*Thickness, 0.6*Thickness, -0.6*Thickness>
-        rotate <-45,0,0>
-        translate <0,-Bottom,-Thickness/4>
-        }
+     #local cut =
+        box {
+           <-1,-1,-1><1,1,1>
+           scale Thickness*0.75
+           };
+     ROTATE(object { cut rotate z*+30 translate <1.1*Thickness,+Top   ,0> },4,90)
+     ROTATE(object { cut rotate z*-30 translate <1.1*Thickness,-Bottom,0> },4,90)
      }
 #end
