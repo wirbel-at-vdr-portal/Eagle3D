@@ -44,8 +44,10 @@
                   0.5,        // bending radius
                   6.3,        // top
                   0,          // bot
-                  1.85,       // pad len
-                  col_gold)   // colour
+                  1.85)       // pad len
+       texture {
+          col_gold
+          }
        rotate <180,180,0>
        translate <0,6.3+0.5/2,0>
        };

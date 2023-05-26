@@ -4,9 +4,9 @@
 // Tilmann Reh <tilmann.reh@autometer.de>
 // Grundmakro: Um 90° gebogener, quadratischer Stift eines Steckverbinders.
 // Verwendung fuer abgewinkelte Pfostenwannen sowie z.B. Wago-Steckerleisten.
-// Parameter: Staerke, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z), Farbe
+// Parameter: Staerke, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z)
 // //////////
-#macro PIN_BENDED(D,R,HO,HU,L,col)
+#macro PIN_BENDED(D,R,HO,HU,L)
 union {
 difference {
 cylinder{<0,-D/2,0><0,D/2,0> R+D/2}
@@ -26,7 +26,7 @@ box{<0,-0.6*D,0><0.6*D,0.6*D,0.6*D> rotate<0,45,0> translate<D/4,HO,-L>}
 box{<0,-0.6*D,0><-0.6*D,0.6*D,0.6*D> rotate<0,-45,0> translate<-D/4,HO,-L>}
 box{<-0.6*D,0,0><0.6*D,-0.6*D,-0.6*D> rotate<-45,0,0> translate<0,HO-D/4,-L>}
 box{<-0.6*D,0,0><0.6*D,0.6*D,-0.6*D> rotate<45,0,0> translate<0,HO+D/4,-L>}}
-texture{col}}
+}
 #end
 
 
@@ -40,7 +40,7 @@ texture{col}}
 #macro PIN_BENDED_ROW(Pins,Pitch,D,R,HO,HU,L,col)
 union {
 #local i=0;
-#while(i<Pins) object{PIN_BENDED (D,R,HO,HU,L,col) translate<i*Pitch,0,0>} #local i=i+1; #end
+#while(i<Pins) object{PIN_BENDED (D,R,HO,HU,L) texture { col } translate<i*Pitch,0,0>} #local i=i+1; #end
 translate<-(Pins-1)*Pitch/2,0,0>}
 #end
 
