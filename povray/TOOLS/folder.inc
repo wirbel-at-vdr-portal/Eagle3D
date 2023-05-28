@@ -11,6 +11,7 @@
 #include "TOOLS/units.inc"
 
 #include "TOOLS/ARC.inc"
+#include "TOOLS/BENT_WIRE.inc"
 #include "TOOLS/BENTPIPE.inc"
 #include "TOOLS/GRID.inc"
 #include "TOOLS/IC_SMD_PIN.inc"
