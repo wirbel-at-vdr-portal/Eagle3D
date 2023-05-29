@@ -5399,7 +5399,7 @@ R90 = 90 deg angled&lt;p&gt;
 <rectangle x1="27.6098" y1="-1.5748" x2="28.2702" y2="-0.4064" layer="51" rot="R180"/>
 <rectangle x1="30.1498" y1="-1.5748" x2="30.8102" y2="-0.4064" layer="51" rot="R180"/>
 </package>
-<package name="PREC02X1">
+<package name="PREC02X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-2.54" y1="1.27" x2="-2.54" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-2.54" y1="-1.27" x2="-0.254" y2="-1.27" width="0.1524" layer="51"/>
@@ -5416,7 +5416,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-3.81" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="PREC03X1">
+<package name="PREC03X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="-1.27" x2="-1.524" y2="-1.27" width="0.1524" layer="51"/>
@@ -5440,7 +5440,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-3.81" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="2.54" y="-1.651" size="1.27" layer="27" ratio="10" rot="R180">&gt;VALUE</text>
 </package>
-<package name="PREC04X1">
+<package name="PREC04X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-5.08" y1="1.27" x2="-5.08" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="-1.27" x2="-2.794" y2="-1.27" width="0.1524" layer="51"/>
@@ -5471,7 +5471,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-5.08" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="PREC05X1">
+<package name="PREC05X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-6.35" y1="1.27" x2="-6.35" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-6.35" y1="-1.27" x2="-4.064" y2="-1.27" width="0.1524" layer="51"/>
@@ -5511,7 +5511,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="6.604" y="-0.635" size="1.27" layer="21" ratio="10">5</text>
 <text x="0" y="-1.651" size="1.27" layer="27" ratio="10" rot="R180">&gt;VALUE</text>
 </package>
-<package name="PREC06X1">
+<package name="PREC06X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-7.62" y1="1.27" x2="-7.62" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-7.62" y1="-1.27" x2="-5.334" y2="-1.27" width="0.1524" layer="51"/>
@@ -5558,7 +5558,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-7.62" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="5.842" y="1.524" size="1.27" layer="21" ratio="10">6</text>
 </package>
-<package name="PREC07X1">
+<package name="PREC07X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-8.89" y1="1.27" x2="-8.89" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-8.89" y1="-1.27" x2="-6.604" y2="-1.27" width="0.1524" layer="51"/>
@@ -5612,7 +5612,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-7.62" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="7.112" y="1.524" size="1.27" layer="21" ratio="10">7</text>
 </package>
-<package name="PREC08X1">
+<package name="PREC08X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-10.16" y1="1.27" x2="-10.16" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-10.16" y1="-1.27" x2="-7.874" y2="-1.27" width="0.1524" layer="51"/>
@@ -5673,7 +5673,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-10.16" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="8.382" y="1.524" size="1.27" layer="21" ratio="10">8</text>
 </package>
-<package name="PREC09X1">
+<package name="PREC09X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-11.43" y1="1.27" x2="-11.43" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-11.43" y1="-1.27" x2="-9.144" y2="-1.27" width="0.1524" layer="51"/>
@@ -5741,7 +5741,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-11.43" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="9.652" y="1.524" size="1.27" layer="21" ratio="10">9</text>
 </package>
-<package name="PREC10X1">
+<package name="PREC10X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-12.7" y1="1.27" x2="-12.7" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-12.7" y1="-1.27" x2="-10.414" y2="-1.27" width="0.1524" layer="51"/>
@@ -5816,7 +5816,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-12.7" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="10.287" y="1.524" size="1.27" layer="21" ratio="10">10</text>
 </package>
-<package name="PREC11X1">
+<package name="PREC11X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-13.97" y1="1.27" x2="-13.97" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-13.97" y1="-1.27" x2="-11.684" y2="-1.27" width="0.1524" layer="51"/>
@@ -5898,7 +5898,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-13.97" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="11.557" y="1.524" size="1.27" layer="21" ratio="10">11</text>
 </package>
-<package name="PREC12X1">
+<package name="PREC12X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-15.24" y1="1.27" x2="-15.24" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-15.24" y1="-1.27" x2="-12.954" y2="-1.27" width="0.1524" layer="51"/>
@@ -5987,7 +5987,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-15.24" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="12.827" y="1.524" size="1.27" layer="21" ratio="10">12</text>
 </package>
-<package name="PREC13X1">
+<package name="PREC13X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.51" y1="1.27" x2="-16.51" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-16.51" y1="-1.27" x2="-14.224" y2="-1.27" width="0.1524" layer="51"/>
@@ -6083,7 +6083,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-16.51" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="14.097" y="1.524" size="1.27" layer="21" ratio="10">13</text>
 </package>
-<package name="PREC14X1">
+<package name="PREC14X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-17.78" y1="1.27" x2="-17.78" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-17.78" y1="-1.27" x2="-15.494" y2="-1.27" width="0.1524" layer="51"/>
@@ -6186,7 +6186,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-17.78" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="15.367" y="1.524" size="1.27" layer="21" ratio="10">14</text>
 </package>
-<package name="PREC15X1">
+<package name="PREC15X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-19.05" y1="1.27" x2="-19.05" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-19.05" y1="-1.27" x2="-16.764" y2="-1.27" width="0.1524" layer="51"/>
@@ -6296,7 +6296,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-19.05" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="16.637" y="1.524" size="1.27" layer="21" ratio="10">15</text>
 </package>
-<package name="PREC16X1">
+<package name="PREC16X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-20.32" y1="1.27" x2="-20.32" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-20.32" y1="-1.27" x2="-18.034" y2="-1.27" width="0.1524" layer="51"/>
@@ -6413,7 +6413,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-20.32" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="17.907" y="1.524" size="1.27" layer="21" ratio="10">16</text>
 </package>
-<package name="PREC17X1">
+<package name="PREC17X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.764" y1="-1.27" x2="-16.51" y2="-1.016" width="0.1524" layer="21"/>
 <wire x1="-16.51" y1="-1.016" x2="-16.256" y2="-1.27" width="0.1524" layer="21"/>
@@ -6547,7 +6547,7 @@ R90 = 90 deg angled&lt;p&gt;
 <wire x1="16.256" y1="-1.27" x2="16.51" y2="-1.016" width="0.1524" layer="21"/>
 <wire x1="18.796" y1="-1.27" x2="19.05" y2="-1.016" width="0.1524" layer="21"/>
 </package>
-<package name="PREC18X1">
+<package name="PREC18X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-22.86" y1="1.27" x2="-22.86" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-22.86" y1="-1.27" x2="-20.574" y2="-1.27" width="0.1524" layer="51"/>
@@ -6678,7 +6678,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-22.86" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="20.447" y="1.524" size="1.27" layer="21" ratio="10">18</text>
 </package>
-<package name="PREC19X1">
+<package name="PREC19X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.256" y1="-1.27" x2="-14.224" y2="-1.27" width="0.1524" layer="51"/>
 <wire x1="-14.224" y1="-1.27" x2="-13.97" y2="-1.016" width="0.1524" layer="21"/>
@@ -6816,7 +6816,7 @@ R90 = 90 deg angled&lt;p&gt;
 <wire x1="21.59" y1="-1.016" x2="21.844" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="21.336" y1="-1.27" x2="21.59" y2="-1.016" width="0.1524" layer="21"/>
 </package>
-<package name="PREC20X1">
+<package name="PREC20X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-25.4" y1="1.27" x2="-25.4" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-25.4" y1="-1.27" x2="-23.114" y2="-1.27" width="0.1524" layer="51"/>
@@ -6961,7 +6961,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-25.4" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="22.987" y="1.524" size="1.27" layer="21" ratio="10">20</text>
 </package>
-<package name="PREC25X1">
+<package name="PREC25X1-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.256" y1="-1.27" x2="-14.224" y2="-1.27" width="0.1524" layer="51"/>
 <wire x1="-14.224" y1="-1.27" x2="-13.97" y2="-1.016" width="0.1524" layer="21"/>
@@ -7141,7 +7141,7 @@ R90 = 90 deg angled&lt;p&gt;
 <wire x1="29.21" y1="-1.016" x2="29.464" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="28.956" y1="-1.27" x2="29.21" y2="-1.016" width="0.1524" layer="21"/>
 </package>
-<package name="PREC02X2">
+<package name="PREC02X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-2.54" y1="-2.54" x2="-0.254" y2="-2.54" width="0.1524" layer="51"/>
@@ -7160,7 +7160,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-3.81" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="PREC03X2">
+<package name="PREC03X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-3.81" y1="2.54" x2="-3.81" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="-2.54" x2="-1.524" y2="-2.54" width="0.1524" layer="51"/>
@@ -7187,7 +7187,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-3.81" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="2.54" y="-2.921" size="1.27" layer="27" ratio="10" rot="R180">&gt;VALUE</text>
 </package>
-<package name="PREC04X2">
+<package name="PREC04X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-5.08" y1="2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="-2.54" x2="-2.794" y2="-2.54" width="0.1524" layer="51"/>
@@ -7222,7 +7222,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-5.08" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="PREC05X2">
+<package name="PREC05X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-6.35" y1="-2.54" x2="-4.064" y2="-2.54" width="0.1524" layer="51"/>
@@ -7267,7 +7267,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="5.334" y="3.175" size="1.27" layer="21" ratio="10">9</text>
 <text x="0" y="-2.921" size="1.27" layer="27" ratio="10" rot="R180">&gt;VALUE</text>
 </package>
-<package name="PREC06X2">
+<package name="PREC06X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-7.62" y1="2.54" x2="-7.62" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-7.62" y1="-2.54" x2="-5.334" y2="-2.54" width="0.1524" layer="51"/>
@@ -7320,7 +7320,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-7.62" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="5.842" y="2.794" size="1.27" layer="21" ratio="10">11</text>
 </package>
-<package name="PREC07X2">
+<package name="PREC07X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-8.89" y1="2.54" x2="-8.89" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-8.89" y1="-2.54" x2="-6.604" y2="-2.54" width="0.1524" layer="51"/>
@@ -7381,7 +7381,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-7.62" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="7.112" y="2.794" size="1.27" layer="21" ratio="10">13</text>
 </package>
-<package name="PREC08X2">
+<package name="PREC08X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-10.16" y1="2.54" x2="-10.16" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-10.16" y1="-2.54" x2="-7.874" y2="-2.54" width="0.1524" layer="51"/>
@@ -7450,7 +7450,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-10.16" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="8.382" y="2.794" size="1.27" layer="21" ratio="10">15</text>
 </package>
-<package name="PREC09X2">
+<package name="PREC09X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-11.43" y1="2.54" x2="-11.43" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-11.43" y1="-2.54" x2="-9.144" y2="-2.54" width="0.1524" layer="51"/>
@@ -7527,7 +7527,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-11.43" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="9.652" y="2.794" size="1.27" layer="21" ratio="10">17</text>
 </package>
-<package name="PREC10X2">
+<package name="PREC10X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-12.7" y1="2.54" x2="-12.7" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-12.7" y1="-2.54" x2="-10.414" y2="-2.54" width="0.1524" layer="51"/>
@@ -7612,7 +7612,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-12.7" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="10.287" y="2.794" size="1.27" layer="21" ratio="10">19</text>
 </package>
-<package name="PREC11X2">
+<package name="PREC11X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-13.97" y1="2.54" x2="-13.97" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-13.97" y1="-2.54" x2="-11.684" y2="-2.54" width="0.1524" layer="51"/>
@@ -7705,7 +7705,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-13.97" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="11.557" y="2.794" size="1.27" layer="21" ratio="10">21</text>
 </package>
-<package name="PREC12X2">
+<package name="PREC12X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-15.24" y1="2.54" x2="-15.24" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-15.24" y1="-2.54" x2="-12.954" y2="-2.54" width="0.1524" layer="51"/>
@@ -7806,7 +7806,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-15.24" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="12.827" y="2.794" size="1.27" layer="21" ratio="10">23</text>
 </package>
-<package name="PREC13X2">
+<package name="PREC13X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.51" y1="2.54" x2="-16.51" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-16.51" y1="-2.54" x2="-14.224" y2="-2.54" width="0.1524" layer="51"/>
@@ -7915,7 +7915,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-16.51" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="14.097" y="2.794" size="1.27" layer="21" ratio="10">25</text>
 </package>
-<package name="PREC14X2">
+<package name="PREC14X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-17.78" y1="2.54" x2="-17.78" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-17.78" y1="-2.54" x2="-15.494" y2="-2.54" width="0.1524" layer="51"/>
@@ -8032,7 +8032,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-17.78" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="15.367" y="2.794" size="1.27" layer="21" ratio="10">27</text>
 </package>
-<package name="PREC15X2">
+<package name="PREC15X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-19.05" y1="2.54" x2="-19.05" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-19.05" y1="-2.54" x2="-16.764" y2="-2.54" width="0.1524" layer="51"/>
@@ -8157,7 +8157,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-19.05" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="16.637" y="2.794" size="1.27" layer="21" ratio="10">29</text>
 </package>
-<package name="PREC16X2">
+<package name="PREC16X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-20.32" y1="2.54" x2="-20.32" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-20.32" y1="-2.54" x2="-18.034" y2="-2.54" width="0.1524" layer="51"/>
@@ -8290,7 +8290,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-20.32" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="17.907" y="2.794" size="1.27" layer="21" ratio="10">31</text>
 </package>
-<package name="PREC17X2">
+<package name="PREC17X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-14.224" y1="-2.54" x2="-13.97" y2="-2.286" width="0.1524" layer="21"/>
 <wire x1="-13.97" y1="-2.286" x2="-13.716" y2="-2.54" width="0.1524" layer="21"/>
@@ -8431,7 +8431,7 @@ R90 = 90 deg angled&lt;p&gt;
 <wire x1="16.256" y1="-2.54" x2="16.51" y2="-2.286" width="0.1524" layer="21"/>
 <wire x1="18.796" y1="-2.54" x2="19.05" y2="-2.286" width="0.1524" layer="21"/>
 </package>
-<package name="PREC18X2">
+<package name="PREC18X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-22.86" y1="2.54" x2="-22.86" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-22.86" y1="-2.54" x2="-20.574" y2="-2.54" width="0.1524" layer="51"/>
@@ -8580,7 +8580,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-22.86" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="20.447" y="2.794" size="1.27" layer="21" ratio="10">35</text>
 </package>
-<package name="PREC19X2">
+<package name="PREC19X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.256" y1="-2.54" x2="-14.224" y2="-2.54" width="0.1524" layer="51"/>
 <wire x1="-14.224" y1="-2.54" x2="-13.97" y2="-2.286" width="0.1524" layer="21"/>
@@ -8737,7 +8737,7 @@ R90 = 90 deg angled&lt;p&gt;
 <wire x1="21.59" y1="-2.286" x2="21.844" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="21.336" y1="-2.54" x2="21.59" y2="-2.286" width="0.1524" layer="21"/>
 </package>
-<package name="PREC20X2">
+<package name="PREC20X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-25.4" y1="2.54" x2="-25.4" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-25.4" y1="-2.54" x2="-23.114" y2="-2.54" width="0.1524" layer="51"/>
@@ -8902,7 +8902,7 @@ R90 = 90 deg angled&lt;p&gt;
 <text x="-25.4" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="22.987" y="2.794" size="1.27" layer="21" ratio="10">39</text>
 </package>
-<package name="PREC25X2">
+<package name="PREC25X2-2.54">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <wire x1="-16.256" y1="-2.54" x2="-14.224" y2="-2.54" width="0.1524" layer="51"/>
 <wire x1="-14.224" y1="-2.54" x2="-13.97" y2="-2.286" width="0.1524" layer="21"/>
@@ -12143,7 +12143,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F02-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC02X1">
+<device name="-2.54MM" package="PREC02X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12165,7 +12165,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F03-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC03X1">
+<device name="-2.54MM" package="PREC03X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12188,7 +12188,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F04-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC04X1">
+<device name="-2.54MM" package="PREC04X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12212,7 +12212,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F05-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC05X1">
+<device name="-2.54MM" package="PREC05X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12237,7 +12237,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F06-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC06X1">
+<device name="-2.54MM" package="PREC06X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12263,7 +12263,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F07-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC07X1">
+<device name="-2.54MM" package="PREC07X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12290,7 +12290,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F08-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC08X1">
+<device name="-2.54MM" package="PREC08X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12318,7 +12318,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F09-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC09X1">
+<device name="-2.54MM" package="PREC09X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12347,7 +12347,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F10-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC10X1">
+<device name="-2.54MM" package="PREC10X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12377,7 +12377,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F11-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC11X1">
+<device name="-2.54MM" package="PREC11X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12408,7 +12408,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F12-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC12X1">
+<device name="-2.54MM" package="PREC12X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12440,7 +12440,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F13-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC13X1">
+<device name="-2.54MM" package="PREC13X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12473,7 +12473,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F14-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC14X1">
+<device name="-2.54MM" package="PREC14X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12507,7 +12507,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F15-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC15X1">
+<device name="-2.54MM" package="PREC15X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12542,7 +12542,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F16-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC16X1">
+<device name="-2.54MM" package="PREC16X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12578,7 +12578,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F17-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC17X1">
+<device name="-2.54MM" package="PREC17X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12615,7 +12615,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F18-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC18X1">
+<device name="-2.54MM" package="PREC18X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12653,7 +12653,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F19-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC19X1">
+<device name="-2.54MM" package="PREC19X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12692,7 +12692,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F20-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC20X1">
+<device name="-2.54MM" package="PREC20X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12732,7 +12732,7 @@ R90 = 90 deg angled&lt;p&gt;
 <gate name="X1" symbol="F25-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC25X1">
+<device name="-2.54MM" package="PREC25X1-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12766,13 +12766,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC02X2">
+<deviceset name="PREC02X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F02-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC02X2">
+<device name="-2.54MM" package="PREC02X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12785,13 +12785,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC03X2">
+<deviceset name="PREC03X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F03-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC03X2">
+<device name="-2.54MM" package="PREC03X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12806,13 +12806,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC04X2">
+<deviceset name="PREC04X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F04-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC04X2">
+<device name="-2.54MM" package="PREC04X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="2" pad="2"/>
@@ -12829,13 +12829,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC05X2">
+<deviceset name="PREC05X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F05-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC05X2">
+<device name="-2.54MM" package="PREC05X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12854,13 +12854,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC06X2">
+<deviceset name="PREC06X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F06-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC06X2">
+<device name="-2.54MM" package="PREC06X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12881,13 +12881,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC07X2">
+<deviceset name="PREC07X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F07-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC07X2">
+<device name="-2.54MM" package="PREC07X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12910,13 +12910,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC08X2">
+<deviceset name="PREC08X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F08-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC08X2">
+<device name="-2.54MM" package="PREC08X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12941,13 +12941,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC09X2">
+<deviceset name="PREC09X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F09-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC09X2">
+<device name="-2.54MM" package="PREC09X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -12974,13 +12974,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC10X2">
+<deviceset name="PREC10X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F10-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC10X2">
+<device name="-2.54MM" package="PREC10X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13009,13 +13009,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC11X2">
+<deviceset name="PREC11X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F11-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC11X2">
+<device name="-2.54MM" package="PREC11X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13046,13 +13046,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC12X2">
+<deviceset name="PREC12X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F12-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC12X2">
+<device name="-2.54MM" package="PREC12X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13085,13 +13085,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC13X2">
+<deviceset name="PREC13X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F13-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC13X2">
+<device name="-2.54MM" package="PREC13X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13126,13 +13126,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC14X2">
+<deviceset name="PREC14X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F14-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC14X2">
+<device name="-2.54MM" package="PREC14X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13169,13 +13169,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC15X2">
+<deviceset name="PREC15X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F15-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC15X2">
+<device name="-2.54MM" package="PREC15X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13214,13 +13214,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC16X2">
+<deviceset name="PREC16X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F16-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC16X2">
+<device name="-2.54MM" package="PREC16X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13261,13 +13261,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC17X2">
+<deviceset name="PREC17X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F17-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC17X2">
+<device name="-2.54MM" package="PREC17X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13310,13 +13310,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC18X2">
+<deviceset name="PREC18X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F18-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC18X2">
+<device name="-2.54MM" package="PREC18X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13361,13 +13361,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC19X2">
+<deviceset name="PREC19X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F19-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC19X2">
+<device name="-2.54MM" package="PREC19X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13414,13 +13414,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC20X2">
+<deviceset name="PREC20X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F20-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC20X2">
+<device name="-2.54MM" package="PREC20X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
@@ -13469,13 +13469,13 @@ R90 = 90 deg angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="PREC25X2">
+<deviceset name="PREC25X2" prefix="X" uservalue="yes">
 <description>&lt;b&gt;female precision header&lt;/b&gt;</description>
 <gates>
 <gate name="X1" symbol="F25-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.54MM" package="PREC25X2">
+<device name="-2.54MM" package="PREC25X2-2.54">
 <connects>
 <connect gate="X1" pin="1" pad="1"/>
 <connect gate="X1" pin="10" pad="10"/>
