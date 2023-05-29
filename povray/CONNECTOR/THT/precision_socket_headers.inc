@@ -39,7 +39,7 @@
               <+Cols*Grid/2+0.1,+0.5,+0.5>
               rotate <-45,0,0>
               translate <0,-7/2-0.25,-Rows*Grid/2+0.5>
-              }        
+              }
            GRID(cylinder { <0,-7.1/2,0> <0,+7.1/2,0> 1.4/2},Grid,Cols,Rows)
            #local X = 0.3;
            GRID (

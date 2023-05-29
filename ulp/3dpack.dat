@@ -1844,26 +1844,6 @@ AK500/9:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINAL
 AK500/10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_10(:Anreihklemmen 10Pin (con-ptr500.lib):Screw Terminal conn. 10Pin (con-ptr500.lib)
 AK500/11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_11(:Anreihklemmen 11Pin (con-ptr500.lib):Screw Terminal conn. 11Pin (con-ptr500.lib)
 AK500/12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_12(:Anreihklemmen 12Pin (con-ptr500.lib):Screw Terminal conn. 12Pin (con-ptr500.lib)
-FE05W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X5(:Buchsenleiste gewinkelt 5Pin 1Reihe (con-lsta.lib):Female Header  5Pin 1Row (con-lsta.lib) 
-FE06W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X6(:Buchsenleiste gewinkelt 6Pin 1Reihe (con-lsta.lib):Female Header  6Pin 1Row (con-lsta.lib) 
-FE07W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X7(:Buchsenleiste gewinkelt 7Pin 1Reihe (con-lsta.lib):Female Header  7Pin 1Row (con-lsta.lib) 
-FE08W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X8(:Buchsenleiste gewinkelt 8Pin 1Reihe (con-lsta.lib):Female Header  8Pin 1Row (con-lsta.lib) 
-FE09W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X9(:Buchsenleiste gewinkelt 9Pin 1Reihe (con-lsta.lib):Female Header  9Pin 1Row (con-lsta.lib) 
-FE10W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X10(:Buchsenleiste gewinkelt 10Pin 1Reihe (con-lsta.lib):Female Header  10Pin 1Row (con-lsta.lib) 
-FE12W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X12(:Buchsenleiste gewinkelt 12Pin 1Reihe (con-lsta.lib):Female Header  12Pin 1Row (con-lsta.lib) 
-FE13W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X13(:Buchsenleiste gewinkelt 13Pin 1Reihe (con-lsta.lib):Female Header  13Pin 1Row (con-lsta.lib) 
-FE20W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_1X20(:Buchsenleiste gewinkelt 20Pin 1Reihe (con-lsta.lib):Female Header  20Pin 1Row (con-lsta.lib) 
-FE05-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X5(:Buchsenleiste gewinkelt 5Pin x 2Reihen (con-lsta.lib):Female Header  5Pin x 2Row (con-lsta.lib) 
-FE06-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X6(:Buchsenleiste gewinkelt 6Pin x 2Reihen (con-lsta.lib):Female Header  6Pin x 2Row (con-lsta.lib) 
-FE07-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X7(:Buchsenleiste gewinkelt 7Pin x 2Reihen (con-lsta.lib):Female Header  7Pin x 2Row (con-lsta.lib) 
-FE08-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X8(:Buchsenleiste gewinkelt 8Pin x 2Reihen (con-lsta.lib):Female Header  8Pin x 2Row (con-lsta.lib) 
-FE09-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X9(:Buchsenleiste gewinkelt 9Pin x 2Reihen (con-lsta.lib):Female Header  9Pin x 2Row (con-lsta.lib) 
-FE10-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X10(:Buchsenleiste gewinkelt 10Pin x 2Reihen (con-lsta.lib):Female Header  10Pin x 2Row (con-lsta.lib) 
-FE12-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X12(:Buchsenleiste gewinkelt 12Pin x 2Reihen (con-lsta.lib):Female Header  12Pin x 2Row (con-lsta.lib) 
-FE13-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X13(:Buchsenleiste gewinkelt 13Pin x 2Reihen (con-lsta.lib):Female Header  13Pin x 2Row (con-lsta.lib) 
-FE17-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X17(:Buchsenleiste gewinkelt 17Pin x 2Reihen (con-lsta.lib):Female Header  17Pin x 2Row (con-lsta.lib) 
-FE18-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X18(:Buchsenleiste gewinkelt 18Pin x 2Reihen (con-lsta.lib):Female Header  18Pin x 2Row (con-lsta.lib) 
-FE20-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BLW_2X20(:Buchsenleiste gewinkelt 20Pin x 2Reihen (con-lsta.lib):Female Header  20Pin x 2Row (con-lsta.lib) 
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X5(:Buchsenleiste (flach) 5Pin 1Reihe (con-lsta.lib):Female Header (low profile) 5Pin 1Row (con-lsta.lib)     
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X6(:Buchsenleiste (flach) 6Pin 1Reihe (con-lsta.lib):Female Header (low profile) 6Pin 1Row (con-lsta.lib)       
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X7(:Buchsenleiste (flach) 7Pin 1Reihe (con-lsta.lib):Female Header (low profile) 7Pin 1Row (con-lsta.lib)       
@@ -1887,7 +1867,7 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X18(:Buchsenleiste (flach) 18Pin 2Reihen (con-lsta.lib):Female Header (low profile) 18Pin 2Rows (con-lsta.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X20(:Buchsenleiste (flach) 20Pin 2Reihen (con-lsta.lib):Female Header (low profile) 20Pin 2Rows (con-lsta.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X17(:Buchsenleiste (flach) 17Pin 1Reihe :Female Header (low profile) 17Pin 1Row
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X18(:Buchsenleiste (flach) 18Pin 1Reihe :Female Header (low profile) 18Pin 1Row 
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X18(:Buchsenleiste (flach) 18Pin 1Reihe :Female Header (low profile) 18Pin 1Row
 
 
 PREC070F2X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x02_254(:Precision 7mm header 2.54mm R90:
@@ -1930,6 +1910,30 @@ PREC070F18X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Prec
 PREC070F19X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x19_254(:Precision 7mm header 2.54mm R90:
 PREC070F20X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x20_254(:Precision 7mm header 2.54mm R90:
 PREC070F25X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x25_254(:Precision 7mm header 2.54mm R90:
+
+
+FE05W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE06W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE07W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE08W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE09W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE10W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE12W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE13W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE20W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE05-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE06-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE07-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE08-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE09-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE10-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE12-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE13-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE17-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE18-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE20-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+
+
 
 
 
