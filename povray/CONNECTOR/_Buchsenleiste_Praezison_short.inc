@@ -1,5 +1,5 @@
 // ////////////////////////////////////////////////////////////
-// Pin fuer Buchsenleiste (flache Bauform), hinzugefuegt von B.Redemann www.b-redemann.de
+// Pin fuer Buchsenleiste (flache Bauform), hinzugefuegt von B.Redemann
 // //////////
 #macro CON_PBL_F()
 union {

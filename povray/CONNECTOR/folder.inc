@@ -13,6 +13,7 @@
 #include "CONNECTOR/THT/coax_LEMO.inc"
 #include "CONNECTOR/THT/coax-SMA.inc"
 #include "CONNECTOR/THT/generic_jack_socket_035_stereo.inc"
+#include "CONNECTOR/THT/precision_socket_headers.inc"
 #include "CONNECTOR/THT/wirejumper.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
 #include "CONNECTOR/THT/MOLEX_KK254_series.inc"

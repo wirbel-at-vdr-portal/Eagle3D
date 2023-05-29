@@ -1887,7 +1887,52 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X18(:Buchsenleiste (flach) 18Pin 2Reihen (con-lsta.lib):Female Header (low profile) 18Pin 2Rows (con-lsta.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X20(:Buchsenleiste (flach) 20Pin 2Reihen (con-lsta.lib):Female Header (low profile) 20Pin 2Rows (con-lsta.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X17(:Buchsenleiste (flach) 17Pin 1Reihe :Female Header (low profile) 17Pin 1Row
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X18(:Buchsenleiste (flach) 18Pin 1Reihe :Female Header (low profile) 18Pin 1Row
+NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X18(:Buchsenleiste (flach) 18Pin 1Reihe :Female Header (low profile) 18Pin 1Row 
+
+
+PREC070F2X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x02_254(:Precision 7mm header 2.54mm R90:
+PREC070F3X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x03_254(:Precision 7mm header 2.54mm R90:
+PREC070F4X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x04_254(:Precision 7mm header 2.54mm R90:
+PREC070F5X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x05_254(:Precision 7mm header 2.54mm R90:
+PREC070F6X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x06_254(:Precision 7mm header 2.54mm R90:
+PREC070F7X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x07_254(:Precision 7mm header 2.54mm R90:
+PREC070F8X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x08_254(:Precision 7mm header 2.54mm R90:
+PREC070F9X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x09_254(:Precision 7mm header 2.54mm R90:
+PREC070F10X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x10_254(:Precision 7mm header 2.54mm R90:
+PREC070F11X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x11_254(:Precision 7mm header 2.54mm R90:
+PREC070F12X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x12_254(:Precision 7mm header 2.54mm R90:
+PREC070F13X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x13_254(:Precision 7mm header 2.54mm R90:
+PREC070F14X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x14_254(:Precision 7mm header 2.54mm R90:
+PREC070F15X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x15_254(:Precision 7mm header 2.54mm R90:
+PREC070F16X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x16_254(:Precision 7mm header 2.54mm R90:
+PREC070F17X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x17_254(:Precision 7mm header 2.54mm R90:
+PREC070F18X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x18_254(:Precision 7mm header 2.54mm R90:
+PREC070F19X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x19_254(:Precision 7mm header 2.54mm R90:
+PREC070F20X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x20_254(:Precision 7mm header 2.54mm R90:
+PREC070F25X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x25_254(:Precision 7mm header 2.54mm R90:
+PREC070F2X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x02_254(:Precision 7mm header 2.54mm R90:
+PREC070F3X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x03_254(:Precision 7mm header 2.54mm R90:
+PREC070F4X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x04_254(:Precision 7mm header 2.54mm R90:
+PREC070F5X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x05_254(:Precision 7mm header 2.54mm R90:
+PREC070F6X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x06_254(:Precision 7mm header 2.54mm R90:
+PREC070F7X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x07_254(:Precision 7mm header 2.54mm R90:
+PREC070F8X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x08_254(:Precision 7mm header 2.54mm R90:
+PREC070F9X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x09_254(:Precision 7mm header 2.54mm R90:
+PREC070F10X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x10_254(:Precision 7mm header 2.54mm R90:
+PREC070F11X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x11_254(:Precision 7mm header 2.54mm R90:
+PREC070F12X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x12_254(:Precision 7mm header 2.54mm R90:
+PREC070F13X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x13_254(:Precision 7mm header 2.54mm R90:
+PREC070F14X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x14_254(:Precision 7mm header 2.54mm R90:
+PREC070F15X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x15_254(:Precision 7mm header 2.54mm R90:
+PREC070F16X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x16_254(:Precision 7mm header 2.54mm R90:
+PREC070F17X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x17_254(:Precision 7mm header 2.54mm R90:
+PREC070F18X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x18_254(:Precision 7mm header 2.54mm R90:
+PREC070F19X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x19_254(:Precision 7mm header 2.54mm R90:
+PREC070F20X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x20_254(:Precision 7mm header 2.54mm R90:
+PREC070F25X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_2x25_254(:Precision 7mm header 2.54mm R90:
+
+
+
 FE05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X5(:Buchsenleiste 5Pin 1Reihe (con-lsta.lib):Female Header  5Pin 1Row (con-lsta.lib)
 FE06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X6(:Buchsenleiste 6Pin 1Reihe (con-lsta.lib):Female Header  6Pin 1Row (con-lsta.lib)
 FE07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X7(:Buchsenleiste 7Pin 1Reihe (con-lsta.lib):Female Header  7Pin 1Row (con-lsta.lib)
