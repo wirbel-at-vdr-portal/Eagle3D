@@ -1932,17 +1932,6 @@ PREC25X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precis
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 FE05W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
 FE06W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
 FE07W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:    CON_NONEXISTENT(:deleted (con-lsta.lib):
@@ -1963,35 +1952,31 @@ FE13-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXI
 FE17-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
 FE18-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
 FE20-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:180:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_NONEXISTENT(:deleted (con-lsta.lib):
+FE05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:     CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE05-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE06-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE07-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE08-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE09-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE10-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE12-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE13-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE15-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE17-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
+FE20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:   CON_NONEXISTEND(:deleted (con-lsta.lib):
 
 
 
-
-
-FE05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X5(:Buchsenleiste 5Pin 1Reihe (con-lsta.lib):Female Header  5Pin 1Row (con-lsta.lib)
-FE06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X6(:Buchsenleiste 6Pin 1Reihe (con-lsta.lib):Female Header  6Pin 1Row (con-lsta.lib)
-FE07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X7(:Buchsenleiste 7Pin 1Reihe (con-lsta.lib):Female Header  7Pin 1Row (con-lsta.lib)
-FE08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X8(:Buchsenleiste 8Pin 1Reihe (con-lsta.lib):Female Header  8Pin 1Row (con-lsta.lib)
-FE09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X9(:Buchsenleiste 9Pin 1Reihe (con-lsta.lib):Female Header  9Pin 1Row (con-lsta.lib)
-FE10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X10(:Buchsenleiste 10Pin 1Reihe (con-lsta.lib):Female Header  10Pin 1Row (con-lsta.lib)
-FE12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X12(:Buchsenleiste 12Pin 1Reihe (con-lsta.lib):Female Header  12Pin 1Row (con-lsta.lib)
-FE13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X13(:Buchsenleiste 13Pin 1Reihe (con-lsta.lib):Female Header  13Pin 1Row (con-lsta.lib)
-FE15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X15(:Buchsenleiste 15Pin 1Reihe (con-lsta.lib):Female Header  15Pin 1Row (con-lsta.lib)
-FE20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X20(:Buchsenleiste 20Pin 1Reihe (con-lsta.lib):Female Header  20Pin 1Row (con-lsta.lib)
-FE05-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X5(:Buchsenleiste 5Pin 2Reihen (con-lsta.lib):Female Header  5Pin 2Rows (con-lsta.lib)
-FE06-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X6(:Buchsenleiste 6Pin 2Reihen (con-lsta.lib):Female Header  6Pin 2Rows (con-lsta.lib)
-FE07-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X7(:Buchsenleiste 7Pin 2Reihen (con-lsta.lib):Female Header  7Pin 2Rows (con-lsta.lib)
-FE08-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X8(:Buchsenleiste 8Pin 2Reihen (con-lsta.lib):Female Header  8Pin 2Rows (con-lsta.lib)
-FE09-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X9(:Buchsenleiste 9Pin 2Reihen (con-lsta.lib):Female Header  9Pin 2Rows (con-lsta.lib)
-FE10-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X10(:Buchsenleiste 10Pin 2Reihen (con-lsta.lib):Female Header  10Pin 2Rows (con-lsta.lib)
-FE12-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X12(:Buchsenleiste 12Pin 2Reihen (con-lsta.lib):Female Header  12Pin 2Rows (con-lsta.lib)
-FE13-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X13(:Buchsenleiste 13Pin 2Reihen (con-lsta.lib):Female Header  13Pin 2Rows (con-lsta.lib)
-FE15-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X15(:Buchsenleiste 15Pin 2Reihen (con-lsta.lib):Female Header  15Pin 2Rows (con-lsta.lib)
-FE17-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X17(:Buchsenleiste 17Pin 2Reihen (con-lsta.lib):Female Header  17Pin 2Rows (con-lsta.lib)
-FE18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X18(:Buchsenleiste 18Pin 2Reihen (con-lsta.lib):Female Header  18Pin 2Rows (con-lsta.lib)
-FE20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X20(:Buchsenleiste 20Pin 2Reihen (con-lsta.lib):Female Header  20Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X17(:Buchsenleiste 17Pin 1Reihe :Female Header  17Pin 1Row
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X18(:Buchsenleiste 18Pin 1Reihe :Female Header  18Pin 1Row
 14H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F14(:Centronics 14polig 90 Grad weiblich:Centronics 14 Pins 90deg female (con-amp-champ.lib)
 14HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F14(:Centronics 14polig 90 Grad weiblich:Centronics 14 Pins 90deg female (con-amp-champ.lib)
 24H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F24(:Centronics 24polig 90 Grad weiblich:Centronics 24 Pins 90deg female (con-amp-champ.lib)

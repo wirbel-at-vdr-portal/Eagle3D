@@ -3660,8 +3660,6 @@ union {
 
 
 
-
-#include "CONNECTOR/_Buchsenleiste_Praezision_long.inc"
 #include "CONNECTOR/_Pfostenwanne_THT.inc"
 #include "CONNECTOR/_Pinheader_200_SMT.inc"
 #include "CONNECTOR/_Pinheader_254_90deg.inc"
