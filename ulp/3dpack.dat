@@ -1992,29 +1992,6 @@ FE18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X18(:
 FE20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_2X20(:Buchsenleiste 20Pin 2Reihen (con-lsta.lib):Female Header  20Pin 2Rows (con-lsta.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X17(:Buchsenleiste 17Pin 1Reihe :Female Header  17Pin 1Row
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_1X18(:Buchsenleiste 18Pin 1Reihe :Female Header  18Pin 1Row
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X1(:Buchsenleiste 1Reihe 1Pin:Female Header 1Row 1Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X2(:Buchsenleiste 1Reihe 2Pin:Female Header 1Row 2Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X3(:Buchsenleiste 1Reihe 3Pin:Female Header 1Row 3Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X4(:Buchsenleiste 1Reihe 4Pin:Female Header 1Row 4Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X5(:Buchsenleiste 1Reihe 5Pin:Female Header 1Row 5Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X6(:Buchsenleiste 1Reihe 6Pin:Female Header 1Row 6Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X7(:Buchsenleiste 1Reihe 7Pin:Female Header 1Row 7Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X8(:Buchsenleiste 1Reihe 8Pin:Female Header 1Row 8Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X9(:Buchsenleiste 1Reihe 9Pin:Female Header 1Row 9Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X10(:Buchsenleiste 1Reihe 10Pin:Female Header 1Row 10Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X11(:Buchsenleiste 1Reihe 11Pin:Female Header 1Row 11Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_1X12(:Buchsenleiste 1Reihe 12Pin:Female Header 1Row 12Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X2(:Buchsenleiste 2Reihe 2Pin:Female Header 2Row 2Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X3(:Buchsenleiste 2Reihe 3Pin:Female Header 2Row 3Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X4(:Buchsenleiste 2Reihe 4Pin:Female Header 2Row 4Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X5(:Buchsenleiste 2Reihe 5Pin:Female Header 2Row 5Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X6(:Buchsenleiste 2Reihe 6Pin:Female Header 2Row 6Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X7(:Buchsenleiste 2Reihe 7Pin:Female Header 2Row 7Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X8(:Buchsenleiste 2Reihe 8Pin:Female Header 2Row 8Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X9(:Buchsenleiste 2Reihe 9Pin:Female Header 2Row 9Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X10(:Buchsenleiste 2Reihe 10Pin:Female Header 2Row 10Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X11(:Buchsenleiste 2Reihe 11Pin:Female Header 2Row 11Pin
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_PRECISION_2X12(:Buchsenleiste 2Reihe 12Pin:Female Header 2Row 12Pin
 14H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F14(:Centronics 14polig 90 Grad weiblich:Centronics 14 Pins 90deg female (con-amp-champ.lib)
 14HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F14(:Centronics 14polig 90 Grad weiblich:Centronics 14 Pins 90deg female (con-amp-champ.lib)
 24H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F24(:Centronics 24polig 90 Grad weiblich:Centronics 24 Pins 90deg female (con-amp-champ.lib)
