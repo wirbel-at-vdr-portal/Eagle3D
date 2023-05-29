@@ -21,6 +21,7 @@
 #include "TOOLS/PCB_VIA.inc"
 #include "TOOLS/PIN_90deg.inc"
 #include "TOOLS/PIN_STRAIGHT.inc"
+#include "TOOLS/PrecisionContact.inc"
 #include "TOOLS/RECT_BOGEN.inc"
 #include "TOOLS/ROTATE.inc"
 #include "TOOLS/ROUNDED_BAR.inc"
