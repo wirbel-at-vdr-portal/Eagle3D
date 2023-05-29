@@ -109,34 +109,22 @@
      text { ttf global_fontfile_alphalcd " WE  1OO7" 0.01, 0  pigment {Black} scale <2.3,2.3,2> rotate <0,0,0> translate <-a/2+1+(a-18.5)/2,tc+3.8+(c-20.5)/2,-ep/2-0.05>}
      text { ttf global_fontfile_alphalcd "2*39mHO,4A" 0.01, 0  pigment {Black} scale <2.3,2.3,2> rotate <0,0,0> translate <-a/2+1+(a-18.5)/2,tc+6.6+(c-20.5)/2,-ep/2-0.05>}
      //solded wire
+     /*
      sphere { <-d1/2+lpin,bc/2,-ep/2>, pin  texture{col_silver}}
      sphere { <-d1/2+lpin,bc/2,+ep/2>, pin  texture{col_silver}}
      sphere { <+d1/2-lpin,bc/2,-ep/2>, pin  texture{col_silver}}
      sphere { <+d1/2-lpin,bc/2,+ep/2>, pin  texture{col_silver}}
+     */
 
      pigment {Brown}
      }
 #end
 
-#macro SPC_L_WE_LF612SV(value)
-  WE_GI_LF_BASE(18.5,13.5,20.5,15.5+1.5,10,0.6,value,0,3,0)
-#end
-
-#macro SPC_L_WE_SV(value)
-  WE_GI_LF_BASE(18.5,13.5,20.5,0,10,0.6,value,5.21,3,0)
-#end
-
-#macro SPC_L_WE_LF622MV(value)
-  WE_GI_LF_BASE(23.5,16,25.5,0,12.5,0.6,value,5,3,0.45)
-#end
-
-#macro SPC_L_WE_LF632LV(value)
-  WE_GI_LF_BASE(26.5,18.5,30.5,0,15,0.6,value,5.25,3,0.9)
-#end
-
-#macro SPC_L_WE_LF642XV(value)
-  WE_GI_LF_BASE(32.5,21.5,35.5,0,17.5,0.8,value,8,3.5,1.4)
-#end
+#macro SPC_L_WE_LF612SV(value)  WE_GI_LF_BASE(18.5,13.5,20.5,15.5+1.5,10  ,0.6,value,0   ,3  ,0   ) #end
+#macro SPC_L_WE_SV(value)       WE_GI_LF_BASE(18.5,13.5,20.5,       0,10  ,0.6,value,5.21,3  ,0   ) #end
+#macro SPC_L_WE_LF622MV(value)  WE_GI_LF_BASE(23.5,16.0,25.5,       0,12.5,0.6,value,5   ,3  ,0.45) #end
+#macro SPC_L_WE_LF632LV(value)  WE_GI_LF_BASE(26.5,18.5,30.5,       0,15  ,0.6,value,5.25,3  ,0.9 ) #end
+#macro SPC_L_WE_LF642XV(value)  WE_GI_LF_BASE(32.5,21.5,35.5,       0,17.5,0.8,value,8   ,3.5,1.4 ) #end
 
 
 
