@@ -1844,30 +1844,6 @@ AK500/9:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINAL
 AK500/10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_10(:Anreihklemmen 10Pin (con-ptr500.lib):Screw Terminal conn. 10Pin (con-ptr500.lib)
 AK500/11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_11(:Anreihklemmen 11Pin (con-ptr500.lib):Screw Terminal conn. 11Pin (con-ptr500.lib)
 AK500/12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_12(:Anreihklemmen 12Pin (con-ptr500.lib):Screw Terminal conn. 12Pin (con-ptr500.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X5(:Buchsenleiste (flach) 5Pin 1Reihe (con-lsta.lib):Female Header (low profile) 5Pin 1Row (con-lsta.lib)     
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X6(:Buchsenleiste (flach) 6Pin 1Reihe (con-lsta.lib):Female Header (low profile) 6Pin 1Row (con-lsta.lib)       
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X7(:Buchsenleiste (flach) 7Pin 1Reihe (con-lsta.lib):Female Header (low profile) 7Pin 1Row (con-lsta.lib)       
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X8(:Buchsenleiste (flach) 8Pin 1Reihe (con-lsta.lib):Female Header (low profile) 8Pin 1Row (con-lsta.lib)       
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X9(:Buchsenleiste (flach) 9Pin 1Reihe (con-lsta.lib):Female Header (low profile) 9Pin 1Row (con-lsta.lib)       
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X10(:Buchsenleiste (flach) 10Pin 1Reihe (con-lsta.lib):Female Header (low profile) 10Pin 1Row (con-lsta.lib)    
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X12(:Buchsenleiste (flach) 12Pin 1Reihe (con-lsta.lib):Female Header (low profile) 12Pin 1Row (con-lsta.lib)    
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X13(:Buchsenleiste (flach) 13Pin 1Reihe (con-lsta.lib):Female Header (low profile) 13Pin 1Row (con-lsta.lib)    
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X15(:Buchsenleiste (flach) 15Pin 1Reihe (con-lsta.lib):Female Header (low profile) 15Pin 1Row (con-lsta.lib)    
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X20(:Buchsenleiste (flach) 20Pin 1Reihe (con-lsta.lib):Female Header (low profile) 20Pin 1Row (con-lsta.lib)    
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X5(:Buchsenleiste (flach) 5Pin 2Reihen (con-lsta.lib):Female Header (low profile) 5Pin 2Rows (con-lsta.lib)   
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X6(:Buchsenleiste (flach) 6Pin 2Reihen (con-lsta.lib):Female Header (low profile) 6Pin 2Rows (con-lsta.lib)   
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X7(:Buchsenleiste (flach) 7Pin 2Reihen (con-lsta.lib):Female Header (low profile) 7Pin 2Rows (con-lsta.lib)   
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X8(:Buchsenleiste (flach) 8Pin 2Reihen (con-lsta.lib):Female Header (low profile) 8Pin 2Rows (con-lsta.lib)   
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X9(:Buchsenleiste (flach) 9Pin 2Reihen (con-lsta.lib):Female Header (low profile) 9Pin 2Rows (con-lsta.lib)   
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X10(:Buchsenleiste (flach) 10Pin 2Reihen (con-lsta.lib):Female Header (low profile) 10Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X12(:Buchsenleiste (flach) 12Pin 2Reihen (con-lsta.lib):Female Header (low profile) 12Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X13(:Buchsenleiste (flach) 13Pin 2Reihen (con-lsta.lib):Female Header (low profile) 13Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X15(:Buchsenleiste (flach) 15Pin 2Reihen (con-lsta.lib):Female Header (low profile) 15Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X17(:Buchsenleiste (flach) 17Pin 2Reihen (con-lsta.lib):Female Header (low profile) 17Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X18(:Buchsenleiste (flach) 18Pin 2Reihen (con-lsta.lib):Female Header (low profile) 18Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_2X20(:Buchsenleiste (flach) 20Pin 2Reihen (con-lsta.lib):Female Header (low profile) 20Pin 2Rows (con-lsta.lib)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X17(:Buchsenleiste (flach) 17Pin 1Reihe :Female Header (low profile) 17Pin 1Row
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_BL_F_1X18(:Buchsenleiste (flach) 18Pin 1Reihe :Female Header (low profile) 18Pin 1Row
 
 
 PREC070F02X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:Precision_7mm_R90_1x02_254(:Precision 7mm header 2.54mm R90:
