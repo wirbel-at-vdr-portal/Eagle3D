@@ -128,7 +128,6 @@
 #macro CON_THT_Precision_7mm_R90_2x25_254() Precision_7mm_R90(50,2,2.54) #end
 
 
-
 /*******************************************************************************
  * precision female header 2.54mm grid, 2.54mm long
  * drawing: Samtec ss-2854739.pdf
@@ -206,3 +205,89 @@
 #macro CON_THT_Precision_254mm_2x20_254() Precision_254mm(40,2,2.54) #end
 #macro CON_THT_Precision_254mm_2x25_254() Precision_254mm(50,2,2.54) #end
 
+
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+// begin assignment
+//con-pinheader-precision:PREC070F02X1R90=CON_THT_Precision_7mm_R90_1x02_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F03X1R90=CON_THT_Precision_7mm_R90_1x03_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F04X1R90=CON_THT_Precision_7mm_R90_1x04_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F05X1R90=CON_THT_Precision_7mm_R90_1x05_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F06X1R90=CON_THT_Precision_7mm_R90_1x06_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F07X1R90=CON_THT_Precision_7mm_R90_1x07_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F08X1R90=CON_THT_Precision_7mm_R90_1x08_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F09X1R90=CON_THT_Precision_7mm_R90_1x09_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F10X1R90=CON_THT_Precision_7mm_R90_1x10_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F11X1R90=CON_THT_Precision_7mm_R90_1x11_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F12X1R90=CON_THT_Precision_7mm_R90_1x12_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F13X1R90=CON_THT_Precision_7mm_R90_1x13_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F14X1R90=CON_THT_Precision_7mm_R90_1x14_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F15X1R90=CON_THT_Precision_7mm_R90_1x15_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F16X1R90=CON_THT_Precision_7mm_R90_1x16_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F17X1R90=CON_THT_Precision_7mm_R90_1x17_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F18X1R90=CON_THT_Precision_7mm_R90_1x18_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F19X1R90=CON_THT_Precision_7mm_R90_1x19_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F20X1R90=CON_THT_Precision_7mm_R90_1x20_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F25X1R90=CON_THT_Precision_7mm_R90_1x25_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F02X2R90=CON_THT_Precision_7mm_R90_2x02_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F03X2R90=CON_THT_Precision_7mm_R90_2x03_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F04X2R90=CON_THT_Precision_7mm_R90_2x04_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F05X2R90=CON_THT_Precision_7mm_R90_2x05_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F06X2R90=CON_THT_Precision_7mm_R90_2x06_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F07X2R90=CON_THT_Precision_7mm_R90_2x07_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F08X2R90=CON_THT_Precision_7mm_R90_2x08_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F09X2R90=CON_THT_Precision_7mm_R90_2x09_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F10X2R90=CON_THT_Precision_7mm_R90_2x10_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F11X2R90=CON_THT_Precision_7mm_R90_2x11_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F12X2R90=CON_THT_Precision_7mm_R90_2x12_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F13X2R90=CON_THT_Precision_7mm_R90_2x13_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F14X2R90=CON_THT_Precision_7mm_R90_2x14_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F15X2R90=CON_THT_Precision_7mm_R90_2x15_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F16X2R90=CON_THT_Precision_7mm_R90_2x16_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F17X2R90=CON_THT_Precision_7mm_R90_2x17_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F18X2R90=CON_THT_Precision_7mm_R90_2x18_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F19X2R90=CON_THT_Precision_7mm_R90_2x19_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F20X2R90=CON_THT_Precision_7mm_R90_2x20_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC070F25X2R90=CON_THT_Precision_7mm_R90_2x25_254(:Precision 7mm header 2.54mm R90
+//con-pinheader-precision:PREC02X1-2.54=CON_THT_Precision_254mm_1x02_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC03X1-2.54=CON_THT_Precision_254mm_1x03_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC04X1-2.54=CON_THT_Precision_254mm_1x04_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC05X1-2.54=CON_THT_Precision_254mm_1x05_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC06X1-2.54=CON_THT_Precision_254mm_1x06_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC07X1-2.54=CON_THT_Precision_254mm_1x07_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC08X1-2.54=CON_THT_Precision_254mm_1x08_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC09X1-2.54=CON_THT_Precision_254mm_1x09_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC10X1-2.54=CON_THT_Precision_254mm_1x10_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC11X1-2.54=CON_THT_Precision_254mm_1x11_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC12X1-2.54=CON_THT_Precision_254mm_1x12_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC13X1-2.54=CON_THT_Precision_254mm_1x13_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC14X1-2.54=CON_THT_Precision_254mm_1x14_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC15X1-2.54=CON_THT_Precision_254mm_1x15_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC16X1-2.54=CON_THT_Precision_254mm_1x16_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC17X1-2.54=CON_THT_Precision_254mm_1x17_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC18X1-2.54=CON_THT_Precision_254mm_1x18_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC19X1-2.54=CON_THT_Precision_254mm_1x19_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC20X1-2.54=CON_THT_Precision_254mm_1x20_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC25X1-2.54=CON_THT_Precision_254mm_1x25_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC02X2-2.54=CON_THT_Precision_254mm_2x02_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC03X2-2.54=CON_THT_Precision_254mm_2x03_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC04X2-2.54=CON_THT_Precision_254mm_2x04_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC05X2-2.54=CON_THT_Precision_254mm_2x05_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC06X2-2.54=CON_THT_Precision_254mm_2x06_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC07X2-2.54=CON_THT_Precision_254mm_2x07_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC08X2-2.54=CON_THT_Precision_254mm_2x08_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC09X2-2.54=CON_THT_Precision_254mm_2x09_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC10X2-2.54=CON_THT_Precision_254mm_2x10_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC11X2-2.54=CON_THT_Precision_254mm_2x11_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC12X2-2.54=CON_THT_Precision_254mm_2x12_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC13X2-2.54=CON_THT_Precision_254mm_2x13_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC14X2-2.54=CON_THT_Precision_254mm_2x14_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC15X2-2.54=CON_THT_Precision_254mm_2x15_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC16X2-2.54=CON_THT_Precision_254mm_2x16_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC17X2-2.54=CON_THT_Precision_254mm_2x17_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC18X2-2.54=CON_THT_Precision_254mm_2x18_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC19X2-2.54=CON_THT_Precision_254mm_2x19_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC20X2-2.54=CON_THT_Precision_254mm_2x20_254(:Precision 2.54mm header 2.54mm
+//con-pinheader-precision:PREC25X2-2.54=CON_THT_Precision_254mm_2x25_254(:Precision 2.54mm header 2.54mm
+// end assignment
