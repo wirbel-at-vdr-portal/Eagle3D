@@ -3662,5 +3662,4 @@ union {
 
 #include "CONNECTOR/_Pfostenwanne_THT.inc"
 #include "CONNECTOR/_Pinheader_200_SMT.inc"
-#include "CONNECTOR/_Pinheader_254_90deg.inc"
 #include "CONNECTOR/_Pinheader_THT_straight.inc"
