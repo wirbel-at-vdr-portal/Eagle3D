@@ -429,6 +429,210 @@
 #macro CON_THT_PINHDR_MPE088_30x2R90_508() CON_THT_PINHDR_MPE088_30x2R90() translate <0,0,-5.08> #end
 
 
+/*******************************************************************************
+ * male header 2.00mm, 1-row, 2-row, 3-row, 4-row.
+ ******************************************************************************/
+#macro MPE_150(Cols,Rows,A,B,C)
+  union {
+     #local Grid = 2.00;
+     #local L = 1.50;
+
+     difference {
+        Round_Box(
+           <-Cols*Grid/2,0,-Rows*Grid/2>
+           <+Cols*Grid/2,L,+Rows*Grid/2>
+           0.1 0
+           )
+        #local X = 0.2;
+        GRID (
+           GRID (
+              box { <-X,-0.1,-X> <+X,L+0.1,+X> rotate <0,45,0> },
+              Grid,Cols+1,1
+              ), Grid*Rows,1,2
+           )
+        box {
+           <-Cols*Grid/2-0.1,-0.1,-Rows*Grid/2+X>
+           <+Cols*Grid/2+0.1,L/4 ,+Rows*Grid/2-X>
+           }
+        pigment {
+           White * 0.2
+           }
+        }
+     GRID(object { PIN_STRAIGHT(0.50,B+L,C) texture { col_gold } },Grid,Cols,Rows)
+     }
+#end
+
+/*******************************************************************************
+ * male header 2.00mm, 1-row, 2-row, 3-row, 4-row.
+ * - https://www.mpe-connector.de/de/produkte/
+ *           stiftleisten/stiftleiste-200-mm/150-1
+ *     parts 150-1, 150-2, 150-3, 150-4 (with choosen common lengths)
+ ******************************************************************************/
+#macro CON_THT_PINHDR_MPE150_01x1() MPE_150(01,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_02x1() MPE_150(02,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_03x1() MPE_150(03,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_04x1() MPE_150(04,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_05x1() MPE_150(05,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_06x1() MPE_150(06,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_07x1() MPE_150(07,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_08x1() MPE_150(08,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_09x1() MPE_150(09,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_10x1() MPE_150(10,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_11x1() MPE_150(11,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_12x1() MPE_150(12,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_13x1() MPE_150(13,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_14x1() MPE_150(14,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_15x1() MPE_150(15,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_16x1() MPE_150(16,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_17x1() MPE_150(17,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_18x1() MPE_150(18,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_19x1() MPE_150(19,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_20x1() MPE_150(20,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_21x1() MPE_150(21,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_22x1() MPE_150(22,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_23x1() MPE_150(23,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_24x1() MPE_150(24,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_25x1() MPE_150(25,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_26x1() MPE_150(26,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_27x1() MPE_150(27,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_28x1() MPE_150(28,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_29x1() MPE_150(29,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_30x1() MPE_150(30,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_31x1() MPE_150(31,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_32x1() MPE_150(32,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_33x1() MPE_150(33,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_34x1() MPE_150(34,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_35x1() MPE_150(35,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_36x1() MPE_150(36,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_37x1() MPE_150(37,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_38x1() MPE_150(38,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_39x1() MPE_150(39,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_40x1() MPE_150(40,1,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_01x2() MPE_150(01,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_02x2() MPE_150(02,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_03x2() MPE_150(03,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_04x2() MPE_150(04,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_05x2() MPE_150(05,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_06x2() MPE_150(06,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_07x2() MPE_150(07,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_08x2() MPE_150(08,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_09x2() MPE_150(09,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_10x2() MPE_150(10,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_11x2() MPE_150(11,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_12x2() MPE_150(12,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_13x2() MPE_150(13,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_14x2() MPE_150(14,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_15x2() MPE_150(15,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_16x2() MPE_150(16,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_17x2() MPE_150(17,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_18x2() MPE_150(18,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_19x2() MPE_150(19,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_20x2() MPE_150(20,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_21x2() MPE_150(21,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_22x2() MPE_150(22,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_23x2() MPE_150(23,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_24x2() MPE_150(24,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_25x2() MPE_150(25,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_26x2() MPE_150(26,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_27x2() MPE_150(27,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_28x2() MPE_150(28,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_29x2() MPE_150(29,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_30x2() MPE_150(30,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_31x2() MPE_150(31,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_32x2() MPE_150(32,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_33x2() MPE_150(33,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_34x2() MPE_150(34,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_35x2() MPE_150(35,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_36x2() MPE_150(36,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_37x2() MPE_150(37,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_38x2() MPE_150(38,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_39x2() MPE_150(39,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_40x2() MPE_150(40,2,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_01x3() MPE_150(01,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_02x3() MPE_150(02,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_03x3() MPE_150(03,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_04x3() MPE_150(04,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_05x3() MPE_150(05,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_06x3() MPE_150(06,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_07x3() MPE_150(07,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_08x3() MPE_150(08,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_09x3() MPE_150(09,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_10x3() MPE_150(10,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_11x3() MPE_150(11,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_12x3() MPE_150(12,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_13x3() MPE_150(13,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_14x3() MPE_150(14,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_15x3() MPE_150(15,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_16x3() MPE_150(16,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_17x3() MPE_150(17,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_18x3() MPE_150(18,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_19x3() MPE_150(19,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_20x3() MPE_150(20,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_21x3() MPE_150(21,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_22x3() MPE_150(22,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_23x3() MPE_150(23,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_24x3() MPE_150(24,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_25x3() MPE_150(25,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_26x3() MPE_150(26,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_27x3() MPE_150(27,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_28x3() MPE_150(28,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_29x3() MPE_150(29,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_30x3() MPE_150(30,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_31x3() MPE_150(31,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_32x3() MPE_150(32,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_33x3() MPE_150(33,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_34x3() MPE_150(34,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_35x3() MPE_150(35,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_36x3() MPE_150(36,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_37x3() MPE_150(37,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_38x3() MPE_150(38,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_39x3() MPE_150(39,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_40x3() MPE_150(40,3,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_01x4() MPE_150(01,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_02x4() MPE_150(02,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_03x4() MPE_150(03,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_04x4() MPE_150(04,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_05x4() MPE_150(05,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_06x4() MPE_150(06,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_07x4() MPE_150(07,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_08x4() MPE_150(08,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_09x4() MPE_150(09,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_10x4() MPE_150(10,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_11x4() MPE_150(11,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_12x4() MPE_150(12,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_13x4() MPE_150(13,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_14x4() MPE_150(14,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_15x4() MPE_150(15,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_16x4() MPE_150(16,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_17x4() MPE_150(17,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_18x4() MPE_150(18,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_19x4() MPE_150(19,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_20x4() MPE_150(20,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_21x4() MPE_150(21,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_22x4() MPE_150(22,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_23x4() MPE_150(23,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_24x4() MPE_150(24,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_25x4() MPE_150(25,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_26x4() MPE_150(26,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_27x4() MPE_150(27,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_28x4() MPE_150(28,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_29x4() MPE_150(29,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_30x4() MPE_150(30,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_31x4() MPE_150(31,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_32x4() MPE_150(32,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_33x4() MPE_150(33,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_34x4() MPE_150(34,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_35x4() MPE_150(35,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_36x4() MPE_150(36,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_37x4() MPE_150(37,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_38x4() MPE_150(38,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_39x4() MPE_150(39,4,  8.70,4.40,2.80) #end
+#macro CON_THT_PINHDR_MPE150_40x4() MPE_150(40,4,  8.70,4.40,2.80) #end
+
+
+
+
+
 
 
 
@@ -762,8 +966,164 @@
 //con-lstb:MA19-2W=CON_THT_PINHDR_MPE088_19x2R90(:pin header 2.54mm 2-row 90deg
 //con-lstb:MA20-2W=CON_THT_PINHDR_MPE088_20x2R90(:pin header 2.54mm 2-row 90deg
 //jumper:JP2W=CON_THT_PINHDR_MPE088_03x1R90_127(:pin header 2.54mm 90deg
-
-
-
-
+//=CON_THT_PINHDR_MPE150_01x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M02X1-2.00=CON_THT_PINHDR_MPE150_02x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M03X1-2.00=CON_THT_PINHDR_MPE150_03x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M04X1-2.00=CON_THT_PINHDR_MPE150_04x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M05X1-2.00=CON_THT_PINHDR_MPE150_05x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M06X1-2.00=CON_THT_PINHDR_MPE150_06x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M07X1-2.00=CON_THT_PINHDR_MPE150_07x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M08X1-2.00=CON_THT_PINHDR_MPE150_08x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M09X1-2.00=CON_THT_PINHDR_MPE150_09x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M10X1-2.00=CON_THT_PINHDR_MPE150_10x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M11X1-2.00=CON_THT_PINHDR_MPE150_11x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M12X1-2.00=CON_THT_PINHDR_MPE150_12x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M13X1-2.00=CON_THT_PINHDR_MPE150_13x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M14X1-2.00=CON_THT_PINHDR_MPE150_14x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M15X1-2.00=CON_THT_PINHDR_MPE150_15x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M16X1-2.00=CON_THT_PINHDR_MPE150_16x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M17X1-2.00=CON_THT_PINHDR_MPE150_17x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M18X1-2.00=CON_THT_PINHDR_MPE150_18x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M19X1-2.00=CON_THT_PINHDR_MPE150_19x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M20X1-2.00=CON_THT_PINHDR_MPE150_20x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_21x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_22x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_23x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_24x1(:pin header 2.00mm
+//con-pinheader-standard:STD020M25X1-2.00=CON_THT_PINHDR_MPE150_25x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_26x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_27x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_28x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_29x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_30x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_31x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_32x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_33x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_34x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_35x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_36x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_37x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_38x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_39x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_40x1(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_01x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M02X2-2.00=CON_THT_PINHDR_MPE150_02x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M03X2-2.00=CON_THT_PINHDR_MPE150_03x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M04X2-2.00=CON_THT_PINHDR_MPE150_04x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M05X2-2.00=CON_THT_PINHDR_MPE150_05x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M06X2-2.00=CON_THT_PINHDR_MPE150_06x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M07X2-2.00=CON_THT_PINHDR_MPE150_07x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M08X2-2.00=CON_THT_PINHDR_MPE150_08x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M09X2-2.00=CON_THT_PINHDR_MPE150_09x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M10X2-2.00=CON_THT_PINHDR_MPE150_10x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M11X2-2.00=CON_THT_PINHDR_MPE150_11x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M12X2-2.00=CON_THT_PINHDR_MPE150_12x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M13X2-2.00=CON_THT_PINHDR_MPE150_13x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M14X2-2.00=CON_THT_PINHDR_MPE150_14x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M15X2-2.00=CON_THT_PINHDR_MPE150_15x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M16X2-2.00=CON_THT_PINHDR_MPE150_16x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M17X2-2.00=CON_THT_PINHDR_MPE150_17x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M18X2-2.00=CON_THT_PINHDR_MPE150_18x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M19X2-2.00=CON_THT_PINHDR_MPE150_19x2(:pin header 2.00mm
+//con-pinheader-standard:STD020M20X2-2.00=CON_THT_PINHDR_MPE150_20x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_21x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_22x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_23x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_24x2(:pin header 2.00mm
+//STD020M25X1-2.00=CON_THT_PINHDR_MPE150_25x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_26x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_27x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_28x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_29x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_30x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_31x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_32x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_33x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_34x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_35x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_36x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_37x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_38x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_39x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_40x2(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_01x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_02x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_03x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_04x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_05x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_06x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_07x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_08x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_09x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_10x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_11x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_12x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_13x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_14x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_15x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_16x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_17x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_18x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_19x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_20x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_21x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_22x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_23x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_24x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_25x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_26x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_27x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_28x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_29x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_30x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_31x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_32x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_33x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_34x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_35x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_36x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_37x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_38x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_39x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_40x3(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_01x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_02x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_03x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_04x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_05x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_06x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_07x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_08x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_09x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_10x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_11x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_12x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_13x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_14x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_15x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_16x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_17x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_18x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_19x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_20x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_21x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_22x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_23x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_24x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_25x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_26x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_27x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_28x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_29x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_30x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_31x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_32x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_33x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_34x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_35x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_36x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_37x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_38x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_39x4(:pin header 2.00mm
+//=CON_THT_PINHDR_MPE150_40x4(:pin header 2.00mm
 // end assignment
