@@ -17,6 +17,7 @@
 #include "CONNECTOR/THT/wirejumper.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
 #include "CONNECTOR/THT/MOLEX_KK254_series.inc"
+#include "CONNECTOR/THT/MPE_pin_headers.inc"
 #include "CONNECTOR/THT/MPE_socket_headers.inc"
 #include "CONNECTOR/THT/PHOENIX_MKDS1.inc"
 #include "CONNECTOR/THT/RIA_series59.inc"

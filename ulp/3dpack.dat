@@ -2769,105 +2769,129 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PHW_2
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PHW_2X28(:Stiftleiste 2,54MM Raster Winkel (con-lstb.lib):Header 2,54MM Grid 90deg (con-lstb.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PHW_2X29(:Stiftleiste 2,54MM Raster Winkel (con-lstb.lib):Header 2,54MM Grid 90deg (con-lstb.lib)
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PHW_2X30(:Stiftleiste 2,54MM Raster Winkel (con-lstb.lib):Header 2,54MM Grid 90deg (con-lstb.lib)
-JP1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X1J(:Jumper 2,54mm Raster 2Pin 1Reihe (jumper.lib):Jumper 2,54mm Grid 2Pin 1Row (jumper.lib)
-JP1Y:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X1J(:Jumper 2,54mm Raster 2Pin 1Reihe (jumper.lib):Jumper 2,54mm Grid 2Pin 1Row (jumper.lib)
-JP2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X3(:Jumper 2,54mm Raster 3Pin 1Reihe (jumper.lib):Jumper 2,54mm Grid 3Pin 1Row (jumper.lib)
-JP2Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X2J(:Jumper 2,54mm Raster 2Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 2Pin 2Row (jumper.lib)
-JP2Y:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X3(:Jumper 2,54mm Raster 2Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 2Pin 2Row (jumper.lib)
-JP3Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X3J(:Jumper 2,54mm Raster 3Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 3Pin 1Row (jumper.lib)
-JP4:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X4(:Jumper 2,54mm Raster 4Pin 1Reihe (jumper.lib):Jumper 2,54mm Grid 4Pin 1Row (jumper.lib)
-JP4Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X4J(:Jumper 2,54mm Raster 4Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 4Pin 2Row (jumper.lib)
-JP5Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X5J(:Jumper 2,54mm Raster 5Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 5Pin 2Row (jumper.lib)
-JP6Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X6J(:Jumper 2,54mm Raster 6Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 6Pin 2Row (jumper.lib)
-JP7Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X7J(:Jumper 2,54mm Raster 7Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 7Pin 2Row (jumper.lib)
-JP8Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X8J(:Jumper 2,54mm Raster 8Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 8Pin 2Row (jumper.lib)
-JP9Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X9J(:Jumper 2,54mm Raster 9Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 9Pin 2Row (jumper.lib)
-JP10Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X10J(:Jumper 2,54mm Raster 10Pin 2Reihen (pinhead.lib):Jumper 2,54mm Grid 10Pin 2Row (jumper.lib)
-1X01:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X1(:Stiftleiste 2,54mm Raster 1Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 1Pin 1Row (jumper.lib)
-1X02:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X2(:Stiftleiste 2,54mm Raster 2Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 2Pin 1Row (jumper.lib)
-1X03:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X3(:Stiftleiste 2,54mm Raster 3Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 3Pin 1Row (jumper.lib)
-1X04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X4(:Stiftleiste 2,54mm Raster 4Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 4Pin 1Row (jumper.lib)
-1X05:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X5(:Stiftleiste 2,54mm Raster 5Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 5Pin 1Row (jumper.lib)
-1X06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X6(:Stiftleiste 2,54mm Raster 6Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 6Pin 1Row (jumper.lib)
-1X07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X7(:Stiftleiste 2,54mm Raster 7Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 7Pin 1Row (jumper.lib)
-1X08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X8(:Stiftleiste 2,54mm Raster 8Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 8Pin 1Row (jumper.lib)
-1X09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X9(:Stiftleiste 2,54mm Raster 9Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 9Pin 1Row (jumper.lib)
-1X10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X10(:Stiftleiste 2,54mm Raster 10Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 10Pin 1Row (jumper.lib)
-1X11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X11(:Stiftleiste 2,54mm Raster 11Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 11Pin 1Row (jumper.lib)
-1X12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X12(:Stiftleiste 2,54mm Raster 12Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 12Pin 1Row (jumper.lib)
-1X13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X13(:Stiftleiste 2,54mm Raster 13Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 13Pin 1Row (jumper.lib)
-1X14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X14(:Stiftleiste 2,54mm Raster 14Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 14Pin 1Row (jumper.lib)
-1X15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X15(:Stiftleiste 2,54mm Raster 15Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 15Pin 1Row (jumper.lib)
-1X16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X16(:Stiftleiste 2,54mm Raster 16Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 16Pin 1Row (jumper.lib)
-1X17:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X17(:Stiftleiste 2,54mm Raster 17Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 17Pin 1Row (jumper.lib)
-1X18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X18(:Stiftleiste 2,54mm Raster 18Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 18Pin 1Row (jumper.lib)
-1X19:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X19(:Stiftleiste 2,54mm Raster 19Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 19Pin 1Row (jumper.lib)
-1X20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X20(:Stiftleiste 2,54mm Raster 20Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 20Pin 1Row (jumper.lib)
-1X21:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X21(:Stiftleiste 2,54mm Raster 21Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 21Pin 1Row (jumper.lib)
-1X22:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X22(:Stiftleiste 2,54mm Raster 22Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 22Pin 1Row (jumper.lib)
-1X23:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X23(:Stiftleiste 2,54mm Raster 23Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 23Pin 1Row (jumper.lib)
-1X24:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X24(:Stiftleiste 2,54mm Raster 24Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 24Pin 1Row (jumper.lib)
-1X25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X25(:Stiftleiste 2,54mm Raster 25Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 25Pin 1Row (jumper.lib)
-1X26:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X26(:Stiftleiste 2,54mm Raster 26Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 26Pin 1Row (jumper.lib)
-1X27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X27(:Stiftleiste 2,54mm Raster 27Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 27Pin 1Row (jumper.lib)
-1X28:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X28(:Stiftleiste 2,54mm Raster 28Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 28Pin 1Row (jumper.lib)
-1X29:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X29(:Stiftleiste 2,54mm Raster 29Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 29Pin 1Row (jumper.lib)
-1X30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X30(:Stiftleiste 2,54mm Raster 30Pin 1Reihe (pinhead.lib):Header 2,54mm Grid 30Pin 1Row (jumper.lib)
-2X02:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X2(:Stiftleiste 2,54mm Raster 2Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 2Pin 2Row (jumper.lib)
-2X03:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X3(:Stiftleiste 2,54mm Raster 3Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 3Pin 2Row (jumper.lib)
-2X04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X4(:Stiftleiste 2,54mm Raster 4Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 4Pin 2Row (jumper.lib)
-2X05:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X5(:Stiftleiste 2,54mm Raster 5Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 5Pin 2Row (jumper.lib)
-2X06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X6(:Stiftleiste 2,54mm Raster 6Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 6Pin 2Row (jumper.lib)
-2X07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X7(:Stiftleiste 2,54mm Raster 7Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 7Pin 2Row (jumper.lib)
-2X08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X8(:Stiftleiste 2,54mm Raster 8Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 8Pin 2Row (jumper.lib)
-2X09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X9(:Stiftleiste 2,54mm Raster 9Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 9Pin 2Row (jumper.lib)
-2X10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X10(:Stiftleiste 2,54mm Raster 10Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 10Pin 2Row (jumper.lib)
-2X11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X11(:Stiftleiste 2,54mm Raster 11Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 11Pin 2Row (jumper.lib)
-2X12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X12(:Stiftleiste 2,54mm Raster 12Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 12Pin 2Row (jumper.lib)
-2X13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X13(:Stiftleiste 2,54mm Raster 13Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 13Pin 2Row (jumper.lib)
-2X14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X14(:Stiftleiste 2,54mm Raster 14Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 14Pin 2Row (jumper.lib)
-2X15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X15(:Stiftleiste 2,54mm Raster 15Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 15Pin 2Row (jumper.lib)
-2X16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X16(:Stiftleiste 2,54mm Raster 16Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 16Pin 2Row (jumper.lib)
-2X17:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X17(:Stiftleiste 2,54mm Raster 17Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 17Pin 2Row (jumper.lib)
-2X18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X18(:Stiftleiste 2,54mm Raster 18Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 18Pin 2Row (jumper.lib)
-2X19:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X19(:Stiftleiste 2,54mm Raster 19Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 19Pin 2Row (jumper.lib)
-2X20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X20(:Stiftleiste 2,54mm Raster 20Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 20Pin 2Row (jumper.lib)
-2X21:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X21(:Stiftleiste 2,54mm Raster 21Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 21Pin 2Row (jumper.lib)
-2X22:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X22(:Stiftleiste 2,54mm Raster 22Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 22Pin 2Row (jumper.lib)
-2X23:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X23(:Stiftleiste 2,54mm Raster 23Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 23Pin 2Row (jumper.lib)
-2X24:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X24(:Stiftleiste 2,54mm Raster 24Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 24Pin 2Row (jumper.lib)
-2X25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X25(:Stiftleiste 2,54mm Raster 25Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 25Pin 2Row (jumper.lib)
-2X26:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X26(:Stiftleiste 2,54mm Raster 26Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 26Pin 2Row (jumper.lib)
-2X27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X27(:Stiftleiste 2,54mm Raster 27Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 27Pin 2Row (jumper.lib)
-2X28:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X28(:Stiftleiste 2,54mm Raster 28Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 28Pin 2Row (jumper.lib)
-2X29:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X29(:Stiftleiste 2,54mm Raster 29Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 29Pin 2Row (jumper.lib)
-2X30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X30(:Stiftleiste 2,54mm Raster 30Pin 2Reihen (pinhead.lib):Header 2,54mm Grid 30Pin 2Row (jumper.lib)
-MA03-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X3(:Stiftleiste 2,54mm Raster 3Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 3Pin 1Row (jumper.lib)
-MA04-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X4(:Stiftleiste 2,54mm Raster 4Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 4Pin 1Row (jumper.lib)
-MA05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X5(:Stiftleiste 2,54mm Raster 5Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 5Pin 1Row (jumper.lib)
-MA06-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X6(:Stiftleiste 2,54mm Raster 6Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 6Pin 1Row (jumper.lib)
-MA07-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X7(:Stiftleiste 2,54mm Raster 7Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 7Pin 1Row (jumper.lib)
-MA08-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X8(:Stiftleiste 2,54mm Raster 8Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 8Pin 1Row (jumper.lib)
-MA09-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X9(:Stiftleiste 2,54mm Raster 9Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 9Pin 1Row (jumper.lib)
-MA10-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X10(:Stiftleiste 2,54mm Raster 10Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 10Pin 1Row (jumper.lib)
-MA12-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X12(:Stiftleiste 2,54mm Raster 12Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 12Pin 1Row (jumper.lib)
-MA13-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X13(:Stiftleiste 2,54mm Raster 13Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 13Pin 1Row (jumper.lib)
-MA17-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X17(:Stiftleiste 2,54mm Raster 17Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 17Pin 1Row (jumper.lib)
-MA18-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X18(:Stiftleiste 2,54mm Raster 18Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 18Pin 1Row (jumper.lib)
-MA20-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_1X20(:Stiftleiste 2,54mm Raster 20Pin 1Reihe (con-lstb.lib):Header 2,54mm Grid 20Pin 1Row (jumper.lib)
-MA03-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X3(:Stiftleiste 2,54mm Raster 3Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 3Pin 2Row (jumper.lib)
-MA04-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X4(:Stiftleiste 2,54mm Raster 4Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 4Pin 2Row (jumper.lib)
-MA05-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X5(:Stiftleiste 2,54mm Raster 5Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 5Pin 2Row (jumper.lib)
-MA06-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X6(:Stiftleiste 2,54mm Raster 6Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 6Pin 2Row (jumper.lib)
-MA07-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X7(:Stiftleiste 2,54mm Raster 7Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 7Pin 2Row (jumper.lib)
-MA08-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X8(:Stiftleiste 2,54mm Raster 8Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 8Pin 2Row (jumper.lib)
-MA09-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X9(:Stiftleiste 2,54mm Raster 9Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 9Pin 2Row (jumper.lib)
-MA10-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X10(:Stiftleiste 2,54mm Raster 10Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 10Pin 2Row (jumper.lib)
-MA12-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X12(:Stiftleiste 2,54mm Raster 12Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 12Pin 2Row (jumper.lib)
-MA13-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X13(:Stiftleiste 2,54mm Raster 13Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 13Pin 2Row (jumper.lib)
-MA17-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X17(:Stiftleiste 2,54mm Raster 17Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 17Pin 2Row (jumper.lib)
-MA18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X18(:Stiftleiste 2,54mm Raster 18Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 18Pin 2Row (jumper.lib)
-MA20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2X20(:Stiftleiste 2,54mm Raster 20Pin 2Reihen (con-lstb.lib):Header 2,54mm Grid 20Pin 2Row (jumper.lib)
+
+
+1X01:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_01x1(:pin header 2.54mm:
+1X02:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_02x1(:pin header 2.54mm:
+1X03:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_03x1(:pin header 2.54mm:
+1X04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_04x1(:pin header 2.54mm:
+1X05:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_05x1(:pin header 2.54mm:
+1X06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_06x1(:pin header 2.54mm:
+1X07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_07x1(:pin header 2.54mm:
+1X08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_08x1(:pin header 2.54mm:
+1X09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_09x1(:pin header 2.54mm:
+1X10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_10x1(:pin header 2.54mm:
+1X11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_11x1(:pin header 2.54mm:
+1X12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_12x1(:pin header 2.54mm:
+1X13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_13x1(:pin header 2.54mm:
+1X14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_14x1(:pin header 2.54mm:
+1X15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_15x1(:pin header 2.54mm:
+1X16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_16x1(:pin header 2.54mm:
+1X17:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_17x1(:pin header 2.54mm:
+1X18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_18x1(:pin header 2.54mm:
+1X19:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_19x1(:pin header 2.54mm:
+1X20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_20x1(:pin header 2.54mm:
+1X21:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_21x1(:pin header 2.54mm:
+1X22:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_22x1(:pin header 2.54mm:
+1X23:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_23x1(:pin header 2.54mm:
+1X24:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_24x1(:pin header 2.54mm:
+1X25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_25x1(:pin header 2.54mm:
+1X26:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_26x1(:pin header 2.54mm:
+1X27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_27x1(:pin header 2.54mm:
+1X28:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_28x1(:pin header 2.54mm:
+1X29:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_29x1(:pin header 2.54mm:
+1X30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_30x1(:pin header 2.54mm:
+1X31:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_31x1(:pin header 2.54mm:
+1X32:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_32x1(:pin header 2.54mm:
+1X33:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_33x1(:pin header 2.54mm:
+1X34:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_34x1(:pin header 2.54mm:
+1X35:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_35x1(:pin header 2.54mm:
+1X36:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_36x1(:pin header 2.54mm:
+1X37:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_37x1(:pin header 2.54mm:
+1X38:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_38x1(:pin header 2.54mm:
+1X39:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_39x1(:pin header 2.54mm:
+1X40:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_40x1(:pin header 2.54mm:
+2x01:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_01x2(:pin header 2.54mm 2-row:
+2X02:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_02x2(:pin header 2.54mm 2-row:
+2X03:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_03x2(:pin header 2.54mm 2-row:
+2X04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_04x2(:pin header 2.54mm 2-row:
+2X05:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_05x2(:pin header 2.54mm 2-row:
+2X06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_06x2(:pin header 2.54mm 2-row:
+2X07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_07x2(:pin header 2.54mm 2-row:
+2X08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_08x2(:pin header 2.54mm 2-row:
+2X09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_09x2(:pin header 2.54mm 2-row:
+2X10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_10x2(:pin header 2.54mm 2-row:
+2X11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_11x2(:pin header 2.54mm 2-row:
+2X12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_12x2(:pin header 2.54mm 2-row:
+2X13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_13x2(:pin header 2.54mm 2-row:
+2X14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_14x2(:pin header 2.54mm 2-row:
+2X15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_15x2(:pin header 2.54mm 2-row:
+2X16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_16x2(:pin header 2.54mm 2-row:
+2X17:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_17x2(:pin header 2.54mm 2-row:
+2X18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_18x2(:pin header 2.54mm 2-row:
+2X19:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_19x2(:pin header 2.54mm 2-row:
+2X20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_20x2(:pin header 2.54mm 2-row:
+2X21:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_21x2(:pin header 2.54mm 2-row:
+2X22:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_22x2(:pin header 2.54mm 2-row:
+2X23:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_23x2(:pin header 2.54mm 2-row:
+2X24:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_24x2(:pin header 2.54mm 2-row:
+2X25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_25x2(:pin header 2.54mm 2-row:
+2X26:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_26x2(:pin header 2.54mm 2-row:
+2X27:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_27x2(:pin header 2.54mm 2-row:
+2X28:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_28x2(:pin header 2.54mm 2-row:
+2X29:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_29x2(:pin header 2.54mm 2-row:
+2X30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_30x2(:pin header 2.54mm 2-row:
+MA03-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_03x1(:pin header 2.54mm:
+MA04-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_04x1(:pin header 2.54mm:
+MA05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_05x1(:pin header 2.54mm:
+MA06-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_06x1(:pin header 2.54mm:
+MA07-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_07x1(:pin header 2.54mm:
+MA08-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_08x1(:pin header 2.54mm:
+MA09-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_09x1(:pin header 2.54mm:
+MA10-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_10x1(:pin header 2.54mm:
+MA11-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_11x1(:pin header 2.54mm:
+MA12-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_12x1(:pin header 2.54mm:
+MA13-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_13x1(:pin header 2.54mm:
+MA14-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_14x1(:pin header 2.54mm:
+MA15-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_15x1(:pin header 2.54mm:
+MA16-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_16x1(:pin header 2.54mm:
+MA17-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_17x1(:pin header 2.54mm:
+MA18-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_18x1(:pin header 2.54mm:
+MA19-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_19x1(:pin header 2.54mm:
+MA20-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_20x1(:pin header 2.54mm:
+MA03-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_03x2(:pin header 2.54mm 2-row:
+MA04-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_04x2(:pin header 2.54mm 2-row:
+MA05-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_05x2(:pin header 2.54mm 2-row:
+MA06-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_06x2(:pin header 2.54mm 2-row:
+MA07-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_07x2(:pin header 2.54mm 2-row:
+MA08-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_08x2(:pin header 2.54mm 2-row:
+MA09-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_09x2(:pin header 2.54mm 2-row:
+MA10-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_10x2(:pin header 2.54mm 2-row:
+MA11-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_11x2(:pin header 2.54mm 2-row:
+MA12-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_12x2(:pin header 2.54mm 2-row:
+MA13-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_13x2(:pin header 2.54mm 2-row:
+MA14-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_14x2(:pin header 2.54mm 2-row:
+MA15-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_15x2(:pin header 2.54mm 2-row:
+MA16-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_16x2(:pin header 2.54mm 2-row:
+MA17-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_17x2(:pin header 2.54mm 2-row:
+MA18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_18x2(:pin header 2.54mm 2-row:
+MA19-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_19x2(:pin header 2.54mm 2-row:
+MA20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_20x2(:pin header 2.54mm 2-row:
+JP1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_01x2(:pin header 2.54mm 2-row:
+JP2Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_02x2(:pin header 2.54mm 2-row:
+JP3Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_03x2(:pin header 2.54mm 2-row:
+JP4Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_04x2(:pin header 2.54mm 2-row:
+JP5Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_05x2(:pin header 2.54mm 2-row:
+JP6Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_06x2(:pin header 2.54mm 2-row:
+JP7Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_07x2(:pin header 2.54mm 2-row:
+JP8Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_08x2(:pin header 2.54mm 2-row:
+JP9Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_09x2(:pin header 2.54mm 2-row:
+JP10Q:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_10x2(:pin header 2.54mm 2-row:
+JP2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_03x1(:pin header 2.54mm:
+JP4:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PINHDR_MPE087_04x1(:pin header 2.54mm:
+
+
+
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2MM_1X1(:2mm pinheader:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2MM_1X2(:2mm pinheader:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PH_2MM_1X3(:2mm pinheader:
