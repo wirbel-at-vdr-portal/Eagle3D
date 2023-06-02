@@ -1846,166 +1846,166 @@ AK500/11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINA
 AK500/12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_TERMINALBLOCK_5mm_12(:Anreihklemmen 12Pin (con-ptr500.lib):Screw Terminal conn. 12Pin (con-ptr500.lib)
 
 
-PREC070F02X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x02_254(:Precision 7mm header 2.54mm R90:
-PREC070F03X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x03_254(:Precision 7mm header 2.54mm R90:
-PREC070F04X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x04_254(:Precision 7mm header 2.54mm R90:
-PREC070F05X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x05_254(:Precision 7mm header 2.54mm R90:
-PREC070F06X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x06_254(:Precision 7mm header 2.54mm R90:
-PREC070F07X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x07_254(:Precision 7mm header 2.54mm R90:
-PREC070F08X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x08_254(:Precision 7mm header 2.54mm R90:
-PREC070F09X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x09_254(:Precision 7mm header 2.54mm R90:
-PREC070F10X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x10_254(:Precision 7mm header 2.54mm R90:
-PREC070F11X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x11_254(:Precision 7mm header 2.54mm R90:
-PREC070F12X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x12_254(:Precision 7mm header 2.54mm R90:
-PREC070F13X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x13_254(:Precision 7mm header 2.54mm R90:
-PREC070F14X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x14_254(:Precision 7mm header 2.54mm R90:
-PREC070F15X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x15_254(:Precision 7mm header 2.54mm R90:
-PREC070F16X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x16_254(:Precision 7mm header 2.54mm R90:
-PREC070F17X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x17_254(:Precision 7mm header 2.54mm R90:
-PREC070F18X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x18_254(:Precision 7mm header 2.54mm R90:
-PREC070F19X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x19_254(:Precision 7mm header 2.54mm R90:
-PREC070F20X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x20_254(:Precision 7mm header 2.54mm R90:
-PREC070F25X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_1x25_254(:Precision 7mm header 2.54mm R90:
-PREC070F02X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x02_254(:Precision 7mm header 2.54mm R90:
-PREC070F03X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x03_254(:Precision 7mm header 2.54mm R90:
-PREC070F04X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x04_254(:Precision 7mm header 2.54mm R90:
-PREC070F05X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x05_254(:Precision 7mm header 2.54mm R90:
-PREC070F06X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x06_254(:Precision 7mm header 2.54mm R90:
-PREC070F07X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x07_254(:Precision 7mm header 2.54mm R90:
-PREC070F08X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x08_254(:Precision 7mm header 2.54mm R90:
-PREC070F09X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x09_254(:Precision 7mm header 2.54mm R90:
-PREC070F10X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x10_254(:Precision 7mm header 2.54mm R90:
-PREC070F11X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x11_254(:Precision 7mm header 2.54mm R90:
-PREC070F12X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x12_254(:Precision 7mm header 2.54mm R90:
-PREC070F13X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x13_254(:Precision 7mm header 2.54mm R90:
-PREC070F14X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x14_254(:Precision 7mm header 2.54mm R90:
-PREC070F15X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x15_254(:Precision 7mm header 2.54mm R90:
-PREC070F16X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x16_254(:Precision 7mm header 2.54mm R90:
-PREC070F17X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x17_254(:Precision 7mm header 2.54mm R90:
-PREC070F18X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x18_254(:Precision 7mm header 2.54mm R90:
-PREC070F19X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x19_254(:Precision 7mm header 2.54mm R90:
-PREC070F20X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x20_254(:Precision 7mm header 2.54mm R90:
-PREC070F25X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_7mm_R90_2x25_254(:Precision 7mm header 2.54mm R90:
-PREC02X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x02_254(:Precision 2.54mm header 2.54mm:
-PREC03X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x03_254(:Precision 2.54mm header 2.54mm:
-PREC04X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x04_254(:Precision 2.54mm header 2.54mm:
-PREC05X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x05_254(:Precision 2.54mm header 2.54mm:
-PREC06X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x06_254(:Precision 2.54mm header 2.54mm:
-PREC07X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x07_254(:Precision 2.54mm header 2.54mm:
-PREC08X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x08_254(:Precision 2.54mm header 2.54mm:
-PREC09X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x09_254(:Precision 2.54mm header 2.54mm:
-PREC10X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x10_254(:Precision 2.54mm header 2.54mm:
-PREC11X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x11_254(:Precision 2.54mm header 2.54mm:
-PREC12X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x12_254(:Precision 2.54mm header 2.54mm:
-PREC13X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x13_254(:Precision 2.54mm header 2.54mm:
-PREC14X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x14_254(:Precision 2.54mm header 2.54mm:
-PREC15X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x15_254(:Precision 2.54mm header 2.54mm:
-PREC16X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x16_254(:Precision 2.54mm header 2.54mm:
-PREC17X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x17_254(:Precision 2.54mm header 2.54mm:
-PREC18X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x18_254(:Precision 2.54mm header 2.54mm:
-PREC19X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x19_254(:Precision 2.54mm header 2.54mm:
-PREC20X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x20_254(:Precision 2.54mm header 2.54mm:
-PREC25X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_1x25_254(:Precision 2.54mm header 2.54mm:
-PREC02X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x02_254(:Precision 2.54mm header 2.54mm:
-PREC03X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x03_254(:Precision 2.54mm header 2.54mm:
-PREC04X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x04_254(:Precision 2.54mm header 2.54mm:
-PREC05X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x05_254(:Precision 2.54mm header 2.54mm:
-PREC06X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x06_254(:Precision 2.54mm header 2.54mm:
-PREC07X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x07_254(:Precision 2.54mm header 2.54mm:
-PREC08X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x08_254(:Precision 2.54mm header 2.54mm:
-PREC09X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x09_254(:Precision 2.54mm header 2.54mm:
-PREC10X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x10_254(:Precision 2.54mm header 2.54mm:
-PREC11X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x11_254(:Precision 2.54mm header 2.54mm:
-PREC12X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x12_254(:Precision 2.54mm header 2.54mm:
-PREC13X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x13_254(:Precision 2.54mm header 2.54mm:
-PREC14X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x14_254(:Precision 2.54mm header 2.54mm:
-PREC15X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x15_254(:Precision 2.54mm header 2.54mm:
-PREC16X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x16_254(:Precision 2.54mm header 2.54mm:
-PREC17X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x17_254(:Precision 2.54mm header 2.54mm:
-PREC18X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x18_254(:Precision 2.54mm header 2.54mm:
-PREC19X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x19_254(:Precision 2.54mm header 2.54mm:
-PREC20X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x20_254(:Precision 2.54mm header 2.54mm:
-PREC25X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Precision_254mm_2x25_254(:Precision 2.54mm header 2.54mm:
-FE02W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x02_254(:Standard 8mm header 2.54mm:
-FE03W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x03_254(:Standard 8mm header 2.54mm:
-FE04W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x04_254(:Standard 8mm header 2.54mm:
-FE05W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x05_254(:Standard 8mm header 2.54mm:
-FE06W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x06_254(:Standard 8mm header 2.54mm:
-FE07W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x07_254(:Standard 8mm header 2.54mm:
-FE08W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x08_254(:Standard 8mm header 2.54mm:
-FE09W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x09_254(:Standard 8mm header 2.54mm:
-FE10W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x10_254(:Standard 8mm header 2.54mm:
-FE11W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x11_254(:Standard 8mm header 2.54mm:
-FE12W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x12_254(:Standard 8mm header 2.54mm:
-FE13W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x13_254(:Standard 8mm header 2.54mm:
-FE14W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x14_254(:Standard 8mm header 2.54mm:
-FE15W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x15_254(:Standard 8mm header 2.54mm:
-FE16W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x16_254(:Standard 8mm header 2.54mm:
-FE17W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x17_254(:Standard 8mm header 2.54mm:
-FE18W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x18_254(:Standard 8mm header 2.54mm:
-FE19W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x19_254(:Standard 8mm header 2.54mm:
-FE20W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x20_254(:Standard 8mm header 2.54mm:
-FE25W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_1x25_254(:Standard 8mm header 2.54mm:
-FE02-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x02_254(:Standard 8mm header 2.54mm:
-FE03-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x03_254(:Standard 8mm header 2.54mm:
-FE04-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x04_254(:Standard 8mm header 2.54mm:
-FE05-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x05_254(:Standard 8mm header 2.54mm:
-FE06-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x06_254(:Standard 8mm header 2.54mm:
-FE07-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x07_254(:Standard 8mm header 2.54mm:
-FE08-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x08_254(:Standard 8mm header 2.54mm:
-FE09-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x09_254(:Standard 8mm header 2.54mm:
-FE10-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x10_254(:Standard 8mm header 2.54mm:
-FE11-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x11_254(:Standard 8mm header 2.54mm:
-FE12-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x12_254(:Standard 8mm header 2.54mm:
-FE13-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x13_254(:Standard 8mm header 2.54mm:
-FE14-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x14_254(:Standard 8mm header 2.54mm:
-FE15-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x15_254(:Standard 8mm header 2.54mm:
-FE16-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x16_254(:Standard 8mm header 2.54mm:
-FE17-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x17_254(:Standard 8mm header 2.54mm:
-FE18-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x18_254(:Standard 8mm header 2.54mm:
-FE19-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x19_254(:Standard 8mm header 2.54mm:
-FE20-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x20_254(:Standard 8mm header 2.54mm:
-FE25-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_R90_2x25_254(:Standard 8mm header 2.54mm:
-FE02:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x02_254(:Standard 8mm header 2.54mm:
-FE03:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x03_254(:Standard 8mm header 2.54mm:
-FE04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x04_254(:Standard 8mm header 2.54mm:
-FE05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x05_254(:Standard 8mm header 2.54mm:
-FE06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x06_254(:Standard 8mm header 2.54mm:
-FE07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x07_254(:Standard 8mm header 2.54mm:
-FE08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x08_254(:Standard 8mm header 2.54mm:
-FE09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x09_254(:Standard 8mm header 2.54mm:
-FE10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x10_254(:Standard 8mm header 2.54mm:
-FE11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x11_254(:Standard 8mm header 2.54mm:
-FE12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x12_254(:Standard 8mm header 2.54mm:
-FE13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x13_254(:Standard 8mm header 2.54mm:
-FE14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x14_254(:Standard 8mm header 2.54mm:
-FE15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x15_254(:Standard 8mm header 2.54mm:
-FE16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x16_254(:Standard 8mm header 2.54mm:
-FE17:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x17_254(:Standard 8mm header 2.54mm:
-FE18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x18_254(:Standard 8mm header 2.54mm:
-FE19:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x19_254(:Standard 8mm header 2.54mm:
-FE20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x20_254(:Standard 8mm header 2.54mm:
-FE25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_1x25_254(:Standard 8mm header 2.54mm:
-FE02-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x02_254(:Standard 8mm header 2.54mm:
-FE03-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x03_254(:Standard 8mm header 2.54mm:
-FE04-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x04_254(:Standard 8mm header 2.54mm:
-FE05-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x05_254(:Standard 8mm header 2.54mm:
-FE06-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x06_254(:Standard 8mm header 2.54mm:
-FE07-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x07_254(:Standard 8mm header 2.54mm:
-FE08-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x08_254(:Standard 8mm header 2.54mm:
-FE09-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x09_254(:Standard 8mm header 2.54mm:
-FE10-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x10_254(:Standard 8mm header 2.54mm:
-FE11-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x11_254(:Standard 8mm header 2.54mm:
-FE12-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x12_254(:Standard 8mm header 2.54mm:
-FE13-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x13_254(:Standard 8mm header 2.54mm:
-FE14-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x14_254(:Standard 8mm header 2.54mm:
-FE15-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x15_254(:Standard 8mm header 2.54mm:
-FE16-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x16_254(:Standard 8mm header 2.54mm:
-FE17-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x17_254(:Standard 8mm header 2.54mm:
-FE18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x18_254(:Standard 8mm header 2.54mm:
-FE19-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x19_254(:Standard 8mm header 2.54mm:
-FE20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x20_254(:Standard 8mm header 2.54mm:
-FE25-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Standard_8mm_2x25_254(:Standard 8mm header 2.54mm:
+PREC070F02X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x02_254(:Precision 7mm header 2.54mm R90:
+PREC070F03X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x03_254(:Precision 7mm header 2.54mm R90:
+PREC070F04X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x04_254(:Precision 7mm header 2.54mm R90:
+PREC070F05X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x05_254(:Precision 7mm header 2.54mm R90:
+PREC070F06X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x06_254(:Precision 7mm header 2.54mm R90:
+PREC070F07X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x07_254(:Precision 7mm header 2.54mm R90:
+PREC070F08X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x08_254(:Precision 7mm header 2.54mm R90:
+PREC070F09X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x09_254(:Precision 7mm header 2.54mm R90:
+PREC070F10X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x10_254(:Precision 7mm header 2.54mm R90:
+PREC070F11X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x11_254(:Precision 7mm header 2.54mm R90:
+PREC070F12X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x12_254(:Precision 7mm header 2.54mm R90:
+PREC070F13X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x13_254(:Precision 7mm header 2.54mm R90:
+PREC070F14X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x14_254(:Precision 7mm header 2.54mm R90:
+PREC070F15X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x15_254(:Precision 7mm header 2.54mm R90:
+PREC070F16X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x16_254(:Precision 7mm header 2.54mm R90:
+PREC070F17X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x17_254(:Precision 7mm header 2.54mm R90:
+PREC070F18X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x18_254(:Precision 7mm header 2.54mm R90:
+PREC070F19X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x19_254(:Precision 7mm header 2.54mm R90:
+PREC070F20X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x20_254(:Precision 7mm header 2.54mm R90:
+PREC070F25X1R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_1x25_254(:Precision 7mm header 2.54mm R90:
+PREC070F02X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x02_254(:Precision 7mm header 2.54mm R90:
+PREC070F03X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x03_254(:Precision 7mm header 2.54mm R90:
+PREC070F04X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x04_254(:Precision 7mm header 2.54mm R90:
+PREC070F05X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x05_254(:Precision 7mm header 2.54mm R90:
+PREC070F06X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x06_254(:Precision 7mm header 2.54mm R90:
+PREC070F07X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x07_254(:Precision 7mm header 2.54mm R90:
+PREC070F08X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x08_254(:Precision 7mm header 2.54mm R90:
+PREC070F09X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x09_254(:Precision 7mm header 2.54mm R90:
+PREC070F10X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x10_254(:Precision 7mm header 2.54mm R90:
+PREC070F11X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x11_254(:Precision 7mm header 2.54mm R90:
+PREC070F12X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x12_254(:Precision 7mm header 2.54mm R90:
+PREC070F13X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x13_254(:Precision 7mm header 2.54mm R90:
+PREC070F14X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x14_254(:Precision 7mm header 2.54mm R90:
+PREC070F15X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x15_254(:Precision 7mm header 2.54mm R90:
+PREC070F16X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x16_254(:Precision 7mm header 2.54mm R90:
+PREC070F17X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x17_254(:Precision 7mm header 2.54mm R90:
+PREC070F18X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x18_254(:Precision 7mm header 2.54mm R90:
+PREC070F19X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x19_254(:Precision 7mm header 2.54mm R90:
+PREC070F20X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x20_254(:Precision 7mm header 2.54mm R90:
+PREC070F25X2R90:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_7mm_R90_2x25_254(:Precision 7mm header 2.54mm R90:
+PREC02X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x02_254(:Precision 2.54mm header 2.54mm:
+PREC03X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x03_254(:Precision 2.54mm header 2.54mm:
+PREC04X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x04_254(:Precision 2.54mm header 2.54mm:
+PREC05X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x05_254(:Precision 2.54mm header 2.54mm:
+PREC06X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x06_254(:Precision 2.54mm header 2.54mm:
+PREC07X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x07_254(:Precision 2.54mm header 2.54mm:
+PREC08X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x08_254(:Precision 2.54mm header 2.54mm:
+PREC09X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x09_254(:Precision 2.54mm header 2.54mm:
+PREC10X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x10_254(:Precision 2.54mm header 2.54mm:
+PREC11X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x11_254(:Precision 2.54mm header 2.54mm:
+PREC12X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x12_254(:Precision 2.54mm header 2.54mm:
+PREC13X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x13_254(:Precision 2.54mm header 2.54mm:
+PREC14X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x14_254(:Precision 2.54mm header 2.54mm:
+PREC15X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x15_254(:Precision 2.54mm header 2.54mm:
+PREC16X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x16_254(:Precision 2.54mm header 2.54mm:
+PREC17X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x17_254(:Precision 2.54mm header 2.54mm:
+PREC18X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x18_254(:Precision 2.54mm header 2.54mm:
+PREC19X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x19_254(:Precision 2.54mm header 2.54mm:
+PREC20X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x20_254(:Precision 2.54mm header 2.54mm:
+PREC25X1-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_1x25_254(:Precision 2.54mm header 2.54mm:
+PREC02X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x02_254(:Precision 2.54mm header 2.54mm:
+PREC03X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x03_254(:Precision 2.54mm header 2.54mm:
+PREC04X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x04_254(:Precision 2.54mm header 2.54mm:
+PREC05X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x05_254(:Precision 2.54mm header 2.54mm:
+PREC06X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x06_254(:Precision 2.54mm header 2.54mm:
+PREC07X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x07_254(:Precision 2.54mm header 2.54mm:
+PREC08X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x08_254(:Precision 2.54mm header 2.54mm:
+PREC09X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x09_254(:Precision 2.54mm header 2.54mm:
+PREC10X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x10_254(:Precision 2.54mm header 2.54mm:
+PREC11X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x11_254(:Precision 2.54mm header 2.54mm:
+PREC12X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x12_254(:Precision 2.54mm header 2.54mm:
+PREC13X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x13_254(:Precision 2.54mm header 2.54mm:
+PREC14X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x14_254(:Precision 2.54mm header 2.54mm:
+PREC15X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x15_254(:Precision 2.54mm header 2.54mm:
+PREC16X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x16_254(:Precision 2.54mm header 2.54mm:
+PREC17X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x17_254(:Precision 2.54mm header 2.54mm:
+PREC18X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x18_254(:Precision 2.54mm header 2.54mm:
+PREC19X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x19_254(:Precision 2.54mm header 2.54mm:
+PREC20X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x20_254(:Precision 2.54mm header 2.54mm:
+PREC25X2-2.54:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Precision_254mm_2x25_254(:Precision 2.54mm header 2.54mm:
+FE02W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x02_254(:Standard 8mm header 2.54mm:
+FE03W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x03_254(:Standard 8mm header 2.54mm:
+FE04W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x04_254(:Standard 8mm header 2.54mm:
+FE05W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x05_254(:Standard 8mm header 2.54mm:
+FE06W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x06_254(:Standard 8mm header 2.54mm:
+FE07W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x07_254(:Standard 8mm header 2.54mm:
+FE08W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x08_254(:Standard 8mm header 2.54mm:
+FE09W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x09_254(:Standard 8mm header 2.54mm:
+FE10W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x10_254(:Standard 8mm header 2.54mm:
+FE11W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x11_254(:Standard 8mm header 2.54mm:
+FE12W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x12_254(:Standard 8mm header 2.54mm:
+FE13W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x13_254(:Standard 8mm header 2.54mm:
+FE14W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x14_254(:Standard 8mm header 2.54mm:
+FE15W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x15_254(:Standard 8mm header 2.54mm:
+FE16W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x16_254(:Standard 8mm header 2.54mm:
+FE17W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x17_254(:Standard 8mm header 2.54mm:
+FE18W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x18_254(:Standard 8mm header 2.54mm:
+FE19W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x19_254(:Standard 8mm header 2.54mm:
+FE20W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x20_254(:Standard 8mm header 2.54mm:
+FE25W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_1x25_254(:Standard 8mm header 2.54mm:
+FE02-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x02_254(:Standard 8mm header 2.54mm:
+FE03-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x03_254(:Standard 8mm header 2.54mm:
+FE04-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x04_254(:Standard 8mm header 2.54mm:
+FE05-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x05_254(:Standard 8mm header 2.54mm:
+FE06-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x06_254(:Standard 8mm header 2.54mm:
+FE07-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x07_254(:Standard 8mm header 2.54mm:
+FE08-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x08_254(:Standard 8mm header 2.54mm:
+FE09-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x09_254(:Standard 8mm header 2.54mm:
+FE10-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x10_254(:Standard 8mm header 2.54mm:
+FE11-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x11_254(:Standard 8mm header 2.54mm:
+FE12-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x12_254(:Standard 8mm header 2.54mm:
+FE13-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x13_254(:Standard 8mm header 2.54mm:
+FE14-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x14_254(:Standard 8mm header 2.54mm:
+FE15-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x15_254(:Standard 8mm header 2.54mm:
+FE16-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x16_254(:Standard 8mm header 2.54mm:
+FE17-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x17_254(:Standard 8mm header 2.54mm:
+FE18-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x18_254(:Standard 8mm header 2.54mm:
+FE19-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x19_254(:Standard 8mm header 2.54mm:
+FE20-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x20_254(:Standard 8mm header 2.54mm:
+FE25-2W:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_R90_2x25_254(:Standard 8mm header 2.54mm:
+FE02:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x02_254(:Standard 8mm header 2.54mm:
+FE03:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x03_254(:Standard 8mm header 2.54mm:
+FE04:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x04_254(:Standard 8mm header 2.54mm:
+FE05-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x05_254(:Standard 8mm header 2.54mm:
+FE06:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x06_254(:Standard 8mm header 2.54mm:
+FE07:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x07_254(:Standard 8mm header 2.54mm:
+FE08:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x08_254(:Standard 8mm header 2.54mm:
+FE09:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x09_254(:Standard 8mm header 2.54mm:
+FE10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x10_254(:Standard 8mm header 2.54mm:
+FE11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x11_254(:Standard 8mm header 2.54mm:
+FE12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x12_254(:Standard 8mm header 2.54mm:
+FE13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x13_254(:Standard 8mm header 2.54mm:
+FE14:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x14_254(:Standard 8mm header 2.54mm:
+FE15:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x15_254(:Standard 8mm header 2.54mm:
+FE16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x16_254(:Standard 8mm header 2.54mm:
+FE17:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x17_254(:Standard 8mm header 2.54mm:
+FE18:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x18_254(:Standard 8mm header 2.54mm:
+FE19:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x19_254(:Standard 8mm header 2.54mm:
+FE20:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x20_254(:Standard 8mm header 2.54mm:
+FE25:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_1x25_254(:Standard 8mm header 2.54mm:
+FE02-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x02_254(:Standard 8mm header 2.54mm:
+FE03-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x03_254(:Standard 8mm header 2.54mm:
+FE04-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x04_254(:Standard 8mm header 2.54mm:
+FE05-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x05_254(:Standard 8mm header 2.54mm:
+FE06-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x06_254(:Standard 8mm header 2.54mm:
+FE07-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x07_254(:Standard 8mm header 2.54mm:
+FE08-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x08_254(:Standard 8mm header 2.54mm:
+FE09-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x09_254(:Standard 8mm header 2.54mm:
+FE10-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x10_254(:Standard 8mm header 2.54mm:
+FE11-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x11_254(:Standard 8mm header 2.54mm:
+FE12-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x12_254(:Standard 8mm header 2.54mm:
+FE13-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x13_254(:Standard 8mm header 2.54mm:
+FE14-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x14_254(:Standard 8mm header 2.54mm:
+FE15-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x15_254(:Standard 8mm header 2.54mm:
+FE16-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x16_254(:Standard 8mm header 2.54mm:
+FE17-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x17_254(:Standard 8mm header 2.54mm:
+FE18-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x18_254(:Standard 8mm header 2.54mm:
+FE19-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x19_254(:Standard 8mm header 2.54mm:
+FE20-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x20_254(:Standard 8mm header 2.54mm:
+FE25-2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_Standard_8mm_2x25_254(:Standard 8mm header 2.54mm:
 
 
 14H:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_CENTRONICS_F14(:Centronics 14polig 90 Grad weiblich:Centronics 14 Pins 90deg female (con-amp-champ.lib)
