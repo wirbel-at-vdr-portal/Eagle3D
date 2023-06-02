@@ -10,7 +10,6 @@
 #macro MPE_087(Cols,Rows,A,B,C,L)
   union {
      #local Grid = 2.54;
-     #local CircuitSize = Cols * Rows;
 
      difference {
         Round_Box(
