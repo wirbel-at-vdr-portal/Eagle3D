@@ -121,14 +121,3 @@ scale (pitch/2.54)
 #macro CON_PH_2MM_2X29() CON_PH_BASE(2,29,0,2.00) #end
 #macro CON_PH_2MM_2X30() CON_PH_BASE(2,30,0,2.00) #end
 
-//two row pinheader (2mm) with jumper
-#macro CON_PH_2MM_2X1J(j)  CON_PH_BASE(2, 1,j,2.00) #end
-#macro CON_PH_2MM_2X2J(j)  CON_PH_BASE(2, 2,j,2.00) #end
-#macro CON_PH_2MM_2X3J(j)  CON_PH_BASE(2, 3,j,2.00) #end
-#macro CON_PH_2MM_2X4J(j)  CON_PH_BASE(2, 4,j,2.00) #end
-#macro CON_PH_2MM_2X5J(j)  CON_PH_BASE(2, 5,j,2.00) #end
-#macro CON_PH_2MM_2X6J(j)  CON_PH_BASE(2, 6,j,2.00) #end
-#macro CON_PH_2MM_2X7J(j)  CON_PH_BASE(2, 7,j,2.00) #end
-#macro CON_PH_2MM_2X8J(j)  CON_PH_BASE(2, 8,j,2.00) #end
-#macro CON_PH_2MM_2X9J(j)  CON_PH_BASE(2, 9,j,2.00) #end
-#macro CON_PH_2MM_2X10J(j) CON_PH_BASE(2,10,j,2.00) #end
