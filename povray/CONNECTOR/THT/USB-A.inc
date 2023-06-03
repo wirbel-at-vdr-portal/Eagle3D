@@ -10,7 +10,7 @@
  * hebel23 <hebel(replace with at)hebel23.de>
  * 12.10.2004
  ******************************************************************************/
-#macro CON_THT_USB_A_001()
+#macro CON_THT_USB_A_AMP787616()
   union {
      difference { // Blechgehaeuse
         Round_Box ( // Aussenhuelle
@@ -263,3 +263,9 @@
      }
 #end
 
+/*******************************************************************************
+ * no typos below please.
+ ******************************************************************************/
+// begin assignment
+//con-amp:USB=CON_THT_USB_A_AMP787616(:USB-A Amphenol 787616:
+// end assignment
