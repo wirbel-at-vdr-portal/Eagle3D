@@ -31,4 +31,5 @@
 #include "TOOLS/WIRE_LEADS.inc"
 
 
-#include "TOOLS/BENT_PLANE.inc" // dependency to TOOLS/RECT_BOGEN.inc
+#include "TOOLS/BENT_PLANE.inc"     // dependency to TOOLS/RECT_BOGEN.inc
+#include "TOOLS/BevelHousing.inc"   // dependency to TOOLS/ROTATE.inc
