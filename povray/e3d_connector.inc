@@ -3658,6 +3658,3 @@ union {
 #end
 
 
-
-
-#include "CONNECTOR/_Pfostenwanne_THT.inc"
