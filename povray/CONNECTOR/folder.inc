@@ -26,5 +26,6 @@
 #include "CONNECTOR/THT/Sub-D.inc"
 #include "CONNECTOR/THT/TEConnectivity_Faston.inc"
 #include "CONNECTOR/THT/TEConnectivity_HE14.inc"
+#include "CONNECTOR/THT/USB-A.inc"
 #include "CONNECTOR/THT/WAGO-233-series.inc"
 #include "CONNECTOR/THT/WAGO-733-734-series.inc"
