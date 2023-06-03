@@ -48,32 +48,6 @@ texture{pigment { Gray70 }
 
 
 
-/*******************************************************************************
- * DIN 41651
- * Tilmann Reh <tilmann.reh@autometer.de>
- * gerade Pfostenwannen
- * Bezugspunkt: geometrische Mitte der Pins auf PCB-Oberflaeche
- *******************************************************************************/
-#macro CON_WS_XX_G_BASE(Pins)
-  union {
-     object{
-        PFOSTENWANNE(7.62+Pins*1.27)
-        }
-     GRID(object { PIN_STRAIGHT(0.635,8.5,3) texture { col_gold } },2.54,Pins/2,2)
-     }
-#end
-
-#macro CON_DIS_WS6G()  CON_WS_XX_G_BASE(6)  #end
-#macro CON_DIS_WS10G() CON_WS_XX_G_BASE(10) #end
-#macro CON_DIS_WS14G() CON_WS_XX_G_BASE(14) #end
-#macro CON_DIS_WS16G() CON_WS_XX_G_BASE(16) #end
-#macro CON_DIS_WS20G() CON_WS_XX_G_BASE(20) #end
-#macro CON_DIS_WS26G() CON_WS_XX_G_BASE(26) #end
-#macro CON_DIS_WS34G() CON_WS_XX_G_BASE(34) #end
-#macro CON_DIS_WS40G() CON_WS_XX_G_BASE(40) #end
-#macro CON_DIS_WS50G() CON_WS_XX_G_BASE(50) #end
-#macro CON_DIS_WS64G() CON_WS_XX_G_BASE(64) #end
-
 
 /*******************************************************************************
  * box header 2.54mm
