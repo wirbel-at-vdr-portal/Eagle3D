@@ -91,6 +91,13 @@
      }
 #end
 
+
+/*******************************************************************************
+ * Basic male DIN-41651 header.
+ * See Reichelt "WSL 16G" or amtek BH1S-16
+ * 03.06.2023, -wk
+ ******************************************************************************/
+
 #macro DIN41651_M_THT(CircuitSize)
   union {
      #local Grid = 2.54;
@@ -126,6 +133,63 @@
 #macro CON_THT_DIN41651_M60() DIN41651_M_THT(60) #end
 #macro CON_THT_DIN41651_M64() DIN41651_M_THT(64) #end
 
+
+/*******************************************************************************
+ * Basic male DIN-41651 header, 90deg.
+ * See Reichelt "WSL 16W" or amtek BH1R-16
+ * 03.06.2023, -wk
+ ******************************************************************************/
+
+#macro DIN41651_M_THT_R90(CircuitSize)
+  union {
+     #local Grid = 2.54;
+     #local Rows = 2;
+     #local Cols = CircuitSize/Rows;
+     object {
+        DIN41651_M(CircuitSize)
+        rotate <90,0,0>
+        translate <0,9.0/2,Grid/2+1.4>
+        }
+     GRID (
+        union {
+           //PIN_STRAIGHT(0.64,2.0,3.0)
+           object {
+              PIN_90deg(0.64,0.6,4.5 - Grid/2,3,1.6)
+              rotate <0,180,0>
+              translate <0,0,+Grid/2>
+              }
+           object {
+              PIN_90deg(0.64,1.0,4.5 + Grid/2,3,1.6+Grid)
+              rotate <0,180,0>
+              translate <0,0,-Grid/2>
+              }
+           texture {
+              col_gold
+              }
+           },
+        Grid,Cols,1
+        )
+     }
+#end
+
+#macro CON_THT_DIN41651_M06_R90() DIN41651_M_THT_R90(06) #end
+#macro CON_THT_DIN41651_M08_R90() DIN41651_M_THT_R90(08) #end
+#macro CON_THT_DIN41651_M10_R90() DIN41651_M_THT_R90(10) #end
+#macro CON_THT_DIN41651_M12_R90() DIN41651_M_THT_R90(12) #end
+#macro CON_THT_DIN41651_M14_R90() DIN41651_M_THT_R90(14) #end
+#macro CON_THT_DIN41651_M16_R90() DIN41651_M_THT_R90(16) #end
+#macro CON_THT_DIN41651_M20_R90() DIN41651_M_THT_R90(20) #end
+#macro CON_THT_DIN41651_M24_R90() DIN41651_M_THT_R90(24) #end
+#macro CON_THT_DIN41651_M26_R90() DIN41651_M_THT_R90(26) #end
+#macro CON_THT_DIN41651_M30_R90() DIN41651_M_THT_R90(30) #end
+#macro CON_THT_DIN41651_M34_R90() DIN41651_M_THT_R90(34) #end
+#macro CON_THT_DIN41651_M40_R90() DIN41651_M_THT_R90(40) #end
+#macro CON_THT_DIN41651_M44_R90() DIN41651_M_THT_R90(44) #end
+#macro CON_THT_DIN41651_M50_R90() DIN41651_M_THT_R90(50) #end
+#macro CON_THT_DIN41651_M60_R90() DIN41651_M_THT_R90(60) #end
+#macro CON_THT_DIN41651_M64_R90() DIN41651_M_THT_R90(64) #end
+
+
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
@@ -145,4 +209,20 @@
 //con-ml:ML50=CON_THT_DIN41651_M50(:DIN-41651 straight
 //con-ml:ML60=CON_THT_DIN41651_M60(:DIN-41651 straight
 //con-ml:ML64=CON_THT_DIN41651_M64(:DIN-41651 straight
+//con-ml:ML6L=CON_THT_DIN41651_M06_R90(:DIN-41651 90deg
+//con-ml:ML8L=CON_THT_DIN41651_M08_R90(:DIN-41651 90deg
+//con-ml:ML10L=CON_THT_DIN41651_M10_R90(:DIN-41651 90deg
+//con-ml:ML12L=CON_THT_DIN41651_M12_R90(:DIN-41651 90deg
+//con-ml:ML14L=CON_THT_DIN41651_M14_R90(:DIN-41651 90deg
+//con-ml:ML16L=CON_THT_DIN41651_M16_R90(:DIN-41651 90deg
+//con-ml:ML20L=CON_THT_DIN41651_M20_R90(:DIN-41651 90deg
+//con-ml:ML24L=CON_THT_DIN41651_M24_R90(:DIN-41651 90deg
+//con-ml:ML26L=CON_THT_DIN41651_M26_R90(:DIN-41651 90deg
+//con-ml:ML30L=CON_THT_DIN41651_M30_R90(:DIN-41651 90deg
+//con-ml:ML34L=CON_THT_DIN41651_M34_R90(:DIN-41651 90deg
+//con-ml:ML40L=CON_THT_DIN41651_M40_R90(:DIN-41651 90deg
+//con-ml:ML44L=CON_THT_DIN41651_M44_R90(:DIN-41651 90deg
+//con-ml:ML50L=CON_THT_DIN41651_M50_R90(:DIN-41651 90deg
+//con-ml:ML60L=CON_THT_DIN41651_M60_R90(:DIN-41651 90deg
+//con-ml:ML64L=CON_THT_DIN41651_M64_R90(:DIN-41651 90deg
 // end assignment
