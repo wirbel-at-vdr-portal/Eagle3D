@@ -10,7 +10,7 @@
  * hebel23 <hebel(replace with at)hebel23.de>
  * 12.10.2004
  ******************************************************************************/
-#macro CON_THT_USB_A_AMP787616()
+#macro CON_THT_USB_Std_A_AMP787616()
   union {
      difference { // Blechgehaeuse
         Round_Box ( // Aussenhuelle
@@ -263,9 +263,69 @@
      }
 #end
 
+
+/*******************************************************************************
+ * USB-connector PN87520, con-berg.lbr
+ * 04.06.2023, -wk
+ ******************************************************************************/
+#macro CON_THT_USB_Std_A_AMP87520()
+  object {
+     CON_THT_USB_Std_A_AMP787616()
+     translate <0,0,-10.29>
+     }
+#end
+
+
+/*******************************************************************************
+ * USB-connector PN87520, con-berg.lbr
+ * 04.06.2023, -wk
+ ******************************************************************************/
+#macro CON_THT_USB_Std_A_AMP87520S()
+  union {
+     CON_THT_USB_Std_A_AMP87520()
+     difference {
+        union {
+           object {
+              BENT_PLANE_OUTER(8.5,2,7.0,0.3,0.2,90)
+              rotate <-90,0,0>
+              translate <-7.3,+4.0,4.1>
+              }
+           object {
+              BENT_PLANE_OUTER(8.5,2,7.0,0.3,0.2,90)
+              rotate <+90,180,0>
+              translate <+7.3,+4.0,4.1>
+              }
+           }
+        box {
+           <-16/2,-1,-1>
+           <+16/2,+1,+1>
+           rotate <45,0,0>
+           translate <0,8,2>
+           }
+        box {
+           <-16/2,-1,-1>
+           <+16/2,+1,+1>
+           rotate <45,0,0>
+           translate <0,0,2>
+           }
+        }
+     texture {
+        col_silver
+        }
+     }
+#end
+
+
+
+
+
+
+
+
+
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//con-amp:USB=CON_THT_USB_A_AMP787616(:USB-A Amphenol 787616:
+//con-amp:USB=CON_THT_USB_A_AMP787616(:USB-A Amphenol 787616
 // end assignment
