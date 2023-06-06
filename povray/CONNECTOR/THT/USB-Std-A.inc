@@ -320,7 +320,7 @@
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//con-amp:USB=CON_THT_USB_A_AMP787616(:USB-A Amphenol 787616
-//con-berg:PN87520=CON_THT_USB_Std_A_AMP87520(:USB-A standard
-//con-berg:PN87520-S=CON_THT_USB_Std_A_AMP87520S(:USB-A standard
+//con-amp:USB=CON_THT_USB_Std_A_AMP787616(:USB-A Amphenol 787616:
+//con-berg:PN87520=CON_THT_USB_Std_A_AMP87520(:USB-A standard:
+//con-berg:PN87520-S=CON_THT_USB_Std_A_AMP87520S(:USB-A standard:
 // end assignment
