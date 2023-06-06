@@ -107,6 +107,16 @@ union {
   union {
      #local R = 0.3;
      #local Thickness = (7.7-6.9)/2;
+
+     #local PadLength = 1.5;
+     #local A = 9;
+     #local B = A - PadLength/2;
+     #local C = 3;
+     #local D = 5.87+2*Thickness;
+     #local E = 7.7;
+     #local F = 3.95;
+     #local G = 1.22+Thickness;
+
      //BENT_PLANE_OUTER(xLength,BendLength,Width,Thickness,R,Angle)
 
      /*
@@ -137,17 +147,25 @@ union {
            }
         }*/
 
-     #local SOL = object {
-         BENT_PLANE_OUTER(7.7/2,1.22+Thickness,9-1.5/2,Thickness,R,90)
-         translate <-7.7/2,-3.95,0>
+     #local S1 = object {
+         BENT_PLANE_OUTER(E/2,G,B,Thickness,R,90)
+         translate <-E/2,-F,0>
          rotate <0,180,180>
          };
-     ROTATE(SOL,2,180)
-     #local SUL = object {
-         BENT_PLANE_OUTER(7.7/2,1.22+Thickness,9-1.5/2,Thickness,R,90)
-         translate <-7.7/2,-3.95,0>
-         rotate <0,0,180>
+     object {
+         ROTATE(S1,2,180)
+         translate <0,0,-B/2+PadLength/2>
+         }
+
+     #local S2 = object {
+         BENT_PLANE_OUTER(D/2,G,A,Thickness,R,90)
+         translate <-D/2,0,0>
          };
+     object {
+         ROTATE(S2,2,180)
+         translate <0,0,-A/2+PadLength>
+         }
+
 
      texture {
         col_silver
