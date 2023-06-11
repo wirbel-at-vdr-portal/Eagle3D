@@ -7,6 +7,7 @@
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
 #include "CONNECTOR/SMT/MOLEX-53261-series.inc"
 #include "CONNECTOR/SMT/MOLEX-87832-series.inc"
+#include "CONNECTOR/SMT/USB-Mini-B.inc"
 #include "CONNECTOR/THT/coax-BNC-AMP-112536.inc"
 #include "CONNECTOR/THT/coax-BNC-AMP-227161.inc"
 #include "CONNECTOR/THT/coax-BNC-RADIALL_R141426161.inc"
@@ -26,9 +27,6 @@
 #include "CONNECTOR/THT/Sub-D.inc"
 #include "CONNECTOR/THT/TEConnectivity_Faston.inc"
 #include "CONNECTOR/THT/TEConnectivity_HE14.inc"
-
-#include "CONNECTOR/THT/USB-Mini-B.inc"
-
 #include "CONNECTOR/THT/USB-Std-A.inc"
 #include "CONNECTOR/THT/USB-Std-B.inc"
 #include "CONNECTOR/THT/WAGO-233-series.inc"
