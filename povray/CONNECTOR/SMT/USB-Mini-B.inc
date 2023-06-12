@@ -366,6 +366,14 @@
 
 
 /*******************************************************************************
+ * con-hirose:UX60(*) has strange location && x-offset.
+ ******************************************************************************/
+#macro CON_SMT_USB_Mini_B_UX60AMB5ST() object { CON_SMT_USB_Mini_B_32005_400() translate <-0.4,0,0> } #end
+#macro CON_SMT_USB_Mini_B_UX60MB5ST()  object { CON_SMT_USB_Mini_B_32005_301() translate <-0.4,0,0> } #end
+#macro CON_THT_USB_Mini_B_UX60MB5S8()  object { CON_SMT_USB_Mini_B_32005_501() translate <+6.0,0,0> } #end
+
+
+/*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
@@ -374,4 +382,7 @@
 //con-cypressindustries:32005-400=CON_SMT_USB_Mini_B_32005_400(:USB Mini-B
 //con-cypressindustries:32005-501=CON_SMT_USB_Mini_B_32005_501(:USB Mini-B
 //con-cypressindustries:32005-601=CON_THT_USB_Mini_B_32005_601(:USB Mini-B
+//UX60A-MB-5ST=CON_SMT_USB_Mini_B_UX60AMB5ST(:USB Mini-B:
+//UX60-MB-5ST=CON_SMT_USB_Mini_B_UX60MB5ST(:USB Mini-B:
+//UX60-MB-5S8=CON_THT_USB_Mini_B_UX60MB5S8(:USB Mini-B:
 // end assignment
