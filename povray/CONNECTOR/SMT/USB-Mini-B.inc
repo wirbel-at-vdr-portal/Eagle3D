@@ -27,7 +27,8 @@
      #local PinWidth = 2.0;
      #local xOffset = 4.25;
      #local StubOffset = 0;
-     #if ((Type = "C32005_201") | (Type = "C32005_301") | (Type = "C32005_400") | (Type = "C32005_501") | (Type = "C32005_601"))
+     #if ((Type = "C32005_201") | (Type = "C32005_301") | (Type = "C32005_400") | (Type = "C32005_501") | (Type = "C32005_601") |
+          (Type = "Seeed013A"))
         #local CutLen = 9 - 1.5/2 - 2.2;
         #local PinWidth = 1.5;
         #local xOffset = 9 - 1.5/2 - 2.2 - 1.5/2;
@@ -122,7 +123,7 @@
               BENT_PLANE_OUTER(1.5,1,1.5,Thickness,R,90)
               translate <6.9/2,0,0>
               };
-           #if (Type = "C32005_501")
+           #if ((Type = "C32005_501") | (Type = "Seeed013A"))
               #local GndPin1 = box {
                  <6.9/2+0        ,-1.7,-PinWidth/2>
                  <6.9/2+Thickness, 1.0,+PinWidth/2>
@@ -313,7 +314,8 @@
            rgbf <1,0,0,0.8>
            }
         }
-     #if ((Type = "C32005_201") | (Type = "C32005_301") | (Type = "C32005_400") | (Type = "C32005_501"))
+     #if ((Type = "C32005_201") | (Type = "C32005_301") | (Type = "C32005_400") | (Type = "C32005_501") |
+          (Type = "Seeed013A"))
         GRID(
            object {
               IC_SMD_PIN(2.0,2.5,0.35,0.35)
@@ -371,6 +373,20 @@
 #macro CON_SMT_USB_Mini_B_UX60AMB5ST() object { CON_SMT_USB_Mini_B_32005_400() translate <-0.4,0,0> } #end
 #macro CON_SMT_USB_Mini_B_UX60MB5ST()  object { CON_SMT_USB_Mini_B_32005_301() translate <-0.4,0,0> } #end
 #macro CON_THT_USB_Mini_B_UX60MB5S8()  object { CON_SMT_USB_Mini_B_32005_501() translate <+6.0,0,0> } #end
+
+/*******************************************************************************
+ * Seeed-OPL-Connector
+ ******************************************************************************/
+#macro USB_Mini_B_Seeed(Type)
+  object {
+     CON_SMT_USB_Mini_B(Type)
+     rotate <0,-90,0>
+     }
+#end
+
+#macro CON_SMT_USB_Mini_B_Seeed002A()  object { USB_Mini_B_Seeed("C32005_301") translate <+1.0,0,0> } #end
+#macro CON_SMT_USB_Mini_B_Seeed013A()  object { USB_Mini_B_Seeed("Seeed013A")  translate <+0.5,0,0> } #end
+
 
 
 /*******************************************************************************
