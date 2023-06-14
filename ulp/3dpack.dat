@@ -2021,19 +2021,6 @@ B35N57:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_AMP_1
 R141426:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_R141426161(:BNC socket straight:
 733989-5:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DCPOWERCONNECTOR(:DC power connector:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DC_JACK_HEBO_13(:Hohlstecker-Printeinbaubuchse, gewinkelt (Reichelt.de HEBO 13):DC-Jack, Print (Reichelt.de HEBO 13)
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_3S(:Hirschmann DIN-Buchse MAB_3S, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_4(:Hirschmann DIN-Buchse MAB_4, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5(:Hirschmann DIN-Buchse MAB_5, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5S(:Hirschmann DIN-Buchse MAB_5S, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_6(:Hirschmann DIN-Buchse MAB_6, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_7S(:Hirschmann DIN-Buchse MAB_7S, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8S(:Hirschmann DIN-Buchse MAB_8S, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8SN(:Hirschmann DIN-Buchse MAB_8SN, Frontplattenmontage, Anschluss ueber Kabel:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_5SV(:Hirschmann DIN-Buchse MAB_5SV, unvollständig, Anschlussösen statt Pins:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_6V(:Hirschmann DIN-Buchse MAB_6V, unvollständig, Anschlussösen statt Pins:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_7SV(:Hirschmann DIN-Buchse MAB_7SV, unvollständig, Anschlussösen statt Pins:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8SV(:Hirschmann DIN-Buchse MAB_8SV, unvollständig, Anschlussösen statt Pins:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIN_MAB_8SNV(:Hirschmann DIN-Buchse MAB_8SNV, unvollständig, Anschlussösen statt Pins:
 M617-31:0:0:0:0:0:0:0:0:0:0:0:0:0:-90:-2.5:0:0.5:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_DIN41617_31(:Eurocard Connector DIN 41617:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_DIN41617_13(:Eurocard Connector:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_DIS_DIN41617_21(:Eurocard Connector:
