@@ -1213,36 +1213,18 @@ union   {
                 object{TOOLS_PCB_SMD(1,6,0.25,8) translate<-0.5,-0.125,-0.5> rotate<0,0,-90> translate<-(pin/2-1.5)*pitch+pitch*i*2,0,0> texture{col_silver}}        
                 #local i=i+1;
         #end
-        }
-        
+        }    
 #end
-#macro CON_MICROMATCH_SMD_4()
-CON_MICROMATCH_SMD_BASE(4)
-#end
-#macro CON_MICROMATCH_SMD_6()
-CON_MICROMATCH_SMD_BASE(6)
-#end
-#macro CON_MICROMATCH_SMD_8()
-CON_MICROMATCH_SMD_BASE(8)
-#end
-#macro CON_MICROMATCH_SMD_10()
-CON_MICROMATCH_SMD_BASE(10)
-#end
-#macro CON_MICROMATCH_SMD_12()
-CON_MICROMATCH_SMD_BASE(12)
-#end
-#macro CON_MICROMATCH_SMD_14()
-CON_MICROMATCH_SMD_BASE(14)
-#end
-#macro CON_MICROMATCH_SMD_16()
-CON_MICROMATCH_SMD_BASE(16)
-#end
-#macro CON_MICROMATCH_SMD_18()
-CON_MICROMATCH_SMD_BASE(16)
-#end
-#macro CON_MICROMATCH_SMD_20()
-CON_MICROMATCH_SMD_BASE(20)
-#end
+
+#macro CON_MICROMATCH_SMD_4()  CON_MICROMATCH_SMD_BASE(4)  #end
+#macro CON_MICROMATCH_SMD_6()  CON_MICROMATCH_SMD_BASE(6)  #end
+#macro CON_MICROMATCH_SMD_8()  CON_MICROMATCH_SMD_BASE(8)  #end
+#macro CON_MICROMATCH_SMD_10() CON_MICROMATCH_SMD_BASE(10) #end
+#macro CON_MICROMATCH_SMD_12() CON_MICROMATCH_SMD_BASE(12) #end
+#macro CON_MICROMATCH_SMD_14() CON_MICROMATCH_SMD_BASE(14) #end
+#macro CON_MICROMATCH_SMD_16() CON_MICROMATCH_SMD_BASE(16) #end
+#macro CON_MICROMATCH_SMD_18() CON_MICROMATCH_SMD_BASE(16) #end
+#macro CON_MICROMATCH_SMD_20() CON_MICROMATCH_SMD_BASE(20) #end
 
 
 /********************************************************************************************************************************************
