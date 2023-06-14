@@ -398,7 +398,9 @@
 //con-cypressindustries:32005-400=CON_SMT_USB_Mini_B_32005_400(:USB Mini-B
 //con-cypressindustries:32005-501=CON_SMT_USB_Mini_B_32005_501(:USB Mini-B
 //con-cypressindustries:32005-601=CON_THT_USB_Mini_B_32005_601(:USB Mini-B
-//UX60A-MB-5ST=CON_SMT_USB_Mini_B_UX60AMB5ST(:USB Mini-B:
-//UX60-MB-5ST=CON_SMT_USB_Mini_B_UX60MB5ST(:USB Mini-B:
-//UX60-MB-5S8=CON_THT_USB_Mini_B_UX60MB5S8(:USB Mini-B:
+//con-hirose:UX60A-MB-5ST=CON_SMT_USB_Mini_B_UX60AMB5ST(:USB Mini-B:
+//con-hirose:UX60-MB-5ST=CON_SMT_USB_Mini_B_UX60MB5ST(:USB Mini-B:
+//con-hirose:UX60-MB-5S8=CON_THT_USB_Mini_B_UX60MB5S8(:USB Mini-B:
+//Seeed-OPL-Connector:MINIUSB5+4P-SMD-0.8-90D=CON_SMT_USB_Mini_B_Seeed002A(:USB Mini-B
+//Seeed-OPL-Connector:MINIUSB5+4P-0.8-90D=CON_SMT_USB_Mini_B_Seeed013A(:USB Mini-B
 // end assignment
