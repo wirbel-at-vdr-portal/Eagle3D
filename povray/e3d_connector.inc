@@ -274,77 +274,7 @@ CON_DC_JACK_HEBO_13_BASE()
 
 
 
-/********************************************************************************************************************************************
-// Grundmakro: Stiftleiste nach DIN41617.
-// J.Bartels@arcor.de, www.mec-krefeld.de
-********************************************************************************************************************************************/
-#macro CON_DIS_DIN41617_BASE(Pins)
-// Grundmakro: Um 90° gebogener, runder Stift eines Steckverbinders nach DIN41617.
-// Parameter: Staerke ueber/unter PCB, Biegeradius (Mitte), Hoehe ueber/unter PCB-Oberkante, Laenge nach vorn (-Z), Farbe
-// J.Bartels@arcor.de, www.mec-krefeld.de
-#macro PIN41617 (DO,DU,R,HO,HU,L,col)
-union {
-   intersection{ 
-      torus{ R, DO/2 rotate<0,0,90> translate<0,HO-R,-R> }
-      box{ <DO/2,HO-R,DO/2><-DO/2,HO+DO/2,-R> }
-   }
-   cylinder{<0,-HU,0><0,HO-R-0.1,0> DU/2}
-   cone{ <0,HO-R-0.1,0> DU/2 <0,HO-R,0> DO/2 }
-   cylinder{<0,HO,-L+1><0,HO,-R> DO/2}
-   cone{ <0, HO,-L+1>,DO/2,<0,HO,-L>,DO/2-0.3}
-   texture{col}
-} 
-#end
 
-// Grundmakro: Reihe von Stiften eines Steckverbinders nach DIN41617.
-// J.Bartels@arcor.de, www.mec-krefeld.de
-#macro PIN41617_ROW (Pins)
-union {
-   #local i=0;
-   #while(i<Pins) 
-      object{PIN41617 (1,0.8,1.2,1.6,3.3,13.9,col_gold) translate<i*2.5,0,-1.25>} 
-      #local i=i+2; 
-   #end
-   #local i=1;
-   #while(i<Pins) 
-      object{PIN41617 (1,0.8,1.2,1.6+3.8,3.3,13.9+2.5,col_gold) translate<i*2.5,0,1.25>} 
-      #local i=i+2; 
-   #end
-   translate<-(Pins/2)*2.5+1.25,0,4.5/2+2.5>
-}
-#end
-
-#local A=(Pins-1)*2.5+15.6;
-#local D=(Pins-1)*2.5+10;
-#local E=Pins*2.5;
-union {
- PIN41617_ROW( Pins )
- box{ <-E/2,0,-4.5/2><E/2,8.5,4.5/2> }
- //Befestigungs-Ohr
-difference { 
- box{ <A/2,0,-4.5/2><E/2,4.2,8.1-4.5/2> }
- intersection{
-   cylinder{<D/2,-1,4.5/2><D/2,1+4.2,4.5/2>,1.6}
-   box{ <D/2-1.6,-1,4.5/2-1.4><D/2+1.6,1+4.2,4.5/2+1.4>}
- }  
- box{ <-(A-E-5)/2,-1,0><0,1+4.2,8.1-4.5+10> rotate<0,20,0> translate<E/2,0,4.5/2> }
-}
- //Befestigungs-Ohr
-difference { 
- box{ <-A/2,0,-4.5/2><-E/2,4.2,8.1-4.5/2> }
- intersection{
-   cylinder{<-D/2,-1,4.5/2><-D/2,1+4.2,4.5/2>,1.6}
-   box{ <-D/2+1.6,-1,4.5/2-1.4><-D/2-1.6,1+4.2,4.5/2+1.4>}
- }  
- box{ <(A-E-5)/2,-1,0><0,1+4.2,8.1-4.5+10> rotate<0,-20,0> translate<-E/2,0,4.5/2> }
-}
-pigment{Gray80}
-}
-#end
-
-#macro CON_DIS_DIN41617_13() CON_DIS_DIN41617_BASE(13) #end
-#macro CON_DIS_DIN41617_21() CON_DIS_DIN41617_BASE(21) #end
-#macro CON_DIS_DIN41617_31() CON_DIS_DIN41617_BASE(31) #end
 
 
 /********************************************************************************************************************************************

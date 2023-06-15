@@ -193,6 +193,7 @@
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
+// begin assignment
 //con-ml:ML6=CON_THT_DIN41651_M06(:DIN-41651 straight
 //con-ml:ML8=CON_THT_DIN41651_M08(:DIN-41651 straight
 //con-ml:ML10=CON_THT_DIN41651_M10(:DIN-41651 straight
