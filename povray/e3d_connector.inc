@@ -484,41 +484,7 @@ CON_LMI_L115_BASE(20)
 #end
 
 
-/********************************************************************************************************************************************
-//Designed by Friedrich Bleikamp, Lenord, Bauer & Co. Gmbh <fbleikamp@lenord.de>
-//Privat: <fbleikamp@web.de>
-//Loetoese 1.0mm Drill fuer Drahtanschluss oder Testklemme
-********************************************************************************************************************************************/
-#macro CON_LSP_BASE(s)
-union {
-   difference {
-      box { <-0.8,0,-0.2>,<0.8,5,0.2> texture{col_silver} translate<0,0,0>}
-      box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,-3> translate<1.1,0,0>}
-      box { <-0.8,-0.2,-0.3>,<0.8,5.2,0.3> texture{col_silver} rotate<0,0,3> translate<-1.1,0,0>}
-      translate<0,-5.0,0>
-   }
-   difference {
-      box { <-1.5,0,-0.2>,<1.5,3,0.2> texture{col_silver} translate<0,0,0>}
-      box { <-0.5,1.5,-0.3>,<0.5,3.1,0.3> texture{col_silver} translate<0,0,0>}
-      cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,1.5,0>}
-   }
-   difference {
-      cylinder{<0,0,-0.2><0,0,0.2>1.5 texture{col_silver} translate<0,3,0>}
-      cylinder{<0,0,-0.3><0,0,0.3>0.5 texture{col_silver} translate<0,3,0>}
-      box { <-1.5,0,-0.3>,<1.5,3,0.3> texture{col_silver} translate<0,0,0>}
-   }
-   scale (s/13)
-}
-#end
-#macro CON_LSP_10()
-CON_LSP_BASE(10)
-#end
-#macro CON_LSP_11()
-CON_LSP_BASE(11)
-#end
-#macro CON_LSP_13()
-CON_LSP_BASE(13)
-#end
+
 
 
 /********************************************************************************************************************************************
