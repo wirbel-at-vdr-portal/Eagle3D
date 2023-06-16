@@ -2506,7 +2506,8 @@ NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_S
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_MPE156_38x3(:2.00mm grid socket terminal:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_MPE156_39x3(:2.00mm grid socket terminal:
 NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SOCKET_MPE156_40x3(:2.00mm grid socket terminal:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_PCPWR514M(:PC power connector, male:
+350211:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:MATE_N_LOK_Floppy(:MATE-N-LOK Floppy connector:
+FLOPPY-4:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:MATE_N_LOK_Floppy(:MATE-N-LOK Floppy connector:
 1751248:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PHOENIX_MKDS1_2_35(:Phoenix-Contact PCB terminal block 3.5mm:
 1751251:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PHOENIX_MKDS1_3_35(:Phoenix-Contact PCB terminal block 3.5mm:
 1751264:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_PHOENIX_MKDS1_4_35(:Phoenix-Contact PCB terminal block 3.5mm:
