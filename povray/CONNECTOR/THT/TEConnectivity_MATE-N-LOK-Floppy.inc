@@ -10,7 +10,7 @@
  *
  * 16.06.2023, -wk
  ******************************************************************************/
-#macro MATE_N_LOK_Floppy()
+#macro CON_THT_MATE_N_LOK_Floppy()
   union {
      #local L1 = 23.24;
      #local L2 = 25.40;
@@ -49,8 +49,8 @@
               }
            GRID (
               box {
-                 <-(L2-L1)/2,H1,-H3/2>
-                 <+(L2-L1)/2,H3,+H3/2>
+                 <-(L2-L1)/4,H1,-H3/2>
+                 <+(L2-L1)/4,H3,+H3/2>
                  },
               L1+(L2-L1)/2,2,1
               )
@@ -116,11 +116,18 @@
 #end
 
 
+#macro CON_THT_MATE_N_LOK_Floppy_R180()
+   object {
+      CON_THT_MATE_N_LOK_Floppy()
+      rotate y*180
+      }
+#end
+
+
 /*******************************************************************************
  * no typos below please.
  ******************************************************************************/
 // begin assignment
-//con-amp:350428-1=CON_THT_MATE_N_LOK_350428_1(:THT MATE-N-LOK connector
-//con-amp:350429-1=CON_THT_MATE_N_LOK_350429_1(:THT MATE-N-LOK connector
-//con-amp:350792-1=CON_THT_MATE_N_LOK_350792_1(:THT MATE-N-LOK connector
+//350211=CON_THT_MATE_N_LOK_Floppy_R180(:MATE-N-LOK Floppy connector
+//FLOPPY-4=CON_THT_MATE_N_LOK_Floppy(:MATE-N-LOK Floppy connector
 // end assignment
