@@ -13,6 +13,7 @@
 #include "TOOLS/ARC.inc"
 #include "TOOLS/BENT_WIRE.inc"
 #include "TOOLS/BENTPIPE.inc"
+#include "TOOLS/ChamferBox.inc"
 #include "TOOLS/GRID.inc"
 #include "TOOLS/IC_SMD_PIN.inc"
 #include "TOOLS/IC_SMD_BASE.inc"
