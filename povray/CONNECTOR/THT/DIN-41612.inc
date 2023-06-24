@@ -10,40 +10,77 @@
  *
  * 16.06.2023, -wk
  ******************************************************************************/
-#macro DIN41612(Positions,Loaded,RowA,RowB,RowC,RowD,RowE,RowZ,Termination,PostLen,BoardLocks,HighTemp,Type,Plug,RightAngle)
+#macro DIN41612(Positions,Loaded,GridMulti,RowA,RowB,RowC,RowD,RowE,RowZ,BoardLocks,Type,Plug,RightAngle)
   union {
      #local Rows = RowA + RowB + RowC + RowD + RowE + RowZ;
-     #local Cols = Positions / Rows;
-     #local Spaces = (Cols-1);
-     #if (Type = "C")
-        #local E = Spaces;
-        #switch(E)
-           #case(49) #local D = 131.01; #local C = 133.48; #local B = 134.62; #local A = 139.70; #break
-           #case(39) #local D = 105.61; #local C = 108.08; #local B = 109.22; #local A = 114.30; #break
-           #case(31) #local D =  85.29; #local C =  87.76; #local B =  88.90; #local A =  94.00; #break
-           #case(15) #local D =  44.65; #local C =  47.12; #local B =  48.26; #local A =  53.34; #break
+     #local Cols = GridMulti * Loaded / Rows;
+     #local Spaces = Cols - 1;
+
+/* ----
+ * B,B/2,B/3  64/32/20 pol, ab  , Stecker liegend, Buchse stehend
+ * Q,Q/2,Q/3  64/32/20 pol, ab  , Stecker stehend, Buchse liegend
+ * ----
+ * C,C/2,C/3  96/64/30 pol, abc , Stecker liegend, Buchse stehend
+ * R,R/2,R/3  96/64/30 pol, abc , Stecker stehend, Buchse liegend
+ * ----
+
+*/
+     #if ((Type = "B") | (Type = "Q") | (Type = "C") | (Type = "R"))
+        #local w = Spaces * 2.54;
+        #local A = w + 15.24;
+        #if (Plug = 1)
+           #local B = w + 10.16;
+        #else
+           #local B = w + 11.90;
         #end
+        #local C = w + 9.02;
+        #local D = w + 6.55;
+        #local E = Spaces;
+        #local F = w + 6.26;
+        #local G = F - 2*1.0;
+
+        #local Y1 = -3.76 + (0.80+0.60)/2;
+        #local Y2 = +2.54 - 12.62;
+        #local Y3 = +2.54 - 7.18;
+        #local Y4 = +2.54;
+        #local Y5 = 0.8;//-0.7;
+        #local Y6 = -10.1;
+        #local Y7 = Y6 + 7.4;
+        #local Y8 = Y6 + 12.5;
+        #local Y9 = Y6 + 11.6;
+        #local Y10 = Y6 + 6.4;
+
+
+        #local X1 = D - 2*0.94;
+        #local X2 = (E+2)*2.54;
+        #local dH = 2.59;
+     #end
+
+     #if ((Type = "B") | (Type = "Q"))
+        #local H1 = -(8.56 - 1*2.54 - 2*1.37)/2;
+        #local H2 = H1 + 8.56;
+        #local H3 = H1 + (8.56-6.20)/2;
+        #local H4 = H3 + 6.20;
+        #local H5 = H4 - 2.41;
+        #local H6 = 5.96;
+        #local H7 = H6 - 3.0;
+        #local Y11 = -1.27+0.3;
+     #end
+
+     #if ((Type = "C") | (Type = "R"))
         #local H1 = -(11.10 - 2*2.54 - 2*1.37)/2;
         #local H2 = H1 + 11.10;
         #local H3 = H1 + (11.10-8.74)/2;
         #local H4 = H3 + 8.74;
         #local H5 = H4 - 2.41;
-        #local H6 = 2*2.54 + 2*1.37;
-        #local Y1 = -3.76 + (0.80+0.60)/2;
-        #local Y2 = +2.54 - 12.62;
-        #local Y3 = +2.54 - 7.18;
-        #local Y4 = +2.54;
-        #local Y5 = -0.7;
-        #local X1 = D - 2*0.94;
-        #local X2 = (E+2)*2.54;
-        #local dH = 2.59;
-
+        #local H6 = 8.50;
+        #local H7 = H6 - 3.0;
+        #local Y11 = 0.3;
      #end
 
-     #if (Plug = 1) 
-        // housing
+     #if (Plug = 1 & ((Type = "B") | (Type = "C")))
         difference {
-           merge {
+           union {
               Round_Box (
                  <-C/2,H1,Y1>
                  <+C/2,H2,Y2>
@@ -51,20 +88,11 @@
                  )
               Round_Box (
                  <-A/2, 0,Y3>
-                 <+A/2,H6,Y4>
+                 <+A/2,H2,Y4>
                  0.2 0
                  )
-              #local h = prism {
-                 Y3, (Y3+1.5), 5,
-                 <-1.5/2,H5  >,
-                 <-1.0/2,H5+1>,
-                 <+1.0/2,H5+1>,
-                 <+1.5/2,H5  >,
-                 <-1.5/2,H5  >
-                 };
-              GRID(h,2.54,E+6,1)
               }
-           merge {
+           union {
               #local chamfer = 0.5;
               Round_Box (
                  <-D/2-chamfer,H3-chamfer,Y2-0.1+chamfer>
@@ -78,7 +106,7 @@
                  )
               box {
                  <-D/2,H3,Y2>
-                 <+D/2,H5,Y3>
+                 <+D/2,H5+0.2,Y3>
                  }
               box {
                  <-X1/2,H5,Y2>
@@ -86,13 +114,19 @@
                  }
               box {
                  <-X2/2,  -0.1,Y5    >
-                 <+X2/2,H6+0.1,Y4+0.1>
+                 <+X2/2,H2+0.1,Y4+0.1>
                  }
               GRID (
-                 cylinder {
-                    <0,  -0.1,0>
-                    <0,H2+0.1,0>
-                    dH/2
+                 union {
+                    cylinder {
+                       <0,  -0.1,0>
+                       <0,H2+0.1,0>
+                       dH/2
+                       }
+                    box {
+                       <-5.2/2, 6,-5.2/2>
+                       <+5.2/2,10,+5.2/2>
+                       }
                     },
                  B,2,1
                  )
@@ -101,31 +135,249 @@
                     <-1.3/2,-1.3/2,-5>
                     <+1.3/2,+1.3/2, 0>
                     }
+                 box {
+                    <-1.8/2,-0.7/2,0>
+                    <+1.8/2,+1.7/2,3>
+                    }
                  };
               #if (RowA = 1) GRID(object { PinHole translate <0,1.37 + 0*2.54,0> },2.54,Cols,1) #end
               #if (RowB = 1) GRID(object { PinHole translate <0,1.37 + 1*2.54,0> },2.54,Cols,1) #end
               #if (RowC = 1) GRID(object { PinHole translate <0,1.37 + 2*2.54,0> },2.54,Cols,1) #end
+              #if (RowD = 1) GRID(object { PinHole translate <0,1.37 + 3*2.54,0> },2.54,Cols,1) #end
+              #if (RowE = 1) GRID(object { PinHole translate <0,1.37 + 4*2.54,0> },2.54,Cols,1) #end
               }
-
-        
            pigment {
               White * 0.5
               }
            }
      #end
 
-     #if (Plug = 1)
+
+     #if (Plug = 1 & ((Type = "Q") | (Type = "R")))
+
+        difference {
+           union {
+              Round_Box (
+                 <-C/2,H1,Y1>
+                 <+C/2,H2,Y2>
+                 0.2 0
+                 )
+              Round_Box (
+                 <-A/2, 0,Y3>
+                 <+A/2,H2,Y4>
+                 0.2 0
+                 )
+              }
+           union {
+              #local chamfer = 0.5;
+              Round_Box (
+                 <-D/2-chamfer,H3-chamfer,Y2-0.1+chamfer>
+                 <+D/2+chamfer,H5+chamfer,Y2-0.1-chamfer>
+                 chamfer 0
+                 )
+              Round_Box (
+                 <-X1/2-chamfer,H5-chamfer,Y2-0.1+chamfer>
+                 <+X1/2+chamfer,H4+chamfer,Y2-0.1-chamfer>
+                 chamfer 0
+                 )
+              box {
+                 <-D/2,H3,Y2>
+                 <+D/2,H5+0.2,Y3>
+                 }
+              box {
+                 <-X1/2,H5,Y2>
+                 <+X1/2,H4,Y3>
+                 }
+              box {
+                 <-X2/2,  -0.1,Y5    >
+                 <+X2/2,H2+0.1,Y4+0.1>
+                 }
+              GRID (
+                 union {
+                    cylinder {
+                       <0,  -0.1,0>
+                       <0,H2+0.1,0>
+                       dH/2
+                       }
+                    box {
+                       <-5.2/2, 6,-5.2/2>
+                       <+5.2/2,10,+5.2/2>
+                       }
+                    },
+                 B,2,1
+                 )
+              #local PinHole = union {
+                 box {
+                    <-1.3/2,-1.3/2,-5>
+                    <+1.3/2,+1.3/2, 0>
+                    }
+                 box {
+                    <-1.8/2,-0.7/2,0>
+                    <+1.8/2,+1.7/2,3>
+                    }
+                 };
+              #if (RowA = 1) GRID(object { PinHole translate <0,1.37 + 0*2.54,0> },2.54,Cols,1) #end
+              #if (RowB = 1) GRID(object { PinHole translate <0,1.37 + 1*2.54,0> },2.54,Cols,1) #end
+              #if (RowC = 1) GRID(object { PinHole translate <0,1.37 + 2*2.54,0> },2.54,Cols,1) #end
+              #if (RowD = 1) GRID(object { PinHole translate <0,1.37 + 3*2.54,0> },2.54,Cols,1) #end
+              #if (RowE = 1) GRID(object { PinHole translate <0,1.37 + 4*2.54,0> },2.54,Cols,1) #end
+              }
+
+              rotate <90,180,0>
+              translate <0,1.5,H1/2>
+           pigment {
+              White * 0.5
+              }
+           }
+
+     #end
+
+
+
+     #if (Plug = 0 & ((Type = "Q") | (Type = "R")))
+        difference {
+           union {
+              ChamferBox (
+                 <-F/2, 0,Y6>
+                 <+F/2,H7,0>
+                 0.5
+                 )
+              ChamferBox (
+                 <-G/2,H7,Y6>
+                 <+G/2,H6,0>
+                 0.5
+                 )
+              box {
+                 <-G/2+0.5,H7-0.6,Y6>
+                 <+G/2-0.5,H7+0.6,0>
+                 }
+              Round_Box (
+                 <-A/2, 0,Y3>
+                 <+A/2,H2,Y4>
+                 0.2 0
+                 )
+              }
+           union {
+              GRID (
+                 union {
+                    cylinder {
+                       <0,  -0.1,0>
+                       <0,H2+0.1,0>
+                       dH/2
+                       }
+                    box {
+                       <-5.2/2, 6,-5.2/2>
+                       <+5.2/2,10,+5.2/2>
+                       }
+                    },
+                 B,2,1
+                 )
+              #local PinHole = box {
+                 <-1.8/2,-0.7/2,Y6-1>
+                 <+1.8/2,+1.7/2,0.5>
+                 };
+                               GRID(object { PinHole translate <0,1.37 + 0*2.54,0> },2.54,Cols,1)
+                               GRID(object { PinHole translate <0,1.37 + 1*2.54,0> },2.54,Cols,1)
+              #if (Type = "C") GRID(object { PinHole translate <0,1.37 + 2*2.54,0> },2.54,Cols,1) #end
+              }
+           pigment {
+              White * 0.5
+              }
+           }
+     #end
+     #if (Plug = 0 & ((Type = "B") | (Type = "C")))
+        difference {
+           union {
+              ChamferBox (
+                 <-F/2,-0.5,Y6>
+                 <+F/2,H7,0>
+                 0.5
+                 )
+              ChamferBox (
+                 <-G/2,H7,Y6>
+                 <+G/2,H6,0>
+                 0.5
+                 )
+              box {
+                 <-G/2+0.5,H7-0.6,Y6>
+                 <+G/2-0.5,H7+0.6,0>
+                 }
+              Round_Box (
+                 <-A/2, -1,Y9>
+                 <+A/2,H2,Y10>
+                 0.3 0
+                 )
+              rotate <90,180,0>
+              translate <0,1.5,H6/2>
+              }
+           union {
+              GRID (
+                 union {
+                    cylinder {
+                       <0,  -1.0,Y11>
+                       <0,H2+0.1,Y11>
+                       dH/2
+                       }
+                    Round_Box (
+                       <-6/2,3.6   ,Y11-6/2>
+                       <+6/2,H2+0.1,Y11+6/2>
+                       0.3 0
+                       )
+                    },
+                 B,2,1
+                 )
+              #local PinHole = box {
+                 <-1.8/2,-0.7/2,Y6-1>
+                 <+1.8/2,+1.7/2,0.5>
+                 };
+              union {
+                                  GRID(object { PinHole translate <0,1.37 + 0*2.54,0> },2.54,Cols,1)
+                                  GRID(object { PinHole translate <0,1.37 + 1*2.54,0> },2.54,Cols,1)
+                 #if (Type = "C") GRID(object { PinHole translate <0,1.37 + 2*2.54,0> },2.54,Cols,1) #end
+                 rotate <90,180,0>
+                 translate <0,1.5,H6/2>
+                 }
+              }
+           pigment {
+              White * 0.5
+              }
+           }
+     #end
+
+
+
+
+
+     #if (RightAngle = 1)
         #local pinA = object { PIN_90deg(0.7,1.5,1.37+0*2.54+0.8/2,2.64,0.8/2+1*2.54+3.76+4.9) translate <0,0,+1*2.54> };
         #local pinB = object { PIN_90deg(0.7,1.5,1.37+1*2.54+0.8/2,2.64,0.8/2+2*2.54+3.76+4.9) translate <0,0,+2*2.54> };
         #local pinC = object { PIN_90deg(0.7,1.5,1.37+2*2.54+0.8/2,2.64,0.8/2+3*2.54+3.76+4.9) translate <0,0,+3*2.54> };
         union {
-           #if (RowA = 1) GRID(pinA,2.54,Cols,1) #end
-           #if (RowB = 1) GRID(pinB,2.54,Cols,1) #end
-           #if (RowC = 1) GRID(pinC,2.54,Cols,1) #end
+           #if (RowA = 1) GRID(pinA,2.54*GridMulti,Cols/GridMulti,1) #end
+           #if (RowB = 1) GRID(pinB,2.54*GridMulti,Cols/GridMulti,1) #end
+           #if (RowC = 1) GRID(pinC,2.54*GridMulti,Cols/GridMulti,1) #end
+           #if (GridMulti = 2)
+              translate <-2.54/2,0,0>
+           #end
            texture {
               col_gold
               }
            }
+     #else
+        #local pinA = object { PIN_STRAIGHT(0.7,8,3) translate <0,0,+2.54> };
+        #local pinB = object { PIN_STRAIGHT(0.7,8,3) };
+        #local pinC = object { PIN_STRAIGHT(0.7,8,3) translate <0,0,-2.54> };
+        union {
+           #if (RowA = 1) GRID(pinA,2.54*GridMulti,Cols/GridMulti,1) #end
+           #if (RowB = 1) GRID(pinB,2.54*GridMulti,Cols/GridMulti,1) #end
+           #if (RowC = 1) GRID(pinC,2.54*GridMulti,Cols/GridMulti,1) #end
+           #if (Type = "B")
+              translate <0,0,-1.27>
+           #end
+           texture {
+              col_gold
+              }
+           }        
      #end
 
      }
@@ -136,81 +388,110 @@
 
 
 
-
-//Plugs, Right Angle          DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_5650907_5()   DIN41612(150      ,150   ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"C" ,1   ,1         ) #end 
-#macro DIN41612_5650906_5()   DIN41612(120      ,120   ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650914_5()   DIN41612(120      ,120   ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650473_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5536010_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,1      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650913_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5536416_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,1      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5536146_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.113*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5536149_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.113*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650945_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5536742_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,1      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5536356_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650478_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650916_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5148020_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,1      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650946_5()   DIN41612(48       ,32    ,1,0,1,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_5650978_5()   DIN41612(48       ,32    ,1,0,1,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_6_1393644_9() DIN41612(30       ,30    ,1,1,1,0,0,0 ,"Posted"   ,0.118*inch ,0         ,0      ,"C" ,1   ,1         ) #end
-#macro DIN41612_7_1393644_1() DIN41612(30       ,30    ,1,1,1,0,0,0 ,"Posted"   ,0.118*inch ,1         ,0      ,"C" ,1   ,1         ) #end
-//Receptacles, Vertical       DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_5650405_5()   DIN41612(150      ,150   ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5535098_5()   DIN41612(120      ,120   ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5536494_5()   DIN41612(120      ,120   ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,1         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5535090_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5650963_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,1         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5536153_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.180*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5536155_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.180*inch ,1         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5650956_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.130*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5650983_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.130*inch ,1         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5535070_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5536484_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.130*inch ,1         ,0      ,"C" ,0   ,0         ) #end
-#macro DIN41612_5650459_5()   DIN41612(48       ,32    ,1,0,1,0,0,0 ,"Posted"   ,0.098*inch ,0         ,0      ,"C" ,0   ,0         ) #end
-//Plugs, Right Angle          DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_1551603_1()   DIN41612(48       ,32    ,1,0,1,0,0,0 ,"Posted"   ,0.118*inch ,0         ,0      ,"D" ,1   ,1         ) #end
-//Receptacles, Vertical       DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_4_6437082_9() DIN41612(48       ,32    ,1,0,1,0,0,0 ,"Posted"   ,0.177*inch ,0         ,0      ,"D" ,0   ,0         ) #end
-#macro DIN41612_5536053_5()   DIN41612(48       ,32    ,1,1,0,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"D" ,0   ,0         ) #end
-//Plugs, Right Angle          DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_2_164045_4()  DIN41612(48       ,48    ,0,1,0,1,0,1 ,"Posted"   ,0.110*inch ,0         ,0      ,"F" ,1   ,1         ) #end
-#macro DIN41612_2_164306_4()  DIN41612(48       ,32    ,0,0,0,1,0,1 ,"Posted"   ,0.110*inch ,0         ,0      ,"F" ,1   ,1         ) #end
-//Receptacles, Vertical       DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_166733_4()    DIN41612(48       ,48    ,0,1,0,1,0,1 ,"Posted"   ,0.157*inch ,0         ,0      ,"F" ,0   ,0         ) #end
-#macro DIN41612_166951_4()    DIN41612(48       ,32    ,0,0,0,1,0,1 ,"Posted"   ,0.157*inch ,0         ,0      ,"F" ,0   ,0         ) #end
-//Receptacles, Right Angle    DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_5650875_5()   DIN41612(150      ,150   ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,0         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650959_5()   DIN41612(150      ,150   ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,1         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650874_5()   DIN41612(120      ,120   ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,0         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650461_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,0         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650895_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,1         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5148242_5()   DIN41612(96       ,96    ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,1         ,1      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650870_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.110*inch ,0         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650897_5()   DIN41612(96       ,64    ,1,0,1,0,0,0 ,"Posted"   ,0.110*inch ,1         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650868_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,0         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_5650893_5()   DIN41612(48       ,48    ,1,1,1,0,0,0 ,"Posted"   ,0.110*inch ,1         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_2_1393656_8() DIN41612(48       ,32    ,1,0,1,0,0,0 ,"Posted"   ,0.118*inch ,0         ,0      ,"R" ,0   ,1         ) #end
-#macro DIN41612_2_1393656_2() DIN41612(30       ,30    ,1,1,1,0,0,0 ,"Posted"   ,0.118*inch ,1         ,0      ,"R" ,0   ,1         ) #end
-//Plugs, Right Angle          DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_5536052_5()   DIN41612(64       ,64    ,1,1,0,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"B" ,1   ,1         ) #end
-#macro DIN41612_5536385_5()   DIN41612(64       ,64    ,1,1,0,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"B" ,1   ,1         ) #end
-#macro DIN41612_5536053_5()   DIN41612(32       ,32    ,1,1,0,0,0,0 ,"Posted"   ,0.104*inch ,0         ,0      ,"B" ,1   ,1         ) #end
-#macro DIN41612_5536386_5()   DIN41612(32       ,32    ,1,1,0,0,0,0 ,"Posted"   ,0.104*inch ,1         ,0      ,"B" ,1   ,1         ) #end
-#macro DIN41612_5_1393644_6() DIN41612(20       ,20    ,1,1,0,0,0,0 ,"Posted"   ,0.118*inch ,0         ,0      ,"B" ,1   ,1         ) #end
-//Receptacles, Vertical       DIN41612(Positions,Loaded,Row A..EZ,  Termination,PostLen    ,BoardLocks,HighTemp,Type,Plug,RightAngle)
-#macro DIN41612_5650860_5()   DIN41612(64       ,64    ,1,1,0,0,0,0 ,"Posted"   ,0.130*inch ,1         ,0      ,"B" ,0   ,0         ) #end
-#macro DIN41612_5536446_5()   DIN41612(32       ,32    ,1,1,0,0,0,0 ,"Posted"   ,0.130*inch ,0         ,0      ,"B" ,0   ,0         ) #end
-#macro DIN41612_7_1393640_2() DIN41612(20       ,20    ,1,1,0,0,0,0 ,"Posted"   ,0.114*inch ,0         ,0      ,"B" ,0   ,0         ) #end
-
-
-
-
-#macro DIN41612_MABC96L() object { DIN41612_5650473_5() rotate <0,-90,0> } #end
+/*
+//Plugs, Right Angle          DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_5650907_5()   DIN41612(150      ,150   ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end 
+#macro DIN41612_5650906_5()   DIN41612(120      ,120   ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650914_5()   DIN41612(120      ,120   ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650473_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5536010_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650913_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5536416_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5536146_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5536149_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650945_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5536742_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5536356_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650478_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650916_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5148020_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650946_5()   DIN41612(48       ,32    ,1,        1,0,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_5650978_5()   DIN41612(48       ,32    ,1,        1,0,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+#macro DIN41612_6_1393644_9() DIN41612(30       ,30    ,1,        1,1,1,0,0,0 ,0         ,"C" ,1   ,1         ) #end
+#macro DIN41612_7_1393644_1() DIN41612(30       ,30    ,1,        1,1,1,0,0,0 ,1         ,"C" ,1   ,1         ) #end
+//Receptacles, Vertical       DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_5650405_5()   DIN41612(150      ,150   ,1,        1,1,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5535098_5()   DIN41612(120      ,120   ,1,        1,1,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5536494_5()   DIN41612(120      ,120   ,1,        1,1,1,0,0,0 ,1         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5535090_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5650963_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5536153_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5536155_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5650956_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5650983_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,1         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5535070_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5536484_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,1         ,"C" ,0   ,0         ) #end
+#macro DIN41612_5650459_5()   DIN41612(48       ,32    ,1,        1,0,1,0,0,0 ,0         ,"C" ,0   ,0         ) #end
+//Plugs, Right Angle          DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_1551603_1()   DIN41612(48       ,32    ,1,        1,0,1,0,0,0 ,0         ,"D" ,1   ,1         ) #end
+//Receptacles, Vertical       DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_4_6437082_9() DIN41612(48       ,32    ,1,        1,0,1,0,0,0 ,0         ,"D" ,0   ,0         ) #end
+#macro DIN41612_5536053_5()   DIN41612(48       ,32    ,1,        1,1,0,0,0,0 ,0         ,"D" ,0   ,0         ) #end
+//Plugs, Right Angle          DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_2_164045_4()  DIN41612(48       ,48    ,1,        0,1,0,1,0,1 ,0         ,"F" ,1   ,1         ) #end
+#macro DIN41612_2_164306_4()  DIN41612(48       ,32    ,1,        0,0,0,1,0,1 ,0         ,"F" ,1   ,1         ) #end
+//Receptacles, Vertical       DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_166733_4()    DIN41612(48       ,48    ,1,        0,1,0,1,0,1 ,0         ,"F" ,0   ,0         ) #end
+#macro DIN41612_166951_4()    DIN41612(48       ,32    ,1,        0,0,0,1,0,1 ,0         ,"F" ,0   ,0         ) #end
+//Receptacles, Right Angle    DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_5650875_5()   DIN41612(150      ,150   ,1,        1,1,1,0,0,0 ,0         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650959_5()   DIN41612(150      ,150   ,1,        1,1,1,0,0,0 ,1         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650874_5()   DIN41612(120      ,120   ,1,        1,1,1,0,0,0 ,0         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650461_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,0         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650895_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5148242_5()   DIN41612(96       ,96    ,1,        1,1,1,0,0,0 ,1         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650870_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,0         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650897_5()   DIN41612(96       ,64    ,1,        1,0,1,0,0,0 ,1         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650868_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,0         ,"R" ,0   ,1         ) #end
+#macro DIN41612_5650893_5()   DIN41612(48       ,48    ,1,        1,1,1,0,0,0 ,1         ,"R" ,0   ,1         ) #end
+#macro DIN41612_2_1393656_8() DIN41612(48       ,32    ,1,        1,0,1,0,0,0 ,0         ,"R" ,0   ,1         ) #end
+#macro DIN41612_2_1393656_2() DIN41612(30       ,30    ,1,        1,1,1,0,0,0 ,1         ,"R" ,0   ,1         ) #end
+//Plugs, Right Angle          DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_5536052_5()   DIN41612(64       ,64    ,1,        1,1,0,0,0,0 ,0         ,"B" ,1   ,1         ) #end
+#macro DIN41612_5536385_5()   DIN41612(64       ,64    ,1,        1,1,0,0,0,0 ,1         ,"B" ,1   ,1         ) #end
+#macro DIN41612_5536053_5()   DIN41612(32       ,32    ,1,        1,1,0,0,0,0 ,0         ,"B" ,1   ,1         ) #end
+#macro DIN41612_5536386_5()   DIN41612(32       ,32    ,1,        1,1,0,0,0,0 ,1         ,"B" ,1   ,1         ) #end
+#macro DIN41612_5_1393644_6() DIN41612(20       ,20    ,1,        1,1,0,0,0,0 ,0         ,"B" ,1   ,1         ) #end
+//Receptacles, Vertical       DIN41612(Positions,Loaded,GridMulti,Row A..EZ,  ,BoardLocks,Type,Plug,RightAngle)
+#macro DIN41612_5650860_5()   DIN41612(64       ,64    ,1,        1,1,0,0,0,0 ,1         ,"B" ,0   ,0         ) #end
+#macro DIN41612_5536446_5()   DIN41612(32       ,32    ,1,        1,1,0,0,0,0 ,0         ,"B" ,0   ,0         ) #end
+#macro DIN41612_7_1393640_2() DIN41612(20       ,20    ,1,        1,1,0,0,0,0 ,0         ,"B" ,0   ,0         ) #end
+*/
 
 
+
+#macro DIN41612_MABC96L()  object { DIN41612( 96, 96,1, 1,1,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MAC64L()   object { DIN41612( 96, 64,1, 1,0,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MABC48B2() object { DIN41612( 48, 48,1, 1,1,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MAC32LH()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MABC30()   object { DIN41612( 30, 30,1, 1,1,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MAB32()    object { DIN41612( 64, 32,1, 1,0,0,0,0,0, 0,"B",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MAB32B2()  object { DIN41612( 32, 32,1, 1,1,0,0,0,0, 0,"B",1,1) rotate <0,-90,0> } #end
+#macro DIN41612_MAB64()    object { DIN41612( 64, 64,1, 1,1,0,0,0,0, 0,"B",1,1) rotate <0,-90,0> } #end
+
+#macro DIN41612_FABC150R() object { DIN41612(150,150,1, 1,1,1,0,0,0, 0,"R",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FABC120R() object { DIN41612(120,120,1, 1,1,1,0,0,0, 0,"R",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FABC96R()  object { DIN41612( 96, 96,1, 1,1,1,0,0,0, 0,"R",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FAC64R()   object { DIN41612( 96, 64,1, 1,0,1,0,0,0, 0,"R",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FABC48R2() object { DIN41612( 48, 48,1, 1,1,1,0,0,0, 0,"R",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FAC32R2()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"R",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FAB16Q2()  object { DIN41612( 16, 16,2, 1,1,0,0,0,0, 0,"Q",0,1) rotate <0,-90,0> } #end
+#macro DIN41612_FAB32Q2()  object { DIN41612( 32, 32,1, 1,1,0,0,0,0, 0,"Q",0,1) rotate <0,-90,0> } #end
+
+
+
+
+#macro DIN41612_FAB64S()   object { DIN41612( 64, 64,1, 1,1,0,0,0,0, 0,"B",0,0) rotate <0,-90,0> } #end
+#macro DIN41612_FAB32()    object { DIN41612( 64, 32,1, 1,0,0,0,0,0, 0,"B",0,0) rotate <0,-90,0> } #end
+#macro DIN41612_FAB32B_2() object { DIN41612( 32, 32,1, 1,1,0,0,0,0, 0,"B",0,0) rotate <0,-90,0> } #end
+
+#macro DIN41612_FABC96S()  object { DIN41612( 96, 96,1, 1,1,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
+#macro DIN41612_FAC64S()   object { DIN41612( 96, 64,1, 1,0,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
+#macro DIN41612_FABC48B2() object { DIN41612( 48, 48,1, 1,1,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> translate <+1.27,0,0> } #end
+#macro DIN41612_FAC48SH()  object { DIN41612( 48, 48,1, 1,1,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
+#macro DIN41612_FAC32B2()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> translate <+1.27,0,0> } #end
+#macro DIN41612_FAC32SH()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
+#macro DIN41612_FABC30()   object { DIN41612( 30, 30,1, 1,1,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
 
 
 
