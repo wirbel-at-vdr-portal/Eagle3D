@@ -373,6 +373,7 @@
 #macro CON_THT_DIN41612_MABC48B2() object { DIN41612( 48, 48,1, 1,1,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
 #macro CON_THT_DIN41612_MAC32LH()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
 #macro CON_THT_DIN41612_MABC30()   object { DIN41612( 30, 30,1, 1,1,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
+#macro CON_THT_DIN41612_MAC32C2()  object { DIN41612( 96, 32,2, 1,0,1,0,0,0, 0,"C",1,1) rotate <0,-90,0> } #end
 #macro CON_THT_DIN41612_MAB32()    object { DIN41612( 64, 32,1, 1,0,0,0,0,0, 0,"B",1,1) rotate <0,-90,0> } #end
 #macro CON_THT_DIN41612_MAB32B2()  object { DIN41612( 32, 32,1, 1,1,0,0,0,0, 0,"B",1,1) rotate <0,-90,0> } #end
 #macro CON_THT_DIN41612_MAB64()    object { DIN41612( 64, 64,1, 1,1,0,0,0,0, 0,"B",1,1) rotate <0,-90,0> } #end
@@ -402,6 +403,31 @@
 #macro CON_THT_DIN41612_FAC32B2()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> translate <+1.27,0,0> } #end
 #macro CON_THT_DIN41612_FAC32SH()  object { DIN41612( 48, 32,1, 1,0,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
 #macro CON_THT_DIN41612_FABC30()   object { DIN41612( 30, 30,1, 1,1,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
+
+
+
+#macro CON_THT_6HE2xVG64AC()
+  union {
+     object { CON_THT_DIN41612_MAC64L() rotate <0,180,0> translate <2.54,0,50.80       > }
+     object { CON_THT_DIN41612_MAC64L() rotate <0,180,0> translate <2.54,0,50.80+133.35> }
+     }
+#end
+
+#macro CON_THT_3HEVGC32AC()
+  object { CON_THT_DIN41612_MAC32C2() rotate <0,0,0> translate <154.94,0,0> }
+#end
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*******************************************************************************
  * no typos below please.
