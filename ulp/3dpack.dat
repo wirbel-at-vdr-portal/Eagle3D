@@ -2112,7 +2112,10 @@ FAC32SH:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN4
 6HE_100-VG64AC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_6HE2xVG64AC(:Eurocard with 2x VG64AC connector:
 6HE_160-VG64AC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_6HE2xVG64AC(:Eurocard with 2x VG64AC connector:
 VG32:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
-
+VG32B:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
+VG32K:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
+VG32KB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
+VG32P:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC_M(:Eurocard with VG C 32AC connector:
 
 
 

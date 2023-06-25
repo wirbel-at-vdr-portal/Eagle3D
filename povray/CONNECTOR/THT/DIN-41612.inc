@@ -414,8 +414,16 @@
 #end
 
 #macro CON_THT_3HEVGC32AC()
-  object { CON_THT_DIN41612_MAC32C2() rotate <0,0,0> translate <154.94,0,0> }
+  object { CON_THT_DIN41612_MAC32C2() rotate <0,0,0> translate <157.48,0,0> }
 #end
+
+#macro CON_THT_3HEVGC32AC_M()
+  union {
+     CON_THT_3HEVGC32AC()
+     }
+#end
+
+
 
 
 
