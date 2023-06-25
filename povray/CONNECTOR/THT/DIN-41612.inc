@@ -6,7 +6,13 @@
 
 
 /*******************************************************************************
- * female DIN-41612 header.
+ * female & male DIN-41612 headers.
+ *
+ * The following are supported:
+ * B,B/2,B/3  64/32/20 pol, ab  , Stecker liegend, Buchse stehend
+ * Q,Q/2,Q/3  64/32/20 pol, ab  , Stecker stehend, Buchse liegend
+ * C,C/2,C/3  96/64/30 pol, abc , Stecker liegend, Buchse stehend
+ * R,R/2,R/3  96/64/30 pol, abc , Stecker stehend, Buchse liegend
  *
  * 16.06.2023, -wk
  ******************************************************************************/
@@ -16,15 +22,6 @@
      #local Cols = GridMulti * Loaded / Rows;
      #local Spaces = Cols - 1;
 
-/* ----
- * B,B/2,B/3  64/32/20 pol, ab  , Stecker liegend, Buchse stehend
- * Q,Q/2,Q/3  64/32/20 pol, ab  , Stecker stehend, Buchse liegend
- * ----
- * C,C/2,C/3  96/64/30 pol, abc , Stecker liegend, Buchse stehend
- * R,R/2,R/3  96/64/30 pol, abc , Stecker stehend, Buchse liegend
- * ----
-
-*/
      #if ((Type = "B") | (Type = "Q") | (Type = "C") | (Type = "R"))
         #local w = Spaces * 2.54;
         #local A = w + 15.24;
@@ -96,15 +93,15 @@
               }
            union {
               #local chamfer = 0.5;
-              Round_Box (
+              ChamferBox (
                  <-D/2-chamfer,H3-chamfer,Y2-0.1+chamfer>
                  <+D/2+chamfer,H5+chamfer,Y2-0.1-chamfer>
-                 chamfer 0
+                 chamfer
                  )
-              Round_Box (
+              ChamferBox (
                  <-X1/2-chamfer,H5-chamfer,Y2-0.1+chamfer>
                  <+X1/2+chamfer,H4+chamfer,Y2-0.1-chamfer>
-                 chamfer 0
+                 chamfer
                  )
               box {
                  <-D/2,H3,Y2>
@@ -148,6 +145,7 @@
               #if (RowD = 1) GRID(object { PinHole translate <0,1.37 + 3*2.54,0> },2.54,Cols,1) #end
               #if (RowE = 1) GRID(object { PinHole translate <0,1.37 + 4*2.54,0> },2.54,Cols,1) #end
               }
+           translate <0,1.7,0>
            pigment {
               White * 0.5
               }
@@ -216,10 +214,7 @@
               White * 0.5
               }
            }
-
      #end
-
-
 
      #if (Plug = 0 & ((Type = "Q") | (Type = "R")))
         difference {
@@ -331,14 +326,15 @@
            }
      #end
 
-
-
-
-
      #if (RightAngle = 1)
-        #local pinA = object { PIN_90deg(0.7,1.5,1.37+0*2.54+0.8/2,2.64,0.8/2+1*2.54+3.76+4.9) translate <0,0,+1*2.54> };
-        #local pinB = object { PIN_90deg(0.7,1.5,1.37+1*2.54+0.8/2,2.64,0.8/2+2*2.54+3.76+4.9) translate <0,0,+2*2.54> };
-        #local pinC = object { PIN_90deg(0.7,1.5,1.37+2*2.54+0.8/2,2.64,0.8/2+3*2.54+3.76+4.9) translate <0,0,+3*2.54> };
+        #if ((Type = "B") | (Type = "C"))
+           #local dH = 1.5;
+        #else
+           #local dH = 0;
+        #end
+        #local pinA = object { PIN_90deg(0.7,1.5,dH+1.37+0*2.54+0.8/2,2.64,0.8/2+1*2.54+3.76+4.9) translate <0,0,+1*2.54> };
+        #local pinB = object { PIN_90deg(0.7,1.5,dH+1.37+1*2.54+0.8/2,2.64,0.8/2+2*2.54+3.76+4.9) translate <0,0,+2*2.54> };
+        #local pinC = object { PIN_90deg(0.7,1.5,dH+1.37+2*2.54+0.8/2,2.64,0.8/2+3*2.54+3.76+4.9) translate <0,0,+3*2.54> };
         union {
            #if (RowA = 1) GRID(pinA,2.54*GridMulti,Cols/GridMulti,1) #end
            #if (RowB = 1) GRID(pinB,2.54*GridMulti,Cols/GridMulti,1) #end
