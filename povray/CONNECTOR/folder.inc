@@ -5,6 +5,7 @@
  ******************************************************************************/
 
 #include "CONNECTOR/TERMINALBLOCK_5mm.inc"
+#include "CONNECTOR/SMT/Micro-Match.inc"
 #include "CONNECTOR/SMT/MOLEX-53261-series.inc"
 #include "CONNECTOR/SMT/MOLEX-87832-series.inc"
 #include "CONNECTOR/SMT/USB-Mini-B.inc"
@@ -21,6 +22,7 @@
 #include "CONNECTOR/THT/wirejumper.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
 #include "CONNECTOR/THT/MOLEX_KK254_series.inc"
+#include "CONNECTOR/THT/Micro-Match.inc"
 #include "CONNECTOR/THT/MPE_pin_headers.inc"
 #include "CONNECTOR/THT/MPE_socket_headers.inc"
 #include "CONNECTOR/THT/PHOENIX_MKDS1.inc"
