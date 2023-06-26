@@ -91,6 +91,6 @@
      pigment{NUTCOLOR}
      rotate 90*x
      translate B/2*y
-     rotate(rand(global_seed)*180)*y
+     //rotate(rand(global_seed)*180)*y
      }
 #end

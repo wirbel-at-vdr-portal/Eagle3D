@@ -405,6 +405,158 @@
 #macro CON_THT_DIN41612_FABC30()   object { DIN41612( 30, 30,1, 1,1,1,0,0,0, 0,"C",0,0) rotate <0,-90,0> } #end
 
 
+/*******************************************************************************
+ * 19 inch boards, 3HE & 6HE
+ *
+ * 26.06.2023, -wk
+ ******************************************************************************/
+#macro FPholder()
+  union {
+     #local X1 = 106;
+     #local X2 = 81.75;
+     #local X3 = 95.45;
+     #local X4 = 99.88;
+     #local X5 = 83.90;
+     #local X6 = 95.10;
+     #local X7 = 95.10;
+     #local X8 = 103;
+     #local X9 = 96.20;
+     #local X10 = 98.88;
+     #local X11 = 89.10;
+     #local Y1 = +2.2;
+     #local Y2 = Y1 - 3.95;
+     #local Y3 = Y1 - 5.80;
+     #local Y4 = Y1 - 8.95;
+     #local H1 = -3;
+     #local H2 = H1 + 1.27;
+     #local H3 = H1 + 11;
+     #local H4 = H1 + 9.20;
+     #local H5 = H1 + 6.25;
+     difference {
+        union {
+           box {
+              <-X1/2,H1,Y1>
+              <+X1/2, 0,Y2>
+              }
+           Round_Box (
+              <-X1/2, 0,Y1>
+              <-X5/2,H3,Y2>
+              0.3 0
+              )
+           Round_Box (
+              <+X1/2, 0,Y1>
+              <+X5/2,H3,Y2>
+              0.3 0
+              )
+           Round_Box (
+              <+X9/2, 0, 0>
+              <+X5/2,H3,Y4>
+              0.5 0
+              )
+           Round_Box (
+              <-X9/2, 0, 0>
+              <-X5/2,H3,Y4>
+              0.5 0
+              )
+           }
+        box {
+           <-X1/2-0.1, H2,     0>
+           <+X1/2+0.1,0.1,Y2-0.1>
+           }
+        box {
+           <-X3/2,     0,Y2+1.0>
+           <-X2/2,H1-0.1,Y2-0.1>
+           }
+        box {
+           <+X3/2,     0,Y2+1.0>
+           <+X2/2,H1-0.1,Y2-0.1>
+           }
+        box {
+           <-X1/2-0.1,H1-0.1,  -0.1>
+           <-X4/2    ,H2+0.1,Y2-0.1>
+           }
+        box {
+           <+X1/2+0.1,H1-0.1,  -0.1>
+           <+X4/2    ,H2+0.1,Y2-0.1>
+           }
+        box {
+           <-X1/2-0.1,H4    ,Y1+0.1>
+           <-X5/2+0.1,H3+0.1,     0>
+           }
+        box {
+           <+X1/2+0.1,H4    ,Y1+0.1>
+           <+X5/2-0.1,H3+0.1,     0>
+           }
+        box {
+           <-X8/2,H4    ,  +0.1>
+           <-X7/2,H3+0.1,Y2-0.1>
+           }
+        box {
+           <+X8/2,H4    ,  +0.1>
+           <+X7/2,H3+0.1,Y2-0.1>
+           }
+        cylinder {
+           <+X10/2,H5,Y1+0.1>
+           <+X10/2,H5,Y2-0.1>
+           2.6/2
+           }
+        cylinder {
+           <-X10/2,H5,Y1+0.1>
+           <-X10/2,H5,Y2-0.1>
+           2.6/2
+           }
+        cylinder {
+           <+X11/2,  -0.1,Y3>
+           <+X11/2,H3+0.1,Y3>
+           2.6/2
+           }
+        cylinder {
+           <-X11/2,  -0.1,Y3>
+           <-X11/2,H3+0.1,Y3>
+           2.6/2
+           }
+        #local b1 = union {
+           TOOLS_NUT(2.5,1,White*0.5)
+           cylinder {
+              <0,0,0>
+              <0,2,0>
+              3/2
+              }
+           rotate y*60
+           scale <1.05,2,1.05>
+           };
+        object { b1 translate <+X11/2,H3-1.5,Y3> }
+        object { b1 translate <-X11/2,H3-1.5,Y3> }
+        #local b2 = union {
+           TOOLS_NUT(2.5,1,White*0.5)
+           cylinder {
+              <0,0,0>
+              <0,2.5,0>
+              3/2
+              }
+           scale <1.05,2,1.05>
+           rotate <90,0,30>
+           };
+        object { b2 translate <+X10/2,H5,Y2-2.5> }
+        object { b2 translate <-X10/2,H5,Y2-2.5> }
+        pigment {
+           White * 0.5
+           }
+        }
+     #local Screw = object {
+        TOOLS_SCREW(2.5,10,1,Silver)
+        rotate <180,0,0>
+        };
+     object { Screw translate <+X11/2,-1.5,Y3> }
+     object { Screw translate <-X11/2,-1.5,Y3> }
+     #local Nut = object {
+        TOOLS_NUT(2.5,0,Silver)
+        rotate <0,60,0>
+        };
+     object { Nut translate <+X11/2,+6.5,Y3> }
+     object { Nut translate <-X11/2,+6.5,Y3> }
+     }
+#end
 
 #macro CON_THT_6HE2xVG64AC()
   union {
@@ -420,19 +572,43 @@
 #macro CON_THT_3HEVGC32AC_M()
   union {
      CON_THT_3HEVGC32AC()
+     object {
+        FPholder()
+        rotate <0,-90,0>
+        translate <0,0,0>
+        }
      }
 #end
 
+#macro CON_THT_3HEVGC64AC()
+  object { CON_THT_DIN41612_MAC64L() rotate <0,0,0> translate <157.48,0,0> }
+#end
 
+#macro CON_THT_3HEVGC64AC_M()
+  union {
+     CON_THT_3HEVGC64AC()
+     object {
+        FPholder()
+        rotate <0,-90,0>
+        translate <0,0,0>
+        }
+     }
+#end
 
+#macro CON_THT_3HEVGC96ABC()
+  object { CON_THT_DIN41612_MABC96L() rotate <0,0,0> translate <157.48,0,0> }
+#end
 
-
-
-
-
-
-
-
+#macro CON_THT_3HEVGC96ABC_M()
+  union {
+     CON_THT_3HEVGC96ABC()
+     object {
+        FPholder()
+        rotate <0,-90,0>
+        translate <0,0,0>
+        }
+     }
+#end
 
 
 
@@ -479,4 +655,21 @@
 //con-vg:FABC30=CON_THT_DIN41612_FABC30(:Eurocard Connector
 //con-vg:FAC32B2=CON_THT_DIN41612_FAC32B2(:Eurocard Connector
 //con-vg:FAC32SH=CON_THT_DIN41612_FAC32SH(:Eurocard Connector
+//19inch:6HE_100-VG64AC=CON_THT_6HE2xVG64AC(:Eurocard with 2x VG64AC connector
+//19inch:6HE_160-VG64AC=CON_THT_6HE2xVG64AC(:Eurocard with 2x VG64AC connector
+//19inch:VG32=CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector
+//19inch:VG32B=CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector
+//19inch:VG32K=CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector
+//19inch:VG32KB=CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector
+//19inch:VG32P=CON_THT_3HEVGC32AC_M(:Eurocard with VG C 32AC connector
+//19inch:VG64=CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector
+//19inch:VG64B=CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector
+//19inch:VG64K=CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector
+//19inch:VG64KB=CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector
+//19inch:VG64P=CON_THT_3HEVGC64AC_M(:Eurocard with VG C 64AC connector
+//19inch:VG96=CON_THT_3HEVGC96ABC(:Eurocard with VG C 96ABC connector
+//19inch:VG96B=CON_THT_3HEVGC96BABC(:Eurocard with VG C 96ABC connector
+//19inch:VG96K=CON_THT_3HEVGC96ABC(:Eurocard with VG C 96ABC connector
+//19inch:VG96KB=CON_THT_3HEVGC96ABC(:Eurocard with VG C 96ABC connector
+//19inch:VG96P=CON_THT_3HEVGC96ABC_M(:Eurocard with VG C 96ABC connector
 // end assignment

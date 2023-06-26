@@ -2069,7 +2069,6 @@ M09HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M9HP_
 M15HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M15HP_R180(:Sub-D connector 15-pin male:
 M25HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M25HP_R180(:Sub-D connector 25-pin male:
 M37HP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_SUBD_M37HP_R180(:Sub-D connector 37-pin male:
-
 MABC96LP:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN41612_MABC96L(:Eurocard Connector:
 MABC96L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN41612_MABC96L(:Eurocard Connector:
 MAC64L:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN41612_MAC64L(:Eurocard Connector:
@@ -2108,7 +2107,6 @@ FAC48SH:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN4
 FABC30:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN41612_FABC30(:Eurocard Connector:
 FAC32B2:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN41612_FAC32B2(:Eurocard Connector:
 FAC32SH:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_DIN41612_FAC32SH(:Eurocard Connector:
-
 6HE_100-VG64AC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_6HE2xVG64AC(:Eurocard with 2x VG64AC connector:
 6HE_160-VG64AC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_6HE2xVG64AC(:Eurocard with 2x VG64AC connector:
 VG32:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
@@ -2116,9 +2114,16 @@ VG32B:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC
 VG32K:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
 VG32KB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC(:Eurocard with VG C 32AC connector:
 VG32P:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC32AC_M(:Eurocard with VG C 32AC connector:
-
-
-
+VG64:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector:
+VG64B:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector:
+VG64K:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector:
+VG64KB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC64AC(:Eurocard with VG C 64AC connector:
+VG64P:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC64AC_M(:Eurocard with VG C 64AC connector:
+VG96:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC96ABC(:Eurocard with VG C 96ABC connector:
+VG96B:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC96BABC(:Eurocard with VG C 96ABC connector:
+VG96K:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC96ABC(:Eurocard with VG C 96ABC connector:
+VG96KB:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC96ABC(:Eurocard with VG C 96ABC connector:
+VG96P:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_3HEVGC96ABC_M(:Eurocard with VG C 96ABC connector:
 62221:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_FASTON187_62221(:Faston dual stake 4.75 terminal:
 62409-1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_FASTON250_62409(:Faston 6.35 terminal:
 F061.040:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_FASTON250_default(:Faston 6.35 terminal:
