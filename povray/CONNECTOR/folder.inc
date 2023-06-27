@@ -30,6 +30,7 @@
 #include "CONNECTOR/THT/RIA_series59.inc"
 #include "CONNECTOR/THT/standard_socket_headers.inc"
 #include "CONNECTOR/THT/SolderPads.inc"
+#include "CONNECTOR/THT/StereoJack_PG203JN.inc"
 #include "CONNECTOR/THT/Sub-D.inc"
 #include "CONNECTOR/THT/TEConnectivity_Faston.inc"
 #include "CONNECTOR/THT/TEConnectivity_HE14.inc"
