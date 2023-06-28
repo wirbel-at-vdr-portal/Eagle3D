@@ -692,7 +692,7 @@ union {
 //Macros for connector PHOENIX type MINICONNEC 5.08
 //Designed by Philippe Boucheny <philippe.boucheny(replace with at)free.fr>
 //Rev. 1.1  06/01/06
-********************************************************************************************************************************************/
+********************************************************************************************************************************************
 #macro CON_PHOENIX_508_BASE(n,vertical,a)
 // n = pins ; Vertical = 1 if yes ; With border a = 1 / Whithout border a = 0
 union {
@@ -867,7 +867,7 @@ union {
 #macro CON_PHOENIX_508_MSTBA_22() CON_PHOENIX_508_BASE(22,0,1) #end
 #macro CON_PHOENIX_508_MSTBA_23() CON_PHOENIX_508_BASE(23,0,1) #end
 #macro CON_PHOENIX_508_MSTBA_24() CON_PHOENIX_508_BASE(24,0,1) #end
-
+*/
 
 /********************************************************************************************************************************************
 // Makro fuer geschirmte Ethernet-Buchse RJ-45 8-polig
