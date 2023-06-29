@@ -562,61 +562,6 @@ union
 #macro CON_MODULAR_555154_2() CON_MODULAR_BASE(4, 8*1.27, 0, 2, 1)    #end
 
 
-/********************************************************************************************************************************************
-//Molex 53047 ( 1.25 pitch, vertical feeding, through holes )
-//antoine.drouin@free.fr
-//n      Number of Pins
-********************************************************************************************************************************************/
-#macro CON_MOLEX_53047_BASE(n)
-union {
-  #local L = n * 1.25 + 1.75;
-  #local l = 3.2;
-  #local h = 4.2;
-   difference {
-     box {<-L/2, 0, -l/2><L/2, h, l/2> }
-     box {<-L/2+0.6, 1.3, -l/2+0.45><L/2-0.6, h+0.1, l/2-0.45>}
-     box {<-L/2+1, 2.7, 0><L/2-1, h+0.1, l/2+0.1>}
-     box {<-L/2+0.35, 1.31, -0.35><L/2-0.35, h+0.1, 0.35>}
-     box {<-L/2-0.1, 3.21, l/2-0.46><L/2+0.1, h+0.1, l/2+0.1>}
-     #local j = 0;
-     #while(j<n)
-     box {<-0.35, -0.1, -l/2-0.1><0.35, 0.3, l/2+0.1>  translate< -(n-1)*1.25/2+j*1.25, 0, 0> }
-     #local j = j + 1;
-     #end
-     box {<-L/2+1.6, 1.6, -l/2+0.46><-L/2+2.9, 2.9, -l/2-0.1>}
-     box {<L/2-1.6, 1.6, -l/2+0.46><L/2-2.9, 2.9, -l/2-0.1>}
-     pigment{White}
-   }
-  #local pin =
-  union {
-    cylinder {<0, 0, -0.5> <0, -2, -0.5> 0.18}
-    box{<-0.2, 0 , -1 > <0.2, 3.1, 0 > }
-    cylinder {<0, 1.555, -1.> <0, 1.555, 0.> 0.2 scale < 1, 2, 1>}
-    texture{col_gold}
-  }  
-  #local i = 0;
-  #while(i<n)
-    object{pin translate< -(n-1)*1.25/2+i*1.25, 0, 0>}
-  #local i = i + 1;
-  #end
-
-}
-#end
-
-#macro CON_MOLEX_53047_2()  CON_MOLEX_53047_BASE(2)  #end
-#macro CON_MOLEX_53047_3()  CON_MOLEX_53047_BASE(3)  #end
-#macro CON_MOLEX_53047_4()  CON_MOLEX_53047_BASE(4)  #end
-#macro CON_MOLEX_53047_5()  CON_MOLEX_53047_BASE(5)  #end
-#macro CON_MOLEX_53047_6()  CON_MOLEX_53047_BASE(6)  #end
-#macro CON_MOLEX_53047_7()  CON_MOLEX_53047_BASE(7)  #end
-#macro CON_MOLEX_53047_8()  CON_MOLEX_53047_BASE(8)  #end
-#macro CON_MOLEX_53047_9()  CON_MOLEX_53047_BASE(9)  #end
-#macro CON_MOLEX_53047_10() CON_MOLEX_53047_BASE(10) #end
-#macro CON_MOLEX_53047_11() CON_MOLEX_53047_BASE(11) #end
-#macro CON_MOLEX_53047_12() CON_MOLEX_53047_BASE(12) #end
-#macro CON_MOLEX_53047_13() CON_MOLEX_53047_BASE(13) #end
-#macro CON_MOLEX_53047_14() CON_MOLEX_53047_BASE(14) #end
-#macro CON_MOLEX_53047_15() CON_MOLEX_53047_BASE(15) #end
 
 
 /********************************************************************************************************************************************

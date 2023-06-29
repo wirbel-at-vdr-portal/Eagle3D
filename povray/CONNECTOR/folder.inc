@@ -21,6 +21,7 @@
 #include "CONNECTOR/THT/precision_socket_headers.inc"
 #include "CONNECTOR/THT/wirejumper.inc"
 #include "CONNECTOR/THT/CENTRONICS.inc"
+#include "CONNECTOR/THT/MOLEX_53047.inc"
 #include "CONNECTOR/THT/MOLEX_KK254_series.inc"
 #include "CONNECTOR/THT/Micro-Match.inc"
 #include "CONNECTOR/THT/MPE_pin_headers.inc"
