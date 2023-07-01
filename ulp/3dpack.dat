@@ -2135,11 +2135,6 @@ F061.200:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_FAS
 F061.220:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_FASTON250_3868Y68(:Faston 6.35 terminal:
 F061.250:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_FASTON250_72890(:Faston 6.35 terminal:
 737992-5:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_Power_NEB1R(:Power Connector DIN 45323:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LMI_L115_2(:Junction bloc 2 faston 2.8mm style:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LMI_L115_3(:Junction bloc 3 faston 2.8mm style:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LMI_L115_5(:Junction bloc 5 faston 2.8mm style:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LMI_L115_10(:Junction bloc 10 faston 2.8mm style:
-NOEAGLEPAC:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_LMI_L115_20(:Junction bloc 20 faston 2.8mm style:
 LSP10:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SolderPad_LSP10(:Solder Pad 1.0mm drill:
 LSP11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SolderPad_LSP11(:Solder Pad 1.1mm drill:
 LSP13:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:CON_THT_SolderPad_LSP13(:Solder Pad 1.3mm drill:
