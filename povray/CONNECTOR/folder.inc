@@ -30,6 +30,7 @@
 #include "CONNECTOR/THT/PHOENIX_MKDS1.inc"
 #include "CONNECTOR/THT/PHOENIX_MSTB.inc"
 #include "CONNECTOR/THT/PowerConnector-NEB1R.inc"
+#include "CONNECTOR/THT/PowerConnector-TRU_733989.inc"
 #include "CONNECTOR/THT/PTR-AK700.inc"
 #include "CONNECTOR/THT/RIA_series59.inc"
 #include "CONNECTOR/THT/standard_socket_headers.inc"
