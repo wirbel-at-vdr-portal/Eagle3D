@@ -7,7 +7,7 @@
 /*******************************************************************************
  * FEMALE PRINT CONNECTOR DIN 45323 (34V/3A), TRU COMPONENTS 733989,
  *    Conrad 1571231
- *                                  
+ *
  * Aussen-Ø 4,2 mm, Innen 1.1 mm
  * EAN: 2050004886962
  * con-conrad
