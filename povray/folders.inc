@@ -33,5 +33,4 @@
 #include "VARISTOR/folder.inc"
 
 // deprecated includes
-#include "e3d_connector.inc"
 #include "e3d_user.inc"
